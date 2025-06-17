@@ -5,8 +5,8 @@ staff:
     last_name: "Landra"
     job_title: "Campus & Growth Manager USA"
     bio: " "
-    image: "../../../../static/images/staff/alissalandra.jpg"
-    phone: "+1 (786) 600-3000"
+    image: "../../../../static/images/staff/alissa-landra.webp"
+    phone: "+1 (989) 256-7140"
     email: "alissa@4geeksacademy.com"
     location: ["all"]
   - name: "Eli"
@@ -14,14 +14,14 @@ staff:
     job_title: "Admissions Advisor"
     bio: " "
     image: "../../../../static/images/staff/eli-pilowsky.webp"
-    phone: "+1 (786) 600-3000"
+    phone: "+1 (786) 305-5288"
     email: "epilowsky@4geeksacademy.com"
     location: ["all"]
   - name: "Dylan"
     last_name: "Gil"
     job_title: "Admissions Developer USA"
     bio: " "
-    image: "../../../../static/images/staff/dylan-gil.jpg"
-    phone: "+1 (786) 600-3000"
+    image: "../../../../static/images/staff/dylan-gil.webp"
+    phone: "+1 (786) 284-6822"
     email: "dylangil@4geeksacademy.com"
     location: ["all"]
