@@ -1,0 +1,116 @@
+/* Card Styles */
+.admissions-card {
+  padding: 0 18px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Carousel Container */
+.admissions-class > div {
+  width: 90%;
+  left: 5%;
+}
+
+/* Responsive Styles */
+@media screen and (width >= 1440px) {
+  .admissions-class > div > div > div {
+    padding: 0 18px;
+  }
+}
+
+@media screen and (1024px <= width < 1440px) {
+  .admissions-class > div > div > div {
+    padding: 0 18px;
+  }
+}
+
+@media screen and (768px <= width < 1024px) {
+  .admissions-class > div > div > div {
+    padding: 0 9px;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .admissions-class > div > div > div {
+    padding: 0 9px;
+  }
+}
+
+@media screen and (width <= 450px) {
+  .admissions-class > div > div > div {
+    padding: 0 24px;
+  }
+}
+
+/* Dots Navigation */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots-admissions {
+  position: absolute;
+  bottom: -50px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 36px 0 0 0;
+  list-style: none;
+  text-align: center;
+}
+
+.slick-dots-admissions li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 3px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots-admissions li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.slick-dots-admissions li button:hover,
+.slick-dots-admissions li button:focus {
+  outline: none;
+}
+
+.slick-dots-admissions li button:hover:before,
+.slick-dots-admissions li button:focus:before {
+  opacity: 1;
+}
+
+.slick-dots-admissions li button:before {
+  font-family: "slick";
+  font-size: 11px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: "•";
+  text-align: center;
+  opacity: 0.25;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots-admissions li.slick-active button:before {
+  opacity: 1;
+  color: #0084ff;
+} 

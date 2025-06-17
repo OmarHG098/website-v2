@@ -151,8 +151,6 @@ This plan outlines the steps to add a new Admissions Staff component to the `tha
 - **Actions**:
   - Commit changes with clear messages (e.g., “Add AdmissionsStaff component to thank-you page”).
   - Push to a feature branch and create a pull request.
-  - Document any deviations from the reference component or requirements.
-  - Request feedback from the team via Cursor AI or the PR.
 - **Expected Outcome**: Code is ready for review and deployment.
 
 ## Notes

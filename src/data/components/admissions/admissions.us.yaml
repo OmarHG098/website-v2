@@ -1,0 +1,27 @@
+heading: "Meet Your Admissions Team"
+sub_heading: "Our dedicated admissions team is here to guide you through your journey into tech. They'll help you choose the right program and answer any questions you may have."
+staff:
+  - name: "Alissa"
+    last_name: "Landra"
+    job_title: "Campus & Growth Manager USA"
+    bio: " "
+    image: "../../../../static/images/staff/alissalandra.jpg"
+    phone: "+1 (786) 600-3000"
+    email: "alissa@4geeksacademy.com"
+    location: ["all"]
+  - name: "Eli"
+    last_name: "Pilowsky"
+    job_title: "Admissions Advisor"
+    bio: " "
+    image: "../../../../static/images/staff/eli-pilowsky.webp"
+    phone: "+1 (786) 600-3000"
+    email: "epilowsky@4geeksacademy.com"
+    location: ["all"]
+  - name: "Dylan"
+    last_name: "Gil"
+    job_title: "Admissions Developer USA"
+    bio: " "
+    image: "../../../../static/images/staff/dylan-gil.jpg"
+    phone: "+1 (786) 600-3000"
+    email: "dylangil@4geeksacademy.com"
+    location: ["all"]

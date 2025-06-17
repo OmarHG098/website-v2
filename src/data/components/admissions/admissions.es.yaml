@@ -1,0 +1,27 @@
+heading: "Conoce tu Equipo de Admisiones"
+sub_heading: "Nuestro dedicado equipo de admisiones está aquí para guiarte en tu viaje hacia la tecnología. Te ayudarán a elegir el programa adecuado y responderán cualquier pregunta que tengas."
+staff:
+  - name: "Alissa"
+    last_name: "Landra"
+    job_title: "Gerente de Alianzas y Programas"
+    bio: "Me gradué de la Universidad Estatal Acreditada AACSB de Nueva York en la Escuela de Negocios y Economía de Plattsburgh con una licenciatura en Marketing y Administración de Empresas con honores."
+    image: "../../../../static/images/staff/alissalandra.jpg"
+    phone: "+1 (786) 600-3000"
+    email: "alissa@4geeksacademy.com"
+    location: ["all"]
+  - name: "Eli"
+    last_name: "Pilowsky"
+    job_title: "Asesor de Admisiones"
+    bio: "Apasionado por ayudar a los estudiantes a encontrar su camino en la tecnología. Con experiencia en educación y éxito estudiantil."
+    image: "../../../../static/images/staff/eli-pilowsky.jpg"
+    phone: "+1 (786) 600-3000"
+    email: "eli@4geeksacademy.com"
+    location: ["all"]
+  - name: "Dylan"
+    last_name: "Gil"
+    job_title: "Asesor de Admisiones"
+    bio: "Dedicado a ayudar a los estudiantes a navegar su viaje educativo en tecnología. Enfocado en el éxito estudiantil y el desarrollo profesional."
+    image: "../../../../static/images/staff/dylan-gil.jpg"
+    phone: "+1 (786) 600-3000"
+    email: "dylan@4geeksacademy.com"
+    location: ["all"] 

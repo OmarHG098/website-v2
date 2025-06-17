@@ -8,6 +8,7 @@ import Icon from "../components/Icon";
 import { SessionContext } from "../session.js";
 import { isCustomBarActive } from "../actions";
 import LazyLoad from "react-lazyload";
+import AdmissionsStaff from "../components/AdmissionsStaff";
 
 const ThankYou = (props) => {
   const { data, pageContext, yml } = props;
@@ -131,6 +132,9 @@ const ThankYou = (props) => {
         ))}
       </Div>
 
+      {/* Admissions Staff Section */}
+      <AdmissionsStaff lang={pageContext.lang} />
+
       <GridContainer
         flexDirection="column"
         gridColumn_tablet="3 / span 10"
@@ -164,7 +168,6 @@ const ThankYou = (props) => {
               {ln.icon && (
                 <Icon
                   icon={ln.icon}
-                  // style={{ margin: '0 15px 0 0' }}
                   color={Colors.black}
                   fill={Colors.black}
                   height="42px"
@@ -295,6 +298,7 @@ const ThankYou = (props) => {
     </>
   );
 };
+
 export const query = graphql`
   query ThankQuery($file_name: String!, $lang: String!) {
     allPageYaml(
@@ -379,4 +383,5 @@ export const query = graphql`
     }
   }
 `;
+
 export default BaseRender(ThankYou);
