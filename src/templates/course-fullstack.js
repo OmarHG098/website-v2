@@ -288,10 +288,10 @@ const Program = ({ data, pageContext, yml }) => {
       />
 
       {pageContext.lang === "es" && (
-      <ScholarshipProjects
-        content={data.allScholarshipProjectsYaml.edges[0].node}
-        lang={pageContext.lang}
-      />
+        <ScholarshipProjects
+          content={data.allScholarshipProjectsYaml.edges[0].node}
+          lang={pageContext.lang}
+        />
       )}
 
       {/*<OurPartners images={hiring.partners.images} marquee/>*/}

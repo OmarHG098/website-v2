@@ -125,7 +125,7 @@ const Overlaped = ({
               fontFamily="Lato, sans-serif"
               fontSize="18px"
               color="#3A3A3A"
-              style={{ fontStyle: 'italic' }}
+              style={{ fontStyle: "italic" }}
               dangerouslySetInnerHTML={{ __html: subtitle }}
             />
           )}

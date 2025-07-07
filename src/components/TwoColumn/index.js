@@ -178,7 +178,9 @@ const Side = ({
                 alignItems="center"
                 margin="12px 0 0 0"
                 display="block"
-                style={bullets.item_style ? JSON.parse(bullets.item_style) : null}
+                style={
+                  bullets.item_style ? JSON.parse(bullets.item_style) : null
+                }
               >
                 {/* Only render heading+icon if heading exists */}
                 {bullet.heading && (
