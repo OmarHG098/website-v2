@@ -35,14 +35,17 @@ Standardize the creation, naming, and structure of clusters to ensure consistenc
 - **Files:** Use kebab-case for all cluster YAML files (e.g., `software-engineer.us.yml`).
 - **Folders:** Use kebab-case for any folders related to clusters.
 - **Components:** Store each cluster-related component in its own folder, with the main file named `index.js` (e.g., `/src/components/ClusterCard/index.js`).
+- **Slugs:** The `slug` field must be unique across all cluster files. Spanish clusters should use a Spanish-language slug (e.g., `aprendizaje-potenciado-ia`).
 
 ### Content
 - **Each cluster must have a YAML file in `/src/data/cluster/`.**
 - **YAML files must use `.us.yml` for English and `.es.yml` for Spanish.**
 - **Each YAML file should contain all relevant data for the cluster (e.g., title, description, tags).**
+- **The `description` field must be no more than 160 characters.**
 
 ### Translations
-- **Required:** Clusters must have both English and Spanish YAML files (e.g., `software-engineer.us.yml` and `software-engineer.es.yml`).
+- **Required:** Most clusters must have both English and Spanish YAML files (e.g., `software-engineer.us.yml` and `software-engineer.es.yml`).
+- **Optional:** For clusters that are only relevant in one language, a single YAML file is allowed. Clearly state the exception in the file header.
 - **Keys:** Use the same keys in both language files when translations are required.
 
 ### Integration
@@ -54,8 +57,8 @@ Standardize the creation, naming, and structure of clusters to ensure consistenc
 ## 4. Examples
 
 ### Correct Usage
-- `/src/data/cluster/software-engineer.us.yml`
-- `/src/data/cluster/software-engineer.es.yml`
+- `/src/data/cluster/software-engineer.us.yml` (slug: software-engineer)
+- `/src/data/cluster/software-engineer.es.yml` (slug: ingeniero-de-software)
 - `/src/components/ClusterCard/index.js`
 
 ### Incorrect Usage
@@ -63,20 +66,22 @@ Standardize the creation, naming, and structure of clusters to ensure consistenc
 - `/src/data/cluster/software-engineer-spanish.yml`
 - `/src/components/ClusterCard.js`
 - `/src/components/cluster-card/ClusterCard.js`
+- A `description` field longer than 160 characters.
+- Duplicate slugs across different language files.
 
 ---
 
 ## 5. Enforcement
 - **Tools:**
     - Linters for file and folder naming.
-    - Custom scripts to check for required translations and key consistency.
+    - Custom scripts to check for required translations, key consistency, and unique slugs.
     - Code review and CI checks.
     - All changes must pass `npm run test`.
 
 ---
 
 ## 6. Versioning
-- **Version:** v1.0, July 2025
+- **Version:** v1.2, July 2025
 - **Update the version and date when making changes to this rule.**
 
 ---
