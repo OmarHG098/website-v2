@@ -72,7 +72,7 @@ partners:
 overlaped:
   heading: "Why learning Vibe Coding is essential"
   subtitle: "Get ahead with AI-powered development that’s reshaping how software is built—and what modern teams expect."
-  paragraph: 'Vibe Coding—where you give high-level prompts and let AI generate the code—is the cutting edge of development. Coined by Andrej Karpathy and now gaining real traction, this workflow helps developers turn ideas into working software up to 4× faster than traditional methods, using tools like <strong style="text-decoration: none; color: #000000; font-weight: 700;">Cursor</strong> and <strong style="text-decoration: none; color: #000000; font-weight: 700;">Vercel v0</strong>. Companies are already prioritizing developers who know how to collaborate with AI. Learning Vibe Coding gives you a clear edge—and keeps you relevant in the rapidly evolving tech industry.'
+  paragraph: 'Vibe Coding—where you give high-level prompts and let AI generate the code—is the cutting edge of development. Popularized by Andrej Karpathy and now gaining traction, it helps you build apps up to 4× faster using tools like  <strong style="text-decoration: none; color: #000000; font-weight: 700;">Cursor</strong> and <strong style="text-decoration: none; color: #000000; font-weight: 700;">Vercel v0</strong>. As AI transforms tech, companies are hiring developers who know how to leverage it. Learning Vibe Coding gives you a clear edge—and keeps your skills future-ready.'
   button:
     text: "LEARN MORE"
     color: "blue"  
