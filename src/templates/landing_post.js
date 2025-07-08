@@ -111,7 +111,7 @@ export default function Template(props) {
           title={post.frontmatter.title}
           paragraph={post.frontmatter.excerpt}
           display_mobile="flex"
-          svg_image={
+          svg_image={post.frontmatter.image ? (
             <RoundImage
               border="0rem"
               width="100%"
@@ -123,7 +123,7 @@ export default function Template(props) {
               position="right"
               url={post.frontmatter.image}
             />
-          }
+          ) : null}
           background={Colors.lightYellow}
         />
 
@@ -174,7 +174,7 @@ export default function Template(props) {
               size="12"
               size_tablet="8"
               flexDirection="column"
-              margin="30px 0 0 0"
+              margin="15px 0 0 0"
               background={Colors.white}
             >
               <Div className="single-post" flexDirection="Column">
@@ -188,13 +188,13 @@ export default function Template(props) {
                   display="none"
                   size_tablet="4"
                   display_tablet="flex"
-                  margin="54px 0 0 0"
+                  margin={post.frontmatter.image ? "54px 0 0 0" : "20px 0 0 0"}
                   style={{ position: "relative" }}
                 >
                   <Div
                     style={{
                       boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)",
-                      top: `${isCustombarActive ? "150px" : "85px"}`,
+                      top: `${isCustombarActive ? "150px" : post.frontmatter.image ? "85px" : "50px"}`,
                     }}
                     className="container-sidebar-content"
                     padding="25px 0"
