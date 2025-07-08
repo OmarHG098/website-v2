@@ -87,7 +87,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
     <>
       <Div
         margin={isCustomBarActive(session) ? "40px 0 0 0" : "0"}
-        padding="10px 30px 0 30px"
+        padding="10px 15px 0 15px"
+        padding_sm="10px 20px 0 20px"
         padding_tablet="120px 130px 72px 130px"
         padding_lg="120px 0 72px 0"
         position="relative"
@@ -274,9 +275,10 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             lineHeight_tablet="46px"
             lineHeight_sm="30px" /* Ajuste para pantallas pequeñas */
             lineHeight_xs="30px" /* Ajuste para móviles muy pequeños */
+            margin="20px 0 20px 0"
+            margin_sm="15px 0 15px 0" /* Ajuste de margen en pantallas pequeñas */
+            margin_xs="10px 0 10px 0" /* Ajuste de margen en móviles pequeños */
             margin_tablet="40px 0 40px 0"
-            margin_sm="30px 0 30px 0" /* Ajuste de margen en pantallas pequeñas */
-            margin_xs="20px 0 20px 0" /* Ajuste de margen en móviles pequeños */
             textTransform="uppercase"
             fontFamily="Archivo, Lato, sans-serif"
           >
@@ -285,7 +287,10 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
 
           <SubTitle
             color={Colors.black}
-            margin="15px auto"
+            margin="10px auto"
+            margin_sm="8px auto"
+            margin_xs="5px auto"
+            margin_tablet="15px auto"
             padding="0"
             width="auto"
             letterSpacing="0.05em"
@@ -308,7 +313,10 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
 
           <Paragraph
             color={Colors.black}
-            margin="15px auto"
+            margin="10px auto"
+            margin_sm="8px auto"
+            margin_xs="5px auto"
+            margin_tablet="15px auto"
             padding="0"
             width="auto"
             textAlign="center"
@@ -334,6 +342,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             justifyContent="start"
             justifyContent_tablet="center"
             alignItems="center"
+            margin="20px 0 30px 0"
+            margin_sm="15px 0 25px 0"
+            margin_xs="10px 0 20px 0"
             margin_tablet="0 0 50px 0"
           >
             <Div width="100%" width_tablet="fit-content">
@@ -427,7 +438,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         </Container>
       </Div>
       <TwoColumn
-        padding="60px 80px"
+        padding="30px 20px"
+        padding_sm="40px 30px"
         padding_md="60px 80px"
         padding_lg="60px 80px"
         right={{ image: ymlTwoColumn.image }}
@@ -460,20 +472,27 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
 
       <Container
         display="block"
-        margin="40px auto"
-        padding="40px 10px"
+        margin="20px auto"
+        margin_sm="15px auto"
+        margin_xs="10px auto"
+        margin_tablet="40px auto"
+        padding="20px 10px"
+        padding_sm="30px 20px"
         padding_tablet="40px 90px"
         padding_md="40px 130px"
         padding_lg="40px 0"
       >
-        <Div display="block" margin="0px auto 40px 0" padding="42px 0">
+        <Div display="block" margin="0px auto 20px 0" margin_sm="0px auto 15px 0" margin_xs="0px auto 10px 0" margin_tablet="0px auto 40px 0" padding="20px 0" padding_sm="30px 0" padding_tablet="42px 0">
           <H2 margin="0 0 15px 0">{yml.how_it_works.title}</H2>
           <SubTitle>{yml.how_it_works.text}</SubTitle>
         </Div>
         <Div
           margin="auto"
           margin_lg="auto"
-          marginBottom="50px"
+          marginBottom="30px"
+          marginBottom_sm="25px"
+          marginBottom_xs="20px"
+          marginBottom_tablet="50px"
           width="300px"
           width_tablet="fit-content"
           width_md="auto"
@@ -583,7 +602,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         id="two_column_right"
         flexDirection="column"
         margin="0"
-        padding="80px 0"
+        padding="40px 0"
+        padding_sm="50px 0"
         padding_tablet="0"
         padding_md="0 50px"
         padding_lg="0"
@@ -606,6 +626,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         />
       </Container>
       <ChooseYourProgram
+        id="choose-program"
         lang={pageContext.lang}
         programs={data.allChooseYourProgramYaml.edges[0].node.programs.filter(
           (p) =>
@@ -615,13 +636,16 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         )}
         title={yml.choose_program?.title}
         paragraph={yml.choose_program?.paragraph}
+        background={Colors.veryLightBlue3}
+        padding="0"
       />
 
       <Container
         id="two_column_right_section"
         flexDirection="column"
         margin="0"
-        padding="80px 0"
+        padding="40px 0"
+        padding_sm="50px 0"
         padding_tablet="0"
         padding_md="0 50px"
         padding_lg="0"
@@ -656,7 +680,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         id="two_column_geek_section"
         flexDirection="column"
         margin="0"
-        padding="80px 0"
+        padding="40px 0"
+        padding_sm="50px 0"
         padding_tablet="0"
         padding_md="0 50px"
         padding_lg="0"

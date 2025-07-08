@@ -6,7 +6,7 @@ meta_info:
   image: "/images/programs-heading.webp"
   keywords: "Job Guarantee at 4Geeks Academy"
   redirects: ["/job-guarantee"]
-  utm_course: ["full-stack", "datascience-ml"]
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
 
 button:
   btn_label: "REQUEST A SYLLABUS"
@@ -49,13 +49,13 @@ two_column_left:
     style: '{ "font-weight": "400", "text-align": "justify", "color": "#333", "padding": "10px"}'
   content:
     text: |
-      <span style="color: #0097CD; ">✓  - </span> Have U.S. work authorization
+      <span style="color: #0097CD; ">✓</span> Have U.S. work authorization
       <br><br>
-      <span style="color: #0097CD; ">✓  - </span> Pass our logic test 
+      <span style="color: #0097CD; ">✓</span> Pass our logic test 
       <br><br>
-      <span style="color: #0097CD; ">✓  - </span> Complete all coursework and projects
+      <span style="color: #0097CD; ">✓</span> Complete all coursework and projects
       <br><br>
-      <span style="color: #0097CD; ">✓  - </span> Follow our career team's guidance
+      <span style="color: #0097CD; ">✓</span> Follow our career team's guidance
     font_size: ["20px", "20px", "18px", "16px", "14px"]
     style: '{ "text-align": "left", "color": "#444", "line-height": "1.1", "padding": "10px"}'
   button:
@@ -147,7 +147,7 @@ two_columns_video:
   video: "z8L4yGdP5xM"
   heading:
     text: "See How One Graduate Turned Our Job Guarantee Into a Real Career"
-    font_size: ["30px", "30px", "24px", "24px", "24px"] # De mayor a menor (Desktop → Móvil)
+    font_size: ["42px", "34px", "34px", "34px", "34px"] # De mayor a menor (Desktop → Móvil)
     style: '{"font-weight": "bold", "color": "#333", "text-align": "center"}'
   sub_heading:
     text: |
@@ -155,7 +155,7 @@ two_columns_video:
       Most importantly, he followed all the steps in our Job Guarantee — and it paid off. Daniel landed a tech job he loves and launched a new career with confidence.
       Watch his story to see what's possible when commitment meets support.
 
-    font_size: ["20px", "18px", "16px", "15px", "14px"]
+    font_size: ["20px", "18px", "16px", "16px", "14px"]
     style: '{"color": "#2a2a2a", "text-align": "justify", "line-height": "1.6", "max-width": "800px", "margin": "0 auto", "font-weight":"200" }'
   button:
     text: "APPLY NOW"
