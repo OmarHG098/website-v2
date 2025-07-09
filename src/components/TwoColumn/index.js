@@ -199,6 +199,7 @@ const Side = ({
                   bullets.item_style ? JSON.parse(bullets.item_style) : null
                 }
               >
+                {/* Only render heading+icon if heading exists */}
                 {bullet.heading && (
                   <Div display="flex" flexDirection="row" gap="5px">
                     <Icon
@@ -221,25 +222,24 @@ const Side = ({
                     </H3>
                   </Div>
                 )}
+                {/* Only render icon if icon exists and heading is not present */}
+                {bullet.icon && !bullet.heading && (
+                  <Icon
+                    icon={bullet.icon}
+                    width="13px"
+                    display="inline"
+                    color={bullet.icon_color || Colors.blue}
+                    fill={Colors.yellow}
+                    style={{ strokeWidth: "2px" }}
+                  />
+                )}
+                {/* Always render text if present */}
                 {bullet.text && (
-                  <Div margin="12px 0 0 0" alignItems="center" gap="5px">
-                    {!bullet.heading && (
-                      <Icon
-                        icon={bullet.icon || "check"}
-                        width="13px"
-                        display="inline"
-                        color={bullet.icon_color || Colors.blue}
-                        fill={Colors.yellow}
-                        style={{ strokeWidth: "2px" }}
-                      />
-                    )}
-                    <Paragraph
-                      textAlign="left"
-                      {...(isClient
-                        ? { dangerouslySetInnerHTML: { __html: bullet.text } }
-                        : { children: bullet.text })}
-                    />
-                  </Div>
+
+                  <Paragraph
+                    textAlign="left"
+                    dangerouslySetInnerHTML={{ __html: bullet.text }}
+                  />
                 )}
               </Div>
             );
