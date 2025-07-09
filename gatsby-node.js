@@ -110,6 +110,22 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
   return node;
 };
 
+// Disable CookieBot on the /thumbnail page
+exports.onCreatePage = async ({ page, actions }) => {
+  const { deletePage, createPage } = actions;
+  if (page.path === "/thumbnail") {
+    // Remove CookieBot by setting a flag in context
+    deletePage(page);
+    createPage({
+      ...page,
+      context: {
+        ...page.context,
+        disableCookieBot: true,
+      },
+    });
+  }
+};
+
 // Create all the pages needed
 exports.createPages = async (params) =>
   (await createEditPage(params)) &&
