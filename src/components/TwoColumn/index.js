@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ReactPlayer from "../ReactPlayer";
 import { H2, Paragraph, H3 } from "../Heading";
 import Icon from "../Icon";
@@ -25,6 +25,12 @@ const Side = ({
   padding_tablet,
   side,
 }) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const utm = session && session.utm;
   if (video)
     return (
@@ -142,7 +148,18 @@ const Side = ({
             margin="30px 0 20px 0"
             style={heading.style ? JSON.parse(heading.style) : null}
           >
-            {heading.text}
+            {heading.text.includes("\n")
+              ? heading.text.split("\n").map((line, idx, arr) =>
+                  idx < arr.length - 1 ? (
+                    <React.Fragment key={idx}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ) : (
+                    line
+                  )
+                )
+              : heading.text}
           </H2>
         </Div>
       )}
@@ -218,6 +235,7 @@ const Side = ({
                 )}
                 {/* Always render text if present */}
                 {bullet.text && (
+
                   <Paragraph
                     textAlign="left"
                     dangerouslySetInnerHTML={{ __html: bullet.text }}
@@ -245,7 +263,9 @@ const Side = ({
             if (e.target.tagName === "A" && content.path)
               smartRedirecting(e, content.path);
           }}
-          dangerouslySetInnerHTML={{ __html: content.text }}
+          {...(isClient
+            ? { dangerouslySetInnerHTML: { __html: content.text } }
+            : { children: content.text })}
         />
       ) : (
         content &&
@@ -279,7 +299,9 @@ const Side = ({
           margin="10px 0"
           fontSize="13px"
           style={disclosure.style ? JSON.parse(disclosure.style) : null}
-          dangerouslySetInnerHTML={{ __html: disclosure.text }}
+          {...(isClient
+            ? { dangerouslySetInnerHTML: { __html: disclosure.text } }
+            : { children: disclosure.text })}
           onClick={(e) => {
             if (e.target.tagName === "A" && disclosure.path)
               smartRedirecting(e, disclosure.path);
