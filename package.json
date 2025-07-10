@@ -48,6 +48,7 @@
     "@fontsource/archivo": "^5.0.14",
     "@loadable/component": "^5.13.2",
     "browser-monads": "^1.0.0",
+    "buffer": "^6.0.3",
     "classnames": "^2.3.1",
     "dayjs": "^1.8.29",
     "gatsby": "^5.11.0",
@@ -83,8 +84,10 @@
     "gatsby-transformer-remark": "^6.11.0",
     "gatsby-transformer-sharp": "^5.11.0",
     "gatsby-transformer-yaml": "^5.11.0",
+    "gray-matter": "^4.0.3",
     "inter": "^2.1.0",
     "lazysizes": "^5.2.2",
+    "marked": "^15.0.12",
     "node-fetch": "^2.6.1",
     "prismjs": "^1.29.0",
     "process": "^0.11.10",
@@ -110,10 +113,13 @@
     "react-switch": "^5.0.1",
     "react-trend": "^1.2.5",
     "react-twitter-embed": "^3.0.3",
+    "rehype": "^13.0.2",
+    "rehype-parse": "^9.0.1",
     "rehype-react": "^7.0.1",
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.3.2",
-    "styled-reset-advanced": "^1.0.1"
+    "styled-reset-advanced": "^1.0.1",
+    "unified": "^11.0.5"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^7.0.23",
