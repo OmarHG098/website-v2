@@ -194,7 +194,7 @@ const Side = ({
                 height="auto"
                 alignItems="center"
                 margin="12px 0 0 0"
-                display="block"
+                display="flex"
                 style={
                   bullets.item_style ? JSON.parse(bullets.item_style) : null
                 }
