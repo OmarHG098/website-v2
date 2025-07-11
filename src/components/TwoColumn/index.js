@@ -235,7 +235,6 @@ const Side = ({
                 )}
                 {/* Always render text if present */}
                 {bullet.text && (
-
                   <Paragraph
                     textAlign="left"
                     dangerouslySetInnerHTML={{ __html: bullet.text }}

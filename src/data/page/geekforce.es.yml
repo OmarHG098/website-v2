@@ -28,7 +28,7 @@ iconogram:
   swipable: false
   icons:
     - icon: "briefcase-new"
-      content: "86% de nuestros alumnos contratados"
+      content: "84% de nuestros alumnos contratados"
     - icon: "four_persons"
       content: "Soporte laboral post programa"
     - icon: "teacher_teaching"

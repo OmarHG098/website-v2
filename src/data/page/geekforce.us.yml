@@ -32,7 +32,7 @@ iconogram:
   swipable: false
   icons:
     - icon: "briefcase-new"
-      content: "86% of our students hired"
+      content: "84% of our students hired"
     - icon: "four_persons" #"group"
       content: "Post program labor support"
     - icon: "teacher_teaching"
