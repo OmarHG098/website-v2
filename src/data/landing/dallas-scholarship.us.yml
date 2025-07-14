@@ -1,9 +1,9 @@
 meta_info:
-  slug: dallas-scholarship # <--- URL 4geeksacademy.com/us/landing/dallas-scholarship
+  slug: texas-scholarship # <--- URL 4geeksacademy.com/us/landing/texas-scholarship
 
   # This will show on social media when shared
-  title: "Launch Your Tech Career with 4Geeks Academy in Dallas"
-  description: "Coding bootcamps with full or partial scholarships available in dallas"
+  title: "Launch Your Tech Career with 4Geeks Academy in Texas"
+  description: "Coding bootcamps with full or partial scholarships available in Texas"
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   image: "public/images/bg/the-academy-bg.jpg"
@@ -16,7 +16,7 @@ meta_info:
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
-  utm_location: ["dallas-usa"]
+  utm_location: ["dallas-usa", "austin-usa", "houston-usa"]
   automation: strong # comma separated, "soft" is the default value
   tag: website-lead # comma separated, "request_more_info" is the default value
 
@@ -41,7 +41,7 @@ navbar:
   logoUrl: "#"
 
 header_data:
-  tagline: "Hey Dallasites! Your Life in Tech Starts Here!"
+  tagline: "Hey Texans! Your Life in Tech Starts Here!"
   sub_heading: |
     <span style="font-size: 32px;">Get Ready for a Tech Career with a Full Scholarship.</span>
   background: "#ffffff"
@@ -59,8 +59,8 @@ features:
   marginTop: 0px #<-- separation between tagline and the bullets
   text: "Apply now—don’t miss your chance!"
   bullets:
-    - "For residents of Greater Dallas ONLY."
-    - "Get a high-paying, future-proof tech-job, right in your city."
+    - "For residents of Texas ONLY."
+    - "Get a high-paying, future-proof tech-job, right in your state."
     - "Award-winning tech education and transformative life skills."
     - "Only 23 spots- act now!"
   styles: '{ "color": "black", "fontWeight":"400" }'
@@ -163,10 +163,11 @@ components:
       src: "/images/landing/hombre-con-laptop.png"
       shadow: false
     section_heading:
-      text: "Why Learn to Code?"
+      text: ""
       style: '{ "font-size": "30px" }'
     heading:
-      text: ""
+      text: "Why Learn to Code?"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
       text: ""
       font_size: ["16px", "16px", "16px", "16px", "16px"]
@@ -355,10 +356,10 @@ components:
       src: "/images/landing/community-support-2.png"
       shadow: false
     section_heading:
-      text: "THE DALLAS TECH SCENE IS THRIVING"
+      text: "THE TEXAS TECH SCENE IS THRIVING"
       style: '{ "font-size": "30px" }'
     sub_heading:
-      text: "Dallas is rapidly emerging as a major tech hub, attracting top companies, startups, and tech talent. As demand for skilled developers grows, it’s the perfect time to kickstart your tech career!"
+      text: "Texas is rapidly emerging as a major tech hub, attracting top companies, startups, and tech talent. As demand for skilled developers grows, it’s the perfect time to kickstart your tech career!"
       style: '{ "font-weight": "300", "font-size": "18px", "textAlign": "justify" }'
     button:
       text: "Apply Now"
@@ -368,16 +369,16 @@ components:
     bullets:
       items:
         - heading: "Expanding Job Market"
-          text: "The Dallas-Fort Worth area is projected to add over 20,000 tech jobs by the end of 2025. Software developers are in high demand, with companies investing heavily in building web applications and digital solutions."
+          text: "The Texas area is projected to add over 20,000 tech jobs by the end of 2025. Software developers are in high demand, with companies investing heavily in building web applications and digital solutions."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "Home to Tech Giants & Startups"
           text: "Companies like Texas Instruments, AT&T, and Samsung have a strong presence, while a thriving startup ecosystem is fueled by $1.9 billion in venture capital."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "High-Paying Careers"
-          text: "Entry-level software engineers in Dallas earn an average of $75,000 per year. With experience, tech professionals can earn well above six figures, making tech a stable, future-proof career."
+          text: "Entry-level software engineers in Texas earn an average of $75,000 per year. With experience, tech professionals can earn well above six figures, making tech a stable, future-proof career."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "Innovation & Community"
-          text: "Dallas has a supportive tech culture, with networking events, meetups, and bootcamps helping newcomers break in and grow."
+          text: "Texas has a supportive tech culture, with networking events, meetups, and bootcamps helping newcomers break in and grow."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
 
 
