@@ -168,7 +168,7 @@ const BlogPreview = () => {
     const file = e.target.files[0];
     if (!file) return;
     if (!file.name.endsWith(".md")) {
-      setError("Please upload a valid .md file.");
+      setError("Por favor, sube un archivo .md válido.");
       setFileName("");
       setMarkdown("");
       return;
@@ -196,15 +196,15 @@ const BlogPreview = () => {
             setMarkdown(content);
           }, 10);
         } else {
-          throw new Error("File content is not a string");
+          throw new Error("El contenido del archivo no es una cadena de texto");
         }
       } catch (err) {
         console.error("File reading error:", err);
-        setError("Error reading file: " + err.message);
+        setError("Error leyendo el archivo: " + err.message);
       }
     };
     reader.onerror = () => {
-      setError("Error reading file. Please try again.");
+      setError("Error leyendo el archivo. Por favor, inténtalo de nuevo.");
     };
     reader.readAsText(file, "UTF-8");
   };
@@ -231,13 +231,13 @@ const BlogPreview = () => {
   };
 
   // Extract header info from frontmatter or use placeholders
-  const headerTitle = frontmatter.title || "Preview Title";
+  const headerTitle = frontmatter.title || "Vista previa del título";
   const headerExcerpt =
-    frontmatter.excerpt || "This is a preview of your Markdown content.";
+    frontmatter.excerpt || "Esta es una vista previa de tu contenido Markdown.";
   const headerImage =
     frontmatter.image ||
     "https://static.4geeks.com/assets/images/4geeks-main.jpg";
-  const headerCluster = frontmatter.cluster || "Preview";
+  const headerCluster = frontmatter.cluster || "Vista previa";
 
   return (
     <Layout
@@ -260,21 +260,20 @@ const BlogPreview = () => {
             textAlign="left"
             margin="0 0 12px 0"
           >
-            Blog Post Markdown Preview
+            Vista previa de publicación de blog en Markdown
           </Paragraph>
           <Paragraph
-            fontSize="16px"
+            fontSize="24px"
             color={Colors.gray}
             textAlign="left"
             margin="0 0 24px 0"
           >
-            Upload a <b>.md</b> file or paste your Markdown content below to
-            preview how it will look.
+            Sube un archivo .md o pega tu contenido Markdown abajo para ver una vista previa
           </Paragraph>
 
           <Div flexDirection="column" gap="12px" width="100%">
             <Paragraph fontSize="15px" textAlign="left" margin="0 0 4px 0">
-              Upload Markdown file
+              Subir archivo Markdown
             </Paragraph>
             <input
               ref={fileInputRef}
@@ -290,13 +289,13 @@ const BlogPreview = () => {
                 textAlign="left"
                 margin="4px 0 0 0"
               >
-                Selected file: {fileName}
+                Archivo seleccionado: {fileName}
               </Paragraph>
             )}
           </Div>
 
           <Paragraph fontSize="15px" textAlign="left" margin="24px 0 4px 0">
-            Or paste Markdown below
+            O pega Markdown abajo
           </Paragraph>
           <textarea
             value={markdown}
@@ -312,7 +311,7 @@ const BlogPreview = () => {
               marginBottom: "8px",
               resize: "vertical",
             }}
-            placeholder="Paste or type Markdown here..."
+            placeholder="Pega o escribe Markdown aquí..."
           />
 
           <Div flexDirection="row" gap="12px" margin="8px 0 0 0">
@@ -321,7 +320,7 @@ const BlogPreview = () => {
               background={Colors.lightGray}
               color={Colors.darkGray}
             >
-              Clear
+              Limpiar
             </Button>
           </Div>
 
@@ -332,7 +331,7 @@ const BlogPreview = () => {
               textAlign="left"
               margin="12px 0 0 0"
             >
-              Processing Markdown...
+              Procesando Markdown...
             </Paragraph>
           )}
 
@@ -343,7 +342,7 @@ const BlogPreview = () => {
               textAlign="left"
               margin="12px 0 0 0"
             >
-              {error}
+              {error.replace('Please upload a valid .md file.', 'Por favor, sube un archivo .md válido.').replace('Error processing Markdown:', 'Error procesando Markdown:').replace('Error reading file:', 'Error leyendo el archivo:').replace('File content is not a string', 'El contenido del archivo no es una cadena de texto').replace('Error reading file. Please try again.', 'Error leyendo el archivo. Por favor, inténtalo de nuevo.')}
             </Paragraph>
           )}
 
@@ -364,7 +363,7 @@ const BlogPreview = () => {
                 textAlign="left"
                 margin="0 0 8px 0"
               >
-                Frontmatter Detected:
+                Frontmatter detectado:
               </Paragraph>
               <pre
                 style={{ fontSize: "12px", margin: 0, whiteSpace: "pre-wrap" }}
@@ -373,7 +372,9 @@ const BlogPreview = () => {
               </pre>
             </Div>
           )}
-
+          <Paragraph fontSize="15px" textAlign="left" margin="24px 0 4px 0">
+          Nota: si has pegado Markdown, el título puede no ser visible ya que éste viene del frontmatter
+          </Paragraph>
           {/* Preview section - styled like landing_post.js */}
           {rehypeAst && (
             <Div
