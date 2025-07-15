@@ -630,7 +630,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         programs={data.allChooseYourProgramYaml.edges[0].node.programs.filter(
           (p) =>
-            p.title === "Coding Bootcamp" ||
+            p.title === "Full Stack Development with AI" ||
             p.title === "Data Science and ML" ||
             p.title === "CyberSecurity Bootcamp"
         )}
