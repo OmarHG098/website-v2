@@ -22,7 +22,7 @@ header_data:
   #It must be a video from videoaks 
   #TODO: Este es el video para poner en español https://ask.4geeks.com/f67qc0ewu
   video: ""
-  image: "../../../static/images/bg/1250-sudents-bg.png"
+  image: "../../../static/images/bg/6000-students-bg.webp"
 
 why_4geeks:
   proportions: [6, 6]
@@ -34,7 +34,7 @@ why_4geeks:
     text: "Sé parte de una comunidad vibrante"
     style: '{ "fontWeight": 400, "marginBottom": "32px", "marginTop": "0px" }'
   sub_heading:
-    text: "Únete a nuestra comunidad internacional de más de 4000 estudiantes, profesores, socios y exalumnos. Conéctate a través de diversos canales como Slack, GitHub, redes sociales y nuestra plataforma exclusiva 4Geeks.com. ¡Donde hay un geek, hay un camino! Lo que nos diferencia:"
+    text: "Únete a nuestra comunidad internacional de más de 6000 estudiantes, profesores, socios y exalumnos. Conéctate a través de diversos canales como Slack, GitHub, redes sociales y nuestra plataforma exclusiva 4Geeks.com. ¡Donde hay un geek, hay un camino! Lo que nos diferencia:"
   content:
     text: |-
       Pertenecerás a una comunidad de personas afines que se apoyan genuinamente entre sí. Obtén acceso de por vida a nuestra plataforma de aprendizaje en línea y servicios de mentoría. Siempre estaremos aquí para ti, incluso después de graduarte.
@@ -42,16 +42,16 @@ why_4geeks:
     text: "Aplica ahora"
     color: "white"
     background: "blue"
-    path: "/us/apply"
+    path: "/es/apply"
   bullets:
     items:
-    - text: "Mentoría en codificación disponible de por vida"
+    - text: " Mentoría en codificación disponible de por vida"
       icon: "check"
-    - text: "Soporte profesional ilimitado y personalizado"
+    - text: " Soporte profesional ilimitado y personalizado"
       icon: "check"
-    - text: "Plan de estudios y metodología galardonados"
+    - text: " Plan de estudios y metodología galardonados"
       icon: "check"
-    - text: "Una extensa red de socios en tecnología"
+    - text: " Una extensa red de socios en tecnología"
       icon: "check"
 
 with_4geeks:
@@ -129,7 +129,7 @@ iconogram:
   background: veryLightBlue3
   icons:
   - icon: "graduation-2"
-    content: "4500+ Graduados"
+    content: "6000+ Graduados"
     content_style: '{ "fontSize": "24px" }'
   - icon: "group-2"
     color: "#23C520"
