@@ -226,16 +226,27 @@ const Side = ({
                     >
                       {bullet.heading}
                     </H3>
-                  )}
-                  {/* Text if present */}
-                  {bullet.text && (
-                    <Paragraph
-                      textAlign="left"
-                      margin="0"
-                      dangerouslySetInnerHTML={{ __html: bullet.text }}
-                    />
-                  )}
-                </Div>
+                  </Div>
+                )}
+                {/* Only render icon if icon exists and heading is not present */}
+                {bullet.icon && !bullet.heading && (
+                  <Icon
+                    icon={bullet.icon}
+                    width="13px"
+                    display="inline"
+                    color={bullet.icon_color || Colors.blue}
+                    fill={Colors.yellow}
+                    style={{ strokeWidth: "2px" }}
+                  />
+                )}
+                {/* Always render text if present */}
+                {bullet.text && (
+
+                  <Paragraph
+                    textAlign="left"
+                    dangerouslySetInnerHTML={{ __html: bullet.text }}
+                  />
+                )}
               </Div>
             );
           })}

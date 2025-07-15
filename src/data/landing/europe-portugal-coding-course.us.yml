@@ -37,7 +37,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   background: "#ffffff"
   tagline: Become a full-stack developer in 18 weeks through work on real projects and mentorship by experienced professionals
-  sub_heading: "84% of our graduates have already started their future-proof, tech careers with an average entry salary of 30.000€ per year. Classes are in English"
+  sub_heading: "86% of our graduates have already started their future-proof, tech careers with an average entry salary of 30.000€ per year. Classes are in English"
   tagline_color: "#1c1c1c"
   form_styles:
     background: "#0084FF"
