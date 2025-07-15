@@ -123,7 +123,7 @@ components:
     heading: 
       text: "Apúntate a 4Geeks Academy con una de las becas"
     sub_heading:
-      text: "Una comunidad de más de 4000 estudiantes, profesores, partners y exalumnos, conectados por medio de Slack, GitHub, Social Media y 4Geeks.com (nuestra plataforma educacional)"
+      text: "Una comunidad de más de 6000 estudiantes, profesores, partners y exalumnos, conectados por medio de Slack, GitHub, Social Media y 4Geeks.com (nuestra plataforma educacional)"
     button: 
       text: "Solicita una beca"
       color: white
