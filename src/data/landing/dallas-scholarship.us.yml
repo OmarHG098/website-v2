@@ -62,7 +62,7 @@ features:
     - "For residents of Texas ONLY."
     - "Get a high-paying, future-proof tech-job, right in your state."
     - "Award-winning tech education and transformative life skills."
-    - "Only 23 spots- act now!"
+    - "Spots are limited - act now!"
   styles: '{ "color": "black", "fontWeight":"400" }'
 
 short_badges:
@@ -237,7 +237,7 @@ components:
       - icon: "graduation-2"
         color: "#0084FF"
         title: "Eligibility"
-        content: "Must be a legal resident of Greater Dallas, underemployed or unemployed."
+        content: "Must be a legal resident of Texas, underemployed or unemployed."
       - icon: "briefcase-2"
         color: "#FFB718"
         title: "Application"
