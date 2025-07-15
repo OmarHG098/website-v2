@@ -118,13 +118,6 @@ who_is_hiring:
   heading: "WHO'S HIRING OUR STUDENTS"
   sub_heading: "Some of the companies where our graduates are thriving"
 
-program_details:
-  position: 6
-  background: "#F4F9FF"
-  heading: "BECOME A FULL STACK DEVELOPER AND LAUNCH A SUCCESSFUL CAREER"
-  sub_heading: |
-    Master  Python, React, JavaScript, and leverage cutting-edge AI tools to enhance your productivity and workflow. <br>Gain the most sought-after skills in tech  and launch your  career as a software developer. <a href='https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer'> More information here</a>.
-
 rating_reviews:
   background: "#fff"
   position: 9
@@ -166,7 +159,7 @@ components:
       text: ""
       style: '{ "font-size": "30px" }'
     heading:
-      text: "Why Learn to Code?"
+      text: "Why Learn AI-Powered Coding?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
       text: ""
@@ -181,13 +174,13 @@ components:
     bullets:
       items:
         - heading: "STRONG DEMAND"
-          text: "Demand for skilled programmers in Texas is high and expected to keep expanding"
+          text: "Demand for AI-fluent programmers in Texas is high and expected to keep expanding"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "HIGH-PAYING SALARIES"
           text: "Entry level developer positions earn an average of $75,000"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "DIVERSE CAREER OPPORTUNITIES"
-          text: "Coding skills have become essential in both tech and traditional industries due to the integration of digital tools and platforms into nearly every business."
+          text: "AI-Powered coding skills have become essential in both tech and traditional industries due to the integration of digital tools and platforms into nearly every business."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   # - name: new_design_with_bullets
@@ -257,6 +250,49 @@ components:
       color: white
       hover: white
       style: "{font-weight: 800}"
+
+  - name: program_details
+    position: 6
+    layout: two_column_right
+    background: "#F4F9FF"
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "cover" }'
+      src: "/images/bg/the-academy-bg.jpg"
+      shadow: false
+    heading:
+      text: "Program Details"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "Everything you need to know about the Full-Stack Developer program."
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
+    bullets:
+      items:
+        - heading: "Duration"
+          text: "15 weeks + Pre work"
+          icon: "check"
+        - heading: "Classes"
+          text: "Live on Google Meet. Monday to Thursday 6pm-9pm CT"
+          icon: "check"
+        - heading: "Size of the Class"
+          text: "Ratio of 1 teacher per 7 students"
+          icon: "check"
+        - heading: "Certificate"
+          text: "Full-Stack Developer <a href='https://certificate.4geeks.com/4ae7a46bba78dc19b823e124fea120c17b45e044'><span class='span-blue'>(See example)</span></a>"
+          icon: "check"
+        - heading: "Requisites"
+          text: "No previous coding skills or advanced math are required."
+          icon: "check"
+        - heading: "Language"
+          text: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
+          icon: "check"
+    button:
+      style: '{ "padding": "10px", "border-radius": "3px" }'
+      text: "Apply Now"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_bottom"
 
   - name: two_colum_full_stack
     position: 4
