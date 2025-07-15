@@ -8,6 +8,7 @@ import Icon from "../components/Icon";
 import { SessionContext } from "../session.js";
 import { isCustomBarActive } from "../actions";
 import LazyLoad from "react-lazyload";
+import AdmissionsStaff from "../components/AdmissionsStaff";
 
 const ThankYou = (props) => {
   const { data, pageContext, yml } = props;
@@ -130,6 +131,9 @@ const ThankYou = (props) => {
           </Paragraph>
         ))}
       </Div>
+
+      {/* Render AdmissionsStaff only for English */}
+      <AdmissionsStaff lang={session?.language} />
 
       <GridContainer
         flexDirection="column"
