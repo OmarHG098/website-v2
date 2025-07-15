@@ -274,7 +274,7 @@ components:
         - heading: "Classes"
           text: "Live on Google Meet. Monday to Thursday 6pm-9pm CT"
           icon: "check"
-        - heading: "Size of the Class"
+        - heading: "Class size"
           text: "Ratio of 1 teacher per 7 students"
           icon: "check"
         - heading: "Certificate"
