@@ -67,8 +67,8 @@ follow_bar:
     # devices:   XL      LG    MD      SM    XS
     font_size: ["22px", "22px", "22px", "20px", "18px"]
   button:
-    text: "Escribir por WhatsApp"
-    path: "https://api.whatsapp.com/send/?phone=56972848039&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
+    text: "¡Únete a la academia!"
+    path: "#leadform_bottom"
   phone:
     text: "llama"
 

@@ -162,11 +162,7 @@ components:
       items:
       - text: Apoyo Profesional de por vida
         icon: "check" #string with icon for example ['check', 'cicle', etc]
-      - text: <a href="/es/financiacion" target="_blank">Opciones de financiacion</a> Apoyo Profesional de por vida
-        icon: "check" #string with icon for example ['check', 'cicle', etc]
-      - text: Apoyo Profesional de por vida
-        icon: "check" #string with icon for example ['check', 'cicle', etc]
-      - text: Apoyo Profesional de por vida
+      - text: <a href="/es/financiacion" target="_blank">Opciones de financiacion</a>
         icon: "check" #string with icon for example ['check', 'cicle', etc]
 
 

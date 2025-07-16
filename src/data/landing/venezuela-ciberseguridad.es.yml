@@ -64,7 +64,7 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "¡Inicia tu carrera en ciberseguridad Hoy, con planes de pagos accesibles!"
+    text: "¡Inicia tu carrera en ciberseguridad hoy, con planes de pagos accesibles!"
     text_mobile: "¡Inicia Tu Carrera en Ciberseguridad Hoy!"
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]

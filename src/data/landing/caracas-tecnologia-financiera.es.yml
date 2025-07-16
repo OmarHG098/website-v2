@@ -81,13 +81,13 @@ short_badges:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Puedes escribirnos un mensaje por WhatsApp o llamarnos y con gusto te ayudaremos"
+    text: "¡Inscríbete en 4Geeks Academy y protege tu futuro!"
     text_mobile: "Puedes enviarnos un mensaje por WhatsApp"
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "Escribir por WhatsApp"
-    path: "https://api.whatsapp.com/send?phone=584241711725&text=Hola+4Geeks&utm_source=TECNO-FINANCIERA&u[…]aign=TECNO-FINANCIERA&utm_id=TECNO-FINANCIERA&utm_term=TECNO-FINANCIERA&utm_content=TECNO-FINANCIERA"
+    text: "¡Únete a la academia!"
+    path: "#leadform_bottom"
   phone:
     text: ""
 

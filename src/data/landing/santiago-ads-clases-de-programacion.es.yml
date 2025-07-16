@@ -65,15 +65,16 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Puedes llamarnos o enviarnos un mensaje por WhatsApp"
-    text_mobile: "Puedes llamarnos o enviarnos un mensaje por WhatsApp"
+    text: "¡Únete a la academia!"
+    text_mobile: "¡Únete a la academia!"
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Obtener más información"
     path: "#leadform_header"
   phone:
-    text: "Llama "
+    text: " "
+    number: " "
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
