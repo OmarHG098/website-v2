@@ -61,7 +61,7 @@ const Program = ({ data, pageContext, yml }) => {
     <>
       <Header
         margin={
-          isCustomBarActive(session) ? "120px auto 0 auto" : "90px auto 0 auto"
+          isCustomBarActive(session) ? "120px auto 0 auto" : "40px auto 0 auto"
         }
         paragraphMargin="26px 20px"
         paragraphMargin_Tablet="26px 22%"
