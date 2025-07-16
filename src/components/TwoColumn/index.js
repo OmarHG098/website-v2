@@ -194,22 +194,27 @@ const Side = ({
                 height="auto"
                 alignItems="center"
                 margin="12px 0 0 0"
-                display="block"
+                display="flex"
+                flexDirection="row"
+                gap="8px"
                 style={
                   bullets.item_style ? JSON.parse(bullets.item_style) : null
                 }
               >
-                {/* Only render heading+icon if heading exists */}
-                {bullet.heading && (
-                  <Div display="flex" flexDirection="row" gap="5px">
-                    <Icon
-                      icon={bullet.icon || "check"}
-                      width="13px"
-                      display="inline"
-                      color={bullet.icon_color || Colors.blue}
-                      fill={Colors.yellow}
-                      style={{ strokeWidth: "2px" }}
-                    />
+                {/* Icon always on the left */}
+                {bullet.icon && (
+                  <Icon
+                    icon={bullet.icon || "check"}
+                    width="18px"
+                    display="inline"
+                    color={bullet.icon_color || Colors.blue}
+                    fill={Colors.yellow}
+                    style={{ strokeWidth: "2px", minWidth: "18px" }}
+                  />
+                )}
+                <Div display="flex" flexDirection="column" style={{ flex: 1 }}>
+                  {/* Heading if present */}
+                  {bullet.heading && (
                     <H3
                       as="h3"
                       textAlign="left"
@@ -217,30 +222,20 @@ const Side = ({
                       fontWeight="900"
                       lineHeight="16px"
                       textTransform="uppercase"
+                      margin="0"
                     >
                       {bullet.heading}
                     </H3>
-                  </Div>
-                )}
-                {/* Only render icon if icon exists and heading is not present */}
-                {bullet.icon && !bullet.heading && (
-                  <Icon
-                    icon={bullet.icon}
-                    width="13px"
-                    display="inline"
-                    color={bullet.icon_color || Colors.blue}
-                    fill={Colors.yellow}
-                    style={{ strokeWidth: "2px" }}
-                  />
-                )}
-                {/* Always render text if present */}
-                {bullet.text && (
-
-                  <Paragraph
-                    textAlign="left"
-                    dangerouslySetInnerHTML={{ __html: bullet.text }}
-                  />
-                )}
+                  )}
+                  {/* Text if present */}
+                  {bullet.text && (
+                    <Paragraph
+                      textAlign="left"
+                      margin="0"
+                      dangerouslySetInnerHTML={{ __html: bullet.text }}
+                    />
+                  )}
+                </Div>
               </Div>
             );
           })}

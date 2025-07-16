@@ -21,7 +21,7 @@ header_data:
   free_button_text: PRUÉBALO GRATIS
   free_button_path: ""
   video: ""
-  image: "../../../static/images/bg/1250-sudents-bg.png"
+  image: "../../../static/images/bg/6000-students-bg.webp"
 
 news:
   heading: "Lee sobre nuestros bootcamps en las noticias..."
@@ -51,15 +51,17 @@ why_4geeks:
     style: '{ "fontWeight": 400}'
   sub_heading:
     text: "Con 7+ campus globales, 6,000+ egresados y mentores expertos siempre disponibles, 4Geeks ofrece más que habilidades de código: te damos un sistema de apoyo para toda tu carrera."
+
   content:
     text: " "
   button:
     text: "Aplica ahora"
     color: "white"
     background: "blue"
-    path: "/us/apply"
+    path: "/es/apply"
   bullets:
     items:
+
     - text: '<strong style="text-decoration: none; color: #000000; font-weight: 700;">Aprendizaje personalizado en cada etapa:</strong> Disfruta de una relación estudiante-mentor inigualable, acceso ilimitado a mentores humanos y coaching con IA adaptado a tus objetivos.'
       icon: "check"
     - text: '<strong style="text-decoration: none; color: #000000; font-weight: 700;">Mentoría y soporte profesional de por vida:</strong> Recibe orientación 1:1 de mentores y coaches expertos siempre que lo necesites, para siempre.'
@@ -99,6 +101,7 @@ two_columns:
     color: "white"
     background: "blue"
     path: "/es/apply"
+
 
 two_columns_rigo:
   proportions: [7, 5]
