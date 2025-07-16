@@ -1,5 +1,5 @@
 meta_info:
-  slug: full-time-full-stack-developer
+  slug: full-time-full-stack-developer   #<----URL: https://4geeksacademy.com/us/coding-bootcamps/full-time-full-stack-developer
   title: "Desarrollador Full Stack estudiando full-time, durante 10 semanas."
   description: "Conviértete en Desarrollador Full Stack en tan solo 10 semanas, estudia full-time para acelerar tu aprendizaje y cambia tu vida lo más rápido posible."
   image: "/images/og-preview/full-stack-ft.us.png"
@@ -19,6 +19,8 @@ meta_info:
       "/course/full-stack-web-development-bootcamp-full-time",
     ]
   related_clusters: ["full-stack-developer","trends-and-tech"]
+  template: "course-fullstack-ft"
+  duration: "P9W"  # 9 weeks duration in ISO 8601 format
   
 
 apply_form:
@@ -42,21 +44,6 @@ course_instructors:
   header:
     title: "Meet our instructors"
     paragraph: ""
-
-  # instructors:
-  #   - name: "Roldolfo Campos"
-  #     sub_title: "Co fundador de 4geeks y director de educación"
-  #     image: "../../../static/images/instructors/example.png"
-  #     bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
-  #     github: ""
-  #     linkedin: "https://www.linkedin.com/"
-
-  #   - name: "Gabriel Salinas"
-  #     sub_title: "Sophisticated Software Systems Engineer"
-  #     image: "../../../static/images/instructors/example.png"
-  #     bio: "Currently working as a Senior Solutions Architect at VMware"
-  #     github: ""
-  #     linkedin: "https://www.linkedin.com/"
 
 badges:
   paragraph: "4Geeks Academy only focuses in coding skills, the defacto <a href='/us/coding-bootcamp'>coding bootcamp</a>. We are licensed by the USA F. Dep. of Education. Chosen as one of the top 35 bootcamps of the world and top coding bootcamp in Miami according to SwitchUp. Recognized as the top 10 coding bootcamps in the United States according to Newsweek.."
@@ -85,9 +72,9 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "ln3bQsV1BaQ"
   heading:
     text: "4Geeks, Miami and a story full of opportunities"
     font_size: ["30px", "30px", "30px", "30px", "30px"]

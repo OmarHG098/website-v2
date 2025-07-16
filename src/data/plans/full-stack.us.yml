@@ -3,8 +3,8 @@ full_time:
   - slug: 'usa-upfront-ft'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: true
-    scholarship: "Full Payment"
-    payment_time: "Pay today"
+    scholarship: "Pay upfront"
+    payment_time: "Get a 40% discount"
     price: "$10,999"
     original_price: "$18,300"
     offer: "40% OFF"
@@ -24,11 +24,11 @@ full_time:
   #   payment_time: "There is nothing like this"
   #   price: "$9,000"
   #   original_price: "$15,000"
-  #   warning_message: "Limited seats!"
+  #   warning_message: "Limited availability!"
   #   offer: "40% OFF"
   #   bullets:
   #     - "You're saving ~$6,666 USD"
-  #     - "Remaining balance could be paid over time $100 p/mo"
+  #     - "Remaining balance could be paid over time $200 p/mo"
   #     - "Regular tuition is $11,999. Avg tuition in the US is $16k."
   #     - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
   #     - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services, or enroll with a Job Guarantee."
@@ -37,18 +37,35 @@ full_time:
 
 
   - slug: 'usa-financed-ft'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'toronto-canada']
     recomended: false
     scholarship: "Financed"
     payment_time: "24 months payment"
-    price: "~$200 per month"
-    bullets:
-      - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
-      - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services, or enroll with a Job Guarantee."
-      - "We also provide several full or partial scholarship options that you may be eligible for. Contact us for further details."
-    icons:
-      - "/images/ascent_logo.jpg"
+    price: "from $299/mo"
+    bullets: 
+      - "Affordable long term loans based on credit score."
+      - "Loan terms displayed are effective as of 3/11/2025. To see full repayment examples, visit <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">link to Ascent partnership page</a>."
+    icons: 
+      - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
+
+  - slug: 'usa-clark-scholarship-pt'
+    academies: ['']
+    recomended: false
+    scholarship: "Scholarship"
+    payment_time: "Full or partial funding if you qualify"
+    price: ""
+    original_price: ""
+    warning_message: "Limited availability!"
+    bullets: 
+      - "Ask about your region! We're part of several special workforce development incentives."
+      - "If you're earning less than your potential or unemployed, there are options for you!"
+      - "Any remaining balance can be financed."
+      - "Get in touch and we’ll help you with the application process!"
+      # - "<a href=\"https://4geeksacademy.com/us/contact\" target=\"_blank\" style=\"color: #007bff; \">Contact us</a> to check your eligibility."
+    icons: 
+      # - "/images/clarkuniversity.png"
 
   - slug: 'usa-fs-ft'
     academies: ['downtown-miami']
@@ -64,26 +81,13 @@ full_time:
     icons: 
       - "/images/landing/miamitech-logo.png"  
 
-  # - slug: 'usa-isa-ft'
-  #   academies: ['toronto-canada', 'downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
-  #   recomended: false
-  #   scholarship: "Income Share Agreement"
-  #   payment_time: "Pay only when you get a job. Ask for living stipends."
-  #   job_guarantee_price: "USD $4000"
-  #   price: "$0"
-  #   bullets: 
-  #     - "8.5% of your salary until paid in full, only if you get a job in tech."
-  #     - "Only start making payments after you find a Job"
-  #   icons: 
-  #     -  "/images/clarkuniversity.png"
-
 
 ## España & Europe
 
   - slug: 'spain-upfront-fs-ft'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: true
-    scholarship: "Pay Upfront"
+    scholarship: "Pay upfront"
     payment_time: "Get a better price"
     price: "€4,750*"
     bullets:
@@ -109,24 +113,13 @@ full_time:
       - "/images/sequra.png"
       - "/images/nemuru.png"
 
-  - slug: 'spain-isa-fs-ft'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
-    scholarship: "Income Share Agreement (ISA)"
-    payment_time: "Pay only after you find a job"
-    price: "0 €*"
-    bullets: 
-      - "Only pay while your job salary is above €16,000 / year."
-      - "*Pay using a small portion of your salary. NO INTEREST!"
-    icons: 
-      - "/images/bcas.png"   
 
 ## Chile
 
   - slug: 'chile-contado-fs-ft'
     academies: ['santiago-chile']
     recomended: true
-    scholarship: "Pay Upfront"
+    scholarship: "Pay upfront"
     payment_time: "Pay upfront and get 20% OFF!"
     price: "3.040.000 CLP"
     original_price: "3.800.000 CLP"
@@ -149,75 +142,54 @@ full_time:
     icons:
       - "/images/flevo-new.png"
                        
-  # - slug: 'chile-isa-fs-ft'
-  #   academies: ['santiago-chile']
-  #   recomended: false
-  #   scholarship: "Income Share Agreement (ISA)"
-  #   payment_time: ""
-  #   price: "0 CLP*"
-  #   bullets: 
-  #     - "*You pay 16% of your salary when you get a job until you paid in full"
-  #     - "Only if you get a job in tech" 
-  #   icons: 
-  #   - "/images/lumni.png"
+
 
 part_time:
 
 #USA Part-time
   - slug: 'usa-upfront-pt'
     recomended: true
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
-    scholarship: "Full Payment"
-    payment_time: "Pay today"
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
+    scholarship: "Pay upfront"
+    payment_time: "Get a 10% discount"
     price: "$9,000"
-    original_price: "$15,000"
-    offer: "40% OFF"
+    original_price: "$9,999"
+    offer: "10% OFF"
     bullets:
-      - "You are saving $6,000 right away!"
-      - "The tuition fee for a program like ours is $15,000"
-      - "You get to pay this also using one of our payment plans"
-      - "We are extremely invested in making quality coding education accessible to everyone"
-      - "There are plenty of partial scholarships available, please ask us how to get access to them."
+      - Pay upfront and save 10%
+      - Regular tuition is $ 9,999 and can be financed interest free-up to 6 months.
 
   - slug: 'usa-financed-pt'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'toronto-canada', 'dallas-usa']
     recomended: false
     scholarship: "Financed"
-    payment_time: "You can pay in 3, 4 or 5 years"
-    price: "~$150 p/mo"
+    payment_time: "Pay in 3, 4 or 5 years"
+    price: "from $299/mo"
     bullets: 
-      - "Several partners offering loans and payment plans"
-      - "You can get a partial scholarship and the remaining balance with a payment plan"
+      - "Choose among short or long term financing plans."
+      - "Affordable long term loans based on credit score."
+      - "loan terms displayed are effective as of 3/11/2025. To see full repayment examples, visit <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">our 4Geeks and Ascent page</a>."
+      # - "Explore available options <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">here</a>."
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
 
-  - slug: 'usa-clark-scholarship-pt'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
-    recomended: false
-    scholarship: "Scholarship"
-    payment_time: "You can be saving more than the $5k already discounted."
-    price: ""
-    original_price: "$15,000"
-    warning_message: "Limited seats!"
-    bullets: 
-      - "You are saving more than $5,000"
-      - "Partial scholarships available. Give us a call or apply below and we'll guide you through it."
-      - "You have to be underemployed or unemployed, and provide a valid US Work permit."
-    icons: 
-      # - "/images/clarkuniversity.png"
 
-  # - slug: 'usa-isa-pt'
-  #   academies: ['orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa','toronto-canada']
-  #   recomended: false
-  #   scholarship: "Income Share Agreement"
-  #   payment_time: "Start making payments only when you get a job"
-  #   price: "$0"
-  #   bullets: 
-  #     - "Focus on your career and not how to afford your education"
-  #     - "8.5% of your salary until paid in full (1.5x revenue cap), only if you get a job in tech."
-  #   icons: 
-  #     - "/images/miashare.png"    
+  - slug: 'usa-job-guarantee-pt'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'dallas-usa']
+    recomended: false
+    scholarship: "Job Guarantee"
+    payment_time: "Get hired or your money back"
+    price: "Tuition"
+    original_price: ""
+    warning_message: "+ 2,000 USD"
+    bullets: 
+      - "Enroll, agreeing to terms and conditions."
+      - "Fulfill required coursework and attendance."
+      - "Get hired within 9 months of graduation or we’ll refund 100% of your tuition."
+    icons: 
+      # - "/images/clarkuniversity.png" 
 
 ##  EUROPE Part-time
 
@@ -250,20 +222,7 @@ part_time:
       - "Scholarships available up to €1,900. Pay from €4,900* instead of €6,800. SCHOLARSHIPS SUBJECT TO AVAILABILITY!"         
     icons: 
       - "/images/bcas.png"
-                       
-  - slug: 'north-europe-isa-fs-pt'
-    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
-    recomended: false
-    scholarship: "Income Share Agreement (ISA)"
-    payment_time: "Pay only when you work"
-    price: "€0*"
-    bullets: 
-      - "You only have to pay when your income exceeds €16,000 per year"
-      - "*Pay a small part of your salary when you find a job - SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
-      - "To obtain the ISA you must meet some academic requirements"
-    icons: 
-      - "/images/bcas.png"
-
+                      
   - slug: 'south-europe-upfront-fs-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
     recomended: true
@@ -293,20 +252,6 @@ part_time:
       - "Scholarships available up to €1,900. Pay from €4,900* instead of €6,800. SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
     icons: 
       - "/images/bcas.png"
-
-  - slug: 'south-europe-isa-fs-pt'
-    academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: false
-    scholarship: "Income Share Agreement (ISA)"
-    payment_time: "Pay only when you work"
-    price: "€0*"
-    bullets: 
-      - "You only have to pay when your income exceeds €16,000 per year"
-      - "*Pay a small part of your salary when you find a job - SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
-      - "To obtain the ISA you must meet some academic requirements"
-    icons: 
-      - "/images/bcas.png"
-
 
 ## Spain 
 
@@ -343,18 +288,6 @@ part_time:
       - "/images/nemuru.png"
       - "/images/bcas.png"
 
-  - slug: 'spain-isa-fs-pt'
-    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
-    scholarship: "Income Share Agreement (ISA)"
-    payment_time: "Pay only when you work"
-    price: "€0*"
-    bullets: 
-      - "You only have to pay when your income exceeds €16,000 per year"
-      - "*Pay a small part of your salary when you find a job - SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
-      - "To obtain the ISA you must meet some academic requirements"
-    icons: 
-      - "/images/bcas.png"
 
 ## Chile part-time
 
@@ -362,7 +295,7 @@ part_time:
     academies: ['santiago-chile']
     recomended: true
     scholarship: "Full Stack + Career Support"
-    payment_time: "Pay Upfront and get a discount"
+    payment_time: "Pay upfront and get a discount"
     price: "2.760.000 CLP*"
     original_price: "3.450.000 CLP*"
     offer: "20% OFF"
@@ -392,7 +325,7 @@ part_time:
     scholarship: "Financed"
     payment_time: "18 months payment"
     price: "~168.000 CLP"
-    warning_message: "Limited seats!"
+    warning_message: "Limited availability!"
     bullets:
       - "Tailor-made financing from 6 to 18 months"  
       - "An advance payment corresponding to 20% of the value of the program must be paid."
@@ -405,7 +338,7 @@ part_time:
     academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
     recomended: true
     scholarship: "Job Guarantee"
-    payment_time: "Get hired within 6 months of graduation or your money back"
+    payment_time: "Get hired within 9 months of graduation or your money back"
     price: "USD $3.500"
     original_price: "USD $5.000"
     offer: "40% OFF"
@@ -438,7 +371,7 @@ part_time:
     academies: ['bogota-colombia']
     recomended: true
     scholarship: "Job Guarantee"
-    payment_time: "Get hired within 6 months of graduation or your money back"
+    payment_time: "Get hired within 9 months of graduation or your money back"
     price: "USD $3.500"
     original_price: "USD $5.000"
     offer: "40% OFF"
@@ -501,7 +434,7 @@ part_time:
     #price: "USD $4000"
     #bullets:
     #  - "Planes de pago disponibles en toda latam"
-    #  - "Conseguirás un trabajo dentro de los próximos 6 meses después de la graduación."     
+    #  - "Conseguirás un trabajo dentro de los próximos 9 meses después de la graduación."     
     #icons: 
     #  - "/images/quotanda-logo.png"
 

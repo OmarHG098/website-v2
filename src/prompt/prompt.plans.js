@@ -35,8 +35,7 @@ async function generate() {
         continue; // Continue to the next file if YAML content is invalid
       }
 
-      console.log(`Generating prompt for course plans ${doc.name}`);
-      const answer = await complete({
+      const result = await complete({
         max_tokens,
         system: `You are like a senior prompt engineer with deep coding knowledge, very familiar with the YML, CSV and JSON syntax.`,
         user: `The following information is part of 4Geeks Academy plans and prices.
@@ -50,12 +49,17 @@ Be concise, don't add a summary at the end of the article.
 Don't take more than ${max_tokens * 2} characters.
 For example: 
 - Scholarship for part-time courses. Pay today or in 3 parts. Price: $6999
-- Income Share Agreement for full-time couses. Pay after you get a job. Price: $0
 Here is the YML: ${raw}`,
       });
+      if (!result) return null;
+      const { data: answer, fromCache } = result;
       if (!answer) fail(`Error building prompt for payment plans`);
+
+      const source = fromCache ? "retrieved from cache" : "generated again";
+      console.log(`Generating prompt for course plans ${doc.name} (${source})`);
+
       fs.writeFileSync(`./prompts/plan-${doc.name}.prompt`, answer, "utf8");
-      console.log(`Finshed generating prompt for course plans ${doc.name}`);
+      console.log(`Finished generating prompt for course plans ${doc.name}`);
     }
 
     success("Finished generating prompts");

@@ -13,7 +13,7 @@ meta_info:
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
-  utm_location: ["malaga-spain", "valencia-spain","barcelona-spain", "madrid-spain"]
+  utm_location: ["madrid-spain"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
@@ -29,7 +29,7 @@ form:
   heading: "Más Información"
   motivation: "Una vez completado el formulario, alguien de nuestro equipo se pondrá en contacto contigo en breves minutos a través de un correo electrónico."
   button_label: Solicita tu Plaza
-  redirect: null #you can redirect to another url or entirely diffrent website
+  redirect: /es/gracias #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
@@ -226,7 +226,7 @@ components:
 
       - icon: "cibersecurity"
         title: "Ciberseguridad"
-        content: "Conviértete en un especialista en ciberseguridad y prepárate contra posibles ataques en sistemas como Windows o Linux."
+        content: "Conviértete en un profesional junior ciberseguridad y prepárate contra posibles ataques en sistemas como Windows o Linux."
 
       - icon: "applied-ai"
         title: "IA para Profesionales"
@@ -248,7 +248,7 @@ components:
       text: ""
       style: '{ "font-size": "30px" }'
     heading: 
-      text: "Descubre la historía de uno de nuestros estudiantes"
+      text: "Descubre la historia de uno de nuestros estudiantes"
     sub_heading:
       text: "Descubre la historia de Diego Fernández, ahora Full Stack Developer. Diego nos cuenta su experiencia en 4Geeks Academy, incluyendo las mentorías, la comunidad y su perspectiva."
     content: 

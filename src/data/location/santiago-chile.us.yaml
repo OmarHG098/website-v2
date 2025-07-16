@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-santiago"
   title: "Coding Bootcamp Santiago, Chile"
   position: 20
-  description: "Know here all about our coding bootcamp campus in Santiago, Chile"
+  description: "Start your tech career with 4Geeks Academy's Santiago Coding Bootcamp. Enjoy a Job Guarantee and expert mentorship to guide your success."
   image: "/images/og-preview/santiago-chile.us.png"
   keywords: ""
   redirects:
@@ -23,7 +23,7 @@ meta_info:
   cohort_exclude_regex: []
   home_video: "https://www.videoask.com/fyq2h2hvx"
 
-seo_title: "Coding Bootcamp Santiago de Chile"
+seo_title: "Coding Bootcamp Santiago, Chile with Job Guarantee"
 header:
   tagline: "4Geeks Academy in Santiago de Chile"
   sub_header: "All programs are taught "
@@ -98,14 +98,14 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "ln3bQsV1BaQ"
   heading:
-    text: "Luisa Glum's Experience at 4Geeks Academy in Santiago, Chile"
+    text: "Hernán García's Experience at 4Geeks Academy in Santiago, Chile"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Transformative Journeys and the Income Share Agreement, Elevate Your Tech Skills from Santiago, Chile"
+    text: "Transformative Journeys and the Deferred Payment Plan, Elevate Your Tech Skills from Santiago, Chile"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "APPLY NOW"
@@ -114,8 +114,8 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "Luisa Glum shares her personal journey and how 4Geeks Academy transformed her career path in Santiago's evolving tech landscape"
-    - text: "Learn about the innovative Income Share Agreement (ISA) model, a pioneering approach where tuition is paid after securing a job, ensuring access to quality education"
+    - text: "Hernán García shares his personal journey and how 4Geeks Academy transformed his career path in Santiago's evolving tech landscape"
+    - text: "Learn about our Deferred Payment Plan, a flexible approach where tuition is paid after securing a job, ensuring access to quality education"
     - text: "With a 95% job placement rate within six months of graduation, our programs ensure tangible outcomes for career advancement"
 
 # Two Columns - Rigo
@@ -124,10 +124,10 @@ two_columns_rigo:
   background: "#FFFFFF"
   justify: "center" #start,end,center
   image:
-    style: '{"backgroundSize": "contain", "background-position": "center"}'
-    src: "/images/landing/rigobot-section.webp"
-    shadow: false
-  # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    src: "/images/landing/ai-mentor.jpg"
+    shadow: true
+  video: "6m1Jyya7eCc"
   heading: 
     text: "Our AI-powered features make all the difference!"
     font_size: ["33px", "33px", "33px", "33px", "33px"]
@@ -137,9 +137,9 @@ two_columns_rigo:
   sub_heading:
     text: "Through years of research and experience, we've perfected the strategies and tools to ensure your constant and efficient progress. To optimize your learning curve and empower you to tackle challenges with confidence, we've now incorporated the power of AI."
     font_size: ["16px","16px","16px","16px","16px"]
-    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600" }'
+    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300", "text-align": "justify" }'
   content:
-    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
+    style: '{ "font-size":"16px", "margin":"15px 0"}'
     text: "Experience the difference our AI-powered features make. Our tried-and-tested approach keeps you engaged, motivated, and on the fast track to achieving your coding goals!"
   bullets:
     item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
@@ -172,14 +172,19 @@ in_person_available: true # important to accept in-person applicants
 consents:
   - slug: "gdpr_consent"
     name: "GDPR Consent"
-    active: true
+    active: false
     message: 'By submitting this form, I accept that my data may be used for a quote request that could result in a commercial relationship. Check out our complete <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/us/privacy-policy">Privacy Policy</a>'
     error_message: "You need to accept the privacy terms"
   - slug: "wa_consent"
     name: "WhatsApp Consent"
     active: true
-    message: "I agree to receive information through email, WhatsApp, and/or other channels about coding workshops, events, courses, and other marketing materials. We'll never share your contact information, and you can easily opt out at any moment."
+    message: "I agree to receive information through email, WhatsApp and/or other channels about workshops, events, courses, and other marketing materials. We'll never share your contact information, and you can easily opt out at any moment."
     error_message: "You need to accept Whatsapp consent"
+  - slug: "sms_consent"
+    name: "SMS Consent"
+    active: false
+    message: "I agree to receive SMS/text messages about workshops, events, courses, and other marketing materials. Message and data rates may apply. Reply STOP to unsubscribe, HELP for help. You may receive up to 4–6 text messages per month. We will never share your contact information, and you can easily opt out at any moment."
+    error_message: "You need to accept the SMS consent"
 
 city: "Santiago de Chile"
 name: "Chile"

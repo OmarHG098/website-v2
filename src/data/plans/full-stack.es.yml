@@ -29,7 +29,7 @@ full_time:
   #   offer: "40% DE DESCUENTO"
   #   bullets:
   #     - "Estás ahorrando aproximadamente $6,000 USD"
-  #     - "El saldo restante se puede pagar a lo largo del tiempo, $100 al mes"
+  #     - "El saldo restante se puede pagar a lo largo del tiempo, $200 al mes"
   #     - "La matrícula regular es de $15,000. La matrícula promedio en los Estados Unidos es de $16k."
   #     - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
   #     - "Puedes adaptar tu camino de aprendizaje a tus necesidades financieras. Elige incluir o excluir nuestros servicios de apoyo profesional, o inscríbete con una Garantía de Empleo."
@@ -47,7 +47,7 @@ full_time:
       - "Puedes adaptar tu camino de aprendizaje a tus necesidades financieras. Elige incluir o excluir nuestros servicios de apoyo profesional, o inscríbete con una Garantía de Empleo."
       - "También ofrecemos varias opciones de becas completas o parciales para las que puedas ser elegible. Contáctanos para más detalles."
     icons:
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent_logo.png"
       - "/images/climb-logo.png"
       - "/images/bcas.png"
 
@@ -65,20 +65,6 @@ full_time:
     icons: 
       - "/images/landing/miamitech-logo.png" 
 
-  # - slug: 'usa-isa-ft'
-  #   academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
-  #   recomended: false
-  #   scholarship: "Income Share Agreement"
-  #   payment_time: "Pay after you get a job"
-  #   job_guarantee_price: "USD $4000"
-  #   price: "$0"
-  #   bullets: 
-  #     - "With $400 p/ week living stipends"
-  #     - "9% of your salary until paid in full, only if you get a job in tech."
-  #   icons: 
-  #     - "/images/ascent_logo.jpg"
-  #     - "/images/climb-logo.png"
-  #     - "/images/quotanda-logo.png"
 
 ## España & Europe
   - slug: 'spain-upfront-fs-ft'
@@ -110,17 +96,7 @@ full_time:
       - "/images/sequra.png"
       - "/images/nemuru.png" 
                        
-  - slug: 'spain-isa-fs-ft'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
-    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
-    payment_time: "Paga sólo cuando trabajes"
-    price: "0 €*"
-    bullets: 
-      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo. ¡SIN INTERESES!"
-    icons: 
-      - "/images/bcas.png"   
+
 
   - slug: 'north-europe-upfront-fs-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
@@ -205,17 +181,7 @@ full_time:
     icons:
       - "/images/flevo-new.png"
                        
-  # - slug: 'chile-isa-fs-ft'
-  #   academies: ['santiago-chile']
-  #   recomended: false
-  #   scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
-  #   payment_time: ""
-  #   price: "0 CLP*"
-  #   bullets: 
-  #     - "*Pagas el 16% de tu salario cuando consigas empleo hasta pagarlo todo"
-  #     - "Sólo si consigues trabajo en el área de tecnología" 
-  #   icons: 
-  #   - "/images/lumni.png"
+
 
   - slug: 'venezuela-scholarship-pt'
     academies: ['caracas-venezuela']
@@ -255,7 +221,7 @@ part_time:
       - "Varios socios ofrecen préstamos y planes de pago"
       - "Puedes obtener una beca parcial y el saldo restante con un plan de pago"
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent_logo.png"
       - "/images/climb-logo.png"
       - "/images/bcas.png"
 
@@ -273,6 +239,23 @@ part_time:
       - "Debes estar subempleado o desempleado, y proporcionar un permiso de trabajo válido en Estados Unidos."
     icons: 
       # - "/images/clarkuniversity.png"
+
+
+  - slug: 'usa-job-guarantee-pt'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa']
+    recomended: false
+    scholarship: "Garantía de Empleo"
+    payment_time: "Consigue empleo o te devolvemos tu dinero"
+    price: "Matrícula"
+    original_price: ""
+    warning_message: "+ 2,000 USD"
+    bullets: 
+      - "Inscríbete aceptando los términos y condiciones."
+      - "Cumple con la carga académica y asistencia requeridas."
+      - "Si no consigues empleo en los 9 meses posteriores a la graduación, te reembolsamos el 100% de la matrícula."
+    icons: 
+      # - "/images/clarkuniversity.png"
+
 
   # - slug: 'usa-isa-pt'
   #   academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
@@ -316,19 +299,7 @@ part_time:
       - "Becas disponibles de hasta 1.900 €. Paga desde 4.900 €* en vez de 6.800 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"         
     icons: 
       - "/images/bcas.png"
-                       
-  - slug: 'north-europe-isa-fs-pt'
-    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
-    recomended: false
-    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
-    payment_time: "Paga sólo cuando trabajes"
-    price: "0 €*"
-    bullets: 
-      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo - ¡BECAS SUJETAS A DISPONIBILIDAD!"
-      - "Para obtener el ISA debes cumplir con algunos requisitos académicos"
-    icons: 
-      - "/images/bcas.png"     
+                         
 
   - slug: 'south-europe-upfront-fs-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
@@ -360,18 +331,6 @@ part_time:
     icons: 
       - "/images/bcas.png"
 
-  - slug: 'south-europe-isa-fs-pt'
-    academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: false
-    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
-    payment_time: "Paga sólo cuando trabajes"
-    price: "0 €*"
-    bullets: 
-      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo - ¡BECAS SUJETAS A DISPONIBILIDAD!"
-      - "Para obtener el ISA debes cumplir con algunos requisitos académicos"
-    icons: 
-      - "/images/bcas.png"     
 
 # España
 
@@ -408,18 +367,6 @@ part_time:
       - "/images/nemuru.png"
       - "/images/bcas.png"
 
-  - slug: 'spain-isa-fs-pt'
-    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
-    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
-    payment_time: "Paga sólo cuando trabajes"
-    price: "0 €*"
-    bullets: 
-      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo - ¡BECAS SUJETAS A DISPONIBILIDAD!"
-      - "Para obtener el ISA debes cumplir con algunos requisitos académicos"
-    icons: 
-      - "/images/bcas.png" 
 
 ## Chile 
 
@@ -504,7 +451,7 @@ part_time:
     academies: ['bogota-colombia']
     recomended: true
     scholarship: "Trabajo Garantizado"
-    payment_time: "Consigue un trabajo dentro de los 6 meses posteriores a la graduación o te devolvemos tu dinero"
+    payment_time: "Consigue un trabajo dentro de los 9 meses posteriores a la graduación o te devolvemos tu dinero"
     price: "USD $3,500"
     original_price: "USD $5,000"
     offer: "40% DE DESCUENTO"

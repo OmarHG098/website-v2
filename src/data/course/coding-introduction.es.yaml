@@ -1,5 +1,5 @@
 meta_info:
-  slug: introduccion-a-la-programacion
+  slug: introduccion-a-la-programacion   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/introduccion-a-la-programacion
   title: "Curso de Introducción a la Programación por 4Geeks Academy, Domina los Fundamentos del Desarrollo Web"
   bc_slug: "coding-introduction"
   template: "course-code-introduction"
@@ -10,6 +10,7 @@ meta_info:
   show_in_apply: false
   related_clusters: ["full-stack-developer"]
   redirects: []
+  duration: "P9W"  # 9 weeks duration in ISO 8601 format
 
 apply_form:
   label: Introducción a la Programación

@@ -31,7 +31,7 @@ form:
   heading: "Solicita tu beca"
   motivation: "Conviértete en Full-Stack Developer con financiación a tu medida, becas y ayuda al estudio en la escuela más premiada de España."
   button_label: Solicita tu beca
-  redirect: null #you can redirect to another url or entirely diffrent website
+  redirect: /es/gracias #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
@@ -92,11 +92,11 @@ follow_bar:
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
-
-    text: "¡Solicita tu Plaza!"
+    text: "Solicita tu plaza"
     path: "#leadform_header"
   phone:
-    text: "Llámanos"
+    text: ""
+    number: ""
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇

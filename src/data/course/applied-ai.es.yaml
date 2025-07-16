@@ -1,5 +1,5 @@
 meta_info:
-  slug: curso-inteligencia-artificial
+  slug: curso-inteligencia-artificial   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/curso-inteligencia-artificial
   title: "Curso de Inteligencia Artificial Aplicada"
   description: "Explora a detalle la inteligencia artificial y cómo aplicarla en diferentes industrias, roles y en tu trabajo. Sin conocimientos previos requeridos."
   bc_slug: "applied-ai"
@@ -10,6 +10,7 @@ meta_info:
   show_in_apply: true
   redirects: ["/es/applied-ai"]
   related_clusters: ["trends-and-tech"]
+  duration: "P6W"  # 6 weeks duration in ISO 8601 format
 
 apply_form:
   label: Inteligencia Artificial Aplicada (sin codificación)

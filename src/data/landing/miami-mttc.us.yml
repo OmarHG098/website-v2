@@ -3,7 +3,7 @@ meta_info:
 
   # This will show on social media when shared
   title: "Launch Your Tech Career with 4Geeks Academy & Miami Tech Coalition Scholarships"
-  description: "No-cost coding bootcamps with full or partial scholarships available. Become a software developer or data scientist and join the #MiamiTechLife."
+  description: "Apply for Miami Tech Coalition Partial Scholarships at 4Geeks Academy. Get financial support to jumpstart your coding career in the Miami tech scene."
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   image: "public/images/landing/miamitech-logo-sidetext.png"
@@ -41,7 +41,7 @@ navbar:
   logoUrl: "#"
 
 header_data:
-  tagline: "No Cost, No Excuses: Full & Partial Scholarships from the Miami Tech Coalition"
+  tagline: "Miami Tech Coalition Partial Scholarships"
   sub_heading: ""
   background: "#ffffff"
   tagline_color: "#1c1c1c"
@@ -166,6 +166,7 @@ components:
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: "The Miami Tech Talent Coalition connects employers, educators, and community organizations in South Florida to create a strong tech talent pipeline. By training local talent and matching them with companies looking for skilled professionals, we’re helping to build and sustain a thriving tech community in the region."
+      style: '{ "font-weight": "300", "font-size": "18px" }'
     button:
       text: "Apply Now"
       color: white

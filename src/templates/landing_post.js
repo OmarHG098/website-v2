@@ -100,10 +100,11 @@ export default function Template(props) {
         type="post"
         seo={data.markdownRemark.frontmatter}
         context={pageContext}
+        wordCount={data.markdownRemark.fields.wordCount}
       >
         <Header
           hideArrowKey
-          padding={isCustombarActive ? "90px 17px 70px 17px" : undefined}
+          padding={isCustombarActive === false ? null : "90px 17px 70px 17px"}
           paddingParagraph="0"
           paddingTitle="0"
           textAlign_tablet="left"
@@ -275,6 +276,7 @@ export const postQuery = graphql`
         readingTime {
           text
         }
+        wordCount
       }
     }
   }

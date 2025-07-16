@@ -1,5 +1,5 @@
 meta_info:
-  slug: ingenieria-de-software-programacion
+  slug: ingenieria-de-software-programacion   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/ingenieria-de-software-programacion
   title: "Estudia Ingeniería de Software en 4Geeks Academy"
   description: "Conviérte en un Ingeniero de Software y obtén un trabajo de clase mundial con 4Geeks Academy"
   bc_slug: "software-engineering"
@@ -10,6 +10,7 @@ meta_info:
   show_in_apply: false
   redirects: ["/ingenieria-software", "/es/software-engineering", "/es/course/ingenieria-software"]
   related_clusters: ["trends-and-tech"]
+  duration: "P18W"  # 18 weeks duration in ISO 8601 format
 
 apply_form:
   label: Ingeniero de Software Senior
@@ -65,9 +66,9 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "ln3bQsV1BaQ"
   heading:
     text: "4Geeks, Miami and a story full of opportunities"
     font_size: ["30px", "30px", "30px", "30px", "30px"]

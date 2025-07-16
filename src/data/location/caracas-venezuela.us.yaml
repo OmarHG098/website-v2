@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-caracas"
   title: "Coding Bootcamp Caracas"
   position: 40
-  description: "Get to know here all about our coding bootcamp campus in Caracas, Venezuela of 4GeeksAcademy"
+  description: "4Geeks Academy’s Caracas Coding Bootcamp offers a Job Guarantee. Learn coding skills and gain the experience needed to start your tech career."
   image: "/images/og-preview/caracas-venezuela.us.png"
   keywords: ""
   template: "location"
@@ -18,7 +18,7 @@ meta_info:
   cohort_exclude_regex: []
   home_video: "https://www.videoask.com/fyq2h2hvx"
 
-seo_title: "4Geeks Academy Caracas"
+seo_title: "Coding Bootcamp in Caracas with Job Guarantee"
 header:
   tagline: "4Geeks Academy in Caracas"
   sub_header: "All programs are taught "
@@ -93,14 +93,14 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ"
   heading:
-    text: "Luisa Glum's Insights about 4Geeks Academy in Caracas"
+    text: "Hernán García's Insight with 4GeeksAcademy"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Luisa chooses 4Geeks Academy for this and other advantages"
+    text: "Empowering Tech Careers in Venezuela's Dynamic Sphere"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "¡Únete ahora!"
@@ -120,10 +120,10 @@ two_columns_rigo:
   background: "#FFFFFF"
   justify: "center" #start,end,center
   image:
-    style: '{"backgroundSize": "contain", "background-position": "center"}'
-    src: "/images/landing/rigobot-section.webp"
-    shadow: false
-  # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    src: "/images/landing/ai-mentor.jpg"
+    shadow: true
+  video: "6m1Jyya7eCc"
   heading: 
     text: "Our AI-powered features make all the difference!"
     font_size: ["33px", "33px", "33px", "33px", "33px"]
@@ -133,9 +133,9 @@ two_columns_rigo:
   sub_heading:
     text: "Through years of research and experience, we've perfected the strategies and tools to ensure your constant and efficient progress. To optimize your learning curve and empower you to tackle challenges with confidence, we've now incorporated the power of AI."
     font_size: ["16px","16px","16px","16px","16px"]
-    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600" }'
+    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300", "text-align": "justify" }'
   content:
-    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
+    style: '{ "font-size":"16px", "margin":"15px 0"}'
     text: "Experience the difference our AI-powered features make. Our tried-and-tested approach keeps you engaged, motivated, and on the fast track to achieving your coding goals!"
   bullets:
     item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
@@ -180,8 +180,13 @@ consents:
   - slug: "wa_consent"
     name: "WhatsApp Consent"
     active: true
-    message: "I agree to receive information through email, WhatsApp, and/or other channels about coding workshops, events, courses, and other marketing materials. We'll never share your contact information, and you can easily opt out at any moment."
+    message: "I agree to receive information through email, WhatsApp and/or other channels about workshops, events, courses, and other marketing materials. We'll never share your contact information, and you can easily opt out at any moment."
     error_message: "You need to accept Whatsapp consent"
+  - slug: "sms_consent"
+    name: "SMS Consent"
+    active: false
+    message: "I agree to receive SMS/text messages about workshops, events, courses, and other marketing materials. Message and data rates may apply. Reply STOP to unsubscribe, HELP for help. You may receive up to 4–6 text messages per month. We will never share your contact information, and you can easily opt out at any moment."
+    error_message: "You need to accept the SMS consent"
 
 city: "Caracas"
 name: "Venezuela"

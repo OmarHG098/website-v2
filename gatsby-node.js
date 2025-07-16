@@ -87,6 +87,22 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
         logger.error("Missing frontmatter on node: " + node.id);
       }
 
+      // Calculate wordCount for blog posts
+      if (node.rawMarkdownBody) {
+        // Remove URLs but keep markdown symbols
+        const textWithoutUrls = node.rawMarkdownBody.replace(
+          /https?:\/\/\S+/g,
+          ""
+        );
+        const wordCount = textWithoutUrls.trim().split(/\s+/).length;
+
+        createNodeField({
+          node,
+          name: "wordCount",
+          value: wordCount,
+        });
+      }
+
       const slug = node.frontmatter.slug.replace(/\.[a-z]{2,2}/, "");
       url = `/data/blog/${slug}.${node.frontmatter.lang || "us"}/`;
     } else url = createFilePath({ node, getNode });
@@ -108,6 +124,22 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
   }
 
   return node;
+};
+
+// Disable CookieBot on the /thumbnail page
+exports.onCreatePage = async ({ page, actions }) => {
+  const { deletePage, createPage } = actions;
+  if (page.path === "/thumbnail") {
+    // Remove CookieBot by setting a flag in context
+    deletePage(page);
+    createPage({
+      ...page,
+      context: {
+        ...page.context,
+        disableCookieBot: true,
+      },
+    });
+  }
 };
 
 // Create all the pages needed
@@ -629,49 +661,49 @@ const addAdditionalRedirects = ({ graphql, actions }) => {
 };
 
 const getMetaFromPath = ({ url, meta_info, frontmatter }) => {
-  let slugigy = (entity) => {
-    let slugMap = {
-      location: "coding-campus",
-      course: "coding-bootcamps",
-    };
-    return slugMap[entity] || entity;
+  let slugMap = {
+    course: "coding-bootcamps",
+    location: "coding-campus",
   };
 
   //if its a blog post the meta_info comes from the front-matter
-  if (typeof meta_info == "undefined") meta_info = frontmatter;
+  if (!meta_info && frontmatter) meta_info = frontmatter;
 
+  // Captura: [1] -> type, [2] -> file_name, [3] -> lang
   const regex = /.*\/([\w-]*)\/([\w-]+)\.?(\w{2})?\//gm;
   let m = regex.exec(url);
   if (!m) return false;
-  const _cluster =
-    meta_info !== undefined && typeof meta_info.cluster === "string"
-      ? meta_info.cluster
-      : "post";
+
+  const _cluster = meta_info?.cluster || "post";
   const type = frontmatter ? _cluster : m[1];
 
   const lang = m[3] || "us";
-  const customSlug =
-    meta_info !== undefined && typeof meta_info.slug === "string";
-  const file_name = m[2]; // + (lang == "es" ? "-es": "");
-  const slug = customSlug ? meta_info.slug : file_name;
-  const template = type === "page" ? file_name : type;
+  const file_name = m[2];
+  const slug = meta_info?.slug ? meta_info.slug : file_name;
 
-  const pagePath =
-    type === "page"
-      ? `/${lang}/${slug}`
-      : `/${lang}/${slugigy(template)}/${slug}`;
+  let middle = "";
+  if (type === "page") {
+    middle = "";
+  } else {
+    middle = slugMap[type] || type;
+  }
 
-  const meta = {
+  const pagePath = middle ? `/${lang}/${middle}/${slug}` : `/${lang}/${slug}`;
+  const finalTemplate = meta_info?.template
+    ? meta_info.template
+    : type === "page"
+    ? file_name
+    : type;
+
+  return {
     lang,
     slug,
     file_name: `${file_name}.${lang}`,
-    template,
+    template: finalTemplate,
     type,
     url,
     pagePath,
   };
-
-  return meta;
 };
 
 const buildTranslations = ({ edges }) => {
@@ -683,6 +715,41 @@ const buildTranslations = ({ edges }) => {
     translations[meta.template][meta.lang] = meta.pagePath;
   });
   return translations;
+};
+
+// Add this new function to define custom fields
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+    type MarkdownRemarkFields implements Node {
+      wordCount: Int
+      lang: String
+      slug: String
+      file_name: String
+      defaultTemplate: String
+      type: String
+      pagePath: String
+      filePath: String
+      readingTime: ReadingTime
+    }
+    type ReadingTime {
+      text: String
+    }
+    type CourseYaml implements Node {
+      meta_info: MetaInfo
+    }
+    type MetaInfo {
+      duration: String
+      slug: String
+      title: String
+      description: String
+      template: String
+      visibility: String
+      redirects: [String]
+      related_clusters: [String]
+    }
+  `;
+  createTypes(typeDefs);
 };
 
 // This section was commented during the migration from GatsbyV2 to GatsbyV5

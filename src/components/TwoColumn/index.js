@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ReactPlayer from "../ReactPlayer";
 import { H2, Paragraph, H3 } from "../Heading";
 import Icon from "../Icon";
@@ -25,6 +25,12 @@ const Side = ({
   padding_tablet,
   side,
 }) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const utm = session && session.utm;
   if (video)
     return (
@@ -142,7 +148,18 @@ const Side = ({
             margin="30px 0 20px 0"
             style={heading.style ? JSON.parse(heading.style) : null}
           >
-            {heading.text}
+            {heading.text.includes("\n")
+              ? heading.text.split("\n").map((line, idx, arr) =>
+                  idx < arr.length - 1 ? (
+                    <React.Fragment key={idx}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ) : (
+                    line
+                  )
+                )
+              : heading.text}
           </H2>
         </Div>
       )}
@@ -177,21 +194,27 @@ const Side = ({
                 height="auto"
                 alignItems="center"
                 margin="12px 0 0 0"
-                display="block"
+                display="flex"
+                flexDirection="row"
+                gap="8px"
                 style={
                   bullets.item_style ? JSON.parse(bullets.item_style) : null
                 }
               >
-                {bullet.heading && (
-                  <Div display="flex" flexDirection="row" gap="5px">
-                    <Icon
-                      icon={bullet.icon || "check"}
-                      width="13px"
-                      display="inline"
-                      color={bullet.icon_color || Colors.blue}
-                      fill={Colors.yellow}
-                      style={{ strokeWidth: "2px" }}
-                    />
+                {/* Icon always on the left */}
+                {bullet.icon && (
+                  <Icon
+                    icon={bullet.icon || "check"}
+                    width="18px"
+                    display="inline"
+                    color={bullet.icon_color || Colors.blue}
+                    fill={Colors.yellow}
+                    style={{ strokeWidth: "2px", minWidth: "18px" }}
+                  />
+                )}
+                <Div display="flex" flexDirection="column" style={{ flex: 1 }}>
+                  {/* Heading if present */}
+                  {bullet.heading && (
                     <H3
                       as="h3"
                       textAlign="left"
@@ -199,29 +222,20 @@ const Side = ({
                       fontWeight="900"
                       lineHeight="16px"
                       textTransform="uppercase"
+                      margin="0"
                     >
                       {bullet.heading}
                     </H3>
-                  </Div>
-                )}
-                {bullet.text && (
-                  <Div margin="12px 0 0 0" alignItems="center" gap="5px">
-                    {!bullet.heading && (
-                      <Icon
-                        icon={bullet.icon || "check"}
-                        width="13px"
-                        display="inline"
-                        color={bullet.icon_color || Colors.blue}
-                        fill={Colors.yellow}
-                        style={{ strokeWidth: "2px" }}
-                      />
-                    )}
+                  )}
+                  {/* Text if present */}
+                  {bullet.text && (
                     <Paragraph
                       textAlign="left"
+                      margin="0"
                       dangerouslySetInnerHTML={{ __html: bullet.text }}
                     />
-                  </Div>
-                )}
+                  )}
+                </Div>
               </Div>
             );
           })}
@@ -244,7 +258,9 @@ const Side = ({
             if (e.target.tagName === "A" && content.path)
               smartRedirecting(e, content.path);
           }}
-          dangerouslySetInnerHTML={{ __html: content.text }}
+          {...(isClient
+            ? { dangerouslySetInnerHTML: { __html: content.text } }
+            : { children: content.text })}
         />
       ) : (
         content &&
@@ -278,7 +294,9 @@ const Side = ({
           margin="10px 0"
           fontSize="13px"
           style={disclosure.style ? JSON.parse(disclosure.style) : null}
-          dangerouslySetInnerHTML={{ __html: disclosure.text }}
+          {...(isClient
+            ? { dangerouslySetInnerHTML: { __html: disclosure.text } }
+            : { children: disclosure.text })}
           onClick={(e) => {
             if (e.target.tagName === "A" && disclosure.path)
               smartRedirecting(e, disclosure.path);

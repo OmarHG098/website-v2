@@ -33,7 +33,7 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: +500.000 € en becas
+  tagline: Becas Bootcamp 4Geeks - ¡Obtén tu beca!
   sub_heading: ""
   partner_logo_url: "../../../static/images/partner/landing-jobs-black.png"
   # background_image: "../../../static/images/PeopleStudying.jpeg"
@@ -64,8 +64,8 @@ follow_bar:
     # ├──if path is empty("") it point to top per default ("#" -> points to top)
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
-    text: "Llama "
-    number: null # change only if need to customize
+    text: ""
+    number: ""
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"

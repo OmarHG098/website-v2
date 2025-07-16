@@ -66,14 +66,13 @@ follow_bar:
     # devices:    XL      LG      MD      SM      XS
     font_size: ["24px", "24px", "24px", "18px", "4.3vw"]
   button:
-
     text: "Solicita Tu plaza"
     path: "#leadform_header" #top, #bottom, #anotherComponentId
     # ├──if path is empty("") it point to top per default ("#" -> points to top)
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
-    text: "Llama "
-    number: null # change only if need to customize
+    text: ""
+    number: ""
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
@@ -120,7 +119,7 @@ badges:
 who_is_hiring:
   position: 10
   heading: "DÓNDE TRABAJAN NUESTROS ESTUDIANTES"
-  sub_heading: "Consigue un trabajo en menos de 6 meses gracias a nuestra creciente red de más de 500 partners. Accede a ofertas nacionales e internacionales y a una comunidad de más de 3500 graduados."
+  sub_heading: "Consigue un trabajo en menos de 9 meses gracias a nuestra creciente red de más de 500 partners. Accede a ofertas nacionales e internacionales y a una comunidad de más de 3500 graduados."
   featured:
     - name: "Facebook"
       image: "../../../static/images/partner/meta-logo.png"

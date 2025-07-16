@@ -86,32 +86,68 @@ const Apply = (props) => {
   ];
 
   const locationContext = session && session.location;
-  const locations =
-    session &&
-    session.locations &&
-    session.locations
-      .sort((a, b) => (a.meta_info.position > b.meta_info.position ? 1 : -1))
-      .map((m) => ({
-        label:
-          m.name +
-          " " +
-          (m.online_available == false
-            ? ""
-            : m.in_person_available == true
-            ? trans[pageContext.lang]["(In-person and from home available)"]
-            : trans[pageContext.lang]["(From home until further notice)"]),
-        value: m.active_campaign_location_slug,
-        region: m.meta_info.region,
-        dialCode: m.meta_info.dialCode,
-        country: m.country,
-        consents: m.consents,
-      }));
+  const locations = React.useMemo(
+    () =>
+      data.allLocationYaml.edges
+        .map((l) => l.node)
+        .sort((a, b) => (a.meta_info.position > b.meta_info.position ? 1 : -1))
+        .map((m) => ({
+          label:
+            m.name +
+            " " +
+            (m.online_available == false
+              ? ""
+              : m.in_person_available == true
+              ? trans[pageContext.lang]["(In-person and from home available)"]
+              : trans[pageContext.lang]["(From home until further notice)"]),
+          value: m.active_campaign_location_slug,
+          region: m.meta_info.region,
+          dialCode: m.meta_info.dialCode,
+          country: m.country,
+          consents: m.consents,
+        })),
+    [data.allLocationYaml, pageContext.lang]
+  );
 
   React.useEffect(() => {
     tagManager("application_rendered");
   }, []);
+
+  React.useEffect(() => {
+    if (formData.location.value) {
+      const selectedLocation = locations?.find(
+        (l) => l.value === formData.location.value
+      );
+      if (!selectedLocation) {
+        // Reset location and consents if location is not found in new language
+        setVal((prev) => ({
+          ...prev,
+          location: { value: "", valid: false },
+          consents: { value: [], valid: true },
+        }));
+        setConsentValue([]);
+        return;
+      }
+      const activeConsents =
+        selectedLocation?.consents?.filter((c) => c.active) || [];
+      if (activeConsents.length !== consentValue.length) {
+        setConsentValue(new Array(activeConsents.length).fill(false));
+      }
+    } else {
+      // If no location is selected, reset consents
+      setConsentValue([]);
+    }
+  }, [formData.location.value, locations, pageContext.lang]);
+
   React.useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
+
+    // Pre-fill the region
+    let _region = urlParams.get("region");
+    if (!_region && session.location?.meta_info?.region) {
+      _region = session.location.meta_info.region; // e.g. 'latam'
+    }
+
     // Pre-fill the location
     let _location = urlParams.get("location");
     if (!_location && session.location)
@@ -130,7 +166,6 @@ const Apply = (props) => {
     // Pre-fill the course
     let _course = urlParams.get("course");
     if (!_course && props.location.state) _course = props.location.state.course;
-
     if (typeof _course === "string")
       _course = programs.find((p) => p.value === _course);
 
@@ -144,13 +179,18 @@ const Apply = (props) => {
       utm_url: _utm_url,
       // this is the line that automatically sets the location, we don't want that anymore
       // its better if leads choose the location themselves
-      // location: {value: _location || "", valid: typeof (_location) === "string" && _location !== ""},
+      location: {
+        value: _location || "",
+        valid: typeof _location === "string" && _location !== "",
+      },
       course: {
         value: _course || null,
         valid: _course && _course.value ? true : false,
       },
       referral_key: { value: session?.utm?.referral_code || null, valid: true },
     }));
+
+    setRegionVal(_region || null);
   }, [session]);
 
   let privacy = data.privacy.edges.find(
@@ -427,6 +467,7 @@ const Apply = (props) => {
           gridColumn_tablet="1 / 7"
           gridRow_tablet="1 / 1"
           flexDirection="column"
+          textAlign="center"
         >
           <form
             onSubmit={async (e) => {
@@ -540,9 +581,9 @@ const Apply = (props) => {
                 tabindex="1"
                 bgColor={Colors.black}
                 options={regions}
-                // value={locations?.find(
-                //   (el) => el.value === formData.location.value
-                // )}
+                value={
+                  regionVal ? regions.find((r) => r.value === regionVal) : null
+                }
                 placeholder={yml.left.regions_title}
                 inputId="dropdown_region_selector"
                 onChange={(value) => {
@@ -580,30 +621,35 @@ const Apply = (props) => {
                 contenteditable="true"
                 margin_tablet="11px 0 23px 0"
               >
-                <SelectRaw
-                  tabindex="1"
-                  bgColor={Colors.black}
-                  options={
+                {(() => {
+                  const options =
                     regionVal === "online"
-                      ? [
-                          {
-                            dialCode: null,
-                            label: "Online",
-                            region: "online",
-                            value: "online",
-                          },
-                        ]
+                      ? [{ label: "Online", value: "online" }]
                       : locations?.filter(
                           (academy) => academy.region === regionVal
-                        )
-                  }
-                  value={formData.location.value}
-                  placeholder={yml.left.locations_title}
-                  inputId={"dropdown_academy_selector"}
-                  onChange={(value, valid) => {
-                    setVal({ ...formData, location: { value, valid } });
-                  }}
-                />
+                        ) || [];
+
+                  return (
+                    <SelectRaw
+                      bgColor={Colors.black}
+                      options={options}
+                      value={locations?.find(
+                        (el) => el.value === formData.location.value
+                      )}
+                      placeholder={yml.left.locations_title}
+                      inputId={"dropdown_academy_selector"}
+                      onChange={(value) => {
+                        setVal((prev) => ({
+                          ...prev,
+                          location: {
+                            value: value.value,
+                            valid: !!value.value,
+                          },
+                        }));
+                      }}
+                    />
+                  );
+                })()}
               </Div>
             )}
             {formData.referral_key.value &&
@@ -623,48 +669,50 @@ const Apply = (props) => {
                 setVal({ ...formData, referral_key: { value, valid } })
               }
             />
-            {session &&
-              session.location &&
-              formData.location.value.consents &&
-              formData.location.value.consents.map((consent, index) => {
-                if (consent.active)
-                  return (
-                    <Div position="relative" margin="10px 0 0 0">
-                      <input
-                        required
-                        name="isGoing"
-                        type="checkbox"
-                        checked={consentValue[index]}
-                        onChange={() => {
-                          const updatedConsentValue = [...consentValue];
-                          updatedConsentValue[index] = !consentValue[index];
-                          setConsentValue(updatedConsentValue);
-                          setVal({
-                            ...formData,
-                            consents: {
-                              ...formData.consents,
-                              value: updatedConsentValue,
-                            },
-                          });
-                        }}
-                        style={{
-                          width: "24px",
-                          height: "24px",
-                          top: "10px",
-                          left: "7px",
-                        }}
-                      />
-                      <Paragraph
-                        fontSize="11px"
-                        margin="5px 0 0 5px"
-                        textAlign="left"
-                        dangerouslySetInnerHTML={{
-                          __html: consent.message,
-                        }}
-                      />
-                    </Div>
-                  );
-              })}
+            {session?.location &&
+              formData.location.value &&
+              locations
+                ?.find((l) => l.value === formData.location.value)
+                ?.consents?.filter((consent) => consent.active)
+                ?.map((consent, index) => (
+                  <Div
+                    key={`consent-${index}`}
+                    margin="15px 0 0 0"
+                    display="flex"
+                    alignItems="center"
+                  >
+                    <input
+                      required
+                      type="checkbox"
+                      checked={consentValue[index] || false}
+                      onChange={() => {
+                        const newConsentValue = [...consentValue];
+                        newConsentValue[index] = !newConsentValue[index];
+                        setConsentValue(newConsentValue);
+                        setVal({
+                          ...formData,
+                          consents: {
+                            ...formData.consents,
+                            value: newConsentValue,
+                            valid: newConsentValue.every((v) => v),
+                          },
+                        });
+                      }}
+                      style={{
+                        width: "22px",
+                        height: "22px",
+                        marginRight: "7px",
+                      }}
+                    />
+                    <Paragraph
+                      margin="0 0 0 15px"
+                      fontSize="10px"
+                      lineHeight="15px"
+                      textAlign="justify"
+                      dangerouslySetInnerHTML={{ __html: consent.message }}
+                    />
+                  </Div>
+                ))}
             <Div width="fit-content" margin="10px auto 0 auto">
               <ReCAPTCHA
                 ref={captcha}
@@ -791,6 +839,28 @@ const Apply = (props) => {
 };
 export const query = graphql`
   query ApplyQuery($file_name: String!, $lang: String!) {
+    allLocationYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          name
+          consents {
+            active
+            message
+            slug
+          }
+          active_campaign_location_slug
+          breathecode_location_slug
+          in_person_available
+          online_available
+          country
+          meta_info {
+            region
+            dialCode
+            position
+          }
+        }
+      }
+    }
     privacy: allPageYaml(
       filter: { fields: { file_name: { regex: "/privacy-policy/" } } }
     ) {

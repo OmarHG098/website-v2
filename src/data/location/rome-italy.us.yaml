@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-rome-italy"
   title: "Coding Bootcamp in Rome, Italy"
   position: 101
-  description: "Discover all coding bootcamps taught by 4Geeks Academy at Rome, Italy. Sign up today!"
+  description: "Start your journey with 4Geeks Academy’s Rome Coding Bootcamp. Get a Job Guarantee, coding skills, and mentorship to land your first tech role."
   image: "/images/og-preview/rome-italy.us.png"
   keywords: "null"
   redirects: []
@@ -16,7 +16,7 @@ meta_info:
   cohort_exclude_regex: []
   home_video: ""
 
-seo_title: "Coding Bootcamp Rome, Italy"
+seo_title: "Coding Bootcamp in Rome, Italy with Job Guarantee"
 header:
   tagline: "Learn To Code in Rome, Italy"
   sub_header: "All programs are taught "
@@ -118,10 +118,10 @@ two_columns_rigo:
   background: "#FFFFFF"
   justify: "center" #start,end,center
   image:
-    style: '{"backgroundSize": "contain", "background-position": "center"}'
-    src: "/images/landing/rigobot-section.webp"
-    shadow: false
-  # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    src: "/images/landing/ai-mentor.jpg"
+    shadow: true
+  video: "6m1Jyya7eCc"
   heading: 
     text: "Our AI-powered features make all the difference!"
     font_size: ["33px", "33px", "33px", "33px", "33px"]
@@ -131,9 +131,9 @@ two_columns_rigo:
   sub_heading:
     text: "Through years of research and experience, we've perfected the strategies and tools to ensure your constant and efficient progress. To optimize your learning curve and empower you to tackle challenges with confidence, we've now incorporated the power of AI."
     font_size: ["16px","16px","16px","16px","16px"]
-    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600" }'
+    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300", "text-align": "justify" }'
   content:
-    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
+    style: '{ "font-size":"16px", "margin":"15px 0"}'
     text: "Experience the difference our AI-powered features make. Our tried-and-tested approach keeps you engaged, motivated, and on the fast track to achieving your coding goals!"
   bullets:
     item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
@@ -169,6 +169,11 @@ consents:
     active: true
     message: 'By submitting this form, I accept that my data may be used for a quote request that could result in a commercial relationship. Check out our complete <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/us/privacy-policy">Privacy Policy</a>'
     error_message: "You need to accept the privacy terms"
+  - slug: "sms_consent"
+    name: "SMS Consent"
+    active: false
+    message: "I agree to receive SMS/text messages about workshops, events, courses, and other marketing materials. Message and data rates may apply. Reply STOP to unsubscribe, HELP for help. You may receive up to 4–6 text messages per month. We will never share your contact information, and you can easily opt out at any moment."
+    error_message: "You need to accept the SMS consent"
 
 city: "Rome"
 name: "Rome, Italy"
