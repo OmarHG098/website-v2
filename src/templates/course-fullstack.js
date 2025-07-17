@@ -264,7 +264,8 @@ const Program = ({ data, pageContext, yml }) => {
               yml.two_columns?.heading?.text_by_location &&
               session?.location?.city?.toLowerCase() === "miami"
                 ? yml.two_columns.heading.text_by_location.miami
-                : yml.two_columns.heading.text_by_location.default,
+                : yml.two_columns.heading.text_by_location?.default ||
+                  yml.two_columns.heading.text,
           },
           sub_heading: {
             ...yml.two_columns?.sub_heading,
@@ -272,7 +273,8 @@ const Program = ({ data, pageContext, yml }) => {
               yml.two_columns?.sub_heading?.text_by_location &&
               session?.location?.city?.toLowerCase() === "miami"
                 ? yml.two_columns.sub_heading.text_by_location.miami
-                : yml.two_columns.sub_heading.text_by_location.default,
+                : yml.two_columns.sub_heading.text_by_location?.default ||
+                  yml.two_columns.sub_heading.text,
           },
           bullets: yml.two_columns?.bullets,
           content: yml.two_columns?.content,
