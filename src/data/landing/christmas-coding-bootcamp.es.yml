@@ -3,7 +3,7 @@ meta_info:
 
   # This will show on social media when shared
   title: "4Geeks Academy LATAM"
-  description: "Descubre los programas de 4Geeks Academy en LATAM: Full-Stack, Data Science, Ciberseguridad y Applied AI. ¡Inscríbete hoy y lleva tu carrera al siguiente nivel."
+  description: "Descubre los programas de 4Geeks Academy en LATAM: Full-Stack, Data Science y Ciberseguridad. ¡Inscríbete hoy y lleva tu carrera al siguiente nivel."
   image: "/images/bg/pricing-bg.jpg"
   keywords: ""
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
@@ -12,7 +12,7 @@ meta_info:
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "applied-ai", "coding-introduction"]
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "coding-introduction"]
   utm_location: [
     "bogota-colombia",
     "buenosaires-argentina",
@@ -50,7 +50,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: "¡La NAVIDAD <br>ha llegado!🎅"
-  sub_heading: "Inicia tu carrera en tecnología y obtén nuestro curso de Applied AI como regalo."
+  sub_heading: "¡Inicia tu carrera en tecnología!"
   background: "#ffffff"
   tagline_color: "#1c1c1c"
   form_styles:
@@ -68,15 +68,15 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Desde desarrollo Full-Stack hasta Data Science, Ciberseguridad y Applied AI.
+    - Desde desarrollo Full-Stack hasta Data Science, o Ciberseguridad.
     - Obtén una certificación reconocida que abrirá puertas en toda LATAM y más allá.
     - Orientación continua e ilimitada de expertos de la industria de por vida.
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Descubre nuestros programas y especialízate en Full-Stack, Data Science, Ciberseguridad o Applied AI. "
-    text_mobile: "Descubre nuestros programas y especialízate en Full-Stack, Data Science, Ciberseguridad o Applied AI. "
+    text: "Descubre nuestros programas y especialízate en Full-Stack, Data Science, o Ciberseguridad. "
+    text_mobile: "Descubre nuestros programas y especialízate en Full-Stack, Data Science, o Ciberseguridad. "
     # devices:   XL      LG    MD      SM    XS
     font_size: ["22px", "22px", "22px", "20px", "18px"]
   button:
@@ -194,11 +194,7 @@ components:
       - icon: "cibersecurity"
         title: "Ciberseguridad"
         content: "Conviértete en un especialista en ciberseguridad y prepárate contra posibles ataques en sistemas como Windows o Linux."
-
-      - icon: "applied-ai"
-        title: "IA para Profesionales"
-        content: "Aprende a utilizar la Inteligencia Artificial como herramienta para potenciar tus resultados y optimizar procesos."
-      
+ 
   - name: the-academy
     position: 2
     layout: two_column_right
@@ -289,9 +285,6 @@ components:
         icon: "check" 
       - heading: "Especialista en ciberseguridad"
         text: "La demanda crece rápidamente, con sueldos de entre $1,500 y $4,500 USD mensuales. Aprende a proteger sistemas y datos críticos usando herramientas como Wireshark y Metasploit."
-        icon: "check" 
-      - heading: "Applied AI"
-        text: "La inteligencia artificial aplicada transforma industrias a través de soluciones innovadoras, un profesional que sepa aprovechar las herramientas de inteligencia artificial puede multiplicar tus resultados y por consecuencia tus ingresos, muchos profesionales en distintos rubros  utilizan actualmente  la IA."
         icon: "check" 
     button:
       text: "Inscríbete Hoy!"
