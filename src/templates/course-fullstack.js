@@ -258,8 +258,20 @@ const Program = ({ data, pageContext, yml }) => {
       <TwoColumn
         left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
         right={{
-          heading: yml.two_columns?.heading,
-          sub_heading: yml.two_columns?.sub_heading,
+          heading: {
+            ...yml.two_columns?.heading,
+            text:
+              yml.two_columns?.heading?.text_by_location && session?.location?.city?.toLowerCase() === "miami"
+                ? yml.two_columns.heading.text_by_location.miami
+                : yml.two_columns.heading.text_by_location.default,
+          },
+          sub_heading: {
+            ...yml.two_columns?.sub_heading,
+            text:
+              yml.two_columns?.sub_heading?.text_by_location && session?.location?.city?.toLowerCase() === "miami"
+                ? yml.two_columns.sub_heading.text_by_location.miami
+                : yml.two_columns.sub_heading.text_by_location.default,
+          },
           bullets: yml.two_columns?.bullets,
           content: yml.two_columns?.content,
           button: yml.two_columns?.button,
@@ -507,10 +519,18 @@ export const query = graphql`
             heading {
               text
               font_size
+              text_by_location {
+                miami
+                default
+              }
             }
             sub_heading {
               text
               font_size
+              text_by_location {
+                miami
+                default
+              }
             }
             button {
               text
