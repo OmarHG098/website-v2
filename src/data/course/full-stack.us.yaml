@@ -80,7 +80,7 @@ overlaped:
     color: "blue"  
     link: "/"
   image:
-    src: "/images/landing/Group-6626.webp"  
+    src: "/images/landing/vibe-coder1.webp"  
 
 two_columns:
   proportions: [6, 6]
