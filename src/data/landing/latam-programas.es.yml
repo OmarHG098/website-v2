@@ -2,8 +2,8 @@ meta_info:
   slug: latam-programas # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Programas de 4Geeks Academy en LATAM - Full-Stack, Data Science, Ciberseguridad y Applied AI"
-  description: "Descubre los programas líderes de 4Geeks Academy en LATAM: Full-Stack, Data Science, Ciberseguridad y Applied AI. ¡Inscríbete hoy y lleva tu carrera"
+  title: "Programas de 4Geeks Academy en LATAM - Full-Stack, Data Science y Ciberseguridad"
+  description: "Descubre los programas líderes de 4Geeks Academy en LATAM: Full-Stack, Data Science y Ciberseguridad. ¡Inscríbete hoy y lleva tu carrera"
   image: "/images/bg/pricing-bg.jpg"
   keywords: ""
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
@@ -12,7 +12,7 @@ meta_info:
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "applied-ai"]
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
   utm_location: [
     "bogota-colombia",
     "buenosaires-argentina",
@@ -68,15 +68,15 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - "Elige uno: Full Stack Development, Data Science & Machine Learning, Ciberseguridad o Inteligencia Artificial Aplicada"
+    - "Elige uno: Full Stack Development, Data Science & Machine Learning, o Ciberseguridad"
     - "Gradúate y obtén el mejor certificado de la industria"
     - "Acceso ilimitado y de por vida a Mentores, Profesores y Acompañamiento Profesional"
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Descubre nuestros programas y especialízate en Full-Stack, Data Science, Ciberseguridad o Applied AI. "
-    text_mobile: "Descubre nuestros programas y especialízate en Full-Stack, Data Science, Ciberseguridad o Applied AI. "
+    text: "Descubre nuestros programas y especialízate en Full-Stack, Data Science, o Ciberseguridad. "
+    text_mobile: "Descubre nuestros programas y especialízate en Full-Stack, Data Science, o Ciberseguridad. "
     # devices:   XL      LG    MD      SM    XS
     font_size: ["22px", "22px", "22px", "20px", "18px"]
   button:
@@ -196,9 +196,6 @@ components:
         title: "Ciberseguridad"
         content: "Conviértete en un especialista en ciberseguridad y prepárate contra posibles ataques en sistemas como Windows o Linux."
 
-      - icon: "applied-ai"
-        title: "IA para Profesionales"
-        content: "Aprende a utilizar la Inteligencia Artificial como herramienta para potenciar tus resultados y optimizar procesos."
       
   - name: the-academy
     position: 2
@@ -222,7 +219,7 @@ components:
       path: ""
     bullets:
       items:
-      - text: "Carreras con futuro: Elige tu camino entre Desarrollo Full-Stack, Data Science o Machine Learning, Ciberseguridad o IA Aplicada."
+      - text: "Carreras con futuro: Elige tu camino entre Desarrollo Full-Stack, Data Science o Machine Learning, o Ciberseguridad."
         icon: "circle" 
       - text: "¡El mercado laboral te espera! LATAM necesita 1 millón de profesionales de tecnología para 2025."
         icon: "circle" 
@@ -293,9 +290,7 @@ components:
       - heading: "ESPECIALISTA EN CIBERSEGURIDAD"
         text: "En un mundo cada vez más digital, la demanda por estos profesionales está en pleno auge, con sueldos de entre $1,000 y $1,500 USD al mes. Aprende a proteger sistemas y datos críticos utilizando herramientas avanzadas como Wireshark y Metasploit, y conviértete en un pilar fundamental para la seguridad informática."
         icon: "check" 
-      - heading: "INTELIGENCIA ARTIFICIAL APLICADA"
-        text: "La inteligencia artificial aplicada está revolucionando industrias al ofrecer soluciones innovadoras. Ser un profesional capacitado en herramientas de inteligencia artificial no solo incrementa tu productividad, sino que también puede multiplicar tus ingresos. Hoy en día, expertos de diversos sectores ya están integrando la IA en sus procesos diarios."
-        icon: "check" 
+
     button:
       text: "¡ Más información !"
       color: white
