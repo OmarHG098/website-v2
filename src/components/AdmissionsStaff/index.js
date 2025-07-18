@@ -65,7 +65,12 @@ const AdmissionsStaff = (props) => {
       gridColumn_tablet="1 / span 12"
       gap="36px 0px"
     >
-      <Div alignItems="center" justifyContent="between" position="relative" display="block">
+      <Div
+        alignItems="center"
+        justifyContent="between"
+        position="relative"
+        display="block"
+      >
         <Carousel
           previousArrow
           nextArrow
@@ -130,10 +135,14 @@ const AdmissionsStaff = (props) => {
                 {item.job_title}
               </H4>
               <Paragraph fontSize="15px" margin="0 0 4px 0" color="#444">
-                <strong>Phone:</strong> <Anchor to={`tel:${item.phone.replace(/[^ -9]/g, "")}`}>{item.phone}</Anchor>
+                <strong>Phone:</strong>{" "}
+                <Anchor to={`tel:${item.phone.replace(/[^ -9]/g, "")}`}>
+                  {item.phone}
+                </Anchor>
               </Paragraph>
               <Paragraph fontSize="15px" margin="0" color="#444">
-                <strong>Email:</strong> <Anchor to={`mailto:${item.email}`}>{item.email}</Anchor>
+                <strong>Email:</strong>{" "}
+                <Anchor to={`mailto:${item.email}`}>{item.email}</Anchor>
               </Paragraph>
             </Div>
           ))}
@@ -143,4 +152,4 @@ const AdmissionsStaff = (props) => {
   );
 };
 
-export default AdmissionsStaff; 
+export default AdmissionsStaff;
