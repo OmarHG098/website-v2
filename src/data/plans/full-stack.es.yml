@@ -236,6 +236,7 @@ part_time:
       - "Cumple con la carga académica y asistencia requeridas."
       - "Si no consigues empleo en los 9 meses posteriores a la graduación, te reembolsamos el 100% de la matrícula."
     icons: 
+      - "/images/visa-mastercard.png" 
 
 # Europe part-time
   - slug: 'north-europe-upfront-fs-pt'
