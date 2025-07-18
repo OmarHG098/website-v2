@@ -25,11 +25,3 @@ programs:
     icon: "cyber-security"
     link: "/es/coding-bootcamps/curso-ciberseguridad"
     text_link: "Más Info"
-
-  - title: "Inteligencia Artificial Aplicada"
-    sub_title: "Sin código"
-    description: "Explora en detalle la inteligencia artificial y cómo aplicarla en diferentes industrias, roles y tu trabajo."  # Translated description
-    description_mobile: "En línea, presencial y flexible"
-    icon: "applied-ai"
-    link: "/es/coding-bootcamps/curso-inteligencia-artificial"
-    text_link: "Más Info"

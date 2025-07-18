@@ -16,7 +16,7 @@ navbar:
             - text: "Ver programa"
               link: "/es/coding-bootcamps/desarrollador-full-stack"
 
-        - title: "Data Science y Machine Learning"
+        - title: "Data Science, Machine Learning y AI"
           level: "Desde cero"
           icon: "machine_2"
           paragraph: "Conviértete en un científico de datos, desarrolla modelos de predicción y uneté a una de las profesiones mejores pagadas del mundo."
@@ -24,7 +24,7 @@ navbar:
             - text: "Ver Programa"
               link: "/es/coding-bootcamps/curso-datascience-machine-learning"
               
-        - title: "Seguridad informática"
+        - title: "Ciberseguridad"
           level: "Desde cero"
           icon: "cyber-security"
           paragraph: "Conviértete en un hacker ético y aprende a detectar, corregir y protegerte de ataques y vulnerabilidades en sistemas informáticos "
@@ -32,13 +32,6 @@ navbar:
             - text: "Ver Programa"
               link: "/es/coding-bootcamps/curso-ciberseguridad"
 
-        - title: "Inteligencia Artificial"
-          level: "Desde cero"
-          icon: "applied-ai"
-          paragraph: "Explora a detalle las herramientas actuales de inteligencia artificial y cómo aplicarla para escalar en diferentes industrias, roles y en tu trabajo."
-          buttons:
-            - text: "Ver Programa"
-              link: "/es/coding-bootcamps/curso-inteligencia-artificial"
 
   - name: "Por qué 4Geeks"
     link: "/es/porque-4geeks"
