@@ -23,7 +23,7 @@ full_time:
     recomended: false
     scholarship: "Financed"
     payment_time: "24 months payment"
-    price: "from $299/mo"
+    price: "$200 - $299/mo"
     bullets: 
       - "Affordable long term loans based on credit score."
       - "Loan terms displayed are effective as of 3/11/2025. To see full repayment examples, visit <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">link to Ascent partnership page</a>."
@@ -146,7 +146,7 @@ part_time:
     recomended: false
     scholarship: "Financed"
     payment_time: "Pay in 3, 4 or 5 years"
-    price: "from $299/mo"
+    price: "$200 - $299/mo"
     bullets: 
       - "Choose among short or long term financing plans."
       - "Affordable long term loans based on credit score."
@@ -156,8 +156,7 @@ part_time:
       - "/images/ascent_logo.png"
       - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
-
-
+      
   - slug: 'usa-job-guarantee-pt'
     academies: ['atlanta-usa', 'toronto-canada', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'dallas-usa']
     recomended: false
@@ -171,6 +170,22 @@ part_time:
       - "Get hired within 9 months of graduation or we’ll refund 100% of your tuition."
     icons: 
       # - "/images/clarkuniversity.png" 
+
+  - slug: 'edly-payment'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
+    recomended: false
+    scholarship: "Income-Based Repayment Loan"
+    payment_time: "Flexible payments after graduation"
+    price: "IBR"
+    bullets:
+      - "Edly is proud to help 4Geeks Academy provide affordable, income-based repayment (IBR) loans to its students"
+      - "Only make payments once you land a job and earn the minimum income."
+      - "Flexible payments adjust based on your income"
+      - "Tuition paid directly to your school"
+    icons:
+      - "/images/edly.png"
+
+
 
 ##  EUROPE Part-time
 

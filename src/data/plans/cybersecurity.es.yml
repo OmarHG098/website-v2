@@ -6,8 +6,8 @@ part_time:
     academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     scholarship: "Pago completo"
     payment_time: "Paga hoy"
-    price: "$8,999"
-    original_price: "$9,999"
+    price: "$9,999"
+    original_price: "$11,110"
     offer: "10% DE DESCUENTO"
     bullets:
       - "Estás ahorrando $1,000 USD."
@@ -23,7 +23,7 @@ part_time:
     recomended: false
     scholarship: "Financiado"
     payment_time: "Puedes pagar en 3, 4 o 5 años"
-    price: "~$299 al mes"
+    price: "$200 - $299/mes"
     bullets: 
       - "Varios socios ofrecen préstamos y planes de pago"
       - "Puedes obtener una beca parcial y el saldo restante con un plan de pago"
@@ -45,6 +45,20 @@ part_time:
       - "Si no consigues empleo en los 9 meses posteriores a la graduación, te reembolsamos el 100% de la matrícula."
     icons: 
       # - "/images/clarkuniversity.png" 
+
+  - slug: 'edly-payment'
+    academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'dallas-usa']
+    recomended: false
+    scholarship: "Préstamo de Pago Basado en Ingresos (IBR)"
+    payment_time: "Pagos flexibles después de la graduación"
+    price: "IBR"
+    bullets:
+      - "Edly se enorgullece de ayudar a 4Geeks Academy a ofrecer préstamos asequibles con pagos basados en ingresos (IBR) a sus estudiantes."
+      - "Solo comienzas a pagar una vez que consigas un trabajo y alcances el ingreso mínimo."
+      - "Pagos flexibles que se ajustan según tus ingresos."
+      - "La matrícula se paga directamente a la academia."
+    icons:
+      - "/images/edly.png"
 
 ## Spain & Europe
   - slug: 'spain-scholarships-cs-pt'
