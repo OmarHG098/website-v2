@@ -228,7 +228,7 @@ components:
       path: ""
     bullets:
       items:
-      - text: "Carreras con futuro: Elige tu camino entre Desarrollo Full-Stack, Data Science o Machine Learning, Ciberseguridad o IA Aplicada."
+      - text: "Carreras con futuro: Elige tu camino entre Desarrollo Full-Stack, Data Science o Machine Learning, o Ciberseguridad."
         icon: "circle" 
       - text: Graduados exitosos en empresas líderes en toda la región."
         icon: "circle" 
@@ -265,10 +265,6 @@ components:
       - icon: "cibersecurity"
         title: "Ciberseguridad"
         content: "Conviértete en un profesional junior ciberseguridad y prepárate contra posibles ataques en sistemas como Windows o Linux."
-
-      - icon: "applied-ai"
-        title: "IA para Profesionales"
-        content: "Aprende a utilizar la Inteligencia Artificial como herramienta para potenciar tus resultados y optimizar procesos."
       
 
   - name: two_columns_video
