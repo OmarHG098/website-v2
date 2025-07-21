@@ -52,12 +52,12 @@ part_time:
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'dallas-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'tampa-usa', 'toronto-canada', 'newyork-usa', 'orlando', 'online']
     scholarship: "Full Payment"
     payment_time: "Pay today"
-    price: "$10,999"
-    original_price: "$11,999"
+    price: "$9,899"
+    original_price: "$10,999"
     offer: "10% OFF"
     bullets:
       - "Pay upfront and save 10% on your tuition."
-      - "Regular tuition is $11,999, but you pay only $10,999."
+      - "Regular tuition is $10,999, but you pay only $9,899."
     icons:
       - "/images/visa-mastercard.png"
       - "/images/ethereum.png"

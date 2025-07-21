@@ -52,12 +52,12 @@ part_time:
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'dallas-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'tampa-usa', 'toronto-canada', 'newyork-usa', 'orlando', 'online']
     scholarship: "Pago completo"
     payment_time: "Paga hoy"
-    price: "$10,999"
-    original_price: "$11,999"
+    price: "$9,899"
+    original_price: "$10,999"
     offer: "10% de descuento"
     bullets:
       - "Paga por adelantado y ahorra un 10% en tu matrícula."
-      - "La matrícula regular es de $11,999, pero solo pagas $10,999."
+      - "La matrícula regular es de $10,999, pero sólo pagas $9,899."
     icons:
       - "/images/visa-mastercard.png"
       - "/images/ethereum.png"

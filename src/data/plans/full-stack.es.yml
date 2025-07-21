@@ -5,15 +5,15 @@ full_time:
     recomended: true
     scholarship: "Pago completo"
     payment_time: "Pagar hoy"
-    price: "$10,999"
-    original_price: "$18,300"
-    job_guarantee_price: "pruebaaa"
-    offer: "40% DE DESCUENTO"
+    price: "$14,999"
+    original_price: "$16,700"
+    job_guarantee_price: " "
+    offer: "10% DE DESCUENTO"
     bullets:
-      - "Estás ahorrando $7,301 USD"  
+      - "Estás ahorrando $1,701 USD"  
       - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
-      - "Puedes adaptar tu camino de aprendizaje a tus necesidades financieras. Elige incluir o excluir nuestros servicios de apoyo profesional, o inscríbete con una Garantía de Empleo."
       - "También proporcionamos varias opciones de becas completas o parciales para las cuales puedes ser elegible. Contáctanos para más detalles."
+      - "Este plan incluye una garantía de trabajo."
     icons:
       - "/images/ethereum.png"
       - "/images/bitcoin.png"
@@ -24,7 +24,7 @@ full_time:
     recomended: false
     scholarship: "Financiado"
     payment_time: "Pago en 24 meses"
-    price: "~$200 por mes"
+    price: "~$299 por mes"
     bullets:
       - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
       - "Puedes adaptar tu camino de aprendizaje a tus necesidades financieras. Elige incluir o excluir nuestros servicios de apoyo profesional, o inscríbete con una Garantía de Empleo."
@@ -224,13 +224,13 @@ part_time:
 
 
   - slug: 'usa-job-guarantee-pt'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'dallas-usa', 'toronto-canada']
+    academies: ['atlanta-usa', 'toronto-canada', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'dallas-usa', 'toronto-canada']
     recomended: false
     scholarship: "Garantía de Empleo"
     payment_time: "Consigue empleo o te devolvemos tu dinero"
     price: "Matrícula"
     original_price: ""
-    warning_message: "+ 2,000 USD"
+    warning_message: "+$2,000"
     bullets: 
       - "Inscríbete aceptando los términos y condiciones."
       - "Cumple con la carga académica y asistencia requeridas."

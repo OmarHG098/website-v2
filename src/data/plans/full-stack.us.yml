@@ -4,15 +4,15 @@ full_time:
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: true
     scholarship: "Pay upfront"
-    payment_time: "Get a 40% discount"
-    price: "$10,999"
-    original_price: "$18,300"
-    offer: "40% OFF"
+    payment_time: "Get a 10% discount"
+    price: "$14,999"
+    original_price: "$16,700"
+    offer: "10% OFF"
     bullets:
-      - "You're saving $7,301 USD"  
+      - "You're saving $1,701 USD"  
       - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
-      - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services, or enroll with a Job Guarantee."
       - "We also provide several full or partial scholarship options that you may be eligible for. Contact us for further details."
+      - "This plan includes a job guarantee"
     icons:
       - "/images/ethereum.png"
       - "/images/bitcoin.png"
@@ -159,7 +159,7 @@ part_time:
 
 
   - slug: 'usa-job-guarantee-pt'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'dallas-usa']
+    academies: ['atlanta-usa', 'toronto-canada', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'dallas-usa']
     recomended: false
     scholarship: "Job Guarantee"
     payment_time: "Get hired or your money back"
@@ -320,8 +320,8 @@ part_time:
     recomended: true
     scholarship: "Job Guarantee"
     payment_time: "Get hired within 9 months of graduation or your money back"
-    price: "USD $4.000"
-    original_price: "USD $5.000"
+    price: "USD $4,000"
+    original_price: "USD $5,000"
     offer: "20% OFF"
     bullets:
       - "We're fully committed to making our education accessible by offering multiple payment plans and financing options to fulfill our promise."
@@ -336,7 +336,7 @@ part_time:
     recomended: false
     scholarship: "Career Support Only"
     payment_time: "Get expert career support."
-    price: " USD $3.000"
+    price: " USD $3,000"
     bullets:
       - "Receive personalized career support from our expert team to help you launch your tech career."
       - "Access exclusive resources, workshops, and mentorship to boost your employability."
