@@ -32,13 +32,6 @@ navbar:
             - text: "Ver Programa"
               link: "/es/coding-bootcamps/curso-ciberseguridad"
 
-        - title: "Inteligencia Artificial"
-          level: "Desde cero"
-          icon: "applied-ai"
-          paragraph: "Explora a detalle las herramientas actuales de inteligencia artificial y cómo aplicarla para escalar en diferentes industrias, roles y en tu trabajo."
-          buttons:
-            - text: "Ver Programa"
-              link: "/es/coding-bootcamps/curso-inteligencia-artificial"
 
   - name: "Por qué 4Geeks"
     link: "/es/porque-4geeks"
