@@ -16,7 +16,6 @@ header_data:
     - Hyperpersonalized learning experience
     - Unlimited career support for today's AI-driven job market
     - Gain future-proof skills and the mindset recruiters are looking for
-    - '<strong style="text-decoration: none; color: #000000; font-weight: 700;"> Job Guarantee</strong>: Get hired within 9 months of graduating — or your money back (conditions apply)'
   join_button_text: CHOOSE A PROGRAM
   join_button_path: "#choose-program"
   free_button_text: TAKE A FREE TRIAL AT NO COST
@@ -25,7 +24,7 @@ header_data:
   #It must be a video from videoask
   # video: "https://www.videoask.com/f5rg0mmi4"
   video: ""
-  image: "../../../static/images/bg/1250-sudents-bg.png"
+  image: "../../../static/images/bg/6000-students-bg.webp"
 
 news:
   heading: "Read about our coding bootcamps in the news..."
@@ -66,11 +65,11 @@ why_4geeks:
     path: "/us/apply"
   bullets:
     items:
-    - text: '<strong style="text-decoration: none; color: #000000; font-weight: 700;">Personalized Learning at Every Level:</strong> Benefit from an unmatched student-to-teacher ratio, unlimited access to human mentors, plus AI-powered coaching tailored to your learning journey.'
+    - text: '<strong style="text-decoration: none; color: #000000; font-weight: 700;"> Personalized Learning at Every Level:</strong> Benefit from an unmatched student-to-teacher ratio, unlimited access to human mentors, plus AI-powered coaching tailored to your learning journey.'
       icon: "check"
-    - text: '<strong style="text-decoration: none; color: #000000; font-weight: 700;">Lifelong Mentorship & Career Support:</strong> Get 1:1 guidance from expert human mentors and career coaches whenever you need it, for life.'
+    - text: '<strong style="text-decoration: none; color: #000000; font-weight: 700;"> Lifelong Mentorship & Career Support:</strong> Get 1:1 guidance from expert human mentors and career coaches whenever you need it, for life.'
       icon: "check"
-    - text: '<strong style="text-decoration: none; color: #000000; font-weight: 700;">AI-integrated Curriculum and Learning Tools:</strong> Master the latest AI tools and stay ahead of job market trends.'
+    - text: '<strong style="text-decoration: none; color: #000000; font-weight: 700;"> AI-integrated Curriculum and Learning Tools:</strong> Master the latest AI tools and stay ahead of job market trends.'
       icon: "check"
 ## TWO COLUMNS
 two_columns:
@@ -175,7 +174,7 @@ iconogram:
   background: veryLightBlue3
   icons:
     - icon: "graduation-2"
-      content: "4500+ Graduates"
+      content: "6000+ Graduates"
       content_style: '{ "fontSize": "24px" }'
     - icon: "group-2"
       color: "#23C520"

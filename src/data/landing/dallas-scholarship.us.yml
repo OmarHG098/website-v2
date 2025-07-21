@@ -1,9 +1,9 @@
 meta_info:
-  slug: dallas-scholarship # <--- URL 4geeksacademy.com/us/landing/dallas-scholarship
+  slug: texas-scholarship # <--- URL 4geeksacademy.com/us/landing/texas-scholarship
 
   # This will show on social media when shared
-  title: "Launch Your Tech Career with 4Geeks Academy in Dallas"
-  description: "Coding bootcamps with full or partial scholarships available in dallas"
+  title: "Launch Your Tech Career with 4Geeks Academy in Texas"
+  description: "Coding bootcamps with full or partial scholarships available in Texas"
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   image: "public/images/bg/the-academy-bg.jpg"
@@ -16,7 +16,7 @@ meta_info:
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
-  utm_location: ["dallas-usa"]
+  utm_location: ["dallas-usa", "austin-usa", "houston-usa"]
   automation: strong # comma separated, "soft" is the default value
   tag: website-lead # comma separated, "request_more_info" is the default value
 
@@ -41,7 +41,7 @@ navbar:
   logoUrl: "#"
 
 header_data:
-  tagline: "Hey Dallasites! Your Life in Tech Starts Here!"
+  tagline: "Hey Texans! Your Life in Tech Starts Here!"
   sub_heading: |
     <span style="font-size: 32px;">Get Ready for a Tech Career with a Full Scholarship.</span>
   background: "#ffffff"
@@ -59,10 +59,10 @@ features:
   marginTop: 0px #<-- separation between tagline and the bullets
   text: "Apply now—don’t miss your chance!"
   bullets:
-    - "For residents of Greater Dallas ONLY."
-    - "Get a high-paying, future-proof tech-job, right in your city."
+    - "For residents of Texas ONLY."
+    - "Get a high-paying, future-proof tech-job, right in your state."
     - "Award-winning tech education and transformative life skills."
-    - "Only 23 spots- act now!"
+    - "Spots are limited - act now!"
   styles: '{ "color": "black", "fontWeight":"400" }'
 
 short_badges:
@@ -118,13 +118,6 @@ who_is_hiring:
   heading: "WHO'S HIRING OUR STUDENTS"
   sub_heading: "Some of the companies where our graduates are thriving"
 
-program_details:
-  position: 6
-  background: "#F4F9FF"
-  heading: "BECOME A FULL STACK DEVELOPER AND LAUNCH A SUCCESSFUL CAREER"
-  sub_heading: |
-    Master  Python, React, JavaScript, and leverage cutting-edge AI tools to enhance your productivity and workflow. <br>Gain the most sought-after skills in tech  and launch your  career as a software developer. <a href='https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer'> More information here</a>.
-
 rating_reviews:
   background: "#fff"
   position: 9
@@ -163,10 +156,11 @@ components:
       src: "/images/landing/hombre-con-laptop.png"
       shadow: false
     section_heading:
-      text: "Why Learn to Code?"
+      text: ""
       style: '{ "font-size": "30px" }'
     heading:
-      text: ""
+      text: "Why Learn AI-Powered Coding?"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
       text: ""
       font_size: ["16px", "16px", "16px", "16px", "16px"]
@@ -180,13 +174,13 @@ components:
     bullets:
       items:
         - heading: "STRONG DEMAND"
-          text: "Demand for skilled programmers in Texas is high and expected to keep expanding"
+          text: "Demand for AI-fluent programmers in Texas is high and expected to keep expanding"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "HIGH-PAYING SALARIES"
           text: "Entry level developer positions earn an average of $75,000"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "DIVERSE CAREER OPPORTUNITIES"
-          text: "Coding skills have become essential in both tech and traditional industries due to the integration of digital tools and platforms into nearly every business."
+          text: "AI-Powered coding skills have become essential in both tech and traditional industries due to the integration of digital tools and platforms into nearly every business."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   # - name: new_design_with_bullets
@@ -236,7 +230,7 @@ components:
       - icon: "graduation-2"
         color: "#0084FF"
         title: "Eligibility"
-        content: "Must be a legal resident of Greater Dallas, underemployed or unemployed."
+        content: "Must be a legal resident of Texas, underemployed or unemployed."
       - icon: "briefcase-2"
         color: "#FFB718"
         title: "Application"
@@ -256,6 +250,49 @@ components:
       color: white
       hover: white
       style: "{font-weight: 800}"
+
+  - name: program_details
+    position: 6
+    layout: two_column_right
+    background: "#F4F9FF"
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "cover" }'
+      src: "/images/bg/the-academy-bg.jpg"
+      shadow: false
+    heading:
+      text: "Program Details"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "Everything you need to know about the Full-Stack Developer program."
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
+    bullets:
+      items:
+        - heading: "Duration"
+          text: "15 weeks + Pre work"
+          icon: "check"
+        - heading: "Classes"
+          text: "Live on Google Meet. Monday to Thursday 6pm-9pm CT"
+          icon: "check"
+        - heading: "Class size"
+          text: "Ratio of 1 teacher per 7 students"
+          icon: "check"
+        - heading: "Certificate"
+          text: "Full-Stack Developer <a href='https://certificate.4geeks.com/4ae7a46bba78dc19b823e124fea120c17b45e044'><span class='span-blue'>(See example)</span></a>"
+          icon: "check"
+        - heading: "Requisites"
+          text: "No previous coding skills or advanced math are required."
+          icon: "check"
+        - heading: "Language"
+          text: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
+          icon: "check"
+    button:
+      style: '{ "padding": "10px", "border-radius": "3px" }'
+      text: "Apply Now"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_bottom"
 
   - name: two_colum_full_stack
     position: 4
@@ -355,10 +392,10 @@ components:
       src: "/images/landing/community-support-2.png"
       shadow: false
     section_heading:
-      text: "THE DALLAS TECH SCENE IS THRIVING"
+      text: "THE TEXAS TECH SCENE IS THRIVING"
       style: '{ "font-size": "30px" }'
     sub_heading:
-      text: "Dallas is rapidly emerging as a major tech hub, attracting top companies, startups, and tech talent. As demand for skilled developers grows, it’s the perfect time to kickstart your tech career!"
+      text: "Texas is rapidly emerging as a major tech hub, attracting top companies, startups, and tech talent. As demand for skilled developers grows, it’s the perfect time to kickstart your tech career!"
       style: '{ "font-weight": "300", "font-size": "18px", "textAlign": "justify" }'
     button:
       text: "Apply Now"
@@ -368,16 +405,16 @@ components:
     bullets:
       items:
         - heading: "Expanding Job Market"
-          text: "The Dallas-Fort Worth area is projected to add over 20,000 tech jobs by the end of 2025. Software developers are in high demand, with companies investing heavily in building web applications and digital solutions."
+          text: "The Texas area is projected to add over 20,000 tech jobs by the end of 2025. Software developers are in high demand, with companies investing heavily in building web applications and digital solutions."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "Home to Tech Giants & Startups"
           text: "Companies like Texas Instruments, AT&T, and Samsung have a strong presence, while a thriving startup ecosystem is fueled by $1.9 billion in venture capital."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "High-Paying Careers"
-          text: "Entry-level software engineers in Dallas earn an average of $75,000 per year. With experience, tech professionals can earn well above six figures, making tech a stable, future-proof career."
+          text: "Entry-level software engineers in Texas earn an average of $75,000 per year. With experience, tech professionals can earn well above six figures, making tech a stable, future-proof career."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "Innovation & Community"
-          text: "Dallas has a supportive tech culture, with networking events, meetups, and bootcamps helping newcomers break in and grow."
+          text: "Texas has a supportive tech culture, with networking events, meetups, and bootcamps helping newcomers break in and grow."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
 
 
