@@ -202,7 +202,24 @@ const DataScience = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         course={program_type}
       />
-
+  
+   {/* Two Columns Rigo */}
+      <TwoColumn
+        right={{
+          image: yml.two_columns_rigo?.image,
+          video: yml.two_columns_rigo?.video,
+        }}
+        left={{
+          heading: yml.two_columns_rigo?.heading,
+          heading_image: yml.two_columns_rigo?.heading_image,
+          sub_heading: yml.two_columns_rigo?.sub_heading,
+          bullets: yml.two_columns_rigo?.bullets,
+          content: yml.two_columns_rigo?.content,
+          button: yml.two_columns_rigo?.button,
+        }}
+        proportions={yml.two_columns_rigo?.proportions}
+        session={session}
+      />
       {/* OVERLAPED CREAR EN EL YML*/}
       <Overlaped
         heading={yml.overlaped?.heading}
@@ -561,6 +578,40 @@ export const query = graphql`
             bullets {
               items {
                 text
+              }
+            }
+          }
+                    two_columns_rigo {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            video
+            heading {
+              text
+              font_size
+              style
+              heading_image {
+                src
+              }
+            }
+            sub_heading {
+              text
+              font_size
+              style
+            }
+            content {
+              text
+              style
+            }
+            bullets {
+              items {
+                heading
+                text
+                icon
+                icon_color
               }
             }
           }
