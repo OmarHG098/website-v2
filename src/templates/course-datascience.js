@@ -220,13 +220,30 @@ const DataScience = ({ data, pageContext, yml }) => {
         proportions={yml.two_columns_rigo?.proportions}
         session={session}
       />
+
+    {/* TWO COLUMN CREAR EN EL YML*/}
+      <TwoColumn
+        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
+        right={{
+          heading: yml.two_columns?.heading,
+          sub_heading: yml.two_columns?.sub_heading,
+          bullets: yml.two_columns?.bullets,
+          content: yml.two_columns?.content,
+          button: yml.two_columns?.button,
+        }}
+        proportions={yml.two_columns?.proportions}
+        session={session}
+      />
+
       {/* OVERLAPED CREAR EN EL YML*/}
+      {pageContext.lang === "es" && (
       <Overlaped
         heading={yml.overlaped?.heading}
         content={yml.overlaped?.paragraph}
         button={yml.overlaped?.button}
         image={yml.overlaped?.image}
       />
+      )}
 
       {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE 
       <GeeksInfo lang={pageContext.lang} /> */}
@@ -249,20 +266,6 @@ const DataScience = ({ data, pageContext, yml }) => {
           session={session}
         />
       </Div>
-
-      {/* TWO COLUMN CREAR EN EL YML*/}
-      <TwoColumn
-        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
-        right={{
-          heading: yml.two_columns?.heading,
-          sub_heading: yml.two_columns?.sub_heading,
-          bullets: yml.two_columns?.bullets,
-          content: yml.two_columns?.content,
-          button: yml.two_columns?.button,
-        }}
-        proportions={yml.two_columns?.proportions}
-        session={session}
-      />
 
       <UpcomingDates
         lang={pageContext.lang}
