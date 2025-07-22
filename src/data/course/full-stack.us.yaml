@@ -92,19 +92,24 @@ two_columns:
   heading:
     text_by_location:
       miami: "4Geeks, Miami and a mission of creating opportunities"
-      default: "4Geeks and a mission of creating opportunities"
+      default: "Your New Career Starts Here — Just Ask Our Grads"
     font_size: ["35px", "35px", "35px", "30px", "30px"]
   sub_heading:
     text_by_location:
       miami: "With Miami as our home base, we're dedicated to fostering opportunities throughout South Florida."
-      default: "We're dedicated to fostering opportunities throughout all our locations."
+      default: "Becoming an AI-powered  full stack developer with 4Geeks isn’t just about learning to code — it’s about changing your life."
     style: '{"font-weight": "400" }'
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   bullets:
     items: 
-    - text: "Accessible scholarships, whether full or partial, are always available."
-    - text: "Exclusive opportunities await residents of Miami-Dade, Broward, and Palm Beach counties, ensuring local talent thrives."
-    - text: "We maintain ongoing partnerships with institutions such as Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County, and many more. "
+    - text: "Hernán García shares how the bootcamp helped him go from just getting by to landing a tech job he never thought possible — thanks to the skills, support, and confidence he gained through our bootcamp."
+    - text: "Our students come from all walks of life and leave with real results:"
+    - text: " ✅ 84% get hired within 6 months of graduation"
+    - text: " ✅ Salaries increase by an average of 55%"
+    - text: "See where 4Geeks can take you. Watch his story. Picture yours."
+  content:
+    text: "Watch his story. Picture yours."
+    style: '{"font-weight": "700", "margin":"0", "font-size":"16px" }'
 
 two_columns_info:
   proportions: [6, 6]
