@@ -22,6 +22,7 @@ import TwoColumn from "../components/TwoColumn/index.js";
 import Overlaped from "../components/Overlaped";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 import Loc from "../components/Loc";
+import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
 
 const DataScience = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -292,6 +293,10 @@ const DataScience = ({ data, pageContext, yml }) => {
       )
     }
 
+      <ScholarshipSuccessCases
+        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+      />
+
       <OurPartners
         images={hiring.partners.images}
         margin="0"
@@ -326,6 +331,7 @@ export const query = graphql`
     $lang: String!
     $related_clusters: [String]
   ) {
+
     allMachineLearningTechsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
@@ -673,6 +679,39 @@ export const query = graphql`
         }
       }
     }
+    allScholarshipSuccessCasesYaml(
+      filter: { fields: { lang: { eq: $lang } } }
+    ) {
+      edges {
+        node {
+          title
+          contributor
+          cases {
+            name
+            img {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 700
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  breakpoints: [200, 340, 520, 890]
+                )
+              }
+            }
+            status
+            country {
+              iso
+              name
+            }
+            contributor
+            description
+            achievement
+          }
+        }
+      }
+    }
+
     allScholarshipProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
