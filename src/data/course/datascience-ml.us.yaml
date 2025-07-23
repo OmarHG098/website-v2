@@ -61,7 +61,7 @@ course_instructors:
       linkedin: "https://www.linkedin.com/in/alexismena/"
 
 badges:
-  paragraph: "Prepare to thrive in today's AI-powered tech industry with hyperpersonalized learning, unlimited 1:1 mentorship, and career support for life. Recognized by Course Report as one of the world's top <a href='/us/coding-bootcamp'>coding bootcamps</a>, chosen by Forbes as <a href='https://www.forbes.com/advisor/education/bootcamps/best-full-stack-developer-bootcamp/#4geeks_academy_full_stack_developer_bootcamp'>best bootcamp for students on a budget (2024)</a>, and rated 4.92/5 on SwitchUp. Licensed by the Florida Department of Education."
+  paragraph: "Prepare to thrive in today's AI-powered tech industry with hyperpersonalized learning, unlimited 1:1 mentorship, and career support for life. Recognized by Course Report as one of the world's top <a href='/us/coding-bootcamp'>coding bootcamps</a>, chosen by Forbes as <a href='https://www.forbes.com/advisor/education/bootcamps/best-full-stack-developer-bootcamp/#4geeks_academy_full_stack_developer_bootcamp'>best bootcamp for students on a budget (2024)</a>, and rated 4.9/5 on SwitchUp. Licensed by the Florida Department of Education."
 
 # TWO COLUMNS
 two_columns:
@@ -72,7 +72,7 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=snI-n8Ruvxg"
   heading:
-    text: "Learn to create predictive models and master machine learning with 4Geeks Academy"
+    text: "Learn to Create Predictive Models and Master Machine Learning with 4Geeks Academy"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Dive deep into data science and machine learning with 4Geeks Academy’s specialized program. Gain hands-on experience building predictive models for real-world applications like fraud detection, natural language processing, and data-driven decision-making. Master industry-leading tools and libraries including Python, TensorFlow, and Scikit-learn to launch a high-paying data science career."

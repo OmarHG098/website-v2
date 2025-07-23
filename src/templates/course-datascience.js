@@ -284,11 +284,13 @@ const DataScience = ({ data, pageContext, yml }) => {
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
       />
-
+    {pageContext.lang === "es" && (
       <ScholarshipProjects
         content={data.allScholarshipProjectsYaml.edges[0].node}
         lang={pageContext.lang}
       />
+      )
+    }
 
       <OurPartners
         images={hiring.partners.images}
@@ -306,7 +308,7 @@ const DataScience = ({ data, pageContext, yml }) => {
             : hiring.partners.sub_heading
         }
       />
-
+  
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
 
       {/* <RelatedPosts
