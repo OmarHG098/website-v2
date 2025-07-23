@@ -25,10 +25,6 @@ syllabus_alias:
     name: Ciberseguridad
     duration: "18 semanas"
 
-  - default_course: applied-ai
-    course_slug: curso-inteligencia-artificial
-    name: IA Aplicada
-    duration: "18 semanas"
 
 email_form_content:
   heading: Indicanos tu mail para avisarte cuando haya una fecha disponible para este campus
