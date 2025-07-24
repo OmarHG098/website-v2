@@ -9,6 +9,7 @@ import { SessionContext } from "../session.js";
 import { isCustomBarActive } from "../actions";
 import LazyLoad from "react-lazyload";
 import AdmissionsStaff from "../components/AdmissionsStaff";
+import TwoColumnCarousel from "../components/TwoColumnCarousel";
 
 const ThankYou = (props) => {
   const { data, pageContext, yml } = props;
@@ -135,6 +136,81 @@ const ThankYou = (props) => {
       {/* Render AdmissionsStaff only for English */}
       <AdmissionsStaff lang={session?.language} />
 
+      {/* Resource Carousel */}
+      {pageContext.lang === 'us' && (
+      <TwoColumnCarousel
+        title={<H3 textAlign="left" margin="0 0 10px 0">Explore More Resources</H3>}
+        text={<Paragraph textAlign="left" margin="0 0 0 0">Discover free tools and programs to help you on your coding journey, or learn about our job guarantee for your future career.</Paragraph>}
+        background={Colors.veryLightBlue3}
+        carouselProps={{ margin: "0px", margin_tablet: "0px" }}
+      >
+        {/* Slide 1: Free Coding Resources */}
+        <Div
+          flexDirection="column"
+          alignItems="flex-start"
+          border={`1px solid ${Colors.lightGray2}`}
+          borderRadius="8px"
+          padding="32px 24px"
+          background={Colors.white}
+          minHeight="220px"
+          width="100%"
+          maxWidth="500px"
+          margin="0 auto"
+        >
+          <H4 textAlign="left" margin="0 0 12px 0" fontWeight="700">Explore Free Resources</H4>
+          <Paragraph textAlign="left" margin="0 0 24px 0" fontSize="md">
+            Start your journey with tutorials, project templates, and guides — all for free.
+          </Paragraph>
+          <Button
+            as="a"
+            href="https://4geeks.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="full"
+            color={Colors.blue}
+            textColor={Colors.white}
+            fontSize="16px"
+            borderRadius="4px"
+            style={{ minWidth: 180 }}
+          >
+            Visit Free Resources
+          </Button>
+        </Div>
+        {/* Slide 2: Job Guarantee Program */}
+        <Div
+          flexDirection="column"
+          alignItems="flex-start"
+          border={`1px solid ${Colors.lightGray2}`}
+          borderRadius="8px"
+          padding="32px 24px"
+          background={Colors.white}
+          minHeight="220px"
+          width="100%"
+          maxWidth="500px"
+          margin="0 auto"
+        >
+          <H4 textAlign="left" margin="0 0 12px 0" fontWeight="700">Secure Your Future</H4>
+          <Paragraph textAlign="left" margin="0 0 24px 0" fontSize="md">
+            Learn how we back your success with our job guarantee and help you land your first tech job.
+          </Paragraph>
+          <Button
+            as="a"
+            href="https://4geeksacademy.com/us/job-guarantee"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="full"
+            color={Colors.blue}
+            textColor={Colors.white}
+            fontSize="16px"
+            borderRadius="4px"
+            style={{ minWidth: 180 }}
+          >
+            Learn About Job Guarantee
+          </Button>
+        </Div>
+      </TwoColumnCarousel>
+      )}
+      
       <GridContainer
         flexDirection="column"
         gridColumn_tablet="3 / span 10"
