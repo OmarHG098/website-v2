@@ -203,8 +203,8 @@ const DataScience = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         course={program_type}
       />
-  
-   {/* Two Columns Rigo */}
+
+      {/* Two Columns Rigo */}
       <TwoColumn
         right={{
           image: yml.two_columns_rigo?.image,
@@ -222,7 +222,7 @@ const DataScience = ({ data, pageContext, yml }) => {
         session={session}
       />
 
-    {/* TWO COLUMN CREAR EN EL YML*/}
+      {/* TWO COLUMN CREAR EN EL YML*/}
       <TwoColumn
         left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
         right={{
@@ -238,12 +238,12 @@ const DataScience = ({ data, pageContext, yml }) => {
 
       {/* OVERLAPED CREAR EN EL YML*/}
       {pageContext.lang === "es" && (
-      <Overlaped
-        heading={yml.overlaped?.heading}
-        content={yml.overlaped?.paragraph}
-        button={yml.overlaped?.button}
-        image={yml.overlaped?.image}
-      />
+        <Overlaped
+          heading={yml.overlaped?.heading}
+          content={yml.overlaped?.paragraph}
+          button={yml.overlaped?.button}
+          image={yml.overlaped?.image}
+        />
       )}
 
       {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE 
@@ -285,13 +285,12 @@ const DataScience = ({ data, pageContext, yml }) => {
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
       />
-    {pageContext.lang === "es" && (
-      <ScholarshipProjects
-        content={data.allScholarshipProjectsYaml.edges[0].node}
-        lang={pageContext.lang}
-      />
-      )
-    }
+      {pageContext.lang === "es" && (
+        <ScholarshipProjects
+          content={data.allScholarshipProjectsYaml.edges[0].node}
+          lang={pageContext.lang}
+        />
+      )}
 
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
@@ -313,7 +312,7 @@ const DataScience = ({ data, pageContext, yml }) => {
             : hiring.partners.sub_heading
         }
       />
-  
+
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
 
       {/* <RelatedPosts
@@ -331,7 +330,6 @@ export const query = graphql`
     $lang: String!
     $related_clusters: [String]
   ) {
-
     allMachineLearningTechsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
@@ -592,7 +590,7 @@ export const query = graphql`
               }
             }
           }
-                    two_columns_rigo {
+          two_columns_rigo {
             proportions
             image {
               style
@@ -685,6 +683,7 @@ export const query = graphql`
       edges {
         node {
           title
+          subtitle
           contributor
           cases {
             name
