@@ -40,34 +40,34 @@ sections:
 
   - title: "SMS Communications & Consent (10DLC)"
     text: |-
-      **What we send & why.** If you provide your mobile number, we may send you
+      What we send & why: If you provide your mobile number, we may send you
       service-related or informational SMS messages (e.g., enrollment updates,
       reminders, support notifications). Marketing messages are only sent if you
       explicitly agree to receive them.
 
-      **How we collect consent.** Consent is obtained through our web forms, checkboxes,
+      How we collect consent: Consent is obtained through our web forms, checkboxes,
       enrollment or event registration flows, or when you text us first. Each form
       clearly states that submitting your number authorizes us to send SMS messages.
 
-      **Opting out.** You can opt out at any time by replying **STOP** to any message.
+      Opting out: You can opt out at any time by replying **STOP** to any message.
       You may receive one final message confirming your opt-out. For help, reply **HELP**
       or email privacy@4geeksacademy.com.
 
-      **Message & data rates.** Standard message and data rates may apply, and message
+      Message & data rates: Standard message and data rates may apply, and message
       frequency varies.
 
-      **Carrier disclaimer.** Carriers are not liable for delayed or undelivered messages.
+      Carrier disclaimer: Carriers are not liable for delayed or undelivered messages.
 
   - title: "SMS Data Handling & Security"
     text: |-
       We treat phone numbers and SMS interaction data as personal information:
-      - **No sale or sharing:** We do not sell or share your phone number with third
+      - No sale or sharing: We do not sell or share your phone number with third
         parties for their own marketing.
-      - **Limited access:** Only authorized personnel and service providers (e.g., SMS
+      - Limited access: Only authorized personnel and service providers (e.g., SMS
         delivery vendors) can access this data to perform services on our behalf.
-      - **Secure storage:** Data is stored using administrative, technical, and physical
+      - Secure storage: Data is stored using administrative, technical, and physical
         safeguards designed to protect it.
-      - **Retention:** We keep SMS-related data only as long as needed to fulfill the
+      - Retention: We keep SMS-related data only as long as needed to fulfill the
         purpose for which it was collected or to comply with legal obligations, then
         delete or anonymize it.
 
