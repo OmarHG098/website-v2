@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { isCustomBarActive } from "../actions";
 import { H1, H2, Paragraph } from "../components/Heading";
 import { graphql, Link } from "gatsby";
-import { Header, Div } from "../components/Sections";
+import { Header, HR, Div } from "../components/Sections";
 import { Button, Colors, Img } from "../components/Styling";
 import ProgramDetails from "../components/ProgramDetails";
 import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
@@ -294,6 +294,12 @@ const DataScience = ({ data, pageContext, yml }) => {
 
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+      />
+      <HR
+        background={Colors.verylightGray}
+        width="70%"
+        height="1px"
+        margin="20px"
       />
 
       <OurPartners

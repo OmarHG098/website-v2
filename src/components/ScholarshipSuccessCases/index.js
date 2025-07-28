@@ -1,6 +1,6 @@
 import React from "react";
 import { H2, H3, H4, Paragraph } from "../Heading";
-import { Div, HR } from "../Sections";
+import { Div, HR, Grid } from "../Sections";
 import { StyledBackgroundSection } from "../Styling";
 import { Colors } from "../Styling";
 import Icon from "../Icon";
@@ -8,9 +8,11 @@ import Marquee from "react-fast-marquee";
 
 const ScholarshipSuccessCases = ({ content, maxWidth }) => {
   return (
-    <Div height="590px" display="block" margin="60px 0 60px 0">
+    <Div height="auto" display="block" margin="60px 0 60px 0">
+
       <H2 margin="30px 0">{content.title}</H2>
-      <H4 margin="15px 0">{content.subtitle}</H4>
+      <Paragraph margin="15px 0">{content.subtitle}</Paragraph>
+
       <Marquee speed={30} pauseOnHover>
         <Div height="500px">
           {content?.cases.map((student, i) => (
