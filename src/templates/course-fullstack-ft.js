@@ -20,6 +20,7 @@ import Overlaped from "../components/Overlaped/index.js";
 import Loc from "../components/Loc/index.js";
 import ScholarshipProjects from "../components/ScholarshipProjects/index.js";
 import TwoColumn from "../components/TwoColumn/index.js";
+import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
 
 const Program = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -214,6 +215,21 @@ const Program = ({ data, pageContext, yml }) => {
         image={yml.overlaped?.image}
       />
 
+
+        <TwoColumn
+          left={{
+            image: yml.two_column_geek?.image,
+          }}
+          right={{
+            heading: yml.two_column_geek?.heading,
+            sub_heading: yml.two_column_geek?.sub_heading,
+            bullets: yml.two_column_geek?.bullets,
+            button: yml.two_column_geek?.button,
+          }}
+          proportions={yml.two_column_geek?.proportions}
+          session={session}
+        />
+
       {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
       <GeeksInfo lang={pageContext.lang} />
 
@@ -249,7 +265,9 @@ const Program = ({ data, pageContext, yml }) => {
         paragraph={yml.prices.sub_heading}
       />
 
-
+      <ScholarshipSuccessCases
+        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+      />
 
       {/*<OurPartners images={hiring.partners.images} marquee/>*/}
 
@@ -515,6 +533,41 @@ export const query = graphql`
               }
             }
           }
+
+
+          two_column_geek {
+            proportions
+            image {
+              style
+              src
+            }
+            heading {
+              text
+              font_size
+              style
+            }
+            sub_heading {
+              text
+              font_size
+              style
+            }
+            bullets {
+              item_style
+              items {
+                heading
+                text
+                icon
+              }
+            }
+            button {
+              text
+              color
+              background
+              hover_color
+              path
+            }
+          }
+
           prices {
             heading
             sub_heading
@@ -751,6 +804,38 @@ export const query = graphql`
             }
             tagline
             sub_heading
+          }
+        }
+      }
+    }
+        allScholarshipSuccessCasesYaml(
+      filter: { fields: { lang: { eq: $lang } } }
+    ) {
+      edges {
+        node {
+          title
+          contributor
+          cases {
+            name
+            img {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 700
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  breakpoints: [200, 340, 520, 890]
+                )
+              }
+            }
+            status
+            country {
+              iso
+              name
+            }
+            contributor
+            description
+            achievement
           }
         }
       }

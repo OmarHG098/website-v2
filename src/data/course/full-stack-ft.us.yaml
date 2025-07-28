@@ -28,7 +28,7 @@ apply_form:
   
 seo_title: "In-Person Full Stack Development with AI Bootcamp"
 header:
-  title: "Full Stack Development with AI"
+  title: "Full Stack Development \nwith AI"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "FullStack"
   paragraph: "Become an AI-fluent Full Stack Developer in just 12 weeks—with full-time, in-person training that fast-tracks your progress. Get hands-on experience, a cutting-edge AI-integrated curriculum, unlimited personalized mentorship, and a job guarantee to back it all up."
@@ -100,6 +100,45 @@ overlaped:
   image:
     src: "/images/landing/Group-6626.webp" 
 
+
+two_column_geek:
+  proportions: [5, 7]
+  image:
+    style: '{ "backgroundSize": "contain", "background-position": "center", "margin": "10px" }'
+    src: "/images/landing/feliz-empresario-laptop-3.png"
+  heading:
+    text: |-
+      What Sets 4Geeks Apart: 
+      AI-Forward Skills, Unlimited Mentorship and Career Support
+    font_size: ["38px", "34px", "34px", "34px", "34px"]
+    style: '{ "font-weight": "400", "text-align": "center", "color": "#000", "padding": "10px" }'
+  sub_heading:
+    text: "Everything You Need to Launch and Grow a Career in Tech"
+    font_size: ["26px", "26px", "24px", "24px", "22px"]
+    style: '{ "font-weight": "400", "text-align": "justify", "color": "#000", "padding": "10px"}'
+  bullets:
+    item_style: '{ "padding": "0 0 0 10px", "font-weight": "100" }'
+    items:
+      - heading: "Get ahead of the curve with next-gen tech skills."
+        text: "Master industry-relevant, AI-powered tools guided by a cutting-edge curriculum."
+        icon: "check"
+      - heading: "Access unlimited mentorship and career support."
+        text: "No need to learn alone — get 1:1 support from expert human mentors whenever you need it, for life."
+        icon: "check"
+      - heading: "Enjoy hyperpersonalized learning, at every level."
+        text: "Move faster and smarter with AI-powered feedback tailored to your journey, plus an unmatched student-to-teacher ratio."
+        icon: "check"
+      - heading: "Join an active tech community."
+        text: "Stay connected and supported through our Slack channels — with peers, mentors, and alumni ready to help you grow."
+        icon: "check"
+  button:
+    text: "Learn More"
+    color: "white"
+    background: "black"
+    hover_color: "white"
+    path: "/us/apply"
+
+
 ## TWO COLUMNS
 two_columns:
   proportions: [6, 6]
@@ -156,7 +195,7 @@ details:
   heading: FULL-TIME FULL STACK DEVELOPMENT WITH AI
   weeks: 12
   week_unit: "wks"
-  sub_heading: "Master programming fundamentals like Python, hands-on front end and backend development with AI, plus  vibe coding – AI-driven software engineering for fast track product launches."
+  sub_heading: "Master programming fundamentals like Python, hands-on front end and backend development with AI, \nplus vibe coding – AI-driven software engineering for fast track product launches."
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
