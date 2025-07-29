@@ -9,7 +9,6 @@ import Marquee from "react-fast-marquee";
 const ScholarshipSuccessCases = ({ content, maxWidth }) => {
   return (
     <Div height="auto" display="block" margin="60px 0 60px 0">
-
       <H2 margin="30px 0">{content.title}</H2>
       <SubTitle
         fontSize="18px"

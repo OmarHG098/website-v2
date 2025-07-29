@@ -82,6 +82,10 @@ two_columns:
     color: "white"
     background: "black"
     path: "/us/apply"
+  content: 
+    text: ""
+    style: '{ "font-size":"18px", "margin":"0"}'
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
 
 two_columns_info:
   proportions: [6, 6]
@@ -268,6 +272,7 @@ two_columns_rigo:
       - heading: ""
         text: |
           • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Rigobot</strong>, our custom-built <strong style="text-decoration: none; color: #000000; font-weight: 700;">AI coding assistant</strong>, follows your progress and gives tailored feedback exactly when and how  you need it.
+          <br />
           <br />
           • Get unmatched personal attention with our <strong style="text-decoration: none; color: #000000; font-weight: 700;">7:1 student teacher ratio</strong>, plus <strong style="text-decoration: none; color: #000000; font-weight: 700;">unlimited access to 1:1 sessions</strong> with our expert mentors and career coaches.
           <br />
