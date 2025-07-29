@@ -265,7 +265,7 @@ two_columns_rigo:
     style: '{"margin":"0", "font-weight":"300", "text-align": "justify" }'
   content:
     style: '{ "font-size":"18px", "margin":"0"}'
-    text: "With the combined support of our human mentors and AI tools, you'll master AI-integrated full stack development faster, smarter, and with more confidence than ever."
+    text: "With the combined support of our human mentors and AI tools, you'll master AI-integrated Data Science faster, smarter, and with more confidence than ever."
   bullets:
     item_style: '{"font-weight": "100", "margin":"0", "font-size":"18px" }'
     items:

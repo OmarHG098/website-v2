@@ -75,7 +75,7 @@ two_columns:
     text: "Aprende a Crear Modelos Predictivos y Domina Machine Learning con 4Geeks Academy"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Sumérgete en data science y machine learning con el programa especializado de 4Geeks Academy. Gana experiencia práctica construyendo modelos predictivos para aplicaciones del mundo real como detección de fraude, procesamiento del lenguaje natural y toma de decisiones basada en datos. Domina herramientas y bibliotecas líderes en la industria incluyendo Python, TensorFlow y Scikit-learn para lanzar una carrera de data science bien pagada."
+    text: "Sumérgete en Data Science y Machine Learning con el programa especializado de 4Geeks Academy. Gana experiencia práctica construyendo modelos predictivos para aplicaciones del mundo real como detección de fraude, procesamiento del lenguaje natural y toma de decisiones basada en datos. Domina herramientas y bibliotecas líderes en la industria incluyendo Python, TensorFlow y Scikit-learn para lanzar una carrera de data science bien pagada."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Aplicar ahora"
@@ -260,12 +260,12 @@ two_columns_rigo:
     heading_image:
       src: "/images/rigobot-logo.png"
   sub_heading:
-    text: "Instrucción en vivo, mentorías ilimitadas y herramientas de IA construidas para un progreso más inteligente y rápido."
+    text: "Clases en vivo, mentorías ilimitadas y herramientas de IA construidas para un progreso más inteligente y rápido."
     font_size: ["24px","24px","22px","22px","20px"]
     style: '{"margin":"0", "font-weight":"300", "text-align": "justify" }'
   content:
     style: '{ "font-size":"18px", "margin":"0"}'
-    text: "Con el apoyo combinado de nuestros mentores humanos y herramientas de IA, dominarás el desarrollo full stack integrado con IA más rápido, más inteligente y con más confianza que nunca."
+    text: "Con el apoyo combinado de nuestros mentores humanos y herramientas de IA, dominarás la Ciencia de Datos integrada con IA más rápido, más inteligente y con más confianza que nunca."
   bullets:
     item_style: '{"font-weight": "100", "margin":"0", "font-size":"18px" }'
     items:
