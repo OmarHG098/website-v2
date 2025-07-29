@@ -236,16 +236,6 @@ const DataScience = ({ data, pageContext, yml }) => {
         session={session}
       />
 
-      {/* OVERLAPED CREAR EN EL YML*/}
-      {pageContext.lang === "es" && (
-        <Overlaped
-          heading={yml.overlaped?.heading}
-          content={yml.overlaped?.paragraph}
-          button={yml.overlaped?.button}
-          image={yml.overlaped?.image}
-        />
-      )}
-
       {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE 
       <GeeksInfo lang={pageContext.lang} /> */}
 
@@ -285,12 +275,6 @@ const DataScience = ({ data, pageContext, yml }) => {
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
       />
-      {pageContext.lang === "es" && (
-        <ScholarshipProjects
-          content={data.allScholarshipProjectsYaml.edges[0].node}
-          lang={pageContext.lang}
-        />
-      )}
 
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
