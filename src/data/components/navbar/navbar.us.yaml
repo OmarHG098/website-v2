@@ -10,7 +10,7 @@ navbar:
         - title: "Full Stack with AI"
           level: " "
           icon: "fullstack_2"
-          paragraph: "Become a Full Stack software developer using Python, React and Javascript. The most in-demand skills. Find a job as a developer."
+          paragraph: "Become a Full Stack developer using Cursor, Vercel v0, and other AI tools. Master in-demand AI skills. Land a job as a developer."
           buttons:
             - text: "View program"
               link: "/us/coding-bootcamps/part-time-full-stack-developer"
