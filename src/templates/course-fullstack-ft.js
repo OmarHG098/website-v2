@@ -21,6 +21,7 @@ import Loc from "../components/Loc/index.js";
 import ScholarshipProjects from "../components/ScholarshipProjects/index.js";
 import TwoColumn from "../components/TwoColumn/index.js";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
+import Iconogram from "../components/Iconogram/index.js";
 
 const Program = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -217,10 +218,10 @@ const Program = ({ data, pageContext, yml }) => {
 
 
         <TwoColumn
-          left={{
+          right={{
             image: yml.two_column_geek?.image,
           }}
-          right={{
+          left={{
             heading: yml.two_column_geek?.heading,
             sub_heading: yml.two_column_geek?.sub_heading,
             bullets: yml.two_column_geek?.bullets,
@@ -229,21 +230,30 @@ const Program = ({ data, pageContext, yml }) => {
           proportions={yml.two_column_geek?.proportions}
           session={session}
         />
-
-      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
-      <GeeksInfo lang={pageContext.lang} />
-
-      {/* TWO COLUMN CREAR EN EL YML*/}
-      <TwoColumn
-        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
-        right={{
-          heading: yml.two_columns?.heading,
-          sub_heading: yml.two_columns?.sub_heading,
-          bullets: yml.two_columns?.bullets,
-          content: yml.two_columns?.content,
-          button: yml.two_columns?.button,
+        
+      {/* How It Works */}
+      <Iconogram
+        yml={{
+          ...yml.how_it_works,
+          background: "#0084FF"
         }}
-        proportions={yml.two_columns?.proportions}
+        index={0}
+        style={{ background: "#0084FF" }}
+      />
+
+      {/* Why 4Geeks */}
+      <TwoColumn
+        left={{
+          image: yml.why_4geeks_job_guarantee?.image,
+        }}
+        right={{
+          heading: yml.why_4geeks_job_guarantee?.heading,
+          sub_heading: yml.why_4geeks_job_guarantee?.sub_heading,
+          content: yml.why_4geeks_job_guarantee?.content,
+          bullets: yml.why_4geeks_job_guarantee?.bullets,
+          button: yml.why_4geeks_job_guarantee?.button,
+        }}
+        proportions={yml.why_4geeks_job_guarantee?.proportions}
         session={session}
       />
 
@@ -468,6 +478,58 @@ export const query = graphql`
             }
             image {
               src
+            }
+          }
+          how_it_works {
+            background
+            heading {
+              text
+              font_size
+              style
+            }
+            sub_heading {
+              text
+              font_size
+              style
+            }
+            icons {
+              icon
+              color
+              title
+              content
+            }
+          }
+          why_4geeks_job_guarantee {
+            proportions
+            image {
+              style
+              src
+            }
+            heading {
+              text
+              font_size
+              style
+            }
+            sub_heading {
+              text
+              font_size
+              style
+            }
+            content {
+              text
+            }
+            bullets {
+              items {
+                text
+              }
+            }
+            button {
+              text
+              color
+              background
+              hover_color
+              path
+              style
             }
           }
           two_columns {

@@ -17,7 +17,8 @@ const Iconogram = ({ yml, index }) => {
       padding_md="40px 80px"
       padding_tablet="40px 40px"
       width="100%"
-      background={Colors[background] || background}
+      backgroundColor={Colors[background] || background}
+      style={{ backgroundColor: Colors[background] || background }}
     >
       {heading.text && (
         <H2

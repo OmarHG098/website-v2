@@ -73,6 +73,61 @@ overlaped:
   image:
     src: "/images/landing/tres-personas.png"
 
+# How It Works
+how_it_works:
+  background: "#0084FF"
+  heading:
+    text: "¿Nuestros Bootcamps Tienen Resultados en los que Puedes Confiar?"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+    style: '{ "color": "white" }'
+  sub_heading:
+    text: "Sí — y tenemos los números para respaldarlo."
+    font_size: ["20px", "20px", "16px", "16px", "16px"]
+    style: '{ "textAlign": "center", "width": "60%", "color": "white"}'      
+  icons:
+    - icon: "graduation-2"
+      color: "#0084FF"
+      title: "Tasa de Colocación Laboral"
+      content: "84% de los graduados fueron contratados"
+    - icon: "briefcase-2"
+      color: "#FF0000"
+      title: "Tiempo promedio para ser contratado"
+      content: "140 días después de la graduación"
+    - icon: "stairswflag"
+      color: "#BE8BFF"
+      title: "Incremento Salarial"
+      content: "55% de incremento después de la graduación"
+
+# Why 4Geeks Job Guarantee
+why_4geeks_job_guarantee:
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/landing/blonde-girl-laptop.png"
+  heading:
+    style: '{ "margin-top": "0px" }'
+    text: "Por qué ofrecemos la seguridad adicional de una Garantía de Empleo"
+    font_size: ["40px", "34px", "34px", "25px", "25px"]
+  sub_heading:
+    font_size: ["16px", "16px", "16px", "14px", "14px"]
+    style: '{ "font-weight": "100" }'
+    text: "Nuestro objetivo es más que enseñar habilidades — estamos aquí para lanzar carreras tecnológicas exitosas. Con un currículo de vanguardia que está alineado con los últimos desarrollos en IA, metodología de enseñanza práctica y apoyo profesional personalizado, nuestro programa tiene un historial comprobado de preparar estudiantes para el mercado laboral tecnológico"
+  content:
+    text: "Únete a un líder global en educación tecnológica con IA. Con más de 7 campus y más de 4,000 ex alumnos, ofrecemos aprendizaje potenciado por IA y apoyo profesional de por vida."
+  bullets:
+    items:
+      - text: "La efectividad de nuestro programa está respaldada por fuertes tasas de contratación y retención"
+      - text: "Sabemos cómo está evolucionando la tecnología y te preparamos para prosperar en el nuevo mercado laboral"
+      - text: "Creemos en nuestro enfoque de enseñanza y tu compromiso para tener éxito"
+  button:
+    style: '{ "padding": "10px", "border-radius": "3px" }'
+    text: "Aplicar Ahora"
+    color: "white"
+    hover_color: "white"
+    background: "black"
+    path: "#leadform_bottom"
+
+
 ## TWO COLUMNS
 two_columns:
   proportions: [6, 6]
