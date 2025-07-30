@@ -19,7 +19,7 @@ const BurgerIcon = (props) => (
     onClick={props.onClick}
     viewBox="0 0 28 23"
     fill="none"
-    xmlns="https:://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"
   >
     <line
       x1="1"
@@ -339,7 +339,7 @@ const CampusMenu = ({ status, setStatus, menu }) => {
             menu[status.itemIndex].sub_menu.links.map((m, i) => (
               <Button
                 color={activeOpt.title === m.title ? Colors.black : Colors.gray}
-                width="33%"
+                width="25%"
                 borderBottom={
                   activeOpt.title === m.title
                     ? `5px solid ${Colors.blue}`

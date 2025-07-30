@@ -371,7 +371,7 @@ const CampusMenu = ({ status, setStatus, menu }) => {
   return (
     <>
       <Div id="menu-container" width="100%">
-        <Div id="options-container" flexDirection="column" width="33%">
+        <Div id="options-container" flexDirection="column" width="25%">
           {Array.isArray(menu[status.itemIndex].sub_menu.links) &&
             menu[status.itemIndex].sub_menu.links.map((m, i) => (
               <Button
@@ -395,6 +395,7 @@ const CampusMenu = ({ status, setStatus, menu }) => {
           flexDirection="column"
           flexWrap="wrap"
           maxHeight="330px"
+          width="75%"
         >
           {activeOpt.sub_links != undefined &&
             Array.isArray(activeOpt.sub_links) &&
