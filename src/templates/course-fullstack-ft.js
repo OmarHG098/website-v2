@@ -217,26 +217,25 @@ const Program = ({ data, pageContext, yml }) => {
         image={yml.overlaped?.image}
       />
 
+      <TwoColumn
+        right={{
+          image: yml.two_column_geek?.image,
+        }}
+        left={{
+          heading: yml.two_column_geek?.heading,
+          sub_heading: yml.two_column_geek?.sub_heading,
+          bullets: yml.two_column_geek?.bullets,
+          button: yml.two_column_geek?.button,
+        }}
+        proportions={yml.two_column_geek?.proportions}
+        session={session}
+      />
 
-        <TwoColumn
-          right={{
-            image: yml.two_column_geek?.image,
-          }}
-          left={{
-            heading: yml.two_column_geek?.heading,
-            sub_heading: yml.two_column_geek?.sub_heading,
-            bullets: yml.two_column_geek?.bullets,
-            button: yml.two_column_geek?.button,
-          }}
-          proportions={yml.two_column_geek?.proportions}
-          session={session}
-        />
-        
       {/* How It Works */}
       <Iconogram
         yml={{
           ...yml.how_it_works,
-          background: "#0084FF"
+          background: "#0084FF",
         }}
         index={0}
         style={{ background: "#0084FF" }}
@@ -597,7 +596,6 @@ export const query = graphql`
             }
           }
 
-
           two_column_geek {
             proportions
             image {
@@ -871,7 +869,7 @@ export const query = graphql`
         }
       }
     }
-        allScholarshipSuccessCasesYaml(
+    allScholarshipSuccessCasesYaml(
       filter: { fields: { lang: { eq: $lang } } }
     ) {
       edges {
