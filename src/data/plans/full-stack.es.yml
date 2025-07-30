@@ -1,16 +1,16 @@
 full_time:
 ## USA Full-time
   - slug: 'usa-upfront-ft'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    academies: ['downtown-miami', 'dallas-usa']
     recomended: true
     scholarship: "Pago completo"
     payment_time: "Pagar hoy"
-    price: "$14,999"
-    original_price: "$16,700"
+    price: "$13,499"
+    original_price: "$14,999"
     job_guarantee_price: " "
     offer: "10% DE DESCUENTO"
     bullets:
-      - "Estás ahorrando $1,701 USD"  
+      - "Estás ahorrando $1,500 USD"  
       - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
       - "También proporcionamos varias opciones de becas completas o parciales para las cuales puedes ser elegible. Contáctanos para más detalles."
       - "Este plan incluye una garantía de trabajo."
@@ -20,11 +20,11 @@ full_time:
 
 
   - slug: 'usa-financed-ft'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    academies: ['downtown-miami', 'dallas-usa']
     recomended: false
     scholarship: "Financiado"
     payment_time: "Pago en 24 meses"
-    price: "$200 - $299/mes"
+    price: "Desde $349/mes"
     bullets:
       - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
       - "Puedes adaptar tu camino de aprendizaje a tus necesidades financieras. Elige incluir o excluir nuestros servicios de apoyo profesional, o inscríbete con una Garantía de Empleo."
@@ -35,7 +35,7 @@ full_time:
       - "/images/bcas.png"
 
   - slug: 'usa-fs-ft'
-    academies: ['downtown-miami']
+    academies: ['']
     recomended: false
     scholarship: "Beca Completa"
     payment_time: "Si vives o trabajas en Miami"

@@ -1,15 +1,15 @@
 full_time:
 ## USA - Full Time
   - slug: 'usa-upfront-ft'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    academies: ['dallas-usa', 'downtown-miami']
     recomended: true
     scholarship: "Pay upfront"
     payment_time: "Get a 10% discount"
-    price: "$14,999"
-    original_price: "$16,700"
+    price: "$13,499"
+    original_price: "$14,999"
     offer: "10% OFF"
     bullets:
-      - "You're saving $1,701 USD"  
+      - "You're saving $1,500 USD"  
       - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
       - "We also provide several full or partial scholarship options that you may be eligible for. Contact us for further details."
       - "This plan includes a job guarantee"
@@ -19,11 +19,11 @@ full_time:
 
 
   - slug: 'usa-financed-ft'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'toronto-canada']
+    academies: ['dallas-usa', 'downtown-miami']
     recomended: false
     scholarship: "Financed"
     payment_time: "24 months payment"
-    price: "$200 - $299/mo"
+    price: "from $349/mo"
     bullets: 
       - "Affordable long term loans based on credit score."
       - "Loan terms displayed are effective as of 3/11/2025. To see full repayment examples, visit <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">link to Ascent partnership page</a>."
@@ -50,7 +50,7 @@ full_time:
       # - "/images/clarkuniversity.png"
 
   - slug: 'usa-fs-ft'
-    academies: ['downtown-miami']
+    academies: ['']
     recomended: false
     scholarship: "Full Scholarship"
     payment_time: "If you live or work in Miami"

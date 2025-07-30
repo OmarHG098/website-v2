@@ -180,6 +180,7 @@ const Program = ({ data, pageContext, yml }) => {
       </Header>
       <JobGuaranteeSmall
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
+        customTitle="Built-In Job Guarantee — No Extra Cost, Just Extra Confidence"
       />
       <ProgramDetails
         details={courseDetails.details}
