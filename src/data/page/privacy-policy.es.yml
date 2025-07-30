@@ -22,8 +22,7 @@ header:
 
 sections:
   - title: "Política de privacidad y uso de datos"
-    text: |
-      En esta web se respetan y cuidan los datos personales de los usuarios. Como usuario debes saber que tus derechos están garantizados.
+    text: "En esta web se respetan y cuidan los datos personales de los usuarios. Como usuario debes saber que tus derechos están garantizados.
 
       Nos hemos esforzado en crear un espacio seguro y confiable y por eso queremos compartir nuestros principios respecto a tu privacidad:
 
@@ -34,31 +33,30 @@ sections:
         <li class='li-privacy-link'>Estamos a tu disposición para cualquier inconveniente.</li>
       </ul>
 
-      4Geeks Academy ha adecuado esta web a las exigencias de la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal (LOPD), y al Real Decreto 1720/2007, de 21 de diciembre, conocido como el Reglamento de desarrollo de la LOPD. Cumple también con el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016 relativo a la protección de las personas físicas (RGPD), así como con la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSICE o LSSI).
+      4Geeks Academy ha adecuado esta web a las exigencias de la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal (LOPD), y al Real Decreto 1720/2007, de 21 de diciembre, conocido como el Reglamento de desarrollo de la LOPD. Cumple también con el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016 relativo a la protección de las personas físicas (RGPD), así como con la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSICE o LSSI)."
 
   - title: "Responsable del tratamiento de tus datos personales"
-    text: |
+    text: "
       <b>4Geeks Academy España S.L.</b><br>
       Constituida mediante escritura otorgada en Madrid, el día 27 de enero de 2020, ante mí, bajo el número 451 de protocolo;<br>
-      Inscrita en el Registro Mercantil de Madrid, Tomo 40163, Folio 150, Hoja M-713651, Inscripción 1ª;<br>
+      Inscrita en el Registro Mercantil de Madrid, Tomo 40163, Folio 150, Hoja M-713651, Inscripción 1;<br>
       CIF: B88579495<br><br>
 
       A efectos de lo previsto en el RGPD, los datos personales que nos envíes a través de los formularios de la web recibirán el tratamiento de datos de Usuarios de la web y suscriptores. Para el tratamiento de datos de nuestros usuarios, implementamos todas las medidas técnicas y organizativas de seguridad establecidas en la legislación vigente.
+      "
 
   - title: "Principios que aplicaremos a tu información personal"
-    text: |
-      En el tratamiento de los datos personales aplicaremos los siguientes principios ajustados a las exigencias del RGPD:
+    text: "En el tratamiento de los datos personales aplicaremos los siguientes principios ajustados a las exigencias del RGPD:
 
       <ul class='ul-privacy'>
         <li class='li-privacy-link'>Principio de licitud, lealtad y transparencia: siempre requeriremos tu consentimiento para el tratamiento de tus datos personales para uno o varios fines específicos, informándote previamente con absoluta transparencia.</li>
         <li class='li-privacy-link'>Principio de minimización de datos: solo solicitamos los datos estrictamente necesarios en relación con los fines requeridos.</li>
         <li class='li-privacy-link'>Principio de limitación del plazo de conservación: los datos serán mantenidos no más tiempo del necesario para los fines del tratamiento. En suscripciones periódicamente revisaremos nuestras listas y eliminaremos registros inactivos.</li>
         <li class='li-privacy-link'>Principio de integridad y confidencialidad: tus datos se tratarán de manera que se garantice su seguridad y confidencialidad. Tomamos todas las precauciones necesarias para evitar accesos no autorizados o usos indebidos.</li>
-      </ul>
+      </ul>"
 
   - title: "¿Cómo obtenemos tus datos?"
-    text: |
-      Los datos personales que tratamos en 4Geeks Academy proceden de:
+    text: "Los datos personales que tratamos en 4Geeks Academy proceden de:
 
       <ul class='ul-privacy'>
         <li class='li-privacy-link'>Formulario de contacto</li>
@@ -71,10 +69,10 @@ sections:
         <li class='li-privacy-link'>Proceso de inscripción como alumno</li>
         <li class='li-privacy-link'>Formularios o flujos específicos de consentimiento para SMS</li>
       </ul>
+      "
 
   - title: "Comunicaciones SMS y Consentimiento (10DLC)"
-    text: |-
-      **Qué enviamos y por qué.** Si proporcionas tu número de teléfono móvil, podemos enviarte mensajes SMS relacionados con nuestros servicios (por ejemplo, recordatorios, actualizaciones de inscripción, soporte). Los mensajes de marketing solo se enviarán si otorgas tu consentimiento explícito.
+    text: "**Qué enviamos y por qué.** Si proporcionas tu número de teléfono móvil, podemos enviarte mensajes SMS relacionados con nuestros servicios (por ejemplo, recordatorios, actualizaciones de inscripción, soporte). Los mensajes de marketing solo se enviarán si otorgas tu consentimiento explícito.
 
       **Cómo obtenemos el consentimiento.** El consentimiento se recoge a través de nuestros formularios web, casillas de verificación, procesos de registro o cuando tú inicias la comunicación por SMS. Cada formulario indica claramente que al enviar tu número autorizas el envío de SMS.
 
@@ -83,18 +81,19 @@ sections:
       **Tarifas y frecuencia.** Pueden aplicarse tarifas estándar de mensajes y datos. La frecuencia de los mensajes puede variar.
 
       **Descargo de responsabilidad del operador.** Los operadores no son responsables de mensajes retrasados o no entregados.
+      "
 
   - title: "Tratamiento y Seguridad de Datos SMS"
-    text: |-
-      Tratamos los números de teléfono y los datos de interacción por SMS como información personal:
+    text: "Tratamos los números de teléfono y los datos de interacción por SMS como información personal:
 
       - **No venta ni cesión para marketing:** No vendemos ni cedemos tu número a terceros para sus propios fines comerciales.
       - **Acceso limitado:** Solo personal autorizado y proveedores de servicios (por ejemplo, plataformas de envío de SMS) acceden a estos datos para prestar servicios en nuestro nombre.
       - **Almacenamiento seguro:** Los datos se almacenan con medidas administrativas, técnicas y físicas diseñadas para protegerlos.
       - **Retención limitada:** Conservamos los datos SMS solo el tiempo necesario para los fines comunicativos o por obligaciones legales y luego los eliminamos o anonimizamos.
+    "
 
   - title: "¿Cuáles son tus derechos cuando nos facilitas tus datos?"
-    text: |
+    text: "
       Cualquier persona tiene derecho a obtener confirmación sobre si en 4Geeks Academy tratamos datos personales que le conciernen.
 
       Las personas interesadas tienen derecho a:
@@ -108,9 +107,10 @@ sections:
       </ul>
 
       En determinadas circunstancias, los interesados podrán oponerse al tratamiento de sus datos; 4Geeks Academy dejará de tratar los datos salvo por motivos legítimos imperiosos o para el ejercicio/defensa de reclamaciones. También pueden reclamar ante la Agencia Española de Protección de Datos si consideran vulnerados sus derechos.
+    "
 
   - title: "¿Con qué finalidad tratamos tus datos personales?"
-    text: |
+    text: "
       Cuando te conectas con esta web para solicitar información sobre nuestros cursos u otros servicios, facilitas información de carácter personal de la que es responsable 4Geeks Academy. Esta información puede incluir IP, nombre, dirección física, correo electrónico, número de teléfono y otros datos. Al facilitar esta información, consientes su recopilación, uso, gestión y almacenamiento por https://4GeeksAcademy.com, según lo descrito en el Aviso Legal y esta Política.
 
       Sistemas de captura (formularios) y fines:
@@ -122,9 +122,10 @@ sections:
         <li class='li-privacy-link'>Formulario para postularte a un puesto de trabajo: Nombre completo, Email, CV, perfil de Github, descripción de habilidades. Finalidad: contactarte. Gestionado por ActiveCampaign.</li>
         <li class='li-privacy-link'>Formularios/checkbox de consentimiento SMS: Número de teléfono y tu aceptación expresa para recibir SMS. Finalidad: enviarte mensajes informativos o promocionales según tu consentimiento. Gestionado por nuestra plataforma de envío de SMS y ActiveCampaign.</li>
       </ul>
+    "
 
   - title: "Existen otras finalidades por las que tratamos tus datos personales"
-    text: |
+    text: "
       - Garantizar el cumplimiento de las condiciones de uso y la ley aplicable (incluye desarrollar herramientas y algoritmos para garantizar la confidencialidad).
       - Apoyar y mejorar los servicios que ofrece 4Geeks Academy.
       - Recoger datos no identificativos mediante cookies (ver política de cookies).
@@ -133,13 +134,14 @@ sections:
       De acuerdo con el RGPD 2016/679, 4Geeks Academy (4Geeks Academy España, S.L.) con oficinas centrales en Calle Edison, 3, 28006 (Madrid), será responsable del tratamiento de los datos correspondientes a usuarios y clientes de la web y del blog.
 
       4Geeks Academy no vende, alquila ni cede datos personales que puedan identificar al usuario a terceros sin consentimiento previo. En colaboraciones con otros profesionales, se solicitará consentimiento informando identidad y finalidad del colaborador.
+    "
 
   - title: "Legitimación para el tratamiento de tus datos"
-    text: |
+    text: "
       La base legal es el consentimiento.
 
       Para crear una cuenta o realizar comentarios se requiere tu consentimiento con esta política. La oferta prospectiva o comercial de servicios o promociones se basa también en tu consentimiento; su retirada no condiciona la ejecución de contratos ya existentes.
-
+    "
   - title: "Categoría de datos"
     text: |
       Las categorías tratadas son datos identificativos. No tratamos categorías de datos especialmente protegidos.
@@ -147,9 +149,10 @@ sections:
   - title: "¿Por cuánto tiempo conservaremos tus datos?"
     text: |
       Los datos personales se conservarán hasta que solicites su supresión o hasta que dejen de ser necesarios para la finalidad recabada. En el caso de SMS, aplicamos retención limitada como se describe en la sección "Tratamiento y Seguridad de Datos SMS".
+    text: "Los datos personales se conservarán hasta que solicites su supresión o hasta que dejen de ser necesarios para la finalidad recabada. En el caso de SMS, aplicamos retención limitada como se describe en la sección 'Tratamiento y Seguridad de Datos SMS'"
 
   - title: "¿A qué destinatarios se comunicarán tus datos?"
-    text: |
+    text: "
       Muchas herramientas que utilizamos para gestionar tus datos son de terceros. Para prestar servicios estrictamente necesarios, https://4GeeksAcademy.com comparte datos con:
 
       <span class='bold-privacy-text'>Analítica web</span>: Google Analytics (Google Inc., California, EE. UU.). Usa cookies. La info generada (incluida tu IP) se almacena en EE. UU.
@@ -163,13 +166,13 @@ sections:
       <span class='bold-privacy-text'>Escritorio de soporte</span>: Zendesk, Inc. (San Francisco, EE. UU.). Más info: <a class='faq-link' target='_blank' rel='noopener noreferrer nofollow' href='https://www.zendesk.com/company/customers-partners/privacy-policy/'>https://www.zendesk.com/company/customers-partners/privacy-policy/</a>.
 
       <span class='bold-privacy-text'>Proveedor de envío de SMS</span>: Utilizamos proveedores de mensajería SMS para entregar mensajes. Estos actúan como encargados de tratamiento y solo usan los datos para prestar el servicio en nuestro nombre.
+      "
 
   - title: "Navegación"
-    text: |
-      Al navegar por https://4GeeksAcademy.com se pueden recoger datos no identificables, como IP, ubicación geográfica aproximada, registro de uso de servicios y sitios, y otros datos no identificativos (hábitos de navegación). Esta web utiliza Google Analytics para analizar tendencias, administrar el sitio y recopilar info demográfica.
+    text: "Al navegar por https://4GeeksAcademy.com se pueden recoger datos no identificables, como IP, ubicación geográfica aproximada, registro de uso de servicios y sitios, y otros datos no identificativos (hábitos de navegación). Esta web utiliza Google Analytics para analizar tendencias, administrar el sitio y recopilar info demográfica."
 
   - title: "Secreto y seguridad de los datos"
-    text: |
+    text: "
       https://4GeeksAcademy.com se compromete al uso y tratamiento de los datos personales respetando su confidencialidad y utilizándolos conforme a su finalidad, así como a guardarlos aplicando medidas para evitar alteración, pérdida, tratamiento o acceso no autorizado.
 
       Esta web incluye certificado SSL, lo que asegura que tus datos viajan cifrados entre servidor y usuario.
@@ -179,31 +182,37 @@ sections:
       4Geeks Academy España S.L. garantiza que cualquier persona autorizada a procesar datos (personal, colaboradores, proveedores) mantendrá la debida confidencialidad.
 
       Cuando se presente algún incidente de seguridad, 4Geeks Academy notificará al cliente sin demoras indebidas y proporcionará información oportuna relativa al incidente.
+      "
 
   - title: "Exactitud y veracidad de los datos"
-    text: |
+    text: "
       Como usuario, eres el único responsable de la veracidad y corrección de los datos que remitas a https://4GeeksAcademy.com, exonerando a 4Geeks Academy España S.L. de cualquier responsabilidad.
 
       Garantizas y respondes por la exactitud, vigencia y autenticidad de los datos personales facilitados y te comprometes a mantenerlos actualizados. Te comprometes a proporcionar información completa y correcta en los formularios.
+      "
 
   - title: "Aceptación y consentimiento"
-    text: |
+    text: "
       Declaras haber sido informado de las condiciones sobre protección de datos personales, aceptando y consintiendo el tratamiento de los mismos por parte de 4Geeks Academy España S.L. en la forma y para las finalidades indicadas en esta política.
 
-      Al proporcionar tu número de teléfono y marcar las casillas correspondientes (cuando proceda), consientes recibir comunicaciones SMS según lo descrito en la sección "Comunicaciones SMS y Consentimiento (10DLC)".
+      Al proporcionar tu número de teléfono y marcar las casillas correspondientes (cuando proceda), consientes recibir comunicaciones SMS según lo descrito en la sección 'Comunicaciones SMS y Consentimiento (10DLC)'
+      "
 
   - title: "Revocabilidad"
-    text: |
+    text: "
       El consentimiento prestado es revocable en cualquier momento comunicándolo a 4Geeks Academy España S.L. en los términos establecidos para el ejercicio de derechos ARCO/ROP. En SMS, basta responder STOP para revocar ese canal específico. La revocación no tendrá carácter retroactivo.
+      "
 
   - title: "Correos comerciales"
-    text: |
+    text: "
       De acuerdo con la LSSICE, https://4GeeksAcademy.com no realiza prácticas de SPAM. No enviamos comunicaciones comerciales por vía electrónica o SMS sin haber sido previamente solicitadas o autorizadas. En cada formulario, el usuario puede dar su consentimiento expreso para recibir el boletín u ofertas.
 
       Nos comprometemos a no enviar comunicaciones comerciales sin identificarlas debidamente.
+      "
 
   - title: "Cambios en esta política"
-    text: |
+    text: "
       Podemos actualizar esta Política de Privacidad periódicamente. Publicaremos la versión revisada con una fecha de vigencia actualizada. El uso continuado del sitio tras los cambios implica la aceptación de la nueva política.
+      "
 
 date_release: "Última modificación de nuestra política de privacidad: <span class='bold-privacy-text'>23/07/2025</span>"
