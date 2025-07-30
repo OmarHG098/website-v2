@@ -12,15 +12,17 @@ navbar:
           icon: "fullstack_2"
           paragraph: "Become an AI-fluent software engineer. Learn Python, React, and Vibe Coding tools like Cursor and Vercel to launch a future-proof career."
           buttons:
-            - text: "View program"
+            - text: "Part-time"
               link: "/us/coding-bootcamps/part-time-full-stack-developer"
+            - text: "Full-time"
+              link: "/us/coding-bootcamps/full-time-full-stack-developer"
 
         - title: "Data Science and ML"
           level: " "
           icon: "machine_2"
           paragraph: "Learn Python to collect and manage data. Create models and solve problems using Machine Learning, Deep Learning and AI."
           buttons:
-            - text: "View program"
+            - text: "Part-time"
               link: "/us/coding-bootcamps/datascience-machine-learning"
 
         - title: "CyberSecurity"
@@ -28,7 +30,7 @@ navbar:
           icon: "cyber-security"
           paragraph: "Become a cybersecurity specialist, equipped to identify, manage, and mitigate system vulnerabilities, aligned with ISO and other standards."
           buttons:
-            - text: "View program"
+            - text: "Part-time"
               link: "/us/coding-bootcamps/cybersecurity"
 
 

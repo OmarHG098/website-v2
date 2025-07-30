@@ -13,15 +13,17 @@ navbar:
           icon: "fullstack_2"
           paragraph: "Convierte en un programador que utiliza las tecnologias más búscadas, mentoria personalizada y un plan de estudios y career support para conseguir tu primer trabajo."
           buttons:
-            - text: "Ver programa"
+            - text: "Tiempo parcial"
               link: "/es/coding-bootcamps/desarrollador-full-stack"
+            - text: "Tiempo completo"
+              link: "/es/coding-bootcamps/full-stack-full-time"
 
         - title: "Data Science, Machine Learning y AI"
           level: "Desde cero"
           icon: "machine_2"
           paragraph: "Conviértete en un científico de datos, desarrolla modelos de predicción y uneté a una de las profesiones mejores pagadas del mundo."
           buttons:
-            - text: "Ver Programa"
+            - text: "Tiempo parcial"
               link: "/es/coding-bootcamps/curso-datascience-machine-learning"
               
         - title: "Ciberseguridad"
@@ -29,7 +31,7 @@ navbar:
           icon: "cyber-security"
           paragraph: "Conviértete en un hacker ético y aprende a detectar, corregir y protegerte de ataques y vulnerabilidades en sistemas informáticos "
           buttons:
-            - text: "Ver Programa"
+            - text: "Tiempo parcial"
               link: "/es/coding-bootcamps/curso-ciberseguridad"
 
 

@@ -4,7 +4,14 @@ import { Div } from "../Sections";
 import { Colors } from "../Styling";
 import Icon from "../Icon";
 
-export default ({ icon, title, content, color, content_style, content_mobile }) => {
+export default ({
+  icon,
+  title,
+  content,
+  color,
+  content_style,
+  content_mobile,
+}) => {
   return (
     <Div
       background="#FFF"
@@ -58,12 +65,23 @@ export default ({ icon, title, content, color, content_style, content_mobile }) 
             {content_mobile ? (
               <>
                 {content && (
-                  <span className="d-block d-xs-none w-100" dangerouslySetInnerHTML={{ __html: content }} />
+                  <span
+                    className="d-block d-xs-none w-100"
+                    dangerouslySetInnerHTML={{ __html: content }}
+                  />
                 )}
-                <span className="d-none d-xs-block w-100" dangerouslySetInnerHTML={{ __html: content_mobile }} />
+                <span
+                  className="d-none d-xs-block w-100"
+                  dangerouslySetInnerHTML={{ __html: content_mobile }}
+                />
               </>
             ) : (
-              content && <span className="w-100" dangerouslySetInnerHTML={{ __html: content }} />
+              content && (
+                <span
+                  className="w-100"
+                  dangerouslySetInnerHTML={{ __html: content }}
+                />
+              )
             )}
           </Paragraph>
         )}
