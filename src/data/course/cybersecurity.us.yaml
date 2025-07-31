@@ -117,8 +117,8 @@ two_columns_second:
 overlaped:
   heading: "Cybersecurity Specialists Are in High Demand"
   paragraph: |
-    <strong style="font-weight: 800;">Abundant Job Opportunities</strong>: The demand for cybersecurity professionals continues to surge, with 3.5 million unfilled positions globally in 2023. <br>
-    According to <strong style="font-weight: 800;">the U.S. Bureau of Labor Statistics</strong>, in the U.S. alone, cybersecurity job openings are projected to grow by 32% between 2022 and 2032.<br><br>
+    <strong style="font-weight: 800;">Abundant Job Opportunities</strong>: The demand for cybersecurity professionals continues to surge, with 3.5 million unfilled positions globally in 2023. <br><br>
+    According to <strong style="font-weight: 800;">the U.S. Bureau of Labor Statistics</strong>, in the U.S. alone, cybersecurity job openings are projected to grow by 35% between 2022 and 2032.<br><br>
     <strong style="font-weight: 800;">A sector on the rise</strong>: Gartner's forecast report predicts the information security and risk management market will grow from $185 billion in 2023 to $287 billion in 2027.
   image:
     src: "/images/landing/feliz-empresario.png"
@@ -144,7 +144,7 @@ two_columns_info:
     item_style: '{ "padding": "0 0 0 10px", "font-weight": "100" }'
     items:
     - heading: "Master next-gen tech skills."
-      text: "Learn to build with the AI tools and workflows used by modern development teams."
+      text: "Learn to build with the AI tools and workflows used by modern cybersecurity teams."
       icon: "check"
     - heading: "Get unlimited mentorship and career support."
       icon: "check" 
