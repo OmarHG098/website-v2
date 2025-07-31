@@ -527,7 +527,7 @@ export const query = graphql`
             bullets {
               item_style
               items {
-                heading 
+                heading
                 text
                 icon
               }
@@ -538,7 +538,7 @@ export const query = graphql`
               background
               hover_color
               path
-            } 
+            }
           }
           two_columns_second {
             proportions
