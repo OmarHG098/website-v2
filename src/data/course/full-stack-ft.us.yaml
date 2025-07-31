@@ -157,12 +157,12 @@ how_it_works:
       content: "84% of graduates were hired"
     - icon: "briefcase-2"
       color: "#FF0000"
-      title: "Avergage time to get hired"
-      content: "140 days after graduation"
+      title: "Average time to get hired"
+      content: "6 months after graduation"
     - icon: "stairswflag"
       color: "#BE8BFF"
       title: "Salary Increase"
-      content: "55% increase after graduation"
+      content: "55% higher at new job"
 
 # Why 4Geeks Job Guarantee
 why_4geeks_job_guarantee:
