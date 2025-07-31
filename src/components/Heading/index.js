@@ -59,6 +59,7 @@ const BaseHeading = styled(Heading)`
     padding: ${(props) => props.padding_xxs};
     line-height: ${(props) => props.lineHeight_xxs};
     margin: ${(props) => props.margin_xxs};
+    font-size: ${(props) => props.fontSize_xxs};
   }
 
   @media ${Devices.xs} {
