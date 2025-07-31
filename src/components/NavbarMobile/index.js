@@ -11,6 +11,22 @@ import { locByLanguage } from "../../actions";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import CustomBar from "../CustomBar";
 
+const ButtonText = styled(H3)`
+  text-align: left;
+  width: fit-content;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+  margin: 10px 5px 0 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: ${Colors.black};
+  
+  &:hover {
+    color: ${Colors.blue};
+  }
+`;
+
 const BurgerIcon = (props) => (
   <svg
     width="28"
@@ -637,7 +653,7 @@ export const MegaMenu = ({
                                   return (
                                     <Link to={m.link} key={i}>
                                       <Div alignItems="baseline">
-                                        <H3
+                                        <ButtonText
                                           textAlign="left"
                                           width="fit-content"
                                           fontSize="15px"
@@ -646,7 +662,7 @@ export const MegaMenu = ({
                                           margin="10px 5px 0 0"
                                         >
                                           {m.text}
-                                        </H3>
+                                        </ButtonText>
                                         <Icon
                                           icon="arrow-right"
                                           color="#A4A4A4"

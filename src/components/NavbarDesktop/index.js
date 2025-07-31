@@ -565,6 +565,9 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
                                       textColor={Colors.black}
                                       fontSize={"13px"}
                                       padding="10px"
+                                      colorHover={Colors.blue}
+                                      colorHoverText={Colors.white}
+                                      transition="all 0.3s ease"
                                     >
                                       {m.text}
                                     </Button>

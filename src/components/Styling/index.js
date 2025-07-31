@@ -428,32 +428,14 @@ export const Small = styled.small`
   display: ${(props) => props.display};
 `;
 
-const getVariant = (props) => ({
-  outline: {
-    border: `1px solid ${props.color}`,
-    background: props.background || "initial",
-    color: props.color,
-  },
-  full: {
-    border: "none",
-    background: props.color,
-    color: props.textColor || "white",
-  },
-  empty: {
-    border: "none",
-    background: "none",
-    color: "#0097CD",
-    textTransform: "capitalize",
-  },
-});
-const SmartButton = ({ children, onClick, type, icon, ...rest }) => {
-  const styles = getVariant(rest)[rest.variant];
+const SmartButton = ({ children, onClick, type, icon, variant, ...rest }) => {
   return (
     <button
       type={type || "button"}
       onClick={(e) => onClick && onClick(e)}
       className={rest.className}
-      style={{ ...rest.style, ...styles }}
+      style={{ ...rest.style }}
+      variant={variant}
       {...rest}
     >
       {icon}
@@ -500,9 +482,36 @@ export const Button = styled(SmartButton)`
   justify-self: ${(props) => props.justifySelf};
   justify-content: ${(props) => props.justifyContent};
   box-shadow: ${(props) => props.boxShadow};
+  transition: ${(props) => props.transition || "all 0.3s ease"};
+  
+  /* Apply variant styles */
+  ${(props) => {
+    if (props.variant === 'outline') {
+      return `
+        border: 1px solid ${props.color};
+        background: ${props.background || "initial"};
+        color: ${props.color};
+      `;
+    } else if (props.variant === 'full') {
+      return `
+        border: none;
+        background: ${props.color};
+        color: ${props.textColor || "white"};
+      `;
+    } else if (props.variant === 'empty') {
+      return `
+        border: none;
+        background: none;
+        color: #0097CD;
+        text-transform: capitalize;
+      `;
+    }
+    return '';
+  }}
+  
   &:hover {
-    background-color: ${(props) => props.colorHover};
-    color: ${(props) => props.colorHoverText};
+    background-color: ${(props) => props.colorHover || (props.variant === 'outline' ? props.color : props.color)};
+    color: ${(props) => props.colorHoverText || (props.variant === 'outline' ? 'white' : props.textColor || 'white')};
   }
   @media ${Devices.xxs} {
     padding: ${(props) => props.padding_xxs};
