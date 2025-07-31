@@ -7,7 +7,6 @@ full_time:
     payment_time: "Pagar hoy"
     price: "$13,499"
     original_price: "$14,999"
-    job_guarantee_price: " "
     offer: "10% DE DESCUENTO"
     bullets:
       - "Estás ahorrando $1,500 USD"  
@@ -33,6 +32,20 @@ full_time:
       - "/images/ascent_logo.png"
       - "/images/climb-logo.png"
       - "/images/bcas.png"
+
+  - slug: 'edly-payment-ft'
+    academies: ['dallas-usa', 'downtown-miami']
+    recomended: false
+    scholarship: "Préstamo de Pago Basado en Ingresos (IBR)"
+    payment_time: "Pagos flexibles después de la graduación"
+    price: "IBR"
+    bullets:
+      - "Edly se enorgullece de ayudar a 4Geeks Academy a ofrecer préstamos asequibles con pagos basados en ingresos (IBR) a sus estudiantes."
+      - "Solo comienzas a pagar una vez que consigas un trabajo y alcances el ingreso mínimo."
+      - "Pagos flexibles que se ajustan según tus ingresos."
+      - "La matrícula se paga directamente a la academia."
+    icons:
+      - "/images/edly.png"
 
   - slug: 'usa-fs-ft'
     academies: ['']

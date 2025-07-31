@@ -32,6 +32,20 @@ full_time:
       - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
 
+  - slug: 'edly-payment-ft'
+    academies: ['dallas-usa', 'downtown-miami']
+    recomended: false
+    scholarship: "Income-Based Repayment Loan"
+    payment_time: "Flexible payments after graduation"
+    price: "IBR"
+    bullets:
+      - "Edly is proud to help 4Geeks Academy provide affordable, income-based repayment (IBR) loans to its students"
+      - "Only make payments once you land a job and earn the minimum income."
+      - "Flexible payments adjust based on your income"
+      - "Tuition paid directly to your school"
+    icons:
+      - "/images/edly.png"
+
   - slug: 'usa-clark-scholarship-pt'
     academies: ['']
     recomended: false
