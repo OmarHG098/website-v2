@@ -39,19 +39,28 @@ This rule ensures consistency and completeness in translations between English (
 - **Technical Terms:** Keep consistent across languages
   - Example: "bootcamp", "JavaScript", "Python" remain unchanged
 
-### Component Requirements
-- **Structure:** 
-  - Maintain identical component order between language versions
-  - Components present in the English version should have corresponding translations in Spanish
-  - Not all pages require the same components; structure depends on the content type
-  - When adding new components, ensure they exist in both language versions
+### Component Management Requirements
+- **Component Order:** Maintain identical component order between language versions
+- **Component Coverage:** 
+  - ✅ **Translate existing components:** All components present in the English version must have corresponding translations in Spanish
+  - ✅ **Add missing components:** If a component exists in English but not in Spanish, add it with proper translation
+  - ✅ **Remove outdated components:** If a component exists in Spanish but not in English, remove it from Spanish version
+  - ✅ **Preserve component structure:** Keep the same nested structure, properties, and formatting
+- **Component Types:**
+  - **Required Translation:** All text content, headings, descriptions, buttons, links
+  - **Keep Unchanged:** Technical identifiers (slugs, IDs), image paths, style properties, configuration values
+  - **Adapt Appropriately:** URLs should be language-specific (e.g., `/us/apply` → `/es/aplica`)
 
-## 3. Quality Control
+## 3. Quality Control Process
 - **Pre-commit Checks:**
-  1. Verify components in English version have corresponding translations
-  2. Check character limits for meta tags
-  3. Ensure all links are working and language-appropriate
-  4. Validate YAML syntax
+  1. **Component Inventory:** Compare all components between US and ES versions
+  2. **Missing Components:** Identify and add any components present in US but missing in ES
+  3. **Outdated Components:** Remove any components present in ES but not in US
+  4. **Component Order:** Verify identical component order between versions
+  5. **Translation Quality:** Ensure all translatable content is properly translated
+  6. **Character Limits:** Check meta tag character limits
+  7. **Link Validation:** Ensure all links are working and language-appropriate
+  8. **YAML Syntax:** Validate YAML syntax in both files
 
 - **Testing:**
   ```bash
@@ -60,6 +69,36 @@ This rule ensures consistency and completeness in translations between English (
   ```
 
 ## 4. Examples
+
+### Component Management
+✅ **Good - Complete Component Coverage:**
+```yaml
+# US Version
+header:
+  title: "Become a Cybersecurity Specialist"
+  paragraph: "Launch a high-paying career..."
+
+# ES Version (Complete Translation)
+header:
+  title: "Conviértete en un Especialista en Ciberseguridad"
+  paragraph: "Lanza una carrera bien pagada..."
+```
+
+❌ **Bad - Missing Component:**
+```yaml
+# US Version
+header:
+  title: "Become a Cybersecurity Specialist"
+  paragraph: "Launch a high-paying career..."
+overlaped:
+  heading: "Cybersecurity Specialists Are in High Demand"
+
+# ES Version (Missing overlaped section)
+header:
+  title: "Conviértete en un Especialista en Ciberseguridad"
+  paragraph: "Lanza una carrera bien pagada..."
+# Missing overlaped section!
+```
 
 ### Meta Description
 ✅ Good (Spanish):
@@ -86,7 +125,8 @@ sub_heading: "Deseamos que usted se concentre en lo importante: el aprendizaje, 
 - Automated tests must pass before merge
 - Build must complete successfully
 - Character count validation in CI/CD pipeline
+- Component comparison validation in CI/CD pipeline
 
 ---
 
-**Version:** v1.1, 2024-03-21
+**Version:** v1.2, 2024-03-21

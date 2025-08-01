@@ -191,7 +191,6 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
         <TwoColumn
           left={{
             image: yml.two_columns_first?.image,
-            video: yml.two_columns_first?.video,
           }}
           right={{
             heading: yml.two_columns_first?.heading,
@@ -571,7 +570,6 @@ export const query = graphql`
               shadow
               link
             }
-            video
             heading {
               text
               font_size
