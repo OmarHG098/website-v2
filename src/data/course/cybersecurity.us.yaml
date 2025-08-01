@@ -10,7 +10,7 @@ meta_info:
   keywords: ""
   redirects: []
   related_clusters: ["trends-and-tech"]
-  duration: "P14W"  # 14 weeks duration in ISO 8601 format
+  duration: "P16W"  # 14 weeks duration in ISO 8601 format
 
 apply_form:
   label: Cybersecurity
@@ -212,16 +212,16 @@ details:
       Become proficient at managing risks using data loss prevention (DLP) strategies and <strong>navigating compliance with international standards such as ISO 27001 and NIST.</strong>
     list:
       - label: "Duration"
-        content: "14 weeks"
+        content: "16 weeks"
         icon: "duration-icon"
       - label: "Classes"
         content: "3 live online classes per week"
         icon: "book-2"
       - label: "Class Size"
-        content: "Up to 18 people"
+        content: "Max 18 people"
         icon: "people"
       - label: "Certificate"
-        content: "Official 4Geeks Completion Certificate, recognized by multiple institutions."
+        content: "Official 4Geeks Completion Certificate, recognized by multiple institutions"
         link_text: "See Example"
         link: "https://certificate.4geeks.com/07d337ab332f79383002d1f7cf722e3642289a40"
         icon: "certification"
@@ -229,15 +229,15 @@ details:
         content: "No previous experience is required"
         icon: "contract-checked"
       - label: "Language"
-        content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
+        content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus"
         icon: "language"
 
   heading: PROGRAM DETAILS
-  weeks: 14
+  weeks: 16
   week_unit: "wks"
   facts:
     - label: "Duration"
-      value: "14 weeks"
+      value: "16 weeks"
     - label: "Commitment"
       value: "20 hrs/week (Mon - Wed - Fri)"
     - label: "Certificate"
