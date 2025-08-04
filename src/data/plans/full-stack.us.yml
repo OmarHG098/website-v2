@@ -9,10 +9,8 @@ full_time:
     original_price: "$14,999"
     offer: "10% OFF"
     bullets:
-      - "You're saving $1,500 USD"  
-      - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
-      - "We also provide several full or partial scholarship options that you may be eligible for. Contact us for further details."
-      - "This plan includes a job guarantee"
+      - "Get a 10% discount when you pay upfront" 
+      - "Regular tuition: $14,999 (before discount), with interest-free financing available for up to 6 months."
     icons:
       - "/images/ethereum.png"
       - "/images/bitcoin.png"
@@ -22,11 +20,14 @@ full_time:
     academies: ['dallas-usa', 'downtown-miami']
     recomended: false
     scholarship: "Financed"
-    payment_time: "24 months payment"
-    price: "from $349/mo"
+    payment_time: "Pay in 3, 4, or 5 years payment"
+    price: "From $349/mo"
     bullets: 
-      - "Affordable long term loans based on credit score."
-      - "Loan terms displayed are effective as of 3/11/2025. To see full repayment examples, visit <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">link to Ascent partnership page</a>."
+      - "Affordable loans available through Climb and Ascent, based on your credit score"
+      - "Option to defer payments until after graduation"
+      - "Financing with lower entry requirements offered by TFC Tuition"
+      - "Flexible terms — repay over 3, 4, 5 years, or more"
+      - "For full repayment examples, visit our <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">4Geeks + Ascent page </a>(Terms current as of 03/11/2025)."
     icons: 
       - "/images/ascent_logo.png"
       - "/images/tfc-logo.png"
@@ -36,13 +37,13 @@ full_time:
     academies: ['dallas-usa', 'downtown-miami']
     recomended: false
     scholarship: "Income-Based Repayment Loan"
-    payment_time: "Flexible payments after graduation"
+    payment_time: "Start paying once hired"
     price: "IBR"
     bullets:
-      - "Edly is proud to help 4Geeks Academy provide affordable, income-based repayment (IBR) loans to its students"
-      - "Only make payments once you land a job and earn the minimum income."
-      - "Flexible payments adjust based on your income"
-      - "Tuition paid directly to your school"
+      - "Affordable, income-based repayment (IBR) loans offered through EDLY"
+      - "Only start paying once you are earning at least $35,000/year"
+      - "Monthly payments adjust based on your salary"
+      - "Cosigner-friendly: apply with someone who can help you qualify or secure better terms"
     icons:
       - "/images/edly.png"
 

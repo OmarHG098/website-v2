@@ -4,46 +4,46 @@ full_time:
     academies: ['downtown-miami', 'dallas-usa']
     recomended: true
     scholarship: "Pago completo"
-    payment_time: "Pagar hoy"
+    payment_time: "Obtén un 10% de descuento"
     price: "$13,499"
     original_price: "$14,999"
     offer: "10% DE DESCUENTO"
     bullets:
-      - "Estás ahorrando $1,500 USD"  
-      - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
-      - "También proporcionamos varias opciones de becas completas o parciales para las cuales puedes ser elegible. Contáctanos para más detalles."
-      - "Este plan incluye una garantía de trabajo."
+      - "Obtén un 10% de descuento cuando pagas por adelantado" 
+      - "Matrícula regular: $14,999 (antes del descuento), con financiamiento sin intereses disponible hasta por 6 meses."
     icons:
       - "/images/ethereum.png"
       - "/images/bitcoin.png"
 
 
   - slug: 'usa-financed-ft'
-    academies: ['downtown-miami', 'dallas-usa']
+    academies: ['dallas-usa', 'downtown-miami']
     recomended: false
     scholarship: "Financiado"
-    payment_time: "Pago en 24 meses"
+    payment_time: "Pago en 3, 4 o 5 años"
     price: "Desde $349/mes"
-    bullets:
-      - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
-      - "Puedes adaptar tu camino de aprendizaje a tus necesidades financieras. Este plan incluye una Garantía de Empleo."
-      - "También ofrecemos varias opciones de becas completas o parciales para las que puedas ser elegible. Contáctanos para más detalles."
-    icons:
+    bullets: 
+      - "Préstamos asequibles disponibles a través de Climb y Ascent, basados en tu puntaje de crédito"
+      - "Opción de diferir pagos hasta después de la graduación"
+      - "Financiamiento con requisitos de entrada más bajos ofrecido por TFC Tuition"
+      - "Términos flexibles — paga en 3, 4, 5 años, o más"
+      - "Para ejemplos completos de reembolso, visita nuestra <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">página 4Geeks + Ascent</a> (Términos vigentes al 03/11/2025)."
+    icons: 
       - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
-      - "/images/bcas.png"
 
   - slug: 'edly-payment-ft'
     academies: ['dallas-usa', 'downtown-miami']
     recomended: false
     scholarship: "Préstamo de Pago Basado en Ingresos (IBR)"
-    payment_time: "Pagos flexibles después de la graduación"
+    payment_time: "Comienza a pagar una vez contratado"
     price: "IBR"
     bullets:
-      - "Edly se enorgullece de ayudar a 4Geeks Academy a ofrecer préstamos asequibles con pagos basados en ingresos (IBR) a sus estudiantes."
-      - "Solo comienzas a pagar una vez que consigas un trabajo y alcances el ingreso mínimo."
-      - "Pagos flexibles que se ajustan según tus ingresos."
-      - "La matrícula se paga directamente a la academia."
+      - "Préstamos asequibles con pagos basados en ingresos (IBR) ofrecidos a través de EDLY"
+      - "Solo comienzas a pagar una vez que estés ganando al menos $35,000/año"
+      - "Los pagos mensuales se ajustan según tu salario"
+      - "Amigable con codeudor: aplica con alguien que pueda ayudarte a calificar o asegurar mejores términos"
     icons:
       - "/images/edly.png"
 

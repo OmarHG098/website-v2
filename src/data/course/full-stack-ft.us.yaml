@@ -4,7 +4,7 @@ meta_info:
   description: "Become a Full Stack Developer in just 12 weeks. Study full-time to accelerate your learning and change your life as quickly as possible." 
   image: "/images/og-preview/full-stack-ft.us.png"
   bc_slug: "full-stack-ft"
-  visibility: "unlisted"
+  visibility: "visible"
   keywords: "Full Sack Developer Full-Time"
   show_in_apply: false
   redirects:
@@ -26,12 +26,12 @@ meta_info:
 apply_form:
   label: Full Stack Developer
   
-seo_title: "In-Person Full Stack Development with AI Bootcamp"
+seo_title: "Online and In-Person Full Stack Development with AI Bootcamp"
 header:
   title: "Full Stack Development \nwith AI"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "FullStack"
-  paragraph: "Become an AI-fluent Full Stack Developer in just 12 weeks—with full-time, in-person training that fast-tracks your progress. Get hands-on experience, a cutting-edge AI-integrated curriculum, unlimited personalized mentorship, and a job guarantee to back it all up."
+  paragraph: "Become an AI-fluent Full Stack Developer in just 12 weeks—with full-time, training that fast-tracks your progress. Get hands-on experience, a cutting-edge AI-integrated curriculum, unlimited personalized mentorship, and a job guarantee to back it all up."
 
 button:
   syllabus_heading: "Download Syllabus"
