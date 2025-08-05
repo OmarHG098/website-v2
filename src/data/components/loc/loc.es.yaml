@@ -1,13 +1,10 @@
 heading: "SEDES: EN LÍNEA O EN PERSONA"
-image: "/images/locations/locations_image.png"
 sub_heading: "Sea online o presencial, tendrás una interacción real e instantánea con tus profesores, mentores y compañeros de clase para trabajar en ejercicios o proyectos y tendrás acceso a materiales, conferencias y todo lo que necesitas para convertirte en un profesional de la programación."
 title_image: "Online, o Presencial."
-
 title: "Nuestros programas son"
 highlighted_text:
   - text: Online,
     color: "#0084FF"
-
   - text: o
     color: "#000000"
   - text: <br/>Presencial
