@@ -177,17 +177,20 @@ components:
       style: '{ "textAlign": "center", "width": "60%" }'
     icons:
       - icon: "fullstack"
-        title: "Full Stack Development"
-        content: "Become a Full Stack software developer using Python, React, and Javascript. Master the most sought-after- skills and land a job as a developer."
-
+        title: "Full Stack Development with AI"
+        content: "Become an AI-fluent Full Stack Developer using tools like Cursor, Vercel v0, and more. Master the most sought-after skills and land a job as a developer."
       - icon: "machine"
         title: "DATA SCIENCE AND MACHINE LEARNING"
         content: "Acquire the skills to analyze complex data and leverage machine learning techniques to automate decision-making and uncover actionable insights."
-
       - icon: "cibersecurity"
         title: "CyberSecurity Bootcamp"
         content: "Become a cybersecurity specialist, equipped to identify, manage, and mitigate system vulnerabilities in compliance with ISO and other standards."
-
+    button:
+      text: "Get More Information"
+      color: "white"
+      background: "black"
+      hover_color: "white"
+      path: "#leadform_header"
 
   - name: why_choose-4geeks
     position: 2
