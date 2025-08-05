@@ -43,7 +43,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   background: "#ffffff"
   tagline: Tech Careers<br> Are Booming in Florida.  <br>We’re here to get you in.
-  sub_heading: "Florida is becoming a tech powerhouse—creating thousands of openings for AI-fluent Full-Stack Developers, Data Scientists, and Cybersecurity Analysts. Join a 4Geeks bootcamp and gain the skills that lead to high-paying, future-proof careers—backed by unmatched, personalized support."
+  sub_heading: " "
   tagline_color: "#1c1c1c"
   form_styles:
     background: "#0084FF"
@@ -60,9 +60,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
   bullets:
-    - Become a Full-Stack Developer, Data Scientist, Machine Learning Engineer or Cybersecurity Specialist!
+    - Become an AI-fluent Full-Stack Developer, Data Scientist, Machine Learning Engineer or Cybersecurity Specialist!
     - Affordable tuition and unbeatable financing plans
-    - Unlimited mentorship and career support to ensure your success
+    - Unlimited mentorship and 1:1 career support to help you succeed. For life!
     # - "Part-time: Immerse yourself in a flexible schedule, perfect for busy professionals and students."
 
 short_badges:
