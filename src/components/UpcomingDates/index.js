@@ -50,7 +50,6 @@ const UpcomingDates = ({
               default_course
               course_slug
               name
-              duration
             }
             email_form_content {
               heading
@@ -77,6 +76,21 @@ const UpcomingDates = ({
             }
             fields {
               lang
+            }
+          }
+        }
+      }
+      allCourseYaml {
+        edges {
+          node {
+            fields {
+              file_name
+              lang
+            }
+            details {
+              weeks
+              week_unit
+              weeks_label
             }
           }
         }
@@ -115,6 +129,30 @@ const UpcomingDates = ({
   );
   if (content) content = content.node;
   else return null;
+
+  // Get course data to map durations dynamically
+  const courseData = dataQuery.allCourseYaml.edges;
+  
+  // Helper function to get course duration from course files
+  const getCourseDuration = (courseSlug) => {
+    const course = courseData.find(({ node }) => {
+      const fileName = node.fields.file_name;
+      const fileLang = node.fields.lang;
+      
+      // Extract the base name from the filename (remove .us.yaml or .es.yaml)
+      const baseName = fileName.split('.')[0];
+      
+      return baseName === courseSlug && fileLang === lang;
+    });
+    
+    if (course && course.node.details && course.node.details.weeks) {
+      const weeks = course.node.details.weeks;
+      const weeksLabel = course.node.details.weeks_label || course.node.details.week_unit || "weeks";
+      return `${weeks} ${weeksLabel}`;
+    }
+    
+    return null;
+  };
 
   const emailFormContent = content.email_form_content;
   const syllabusAlias = content.syllabus_alias;
@@ -167,7 +205,10 @@ const UpcomingDates = ({
         if (syllabus) {
           cohort.syllabus_version.name = syllabus.name;
           cohort.syllabus_version.courseSlug = syllabus.course_slug;
-          cohort.syllabus_version.duration = syllabus.duration;
+          
+          // Get dynamic duration from course files
+          const dynamicDuration = getCourseDuration(syllabus.course_slug);
+          cohort.syllabus_version.duration = dynamicDuration || syllabus.duration;
         }
       });
 

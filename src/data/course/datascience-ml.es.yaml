@@ -191,7 +191,8 @@ details:
 
   heading: DETALLES DEL PROGRAMA
   weeks: 16
-  week_unit: "sm"
+  week_unit: "sem"
+  weeks_label: "semanas"
   facts:
     - label: "Duración"
       value: "16 semanas"

@@ -21,7 +21,7 @@ meta_info:
     ]
   related_clusters: ["desarrollador-full-stack","trends-and-tech"]
   template: "course-fullstack-ft"
-  duration: "P10W"  # 10 weeks duration in ISO 8601 format
+  duration: "P12W"  # 10 weeks duration in ISO 8601 format
 
 apply_form:
   label: Full Stack Developer
@@ -139,8 +139,9 @@ details:
           icon: "language"
           
   heading: DETALLES DEL PROGRAMA FULL-TIME
-  weeks: 10
+  weeks: 12
   week_unit: "sem"
+  weeks_label: "semanas"
   sub_heading: "Proyectos de la vida real y exactamente lo que buscan las empresas"
   left_labels:
     description: "DESCRIPCIÓN:"

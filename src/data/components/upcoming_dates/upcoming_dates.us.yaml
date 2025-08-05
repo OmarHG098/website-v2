@@ -10,19 +10,20 @@ button:
 syllabus_alias:
   # EVERYTHING must be in lower case except for the name
   - default_course: full-stack
-    course_slug: part-time-full-stack-developer
+    course_slug: full-stack
     name: Full Stack Software Developer
-    duration: "18 weeks"
 
   - default_course: machine-learning
-    course_slug: datascience-machine-learning
+    course_slug: datascience-ml
     name: Datascience
-    duration: "18 weeks"
 
   - default_course: cyber-security
     course_slug: cybersecurity
     name: Cybersecurity
-    duration: "18 weeks"
+
+  - default_course: full-stack-ft
+    course_slug: full-stack-ft
+    name: Full Stack Software Developer
 
 email_form_content:
   heading: Send your email to notify you when there is a date available for this campus
