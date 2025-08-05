@@ -31,7 +31,7 @@ header:
   title: "Full Stack Development \nwith AI"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "FullStack"
-  paragraph: "Become an AI-fluent Full Stack Developer in just 12 weeks—with full-time, training that fast-tracks your progress. Get hands-on experience, a cutting-edge AI-integrated curriculum, unlimited personalized mentorship, and a job guarantee to back it all up."
+  paragraph: "Become an AI-fluent Full Stack Developer in just 12 weeks—with full-time training that fast-tracks your progress. Get hands-on experience, a cutting-edge AI-integrated curriculum, unlimited personalized mentorship, and a job guarantee to back it all up."
 
 button:
   syllabus_heading: "Download Syllabus"
@@ -230,7 +230,7 @@ details:
           content: "12 Weeks"
           icon: "duration-icon"
         - label: "Location"
-          content: "Miami, FL and Dallas, TX"
+          content: "Miami, FL, Dallas, TX, and Online"
           icon: "location-icon"
         - label: "Schedule"
           content: "Monday-Friday 9AM-5:30PM"
