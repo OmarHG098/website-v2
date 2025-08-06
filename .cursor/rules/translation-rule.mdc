@@ -1,9 +1,11 @@
 ---
-description: Translations
+description: Comprehensive translation guidelines ensuring consistent multilingual content across English (US) and Spanish (ES) pages, maintaining technical accuracy and tone while preserving component structure and relationships.
 globs: 
 alwaysApply: false
 ---
 # Translation Rule for Landing Pages
+Type: Workspace Rule
+Description: Comprehensive translation guidelines ensuring consistent multilingual content across English (US) and Spanish (ES) pages, maintaining technical accuracy and tone while preserving component structure and relationships.
 
 **Purpose:**
 This rule ensures consistency and completeness in translations between English (US) and Spanish (ES) pages, maintaining a youthful tone while preserving technical accuracy.

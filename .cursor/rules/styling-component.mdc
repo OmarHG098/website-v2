@@ -1,9 +1,11 @@
 ---
-description: Styling components
+description: Centralized styling system that defines component architecture, prevents duplication, and ensures consistent styling patterns across the application. Includes guidelines for component organization, variant handling, and dependency management.
 globs: 
 alwaysApply: false
 ---
 # Rule: Styling Components and Structure
+Type: Workspace Rule
+Description: Centralized styling system that defines component architecture, prevents duplication, and ensures consistent styling patterns across the application. Includes guidelines for component organization, variant handling, and dependency management.
 
 **Purpose:**
 This document defines how to handle styling components, their structure, and reusability across the project to ensure consistency and maintainability.
