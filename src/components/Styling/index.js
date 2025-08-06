@@ -428,6 +428,26 @@ export const Small = styled.small`
   display: ${(props) => props.display};
 `;
 
+/* Fix variant handling in Button component */
+const getVariant = (props) => ({
+  outline: {
+    border: `1px solid ${props.color}`,
+    background: props.background || "initial",
+    color: props.color,
+  },
+  full: {
+    border: "none",
+    background: props.color,
+    color: props.textColor || "white",
+  },
+  empty: {
+    border: "none",
+    background: "none",
+    color: "#0097CD",
+    textTransform: "capitalize",
+  },
+});
+
 const SmartButton = ({ children, onClick, type, icon, variant, ...rest }) => {
   return (
     <button
@@ -443,6 +463,24 @@ const SmartButton = ({ children, onClick, type, icon, variant, ...rest }) => {
     </button>
   );
 };
+
+export const ButtonText = styled.h3`
+  text-align: left;
+  width: fit-content;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+  margin: 10px 5px 0 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: ${Colors.black};
+  font-family: "Lato", sans-serif;
+  
+  &:hover {
+    color: ${Colors.blue};
+  }
+`;
+
 export const Button = styled(SmartButton)`
   font-size: ${(props) => props.fontSize};
   font-family: "Lato", sans-serif;
@@ -486,27 +524,8 @@ export const Button = styled(SmartButton)`
   
   /* Apply variant styles */
   ${(props) => {
-    if (props.variant === 'outline') {
-      return `
-        border: 1px solid ${props.color};
-        background: ${props.background || "initial"};
-        color: ${props.color};
-      `;
-    } else if (props.variant === 'full') {
-      return `
-        border: none;
-        background: ${props.color};
-        color: ${props.textColor || "white"};
-      `;
-    } else if (props.variant === 'empty') {
-      return `
-        border: none;
-        background: none;
-        color: #0097CD;
-        text-transform: capitalize;
-      `;
-    }
-    return '';
+    const styles = getVariant(props)[props.variant];
+    return styles ? Object.entries(styles).map(([key, value]) => `${key}: ${value};`).join('\n') : '';
   }}
   
   &:hover {
@@ -704,3 +723,6 @@ export const Spinner = styled.div`
     }
   }
 `;
+
+
+

@@ -4,28 +4,12 @@ import { useStaticQuery, graphql } from "gatsby";
 import { Devices } from "../Responsive";
 import { SessionContext } from "../../session";
 import { H3, H4, Paragraph } from "../Heading";
-import { Colors, Button, Anchor, Link } from "../Styling";
+import { Colors, Button, Anchor, Link, ButtonText } from "../Styling";
 import { Div, Grid } from "../Sections";
 import Icon from "../Icon";
 import { locByLanguage } from "../../actions";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import CustomBar from "../CustomBar";
-
-const ButtonText = styled(H3)`
-  text-align: left;
-  width: fit-content;
-  font-size: 15px;
-  line-height: 22px;
-  font-weight: 400;
-  margin: 10px 5px 0 0;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: ${Colors.black};
-  
-  &:hover {
-    color: ${Colors.blue};
-  }
-`;
 
 const BurgerIcon = (props) => (
   <svg
