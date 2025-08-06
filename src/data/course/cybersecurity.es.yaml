@@ -10,7 +10,7 @@ meta_info:
   keywords: ""
   redirects: []
   related_clusters: ["trends-and-tech"]
-  duration: "P16W"  # 14 weeks duration in ISO 8601 format
+  duration: "P16W"  # 16 weeks duration in ISO 8601 format
 
 apply_form:
   label: Profesional junior en Ciberseguridad
@@ -18,7 +18,7 @@ apply_form:
 seo_title: "Curso de Ciberseguridad"
 header:
   title: "Conviértete en un profesional junior en Ciberseguridad"
-  paragraph: "La demanda de profesionales profesionales junior en el campo de la ciberseguridad se ha disparado en los últimos 6 años, con un aumento del 300% en comparación con el mercado laboral TI en general."
+  paragraph: "Comienza una carrera profesional bien remunerada en uno de los sectores tecnológicos más demandados. Aprende a defender sistemas y a responder a ciberamenazas reales con un plan de estudios práctico e integrado con IA, diseñado por expertos líderes en ciberseguridad y con garantía de empleo."
   image: "../../../static/images/bg/apple-building.jpg"
   image_alt: "apple-building"
 
@@ -189,7 +189,7 @@ details:
         
       list:
         - label: "Duración"
-          content: "14 semanas"
+          content: "16 semanas"
           icon: "duration-icon"
         - label: "Clases"
           content: "3 clases semanales"
@@ -215,7 +215,7 @@ details:
   weeks_label: "semanas"
   facts:
     - label: "Duración"
-      value: "14 semanas"
+      value: "16 semanas"
     - label: "Compromiso"
       value: "20 hrs/sem. (Lun - Mie - Vie)"
     - label: "Certificado"
@@ -226,7 +226,7 @@ details:
     - label: "Horario"
       value: "Online / Remoto"
     - label: "Tamaño Clase"
-      value: "Hasta 14 personas"
+      value: "Hasta 15 personas"
     # - label: "Horas totales"
     #   value: "320"
   sub_heading: "Mejora tus habilidades de Ciberseguridad De Fundamentos a Técnicas Avanzadas"

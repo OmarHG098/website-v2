@@ -15,7 +15,6 @@ import Badges from "../components/Badges";
 import PricesAndPayment from "../components/PricesAndPayment";
 import LeadForm from "../components/LeadForm";
 import Modal from "../components/Modal";
-import ScholarshipProjects from "../components/ScholarshipProjects";
 import TwoColumn from "../components/TwoColumn";
 import OnlyFor from "../components/OnlyFor";
 import Overlaped from "../components/Overlaped";
@@ -192,7 +191,7 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
         <TwoColumn
           left={{
             image: yml.two_columns_first?.image,
-            video: yml.two_columns_first?.video,
+            video: yml.two_columns_first?.video, 
           }}
           right={{
             heading: yml.two_columns_first?.heading,
@@ -264,7 +263,6 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
         right={{
           heading: yml.two_columns?.heading,
           sub_heading: yml.two_columns?.sub_heading,
-          bullets: yml.two_columns?.bullets,
           content: yml.two_columns?.content,
           button: yml.two_columns?.button,
         }}
@@ -286,11 +284,6 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
         defaultCourse={defaultCourse}
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
-      />
-
-      <ScholarshipProjects
-        content={data.allScholarshipProjectsYaml.edges[0].node}
-        lang={pageContext.lang}
       />
 
       <OurPartners
@@ -524,15 +517,27 @@ export const query = graphql`
             heading {
               text
               font_size
+              style
             }
             sub_heading {
               text
               font_size
+              style
             }
             bullets {
+              item_style
               items {
+                heading
                 text
+                icon
               }
+            }
+            button {
+              text
+              color
+              background
+              hover_color
+              path
             }
           }
           two_columns_second {
@@ -560,13 +565,13 @@ export const query = graphql`
           two_columns_first {
             proportions
             available_locations
+            video
             image {
               style
               src
               shadow
               link
             }
-            video
             heading {
               text
               font_size
@@ -616,6 +621,9 @@ export const query = graphql`
               items {
                 text
               }
+            }
+            content {
+              text
             }
           }
           overlaped {
