@@ -21,7 +21,7 @@ meta_info:
     ]
   related_clusters: ["desarrollador-full-stack","trends-and-tech"]
   template: "course-fullstack-ft"
-  duration: "P12W"
+  duration: "P12W"  # 10 weeks duration in ISO 8601 format
 
 apply_form:
   label: Full Stack Developer
@@ -242,6 +242,7 @@ details:
   weeks: 12
   week_unit: "sem"
   sub_heading: "Domina fundamentos de programación como Python, desarrollo front y back con IA, y vibe coding – ingeniería de software con IA para lanzar productos rápido."
+
   left_labels:
     description: "DESCRIPCIÓN:"
     projects: "PROYECTOS:"

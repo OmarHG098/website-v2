@@ -10,7 +10,7 @@ meta_info:
   keywords: ""
   redirects: []
   related_clusters: ["trends-and-tech"]
-  duration: "P14W"  # 14 weeks duration in ISO 8601 format
+  duration: "P16W"  # 14 weeks duration in ISO 8601 format
 
 apply_form:
   label: Cybersecurity
@@ -206,8 +206,9 @@ details:
         icon: "language"
 
   heading: PROGRAM DETAILS
-  weeks: 14
+  weeks: 16
   week_unit: "wks"
+  weeks_label: "weeks"
   facts:
     - label: "Duration"
       value: "14 weeks"
