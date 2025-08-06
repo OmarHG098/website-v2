@@ -66,6 +66,8 @@ const UpcomingDates = ({
               duration_part_time
               duration_full_time
               location_label
+              date
+              action_label
             }
             no_course_message
             footer {
@@ -132,25 +134,28 @@ const UpcomingDates = ({
 
   // Get course data to map durations dynamically
   const courseData = dataQuery.allCourseYaml.edges;
-  
+
   // Helper function to get course duration from course files
   const getCourseDuration = (courseSlug) => {
     const course = courseData.find(({ node }) => {
       const fileName = node.fields.file_name;
       const fileLang = node.fields.lang;
-      
+
       // Extract the base name from the filename (remove .us.yaml or .es.yaml)
-      const baseName = fileName.split('.')[0];
-      
+      const baseName = fileName.split(".")[0];
+
       return baseName === courseSlug && fileLang === lang;
     });
-    
+
     if (course && course.node.details && course.node.details.weeks) {
       const weeks = course.node.details.weeks;
-      const weeksLabel = course.node.details.weeks_label || course.node.details.week_unit || "weeks";
+      const weeksLabel =
+        course.node.details.weeks_label ||
+        course.node.details.week_unit ||
+        "weeks";
       return `${weeks} ${weeksLabel}`;
     }
-    
+
     return null;
   };
 
@@ -205,10 +210,11 @@ const UpcomingDates = ({
         if (syllabus) {
           cohort.syllabus_version.name = syllabus.name;
           cohort.syllabus_version.courseSlug = syllabus.course_slug;
-          
+
           // Get dynamic duration from course files
           const dynamicDuration = getCourseDuration(syllabus.course_slug);
-          cohort.syllabus_version.duration = dynamicDuration || syllabus.duration;
+          cohort.syllabus_version.duration =
+            dynamicDuration || syllabus.duration;
         }
       });
 
@@ -338,6 +344,11 @@ const UpcomingDates = ({
             </Div>
           )}
         </Div>
+        <Div
+          flexDirection="column"
+          alignItems="stretch"
+          width="100%"
+        >
         {isLoading ? (
           <Div margin="30px 0" justifyContent="center">
             <Spinner />
@@ -346,135 +357,131 @@ const UpcomingDates = ({
           <>
             {Array.isArray(data.cohorts.filtered) &&
             data.cohorts.filtered.length > 0 ? (
-              data.cohorts.filtered.map((cohort, i) => {
-                const loc = locations.find(
-                  ({ node }) =>
-                    node.breathecode_location_slug === cohort.academy.slug
-                );
-                return (
-                  i < 4 && (
-                    <Div
-                      key={i}
-                      flexDirection="column"
-                      flexDirection_tablet="row"
-                      style={{ borderBottom: "1px solid black" }}
-                      padding="30px 0"
-                      justifyContent="between"
-                    >
+              <>
+                {/* Header row for consistent alignment */}
+                <Div
+                  flexDirection="column"
+                  flexDirection_tablet="row"
+                  style={{ borderTop: "1px solid black", borderBottom: "2px solid black" }}
+                  padding="15px 0"
+                  justifyContent="between"
+                  alignItems="stretch"
+                  display="none"
+                  display_tablet="flex"
+                >
+                  <Div width_tablet="20%" flexShrink="0">
+                    <H4 textAlign="left" textTransform="uppercase" fontWeight="700">
+                      {content.info.date}
+                    </H4>
+                  </Div>
+                  <Div width_tablet="25%" flexShrink="0">
+                    <H4 textAlign="left" textTransform="uppercase" fontWeight="700">
+                      {content.info.program_label}
+                    </H4>
+                  </Div>
+                  <Div width_tablet="20%" flexShrink="0">
+                    <H4 textAlign="left" textTransform="uppercase" fontWeight="700">
+                      {content.info.location_label}
+                    </H4>
+                  </Div>
+                  <Div width_tablet="15%" flexShrink="0">
+                    <H4 textAlign="left" textTransform="uppercase" fontWeight="700">
+                      {content.info.duration_label}
+                    </H4>
+                  </Div>
+                  <Div width_tablet="20%" flexShrink="0">
+                    <H4 textAlign="left" textTransform="uppercase" fontWeight="700">
+                      {content.info.action_label}
+                    </H4>
+                  </Div>
+                </Div>
+                {data.cohorts.filtered.map((cohort, i) => {
+                  const loc = locations.find(
+                    ({ node }) =>
+                      node.breathecode_location_slug === cohort.academy.slug
+                  );
+                  return (
+                    i < 4 && (
                       <Div
-                        flexDirection_tablet="column"
-                        width_tablet="15%"
-                        alignItems="center"
-                        alignItems_tablet="start"
-                        margin="0 0 10px 0"
-                      >
-                        <H4
-                          textAlign="left"
-                          textTransform="uppercase"
-                          width="fit-content"
-                          margin="0 10px 0 0"
-                          fontWeight="700"
-                          lineHeight="22px"
-                        >
-                          {dayjs(cohort.kickoff_date)
-                            .locale(`${lang === "us" ? "en" : "es"}`)
-                            .format("MMMM")}
-                        </H4>
-                        <Paragraph textAlign="left" fontWeight="700">
-                          {`
-                        ${
-                          lang === "us"
-                            ? dayjs(cohort.kickoff_date)
-                                .locale("en")
-                                .format("MM/DD")
-                            : dayjs(cohort.kickoff_date)
-                                .locale("es")
-                                .format("DD/MM")
-                        } 
-                        ${content.to} 
-                        ${
-                          lang === "us"
-                            ? dayjs(cohort.ending_date)
-                                .locale("en")
-                                .format("MM/DD")
-                            : dayjs(cohort.ending_date)
-                                .locale("es")
-                                .format("DD/MM")
-                        }
-                      `}
-                        </Paragraph>
-                      </Div>
-                      <Div
+                        key={i}
                         flexDirection="column"
-                        width_tablet="calc(35% - 15%)"
-                        margin="0 0 20px 0"
+                        flexDirection_tablet="row"
+                        style={{ borderBottom: "1px solid black" }}
+                        padding="30px 0"
+                        justifyContent="between"
+                        alignItems="stretch"
                       >
-                        <H4 textAlign="left" textTransform="uppercase">
-                          {content.info.program_label}
-                        </H4>
-
-                        <Link
-                          to={
-                            cohort.syllabus_version.courseSlug
-                              ? `/${lang}/coding-bootcamps/${cohort.syllabus_version.courseSlug}`
-                              : ""
+                        <Div
+                          flexDirection_tablet="column"
+                          width_tablet="20%"
+                          alignItems="center"
+                          alignItems_tablet="start"
+                          margin="0 0 10px 0"
+                          flexShrink="0"
+                        >
+                          <H4
+                            textAlign="left"
+                            textTransform="uppercase"
+                            width="fit-content"
+                            margin="0 10px 0 0"
+                            fontWeight="700"
+                            lineHeight="22px"
+                          >
+                            {dayjs(cohort.kickoff_date)
+                              .locale(`${lang === "us" ? "en" : "es"}`)
+                              .format("MMMM")}
+                          </H4>
+                          <Paragraph textAlign="left" fontWeight="700">
+                            {`
+                          ${
+                            lang === "us"
+                              ? dayjs(cohort.kickoff_date)
+                                  .locale("en")
+                                  .format("MM/DD")
+                              : dayjs(cohort.kickoff_date)
+                                  .locale("es")
+                                  .format("DD/MM")
+                          } 
+                          ${content.to} 
+                          ${
+                            lang === "us"
+                              ? dayjs(cohort.ending_date)
+                                  .locale("en")
+                                  .format("MM/DD")
+                              : dayjs(cohort.ending_date)
+                                  .locale("es")
+                                  .format("DD/MM")
                           }
-                        >
-                          <Paragraph textAlign="left" color={Colors.blue}>
-                            {cohort.syllabus_version.name}
+                        `}
                           </Paragraph>
-                        </Link>
-                      </Div>
-                      <Div
-                        flexDirection="column"
-                        display="none"
-                        display_tablet="flex"
-                        minWidth="120px"
-                      >
-                        <H4 textAlign="left" textTransform="uppercase">
-                          {content.info.location_label}
-                        </H4>
-                        <Div>
+                        </Div>
+                        <Div
+                          flexDirection="column"
+                          width_tablet="25%"
+                          margin="0 0 20px 0"
+                          flexShrink="0"
+                          alignItems_tablet="flex-start"
+                        >
                           <Link
                             to={
-                              loc
-                                ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+                              cohort.syllabus_version.courseSlug
+                                ? `/${lang}/coding-bootcamps/${cohort.syllabus_version.courseSlug}`
                                 : ""
                             }
                           >
                             <Paragraph textAlign="left" color={Colors.blue}>
-                              {cohort.academy.city.name === "Remote"
-                                ? content.remote
-                                : `${cohort.academy.city.name} (${content.remote})`}
+                              {cohort.syllabus_version.name}
                             </Paragraph>
                           </Link>
                         </Div>
-                      </Div>
-
-                      <Div
-                        flexDirection="column"
-                        display="none"
-                        display_tablet="flex"
-                      >
-                        <H4 textAlign="left" textTransform="uppercase">
-                          {content.info.duration_label}
-                        </H4>
-                        <Paragraph textAlign="left">
-                          {cohort?.syllabus_version?.duration ||
-                            content.info.duration_weeks}
-                        </Paragraph>
-                      </Div>
-
-                      <Div
-                        display="flex"
-                        display_tablet="none"
-                        justifyContent="between"
-                        margin="0 0 20px 0"
-                      >
-                        <Div flexDirection="column" width="50%">
-                          <H4 textAlign="left" textTransform="uppercase">
-                            {content.info.location_label}
-                          </H4>
+                        <Div
+                          flexDirection="column"
+                          display="none"
+                          display_tablet="flex"
+                          width_tablet="20%"
+                          flexShrink="0"
+                          alignItems_tablet="flex-start"
+                        >
                           <Div>
                             <Link
                               to={
@@ -485,43 +492,91 @@ const UpcomingDates = ({
                             >
                               <Paragraph textAlign="left" color={Colors.blue}>
                                 {cohort.academy.city.name === "Remote"
-                                  ? `${cohort.academy.city.name} ${content.remote}`
-                                  : cohort.academy.city.name}
-                                {cohort.academy.slug !== "online" &&
-                                  cohort.academy.city.name !== "Remote" &&
-                                  ` (${content.remote})`}
+                                  ? content.remote
+                                  : `${cohort.academy.city.name} (${content.remote})`}
                               </Paragraph>
                             </Link>
                           </Div>
                         </Div>
-                        <Div flexDirection="column" width="50%">
-                          <H4 textAlign="left" textTransform="uppercase">
-                            {content.info.duration_label}
-                          </H4>
+
+                        <Div
+                          flexDirection="column"
+                          display="none"
+                          display_tablet="flex"
+                          width_tablet="15%"
+                          flexShrink="0"
+                          alignItems_tablet="flex-start"
+                        >
                           <Paragraph textAlign="left">
                             {cohort?.syllabus_version?.duration ||
                               content.info.duration_weeks}
                           </Paragraph>
                         </Div>
-                      </Div>
 
-                      <Div flexDirection="column">
-                        <Link to={content.info.button_link}>
-                          <Button
-                            variant="full"
-                            width="fit-content"
-                            color={Colors.black}
-                            margin="10px 0"
-                            textColor="white"
-                          >
-                            {buttonText || content.info.button_text}
-                          </Button>
-                        </Link>
+                        <Div
+                          display="flex"
+                          display_tablet="none"
+                          justifyContent="between"
+                          margin="0 0 20px 0"
+                          width="100%"
+                        >
+                          <Div flexDirection="column" width="50%">
+                            <H4 textAlign="left" textTransform="uppercase">
+                              {content.info.location_label}
+                            </H4>
+                            <Div>
+                              <Link
+                                to={
+                                  loc
+                                    ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+                                    : ""
+                                }
+                              >
+                                <Paragraph textAlign="left" color={Colors.blue}>
+                                  {cohort.academy.city.name === "Remote"
+                                    ? `${cohort.academy.city.name} ${content.remote}`
+                                    : cohort.academy.city.name}
+                                  {cohort.academy.slug !== "online" &&
+                                    cohort.academy.city.name !== "Remote" &&
+                                    ` (${content.remote})`}
+                                </Paragraph>
+                              </Link>
+                            </Div>
+                          </Div>
+                          <Div flexDirection="column" width="50%">
+                            <H4 textAlign="left" textTransform="uppercase">
+                              {content.info.duration_label}
+                            </H4>
+                            <Paragraph textAlign="left">
+                              {cohort?.syllabus_version?.duration ||
+                                content.info.duration_weeks}
+                            </Paragraph>
+                          </Div>
+                        </Div>
+
+                        <Div 
+                          flexDirection="column" 
+                          width_tablet="20%" 
+                          flexShrink="0"
+                          alignItems_tablet="flex-start"
+                        >
+                          <Link to={content.info.button_link}>
+                            <Button
+                              variant="full"
+                              width="fit-content"
+                              color={Colors.black}
+                              margin="0"
+                              textColor="white"
+                            >
+                              {buttonText || content.info.button_text}
+                            </Button>
+                          </Link>
+                        </Div>
                       </Div>
-                    </Div>
-                  )
-                );
-              })
+                    )
+                  );
+                })}
+              </>
             ) : (
               <>
                 <Div
@@ -703,6 +758,7 @@ const UpcomingDates = ({
               )}
           </>
         )}
+        </Div>
       </Div>
     </GridContainer>
   );

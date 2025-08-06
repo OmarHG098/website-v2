@@ -33,10 +33,11 @@ email_form_content:
 online_bootcamp: "/us/coding-campus/online-coding-bootcamp"
 
 info:
-  date:
+  date: date
   program_label: program
   location_label: location
   duration_label: duration
+  action_label: action
   duration_weeks: 18 weeks
   duration_part_time: 18 weeks
   duration_full_time: 9 weeks
