@@ -252,12 +252,6 @@ details:
   week_unit: "wks"
   sub_heading: "Master programming fundamentals like Python, hands-on front end and backend development with AI, \nplus vibe coding – AI-driven software engineering for fast track product launches."
   weeks_label: "weeks"
-
-left_labels:
-    description: "DESCRIPTION:"
-    projects: "PROJECTS:"
-    duration: "DURATION:"
-    skills: "Skills / Weeks:"
   details_modules:
     - module_name: "PREWORK"
       title: "Prework"
@@ -294,6 +288,12 @@ left_labels:
       slug: "lifelong-learning"
       duration: "forever"
       step: 1
+
+left_labels:
+    description: "DESCRIPTION:"
+    projects: "PROJECTS:"
+    duration: "DURATION:"
+    skills: "Skills / Weeks:"
 
 syllabus:
   heading: Get all the information about the syllabus
