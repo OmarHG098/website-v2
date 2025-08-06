@@ -10,9 +10,7 @@ navbar:
         - title: "Full Stack with AI"
           level: " "
           icon: "fullstack_2"
-
-          paragraph: "Become a Full Stack developer using Cursor, Vercel v0, and other AI tools. Master in-demand AI skills. Land a job as a developer."
-
+          paragraph: "Become a Full Stack developer using AI tools like Cursor and Vercel v0. Master in-demand AI skills and land a job as a developer."
           buttons:
             - text: "Part-time"
               link: "/us/coding-bootcamps/part-time-full-stack-developer"
@@ -22,7 +20,7 @@ navbar:
         - title: "Data Science and ML"
           level: " "
           icon: "machine_2"
-          paragraph: "Learn Python to collect and manage data. Create models and solve problems using Machine Learning, Deep Learning and AI."
+          paragraph: "Learn Python to collect, manage and analyze data. Create powerful models and solve problems using Machine Learning and AI techniques."
           buttons:
             - text: "Part-time"
               link: "/us/coding-bootcamps/datascience-machine-learning"
@@ -30,7 +28,7 @@ navbar:
         - title: "Cybersecurity"
           level: " "
           icon: "cyber-security"
-          paragraph: "Become a cybersecurity specialist, equipped to identify, manage, and mitigate system vulnerabilities, aligned with ISO and other standards."
+          paragraph: "Become a cybersecurity specialist, equipped to identify and mitigate system vulnerabilities, aligned with ISO and other standards."
           buttons:
             - text: "Part-time"
               link: "/us/coding-bootcamps/cybersecurity"
@@ -110,7 +108,7 @@ navbar:
       paragraph: "Learn in-person or choose a fully-remote program. Enroll and become part of a global coding community."
       width: "550px"
       links:
-        - title: "USA & CANADA"
+        - title: "US & CANADA"
           content: "Join our US campuses for in-person or hybrid learning"
           sub_links:
             - title: "Miami, USA"

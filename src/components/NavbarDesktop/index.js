@@ -382,6 +382,11 @@ const CampusMenu = ({ status, setStatus, menu }) => {
                     : null
                 }
                 padding="10px"
+                style={{
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
                 onClick={() => {
                   setActiveOpt({ ...m });
                 }}

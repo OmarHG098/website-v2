@@ -475,7 +475,7 @@ export const ButtonText = styled.h3`
   transition: all 0.3s ease;
   color: ${Colors.black};
   font-family: "Lato", sans-serif;
-  
+
   &:hover {
     color: ${Colors.blue};
   }
@@ -521,16 +521,24 @@ export const Button = styled(SmartButton)`
   justify-content: ${(props) => props.justifyContent};
   box-shadow: ${(props) => props.boxShadow};
   transition: ${(props) => props.transition || "all 0.3s ease"};
-  
+
   /* Apply variant styles */
   ${(props) => {
     const styles = getVariant(props)[props.variant];
-    return styles ? Object.entries(styles).map(([key, value]) => `${key}: ${value};`).join('\n') : '';
+    return styles
+      ? Object.entries(styles)
+          .map(([key, value]) => `${key}: ${value};`)
+          .join("\n")
+      : "";
   }}
-  
+
   &:hover {
-    background-color: ${(props) => props.colorHover || (props.variant === 'outline' ? props.color : props.color)};
-    color: ${(props) => props.colorHoverText || (props.variant === 'outline' ? 'white' : props.textColor || 'white')};
+    background-color: ${(props) =>
+      props.colorHover ||
+      (props.variant === "outline" ? props.color : props.color)};
+    color: ${(props) =>
+      props.colorHoverText ||
+      (props.variant === "outline" ? "white" : props.textColor || "white")};
   }
   @media ${Devices.xxs} {
     padding: ${(props) => props.padding_xxs};
@@ -723,6 +731,3 @@ export const Spinner = styled.div`
     }
   }
 `;
-
-
-
