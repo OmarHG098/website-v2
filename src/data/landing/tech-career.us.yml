@@ -42,8 +42,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: Start a <br>tech career <br>in record time
-  sub_heading: "Professionals are in high demand, with entry-level salaries around $90,000 waiting for you!"
+  tagline: Tech Careers<br> Are Booming in Florida.  <br>We’re here to get you in.
+  sub_heading: " "
   tagline_color: "#1c1c1c"
   form_styles:
     background: "#0084FF"
@@ -51,7 +51,7 @@ header_data:
     button:
       background: "black"
   # background_image: "../../../static/images/landing-background-men-w-laptop.webp"
-  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  badge: "../../../static/images/badges/course-report-best-coding-bootcamps-badge-2025.png"
   image_filter: brightness(0.9)
 
 features:
@@ -60,9 +60,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
   bullets:
-    - Become a Full-Stack Developer, Data Scientist, Machine Learning Engineer or Cybersecurity Specialist!
+    - Become an AI-fluent Full-Stack Developer, Data Scientist, Machine Learning Engineer or Cybersecurity Specialist!
     - Affordable tuition and unbeatable financing plans
-    - Unlimited mentorship and career support to ensure your success
+    - Unlimited mentorship and 1:1 career support to help you succeed. For life!
     # - "Part-time: Immerse yourself in a flexible schedule, perfect for busy professionals and students."
 
 short_badges:
@@ -110,7 +110,7 @@ follow_bar:
 rating_reviews:
   background: "#FBFBFB"
   position: 4
-  heading: "Top rated on all available review sites"
+  heading: "Consistently Ranked Among the Best by SwitchUp, Forbes and More"
   rating_list:
     - alt: "Career Karma"
       image: "../../../static/images/badges/career-karma.png"
@@ -154,11 +154,11 @@ who_is_hiring:
   position: 9
   limit: 4
   heading: "Who is hiring our students?"
-  sub_heading: "550+ hiring partners, and 50+ job openings right now for software development"
+  sub_heading: "Top companies in Florida and beyond are hiring 4Geeks graduates—because they’re job-ready, AI-fluent, and trained in the skills that matter."
 
 why_4geeks:
   position: 6
-  heading: "Why 4Geeks Academy"
+  heading: "Student Stories: How 4Geeks Helped Launch Their Tech Careers"
   sub_heading: ""
 
 
@@ -177,165 +177,176 @@ components:
       style: '{ "textAlign": "center", "width": "60%" }'
     icons:
       - icon: "fullstack"
-        title: "Full Stack Development"
-        content: "Become a Full Stack software developer using Python, React, and Javascript. Master the most sought-after- skills and land a job as a developer."
-
+        title: "Full Stack Development with AI"
+        content: "Become an AI-fluent Full Stack Developer using tools like Cursor, Vercel v0, and more. Master the most sought-after skills and land a job as a developer."
       - icon: "machine"
-        title: "DATA SCIENCE AND MACHINE LEARNING"
+        title: "Data Science and Machine Learning"
         content: "Acquire the skills to analyze complex data and leverage machine learning techniques to automate decision-making and uncover actionable insights."
-
       - icon: "cibersecurity"
-        title: "CyberSecurity Bootcamp"
+        title: "Cybersecurity"
         content: "Become a cybersecurity specialist, equipped to identify, manage, and mitigate system vulnerabilities in compliance with ISO and other standards."
-
+    button:
+      text: "Get More Information"
+      color: "white"
+      background: "black"
+      hover_color: "white"
+      path: "#leadform_header"
 
   - name: why_choose-4geeks
     position: 2
+    layout: two_column_right
     proportions: [6, 6]
-    layout: two_column_left
+    background: "#FFFFFF"
+    justify: "center" #start,end,center
     image:
-      style: '{ "backgroundSize": "contain"}'
+      style: '{ "backgroundSize": "contain", "background-position": "center", "margin": "10px" }'
       src: "/images/landing/blonde-girl-laptop.png"
-      shadow: false
-    # video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
     heading:
-      text: "Why Choose Our Coding Courses?"
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "34px", "34px", "25px", "20px"]
+      text: |-
+        What Sets 4Geeks Apart: 
+        AI-Forward Skills, Unlimited Mentorship and Career Support
+      font_size: ["38px", "34px", "34px", "34px", "34px"]
+      style: '{ "font-weight": "600", "text-align": "center", "color": "#000", "padding": "10px" }'
     sub_heading:
-      text: ""
-    content:
-      text: "Our programs are designed to accelerate your learning and ensure your success. Backed by years of research and experience, our teaching methods use a blend of personalized mentorship, hands-on practice, and continuous micro-feedback to keep you motivated and actively engaged in the learning process. \n
-        At 4Geeks Academy, you’ll benefit from a comprehensive support system. Our mentorship and career services offer unlimited 1-on-1 sessions with our industry experts, providing personalized guidance whenever you need it. With instant feedback on your coding exercises from our proprietary AI and 24/7 support through our active community channels, you’re never left to figure things out on your own.\n
-        Many students face self-doubt about succeeding in tech, but we’re here to build your confidence and teach you that mistakes—lots of them—are a natural and essential part of learning. Our curriculum, tools, and exercises are grounded in real-world workplace demands, ensuring that you graduate career-ready and prepared to thrive in the tech industry."
-      font_size: ["16px"]
+      text: "Everything You Need to Launch and Grow a Career in Tech"
+      font_size: ["26px", "26px", "24px", "24px", "22px"]
+      style: '{ "font-weight": "600", "text-align": "justify", "color": "#000", "padding": "10px"}'
+    bullets:
+      item_style: '{ "padding": "0 0 0 10px", "font-weight": "100" }'
+      items:
+        - heading: "Get ahead of the curve with next-gen tech skills."
+          text: "Master industry-relevant, AI-powered tools guided by a cutting-edge curriculum."
+          icon: "check"
+        - heading: "Access unlimited mentorship and career support."
+          text: "No need to learn alone — get 1:1 support from expert human mentors whenever you need it, for life."
+          icon: "check"
+        - heading: "Enjoy hyperpersonalized learning, at every level."
+          text: "Move faster and smarter with AI-powered feedback tailored to your journey, plus an unmatched student-to-teacher ratio."
+          icon: "check"
+        - heading: "Join an active tech community."
+          text: "Stay connected and supported through our Slack channels — with peers, mentors, and alumni ready to help you grow."
+          icon: "check"
     button:
-      text: "Get More Info"
-      background: black
-      color: white
-      hover_color: "#white"
+      text: "Learn More"
+      color: "white"
+      background: "black"
+      hover_color: "white"
       path: "#leadform_header"
 
   # Two Columns - Rigo
   - name: two_columns_rigo
-    position: 7
+    position: 4
     layout: two_column_right
     proportions: [7, 5]
-    background: "#FFFFFF"
     justify: "center" #start,end,center
     image:
-      style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "/images/landing/rigobot-section.webp"
-      shadow: false
+      style: '{"backgroundSize": "contain", "background-position": "center", "border" : "10px solid black", "border-radius": "4px"}'
+      src: "/images/landing/ai-mentor.jpg"
+      shadow: true
+    video: "6m1Jyya7eCc"
     heading: 
-      text: "Our AI-powered features make all the difference!"
+      text: "Welcome to Hyperpersonalized Learning"
       font_size: ["33px", "33px", "33px", "33px", "33px"]
       style: '{ "lineHeight": "30px" }'
       heading_image:
         src: "/images/rigobot-logo.png"
     sub_heading:
-      text: "Through years of research and experience, we've perfected the strategies and tools to ensure your constant and efficient progress. To optimize your learning curve and empower you to tackle challenges with confidence, we've now incorporated the power of AI."
+      text: "Progress Like Never Before"
       font_size: ["16px","16px","16px","16px","16px"]
-      style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300" }'
     content:
-      style: '{ "font-size":"16px", "margin":"15px 0"}'
-      text: "Experience the difference our AI-powered features make. Our tried-and-tested approach keeps you engaged, motivated, and on the fast track to achieving your coding goals!"
-    bullets:
+      style: '{ "font-size":"16px", "margin":"15px 0" }'
+      text: |
+        <p>We're all different—yet education has always been one-size-fits-all. At 4Geeks, we've built a better way to learn: <strong style="text-decoration: none; color: #000000; font-weight: 700;">one that adapts to you.</strong></p>
+        <br />
+        <ul>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700; ">✓ Our custom-built AI</strong>, Rigobot, tracks your activity and identifies your strengths, struggles, and gaps—delivering real-time feedback tailored to maximize your learning.</li>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Unlimited 1:1 sessions with expert mentors</strong> give you live human support whenever you need it—so you never get stuck or lose momentum.</li>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Career coaches work with you individually</strong> to build your confidence and strategy—helping you stand out on paper, in interviews, and on AI-filtered platforms like ATS systems and LinkedIn.</li>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ 1:7 teacher-student ratio in live classes</strong> means you get real attention—so your questions get answered and your learning stays on track.</li>
+        </ul>
+        <br />
+        <p>That's the power of hyperpersonalized learning: you move faster, learn smarter, and gain the kind of real confidence that lasts beyond graduation.</p>
+      bullets:
       item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
       items:
         - heading: "Meet Rigobot, our AI coding assistant:"
           text: |
-            • Instant tutoring as you code.
+            ✓ Instant tutoring as you code.
             <br />
-            • Skill evaluations to track your progress.
+            ✓ Skill evaluations to track your progress.
             <br />
-            • Expert bug fixing assistance.
+            ✓ Expert bug fixing assistance.
             <br /><br />
-            It perfectly complements our human mentorship program!
+             It perfectly complements our human mentorship program!
           icon: "check" #string with icon for example ['check', 'cicle', etc]
           icon_color: '#25BF6C'
         - heading: "Learnpack, our interactive learning software, provides:"
           text: |
-            • There are hundreds of interactive exercises to help you master and retain skills.
-            <br />
-            • Automated tests to help track your progress.
-            <br />
-            • Structured practice.
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-          icon_color: '#25BF6C'
+             ✓ There are hundreds of interactive exercises to help you master and retain skills.
+             <br />
+             ✓ Automated tests to help track your progress.
+             <br />
+             ✓ Structured practice.
+             <br />
 
-  - name: geekinfo_2
-    position: 4
-    layout: two_column_right
-    proportions: [6, 6]
-    background: ""
-    image:
-      style: '{ "backgroundSize": "contain"}'
-      src: "/images/landing/meet-windows-group-en.webp"
-      shadow: false
-    section_heading:
-      text: ""
-      style: '{ "font-size": "30px" }'
+
+  - name: how-it-works
+    position: 6
+    background: "#0084FF"
+    layout: iconogram
+    swipable: true
     heading:
-      text: "The Unique Features That Set Us Apart"
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+      text: "Do our Bootcamps Deliver Results You Can Count On?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "color": "white" }'
     sub_heading:
-      text: ""
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-    button:
-      text: "Get More Info"
-      color: white
-      hover_color: "black"
-      background: "black"
-      hover: "blue"
-      path: "#leadform_bottom"
-    content:
-      text: ""
-      font_size: ["16px"]
-      path: ""
-    bullets:
-      items:
-        - heading: "STUDENT-CENTRIC APPROACH"
-          text: "Small classes and 1:1 mentorship ensure personalized attention for each student."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "INDUSTRY-DRIVEN CURRICULUM"
-          text: "Courses designed to meet the demands of today’s tech employers."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "LIFELONG CAREER SUPPORT"
-          text: "Extensive alumni network and career services that continue beyond graduation."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "HANDS-ON LEARNING"
-          text: "Practical experience through project-based learning and real-world scenarios."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
+      text: 'Yes — and we’ve got the numbers to back it up.'
+      font_size: ["20px", "20px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%", "color": "white"}'      
+    icons:
+      - icon: "graduation-2"
+        color: "#0084FF"
+        title: "Job Placement Rate"
+        content: "84% of graduates were hired"
+      - icon: "briefcase-2"
+        color: "#FF0000"
+        title: "Avergage time to get hired"
+        content: "140 days after graduation"
+      - icon: "stairswflag"
+        color: "#BE8BFF"
+        title: "Salary Increase"
+        content: "55% increase after graduation"
 
   - name: some_id
     position: 7
     layout: two_column_left
+    proportions: [6, 6]
+    justify: "center"
     image:
-      style: '{"border": "3px solid black"}'
-      src: "/images/landing/alissa-video.webp"
-      shadow: true
-    video: "EcqasocRKHo"
+     style: '{ "backgroundSize": "contain", "height": ["500px", "500px", "500px", "500px", "300px"], "minHeight": "auto" }'
+     src: "/images/landing/feliz-empresario-laptop-3.png"
+     shadow: false
+    section_heading:
+     text: "Finance your future"
     heading:
-      text: "Join our bootcamp with one of our financing plans and access award-winning coding education without straining your finances"
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "34px", "34px", "25px", "20px"]
+     text: "Invest in your Career with Flexible Payment Plans and a Job Guarantee"
+     style: '{ "fontWeight": 200, "marginBottom": "24px", "marginTop": "0px", "fontSize": "22px" }'
     content:
-      text: "Based on years of research and experience, we've perfected the method and tools to optimize your learning curve and overall success rate. Listen to our campus manager Alissa as she explains the features that will keep you engaged, motivated, and on track to achieve your career goals."
-      font_size: ["16px"]
+     text: |
+       <p>We want you to focus on what matters: learning, growing, and launching your tech career—not stressing about how to pay for it.</p>
+       <br/>
+       <p> That's why we make financing your education as simple and flexible as possible:</p>
+       <br/>
+       <ul>
+         <li>✓ Among the most affordable tuitions for a top bootcamp</li>
+         <li>✓ Payment plans starting under $299/month</li>
+         <li>✓ Job Guarantee available (with qualifying terms)</li>
+       </ul>
+       <br/>
+       <p>And if you need one more reason to feel confident: In 2024, <strong style="text-decoration: none; color: #000000; font-weight: 700;">Forbes</strong> named us the <a href="https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition" style="text-decoration: none; color: #000000; font-weight: 700;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">best bootcamp for students on a budget<span style="font-size: 0.8em;">↗</span></a>—recognizing our commitment to keeping tech education accessible.</p>
+       <p><strong style="text-decoration: none; color: #000000; font-weight: 700;">Have questions?</strong> Our admissions team will help you find your best-fit financing plan.</p>
     button:
-      text: "Get More Info"
-      background: black
-      color: white
-      hover_color: "#white"
-      path: "#leadform_header"
-    # bullets:
-    #   items:
-    #     - text: "Lifelong and readily available coding mentorship"
-    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
-    #     - text: "Unlimited and personalized career support"
-    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
-    #     - text: "Award-winning syllabus and methodology"
-    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
-    #     - text: "An extensive network of partners in tech"
-    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+     text: "GET IN TOUCH"
+     color: "white"
+     background: "blue"
+     path: "#leadform_bottom"
