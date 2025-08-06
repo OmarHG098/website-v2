@@ -258,7 +258,7 @@ left_labels:
     projects: "PROJECTS:"
     duration: "DURATION:"
     skills: "Skills / Weeks:"
-  details_modules:
+    details_modules:
     - module_name: "PREWORK"
       title: "Prework"
       description: "Starting with the basics: HTML5 + CSS3 + Javascript. We review the basics of coding and make sure we are all on the same page."
