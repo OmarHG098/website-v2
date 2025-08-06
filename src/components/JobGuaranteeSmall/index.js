@@ -4,7 +4,7 @@ import { Div } from "../Sections";
 import { Colors, Anchor } from "../Styling";
 import IconsBanner from "../IconsBanner";
 
-const JobGuaranteeSmall = ({ content }) => {
+const JobGuaranteeSmall = ({ content, customTitle }) => {
   return (
     <Div
       display="block"
@@ -16,14 +16,14 @@ const JobGuaranteeSmall = ({ content }) => {
       width="100%"
       background="#F4F9FF"
     >
-      {content.title && (
+      {(customTitle || content.title) && (
         <H2
           type="h2"
           maxWidth="1280px"
           margin="0 auto"
           style={{ textAlign: "center" }} // Centramos el texto
         >
-          {content.title}
+          {customTitle || content.title}
         </H2>
       )}
 

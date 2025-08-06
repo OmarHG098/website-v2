@@ -1,12 +1,10 @@
-heading: "APRENDE EN LÍNEA O EN PERSONA — SIEMPRE EN VIVO. SIEMPRE APOYADO."
-sub_heading: "Elige el formato que se adapte a tu vida—nuestros programas en línea y presenciales ofrecen clases en vivo dirigidas por instructores, mentoría 1:1 y colaboración con una cohorte real de compañeros. Únete a sesiones de programación en vivo, construye proyectos juntos y mantente conectado a través de Slack y revisiones semanales—sin importar desde dónde estés aprendiendo."
-title_image: "Online, Híbrido o Presencial."
+heading: "SEDES: EN LÍNEA O EN PERSONA"
+sub_heading: "Sea online o presencial, tendrás una interacción real e instantánea con tus profesores, mentores y compañeros de clase para trabajar en ejercicios o proyectos y tendrás acceso a materiales, conferencias y todo lo que necesitas para convertirte en un profesional de la programación."
+title_image: "Online, o Presencial."
 title: "Nuestros programas son"
 highlighted_text:
   - text: Online,
     color: "#0084FF"
-  - text: Híbrido
-    color: "#FFB718"
   - text: o
     color: "#000000"
   - text: <br/>Presencial
