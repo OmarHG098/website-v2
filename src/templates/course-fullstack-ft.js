@@ -20,6 +20,8 @@ import Overlaped from "../components/Overlaped/index.js";
 import Loc from "../components/Loc/index.js";
 import ScholarshipProjects from "../components/ScholarshipProjects/index.js";
 import TwoColumn from "../components/TwoColumn/index.js";
+import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
+import Iconogram from "../components/Iconogram/index.js";
 
 const Program = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -178,6 +180,7 @@ const Program = ({ data, pageContext, yml }) => {
       </Header>
       <JobGuaranteeSmall
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
+        customTitle="Built-In Job Guarantee — No Extra Cost, Just Extra Confidence"
       />
       <ProgramDetails
         details={courseDetails.details}
@@ -189,7 +192,23 @@ const Program = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         course={program_schedule}
       />
-
+      {/* Two Columns Rigo */}
+      <TwoColumn
+        right={{
+          image: yml.two_columns_rigo?.image,
+          video: yml.two_columns_rigo?.video,
+        }}
+        left={{
+          heading: yml.two_columns_rigo?.heading,
+          heading_image: yml.two_columns_rigo?.heading_image,
+          sub_heading: yml.two_columns_rigo?.sub_heading,
+          bullets: yml.two_columns_rigo?.bullets,
+          content: yml.two_columns_rigo?.content,
+          button: yml.two_columns_rigo?.button,
+        }}
+        proportions={yml.two_columns_rigo?.proportions}
+        session={session}
+      />
       {/* OVERLAPED CREAR EN EL YML*/}
       <Overlaped
         heading={yml.overlaped?.heading}
@@ -198,20 +217,43 @@ const Program = ({ data, pageContext, yml }) => {
         image={yml.overlaped?.image}
       />
 
-      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
-      <GeeksInfo lang={pageContext.lang} />
-
-      {/* TWO COLUMN CREAR EN EL YML*/}
       <TwoColumn
-        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
         right={{
-          heading: yml.two_columns?.heading,
-          sub_heading: yml.two_columns?.sub_heading,
-          bullets: yml.two_columns?.bullets,
-          content: yml.two_columns?.content,
-          button: yml.two_columns?.button,
+          image: yml.two_column_geek?.image,
         }}
-        proportions={yml.two_columns?.proportions}
+        left={{
+          heading: yml.two_column_geek?.heading,
+          sub_heading: yml.two_column_geek?.sub_heading,
+          bullets: yml.two_column_geek?.bullets,
+          button: yml.two_column_geek?.button,
+        }}
+        proportions={yml.two_column_geek?.proportions}
+        session={session}
+      />
+
+      {/* How It Works */}
+      <Iconogram
+        yml={{
+          ...yml.how_it_works,
+          background: "#0084FF",
+        }}
+        index={0}
+        style={{ background: "#0084FF" }}
+      />
+
+      {/* Why 4Geeks */}
+      <TwoColumn
+        left={{
+          image: yml.why_4geeks_job_guarantee?.image,
+        }}
+        right={{
+          heading: yml.why_4geeks_job_guarantee?.heading,
+          sub_heading: yml.why_4geeks_job_guarantee?.sub_heading,
+          content: yml.why_4geeks_job_guarantee?.content,
+          bullets: yml.why_4geeks_job_guarantee?.bullets,
+          button: yml.why_4geeks_job_guarantee?.button,
+        }}
+        proportions={yml.why_4geeks_job_guarantee?.proportions}
         session={session}
       />
 
@@ -233,9 +275,8 @@ const Program = ({ data, pageContext, yml }) => {
         paragraph={yml.prices.sub_heading}
       />
 
-      <ScholarshipProjects
-        content={data.allScholarshipProjectsYaml.edges[0].node}
-        lang={pageContext.lang}
+      <ScholarshipSuccessCases
+        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
 
       {/*<OurPartners images={hiring.partners.images} marquee/>*/}
@@ -439,6 +480,58 @@ export const query = graphql`
               src
             }
           }
+          how_it_works {
+            background
+            heading {
+              text
+              font_size
+              style
+            }
+            sub_heading {
+              text
+              font_size
+              style
+            }
+            icons {
+              icon
+              color
+              title
+              content
+            }
+          }
+          why_4geeks_job_guarantee {
+            proportions
+            image {
+              style
+              src
+            }
+            heading {
+              text
+              font_size
+              style
+            }
+            sub_heading {
+              text
+              font_size
+              style
+            }
+            content {
+              text
+            }
+            bullets {
+              items {
+                text
+              }
+            }
+            button {
+              text
+              color
+              background
+              hover_color
+              path
+              style
+            }
+          }
           two_columns {
             proportions
             image {
@@ -467,6 +560,75 @@ export const query = graphql`
               }
             }
           }
+
+          two_columns_rigo {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            video
+            heading {
+              text
+              font_size
+              style
+              heading_image {
+                src
+              }
+            }
+            sub_heading {
+              text
+              font_size
+              style
+            }
+            content {
+              text
+              style
+            }
+            bullets {
+              items {
+                heading
+                text
+                icon
+                icon_color
+              }
+            }
+          }
+
+          two_column_geek {
+            proportions
+            image {
+              style
+              src
+            }
+            heading {
+              text
+              font_size
+              style
+            }
+            sub_heading {
+              text
+              font_size
+              style
+            }
+            bullets {
+              item_style
+              items {
+                heading
+                text
+                icon
+              }
+            }
+            button {
+              text
+              color
+              background
+              hover_color
+              path
+            }
+          }
+
           prices {
             heading
             sub_heading
@@ -703,6 +865,38 @@ export const query = graphql`
             }
             tagline
             sub_heading
+          }
+        }
+      }
+    }
+    allScholarshipSuccessCasesYaml(
+      filter: { fields: { lang: { eq: $lang } } }
+    ) {
+      edges {
+        node {
+          title
+          contributor
+          cases {
+            name
+            img {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 700
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  breakpoints: [200, 340, 520, 890]
+                )
+              }
+            }
+            status
+            country {
+              iso
+              name
+            }
+            contributor
+            description
+            achievement
           }
         }
       }

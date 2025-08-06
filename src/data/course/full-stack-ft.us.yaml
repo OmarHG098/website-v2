@@ -1,10 +1,10 @@
 meta_info:
   slug: full-time-full-stack-developer   #<----URL: https://4geeksacademy.com/us/coding-bootcamps/full-time-full-stack-developer
-  title: "Full Stack Developer studying full-time for 10 weeks."
-  description: "Become a Full Stack Developer in just 10 weeks. Study full-time to accelerate your learning and change your life as quickly as possible." 
+  title: "Full Stack Developer studying full-time for 12 weeks."
+  description: "Become a Full Stack Developer in just 12 weeks. Study full-time to accelerate your learning and change your life as quickly as possible." 
   image: "/images/og-preview/full-stack-ft.us.png"
   bc_slug: "full-stack-ft"
-  visibility: "unlisted"
+  visibility: "visible"
   keywords: "Full Sack Developer Full-Time"
   show_in_apply: false
   redirects:
@@ -26,12 +26,12 @@ meta_info:
 apply_form:
   label: Full Stack Developer
   
-seo_title: "Cooding Bootcamp"
+seo_title: "Online and In-Person Full Stack Development with AI Bootcamp"
 header:
-  title: "Full Stack Developer"
+  title: "Full Stack Development \nwith AI"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "FullStack"
-  paragraph: "From zero to getting paid as a developer, learn the skills of the present and future. \n Boost your professional career and get hired by a tech company."
+  paragraph: "Become an AI-fluent Full Stack Developer in just 12 weeks—with full-time training that fast-tracks your progress. Get hands-on experience, a cutting-edge AI-integrated curriculum, unlimited personalized mentorship, and a job guarantee to back it all up."
 
 button:
   syllabus_heading: "Download Syllabus"
@@ -46,7 +46,7 @@ course_instructors:
     paragraph: ""
 
 badges:
-  paragraph: "4Geeks Academy only focuses in coding skills, the defacto <a href='/us/coding-bootcamp'>coding bootcamp</a>. We are licensed by the USA F. Dep. of Education. Chosen as one of the top 35 bootcamps of the world and top coding bootcamp in Miami according to SwitchUp. Recognized as the top 10 coding bootcamps in the United States according to Newsweek.."
+  paragraph: "Prepare to thrive in today's AI-powered tech industry with hyperpersonalized learning, unlimited 1:1 mentorship, and career support for life. Recognized by Course Report as one of the world's top <a href='/us/coding-bootcamp'>coding bootcamps</a>, chosen by Forbes as best bootcamp for students on a budget (2024), and rated 4.9/5 on SwitchUp. Licensed by the Florida Department of Education."
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"
@@ -56,16 +56,143 @@ credentials:
   heading: "This Program By The Numbers"
   paragraph: "Our results speak for themselves"
 
+# Two Columns - Rigo
+two_columns_rigo:
+  proportions: [7, 5]
+  background: "#FFFFFF"
+  justify: "center" #start,end,center
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    src: "/images/landing/ai-mentor.jpg"
+    shadow: true
+  video: "6m1Jyya7eCc"
+  heading: 
+    text: "Learn AI-powered Full Stack Development Faster — With Hyper-Personalized Support That Adapts to You"
+    font_size: ["33px", "33px", "33px", "33px", "33px"]
+    style: '{ "lineHeight": "30px" }'
+    heading_image:
+      src: "/images/rigobot-logo.png"
+  sub_heading:
+    text: "In-person instruction, unlimited mentorship, and AI tools built for smarter, faster progress."
+    font_size: ["24px","24px","22px","22px","20px"]
+    style: '{"margin":"0", "font-weight":"300", "text-align": "justify" }'
+  content:
+    style: '{ "font-size":"18px", "margin":"0"}'
+    text: "With the combined support of our human mentors and AI tools, you'll master AI-integrated full stack development faster, smarter, and with more confidence than ever."
+  bullets:
+    item_style: '{"font-weight": "100", "margin":"0", "font-size":"18px" }'
+    items:
+      - heading: ""
+        text: |
+          • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Rigobot</strong>, our custom-built <strong style="text-decoration: none; color: #000000; font-weight: 700;">AI coding assistant</strong>, follows your progress and gives tailored feedback exactly when and how  you need it.
+          <br>
+          <br>
+          • Get unmatched personal attention with our <strong style="text-decoration: none; color: #000000; font-weight: 700;">7:1 student teacher ratio</strong>, plus <strong style="text-decoration: none; color: #000000; font-weight: 700;">unlimited access to 1:1 sessions</strong> with our expert mentors and career coaches.
+          <br>
 # OVERLAPED
 overlaped:
-  heading: "Why learning Python and Javascript is essential"
-  paragraph: "Programming in Python and JavaScript offers some of the highest-paid career opportunities in the US. There are currently over 26 times more job opportunities in JavaScript compared to Ruby on Rails, and 10 times more jobs in Python compared to node.js. According to Indeed, Python and JavaScript developers enjoy average salaries exceeding $110k."
+  heading: "Why learning Vibe Coding is essential"
+  subtitle: "Get ahead with AI-powered development that’s reshaping how software is built—and what modern teams expect."
+  paragraph: 'Vibe Coding—where you give high-level prompts and let AI generate the code—is the cutting edge of development. Popularized by Andrej Karpathy and now gaining traction, it helps you build apps up to 4× faster using tools like  <strong style="text-decoration: none; color: #000000; font-weight: 700;">Cursor</strong> and <strong style="text-decoration: none; color: #000000; font-weight: 700;">Vercel v0</strong>. As AI transforms tech, companies are hiring developers who know how to leverage it. Learning Vibe Coding gives you a clear edge—and keeps your skills future-ready.'
   button:
     text: "LEARN MORE"
-    color: "blue"
-    link: "/"  
+    color: "blue"  
+    link: "/"
   image:
-    src: "/images/landing/tres-personas-reloaded.webp"
+    src: "/images/landing/Group-6626.webp" 
+
+
+two_column_geek:
+  proportions: [5, 7]
+  image:
+    style: '{ "backgroundSize": "contain", "background-position": "center", "margin": "10px" }'
+    src: "/images/landing/feliz-empresario-laptop-3.png"
+  heading:
+    text: |-
+      What Sets 4Geeks Apart: 
+      AI-Forward Skills, Unlimited Mentorship and Career Support
+    font_size: ["38px", "34px", "34px", "34px", "34px"]
+    style: '{ "font-weight": "400", "text-align": "center", "color": "#000", "padding": "10px" }'
+  sub_heading:
+    text: "Everything You Need to Launch and Grow a Career in Tech"
+    font_size: ["26px", "26px", "24px", "24px", "22px"]
+    style: '{ "font-weight": "400", "text-align": "justify", "color": "#000", "padding": "10px"}'
+  bullets:
+    item_style: '{ "padding": "0 0 0 10px", "font-weight": "100" }'
+    items:
+      - heading: "Get ahead of the curve with next-gen tech skills."
+        text: "Master industry-relevant, AI-powered tools guided by a cutting-edge curriculum."
+        icon: "check"
+      - heading: "Access unlimited mentorship and career support."
+        text: "No need to learn alone — get 1:1 support from expert human mentors whenever you need it, for life."
+        icon: "check"
+      - heading: "Enjoy hyperpersonalized learning, at every level."
+        text: "Move faster and smarter with AI-powered feedback tailored to your journey, plus an unmatched student-to-teacher ratio."
+        icon: "check"
+      - heading: "Join an active tech community."
+        text: "Stay connected and supported through our Slack channels — with peers, mentors, and alumni ready to help you grow."
+        icon: "check"
+  button:
+    text: "Learn More"
+    color: "white"
+    background: "black"
+    hover_color: "white"
+    path: "/us/apply"
+
+# How It Works
+how_it_works:
+  background: "#0084FF"
+  heading:
+    text: "Do our Bootcamps Deliver Results You Can Count On?"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+    style: '{ "color": "white" }'
+  sub_heading:
+    text: "Yes — and we've got the numbers to back it up."
+    font_size: ["20px", "20px", "16px", "16px", "16px"]
+    style: '{ "textAlign": "center", "width": "60%", "color": "white"}'      
+  icons:
+    - icon: "graduation-2"
+      color: "#0084FF"
+      title: "Job Placement Rate"
+      content: "84% of graduates were hired"
+    - icon: "briefcase-2"
+      color: "#FF0000"
+      title: "Average time to get hired"
+      content: "6 months after graduation"
+    - icon: "stairswflag"
+      color: "#BE8BFF"
+      title: "Salary Increase"
+      content: "55% higher at new job"
+
+# Why 4Geeks Job Guarantee
+why_4geeks_job_guarantee:
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/landing/blonde-girl-laptop.png"
+  heading:
+    style: '{ "margin-top": "0px" }'
+    text: "Why we offer the added security of a Job Guarantee"
+    font_size: ["40px", "34px", "34px", "25px", "25px"]
+  sub_heading:
+    font_size: ["16px", "16px", "16px", "14px", "14px"]
+    style: '{ "font-weight": "100" }'
+    text: "Our goal is more than teaching skills — we're here to launch successful tech careers. With a cutting edge curriculum that's aligned with the latest AI developments, hands-on teaching methodology and personalized career support, our program has a proven track record of preparing students for the tech job market"
+  content:
+    text: "Join a global leader in AI tech education. With 7+ campuses and 4,000+ alumni, we offer AI-powered learning and lifelong career support."
+  bullets:
+    items:
+      - text: "Our program's effectiveness is backed by strong hiring and retention rates"
+      - text: "We know how tech is evolving and prepare you to thrive in the new job market"
+      - text: "We believe in our teaching approach and your commitment to succeed"
+  button:
+    style: '{ "padding": "10px", "border-radius": "3px" }'
+    text: "Apply Now"
+    color: "white"
+    hover_color: "white"
+    background: "black"
+    path: "#leadform_bottom"
+
 
 ## TWO COLUMNS
 two_columns:
@@ -97,37 +224,36 @@ two_columns:
 details:
   about:
       title: "About the program"
-      sub_title: |
-        Learn the most wanted and highest paid technologies that will help you create amazing websites.
-        The tech industry consistently requires Python and JavaScript developers. Both are the most popular programming languages to learn in 2024. 
-        Start coding in a web development language and algorithm scripting. Build awesome apps using a front-end library. Use an API so you can consume data to fill your app.
-        The program will end with the presentation of your final project that will help you get ready for  more web development experiences
-        You will re-shape your mind to embrace new logical, developmental and researching skills.
+      sub_title: 'Master the most in-demand technologies and learn to build modern applications using AI. Learn algorithm scripting and build awesome apps using front-end libraries. Utilize APIs to consume data and enhance your app’s functionality. Develop and present your own project, gaining game-changing hands-on experience. Learn to <strong style="text-decoration: none; color: #000000; font-weight: 600;">code alongside AI to unlock a faster, more creative way to build real apps from day one. Collaborate with powerful tools like Cursor to generate, debug,  iterate and ship with speed and precision</strong>. Reshape your mindset and embrace the programming, logic, and research skills to succeed in today’s tech industry.'
       list:
         - label: "Duration"
-          content: "9 Weeks"
+          content: "12 Weeks"
           icon: "duration-icon"
-        - label: "Classes"
-          content: "4 classes weekly"
+        - label: "Location"
+          content: "Miami, FL, Dallas, TX, and Online"
+          icon: "location-icon"
+        - label: "Schedule"
+          content: "Monday-Friday 9AM-5:30PM"
           icon: "book-2"
         - label: "Certificate"
-          content: "Full-Stack Developer"
+          content: "Recognized by the FL Department of Education"
           link_text: "See example"
           link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
           icon: "certification"
-        - label: "Requisites"
-          content: "No previous coding skills or advanced math are required."
+        - label: "Prequisites"
+          content: "No  previous experience needed."
           icon: "contract-checked"
         - label: "Language"
-          content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
+          content: "English."
           icon: "language"
           
-  heading: PROGRAM DETAILS FULL-TIME
+  heading: FULL-TIME FULL STACK DEVELOPMENT WITH AI
   weeks: 12
   week_unit: "wks"
+  sub_heading: "Master programming fundamentals like Python, hands-on front end and backend development with AI, \nplus vibe coding – AI-driven software engineering for fast track product launches."
   weeks_label: "weeks"
-  sub_heading: "Hands-on learning through real-life projects. Master the 3 most used languages in the world: Master Python, JS and React."
-  left_labels:
+
+left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
     duration: "DURATION:"
@@ -145,22 +271,22 @@ details:
       description: "Think like a computer: Control the flow of your code, code algorithms, loop, use conditionals, webpack, the command line, GIT, etc."
       projects: "Instagram Application, Memory Card Game, Tic Tac Toe, Flappy Bird, etc."
       slug: "foundations"
-      duration: "3.5 wks"
-      step: 3.5
+      duration: "4.5 wks"
+      step: 4.5
     - module_name: "THE WEB"
       title: "Web Development"
       description: "Create your first React.js application, MVC Pattern, JS Modules, Bunding, Babel JS, The DOM, Events"
       projects: "Coursera clone, Instagram clone, Youtube clone, etc."
       slug: "web-development"
-      duration: "3.5 wks"
-      step: 3.5
+      duration: "4.5 wks"
+      step: 4.5
     - module_name: "PROJECTS"
       title: "Projects"
       description: "Python, Flask, REST API's, Databases, SQL, MVC Pattern, Publishing your website, etc."
       projects: "During this phase you will have to design, code, test, and publish your own entire web application."
       slug: "projects"
-      duration: "2 wks"
-      step: 2
+      duration: "3 wks"
+      step: 3
     - module_name: "LIFELONG SUPPORT"
       title: "Lifelong Support"
       description: "Keep practicing with the academy's help - we will be coaching you for life. Build your Resume, Github, LinkedIn.  We help you apply for jobs and provide support for you once you find a job."
