@@ -159,7 +159,7 @@ navbar:
               link_to: "/es/coding-campus/bootcamp-programacion-lima-peru"
             - title: "Otra locación en America"
               link_to: "/es/coding-campus/online-bootcamp-programacion"
-        - title: "ERUOPA"
+        - title: "EUROPA"
           sub_links:
             - title: "Madrid, España"
               link_to: "/es/coding-campus/bootcamp-programacion-madrid"
