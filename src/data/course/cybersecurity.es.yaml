@@ -10,7 +10,7 @@ meta_info:
   keywords: ""
   redirects: []
   related_clusters: ["trends-and-tech"]
-  duration: "P14W"  # 14 weeks duration in ISO 8601 format
+  duration: "P16W"  # 14 weeks duration in ISO 8601 format
 
 apply_form:
   label: Profesional junior en Ciberseguridad
@@ -210,8 +210,9 @@ details:
           icon: "language"
 
   heading: DETALLES DEL PROGRAMA
-  weeks: 14
+  weeks: 16
   week_unit: "sem"
+  weeks_label: "semanas"
   facts:
     - label: "Duración"
       value: "14 semanas"

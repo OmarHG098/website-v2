@@ -20,7 +20,7 @@ meta_info:
     ]
   related_clusters: ["full-stack-developer","trends-and-tech"]
   template: "course-fullstack-ft"
-  duration: "P9W"  # 9 weeks duration in ISO 8601 format
+  duration: "P12W"  # 12 weeks duration in ISO 8601 format
   
 
 apply_form:
@@ -123,8 +123,9 @@ details:
           icon: "language"
           
   heading: PROGRAM DETAILS FULL-TIME
-  weeks: 9
+  weeks: 12
   week_unit: "wks"
+  weeks_label: "weeks"
   sub_heading: "Hands-on learning through real-life projects. Master the 3 most used languages in the world: Master Python, JS and React."
   left_labels:
     description: "DESCRIPTION:"
