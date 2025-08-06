@@ -180,10 +180,10 @@ components:
         title: "Full Stack Development with AI"
         content: "Become an AI-fluent Full Stack Developer using tools like Cursor, Vercel v0, and more. Master the most sought-after skills and land a job as a developer."
       - icon: "machine"
-        title: "DATA SCIENCE AND MACHINE LEARNING"
+        title: "Data Science and Machine Learning"
         content: "Acquire the skills to analyze complex data and leverage machine learning techniques to automate decision-making and uncover actionable insights."
       - icon: "cibersecurity"
-        title: "CyberSecurity Bootcamp"
+        title: "Cybersecurity"
         content: "Become a cybersecurity specialist, equipped to identify, manage, and mitigate system vulnerabilities in compliance with ISO and other standards."
     button:
       text: "Get More Information"
