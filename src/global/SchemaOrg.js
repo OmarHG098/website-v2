@@ -23,10 +23,13 @@ const SchemaOrg = ({
           node {
             faq {
               topic
+              slug
               questions {
                 locations
                 question
                 answer
+                templates
+                priority
               }
             }
             fields {
@@ -53,10 +56,94 @@ const SchemaOrg = ({
     }
   `);
 
-  const faqs =
-    dataQuery.allFaqYaml.edges
-      .find(({ node }) => node.fields.lang === context.lang)
-      ?.node.faq.flatMap((elem) => elem.questions) || [];
+  // Helper functions to mirror FaqCard filtering logic
+  const filterByLocation = (question, locationSlug) => {
+    if (!locationSlug) return true;
+    if (
+      Array.isArray(question.locations) &&
+      (question.locations.includes(locationSlug) ||
+        question.locations.includes("all"))
+    )
+      return true;
+    return false;
+  };
+
+  const filterByTemplate = (question, template) => {
+    if (!template) return true;
+    return (
+      Array.isArray(question.templates) && question.templates.includes(template)
+    );
+  };
+
+  const filterByPriority = (question, minPriority) => {
+    if (!minPriority) return true;
+    if (question.priority && question.priority >= minPriority) return true;
+    return false;
+  };
+
+  const filterByTopic = (topic, topicSlug) => {
+    if (!topicSlug) return true;
+    return topic.slug === topicSlug;
+  };
+
+  // Get FAQs for the current language
+  const faqsData = dataQuery.allFaqYaml.edges
+    .find(({ node }) => node.fields.lang === context.lang)
+    ?.node.faq || [];
+
+  // Apply filtering logic based on page type and context
+  const getFilteredFaqs = () => {
+    let filteredTopics = [...faqsData];
+    let locationSlug = null;
+    let template = null;
+    let minPriority = null;
+    let topicSlug = null;
+
+    // Determine filtering parameters based on page type
+    if (context.defaultTemplate === "faq") {
+      // FAQ pages: filter by template "faq"
+      template = "faq";
+    } else if (type === "location" || type === "course") {
+      // Location/Course pages: filter by location slug
+      locationSlug = context.slug; // breathecode_location_slug
+      // Optionally filter by template if available
+      if (context.defaultTemplate) {
+        template = context.defaultTemplate;
+      }
+    }
+
+    // Apply topic filtering if topicSlug is provided in context
+    if (context.topicSlug) {
+      topicSlug = context.topicSlug;
+    }
+
+    // Apply priority filtering if minPriority is provided in context
+    if (context.minPriority) {
+      minPriority = context.minPriority;
+    }
+
+    // Filter topics by topicSlug
+    filteredTopics = filteredTopics.filter((topic) =>
+      filterByTopic(topic, topicSlug)
+    );
+
+    // Apply question-level filters to each topic
+    filteredTopics.forEach((topic) => {
+      if (Array.isArray(topic.questions)) {
+        topic.questions = topic.questions
+          .filter((question) => filterByLocation(question, locationSlug))
+          .filter((question) => filterByTemplate(question, template))
+          .filter((question) => filterByPriority(question, minPriority));
+      } else {
+        topic.questions = [];
+      }
+    });
+
+    // Flatten the filtered questions for Schema.org FAQPage structure
+    return filteredTopics.flatMap((topic) => topic.questions || []);
+  };
+
+  const filteredFaqs = getFilteredFaqs();
 
   const courses = dataQuery.allCourseYaml.edges
     .filter(({ node }) => node.fields.lang === context.lang)
@@ -76,13 +163,6 @@ const SchemaOrg = ({
       },
       jobGuarantee: true,
     }));
-
-  const campusLocation = context.locations.find(
-    ({ node }) => node.meta_info.slug === context.slug
-  )?.node;
-  const faqsFilteredByLocation = faqs.filter((faq) =>
-    faq.locations?.includes(campusLocation?.breathecode_location_slug)
-  );
 
   const baseSchema = [
     {
@@ -121,7 +201,7 @@ const SchemaOrg = ({
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: faqsFilteredByLocation.map((faq) => ({
+      mainEntity: filteredFaqs.map((faq) => ({
         "@type": "Question",
         name: faq.question,
         acceptedAnswer: {
@@ -182,7 +262,7 @@ const SchemaOrg = ({
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: faqs.map((faq) => ({
+      mainEntity: filteredFaqs.map((faq) => ({
         "@type": "Question",
         name: faq.question,
         acceptedAnswer: {
@@ -230,10 +310,7 @@ const SchemaOrg = ({
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: (faqsFilteredByLocation.length > 0
-          ? faqsFilteredByLocation
-          : faqs
-        ).map((faq) => ({
+        mainEntity: filteredFaqs.map((faq) => ({
           "@type": "Question",
           name: faq.question,
           acceptedAnswer: {
