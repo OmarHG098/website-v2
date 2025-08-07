@@ -811,12 +811,8 @@ export const Header = ({
         {/* hacer cambios aqui ... remover svg en mobile */}
         <Div
           flexDirection="column"
-          alignItems="center"
-          alignItems_tablet="start"
           gridColumn_tablet={svg_image ? null : "1 / 13"}
           gridArea_tablet={svg_image ? "1/1/1/7" : null}
-          padding="0 10px"
-          padding_tablet="0"
         >
           <H1
             type="h1"
