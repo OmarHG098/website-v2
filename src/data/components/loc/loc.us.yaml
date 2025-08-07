@@ -3,10 +3,8 @@ sub_heading: "Choose the format that fits your life—our online and in-person p
 title_image: "Online, Hybrid or In-person. "
 title: "Our programs are"
 highlighted_text:
-  - text: Online,
+  - text: Online
     color: "#0084FF"
-  - text: Hybrid
-    color: "#FFB718"
   - text: or
     color: "#000000"
   - text: <br/>In-person
