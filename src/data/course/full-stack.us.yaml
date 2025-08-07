@@ -10,7 +10,7 @@ meta_info:
   show_in_apply: true
   related_clusters: ["full-stack-developer"]
   template: "course-fullstack"
-  duration: "P18W"  # 18 weeks duration in ISO 8601 format
+  duration: "P20W"  # 20 weeks duration in ISO 8601 format
   redirects:
     [
       "/part-time",
@@ -221,6 +221,7 @@ details:
   heading: "PART-TIME FULL-STACK DEVELOPMENT WITH AI BOOTCAMP"
   weeks: 20
   week_unit: "wks"
+  weeks_label: "weeks"
   sub_heading: "Hands-on learning through real-life projects. \nMaster the most in-demand coding languages and AI-powered tools: Python, React, Cursor, Copilot, Vercel and more."
   left_labels:
     description: "DESCRIPTION:"

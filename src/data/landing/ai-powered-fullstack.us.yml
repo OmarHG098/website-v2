@@ -178,7 +178,7 @@ components:
       - icon: "stairswflag"
         color: "#BE8BFF"
         title: "Salary Increase"
-        content: "55% increase after graduation"
+        content: "55% higher at new job"
   
   - name: program-details
     position: 3

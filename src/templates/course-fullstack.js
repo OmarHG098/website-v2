@@ -75,6 +75,7 @@ const Program = ({ data, pageContext, yml }) => {
         padding_tablet="40px 40px"
         position="relative"
         fontSize_title="40px"
+        fontSize_xxs="32px"
         fontSizeTitle_tablet="60px"
         fontFamily_title="Archivo-Black"
         fontSize_paragraph="21px"
@@ -546,6 +547,10 @@ export const query = graphql`
               items {
                 text
               }
+            }
+            content {
+              text
+              style
             }
           }
           two_columns_rigo {
