@@ -142,7 +142,7 @@ const PricingCard = ({
                 color={Colors.black}
                 opacity="1"
               >
-                {!jobGuarantee ? data.price : data.job_guarantee_price}
+                {!jobGuarantee ? data.price : data.price}
               </H3>
               {!jobGuarantee && (
                 <Paragraph
@@ -401,7 +401,6 @@ const PricesAndPayment = (props) => {
               original_price
               warning_message
               offer
-              job_guarantee_price
               bullets
               icons
             }
@@ -415,7 +414,6 @@ const PricesAndPayment = (props) => {
               original_price
               warning_message
               offer
-              job_guarantee_price
               bullets
               icons
             }
@@ -492,7 +490,7 @@ const PricesAndPayment = (props) => {
         )
         .filter((plan) => {
           if (jobGuarantee) {
-            if (plan.job_guarantee_price) return true;
+            if (plan.price) return true;
             return false;
           }
           return true;
@@ -811,7 +809,7 @@ const PricesAndPayment = (props) => {
               gridGap="32px 0px"
               className="inner-container"
             >
-              {availablePlans.some((plan) => plan.job_guarantee_price) && (
+             {/* {availablePlans.some((plan) => plan.price) && (
                 <Div
                   className="job-guarantee"
                   padding="8px"
@@ -839,7 +837,7 @@ const PricesAndPayment = (props) => {
                     {info.job_guarantee.description}
                   </Paragraph>
                 </Div>
-              )}
+              )}*/}
               {availablePlans && availablePlans.length > 0 && (
                 <Div
                   className="bullets-container"
