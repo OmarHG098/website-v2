@@ -21,22 +21,22 @@ cp -n .env.example .env.development || true
 
 2. Install Node Version Manager (NVM): If you don't have NVM installed, follow the instructions here.
 
-3. Install Node.js Version 18: Use NVM to install Node.js version 18.
+3. Install Node.js Version 22: Use NVM to install Node.js version 22.
 
 ```bash
-nvm install v18
+nvm install v22
 ```
 
-4. Set Default Node.js Version: Set Node.js version 18 as the default version.
+4. Set Default Node.js Version: Set Node.js version 22 as the default version.
 
 ```bash
-nvm alias default v18
+nvm alias default v22
 ```
 
-5. Use Node.js Version 18: Switch to using Node.js version 18.
+5. Use Node.js Version 22: Switch to using Node.js version 22.
 
 ```bash
-nvm use v18
+nvm use v22
 ```
 
 6. Install Dependencies: Install the project dependencies.
