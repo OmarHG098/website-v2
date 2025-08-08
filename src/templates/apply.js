@@ -74,6 +74,31 @@ const Apply = (props) => {
       value: node.meta_info.bc_slug,
     }));
 
+  // Filter programs based on selected location
+  const filteredPrograms = React.useMemo(() => {
+    // Define course restrictions - full-stack-ft only available in Dallas and Miami
+    const courseLocationRestrictions = {
+      "full-stack-ft": ["dallas-usa", "downtown-miami"]
+    };
+
+    return programs.filter(program => {
+      // If no location is selected, show all programs except restricted ones
+      if (!formData.location.value) {
+        return !courseLocationRestrictions[program.value];
+      }
+
+      // Check if this program has location restrictions
+      const restrictedLocations = courseLocationRestrictions[program.value];
+      if (restrictedLocations) {
+        // Only show if current location is in the allowed list
+        return restrictedLocations.includes(formData.location.value);
+      }
+
+      // No restrictions, show the program
+      return true;
+    });
+  }, [programs, formData.location.value]);
+
   const [regionVal, setRegionVal] = useState(null);
   const [showPhoneWarning, setShowPhoneWarning] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -139,6 +164,24 @@ const Apply = (props) => {
     }
   }, [formData.location.value, locations, pageContext.lang]);
 
+  // Clear course selection if current course is not available for selected location
+  React.useEffect(() => {
+    if (formData.location.value && formData.course.value) {
+      const courseLocationRestrictions = {
+        "full-stack-ft": ["dallas-usa", "downtown-miami"]
+      };
+      
+      const restrictedLocations = courseLocationRestrictions[formData.course.value];
+      if (restrictedLocations && !restrictedLocations.includes(formData.location.value)) {
+        // Clear the course selection if it's not available for the current location
+        setVal((prev) => ({
+          ...prev,
+          course: { value: null, valid: false },
+        }));
+      }
+    }
+  }, [formData.location.value, formData.course.value]);
+
   React.useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
 
@@ -166,8 +209,31 @@ const Apply = (props) => {
     // Pre-fill the course
     let _course = urlParams.get("course");
     if (!_course && props.location.state) _course = props.location.state.course;
-    if (typeof _course === "string")
-      _course = programs.find((p) => p.value === _course);
+    if (typeof _course === "string") {
+      // Find the course in the original programs array
+      const foundCourse = programs.find((p) => p.value === _course);
+      
+      // If we found the course, check if it's available for the selected location
+      if (foundCourse) {
+        const courseLocationRestrictions = {
+          "full-stack-ft": ["dallas-usa", "downtown-miami"]
+        };
+        
+        const restrictedLocations = courseLocationRestrictions[foundCourse.value];
+        if (restrictedLocations) {
+          // If the course has restrictions, only set it if the location is allowed
+          if (_location && restrictedLocations.includes(_location)) {
+            _course = foundCourse;
+          } else {
+            _course = null; // Don't pre-fill restricted courses if location doesn't match
+          }
+        } else {
+          _course = foundCourse; // No restrictions, use the course
+        }
+      } else {
+        _course = null;
+      }
+    }
 
     // Pre-fill the utm_url
     let _utm_url = undefined;
@@ -561,7 +627,7 @@ const Apply = (props) => {
             >
               <SelectRaw
                 bgColor={Colors.white}
-                options={programs}
+                options={filteredPrograms}
                 value={formData.course.value || ""}
                 defaultValue={formData.course.value}
                 placeholder={yml.left.course_title.open}
