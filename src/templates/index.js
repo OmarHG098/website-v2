@@ -63,7 +63,8 @@ const Home = (props) => {
     session.location &&
     session.location.meta_info &&
     session.location.meta_info.home_video;
-  const video = sessionVideo && sessionVideo !== "" ? sessionVideo : indexVideo;
+  // Prioritize the page YML video over the location video
+  const video = indexVideo && indexVideo !== "" ? indexVideo : sessionVideo;
 
   return (
     <>
