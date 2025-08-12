@@ -491,7 +491,13 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         id="choose-program"
         lang={pageContext.lang}
         programs={data.allChooseYourProgramYaml.edges[0].node.programs.filter(
-          (p) => jobGuaranteeSlugs.some((slug) => p.link?.endsWith(`/${slug}`))
+          (p) => {
+            const linkSlug = p.link
+              ?.split("/")
+              .filter(Boolean)
+              .pop();
+            return jobGuaranteeSlugs.includes(linkSlug);
+          }
         )}
         title={yml.choose_program?.title}
         paragraph={yml.choose_program?.paragraph}
