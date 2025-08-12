@@ -24,7 +24,55 @@ Description: Comprehensive guide for landing_a template pages with all available
 - Maintain consistent terminology and tone within each language
 - Use appropriate cultural references for target audience
 
-## 1. Required Components (Fixed Structure)
+## 1. YAML File Structure (Required)
+
+### Component Ordering in YAML File
+**CRITICAL: The order of components in the YAML file is NOT determined by position numbers. Follow this exact structure:**
+
+```yaml
+# 1. Required Components (Always First)
+meta_info:
+navbar:
+form:
+header_data:
+
+# 2. Recommended Components (Second)
+short_badges:
+features:
+follow_bar:
+
+# 3. Optional Standalone Components (Third - ABOVE components section)
+rating_reviews:
+geeks_vs_others:
+why_4geeks:
+who_is_hiring:
+badges:
+program_details:
+alumni_projects:
+why_python:
+in_the_news:
+choose_your_program:
+
+# 4. Components Section (Last - BELOW all standalone components)
+components:
+  - name: component_name
+    position: 1
+  - name: another_component
+    position: 3
+```
+
+### Why This Structure Matters
+- **YAML Parsing**: Prevents parsing errors and ensures proper component loading
+- **Project Convention**: Maintains consistency across all landing pages
+- **Component Dependencies**: Some standalone components may depend on others
+- **Maintenance**: Makes files easier to read and maintain
+
+### Position Numbers vs YAML Structure
+- **Position numbers** (1, 3, 5, etc.) control the **display order** on the page
+- **YAML structure** controls the **file organization** and **parsing order**
+- You can have a `components` section item at position 1 and a standalone component at position 3, but the standalone component must still appear above the `components` section in the YAML file
+
+## 2. Required Components (Fixed Structure)
 
 ### meta_info (Required - Fixed Keys, Modifiable Values)
 ```yaml
@@ -115,6 +163,8 @@ follow_bar:
 ```
 
 ## 3. Optional Standalone Components
+
+**IMPORTANT: These components MUST be placed ABOVE the `components` section in the YAML file, regardless of their position numbers. This is required for proper YAML parsing and project consistency.**
 
 ### program_details (Optional)
 ```yaml
@@ -215,9 +265,12 @@ apply_schollarship:
 
 ## 4. Components Section (Fully Modifiable)
 
+**YAML STRUCTURE REQUIREMENT: The `components` section MUST come AFTER all standalone components above, regardless of position numbers.**
+
 ### Structure and Positioning (Modifiable)
 - Use non-consecutive position numbers (1, 3, 5, etc.) for easy reordering
 - Each component requires unique name and position
+- **Position numbers are for display order only, not YAML file structure**
 ```yaml
 components:
   - name: unique_component_name   # MODIFIABLE: Component identifier
@@ -231,12 +284,24 @@ components:
 - `testimonials_new` - Testimonial carousel
 - `multi_column` - Multiple column layout
 - `single_column` - Single column layout
-- `job_guarantee_small` - Job guarantee section
+- `job_guarantee_small` - Job guarantee section (specialized layout)
 - `faq` - FAQ section
 - `choose_your_program` - Program selection
 - `geeksInfo` - 4Geeks information section
 - `divider` - Visual separator
 - `simple_cards` - Card grid layout
+
+### Specialized Layouts
+
+#### job_guarantee_small (Specialized)
+```yaml
+- name: job_guarantee_component
+  layout: job_guarantee_small
+  position: 13
+  heading:
+    text: "Enroll with a Job Guarantee"  # MODIFIABLE: Only heading.text is required
+```
+**Note**: This layout automatically includes job guarantee content and styling. Only the `heading.text` property is needed.
 
 ### Common Properties (Modifiable Values)
 ```yaml
@@ -373,6 +438,15 @@ height: ["50px", "50px", "50px", "0px", "0px"] # MODIFIABLE: Responsive heights
 - Use `\n` for line breaks in follow_bar content
 - HTML tags supported: `<br>`, `<b>`, `<strong>`, `<i>`, `<em>`, `<span>`
 
+### Quote Usage (Critical for YAML Parsing)
+- **ALWAYS use straight quotes (`"` and `'`) in YAML text fields**
+- **NEVER use curly quotes (`"`, `"`, `'`, `'`) as they cause YAML parsing errors**
+- Use double quotes (`"`) for text containing apostrophes: `"we've got the numbers"`
+- Use single quotes (`'`) for simple text without apostrophes: `'Simple text'`
+- **Examples:**
+  - ✅ `text: "Yes — and we've got the numbers to back it up."`
+  - ❌ `text: 'Yes — and we've got the numbers to back it up.'` (curly quotes cause errors)
+
 ### Style Objects (Fixed Format, Modifiable Values)
 - Must use single quotes: `'{ "property": "value" }'`
 - Must be valid JSON syntax
@@ -389,6 +463,51 @@ height: ["50px", "50px", "50px", "0px", "0px"] # MODIFIABLE: Responsive heights
 - Test on all breakpoints
 
 ## 7. Best Practices
+
+### YAML Structure Best Practices
+- **ALWAYS place standalone components above the `components` section**
+- **NEVER mix standalone components within the `components` section**
+- **Use position numbers for display order, not file organization**
+- **Follow the exact structure shown in Section 1**
+
+### Correct vs Incorrect YAML Structure
+
+#### ✅ CORRECT Structure:
+```yaml
+# Standalone components first
+rating_reviews:
+  position: 7
+  heading: "Reviews"
+
+geeks_vs_others:
+  position: 5
+  heading: "Comparison"
+
+# Components section last
+components:
+  - name: first_component
+    position: 1
+  - name: second_component
+    position: 3
+```
+
+#### ❌ INCORRECT Structure:
+```yaml
+components:
+  - name: first_component
+    position: 1
+  - name: second_component
+    position: 3
+
+# Standalone components mixed in wrong place
+rating_reviews:
+  position: 7
+  heading: "Reviews"
+
+geeks_vs_others:
+  position: 5
+  heading: "Comparison"
+```
 
 ### Content Guidelines
 - Keep meta_info title 50-60 characters

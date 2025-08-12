@@ -481,7 +481,6 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         session={session}
       />
 
-
       <ChooseYourProgram
         id="choose-program"
         lang={pageContext.lang}
