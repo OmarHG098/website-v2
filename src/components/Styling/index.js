@@ -437,7 +437,7 @@ const getVariant = (props) => ({
   },
   full: {
     border: "none",
-    background: props.color,
+    background: props.background || props.color,
     color: props.textColor || "white",
   },
   empty: {
@@ -533,12 +533,16 @@ export const Button = styled(SmartButton)`
   }}
 
   &:hover {
-    background-color: ${(props) =>
-      props.colorHover ||
-      (props.variant === "outline" ? props.color : props.color)};
-    color: ${(props) =>
-      props.colorHoverText ||
-      (props.variant === "outline" ? "white" : props.textColor || "white")};
+    ${(props) =>
+      props.variant === "outline"
+        ? css`
+            background-color: ${props.colorHover || props.color};
+            color: ${props.colorHoverText || "white"};
+          `
+        : css`
+            ${props.colorHover ? `background-color: ${props.colorHover};` : ""}
+            ${props.colorHoverText ? `color: ${props.colorHoverText};` : ""}
+          `}
   }
   @media ${Devices.xxs} {
     padding: ${(props) => props.padding_xxs};
