@@ -40,8 +40,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: The Data Science Boom is Here.
-  sub_heading: "Master the skills that are transforming every industry"
+  tagline: The Data Science Boom is Here. <br> We're here to get you in
+  sub_heading: " "
   tagline_color: "#1c1c1c"
   form_styles:
     background: "#0084FF"
