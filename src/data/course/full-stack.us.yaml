@@ -106,7 +106,6 @@ two_columns:
     - text: "Our students come from all walks of life and leave with real results:"
     - text: " ✅ 84% get hired within 6 months of graduation"
     - text: " ✅ Salaries increase by an average of 55%"
-    - text: "See where 4Geeks can take you."
   content:
     text: "Watch his story. Picture yours."
     style: '{"font-weight": "700", "margin":"0", "font-size":"16px" }'
