@@ -11,6 +11,7 @@ meta_info:
   redirects: []
   related_clusters: ["trends-and-tech"]
   duration: "P16W"  # 14 weeks duration in ISO 8601 format
+  job_guarantee: true
 
 apply_form:
   label: Cybersecurity

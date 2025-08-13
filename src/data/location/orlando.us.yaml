@@ -14,7 +14,7 @@ meta_info:
   # for example: for this location, only show cohorts starting with usa-xx-spanish
   cohort_include_regex: ["miami"]
   cohort_exclude_regex: ['usa-\d{1,10}-spanish']
-  home_video: "https://www.videoask.com/fyq2h2hvx"
+  home_video: "https://www.videoask.com/frhjxdk8z"
 
 seo_title: "Orlando Coding Bootcamp with Job Guarantee"
 header:
@@ -159,7 +159,7 @@ two_columns_rigo:
 
 active_campaign_location_slug: "orlando"
 breathecode_location_slug: "orlando"
-in_person_available: true # important to accept in-person applicants
+in_person_available: false # important to accept in-person applicants
 
 consents:
   - slug: "gdpr_consent"

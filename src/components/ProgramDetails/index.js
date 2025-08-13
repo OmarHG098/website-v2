@@ -322,7 +322,7 @@ const ProgramDetails = (props) => {
                       ))}
                   </Div>
                 </Div>
-                <Div
+                {/* <Div
                   // margin="0 10px 0 0"
                   width="100%"
                   // height_md="50px"
@@ -349,7 +349,7 @@ const ProgramDetails = (props) => {
                       {props.details.details_modules[selected.index].duration}
                     </Paragraph>
                   </Div>
-                </Div>
+                </Div>*/}
               </Div>
             </Div>
           </Div>

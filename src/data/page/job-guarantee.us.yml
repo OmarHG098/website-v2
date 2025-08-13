@@ -62,7 +62,7 @@ two_column_left:
     text: "Apply"
     color: "white"
     background: "black"
-    hover_color: "black"
+    hover_color: "white"
     path: "/us/apply"
 
 we_trust_section:
@@ -126,7 +126,7 @@ two_column_right:
     text: "Apply"
     color: "white"
     background: "black"
-    hover_color: "black"
+    hover_color: "white"
     path: "/us/apply"
 
 successful_stories:
@@ -202,5 +202,5 @@ two_column_geek:
     text: "Learn More"
     color: "white"
     background: "black"
-    hover_color: "black"
+    hover_color: "white"
     path: "/us/apply"
