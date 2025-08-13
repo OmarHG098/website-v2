@@ -156,7 +156,8 @@ two_columns_rigo:
 
 active_campaign_location_slug: "toronto-canada"
 breathecode_location_slug: "toronto-canada"
-in_person_available: true # important to accept in-person applicants
+in_person_available: false # important to accept in-person applicants
+online_available: true
 
 consents:
   - slug: "gdpr_consent"
