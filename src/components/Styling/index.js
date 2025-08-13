@@ -291,6 +291,24 @@ const StyledImageV2 = styled.div`
 `;
 export const ImgV2 = React.memo(StyledImageV2);
 
+// Cropped iframe to mask third-party UI (e.g., VideoAsk controls/banners)
+export const MaskedIframe = styled.iframe`
+  border: none;
+  width: 100%;
+  height: 120%;
+  transform: translateY(-10%);
+  border-radius: 0;
+
+  @media (max-width: 425px) {
+    height: 145%;
+    transform: translateY(-16%);
+  }
+  @media (max-width: 390px) {
+    height: 155%;
+    transform: translateY(-18%);
+  }
+`;
+
 export const BackgroundSection = ({
   id,
   children,
