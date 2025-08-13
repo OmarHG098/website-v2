@@ -7,7 +7,7 @@ meta_info:
   image: "/images/og-preview/applied-ai-bg.jpg"
   visibility: "visibility"
   keywords: ""
-  show_in_apply: true
+  show_in_apply: false
   redirects: ["/us/applied-ai"]
   related_clusters: ["trends-and-tech"]
   duration: "P6W"  # 6 weeks duration in ISO 8601 format

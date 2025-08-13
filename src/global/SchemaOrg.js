@@ -23,10 +23,13 @@ const SchemaOrg = ({
           node {
             faq {
               topic
+              slug
               questions {
                 locations
                 question
                 answer
+                templates
+                priority
               }
             }
             fields {
@@ -53,10 +56,110 @@ const SchemaOrg = ({
     }
   `);
 
-  const faqs =
-    dataQuery.allFaqYaml.edges
-      .find(({ node }) => node.fields.lang === context.lang)
-      ?.node.faq.flatMap((elem) => elem.questions) || [];
+  // Helper functions to mirror FaqCard filtering logic
+  const filterByLocation = (question, locationSlug) => {
+    if (!locationSlug) return true;
+    if (
+      Array.isArray(question.locations) &&
+      (question.locations.includes(locationSlug) ||
+        question.locations.includes("all"))
+    )
+      return true;
+    return false;
+  };
+
+  const filterByTemplate = (question, template) => {
+    if (!template) return true;
+    return (
+      Array.isArray(question.templates) && question.templates.includes(template)
+    );
+  };
+
+  const filterByPriority = (question, minPriority) => {
+    if (!minPriority) return true;
+    if (question.priority && question.priority >= minPriority) return true;
+    return false;
+  };
+
+  const filterByTopic = (topic, topicSlug) => {
+    if (!topicSlug) return true;
+    return topic.slug === topicSlug;
+  };
+
+  // Get FAQs for the current language
+  const faqsData = dataQuery.allFaqYaml.edges
+    .find(({ node }) => node.fields.lang === context.lang)
+    ?.node.faq || [];
+
+  // Build a set of available topic slugs to validate requested topics
+  const availableTopicSlugs = new Set(faqsData.map((t) => t.slug));
+
+  // Derive current location from context.locations (same as SEO/Layout)
+  const currentLocation = Array.isArray(context?.locations)
+    ? context.locations.find(
+        ({ node }) =>
+          node?.fields?.file_name === context.file_name ||
+          node?.meta_info?.slug === context.slug
+      )
+    : null;
+  const derivedLocationSlug = currentLocation?.node?.breathecode_location_slug;
+
+  // Apply filtering logic based on page type and context
+  const getFilteredFaqs = () => {
+    let filteredTopics = [...faqsData];
+    let locationSlug = null;
+    let template = null;
+    let minPriority = null;
+    let topicSlug = null;
+
+    // Determine filtering parameters based on page type
+    if (context.defaultTemplate === "faq") {
+      // FAQ pages: filter by template "faq" only; do not filter by location
+      template = "faq";
+    } else if (type === "location") {
+      // Location pages: filter by location slug and priority; DO NOT filter by template
+      locationSlug = derivedLocationSlug || null;
+      minPriority = 1;
+    } else if (type === "course") {
+      // Course pages: no location filter by default; template may be explicitly provided via context.defaultTemplate
+      // Leave locationSlug as null and template as null unless explicitly passed elsewhere
+    }
+
+    // Determine topicSlug only if explicitly provided or if inferred slug exists among topics
+    if (context.topicSlug && availableTopicSlugs.has(context.topicSlug)) {
+      topicSlug = context.topicSlug;
+    } else if (context?.slug) {
+      const inferredTopic = context.slug.replace(/-/g, "_");
+      if (availableTopicSlugs.has(inferredTopic)) topicSlug = inferredTopic;
+    }
+
+    // Apply priority filtering if minPriority is provided in context
+    if (context.minPriority) {
+      minPriority = context.minPriority;
+    }
+
+    // Filter topics by topicSlug only when valid
+    if (topicSlug) {
+      filteredTopics = filteredTopics.filter((topic) => topic.slug === topicSlug);
+    }
+
+    // Apply question-level filters to each topic
+    filteredTopics.forEach((topic) => {
+      if (Array.isArray(topic.questions)) {
+        topic.questions = topic.questions
+          .filter((question) => filterByLocation(question, locationSlug))
+          .filter((question) => filterByTemplate(question, template))
+          .filter((question) => filterByPriority(question, minPriority));
+      } else {
+        topic.questions = [];
+      }
+    });
+
+    // Flatten the filtered questions for Schema.org FAQPage structure
+    return filteredTopics.flatMap((topic) => topic.questions || []);
+  };
+
+  const filteredFaqs = getFilteredFaqs();
 
   const courses = dataQuery.allCourseYaml.edges
     .filter(({ node }) => node.fields.lang === context.lang)
@@ -76,13 +179,6 @@ const SchemaOrg = ({
       },
       jobGuarantee: true,
     }));
-
-  const campusLocation = context.locations.find(
-    ({ node }) => node.meta_info.slug === context.slug
-  )?.node;
-  const faqsFilteredByLocation = faqs.filter((faq) =>
-    faq.locations?.includes(campusLocation?.breathecode_location_slug)
-  );
 
   const baseSchema = [
     {
@@ -118,18 +214,6 @@ const SchemaOrg = ({
   const page = [...baseSchema];
   const location = [
     ...baseSchema,
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: faqsFilteredByLocation.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer,
-        },
-      })),
-    },
   ];
   const blog = [
     ...baseSchema,
@@ -182,7 +266,7 @@ const SchemaOrg = ({
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: faqs.map((faq) => ({
+      mainEntity: filteredFaqs.map((faq) => ({
         "@type": "Question",
         name: faq.question,
         acceptedAnswer: {
@@ -227,21 +311,6 @@ const SchemaOrg = ({
           url: image || "https://4geeksacademy.com/path/to/default-image.jpg", // Fallback
         },
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: (faqsFilteredByLocation.length > 0
-          ? faqsFilteredByLocation
-          : faqs
-        ).map((faq) => ({
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.answer,
-          },
-        })),
-      },
     ],
   };
 
@@ -256,7 +325,8 @@ const SchemaOrg = ({
       {(type === "post" || context.defaultTemplate === "landing_post") && (
         <script type="application/ld+json">{JSON.stringify(blog)}</script>
       )}
-      {context.defaultTemplate === "faq" && (
+      {/* Always inject FAQPage JSON-LD when there are FAQs rendered on the page */}
+      {filteredFaqs.length > 0 && (
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       )}
     </Helmet>
