@@ -62,7 +62,7 @@ two_column_left:
     text: "Apply"
     color: "white"
     background: "black"
-    hover_color: "white"
+    hover_color: "black"
     path: "/us/apply"
 
 we_trust_section:
@@ -78,8 +78,8 @@ we_trust_section:
       title: "84%"
       text: Job placement rate
     - icon: graduation-2
-      title: "140"
-      text: Days on avg. to get hired
+      title: "3 - 6"
+      text: Months on avg. to get hired
     - icon: chart
       title: "55%"
       text: Salary increase after graduation
@@ -126,7 +126,7 @@ two_column_right:
     text: "Apply"
     color: "white"
     background: "black"
-    hover_color: "white"
+    hover_color: "black"
     path: "/us/apply"
 
 successful_stories:
@@ -202,5 +202,5 @@ two_column_geek:
     text: "Learn More"
     color: "white"
     background: "black"
-    hover_color: "white"
+    hover_color: "black"
     path: "/us/apply"

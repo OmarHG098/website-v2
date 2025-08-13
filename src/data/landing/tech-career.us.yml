@@ -94,12 +94,12 @@ short_badges:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Affordable payment plans starting at $40/week."
-    text_mobile: "Affordable payment plans starting at $40/week."
+    text: "Get More Information About Our Tech Career Programs"
+    text_mobile: "Get More Information About Our Tech Career Programs"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
-    text: "Get More Info"
+    text: "Apply Now"
     path: "#leadform_header"
   phone:
     text: "Call "
@@ -311,7 +311,7 @@ components:
       - icon: "briefcase-2"
         color: "#FF0000"
         title: "Avergage time to get hired"
-        content: "140 days after graduation"
+        content: "3 - 6 months after graduation"
       - icon: "stairswflag"
         color: "#BE8BFF"
         title: "Salary Increase"

@@ -436,6 +436,33 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             />
           </Modal>
         </Container>
+        <Container
+          id="two_column_right"
+          flexDirection="column"
+          margin="0"
+          padding="40px 0"
+          padding_sm="50px 0"
+          padding_tablet="0"
+          padding_md="0 50px"
+          padding_lg="0"
+        >
+          <TwoColumn
+            left={{
+              image: yml.two_columns_video?.image,
+              video: yml.two_columns_video?.video,
+            }}
+            right={{
+              heading: yml.two_columns_video?.heading,
+              sub_heading: yml.two_columns_video?.sub_heading,
+              bullets: yml.two_columns_video?.bullets,
+              content: yml.two_columns_video?.content,
+              disclosure: yml.two_columns_video?.disclosure,
+              button: yml.two_columns_video?.button,
+            }}
+            proportions={yml.two_columns_video?.proportions}
+            session={session}
+          />
+        </Container>
       </Div>
       <TwoColumn
         padding="30px 20px"
@@ -454,6 +481,21 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         session={session}
       />
 
+
+      <ChooseYourProgram
+        id="choose-program"
+        lang={pageContext.lang}
+        programs={data.allChooseYourProgramYaml.edges[0].node.programs.filter(
+          (p) =>
+            p.title === "Full Stack Development with AI" ||
+            p.title === "Data Science and ML" ||
+            p.title === "Cybersecurity"
+        )}
+        title={yml.choose_program?.title}
+        paragraph={yml.choose_program?.paragraph}
+        background={Colors.veryLightBlue3}
+        padding="0"
+      />
       <div>
         <WeTrust
           id="we-trust-section"
@@ -470,6 +512,66 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         />
       </div>
 
+      <Container
+        id="two_column_right_section"
+        flexDirection="column"
+        margin="0"
+        padding="40px 0"
+        padding_sm="50px 0"
+        padding_tablet="0"
+        padding_md="0 50px"
+        padding_lg="0"
+      >
+        <TwoColumn
+          left={{
+            image: yml.two_column_right?.image,
+          }}
+          right={{
+            heading: yml.two_column_right?.heading,
+            sub_heading: yml.two_column_right?.sub_heading,
+            content: yml.two_column_right?.content,
+            button: yml.two_column_right?.button,
+          }}
+          proportions={yml.two_column_right?.proportions}
+          session={session}
+        />
+      </Container>
+
+      <ScholarshipSuccessCases
+        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+      />
+
+      <HR
+        background={Colors.verylightGray}
+        width="70%"
+        height="1px"
+        margin="20px"
+      />
+
+      <Container
+        id="two_column_geek_section"
+        flexDirection="column"
+        margin="0"
+        padding="40px 0"
+        padding_sm="50px 0"
+        padding_tablet="0"
+        padding_md="0 50px"
+        padding_lg="0"
+      >
+        <TwoColumn
+          left={{
+            image: yml.two_column_geek?.image,
+          }}
+          right={{
+            heading: yml.two_column_geek?.heading,
+            sub_heading: yml.two_column_geek?.sub_heading,
+            bullets: yml.two_column_geek?.bullets,
+            button: yml.two_column_geek?.button,
+          }}
+          proportions={yml.two_column_geek?.proportions}
+          session={session}
+        />
+      </Container>
       <Container
         display="block"
         margin="20px auto"
@@ -606,110 +708,6 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           </Paragraph>
         )}
       </Container>
-
-      <Container
-        id="two_column_right"
-        flexDirection="column"
-        margin="0"
-        padding="40px 0"
-        padding_sm="50px 0"
-        padding_tablet="0"
-        padding_md="0 50px"
-        padding_lg="0"
-      >
-        <TwoColumn
-          right={{
-            image: yml.two_columns_video?.image,
-            video: yml.two_columns_video?.video,
-          }}
-          left={{
-            heading: yml.two_columns_video?.heading,
-            sub_heading: yml.two_columns_video?.sub_heading,
-            bullets: yml.two_columns_video?.bullets,
-            content: yml.two_columns_video?.content,
-            disclosure: yml.two_columns_video?.disclosure,
-            button: yml.two_columns_video?.button,
-          }}
-          proportions={yml.two_columns_video?.proportions}
-          session={session}
-        />
-      </Container>
-      <ChooseYourProgram
-        id="choose-program"
-        lang={pageContext.lang}
-        programs={data.allChooseYourProgramYaml.edges[0].node.programs.filter(
-          (p) =>
-            p.title === "Full Stack Development with AI" ||
-            p.title === "Data Science and ML" ||
-            p.title === "CyberSecurity Bootcamp"
-        )}
-        title={yml.choose_program?.title}
-        paragraph={yml.choose_program?.paragraph}
-        background={Colors.veryLightBlue3}
-        padding="0"
-      />
-
-      <Container
-        id="two_column_right_section"
-        flexDirection="column"
-        margin="0"
-        padding="40px 0"
-        padding_sm="50px 0"
-        padding_tablet="0"
-        padding_md="0 50px"
-        padding_lg="0"
-      >
-        <TwoColumn
-          left={{
-            image: yml.two_column_right?.image,
-          }}
-          right={{
-            heading: yml.two_column_right?.heading,
-            sub_heading: yml.two_column_right?.sub_heading,
-            content: yml.two_column_right?.content,
-            button: yml.two_column_right?.button,
-          }}
-          proportions={yml.two_column_right?.proportions}
-          session={session}
-        />
-      </Container>
-
-      <ScholarshipSuccessCases
-        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
-      />
-
-      <HR
-        background={Colors.verylightGray}
-        width="70%"
-        height="1px"
-        margin="20px"
-      />
-
-      <Container
-        id="two_column_geek_section"
-        flexDirection="column"
-        margin="0"
-        padding="40px 0"
-        padding_sm="50px 0"
-        padding_tablet="0"
-        padding_md="0 50px"
-        padding_lg="0"
-      >
-        <TwoColumn
-          left={{
-            image: yml.two_column_geek?.image,
-          }}
-          right={{
-            heading: yml.two_column_geek?.heading,
-            sub_heading: yml.two_column_geek?.sub_heading,
-            bullets: yml.two_column_geek?.bullets,
-            button: yml.two_column_geek?.button,
-          }}
-          proportions={yml.two_column_geek?.proportions}
-          session={session}
-        />
-      </Container>
-
       <Container
         margin="0"
         padding="0"

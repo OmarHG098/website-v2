@@ -6,6 +6,7 @@ faq:
     questions:
       - question: "Why 4Geeks Academy?"
         templates: ["faq"] # To show this question inside the faqs page just write "template: ["faq"]"
+        related_features: [] # online-platform, mentors-and-teachers, price, carreer-support, content-and-syllabus, job-guarantee, full-stack, cibersecurity, data-science, applied-ai, outcomes, scolarships, rigobot, learnPack, certification
         priority: 0
         answer: |-
           We offer several advantages that make us stand out from other coding bootcamps:<br>
@@ -17,6 +18,7 @@ faq:
 
       - question: "Is 4Geeks a certified institution?" #all locations
         locations: ["all"]
+        related_features: [] # online-platform, mentors-and-teachers, price, carreer-support, content-and-syllabus, job-guarantee, full-stack, cibersecurity, data-science, applied-ai, outcomes, scolarships, rigobot, learnPack, certification
         templates: ["faq"]
         priority: 1
         answer: |-
@@ -58,6 +60,7 @@ faq:
       ### FAQ page
       - question: "How do I pay for my tuition?"
         templates: ["faq"]
+        related_features: ["price", "job-guarantee", "scolarships"] # online-platform, mentors-and-teachers, price, carreer-support, content-and-syllabus, job-guarantee, full-stack, cibersecurity, data-science, applied-ai, outcomes, scolarships, rigobot, learnPack, , certification
         priority: 0
         answer: |-
           We offer various payment options to accommodate your needs. These include loans with payments as low as $120 per month, extended payment plans, and discounts for upfront payments. Additionally, we provide scholarships based on your background. For more information, please reach out to our admissions team or visit our <a class="faq-link" href="/us/financials">financials page</a>.<br>
@@ -65,6 +68,7 @@ faq:
 
       ### USA
       - question: "How do I pay for my tuition in USA?" #USA
+        related_features: ["price", "job-guarantee", "scolarships"] # online-platform, mentors-and-teachers, price, carreer-support, content-and-syllabus, job-guarantee, full-stack, cibersecurity, data-science, applied-ai, outcomes, scolarships, rigobot, learnPack, certification
         locations:
           [
             "atlanta-usa",
