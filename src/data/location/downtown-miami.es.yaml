@@ -193,7 +193,7 @@ chart_section:
 active_campaign_location_slug: "downtown-miami"
 breathecode_location_slug: "downtown-miami"
 in_person_available: true # important to accept in-person applicants
-online_available: false # important to accept online-only applicants
+online_available: true # important to accept online-only applicants
 
 consents:
   - slug: "gdpr_consent"

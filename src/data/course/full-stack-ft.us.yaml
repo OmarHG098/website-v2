@@ -6,7 +6,7 @@ meta_info:
   bc_slug: "full-stack-ft"
   visibility: "visible"
   keywords: "Full Sack Developer Full-Time"
-  show_in_apply: false
+  show_in_apply: true
   redirects:
     [
       "/course/full-time",
@@ -24,7 +24,7 @@ meta_info:
   
 
 apply_form:
-  label: Full Stack Developer
+  label: Full Stack Developer - Full Time
   
 seo_title: "Online and In-Person Full Stack Development with AI Bootcamp"
 header:
