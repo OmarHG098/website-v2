@@ -28,7 +28,8 @@ meta_info:
     ]
   related_clusters: ["desarrollador-full-stack"]
   template: "course-fullstack"
-  duration: "P18W"  # 18 weeks duration in ISO 8601 format
+  duration: "P20W"  # 20 weeks duration in ISO 8601 format
+  job_guarantee: true
 
 apply_form:
   label: Full Stack Developer
