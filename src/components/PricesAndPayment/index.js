@@ -1,10 +1,9 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Icon from "../Icon";
-import Toggle from "../ToggleSwitch";
 import { Link } from "../Styling/index";
 import { GridContainer, Div, Grid } from "../Sections";
-import Select, { SelectRaw } from "../Select";
+import { SelectRaw } from "../Select";
 import { H2, H3, H4, H5, Paragraph } from "../Heading";
 import { Button, Colors, RoundImage, Img } from "../Styling";
 import { SessionContext } from "../../session";
@@ -267,6 +266,220 @@ const PricingCard = ({
         </Div>
       )}
     </>
+  );
+};
+
+// Additional UI per new Figma: payment options explainer and mobile dropdown
+const PaymentOptionCard = ({ option, isExpanded, onToggle }) => {
+  return (
+    <Div border="1px solid #E5E5E5" borderRadius="8px" margin="0 0 12px 0" background={Colors.white}>
+      <Div padding="16px 20px" cursor="pointer" onClick={onToggle} justifyContent="space-between" alignItems="center">
+        <Div display="block">
+          <Paragraph fontSize="14px" fontWeight="600" color={Colors.black} margin="0 0 4px 0">
+            {option.title}
+          </Paragraph>
+          <Paragraph fontSize="12px" color="#666666" margin="0">
+            {option.description}
+          </Paragraph>
+        </Div>
+        <Icon icon={isExpanded ? "chevron-up" : "chevron-down"} width="16px" height="16px" color="#666666" />
+      </Div>
+
+      {isExpanded && (
+        <Div borderTop="1px solid #E5E5E5" padding="16px 20px" display="block" background="#FAFAFA">
+          {option.details && (
+            <Paragraph
+              fontSize="14px"
+              color={Colors.black}
+              margin="0 0 16px 0"
+              dangerouslySetInnerHTML={{ __html: option.details }}
+            />
+          )}
+
+          {option.bullets &&
+            option.bullets.map((bullet, index) => (
+              <Div key={index} alignItems="flex-start" margin="8px 0">
+                <Icon
+                  icon="check"
+                  width="14px"
+                  height="14px"
+                  color={Colors.blue}
+                  fill={Colors.blue}
+                  style={{ marginRight: "8px", marginTop: "2px", flexShrink: 0 }}
+                />
+                <Paragraph
+                  fontSize="14px"
+                  color={Colors.black}
+                  margin="0"
+                  dangerouslySetInnerHTML={{ __html: bullet }}
+                />
+              </Div>
+            ))}
+        </Div>
+      )}
+    </Div>
+  );
+};
+
+const FinancialOptionsCard = ({ info, selectedPlan, session, setSession }) => {
+  const [expandedOption, setExpandedOption] = useState(null);
+
+  const paymentOptions = [
+    {
+      id: "pay-upfront",
+      title: "Pay Upfront - Save 10%",
+      description:
+        "Regular tuition is $14,999. Pay upfront and get 10% off. Or spread it through easy 3 months.",
+      details: "Save money by paying the full tuition upfront.",
+      bullets: [
+        "One-time payment discount",
+        "No monthly payment stress",
+        "Full access to all course materials",
+      ],
+    },
+    {
+      id: "income-based",
+      title: "Income-Based Payments (IBR)",
+      description:
+        "Offered through ISA. Your payments only start once you earn $35k+. Payments scale with income, and stop at maximum.",
+      details: "Pay only when you start earning. Payments scale with your income.",
+      bullets: [
+        "No upfront payment required",
+        "Payments start only after earning $35k+",
+        "Payments scale with your income level",
+      ],
+    },
+    {
+      id: "payment-plans",
+      title: "Payment Plans & Loans",
+      description:
+        "Finance your tuition through Climb or Ascent credit-based or income-based loans. 3.5% to 17.99% APR, some plans deferred for 6 months.",
+      details: "Flexible financing options through our partners.",
+      bullets: [
+        "Multiple financing partners available",
+        "Competitive interest rates",
+        "Deferred payment options available",
+      ],
+    },
+  ];
+
+  return (
+    <Div
+      background={Colors.white}
+      border="1px solid #E5E5E5"
+      borderRadius="12px"
+      padding="24px"
+      maxWidth="600px"
+      width="100%"
+      display="block"
+      boxShadow="0 2px 8px rgba(0,0,0,0.1)"
+    >
+      <Div display="block" margin="0 0 24px 0">
+        <H3 fontSize="18px" fontWeight="600" color={Colors.black} margin="0 0 8px 0" textAlign="center">
+          {"Explore financial options"}
+        </H3>
+
+        <Div alignItems="center" justifyContent="center" margin="0 0 16px 0">
+          <H2 fontSize="32px" fontWeight="700" color={Colors.blue} margin="0 8px 0 0">{"$299"}</H2>
+          <Paragraph fontSize="16px" color={Colors.black} margin="0">{"/month or less"}</Paragraph>
+        </Div>
+
+        <Paragraph fontSize="14px" color="#666666" textAlign="center" margin="0 0 16px 0">
+          {"Invest in your future, stress-free"}
+        </Paragraph>
+
+        <Paragraph fontSize="12px" color="#999999" textAlign="center" margin="0 0 20px 0">
+          {"We work with trusted partners to offer flexible and affordable financing—so you can focus on your future, not your fees."}
+        </Paragraph>
+
+        <Div justifyContent="center" alignItems="center" gap="12px" margin="0 0 20px 0">
+          <Div padding="4px 8px" border="1px solid #E5E5E5" borderRadius="4px" fontSize="12px" color="#666666">{"Ascent"}</Div>
+          <Div padding="4px 8px" border="1px solid #E5E5E5" borderRadius="4px" fontSize="12px" color="#666666">{"Climb"}</Div>
+          <Div padding="4px 8px" border="1px solid #E5E5E5" borderRadius="4px" fontSize="12px" color="#666666">{"Quotanda"}</Div>
+        </Div>
+      </Div>
+
+      <Div display="block" margin="0 0 24px 0">
+        <Paragraph fontSize="14px" fontWeight="600" color={Colors.black} margin="0 0 12px 0">
+          {"Other payment options"}
+        </Paragraph>
+
+        {paymentOptions.map((option) => (
+          <PaymentOptionCard
+            key={option.id}
+            option={option}
+            isExpanded={expandedOption === option.id}
+            onToggle={() => setExpandedOption(expandedOption === option.id ? null : option.id)}
+          />
+        ))}
+      </Div>
+
+      <Div display="block">
+        <Paragraph fontSize="12px" color="#666666" textAlign="center" margin="0 0 16px 0">
+          {"Book a call with an advisor to find a payment option or special offer that works for you!"}
+        </Paragraph>
+
+        <Div gap="12px" justifyContent="center" flexWrap="wrap">
+          <Link to={`${info?.apply_button?.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""}`}>
+            <Button
+              variant="full"
+              background={Colors.blue}
+              textColor={Colors.white}
+              fontSize="14px"
+              padding="12px 24px"
+              borderRadius="6px"
+              fontWeight="600"
+              onClick={() => {
+                if (selectedPlan) {
+                  setSession({ ...session, utm: { ...session.utm, utm_plan: selectedPlan } });
+                }
+              }}
+            >
+              {"Book a call →"}
+            </Button>
+          </Link>
+
+          <Button
+            variant="outline"
+            background="transparent"
+            textColor={Colors.blue}
+            fontSize="14px"
+            padding="12px 24px"
+            borderRadius="6px"
+            border={`1px solid ${Colors.blue}`}
+            fontWeight="600"
+          >
+            {"More details"}
+          </Button>
+        </Div>
+      </Div>
+    </Div>
+  );
+};
+
+const MobileFinancialDropdown = ({ info, selectedPlan, session, setSession }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <Div display_tablet="none" width="100%" margin="20px 0">
+      <Div
+        background={Colors.white}
+        border="1px solid #E5E5E5"
+        borderRadius="8px"
+        padding="16px"
+        cursor="pointer"
+        onClick={() => setIsOpen(!isOpen)}
+        justifyContent="space-between"
+        alignItems="center"
+      >
+        <Paragraph fontSize="16px" fontWeight="600" color={Colors.black}> {"Explore financial options"} </Paragraph>
+        <Icon icon={isOpen ? "chevron-up" : "chevron-down"} width="20px" height="20px" color="#666666" />
+      </Div>
+      {isOpen && (
+        <Div margin="12px 0 0 0">
+          <FinancialOptionsCard info={info} selectedPlan={selectedPlan} session={session} setSession={setSession} />
+        </Div>
+      )}
+    </Div>
   );
 };
 
@@ -777,6 +990,22 @@ const PricesAndPayment = (props) => {
           </Div>
         </Div>
       </Grid>
+      {/* Financial explainer card (desktop/tablet) */}
+      <Div display_tablet="flex" justifyContent="center" width="100%">
+        <FinancialOptionsCard
+          info={info}
+          selectedPlan={selectedPlan}
+          session={session}
+          setSession={setSession}
+        />
+      </Div>
+      {/* Financial explainer card (mobile dropdown) */}
+      <MobileFinancialDropdown
+        info={info}
+        selectedPlan={selectedPlan}
+        session={session}
+        setSession={setSession}
+      />
 
       <Div
         display="block"
@@ -944,6 +1173,8 @@ const PricesAndPayment = (props) => {
           </>
         )}
       </Div>
+      {/* Stats/chart section */}
+      <ChartSection info={info} currentLocation={currentLocation} />
       <GridContainer
         columns_tablet="12"
         gridGap="0"
