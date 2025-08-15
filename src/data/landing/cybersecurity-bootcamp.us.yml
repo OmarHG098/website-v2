@@ -88,8 +88,13 @@ follow_bar:
     text: "Call"
     number: ""
 
+program_details:
+  position: 3
+  heading: "Cybersecurity Bootcamp"
+  sub_heading: " "
+
 components:
-  - name: cybersecurity_demand
+  - name: cybersecurity-demand
     position: 1
     layout: two_column_left
     proportions: [6, 6]
