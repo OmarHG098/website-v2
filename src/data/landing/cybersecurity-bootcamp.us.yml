@@ -1,5 +1,5 @@
 meta_info:
-  slug: cybersecurity-bootcamp-4geeks
+  slug: cybersecurity-bootcamp
   title: "Launch Your Cybersecurity Career With 4Geeks Academy"
   description: "Get certified and start your cybersecurity career today."
   visibility: "visible"
@@ -28,9 +28,9 @@ form:
 
 header_data:
   background: "#ffffff"
-  tagline: "Launch Your Cybersecurity Career<br>With 4Geeks Academy"
+  tagline: "Demand for Cibersecurity Specialists is Exploding.<br>We're here to get you in."
   tagline_color: "#1c1c1c"
-  sub_heading: "Master the skills to protect systems and data in a high-demand field."
+  sub_heading: " "
   form_styles:
     background: "#FFB718"
     color: "black"
@@ -38,6 +38,42 @@ header_data:
       background: "black"
   badge: "../../../static/images/badges/course-report-best-coding-bootcamps-badge-2025.png"
   image_filter: brightness(0.9)
+
+features:
+  marginTop: 0px
+  text: " "
+  bullets:
+    - Become a Cybersecurity Specialist in just 16 weeks!
+    - Affordable tuition and unbeatable financing plans
+    - Unlimited mentorship and 1:1 career support to help you succeed. For life!
+    # - "Part-time: Immerse yourself in a flexible schedule, perfect for busy professionals and students."
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
 
 follow_bar:
   position: "top"
@@ -52,12 +88,22 @@ follow_bar:
     text: "Call"
     number: ""
 
-features:
-  marginTop: 0px
-  text: "Master the skills to protect systems and data in a high-demand field."
-  bullets:
-    - "Learn ethical hacking and penetration testing techniques"
-    - "Master network security and cryptography fundamentals"
-    - "Gain hands-on experience with real-world security tools"
-    - "Prepare for industry-recognized cybersecurity certifications"
-  styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
+components:
+  - name: cybersecurity_demand
+    position: 1
+    layout: two_column_left
+    proportions: [6, 6]
+    background: "#FFFFFF"
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center" }'
+      src: "/images/landing/feliz-empresario.png"
+      shadow: false
+    heading:
+      text: " Why Cibersecurity is a Winning Career Move"
+      font_size: ["30px", "30px", "30px", "25px", "25px"]
+      style: '{ "font-weight": "600", "color": "#000" }'
+    content:
+      text: |
+        <strong style="font-weight: 800;">Near-zero unemployment:</strong>: With over 570,000 cybersecurity roles currently unfilled in the U.S., qualified professionals find work fast. <br><br>
+        <strong style="font-weight: 800;">Fast-growing demand:</strong> Cybersecurity jobs are projected to grow 33% by 2033—more than four times the average for all occupations.<br><br>
+        <strong style="font-weight: 800;">A booming global market:</strong> The cybersecurity industry is expected to triple in value, from $215B in 2025 to $697B by 2035.
