@@ -282,7 +282,7 @@ const PaymentOptionCard = ({ option, isExpanded, onToggle }) => {
             {option.description}
           </Paragraph>
         </Div>
-        <Icon icon={isExpanded ? "chevron-up" : "chevron-down"} width="16px" height="16px" color="#666666" />
+        <Icon icon={isExpanded ? "angleup" : "angledown"} width="16px" height="16px" color="#666666" />
       </Div>
 
       {isExpanded && (
@@ -472,7 +472,7 @@ const MobileFinancialDropdown = ({ info, selectedPlan, session, setSession }) =>
         alignItems="center"
       >
         <Paragraph fontSize="16px" fontWeight="600" color={Colors.black}> {"Explore financial options"} </Paragraph>
-        <Icon icon={isOpen ? "chevron-up" : "chevron-down"} width="20px" height="20px" color="#666666" />
+        <Icon icon={isOpen ? "angleup" : "angledown"} width="20px" height="20px" color="#666666" />
       </Div>
       {isOpen && (
         <Div margin="12px 0 0 0">
