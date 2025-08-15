@@ -93,8 +93,10 @@ program_details:
   heading: "Cybersecurity Bootcamp"
   sub_heading: " "
 
+
+
 components:
-  - name: cybersecurity-demand
+  - name: cybersecurity_demand
     position: 1
     layout: two_column_left
     proportions: [6, 6]
@@ -112,3 +114,45 @@ components:
         <strong style="font-weight: 800;">Near-zero unemployment:</strong>: With over 570,000 cybersecurity roles currently unfilled in the U.S., qualified professionals find work fast. <br><br>
         <strong style="font-weight: 800;">Fast-growing demand:</strong> Cybersecurity jobs are projected to grow 33% by 2033—more than four times the average for all occupations.<br><br>
         <strong style="font-weight: 800;">A booming global market:</strong> The cybersecurity industry is expected to triple in value, from $215B in 2025 to $697B by 2035.
+
+  - name: what_sets_4geeks_apart
+    position: 5
+    layout: two_column_right
+    proportions: [5, 7]
+    background: "#FFFFFF"
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center", "margin": "10px" }'
+      src: "/images/landing/blonde-girl-laptop.png"
+      shadow: false
+    heading:
+      text: "What Sets 4Geeks Apart: AI-Forward Skills, Unlimited Mentorship and Career Support"
+      font_size: ["38px", "34px", "34px", "34px", "34px"]
+      style: '{ "font-weight": "400", "text-align": "center", "color": "#000", "padding": "10px" }'
+    sub_heading:
+      text: "Everything You Need to Launch and Grow a Career in Tech"
+      font_size: ["26px", "26px", "24px", "24px", "22px"]
+      style: '{ "font-weight": "400", "text-align": "justify", "color": "#000", "padding": "10px"}'
+    bullets:
+      item_style: '{ "padding": "0 0 0 10px", "font-weight": "100" }'
+      items:
+        - heading: "Get ahead of the curve with next-gen tech skills."
+          text: "Master industry-relevant, AI-powered tools guided by a cutting-edge curriculum."
+          icon: "check"
+        - heading: "Access unlimited mentorship and career support."
+          text: "No need to learn alone — get 1:1 support from expert human mentors whenever you need it, for life."
+          icon: "check"
+        - heading: "Enjoy hyperpersonalized learning, at every level."
+          text: "Move faster and smarter with AI-powered feedback tailored to your journey, plus an unmatched student-to-teacher ratio."
+          icon: "check"
+        - heading: "Join an active tech community."
+          text: "Stay connected and supported through our Slack channels — with peers, mentors, and alumni ready to help you grow."
+          icon: "check"
+    button:
+      text: "Learn More"
+      color: "white"
+      background: "black"
+      path: "#leadform_header"
+
+
+
+
