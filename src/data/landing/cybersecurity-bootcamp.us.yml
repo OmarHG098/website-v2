@@ -3,12 +3,15 @@ meta_info:
   title: "Launch Your Cybersecurity Career With 4Geeks Academy"
   description: "Get certified and start your cybersecurity career today."
   visibility: "visible"
-  image: "/images/bg/cybersecurity-bg.jpg"
+  image: "/images/bg/remote.jpeg"
   template: "landing_a"
   utm_course: ["cybersecurity"]
   utm_location: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online"]
   automation: soft
+  keywords: " "
+  redirects: []
   tag: request_more_info
+
 
 navbar:
   buttonText: "Apply Now"
