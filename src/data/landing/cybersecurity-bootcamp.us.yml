@@ -114,6 +114,11 @@ rating_reviews:
       image: "../../../static/images/badges/google.png"
       rating: 5
       url: ""
+geeks_vs_others:
+  position: 11
+  heading: "Compare our coding bootcamp to the competition"
+  # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  total_rows: 5
 
 components:
   - name: cybersecurity_demand
