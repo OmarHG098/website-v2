@@ -1,0 +1,60 @@
+meta_info:
+  slug: cybersecurity-bootcamp-4geeks
+  title: "Launch Your Cybersecurity Career With 4Geeks Academy"
+  description: "Get certified and start your cybersecurity career today."
+  visibility: "visible"
+  image: "/images/bg/cybersecurity-bg.jpg"
+  template: "landing_a"
+  utm_course: ["cybersecurity"]
+  utm_location: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online"]
+  automation: soft
+  tag: request_more_info
+
+navbar:
+  buttonText: "Apply Now"
+  buttonUrl: "#leadform_header"
+  logoUrl: "#"
+
+form:
+  fields: ["full_name", "phone", "email"]
+  heading: "Get Course Details"
+  motivation: "Apply to receive detailed information about our Cybersecurity Bootcamp."
+  button_label: "Apply Now"
+  redirect: "/us/thank-you/"
+  hide_form: false
+
+header_data:
+  background: "#ffffff"
+  tagline: "Launch Your Cybersecurity Career<br>With 4Geeks Academy"
+  tagline_color: "#1c1c1c"
+  sub_heading: "Master the skills to protect systems and data in a high-demand field."
+  form_styles:
+    background: "#FFB718"
+    color: "black"
+    button:
+      background: "black"
+  badge: "../../../static/images/badges/course-report-best-coding-bootcamps-badge-2025.png"
+  image_filter: brightness(0.9)
+
+follow_bar:
+  position: "top"
+  content:
+    text: "Get More Information About Our Cybersecurity Bootcamp"
+    text_mobile: "Get Info on Cybersecurity Bootcamp"
+    font_size: ["25px", "25px", "25px", "20px", "18px"]
+  button:
+    text: "Apply Now"
+    path: "#leadform_header"
+  phone:
+    text: "Call"
+    number: ""
+
+features:
+  marginTop: 0px
+  text: "Master the skills to protect systems and data in a high-demand field."
+  bullets:
+    - "Learn ethical hacking and penetration testing techniques"
+    - "Master network security and cryptography fundamentals"
+    - "Gain hands-on experience with real-world security tools"
+    - "Prepare for industry-recognized cybersecurity certifications"
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
