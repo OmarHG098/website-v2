@@ -93,7 +93,27 @@ program_details:
   heading: "Cybersecurity Bootcamp"
   sub_heading: " "
 
-
+rating_reviews:
+  background: "#FBFBFB"
+  position: 7
+  heading: "Consistently Ranked Among the Best by SwitchUp, Forbes and More"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
 
 components:
   - name: cybersecurity_demand
