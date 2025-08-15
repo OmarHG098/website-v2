@@ -173,6 +173,62 @@ components:
       background: "black"
       path: "#leadform_header"
 
+  # Two Columns - Rigo
+  - name: two_columns_rigo
+    position: 9
+    layout: two_column_right
+    proportions: [7, 5]
+    justify: "center" #start,end,center
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center", "border" : "10px solid black", "border-radius": "4px"}'
+      src: "/images/landing/ai-mentor.jpg"
+      shadow: true
+    video: "6m1Jyya7eCc"
+    heading: 
+      text: "Welcome to Hyperpersonalized Learning"
+      font_size: ["33px", "33px", "33px", "33px", "33px"]
+      style: '{ "lineHeight": "30px" }'
+      heading_image:
+        src: "/images/rigobot-logo.png"
+    sub_heading:
+      text: "Progress Like Never Before"
+      font_size: ["16px","16px","16px","16px","16px"]
+    content:
+      style: '{ "font-size":"16px", "margin":"15px 0" }'
+      text: |
+        <p>We're all different—yet education has always been one-size-fits-all. At 4Geeks, we've built a better way to learn: <strong style="text-decoration: none; color: #000000; font-weight: 700;">one that adapts to you.</strong></p>
+        <br />
+        <ul>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700; ">✓ Our custom-built AI</strong>, Rigobot, tracks your activity and identifies your strengths, struggles, and gaps—delivering real-time feedback tailored to maximize your learning.</li>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Unlimited 1:1 sessions with expert mentors</strong> give you live human support whenever you need it—so you never get stuck or lose momentum.</li>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Career coaches work with you individually</strong> to build your confidence and strategy—helping you stand out on paper, in interviews, and on AI-filtered platforms like ATS systems and LinkedIn.</li>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ 1:7 teacher-student ratio in live classes</strong> means you get real attention—so your questions get answered and your learning stays on track.</li>
+        </ul>
+        <br />
+        <p>That's the power of hyperpersonalized learning: you move faster, learn smarter, and gain the kind of real confidence that lasts beyond graduation.</p>
+      bullets:
+      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+      items:
+        - heading: "Meet Rigobot, our AI coding assistant:"
+          text: |
+            ✓ Instant tutoring as you code.
+            <br />
+            ✓ Skill evaluations to track your progress.
+            <br />
+            ✓ Expert bug fixing assistance.
+            <br /><br />
+             It perfectly complements our human mentorship program!
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+          icon_color: '#25BF6C'
+        - heading: "Learnpack, our interactive learning software, provides:"
+          text: |
+             ✓ There are hundreds of interactive exercises to help you master and retain skills.
+             <br />
+             ✓ Automated tests to help track your progress.
+             <br />
+             ✓ Structured practice.
+             <br />
+
 
 
 
