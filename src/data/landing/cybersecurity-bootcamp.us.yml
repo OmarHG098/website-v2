@@ -20,8 +20,8 @@ navbar:
 
 form:
   fields: ["full_name", "phone", "email"]
-  heading: "Get Course Details"
-  motivation: "Apply to receive detailed information about our Cybersecurity Bootcamp."
+  heading: "Get more information"
+  motivation: "Fill out the form to receive detailed information about 4Geeks Academy and all the courses we offer, delivered straight to your inbox."
   button_label: "Apply Now"
   redirect: "/us/thank-you/"
   hide_form: false
@@ -32,8 +32,8 @@ header_data:
   tagline_color: "#1c1c1c"
   sub_heading: " "
   form_styles:
-    background: "#FFB718"
-    color: "black"
+    background: "#0084FF"
+    color: "white"
     button:
       background: "black"
   badge: "../../../static/images/badges/course-report-best-coding-bootcamps-badge-2025.png"
@@ -43,7 +43,7 @@ features:
   marginTop: 0px
   text: " "
   bullets:
-    - Become a Cybersecurity Specialist in just 16 weeks!
+    - Become an AI-fluent Cybersecurity Specialist in just 16 weeks!
     - Affordable tuition and unbeatable financing plans
     - Unlimited mentorship and 1:1 career support to help you succeed. For life!
     # - "Part-time: Immerse yourself in a flexible schedule, perfect for busy professionals and students."
@@ -120,8 +120,20 @@ geeks_vs_others:
   # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
 
+why_4geeks:
+  position: 13
+  heading: "Student Stories: How 4Geeks Helped Launch Their Tech Careers"
+  sub_heading: ""
+
+who_is_hiring:
+  position: 19
+  limit: 4
+  heading: "Who is hiring our students?"
+  sub_heading: "Top companies in Florida and beyond are hiring 4Geeks graduates—because they’re job-ready, AI-fluent, and trained in the skills that matter."
+
+
 components:
-  - name: cybersecurity_demand
+  - name: cybersecurity-demand
     position: 1
     layout: two_column_left
     proportions: [6, 6]
@@ -140,7 +152,7 @@ components:
         <strong style="font-weight: 800;">Fast-growing demand:</strong> Cybersecurity jobs are projected to grow 33% by 2033—more than four times the average for all occupations.<br><br>
         <strong style="font-weight: 800;">A booming global market:</strong> The cybersecurity industry is expected to triple in value, from $215B in 2025 to $697B by 2035.
 
-  - name: what_sets_4geeks_apart
+  - name: what-sets-4geeks-apart
     position: 5
     layout: two_column_right
     proportions: [5, 7]
@@ -179,7 +191,7 @@ components:
       path: "#leadform_header"
 
   # Two Columns - Rigo
-  - name: two_columns_rigo
+  - name: two-columns-rigo
     position: 9
     layout: two_column_right
     proportions: [7, 5]
@@ -234,6 +246,66 @@ components:
              ✓ Structured practice.
              <br />
 
+  - name: how-it-works
+    position: 15
+    background: "#0084FF"
+    layout: iconogram
+    swipable: true
+    heading:
+      text: "Do our Bootcamps Deliver Results You Can Count On?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "color": "white" }'
+    sub_heading:
+      text: 'Yes — and we’ve got the numbers to back it up.'
+      font_size: ["20px", "20px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%", "color": "white"}'      
+    icons:
+      - icon: "graduation-2"
+        color: "#0084FF"
+        title: "Job Placement Rate"
+        content: "84% of graduates were hired"
+      - icon: "briefcase-2"
+        color: "#FF0000"
+        title: "Avergage time to get hired"
+        content: "6 months after graduation"
+      - icon: "stairswflag"
+        color: "#BE8BFF"
+        title: "Salary Increase"
+        content: "55% increase after graduation"
+
+  - name: some_id
+    position: 17
+    layout: two_column_left
+    proportions: [6, 6]
+    justify: "center"
+    image:
+     style: '{ "backgroundSize": "contain", "height": ["500px", "500px", "500px", "500px", "300px"], "minHeight": "auto" }'
+     src: "/images/landing/feliz-empresario-laptop-3.png"
+     shadow: false
+    section_heading:
+     text: "Finance your future"
+    heading:
+     text: "Invest in your Career with Flexible Payment Plans and a Job Guarantee"
+     style: '{ "fontWeight": 200, "marginBottom": "24px", "marginTop": "0px", "fontSize": "22px" }'
+    content:
+     text: |
+       <p>We want you to focus on what matters: learning, growing, and launching your tech career—not stressing about how to pay for it.</p>
+       <br/>
+       <p> That's why we make financing your education as simple and flexible as possible:</p>
+       <br/>
+       <ul>
+         <li>✓ Among the most affordable tuitions for a top bootcamp</li>
+         <li>✓ Payment plans starting under $299/month</li>
+         <li>✓ Job Guarantee available (with qualifying terms)</li>
+       </ul>
+       <br/>
+       <p>And if you need one more reason to feel confident: In 2024, <strong style="text-decoration: none; color: #000000; font-weight: 700;">Forbes</strong> named us the <a href="https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition" style="text-decoration: none; color: #000000; font-weight: 700;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">best bootcamp for students on a budget<span style="font-size: 0.8em;">↗</span></a>—recognizing our commitment to keeping tech education accessible.</p>
+       <p><strong style="text-decoration: none; color: #000000; font-weight: 700;">Have questions?</strong> Our admissions team will help you find your best-fit financing plan.</p>
+    button:
+     text: "GET IN TOUCH"
+     color: "white"
+     background: "blue"
+     path: "#leadform_bottom"
 
 
 
