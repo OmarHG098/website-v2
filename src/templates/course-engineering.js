@@ -708,6 +708,7 @@ export const query = graphql`
             url
             label
           }
+          text
         }
       }
     }
