@@ -263,6 +263,11 @@ const UpcomingDates = ({
   }, [session]);
   const buttonText = session?.location?.button.apply_button_text;
 
+  const isAliasLocation = (slug) => {
+    const mapped = session?.academyAliasDictionary?.[slug];
+    return Boolean(mapped && mapped !== slug);
+  };
+
   return (
     <GridContainer
       id={id}
@@ -489,7 +494,12 @@ const UpcomingDates = ({
                               }
                             >
                               <Paragraph textAlign="left" color={Colors.blue}>
-                                {cohort.syllabus_version.name}
+                                {(() => {
+                                  const selectedSlug = academy?.value || location || cohort.academy.slug;
+                                  return isAliasLocation(selectedSlug) || cohort.academy.city.name === "Remote"
+                                    ? content.remote
+                                    : `${cohort.academy.city.name} (${content.remote})`;
+                                })()}
                               </Paragraph>
                             </Link>
                           </Div>
@@ -510,9 +520,12 @@ const UpcomingDates = ({
                                 }
                               >
                                 <Paragraph textAlign="left" color={Colors.blue}>
-                                  {cohort.academy.city.name === "Remote"
-                                    ? content.remote
-                                    : `${cohort.academy.city.name} (${content.remote})`}
+                                  {(() => {
+                                    const selectedSlug = academy?.value || location || cohort.academy.slug;
+                                    return isAliasLocation(selectedSlug) || cohort.academy.city.name === "Remote"
+                                      ? content.remote
+                                      : `${cohort.academy.city.name} (${content.remote})`;
+                                  })()}
                                 </Paragraph>
                               </Link>
                             </Div>
