@@ -83,6 +83,11 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       yml.successful_stories.testimonials.includes(elem.slug)
     );
 
+  // Build list of course slugs that have job guarantee enabled
+  const jobGuaranteeSlugs = data.allCourseYaml.edges
+    .filter(({ node }) => node.meta_info?.job_guarantee)
+    .map(({ node }) => node.meta_info.slug);
+
   return (
     <>
       <Div
@@ -505,10 +510,13 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         id="choose-program"
         lang={pageContext.lang}
         programs={data.allChooseYourProgramYaml.edges[0].node.programs.filter(
-          (p) =>
-            p.title === "Full Stack Development with AI" ||
-            p.title === "Data Science and ML" ||
-            p.title === "Cybersecurity"
+          (p) => {
+            const linkSlug = p.link
+              ?.split("/")
+              .filter(Boolean)
+              .pop();
+            return jobGuaranteeSlugs.includes(linkSlug);
+          }
         )}
         title={yml.choose_program?.title}
         paragraph={yml.choose_program?.paragraph}
@@ -933,6 +941,7 @@ export const query = graphql`
             bc_slug
             visibility
             show_in_apply
+            job_guarantee
           }
           apply_form {
             label
