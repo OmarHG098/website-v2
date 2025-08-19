@@ -83,6 +83,11 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       yml.successful_stories.testimonials.includes(elem.slug)
     );
 
+  // Build list of course slugs that have job guarantee enabled
+  const jobGuaranteeSlugs = data.allCourseYaml.edges
+    .filter(({ node }) => node.meta_info?.job_guarantee)
+    .map(({ node }) => node.meta_info.slug);
+
   return (
     <>
       <Div
@@ -436,34 +441,53 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             />
           </Modal>
         </Container>
-        <Container
-          id="two_column_right"
-          flexDirection="column"
-          margin="0"
-          padding="40px 0"
-          padding_sm="50px 0"
-          padding_tablet="0"
-          padding_md="0 50px"
-          padding_lg="0"
-        >
-          <TwoColumn
-            left={{
-              image: yml.two_columns_video?.image,
-              video: yml.two_columns_video?.video,
-            }}
-            right={{
-              heading: yml.two_columns_video?.heading,
-              sub_heading: yml.two_columns_video?.sub_heading,
-              bullets: yml.two_columns_video?.bullets,
-              content: yml.two_columns_video?.content,
-              disclosure: yml.two_columns_video?.disclosure,
-              button: yml.two_columns_video?.button,
-            }}
-            proportions={yml.two_columns_video?.proportions}
-            session={session}
-          />
-        </Container>
+        {/* Moved the video section outside this Div to place WeTrust first */}
       </Div>
+      {/* WeTrust: 1. Does JG Deliver Results You can count on */}
+      <div>
+        <WeTrust
+          id="we-trust-section"
+          margin="0"
+          padding="0"
+          padding_md="0"
+          padding_lg="0"
+          padding_tablet="0 !important"
+          width="100%"
+          width_md="100%"
+          width_tablet="100%"
+          maxWidth="1280px"
+          we_trust={yml.we_trust_section}
+        />
+      </div>
+      {/* Video: 2. See How one graduate turned our JG into a real career */}
+      <Container
+        id="two_column_right"
+        flexDirection="column"
+        margin="0"
+        padding="40px 0"
+        padding_sm="50px 0"
+        padding_tablet="0"
+        padding_md="0 50px"
+        padding_lg="0"
+      >
+        <TwoColumn
+          left={{
+            image: yml.two_columns_video?.image,
+            video: yml.two_columns_video?.video,
+          }}
+          right={{
+            heading: yml.two_columns_video?.heading,
+            sub_heading: yml.two_columns_video?.sub_heading,
+            bullets: yml.two_columns_video?.bullets,
+            content: yml.two_columns_video?.content,
+            disclosure: yml.two_columns_video?.disclosure,
+            button: yml.two_columns_video?.button,
+          }}
+          proportions={yml.two_columns_video?.proportions}
+          session={session}
+        />
+      </Container>
+      {/* Eligibility: 3. Who's Eligible? */}
       <TwoColumn
         padding="30px 20px"
         padding_sm="40px 30px"
@@ -482,20 +506,26 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       />
 
 
+      {/* Programs: 4. Job Guarantee Available for our top tech programs */}
       <ChooseYourProgram
         id="choose-program"
         lang={pageContext.lang}
         programs={data.allChooseYourProgramYaml.edges[0].node.programs.filter(
-          (p) =>
-            p.title === "Full Stack Development with AI" ||
-            p.title === "Data Science and ML" ||
-            p.title === "Cybersecurity"
+          (p) => {
+            const linkSlug = p.link
+              ?.split("/")
+              .filter(Boolean)
+              .pop();
+            return jobGuaranteeSlugs.includes(linkSlug);
+          }
         )}
         title={yml.choose_program?.title}
         paragraph={yml.choose_program?.paragraph}
         background={Colors.veryLightBlue3}
         padding="0"
       />
+      {/* Removed original WeTrust placement to avoid duplication */}
+      {/*
       <div>
         <WeTrust
           id="we-trust-section"
@@ -511,7 +541,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           we_trust={yml.we_trust_section}
         />
       </div>
+      */}
 
+      {/* Why Confidence: 5. Why we have the confidence to offer a Job Guarantee */}
       <Container
         id="two_column_right_section"
         flexDirection="column"
@@ -537,6 +569,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         />
       </Container>
 
+      {/* Commented out: Not in requested order */}
+      {/**
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
@@ -572,6 +606,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           session={session}
         />
       </Container>
+      */}
+
+      {/* Refund: 6. How the refund works */}
       <Container
         display="block"
         margin="20px auto"
@@ -905,6 +942,7 @@ export const query = graphql`
             bc_slug
             visibility
             show_in_apply
+            job_guarantee
           }
           apply_form {
             label

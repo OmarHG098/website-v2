@@ -56,13 +56,15 @@ two_column_left:
       <span style="color: #0097CD; ">✓</span> Complete all coursework and projects
       <br><br>
       <span style="color: #0097CD; ">✓</span> Follow our career team's guidance
+      <br><br>
+      <span style="color: #0097CD; ">✓</span> Conditions apply depending on your U.S. state
     font_size: ["20px", "20px", "18px", "16px", "14px"]
     style: '{ "text-align": "left", "color": "#444", "line-height": "1.1", "padding": "10px"}'
   button:
     text: "Apply"
     color: "white"
     background: "black"
-    hover_color: "black"
+    hover_color: "white"
     path: "/us/apply"
 
 we_trust_section:
@@ -126,7 +128,7 @@ two_column_right:
     text: "Apply"
     color: "white"
     background: "black"
-    hover_color: "black"
+    hover_color: "white"
     path: "/us/apply"
 
 successful_stories:
@@ -202,5 +204,5 @@ two_column_geek:
     text: "Learn More"
     color: "white"
     background: "black"
-    hover_color: "black"
+    hover_color: "white"
     path: "/us/apply"
