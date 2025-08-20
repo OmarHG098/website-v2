@@ -1,0 +1,11 @@
+heading: "Explora más recursos"
+sub_heading: "Descubre herramientas y programas gratuitos para ayudarte en tu camino de programación, o conoce nuestra garantía de empleo."
+resources:
+  - title: "Explora recursos gratuitos"
+    description: "Comienza con tutoriales, plantillas y guías — totalmente gratis."
+    button_text: "Visitar recursos gratis"
+    url: "https://4geeks.com/"
+  - title: "Asegura tu futuro"
+    description: "Conoce cómo respaldamos tu éxito con nuestra garantía de empleo y te ayudamos a conseguir tu primer trabajo en tecnología."
+    button_text: "Conoce la garantía de empleo"
+    url: "https://4geeksacademy.com/us/job-guarantee"
