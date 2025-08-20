@@ -35,10 +35,10 @@ meta_info:
 navbar:
 form:
 header_data:
-features:
 
 # 2. Recommended Components (Second)
 short_badges:
+features:
 follow_bar:
 
 # 3. Optional Standalone Components (Third - ABOVE components section)
@@ -89,6 +89,7 @@ meta_info:
   tag: "request_more_info"        # MODIFIABLE: Lead tag
   keywords: " "                  #KEEP EMPTY: (DEFAULT)
   redirects: []                  #KEEP EMPTY: (DEFAULT)
+
 ```
 
 ### navbar (Required - Fixed Keys, Modifiable Values)
