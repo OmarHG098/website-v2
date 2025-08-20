@@ -16,10 +16,10 @@ meta_info:
   cohort_exclude_regex: ['usa-\d{1,10}-spanish']
   home_video: "https://www.videoask.com/frhjxdk8z"
 
-seo_title: "Orlando Coding Bootcamp with Job Guarantee"
+seo_title: "Orlando Coding Bootcamp"
 header:
   tagline: "4Geeks Academy in Orlando"
-  sub_header: "Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist in 18 weeks or less! "
+  sub_header: "Become a Full-Stack Developer in 20 weeks! "
   sub_header_highlighted: "All programs are taught online"
   paragraph: ""
   image: "../../../static/images/locations/orlando-header.png"
@@ -61,7 +61,6 @@ custom_bar:
 
 info_box:
   heading: "Find us in Orlando"
-  address: "450 S Orange Ave, Orlando, FL 32801"
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.0886003492096!2d-81.37933699999999!3d28.5370565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77b01bf992b61%3A0xaecd468d9c4f262c!2sCNL%20Center%20City%20Commons%2C%20450%20S%20Orange%20Ave%2C%20Orlando%2C%20FL%2032801%2C%20USA!5e0!3m2!1sen!2sve!4v1684182525637!5m2!1sen!2sve"
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
