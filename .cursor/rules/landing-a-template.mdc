@@ -87,6 +87,9 @@ meta_info:
   utm_location: ["downtown-miami"] # MODIFIABLE: Location array
   automation: "soft"              # MODIFIABLE: soft, strong
   tag: "request_more_info"        # MODIFIABLE: Lead tag
+  keywords: " "                  #KEEP EMPTY: (DEFAULT)
+  redirects: []                  #KEEP EMPTY: (DEFAULT)
+
 ```
 
 ### navbar (Required - Fixed Keys, Modifiable Values)
@@ -297,7 +300,7 @@ components:
 ```yaml
 - name: job_guarantee_component
   layout: job_guarantee_small
-  position: 13
+  position: 
   heading:
     text: "Enroll with a Job Guarantee"  # MODIFIABLE: Only heading.text is required
 ```

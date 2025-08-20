@@ -494,12 +494,7 @@ const UpcomingDates = ({
                               }
                             >
                               <Paragraph textAlign="left" color={Colors.blue}>
-                                {(() => {
-                                  const selectedSlug = academy?.value || location || cohort.academy.slug;
-                                  return isAliasLocation(selectedSlug) || cohort.academy.city.name === "Remote"
-                                    ? content.remote
-                                    : `${cohort.academy.city.name} (${content.remote})`;
-                                })()}
+                                {cohort.syllabus_version.name}
                               </Paragraph>
                             </Link>
                           </Div>
@@ -521,8 +516,12 @@ const UpcomingDates = ({
                               >
                                 <Paragraph textAlign="left" color={Colors.blue}>
                                   {(() => {
-                                    const selectedSlug = academy?.value || location || cohort.academy.slug;
-                                    return isAliasLocation(selectedSlug) || cohort.academy.city.name === "Remote"
+                                    const selectedSlug =
+                                      academy?.value ||
+                                      location ||
+                                      cohort.academy.slug;
+                                    return isAliasLocation(selectedSlug) ||
+                                      cohort.academy.city.name === "Remote"
                                       ? content.remote
                                       : `${cohort.academy.city.name} (${content.remote})`;
                                   })()}
@@ -568,12 +567,16 @@ const UpcomingDates = ({
                                     textAlign="left"
                                     color={Colors.blue}
                                   >
-                                    {cohort.academy.city.name === "Remote"
-                                      ? `${cohort.academy.city.name} ${content.remote}`
-                                      : cohort.academy.city.name}
-                                    {cohort.academy.slug !== "online" &&
-                                      cohort.academy.city.name !== "Remote" &&
-                                      ` (${content.remote})`}
+                                    {(() => {
+                                      const selectedSlug =
+                                        academy?.value ||
+                                        location ||
+                                        cohort.academy.slug;
+                                      return isAliasLocation(selectedSlug) ||
+                                        cohort.academy.city.name === "Remote"
+                                        ? content.remote
+                                        : `${cohort.academy.city.name} (${content.remote})`;
+                                    })()}
                                   </Paragraph>
                                 </Link>
                               </Div>
