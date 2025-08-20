@@ -56,6 +56,8 @@ two_column_left:
       <span style="color: #0097CD; ">✓</span> Complete all coursework and projects
       <br><br>
       <span style="color: #0097CD; ">✓</span> Follow our career team's guidance
+      <br><br>
+      <span style="color: #0097CD; ">✓</span> Conditions apply depending on your U.S. state
     font_size: ["20px", "20px", "18px", "16px", "14px"]
     style: '{ "text-align": "left", "color": "#444", "line-height": "1.1", "padding": "10px"}'
   button:
@@ -78,8 +80,8 @@ we_trust_section:
       title: "84%"
       text: Job placement rate
     - icon: graduation-2
-      title: "140"
-      text: Days on avg. to get hired
+      title: "3 - 6"
+      text: Months on avg. to get hired
     - icon: chart
       title: "55%"
       text: Salary increase after graduation

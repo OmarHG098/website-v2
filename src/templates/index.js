@@ -2,7 +2,7 @@ import React, { useRef, useState, useContext, useEffect } from "react";
 import { graphql, navigate } from "gatsby";
 import { H1, H2, Paragraph } from "../components/Heading";
 import { GridContainerWithImage, Div } from "../components/Sections";
-import { Button, Colors, StyledBackgroundSection } from "../components/Styling";
+import { Button, Colors, StyledBackgroundSection, MaskedIframe } from "../components/Styling";
 import { Circle } from "../components/BackgroundDrawing";
 import Iconogram from "../components/Iconogram";
 import News from "../components/News";
@@ -63,7 +63,8 @@ const Home = (props) => {
     session.location &&
     session.location.meta_info &&
     session.location.meta_info.home_video;
-  const video = sessionVideo && sessionVideo !== "" ? sessionVideo : indexVideo;
+  // Prioritize the page YML video over the location video
+  const video = indexVideo && indexVideo !== "" ? indexVideo : sessionVideo;
 
   return (
     <>
@@ -213,6 +214,7 @@ const Home = (props) => {
                 position="relative"
                 padding_tablet="50px 0 0 0"
                 padding="0"
+                overflow="hidden"
               >
                 <Circle
                   color="black"
@@ -258,13 +260,13 @@ const Home = (props) => {
                   margin_lg="0 auto"
                   margin_md="0 auto"
                   zIndex="2"
+                  overflow="hidden"
+                  borderRadius="24px"
                 >
-                  <iframe
+                  <MaskedIframe
                     src={video}
                     allow="camera *; microphone *; autoplay *; encrypted-media *; fullscreen *; display-capture *;"
-                    width="100%"
-                    height="100%"
-                    style={{ border: "none", borderRadius: "24px" }}
+                    title="VideoAsk"
                   />
                 </Div>
               </Div>

@@ -184,8 +184,8 @@ staff:
 active_campaign_location_slug: "austin-usa"
 breathecode_location_slug: "austin-usa"
 gdpr_compliant: false # do we need to ask for permision?
-in_person_available: true # important to accept in-person applicants
-online_available: false # important to accept online-only applicants
+in_person_available: false # important to accept in-person applicants
+online_available: true # important to accept online-only applicants
 
 city: "Austin"
 name: "Austin, USA"

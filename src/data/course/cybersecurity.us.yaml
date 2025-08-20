@@ -10,7 +10,8 @@ meta_info:
   keywords: ""
   redirects: []
   related_clusters: ["trends-and-tech"]
-  duration: "P14W"  # 14 weeks duration in ISO 8601 format
+  duration: "P16W"  # 14 weeks duration in ISO 8601 format
+  job_guarantee: true
 
 apply_form:
   label: Cybersecurity
@@ -19,7 +20,7 @@ seo_title: "Cybersecurity Bootcamp"
 
 header:
   title: "Become a Cybersecurity Specialist"
-  paragraph: "The median annual salary for cybersecurity professionals in the U.S. is $103,560."
+  paragraph: "Launch a high-paying career in one of tech’s most in-demand fields. Learn to defend systems and respond to real-world cyber threats with a hands-on, AI-integrated curriculum—designed by leading cybersecurity experts and backed by a job guarantee option."
   image: "../../../static/images/bg/apple-building.jpg"
   image_alt: "apple-building"
 
@@ -53,7 +54,7 @@ instructors:
     linkedin: "https://www.linkedin.com/in/daniela-maissi-43045510b/"
 
 badges:
-  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Listed among the world's <a href='/us/coding-bootcamp'>best coding bootcamps</a> of 2024 by Course Report, one of the top 5 coding bootcamps of 2024 according to Forbes, named best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, rated 4.92/5 on Switchup and more. Licensed by the Florida Department of Education, USA. "
+  paragraph: "Prepare to thrive in today's AI-powered tech industry with hyperpersonalized learning, unlimited 1:1 mentorship, and career support for life. Recognized by Course Report as one of the world's top <a href='/us/coding-bootcamp'> coding bootcamps</a>, chosen by Forbes as best bootcamp for students on a budget (2024), and rated 4.9/5 on SwitchUp. Licensed by the Florida Department of Education. "
 
 two_columns_first:
   proportions: [6, 6]
@@ -117,8 +118,8 @@ two_columns_second:
 overlaped:
   heading: "Cybersecurity Specialists Are in High Demand"
   paragraph: |
-    <strong style="font-weight: 800;">Abundant Job Opportunities</strong>: The demand for cybersecurity professionals continues to surge, with 3.5 million unfilled positions globally in 2023. <br>
-    According to <strong style="font-weight: 800;">the U.S. Bureau of Labor Statistics</strong>, in the U.S. alone, cybersecurity job openings are projected to grow by 32% between 2022 and 2032.<br><br>
+    <strong style="font-weight: 800;">Abundant Job Opportunities</strong>: The demand for cybersecurity professionals continues to surge, with 3.5 million unfilled positions globally in 2023. <br><br>
+    According to <strong style="font-weight: 800;">the U.S. Bureau of Labor Statistics</strong>, in the U.S. alone, cybersecurity job openings are projected to grow by 35% between 2022 and 2032.<br><br>
     <strong style="font-weight: 800;">A sector on the rise</strong>: Gartner's forecast report predicts the information security and risk management market will grow from $185 billion in 2023 to $287 billion in 2027.
   image:
     src: "/images/landing/feliz-empresario.png"
@@ -126,24 +127,41 @@ overlaped:
 
 ## TWO COLUMNS
 two_columns_info:
-  proportions: [6, 6]
+  proportions: [5, 7]
   image:
-    style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
+    style: '{ "backgroundSize": "contain", "background-position": "center", "margin": "10px" }'
     src: "../../images/landing/grupo-ventanas.webp"
-    shadow: false
   heading:
-    text: "Be part of the next Generation of Cybersecurity Professionals"
-    font_size: ["30px", "30px", "30px", "26px", "24px"]
+    text: |-
+      What Sets 4Geeks Apart: 
+      AI-Forward Skills, Unlimited Mentorship and Career Support
+    font_size: ["38px", "34px", "34px", "34px", "34px"]
+    style: '{ "font-weight": "600", "text-align": "center", "color": "#000", "padding": "10px" }'
   sub_heading:
-    text: "Learn from Industry Leaders"
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
-
+    text: "Everything You Need to Launch and Grow a Career in Tech"
+    font_size: ["26px", "26px", "24px", "24px", "22px"]
+    style: '{ "font-weight": "600", "text-align": "justify", "color": "#000", "padding": "10px"}'
   bullets:
+    item_style: '{ "padding": "0 0 0 10px", "font-weight": "100" }'
     items:
-      - text: "Connect with a network of over 6,000 professionals and students worldwide."
-      - text: "Part-time programs that allow you to study without giving up your current life."
-      - text: "Not only do you learn to code, but you also develop practical, real-world applicable skills."
-      - text: "Lifetime access to personalized mentorship to support you at every step of your professional journey."
+    - heading: "Master next-gen tech skills."
+      text: "Learn to build with the AI tools and workflows used by modern cybersecurity teams."
+      icon: "check"
+    - heading: "Get unlimited mentorship and career support."
+      icon: "check" 
+      text: "Work 1:1 with expert mentors and career coaches—during your bootcamp and forever after."
+    - heading: "Learn faster with hyperpersonalized support."
+      icon: "check"
+      text: "Progress with instant AI feedback, personalized guidance, and small class sizes."
+    - heading: "Join a global tech community."
+      text: "Connect with peers, mentors, and alumni and stay supported as you grow."
+      icon: "check"
+  button:
+    text: "Learn More"
+    color: "white"
+    background: "black"
+    hover_color: "white"
+    path: "/us/apply"
 
 ## TWO COLUMNS
 two_columns:
@@ -153,13 +171,12 @@ two_columns:
     src: "../../images/staff/chema-daniela.webp"
     shadow: false
   heading:
-    text: "Become a Specialist with Our Cybersecurity Bootcamp"
+    text: "Be part of the Next Generation of Cybersecurity Professionals"
     font_size: ["30px", "30px", "30px", "26px", "24px"]
   sub_heading:
     text: |-
-      Gain cutting-edge knowledge to protect systems from cyber threats. Our intensive bootcamp equips you with essential skills to identify, analyze, and prevent attacks, utilizing tools such as Nessus, Nmap, Wireshark, and Metasploit.
-      Cybersecurity is a high-stakes industry, and we've partnered with the best. Besides being approved and co-taught by top international expert Chema Alonso, the syllabus was co-created with Daniela Maissi, an EC-Cybersecurity Council member and malware expert with over 5 years of experience and 12+ certifications in cloud computing, OSINT, and IT solutions.
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
+      Our intensive cybersecurity bootcamp equips you with the skills to detect, analyze, and prevent attacks—using industry-standard tools like Nessus, Nmap, Wireshark, and Metasploit—and a cutting-edge curriculum built by top global experts:
+    font_size: ["16px", "16px", "16px", "14px", "14px"]
   button:
     text: "Apply now"
     color: "white"
@@ -167,9 +184,20 @@ two_columns:
     path: "#prices_and_payment"
   bullets:
     items:
-      - text: "Gain practical skills in data loss prevention (DLP) to safeguard sensitive information and prevent data breaches."
-      - text: "Master penetration testing to identify vulnerabilities and enhance cybersecurity defenses against malicious actors."
-      - text: "Learn advanced techniques to fortify Windows, Linux, and other systems against cyber threats."
+      - text: ""
+  content:
+    text: |
+      • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Chema Alonso</strong>, international cybersecurity leader, supports and co-leads the program.<br>
+      <br>
+      • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Daniela Maissi</strong>, EC-Council member and malware specialist with 12+ certifications in cloud security, <strong style="text-decoration: none; color: #000000; font-weight: 700;">OSINT</strong>, and <strong style="text-decoration: none; color: #000000; font-weight: 700;">IT systems</strong>, co-designed the syllabus to ensure industry alignment.
+      <br><br>
+      <strong style="text-decoration: none; color: #000000; font-weight: 700;">What you’ll learn:</strong>
+      <br><br>
+      • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Data Loss Prevention (DLP)</strong> to safeguard sensitive information and prevent breaches.<br>
+      <br>
+      • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Penetration Testing</strong> to uncover vulnerabilities and simulate real attack scenarios.<br>
+      <br>
+      • <strong style="text-decoration: none; color: #000000; font-weight: 700;">System Hardening</strong> for Windows, Linux, and more—develop skills to defend infrastructure against evolving threats.<br><br>
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"
@@ -185,16 +213,16 @@ details:
       Become proficient at managing risks using data loss prevention (DLP) strategies and <strong>navigating compliance with international standards such as ISO 27001 and NIST.</strong>
     list:
       - label: "Duration"
-        content: "14 weeks"
+        content: "16 weeks"
         icon: "duration-icon"
       - label: "Classes"
         content: "3 live online classes per week"
         icon: "book-2"
       - label: "Class Size"
-        content: "Up to 18 people"
+        content: "Max 15 people"
         icon: "people"
       - label: "Certificate"
-        content: "Official 4Geeks Completion Certificate, recognized by multiple institutions."
+        content: "Official 4Geeks Completion Certificate, recognized by multiple institutions"
         link_text: "See Example"
         link: "https://certificate.4geeks.com/07d337ab332f79383002d1f7cf722e3642289a40"
         icon: "certification"
@@ -202,15 +230,16 @@ details:
         content: "No previous experience is required"
         icon: "contract-checked"
       - label: "Language"
-        content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
+        content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus"
         icon: "language"
 
   heading: PROGRAM DETAILS
-  weeks: 14
+  weeks: 16
   week_unit: "wks"
+  weeks_label: "weeks"
   facts:
     - label: "Duration"
-      value: "14 weeks"
+      value: "16 weeks"
     - label: "Commitment"
       value: "20 hrs/week (Mon - Wed - Fri)"
     - label: "Certificate"

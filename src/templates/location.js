@@ -100,6 +100,7 @@ const Location = ({ data, pageContext, yml }) => {
             <span style={{ color: Colors.blue }}>
               {yml.header.sub_header_highlighted}
             </span>
+            {yml.header.paragraph}
           </H3>
           <ChooseProgram
             goTo={goToChooseProgram}
@@ -647,6 +648,7 @@ export const query = graphql`
             url
             label
           }
+          text
         }
       }
     }

@@ -174,11 +174,11 @@ components:
       - icon: "briefcase-2"
         color: "#FF0000"
         title: "Avergage time to get hired"
-        content: "140 days after graduation"
+        content: "3-6 months after graduation"
       - icon: "stairswflag"
         color: "#BE8BFF"
         title: "Salary Increase"
-        content: "55% increase after graduation"
+        content: "55% higher at new job"
   
   - name: program-details
     position: 3
