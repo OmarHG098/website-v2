@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import { H3, H4, Paragraph } from "../Heading";
 import { Div } from "../Sections";
-import { Anchor } from "../Styling";
+import { Anchor, Button, Colors } from "../Styling";
 import { SessionContext } from "../../session";
 import Carousel from "../Carousel";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
@@ -24,6 +24,7 @@ const AdmissionsStaff = (props) => {
               job_title
               phone
               email
+              calendly_link
               image {
                 childImageSharp {
                   gatsbyImageData(
@@ -140,10 +141,36 @@ const AdmissionsStaff = (props) => {
                   {item.phone}
                 </Anchor>
               </Paragraph>
-              <Paragraph fontSize="15px" margin="0" color="#444">
+              <Paragraph fontSize="15px" margin="0 0 16px 0" color="#444">
                 <strong>Email:</strong>{" "}
                 <Anchor to={`mailto:${item.email}`}>{item.email}</Anchor>
               </Paragraph>
+              <Div display="flex" justifyContent="center" marginTop="auto">
+                <Link to={item.calendly_link}>
+                  <Button
+                    variant="full"
+                    background={Colors.blue}
+                    textColor={Colors.white}
+                    fontSize="14px"
+                    padding="12px 24px"
+                    borderRadius="6px"
+                    fontWeight="600"
+                    style={{
+                      transition: "transform 250ms ease-in-out, background-color 250ms ease-in-out",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = "#ffb718";
+                      e.target.style.transform = "scale(1.1)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = Colors.blue;
+                      e.target.style.transform = "scale(1)";
+                    }}
+                  >
+                    {"Book a call →"}
+                  </Button>
+                </Link>
+              </Div>
             </Div>
           ))}
         </Carousel>

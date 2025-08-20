@@ -1,15 +1,14 @@
 import React, { useState, useContext } from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import BaseRender from "./_baseLayout";
 import { Div, GridContainer, HR } from "../components/Sections";
-import { H1, H2, H3, H4, Paragraph } from "../components/Heading";
-import { Button, Colors, Anchor, RoundImage } from "../components/Styling";
+import { H1, H2, H3, Paragraph } from "../components/Heading";
+import { Colors, Anchor } from "../components/Styling";
 import Icon from "../components/Icon";
 import { SessionContext } from "../session.js";
 import { isCustomBarActive } from "../actions";
-import LazyLoad from "react-lazyload";
 import AdmissionsStaff from "../components/AdmissionsStaff";
-import TwoColumnCarousel from "../components/TwoColumnCarousel";
+import FreeResources from "../components/FreeResources";
 
 const ThankYou = (props) => {
   const { data, pageContext, yml } = props;
@@ -136,81 +135,9 @@ const ThankYou = (props) => {
       {/* Render AdmissionsStaff only for English */}
       <AdmissionsStaff lang={session?.language} />
 
-      {/* Resource Carousel */}
-      {pageContext.lang === 'us' && (
-      <TwoColumnCarousel
-        title={<H3 textAlign="left" margin="0 0 10px 0">Explore More Resources</H3>}
-        text={<Paragraph textAlign="left" margin="0 0 0 0">Discover free tools and programs to help you on your coding journey, or learn about our job guarantee for your future career.</Paragraph>}
-        background={Colors.veryLightBlue3}
-        carouselProps={{ margin: "0px", margin_tablet: "0px" }}
-      >
-        {/* Slide 1: Free Coding Resources */}
-        <Div
-          flexDirection="column"
-          alignItems="flex-start"
-          border={`1px solid ${Colors.lightGray2}`}
-          borderRadius="8px"
-          padding="32px 24px"
-          background={Colors.white}
-          minHeight="220px"
-          width="100%"
-          maxWidth="500px"
-          margin="0 auto"
-        >
-          <H4 textAlign="left" margin="0 0 12px 0" fontWeight="700">Explore Free Resources</H4>
-          <Paragraph textAlign="left" margin="0 0 24px 0" fontSize="md">
-            Start your journey with tutorials, project templates, and guides — all for free.
-          </Paragraph>
-          <Button
-            as="a"
-            href="https://4geeks.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="full"
-            color={Colors.blue}
-            textColor={Colors.white}
-            fontSize="16px"
-            borderRadius="4px"
-            style={{ minWidth: 180 }}
-          >
-            Visit Free Resources
-          </Button>
-        </Div>
-        {/* Slide 2: Job Guarantee Program */}
-        <Div
-          flexDirection="column"
-          alignItems="flex-start"
-          border={`1px solid ${Colors.lightGray2}`}
-          borderRadius="8px"
-          padding="32px 24px"
-          background={Colors.white}
-          minHeight="220px"
-          width="100%"
-          maxWidth="500px"
-          margin="0 auto"
-        >
-          <H4 textAlign="left" margin="0 0 12px 0" fontWeight="700">Secure Your Future</H4>
-          <Paragraph textAlign="left" margin="0 0 24px 0" fontSize="md">
-            Learn how we back your success with our job guarantee and help you land your first tech job.
-          </Paragraph>
-          <Button
-            as="a"
-            href="https://4geeksacademy.com/us/job-guarantee"
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="full"
-            color={Colors.blue}
-            textColor={Colors.white}
-            fontSize="16px"
-            borderRadius="4px"
-            style={{ minWidth: 180 }}
-          >
-            Learn About Job Guarantee
-          </Button>
-        </Div>
-      </TwoColumnCarousel>
-      )}
-      
+      {/* Free Resources (YAML-driven) */}
+      {pageContext.lang === "us" && <FreeResources lang={session?.language} />}
+
       <GridContainer
         flexDirection="column"
         gridColumn_tablet="3 / span 10"
@@ -271,106 +198,6 @@ const ThankYou = (props) => {
         >
           {yml.content.articles_title}
         </H3>
-
-        <GridContainer
-          containerColumns_tablet="0fr repeat(12, 1fr) 0fr"
-          columns_tablet="3"
-        >
-          {blog_posts.map((item, i) => {
-            return (
-              <Div key={i} flexDirection="Column" margin="0 0 87px 0">
-                {item.node.frontmatter.image !== "" && (
-                  <Link
-                    to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}
-                  >
-                    <LazyLoad height={10} scroll={true} once={true}>
-                      <RoundImage
-                        url={
-                          item.node.frontmatter.image !== null
-                            ? item.node.frontmatter.image
-                            : yml.banner.no_image
-                        }
-                        bsize="cover"
-                        border="0px"
-                        position="center"
-                        width="100%"
-                        height="329px"
-                      />
-                    </LazyLoad>
-                  </Link>
-                )}
-
-                {/* Boton */}
-                <Div
-                  flexDirection_md="row"
-                  flexDirection="column"
-                  justifyContent="left"
-                >
-                  <Link
-                    to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}
-                  >
-                    <Button
-                      variant="outline"
-                      border={`1px solid ${Colors.darkGray}`}
-                      color={Colors.darkGray}
-                      font='"Lato", sans-serif'
-                      margin="20px 10px 20px 0"
-                      pointer
-                      textColor={Colors.darkGray}
-                      fontSize={"13px"}
-                    >
-                      {item.node.frontmatter.cluster?.replace(/-|_/g, " ") ||
-                        "4Geeks"}
-                    </Button>
-                  </Link>
-                </Div>
-
-                {/* Titulo */}
-                <Div>
-                  <Link
-                    to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}
-                  >
-                    <H4
-                      textAlign="left"
-                      align_sm="left"
-                      margin="0 0 30px 0"
-                      fs_xs="20px"
-                      fs_sm="24px"
-                      fs_md="16px"
-                      fs_lg="20px"
-                      fontSize="22px"
-                    >
-                      {item.node.frontmatter.title}
-                    </H4>
-                  </Link>
-                </Div>
-
-                {/* Comentario acerca del post */}
-                <Div>
-                  <Paragraph textAlign="left" margin="0 0 15px 0">
-                    {item.node.frontmatter.excerpt}
-                  </Paragraph>
-                </Div>
-
-                {/* Link de leer articulo */}
-                <Div>
-                  <Paragraph
-                    fontSize="13px"
-                    color="#0097cd"
-                    margin="0 0 0 0"
-                    textAlign="left"
-                  >
-                    <Link
-                      to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}
-                    >
-                      {"Read more >"}
-                    </Link>
-                  </Paragraph>
-                </Div>
-              </Div>
-            );
-          })}
-        </GridContainer>
       </GridContainer>
     </>
   );

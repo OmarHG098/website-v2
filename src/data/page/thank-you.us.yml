@@ -10,11 +10,11 @@ banner:
   tagline: "Thank You"
   sub_heading: ""
 content:
-  title: "Check your email! :)"
-  message: "We have received your application.  Our Geeky Advisor is going to contact you shortly.  Sit tight!
-    In the meantime, please read our blog.  It's full of important info that we are sure you will find useful. :)"
+  title: "🎉 Congratulations! You just took the first step toward your tech career!"
+  message: "A confirmation email should be arriving in your inbox shortly, and our Admissions Team is already reviewing your info. One of our Geeky Advisors will reach out very soon! In the meantime, here are a few ways to jump-start your journey right now:"
+
     
-  articles_title: "Some articles that may interest you:"
+  articles_title: " "
   button: "Read our blog"
 social: 
   title: "Follow Us"
