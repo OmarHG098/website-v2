@@ -5,6 +5,7 @@ import { Button, Colors, Img } from "../components/Styling";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session";
 import { isCustomBarActive } from "../actions";
+import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
 
 // components
 import { Div } from "../components/Sections";
@@ -113,32 +114,6 @@ const Financial = (props) => {
 
       <Iconogram yml={yml.iconogram} />
 
-      <PricesAndPayment
-        type={pageContext.slug}
-        lang={pageContext.lang}
-        locations={data.allLocationYaml.edges}
-        programs={data.allCourseYaml.edges}
-        defaultCourse={defaultCourse}
-        title={yml.prices.heading}
-        paragraph={yml.prices.sub_heading}
-        chooseProgram // Allow choosing the program (used in financial.js)
-        financial
-      />
-
-      <TwoColumn
-        right={{ image: ymlTwoColumn[0].image }}
-        left={{
-          heading: ymlTwoColumn[0].heading,
-          sub_heading: ymlTwoColumn[0].sub_heading,
-          bullets: ymlTwoColumn[0].bullets,
-          content: ymlTwoColumn[0].content,
-          button: ymlTwoColumn[0].button,
-          boxes: ymlTwoColumn[0].boxes,
-          gap_tablet: "40px",
-        }}
-        proportions={ymlTwoColumn.proportions}
-        session={session}
-      />
 
       <CarouselV2
         margin="20px 0"
@@ -170,9 +145,31 @@ const Financial = (props) => {
         ))}
       </CarouselV2>
 
+
       <TwoColumn
-        left={{ image: ymlTwoColumn[1].image }}
-        right={{
+        right={{ image: ymlTwoColumn[0].image }}
+        left={{
+          heading: ymlTwoColumn[0].heading,
+          sub_heading: ymlTwoColumn[0].sub_heading,
+          bullets: ymlTwoColumn[0].bullets,
+          content: ymlTwoColumn[0].content,
+          button: ymlTwoColumn[0].button,
+          boxes: ymlTwoColumn[0].boxes,
+          gap_tablet: "40px",
+        }}
+        proportions={ymlTwoColumn.proportions}
+        session={session}
+      />
+      <WeTrust
+        we_trust={yml.we_trust_section}
+        background="none"
+        titleProps={{ textAlign: "center" }}
+        paragraphProps={{ textAlign: "center" }}
+      />
+
+      <TwoColumn
+        right={{ image: ymlTwoColumn[1].image }}
+        left={{
           heading: ymlTwoColumn[1].heading,
           sub_heading: ymlTwoColumn[1].sub_heading,
           bullets: ymlTwoColumn[1].bullets,
@@ -182,26 +179,18 @@ const Financial = (props) => {
         }}
         session={session}
       />
-
-      <WeTrust
-        we_trust={yml.we_trust_section}
-        background="none"
-        titleProps={{ textAlign: "center" }}
-        paragraphProps={{ textAlign: "center" }}
+      <PricesAndPayment
+        type={pageContext.slug}
+        lang={pageContext.lang}
+        locations={data.allLocationYaml.edges}
+        programs={data.allCourseYaml.edges}
+        defaultCourse={defaultCourse}
+        title={yml.prices.heading}
+        paragraph={yml.prices.sub_heading}
+        chooseProgram // Allow choosing the program (used in financial.js)
+        financial
       />
-
-      <TwoColumn
-        right={{ image: ymlTwoColumn[2].image }}
-        left={{
-          heading: ymlTwoColumn[2].heading,
-          sub_heading: ymlTwoColumn[2].sub_heading,
-          bullets: ymlTwoColumn[2].bullets,
-          content: ymlTwoColumn[2].content,
-          button: ymlTwoColumn[2].button,
-          gap_tablet: "40px",
-        }}
-        session={session}
-      />
+      <ScholarshipSuccessCases content={data.allScholarshipSuccessCasesYaml.edges[0].node} />
     </>
   );
 };
@@ -431,6 +420,39 @@ export const query = graphql`
           }
           apply_form {
             label
+          }
+        }
+      }
+    }
+    allScholarshipSuccessCasesYaml(
+      filter: { fields: { lang: { eq: $lang } } }
+    ) {
+      edges {
+        node {
+          title
+          subtitle
+          contributor
+          cases {
+            name
+            img {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 700
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  breakpoints: [200, 340, 520, 890]
+                )
+              }
+            }
+            status
+            country {
+              iso
+              name
+            }
+            contributor
+            description
+            achievement
           }
         }
       }

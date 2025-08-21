@@ -11,7 +11,7 @@ meta_info:
 seo_title: "Bootcamp Financing"
 header:
   title: Finance your future
-  paragraph: Invest in your education with flexible financing options—scholarships, affordable loans, and payment plans designed to fit your needs. Choose the path that works for you and start building your tech career today.
+  paragraph: Low monthly payments, income-based options, and scholarships so nothing holds you back from launching a lasting tech career.
   tagline: CELEBRATE THE BEST PRICE IN TOWN
   sub_heading: We never stopped trying until we mastered a real premium but affordable program. Our philosophy is rooted in making coding education available to everyone.
   image: "../../../static/images/Group-6663.png"
@@ -118,40 +118,6 @@ who_is_hiring:
 
 two_column:
   - image:
-      style: '{ "backgroundSize": "contain", "backgroundPosition":"center" }'
-      src: /images/landing/Group-6626-with-border.webp
-    heading:
-      style: '{ "fontWeight": 400 }'
-      text: $20 Million in scholarships
-      font_size:
-        - 38px
-        - 38px
-        - 38px
-        - 21px
-        - 21px
-    sub_heading:
-      text: Over 1,456 individuals, from diverse backgrounds, have benefited from our scholarship programs. Explore the major educational project we’ve contributed to and read about graduates’ success stories.
-      font_size:
-        - 24px
-        - 24px
-        - 24px
-        - 16px
-        - 16px
-    button:
-      text: SEE MORE
-      color: white
-      background: black
-      hover_color: white
-      path: "/us/20-million"
-    boxes:
-      - icon: rocket-2
-        title: "14"
-        text: Projects completed
-      - icon: handsheart
-        title: "1465"
-        text: Beneficiaries so far
-
-  - image:
       style: '{ "backgroundSize": "contain"}'
       src: /images/landing/20-million-column-4geeks.png
     heading:
@@ -188,46 +154,25 @@ two_column:
       src: "/images/pretty-woman-in-a-computer.png"
     heading:
       style: '{ "fontWeight": 400 }'
-      text: "Why do we offer a job guarantee?"
-      font_size:
-        - 35px
-        - 35px
-        - 35px
-        - 21px
-        - 21px
+      text: "Need extra confidence?  Add a  Job Guarantee"
+      font_size: ["38px", "38px", "38px", "30px", "28px"]
     sub_heading:
       style: '{ "color": "#4D4D5C", "fontWeight": 400, "textAlign": "justify" }'
-      text: "Our bootcamps go beyond teaching relevant skills; they are designed to launch rewarding tech careers.
-            From our  industry-aligned syllabus to our comprehensive, personalized career support service, every one of our features has been tried and tested to optimize your learning journey."
-      font_size:
-        - 16px
-        - 16px
-        - 16px
-        - 16px
-        - 16px
+      text: 'For additional peace of mind, enroll with a Job Guarantee. If you don’t get hired after 9 months of graduation you’ll receive 
+            a <strong style="text-decoration: none; color: #000000; font-weight: 700;">full tuition refund</strong>. The job guarantee can also be financed.'
+      font_size: ["20px", "20px", "20px", "18px", "16px"]
     content:
-      text: "Let’s shape your future together!"  
+      text: " "  
     bullets:
       item_style: ""
       items:
         - heading: ""
-          text: "Proven effectiveness of our program"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: ""
-          text: "The tech industry is booming"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: ""
-          text: "We trust the process"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: ""
-          text: "We trust you"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
     button:
-      text: "APPLY"
+      text: "MORE DETAILS HERE"
       color: "white"
       background: "blue"
       hover_color: "white"
-      path: "/us/apply"
+      path: "/us/job-guarantee"
 
 partners:
   paragraph: "Don't miss out on the awesome allies of 4Geeks Academy! Here are just a few of them."

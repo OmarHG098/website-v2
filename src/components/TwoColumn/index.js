@@ -163,7 +163,7 @@ const Side = ({
           </H2>
         </Div>
       )}
-      {sub_heading && (
+      {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) ? (
         <Paragraph
           textAlign_tablet="left"
           fontFamily="Archivo"
@@ -176,9 +176,28 @@ const Side = ({
           fontSize_tablet={sh_md}
           fonSize_md={sh_lg}
           style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
-        >
-          {sub_heading.text}
-        </Paragraph>
+          {...(isClient
+            ? { dangerouslySetInnerHTML: { __html: sub_heading.text } }
+            : { children: sub_heading.text })}
+        />
+      ) : (
+        sub_heading && (
+          <Paragraph
+            textAlign_tablet="left"
+            fontFamily="Archivo"
+            fontWeight="600"
+            textAlign="left"
+            margin="0"
+            fontSize={sh_xs || sh_xl || "21px"}
+            fontSize_xs={sh_xs}
+            fontSize_sm={sh_sm}
+            fontSize_tablet={sh_md}
+            fonSize_md={sh_lg}
+            style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
+          >
+            {sub_heading.text}
+          </Paragraph>
+        )
       )}
 
       {Array.isArray(bullets?.items) && (
