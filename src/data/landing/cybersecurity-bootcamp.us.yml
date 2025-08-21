@@ -1,69 +1,53 @@
 meta_info:
-  slug: tech-career-4geeks # <--- URL 4geeksacademy.com/us/landing/example
-
-  # This will show on social media when shared
-  title: "Start Your Tech Career With 4Geeks Academy"
-  description: "Get certified and start your tech career today."
-  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  image: "/images/bg/the-academy-bg.jpg"
-  keywords: ""
-
-  template: "landing_a" # <--- choose your landing template
-  redirects:
-    [] # <--- URL redirections to avoid 404 errors
-
-
-    # Set a particular course or location to the landing page
-  # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "coding-introduction"]
+  slug: cybersecurity-bootcamp
+  title: "Launch Your Cybersecurity Career With 4Geeks Academy"
+  description: "Get certified and start your cybersecurity career today."
+  visibility: "visible"
+  image: "/images/bg/remote.jpeg"
+  template: "landing_a"
+  utm_course: ["cybersecurity"]
   utm_location: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online"]
-  automation: soft # comma separated, "soft" is the default value
-  tag: request_more_info # comma separated, "request_more_info" is the default value
+  automation: soft
+  keywords: " "
+  redirects: []
+  tag: request_more_info
+
 
 navbar:
-  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
-  buttonText: "Get More Info"
-  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonText: "Apply Now"
+  buttonUrl: "#leadform_header"
+  logoUrl: "#"
 
 form:
-  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
-  # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Get more Information"
+  heading: "Get more information"
   motivation: "Fill out the form to receive detailed information about 4Geeks Academy and all the courses we offer, delivered straight to your inbox."
-  button_label: Get More Info
-  redirect: null #you can redirect to another url or entirely diffrent website
+  button_label: "Apply Now"
+  redirect: "/us/thank-you/"
+  hide_form: false
 
-apply_schollarship: # form that is displayed at the end of the landing
-  # title: "Apoyo Profesional Ilimitado"
-  imageSide: "left"
-  image: "../../../static/images/landing/hombre-joven-con-laptop-senalando.webp"
-
-# jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: Tech Careers<br> Are Booming in Florida.  <br>We’re here to get you in.
-  sub_heading: " "
+  tagline: "Demand for Cybersecurity Specialists is Exploding.<br>We're here to get you in."
   tagline_color: "#1c1c1c"
+  sub_heading: " "
   form_styles:
     background: "#0084FF"
     color: "white"
     button:
       background: "black"
-  # background_image: "../../../static/images/landing-background-men-w-laptop.webp"
   badge: "../../../static/images/badges/course-report-best-coding-bootcamps-badge-2025.png"
   image_filter: brightness(0.9)
 
 features:
-  marginTop: 0px #<-- separation between tagline and the bullets
-
-  #                                         up   left down  right
-  styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
+  marginTop: 0px
+  text: " "
   bullets:
-    - Become an AI-fluent Full-Stack Developer, Data Scientist, Machine Learning Engineer or Cybersecurity Specialist!
+    - Become an AI-fluent Cybersecurity Specialist in just 16 weeks!
     - Affordable tuition and unbeatable financing plans
     - Unlimited mentorship and 1:1 career support to help you succeed. For life!
     # - "Part-time: Immerse yourself in a flexible schedule, perfect for busy professionals and students."
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"
@@ -92,24 +76,26 @@ short_badges:
     alt: "ARP Certificate"
 
 follow_bar:
-  position: "top" # top, bottom, hidden
+  position: "top"
   content:
-    text: "Get More Information About Our Tech Career Programs"
-    text_mobile: "Get More Information About Our Tech Career Programs"
-    # devices:   XL      LG    MD      SM    XS
+    text: "Get More Information About Our Cybersecurity Bootcamp"
+    text_mobile: "Get Info on Cybersecurity Bootcamp"
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
-    text: "Get more information"
+    text: "Apply Now"
     path: "#leadform_header"
   phone:
-    text: "Call "
+    text: "Call"
+    number: ""
 
-#
-# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
-#
+program_details:
+  position: 3
+  heading: "Cybersecurity Bootcamp"
+  sub_heading: " "
+
 rating_reviews:
   background: "#FBFBFB"
-  position: 4
+  position: 7
   heading: "Consistently Ranked Among the Best by SwitchUp, Forbes and More"
   rating_list:
     - alt: "Career Karma"
@@ -128,89 +114,61 @@ rating_reviews:
       image: "../../../static/images/badges/google.png"
       rating: 5
       url: ""
-
-# program_details:
-#   position: 3
-#   background: "#faf2e1"
-#   heading: "Full-Stack Development One of our Coding Courses"
-#   sub_heading: "Dive deep into full-stack development with our detailed program that covers everything from HTML5 to advanced backend frameworks."
-
-# why_python:
-#   position: 5
-#   heading: "Why Python and React.js" # optional or set to white space to hide
-#   sub_heading: "JavaScript has 26x's more job vacancies than Ruby On Rails. Python has 10x's more job vacancies than Node.js" # optional or set to white space to hide
-
 geeks_vs_others:
-  position: 4
+  position: 11
   heading: "Compare our coding bootcamp to the competition"
   # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
 
-badges:
-  position: 5
-  heading: "Numerous Awards and Recognitions Celebrate Our Excellence"
+why_4geeks:
+  position: 13
+  heading: "Student Stories: How 4Geeks Helped Launch Their Tech Careers"
+  sub_heading: ""
 
 who_is_hiring:
-  position: 9
+  position: 19
   limit: 4
   heading: "Who is hiring our students?"
   sub_heading: "Top companies in Florida and beyond are hiring 4Geeks graduates—because they’re job-ready, AI-fluent, and trained in the skills that matter."
 
-why_4geeks:
-  position: 6
-  heading: "Student Stories: How 4Geeks Helped Launch Their Tech Careers"
-  sub_heading: ""
-
 
 components:
-  - name: how-it-works-programs
+  - name: cybersecurity-demand
     position: 1
-    background: "#fbfcfc"
-    layout: iconogram
-    swipable: True
-    heading:
-      text: "Find the path that’s right for you"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
-    sub_heading:
-      text: ""
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-      style: '{ "textAlign": "center", "width": "60%" }'
-    icons:
-      - icon: "fullstack"
-        title: "Full Stack Development with AI"
-        content: "Become an AI-fluent Full Stack Developer using tools like Cursor, Vercel v0, and more. Master the most sought-after skills and land a job as a developer."
-      - icon: "machine"
-        title: "Data Science and Machine Learning"
-        content: "Acquire the skills to analyze complex data and leverage machine learning techniques to automate decision-making and uncover actionable insights."
-      - icon: "cibersecurity"
-        title: "Cybersecurity"
-        content: "Become a cybersecurity specialist, equipped to identify, manage, and mitigate system vulnerabilities in compliance with ISO and other standards."
-    button:
-      text: "Get More Information"
-      color: "white"
-      background: "black"
-      hover_color: "white"
-      path: "#leadform_header"
-
-  - name: why-choose-4geeks
-    position: 2
-    layout: two_column_right
-    proportions: [6, 6]
+    layout: two_column_left
+    proportions: [5, 7]
     background: "#FFFFFF"
-    justify: "center" #start,end,center
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center" }'
+      src: "/images/landing/feliz-empresario.png"
+      shadow: false
+    heading:
+      text: " Why Cybersecurity is a Winning Career Move"
+      font_size: ["30px", "30px", "30px", "25px", "25px"]
+      style: '{ "font-weight": "600", "color": "#000" }'
+    content:
+      text: |
+        <strong style="font-weight: 800;">• Near-zero unemployment:</strong> With over 570,000 cybersecurity roles currently unfilled in the U.S., qualified professionals find work fast. <br><br>
+        <strong style="font-weight: 800;">• Fast-growing demand:</strong> Cybersecurity jobs are projected to grow 33% by 2033—more than four times the average for all occupations.<br><br>
+        <strong style="font-weight: 800;">• A booming global market:</strong> The cybersecurity industry is expected to triple in value, from $215B in 2025 to $697B by 2035.
+
+  - name: what-sets-4geeks-apart
+    position: 5
+    layout: two_column_right
+    proportions: [5, 7]
+    background: "#FFFFFF"
     image:
       style: '{ "backgroundSize": "contain", "background-position": "center", "margin": "10px" }'
       src: "/images/landing/blonde-girl-laptop.png"
+      shadow: false
     heading:
-      text: |-
-        What Sets 4Geeks Apart: 
-        AI-Forward Skills, Unlimited Mentorship and Career Support
+      text: "What Sets 4Geeks Apart: AI-Forward Skills, Unlimited Mentorship and Career Support"
       font_size: ["38px", "34px", "34px", "34px", "34px"]
-      style: '{ "font-weight": "600", "text-align": "center", "color": "#000", "padding": "10px" }'
+      style: '{ "font-weight": "400", "text-align": "center", "color": "#000", "padding": "10px" }'
     sub_heading:
       text: "Everything You Need to Launch and Grow a Career in Tech"
       font_size: ["26px", "26px", "24px", "24px", "22px"]
-      style: '{ "font-weight": "600", "text-align": "justify", "color": "#000", "padding": "10px"}'
+      style: '{ "font-weight": "400", "text-align": "justify", "color": "#000", "padding": "10px"}'
     bullets:
       item_style: '{ "padding": "0 0 0 10px", "font-weight": "100" }'
       items:
@@ -230,12 +188,11 @@ components:
       text: "Learn More"
       color: "white"
       background: "black"
-      hover_color: "white"
       path: "#leadform_header"
 
   # Two Columns - Rigo
-  - name: two_columns_rigo
-    position: 4
+  - name: two-columns-rigo
+    position: 9
     layout: two_column_right
     proportions: [7, 5]
     justify: "center" #start,end,center
@@ -289,9 +246,8 @@ components:
              ✓ Structured practice.
              <br />
 
-
   - name: how-it-works
-    position: 6
+    position: 15
     background: "#0084FF"
     layout: iconogram
     swipable: true
@@ -311,14 +267,14 @@ components:
       - icon: "briefcase-2"
         color: "#FF0000"
         title: "Avergage time to get hired"
-        content: "3-6 months after graduation"
+        content: "6 months after graduation"
       - icon: "stairswflag"
         color: "#BE8BFF"
         title: "Salary Increase"
         content: "55% increase after graduation"
 
   - name: some_id
-    position: 7
+    position: 17
     layout: two_column_left
     proportions: [6, 6]
     justify: "center"
@@ -350,3 +306,6 @@ components:
      color: "white"
      background: "blue"
      path: "#leadform_bottom"
+
+
+
