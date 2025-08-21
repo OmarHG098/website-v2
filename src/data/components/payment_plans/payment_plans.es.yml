@@ -4,27 +4,47 @@ options:
   - id: pay_upfront
     title: "Pago Anticipado"
     description: "Paga la matrícula completa al inscribirte y obtén el mejor precio."
-    providers: []
+    bullets:
+      items:
+        - text: "Ahorra 10% en el costo total de la matrícula"
+        - text: "Pago único por el programa completo"
+        - text: "Sin cargos adicionales ni intereses"
+
   - id: installments
     title: "Pago en Cuotas"
     description: "Divide la matrícula en pagos mensuales durante el programa."
-    providers: []
+    bullets:
+      items:
+        - text: "Distribuye la matrícula en 6 meses, sin intereses"
+        - text: "Plan de pagos mensuales flexible"
+        - text: "No requiere verificación de crédito"
+
   - id: edly
     title: "Pagos Basados en Ingresos (Edly)"
     description: "Comienza a pagar cuando consigas un empleo calificado, con pagos basados en tus ingresos."
-    providers:
-      - "Edly"
+    bullets:
+      items:
+        - text: "Sin pago inicial requerido"
+        - text: "Pagas solo cuando estés empleado"
+        - text: "Los pagos se ajustan a tus ingresos"
+        - text: "Financiado por Edly"
+
   - id: loans
     title: "Planes y Préstamos"
     description: "Financia tu matrícula con aliados confiables."
-    providers:
-      - "Ascent Funding"
-      - "Climb Credit"
-      - "TFC Tuition"
+    bullets:
+      items:
+        - text: "Múltiples opciones de financiamiento a través de Ascent Funding"
+        - text: "Términos flexibles con Climb Credit"
+        - text: "Opciones adicionales vía TFC Tuition"
+        - text: "Tasas de interés competitivas"
+
   - id: scholarships
     title: "Becas"
     description: "Pueden estar disponibles becas por necesidad o mérito."
-    providers:
-      - "Becas 4Geeks"
-
-
+    bullets:
+      items:
+        - text: "Oportunidades de becas por mérito"
+        - text: "Asistencia financiera basada en necesidad"
+        - text: "Programas especiales a través de Becas 4Geeks"
+        - text: "Apoyo disponible para la aplicación"

@@ -112,8 +112,8 @@ const Financial = (props) => {
           />
         </Div>
       </Div>
+      <PaymentPlans lang={pageContext.lang} />
 
-      <Iconogram yml={yml.iconogram} />
 
       <CarouselV2
         margin="20px 0"
@@ -190,7 +190,7 @@ const Financial = (props) => {
         chooseProgram // Allow choosing the program (used in financial.js)
         financial
       />
-      <PaymentPlans lang={pageContext.lang} />
+
       <ScholarshipSuccessCases content={data.allScholarshipSuccessCasesYaml.edges[0].node} />
     </>
   );

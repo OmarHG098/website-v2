@@ -1,10 +1,10 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { Div } from "../Sections";
-import { H2, H3, H4, Paragraph } from "../Heading";
+import { H2, H3, Paragraph } from "../Heading";
 import { Colors } from "../Styling";
 import Icon from "../Icon";
-import SmartSelect from "../Select";
+
 
 const PaymentPlans = (props) => {
   const data = useStaticQuery(graphql`
@@ -21,7 +21,11 @@ const PaymentPlans = (props) => {
               id
               title
               description
-              providers
+              bullets {
+                items {
+                  text
+                }
+              }
             }
           }
         }
@@ -56,46 +60,17 @@ const PaymentPlans = (props) => {
       gap="20px"
       flexDirection="column"
     >
-      <H2 type="h2" textAlign="left" color={Colors.black}>
+      <H2 type="h2" textAlign="center" color={Colors.black}>
         {plans.title}
       </H2>
       {plans.sub_title && (
-        <Paragraph textAlign="left" color={Colors.black} fontSize="18px">
+        <Paragraph textAlign="center" color={Colors.black} fontSize="18px">
           {plans.sub_title}
         </Paragraph>
       )}
 
-      {/* Desktop/Tablet selector */}
-      <Div display="none" display_md="flex" flexDirection="column" gap="20px">
-        <Div maxWidth="420px">
-          <SmartSelect
-            topLabel="Payment option"
-            openLabel={selected ? selected.title : "Select"}
-            closeLabel={selected ? selected.title : "Select"}
-            options={optionsForSelect}
-            onSelect={(item) => setSelected(item.raw)}
-            width="100%"
-          />
-        </Div>
-        {selected && (
-          <Div border={`1px solid ${Colors.black}`} borderLeft={`6px solid ${Colors.black}`} padding="20px" gap="10px" flexDirection="column">
-            <H3 textAlign="left">{selected.title}</H3>
-            <Paragraph textAlign="left">{selected.description}</Paragraph>
-            {Array.isArray(selected.providers) && selected.providers.length > 0 && (
-              <Div flexWrap="wrap" gap="10px 12px">
-                {selected.providers.map((p) => (
-                  <Div key={p} border={`1px solid ${Colors.gray}`} padding="6px 10px" width="fit-content">
-                    <H4 margin="0" fontSize="14px">{p}</H4>
-                  </Div>
-                ))}
-              </Div>
-            )}
-          </Div>
-        )}
-      </Div>
-
-      {/* Mobile accordion */}
-      <Div display_md="none" flexDirection="column" gap="10px" margin="10px 0 0 0">
+      {/* Unified accordion for all screen sizes */}
+      <Div flexDirection="column" gap="10px" margin="10px 0 0 0">
         {plans.options.map((item, index) => {
           const isOpen = selected && selected.id === item.id;
           return (
@@ -104,8 +79,8 @@ const PaymentPlans = (props) => {
               width="100%"
               height={isOpen ? "auto" : "76px"}
               padding_xs="10px 20px"
-              border={`1px solid ${Colors.black}`}
-              borderLeft={`6px solid ${Colors.black}`}
+              border="1px solid #EBEBEB"
+              borderLeft={`6px solid ${[Colors.blue]}`}
               cursor="pointer"
               onClick={() => setSelected(isOpen ? null : item)}
               justifyContent="between"
@@ -114,9 +89,6 @@ const PaymentPlans = (props) => {
             >
               <Div display="flex" flexDirection="column" alignItems="flex-start">
                 <H3 textAlign="left">{item.title}</H3>
-                <Paragraph textAlign="left" margin="0">
-                  {isOpen ? "" : item.description}
-                </Paragraph>
               </Div>
               <Div style={{ position: "absolute", right: "13px", top: "15px" }} transform={isOpen ? "rotate(180deg)" : "rotate(0deg)"}>
                 <Icon icon="arrowdown" width="32px" height="32px" />
@@ -124,12 +96,18 @@ const PaymentPlans = (props) => {
               {isOpen && (
                 <Div flexDirection="column" margin="10px 0 0 0" gap="10px">
                   <Paragraph textAlign="left">{item.description}</Paragraph>
-                  {Array.isArray(item.providers) && item.providers.length > 0 && (
-                    <Div flexWrap="wrap" gap="10px 12px">
-                      {item.providers.map((p) => (
-                        <Div key={p} border={`1px solid ${Colors.gray}`} padding="6px 10px" width="fit-content">
-                          <H4 margin="0" fontSize="14px">{p}</H4>
-                        </Div>
+                  {item.bullets?.items && item.bullets.items.length > 0 && (
+                    <Div flexDirection="column" gap="8px">
+                      {item.bullets.items.map((bullet, index) => (
+                        <Paragraph 
+                          key={index} 
+                          textAlign="left" 
+                          margin="0"
+                          style={{ display: "flex", alignItems: "flex-start" }}
+                        >
+                          <span style={{ marginRight: "8px" }}>•</span>
+                          {bullet.text}
+                        </Paragraph>
                       ))}
                     </Div>
                   )}

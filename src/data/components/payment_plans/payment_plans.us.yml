@@ -2,29 +2,49 @@ title: "Payment Options"
 sub_title: "Explore flexible ways to fund your education."
 options:
   - id: pay_upfront
-    title: "Pay Upfront"
-    description: "Pay the full tuition at enrollment and secure the best price."
-    providers: []
+    title: "Pay Upfront– Save 10%"
+    description: "Best value. Pay tuition upfront, save 10%"
+    bullets:
+      items:
+        - text: "Save 10% on total tuition cost"
+        - text: "One-time payment for complete program"
+        - text: "No additional fees or interest"
+
   - id: installments
     title: "Pay in Installments"
-    description: "Split tuition into monthly payments during the program."
-    providers: []
+    description: "Spread tuition across 6 months, interest-free."
+    bullets:
+      items:
+        - text: "Spread tuition across 6 months, interest-free"
+        - text: "Flexible monthly payment schedule"
+        - text: "No credit check required"
+
   - id: edly
     title: "Income-Based Payments (Edly)"
     description: "Start paying after you land a qualifying job, with payments based on your income."
-    providers:
-      - "Edly"
+    bullets:
+      items:
+        - text: "No upfront payment required"
+        - text: "Pay only when you're employed"
+        - text: "Payments scale with your income"
+        - text: "Powered by Edly financing"
+
   - id: loans
     title: "Payment Plans & Loans"
     description: "Finance your tuition with trusted partners."
-    providers:
-      - "Ascent Funding"
-      - "Climb Credit"
-      - "TFC Tuition"
+    bullets:
+      items:
+        - text: "Multiple financing options through Ascent Funding"
+        - text: "Flexible terms with Climb Credit"
+        - text: "Additional options via TFC Tuition"
+        - text: "Competitive interest rates"
+
   - id: scholarships
     title: "Scholarships"
     description: "Need-based and merit scholarships may be available."
-    providers:
-      - "4Geeks Scholarships"
-
-
+    bullets:
+      items:
+        - text: "Merit-based scholarship opportunities"
+        - text: "Need-based financial assistance"
+        - text: "Special programs through 4Geeks Scholarships"
+        - text: "Application support available"
