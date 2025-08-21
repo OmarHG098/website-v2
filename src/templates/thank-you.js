@@ -35,70 +35,79 @@ const ThankYou = (props) => {
       ]);
   };
 
-  const blog_posts = data.featured.edges;
   return (
     <>
-      <Div className="circles-left" display="none" display_tablet="inherit">
-        <Icon
-          icon="landingCircles/smCircle-red"
-          width="23px"
-          height="23px"
-          style={{
-            zIndex: 2,
-            position: "absolute",
-            left: "218px",
-            top: "225px",
-          }}
-        />
-        <Icon
-          icon="landingCircles/mdCircle-lightBlue"
-          style={{ zIndex: 2, position: "absolute", left: "53px", top: "97px" }}
-        />
-        <Icon
-          icon="landingCircles/bigCircle-yellowLight"
-          width="115px"
-          height="329px"
-          style={{ zIndex: 2, position: "absolute", left: "0px", top: "250px" }}
-        />
-      </Div>
-      <Div className="circles-right" display="none" display_tablet="inherit">
-        <Icon
-          icon="landingCircles/lgCircle-mustard"
-          style={{
-            zIndex: 2,
-            position: "absolute",
-            right: "0px",
-            top: "269px",
-          }}
-        />
-        <Icon
-          icon="landingCircles/mdCircle-blue"
-          width="67px"
-          height="67px"
-          style={{
-            zIndex: 2,
-            position: "absolute",
-            right: "116px",
-            top: "169px",
-          }}
-        />
-        <Icon
-          icon="landingCircles/smCircle-mustard"
-          style={{
-            zIndex: 2,
-            position: "absolute",
-            right: "299px",
-            top: "122px",
-          }}
-        />
+      <Div
+        className="circles-container"
+        display="none"
+        display_tablet="inherit"
+        position="fixed"
+        width="100%"
+        height="0"
+        top="0"
+        left="0"
+        overflow="visible"
+        pointerEvents="none"
+        zIndex="1"
+      >
+        <Div className="circles-left" position="relative">
+          <Icon
+            icon="landingCircles/smCircle-red"
+            width="23px"
+            height="23px"
+            style={{
+              position: "absolute",
+              left: "218px",
+              top: "225px",
+            }}
+          />
+          <Icon
+            icon="landingCircles/mdCircle-lightBlue"
+            style={{ position: "absolute", left: "53px", top: "97px" }}
+          />
+          <Icon
+            icon="landingCircles/bigCircle-yellowLight"
+            width="115px"
+            height="329px"
+            style={{ position: "absolute", left: "0px", top: "250px" }}
+          />
+        </Div>
+        <Div className="circles-right" position="relative">
+          <Icon
+            icon="landingCircles/lgCircle-mustard"
+            style={{
+              position: "absolute",
+              right: "0px",
+              top: "269px",
+            }}
+          />
+          <Icon
+            icon="landingCircles/mdCircle-blue"
+            width="67px"
+            height="67px"
+            style={{
+              position: "absolute",
+              right: "116px",
+              top: "169px",
+            }}
+          />
+          <Icon
+            icon="landingCircles/smCircle-mustard"
+            style={{
+              position: "absolute",
+              right: "299px",
+              top: "122px",
+            }}
+          />
+        </Div>
       </Div>
 
       <Div
         flexDirection="column"
         background={Colors.lightYellow}
-        padding="68px 0"
+        padding={{ xs: "24px 0", md: "60px 0" }}
         height="auto"
-        margin={isCustomBarActive(session) ? "140px 0 0 0" : "80px 0 0 0"}
+        margin={{ xs: "0", md: "60px 0 0 0" }}
       >
         <H1
           type="h1"
@@ -115,9 +124,9 @@ const ThankYou = (props) => {
         <H2
           type="h2"
           zIndex="5"
-          fontSize="48px"
-          lineHeight="60px"
-          margin="16px 0px 19px 0px"
+          fontSize={{ xs: "32px", md: "48px" }}
+          lineHeight={{ xs: "42px", md: "60px" }}
+          margin={{ xs: "12px 0px 15px 0px", md: "16px 0px 19px 0px" }}
         >
           {`< ${yml.banner.tagline} >`}
         </H2>
@@ -141,7 +150,8 @@ const ThankYou = (props) => {
       <GridContainer
         flexDirection="column"
         gridColumn_tablet="3 / span 10"
-        margin="58px 0 0 0"
+        margin={{ xs: "20px 0 0 0", md: "40px 0 0 0" }}
+        padding={{ xs: "0 15px", md: "0" }}
       >
         <H3
           type="h3"
@@ -171,7 +181,6 @@ const ThankYou = (props) => {
               {ln.icon && (
                 <Icon
                   icon={ln.icon}
-                  // style={{ margin: '0 15px 0 0' }}
                   color={Colors.black}
                   fill={Colors.black}
                   height="42px"
@@ -181,23 +190,6 @@ const ThankYou = (props) => {
             </Anchor>
           ))}
         </Div>
-        <HR
-          background="none"
-          border="1px solid #EBEBEB"
-          height="0px"
-          margin="30px 0"
-        />
-
-        <H3
-          type="h3"
-          margin="20px 0 40px 0"
-          fontSize="15px"
-          lineHeight="22px"
-          fontWeight="400"
-          letterSpacing="0.05em"
-        >
-          {yml.content.articles_title}
-        </H3>
       </GridContainer>
     </>
   );
@@ -223,63 +215,11 @@ export const query = graphql`
             title
             message
             button
-            articles_title
           }
           social {
             title
             message
             button_text
-          }
-        }
-      }
-    }
-    featured: allMarkdownRemark(
-      limit: 3
-      sort: { frontmatter: { date: DESC } }
-      filter: {
-        frontmatter: { status: { eq: "published" } }
-        fields: { lang: { eq: $lang } }
-      }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            author
-            date
-            image
-            slug
-            title
-            excerpt
-            featured
-            status
-            cluster
-          }
-        }
-      }
-    }
-    posts: allMarkdownRemark(
-      limit: 3
-      sort: { frontmatter: { date: DESC } }
-      filter: {
-        frontmatter: { status: { eq: "published" } }
-        fields: { lang: { eq: $lang } }
-      }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            author
-            date
-            image
-            title
-            excerpt
-            featured
-            status
-            cluster
-          }
-          fields {
-            lang
-            slug
           }
         }
       }
