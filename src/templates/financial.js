@@ -1,26 +1,25 @@
-import React, { useContext, useMemo } from "react";
+import React, { useContext, useMemo, useEffect } from "react";
 import { graphql, navigate } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { Button, Colors, Img } from "../components/Styling";
+import { Button, Colors } from "../components/Styling";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session";
 import { isCustomBarActive } from "../actions";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
+import { landingSections } from "../components/Landing";
 
 // components
 import { Div } from "../components/Sections";
 import { H1, H2, Paragraph } from "../components/Heading";
 import WeTrust from "../components/WeTrust";
-import CarouselV2 from "../components/CarouselV2";
 import PricesAndPayment from "../components/PricesAndPayment";
 import PaymentPlans from "../components/PaymentPlans";
-import Iconogram from "../components/Iconogram";
-import TwoColumn from "../components/TwoColumn";
 
 const Financial = (props) => {
   const { session } = useContext(SessionContext);
   const { data, pageContext, yml } = props;
   const { seo_title, header } = yml;
+  const [components, setComponents] = React.useState({});
 
   const allPlans = useMemo(() => {
     return data.allPlansYaml.edges
@@ -29,23 +28,16 @@ const Financial = (props) => {
         plan.academies.includes(session?.location?.breathecode_location_slug)
       );
   }, [session]);
-  const academyHasJobGuarantee = allPlans.some(
-    ({ job_guarantee_price }) => job_guarantee_price
-  );
 
-  let location = null;
-  if (session && session.location) {
-    location = data.allLocationYaml.edges.find(
-      (l) =>
-        l &&
-        l.node &&
-        l.node.active_campaign_location_slug ===
-          session.location.active_campaign_location_slug
-    );
-    if (location) location = location.node;
-  }
+  useEffect(() => {
+    let _components = {};
+    if (yml.components)
+      yml.components.forEach(({ name, ...rest }) => {
+        _components[name] = rest;
+      });
+    setComponents({ ...yml, ..._components });
+  }, [yml]);
 
-  const ymlTwoColumn = yml?.two_column;
   const defaultCourse = "full-stack";
 
   return (
@@ -112,54 +104,28 @@ const Financial = (props) => {
           />
         </Div>
       </Div>
+
       <PaymentPlans lang={pageContext.lang} />
 
+      {Object.keys(components)
+        .filter(
+          (name) =>
+            components[name] &&
+            (landingSections[name] || landingSections[components[name].layout])
+        )
+        .sort((a, b) =>
+          components[b].position > components[a].position ? -1 : 1
+        )
+        .map((name, index) => {
+          const layout = components[name].layout || name;
+          return landingSections[layout]({
+            ...props,
+            yml: components[name],
+            session,
+            index: index,
+          });
+        })}
 
-      <CarouselV2
-        margin="20px 0"
-        background="#F4F9FF"
-        padding="20px"
-        heading={yml.who_is_hiring.title}
-        content={yml.who_is_hiring.paragraph}
-      >
-        {yml.who_is_hiring.images.map((image) => (
-          <Div key={image} marginBottom="80px">
-            <Div
-              border="1px solid #C4C4C4"
-              width="240px !important"
-              height="240px"
-              display="flex"
-              flexDirection="column"
-              justifyContent="center"
-              margin="auto"
-            >
-              <Img
-                backgroundSize="contain"
-                src={image}
-                width="112px"
-                height="112px"
-                margin="auto"
-              />
-            </Div>
-          </Div>
-        ))}
-      </CarouselV2>
-
-
-      <TwoColumn
-        right={{ image: ymlTwoColumn[0].image }}
-        left={{
-          heading: ymlTwoColumn[0].heading,
-          sub_heading: ymlTwoColumn[0].sub_heading,
-          bullets: ymlTwoColumn[0].bullets,
-          content: ymlTwoColumn[0].content,
-          button: ymlTwoColumn[0].button,
-          boxes: ymlTwoColumn[0].boxes,
-          gap_tablet: "40px",
-        }}
-        proportions={ymlTwoColumn.proportions}
-        session={session}
-      />
       <WeTrust
         we_trust={yml.we_trust_section}
         background="none"
@@ -167,18 +133,6 @@ const Financial = (props) => {
         paragraphProps={{ textAlign: "center" }}
       />
 
-      <TwoColumn
-        right={{ image: ymlTwoColumn[1].image }}
-        left={{
-          heading: ymlTwoColumn[1].heading,
-          sub_heading: ymlTwoColumn[1].sub_heading,
-          bullets: ymlTwoColumn[1].bullets,
-          content: ymlTwoColumn[1].content,
-          button: ymlTwoColumn[1].button,
-          gap_tablet: "40px",
-        }}
-        session={session}
-      />
       <PricesAndPayment
         type={pageContext.slug}
         lang={pageContext.lang}
@@ -187,7 +141,7 @@ const Financial = (props) => {
         defaultCourse={defaultCourse}
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
-        chooseProgram // Allow choosing the program (used in financial.js)
+        chooseProgram
         financial
       />
 
@@ -218,119 +172,38 @@ export const query = graphql`
             image {
               childImageSharp {
                 gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  layout: CONSTRAINED
                   width: 1600
                   quality: 100
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  placeholder: NONE
                 )
               }
             }
             alt
             sub_heading
           }
-          intro {
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 300
-                  height: 300
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            image_second {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 450
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            content
-            content_second
-            heading_second
-            bullets
-            heading
-          }
-          label {
-            program {
-              title
-              closedLabel
-            }
-            modality {
-              title
-              closedLabel
-            }
-            campus {
-              title
-              closedLabel
-            }
-          }
-          syllabus_button_text
-          we_trust_section {
-            title
-            text
-            boxes {
-              icon
-              title
-              text
-            }
-          }
-          prices {
-            heading
-            sub_heading
-            selector {
-              top_label
-              placeholder
-            }
-            button {
-              text
-              link
-            }
-          }
-          iconogram {
-            swipable
-            heading {
-              text
-              style
-            }
-            sub_heading {
-              text
-              style
-            }
-            icons {
-              icon
-              color
-              title
-              content
-            }
-            button {
-              text
-              color
-              path
-              background
-              hover_color
-            }
-          }
-          who_is_hiring {
-            title
-            paragraph
-            images
-          }
-          two_column {
+          components {
+            name
+            position
+            layout
+            background
+            proportions
             image {
               style
               src
+              shadow
             }
             heading {
-              style
               text
+              style
               font_size
             }
             sub_heading {
+              text
               style
+              font_size
+            }
+            content {
               text
               font_size
             }
@@ -342,10 +215,6 @@ export const query = graphql`
                 icon
               }
             }
-            content {
-              font_size
-              text
-            }
             button {
               text
               color
@@ -353,6 +222,14 @@ export const query = graphql`
               hover_color
               path
             }
+          }
+          prices {
+            heading
+            sub_heading
+          }
+          we_trust_section {
+            title
+            text
             boxes {
               icon
               title
@@ -438,10 +315,10 @@ export const query = graphql`
             img {
               childImageSharp {
                 gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  layout: CONSTRAINED
                   width: 700
                   quality: 100
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  placeholder: NONE
                   breakpoints: [200, 340, 520, 890]
                 )
               }
@@ -460,4 +337,5 @@ export const query = graphql`
     }
   }
 `;
+
 export default BaseRender(Financial);

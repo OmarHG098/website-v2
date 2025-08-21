@@ -1,33 +1,31 @@
-title: "Payment Options"
-sub_title: "Explore flexible ways to fund your education."
+title: "Launch your tech career, stress-free"
+sub_title: "Explore our financing paths — from low monthly payments to income-based plans — and choose the option that works for you."
 options:
   - id: pay_upfront
     title: "Pay Upfront– Save 10%"
-    description: "Best value. Pay tuition upfront, save 10%"
+    description: "Best value!"
     bullets:
       items:
-        - text: "Save 10% on total tuition cost"
-        - text: "One-time payment for complete program"
-        - text: "No additional fees or interest"
+        - text: "Pay your tuition upfront and save 10%"
+        - text: "Available for all programs"
 
   - id: installments
-    title: "Pay in Installments"
-    description: "Spread tuition across 6 months, interest-free."
+    title: "Pay in Installments- Interest-Free over 6 months"
+    description: "Pay the regular tuition cost in interest-free installments."
     bullets:
       items:
-        - text: "Spread tuition across 6 months, interest-free"
-        - text: "Flexible monthly payment schedule"
-        - text: "No credit check required"
+        - text: "Spread tuition across 6 months"
+        - text: "Available for all programs"
 
   - id: edly
-    title: "Income-Based Payments (Edly)"
-    description: "Start paying after you land a qualifying job, with payments based on your income."
+    title: "Income-Based Payments"
+    description: "If you prefer to pay only after you land a job, we offer an e income-based loan option through Edly:"
     bullets:
       items:
-        - text: "No upfront payment required"
-        - text: "Pay only when you're employed"
-        - text: "Payments scale with your income"
-        - text: "Powered by Edly financing"
+        - text: "Pay only after you’re earning at least $35K/year "
+        - text: "Monthly payments adjust with your income "
+        - text: "No payments during unemployment or underemployment"
+        - text: "Cosigner-friendly"
 
   - id: loans
     title: "Payment Plans & Loans"

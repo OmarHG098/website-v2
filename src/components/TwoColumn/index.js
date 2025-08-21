@@ -427,7 +427,7 @@ const Side = ({
   );
 };
 
-const TwoColumn = ({ left, right, proportions, session, alignment }) => {
+const TwoColumn = ({ left, right, proportions, session, alignment, background }) => {
   const [left_size, right_size] = proportions ? proportions : [];
   return (
     <Div
@@ -446,6 +446,7 @@ const TwoColumn = ({ left, right, proportions, session, alignment }) => {
       padding_tablet="40px 40px"
       width_tablet="100%"
       maxWidth_md="1280px"
+      background={Colors[background] || background}
     >
       <Div
         justifyContent={
