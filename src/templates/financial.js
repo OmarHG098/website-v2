@@ -13,6 +13,7 @@ import { H1, H2, Paragraph } from "../components/Heading";
 import WeTrust from "../components/WeTrust";
 import CarouselV2 from "../components/CarouselV2";
 import PricesAndPayment from "../components/PricesAndPayment";
+import PaymentPlans from "../components/PaymentPlans";
 import Iconogram from "../components/Iconogram";
 import TwoColumn from "../components/TwoColumn";
 
@@ -114,7 +115,6 @@ const Financial = (props) => {
 
       <Iconogram yml={yml.iconogram} />
 
-
       <CarouselV2
         margin="20px 0"
         background="#F4F9FF"
@@ -190,6 +190,7 @@ const Financial = (props) => {
         chooseProgram // Allow choosing the program (used in financial.js)
         financial
       />
+      <PaymentPlans lang={pageContext.lang} />
       <ScholarshipSuccessCases content={data.allScholarshipSuccessCasesYaml.edges[0].node} />
     </>
   );

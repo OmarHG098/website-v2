@@ -1,0 +1,30 @@
+title: "Payment Options"
+sub_title: "Explore flexible ways to fund your education."
+options:
+  - id: pay_upfront
+    title: "Pay Upfront"
+    description: "Pay the full tuition at enrollment and secure the best price."
+    providers: []
+  - id: installments
+    title: "Pay in Installments"
+    description: "Split tuition into monthly payments during the program."
+    providers: []
+  - id: edly
+    title: "Income-Based Payments (Edly)"
+    description: "Start paying after you land a qualifying job, with payments based on your income."
+    providers:
+      - "Edly"
+  - id: loans
+    title: "Payment Plans & Loans"
+    description: "Finance your tuition with trusted partners."
+    providers:
+      - "Ascent Funding"
+      - "Climb Credit"
+      - "TFC Tuition"
+  - id: scholarships
+    title: "Scholarships"
+    description: "Need-based and merit scholarships may be available."
+    providers:
+      - "4Geeks Scholarships"
+
+

@@ -1,0 +1,30 @@
+title: "Opciones de Pago"
+sub_title: "Explora formas flexibles de financiar tu educación."
+options:
+  - id: pay_upfront
+    title: "Pago Anticipado"
+    description: "Paga la matrícula completa al inscribirte y obtén el mejor precio."
+    providers: []
+  - id: installments
+    title: "Pago en Cuotas"
+    description: "Divide la matrícula en pagos mensuales durante el programa."
+    providers: []
+  - id: edly
+    title: "Pagos Basados en Ingresos (Edly)"
+    description: "Comienza a pagar cuando consigas un empleo calificado, con pagos basados en tus ingresos."
+    providers:
+      - "Edly"
+  - id: loans
+    title: "Planes y Préstamos"
+    description: "Financia tu matrícula con aliados confiables."
+    providers:
+      - "Ascent Funding"
+      - "Climb Credit"
+      - "TFC Tuition"
+  - id: scholarships
+    title: "Becas"
+    description: "Pueden estar disponibles becas por necesidad o mérito."
+    providers:
+      - "Becas 4Geeks"
+
+

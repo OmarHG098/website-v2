@@ -77,6 +77,7 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
       "ScholarshipProjectsYaml",
       "ScholarshipSuccessCasesYaml",
       "JobGuaranteeSmallYaml",
+      "PaymentPlansYaml",
       "FaqYaml",
     ].includes(node.internal.type)
   ) {
