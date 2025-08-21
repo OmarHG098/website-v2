@@ -150,9 +150,7 @@ const FreeResources = (props) => {
                     </Paragraph>
                   </Div>
                   {item.url && (
-                    <Div
-                      className="button-container"
-                    >
+                    <Div className="button-container">
                       <Button
                         as="a"
                         href={item.url}
@@ -169,7 +167,8 @@ const FreeResources = (props) => {
                         style={{
                           minWidth: 160,
                           width: "auto",
-                          transition: "transform 250ms ease-in-out, background-color 250ms ease-in-out",
+                          transition:
+                            "transform 250ms ease-in-out, background-color 250ms ease-in-out",
                         }}
                         onMouseEnter={(e) => {
                           e.target.style.backgroundColor = "#ffb718";

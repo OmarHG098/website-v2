@@ -156,7 +156,8 @@ const AdmissionsStaff = (props) => {
                     borderRadius="6px"
                     fontWeight="600"
                     style={{
-                      transition: "transform 250ms ease-in-out, background-color 250ms ease-in-out",
+                      transition:
+                        "transform 250ms ease-in-out, background-color 250ms ease-in-out",
                     }}
                     onMouseEnter={(e) => {
                       e.target.style.backgroundColor = "#ffb718";
