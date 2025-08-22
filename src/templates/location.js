@@ -236,6 +236,33 @@ const Location = ({ data, pageContext, yml }) => {
         paddingText_tablet="0 10% 55px 10%"
       />
 
+      {yml.divider && (
+        <Div
+          flexDirection="column"
+          background={Colors.blue}
+          padding="20px 0"
+          alignItems="center"
+          margin="10px 0"
+        >
+          {yml.divider.heading && yml.divider.heading.text && (
+            <Paragraph
+              fontSize={yml.divider.heading.font_size[4] || "18px"}
+              fontSize_xl={yml.divider.heading.font_size[0]}
+              fontSize_md={yml.divider.heading.font_size[2]}
+              fontSize_sm={yml.divider.heading.font_size[3]}
+              color={Colors.white}
+              textAlign="center"
+              margin="0"
+              maxWidth="80%"
+              padding="0 20px"
+              lineHeight="1.5"
+            >
+              {yml.divider.heading.text}
+            </Paragraph>
+          )}
+        </Div>
+      )}
+
       {data.allJobGuaranteeSmallYaml.edges[0].node.locations.includes(
         yml.breathecode_location_slug
       ) && (
@@ -407,6 +434,13 @@ export const query = graphql`
           badges {
             title
             paragraph
+          }
+          divider {
+            heading {
+              text
+              font_size
+              style
+            }
           }
           our_partners {
             tagline

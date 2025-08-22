@@ -16,11 +16,11 @@ meta_info:
   cohort_exclude_regex: ['usa-\d{1,10}-spanish']
   home_video: "https://www.videoask.com/frhjxdk8z"
 
-seo_title: "Atlanta Coding Bootcamp with Job Guarantee"
+seo_title: "Coding Bootcamp in Atlanta with a Job Guarantee"
 header:
-  tagline: "4Geeks Academy in Atlanta"
-  sub_header: "Transform into a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist in 18 weeks or less "
-  sub_header_highlighted: "All programs are taught online"
+  tagline: " 4Geeks Academy: Launch an AI-Ready Tech Career in Atlanta"
+  sub_header: "Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist—with skills built for the AI era."
+  sub_header_highlighted: "All programs are taught online with live support."
   paragraph: ""
   image: "../../../static/images/locations/atlanta-home.png"
   alt: "4Geeks Academy live coding bootcamp in Atlanta, Georgia"
@@ -30,12 +30,17 @@ badges:
   # NOTE: If you want to break the text into many lines avoid using double quotes
   # use the pipe operator ' | ' instead, like the example below
   paragraph: |
-    4Geeks Academy is the place where developers grow and thrive.
+    4Geeks Academy is a globally recognized coding bootcamp where future-ready developers grow and thrive.
 
-    We are licensed by the Florida Dept. of Education.
-    Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Atlanta according to SwitchUp.
-    According to Newsweek, 4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States.
-    A community built for developers.
+    Licensed by the Florida Department of Education, we've been ranked as one of the top 5 coding bootcamps in the United States by SwitchUp and among the top 10 nationwide by Newsweek.
+    At 4Geeks, we're more than a school—we're a community built to equip developers with the skills needed to succeed in the AI era.
+
+# Optional divider section that can be added after badges
+divider:
+  heading:
+    text: "4Geeks Academy is a globally recognized coding bootcamp where future-ready developers grow and thrive. Licensed by the Florida Department of Education, we’ve been ranked as one of the top 5 coding bootcamps in the United States by SwitchUp and among the top 10 nationwide by Newsweek. At 4Geeks, we’re more than a school—we’re a community built to equip developers with the skills needed to succeed in the AI era."
+    font_size: ["34px", "34px", "34px", "28px", "26px"] # [xl, lg, md, sm, xs]
+    style: '{ "color": "#FFFFFF" }'
 
 news:
   title: "4Geeks Academy Atlanta has been reviewed in:"
@@ -68,7 +73,7 @@ info_box:
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
 images_box:
-  heading: "What you should know about this location: "
+  heading: "Why Atlanta Is a Smart Place to Launch Your Tech Career: "
   content: "Atlanta's tech ecosystem is flourishing with over 850 tech companies and 70,000+ tech workers. Major tech firms like Google and Facebook have set up local outposts drawn by the city's diverse talent pool. As Atlanta vies to become a tech hub, coding bootcamps aim to close the skills gap by supplying tech talent to meet the surging demand for coding expertise from expanding tech companies."
   images:
     - path: "../../../static/images/locations/atlanta-new.jpg"
@@ -93,10 +98,10 @@ two_columns:
     shadow: true
   video: "EcqasocRKHo"
   heading:
-    text: "Unlocking Atlanta's Coding Potential"
+    text: "Unlock Atlanta’s Tech Potential"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Receive unlimited guidance and support from experienced mentors throughout your journey, even after graduation. Master in-demand skills and launch your coding career with confidence."
+    text: "At 4Geeks Academy, we offer unlimited mentorship, flexible learning, and expert career support to help you break into Atlanta’s fast-growing tech scene. Our hands-on, AI-driven curriculum is designed to build practical, job-ready skills."
     font_size: ["18px", "18px", "18px", "18px", "18px"]
   button:
     text: "APPLY NOW"
@@ -105,9 +110,10 @@ two_columns:
     path: "/us/apply"
   bullets:
     items:
-      - text: "Hands-on projects fostering practical skill mastery"
-      - text: "Industry-aligned curriculum for real-world readiness"
-      - text: "Career support navigating Atlanta's thriving tech industry"
+      - text: "Learn industry-relevant tools used by Atlanta employers"
+      - text: "Build real-world projects to showcase your development skills"
+      - text: "Get personalized coaching to navigate Atlanta’s tech job market"
+  paragraph: "Hear from Alissa on how 4Geeks helps Atlanta students thrive in tech."
 
 # Two Columns - Rigo
 two_columns_rigo:
