@@ -1,25 +1,26 @@
-import React, { useContext, useMemo, useEffect } from "react";
+import React, { useContext, useMemo } from "react";
 import { graphql, navigate } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { Button, Colors } from "../components/Styling";
+import { Button, Colors, Img } from "../components/Styling";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session";
 import { isCustomBarActive } from "../actions";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
-import { landingSections } from "../components/Landing";
 
 // components
 import { Div } from "../components/Sections";
 import { H1, H2, Paragraph } from "../components/Heading";
 import WeTrust from "../components/WeTrust";
+import CarouselV2 from "../components/CarouselV2";
 import PricesAndPayment from "../components/PricesAndPayment";
 import PaymentPlans from "../components/PaymentPlans";
+import Iconogram from "../components/Iconogram";
+import TwoColumn from "../components/TwoColumn";
 
 const Financial = (props) => {
   const { session } = useContext(SessionContext);
   const { data, pageContext, yml } = props;
   const { seo_title, header } = yml;
-  const [components, setComponents] = React.useState({});
 
   const allPlans = useMemo(() => {
     return data.allPlansYaml.edges
@@ -28,16 +29,23 @@ const Financial = (props) => {
         plan.academies.includes(session?.location?.breathecode_location_slug)
       );
   }, [session]);
+  const academyHasJobGuarantee = allPlans.some(
+    ({ job_guarantee_price }) => job_guarantee_price
+  );
 
-  useEffect(() => {
-    let _components = {};
-    if (yml.components)
-      yml.components.forEach(({ name, ...rest }) => {
-        _components[name] = rest;
-      });
-    setComponents({ ...yml, ..._components });
-  }, [yml]);
+  let location = null;
+  if (session && session.location) {
+    location = data.allLocationYaml.edges.find(
+      (l) =>
+        l &&
+        l.node &&
+        l.node.active_campaign_location_slug ===
+          session.location.active_campaign_location_slug
+    );
+    if (location) location = location.node;
+  }
 
+  const ymlTwoColumn = yml?.two_column;
   const defaultCourse = "full-stack";
 
   return (
@@ -104,28 +112,23 @@ const Financial = (props) => {
           />
         </Div>
       </Div>
-
       <PaymentPlans lang={pageContext.lang} />
 
-      {Object.keys(components)
-        .filter(
-          (name) =>
-            components[name] &&
-            (landingSections[name] || landingSections[components[name].layout])
-        )
-        .sort((a, b) =>
-          components[b].position > components[a].position ? -1 : 1
-        )
-        .map((name, index) => {
-          const layout = components[name].layout || name;
-          return landingSections[layout]({
-            ...props,
-            yml: components[name],
-            session,
-            index: index,
-          });
-        })}
-
+      <TwoColumn
+        left={{ image: ymlTwoColumn[0].image }}
+        right={{
+            heading: ymlTwoColumn[0].heading,
+            sub_heading: ymlTwoColumn[0].sub_heading,
+            bullets: ymlTwoColumn[0].bullets,
+            content: ymlTwoColumn[0].content,
+            button: ymlTwoColumn[0].button,
+            boxes: ymlTwoColumn[0].boxes,
+            gap_tablet: "40px",
+          }}
+          background={ymlTwoColumn[0].background}
+        proportions={ymlTwoColumn.proportions}
+        session={session}
+      />
       <WeTrust
         we_trust={yml.we_trust_section}
         background="none"
@@ -141,11 +144,13 @@ const Financial = (props) => {
         defaultCourse={defaultCourse}
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
-        chooseProgram
+        chooseProgram // Allow choosing the program (used in financial.js)
         financial
       />
 
       <ScholarshipSuccessCases content={data.allScholarshipSuccessCasesYaml.edges[0].node} />
+
+
     </>
   );
 };
@@ -172,38 +177,114 @@ export const query = graphql`
             image {
               childImageSharp {
                 gatsbyImageData(
-                  layout: CONSTRAINED
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
                   width: 1600
                   quality: 100
-                  placeholder: NONE
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
               }
             }
             alt
             sub_heading
           }
-          components {
-            name
-            position
-            layout
-            background
-            proportions
+          intro {
             image {
-              style
-              src
-              shadow
+              childImageSharp {
+                gatsbyImageData(
+                  layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 300
+                  height: 300
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+              }
             }
+            image_second {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 450
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+              }
+            }
+            content
+            content_second
+            heading_second
+            bullets
+            heading
+          }
+          label {
+            program {
+              title
+              closedLabel
+            }
+            modality {
+              title
+              closedLabel
+            }
+            campus {
+              title
+              closedLabel
+            }
+          }
+          syllabus_button_text
+          we_trust_section {
+            title
+            text
+            boxes {
+              icon
+              title
+              text
+            }
+          }
+          prices {
+            heading
+            sub_heading
+            selector {
+              top_label
+              placeholder
+            }
+            button {
+              text
+              link
+            }
+          }
+          iconogram {
+            swipable
             heading {
               text
               style
-              font_size
             }
             sub_heading {
               text
               style
+            }
+            icons {
+              icon
+              color
+              title
+              content
+            }
+            button {
+              text
+              color
+              path
+              background
+              hover_color
+            }
+          }
+          two_column {
+            image {
+              style
+              src
+            }
+            heading {
+              style
+              text
               font_size
             }
-            content {
+            sub_heading {
+              style
               text
               font_size
             }
@@ -215,6 +296,10 @@ export const query = graphql`
                 icon
               }
             }
+            content {
+              font_size
+              text
+            }
             button {
               text
               color
@@ -222,19 +307,12 @@ export const query = graphql`
               hover_color
               path
             }
-          }
-          prices {
-            heading
-            sub_heading
-          }
-          we_trust_section {
-            title
-            text
             boxes {
               icon
               title
               text
             }
+            background
           }
         }
       }
@@ -315,10 +393,10 @@ export const query = graphql`
             img {
               childImageSharp {
                 gatsbyImageData(
-                  layout: CONSTRAINED
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
                   width: 700
                   quality: 100
-                  placeholder: NONE
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   breakpoints: [200, 340, 520, 890]
                 )
               }
@@ -337,5 +415,4 @@ export const query = graphql`
     }
   }
 `;
-
 export default BaseRender(Financial);

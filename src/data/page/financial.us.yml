@@ -2,11 +2,12 @@ meta_info:
   slug: financials
   title: "All the ways you can pay (or not) at 4Geeks Academy"
   description: "4Geeks Academy offers flexible financing options for our coding bootcamp. Start your tech career today with payment plans that fit your budget."
-  visibility: "visible"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/og-preview/finantial.us.png"
   keywords: "Financing at 4Geeks Academy"
   redirects: ["/financials", "/pricing"]
 
+## BANNER - HEADER
 seo_title: "Bootcamp Financing"
 header:
   title: Finance your future
@@ -17,11 +18,158 @@ header:
   alt: "financing"
   button: See plans & prices
 
+## FIRST SECTION AFTER THE BANNER
+intro:
+  image: "../../../static/images/pricing.png"
+  heading: "4Geeks's pricing makes sense"
+  content: "Our program was specifically built to efficiently deliver the most current and essential tech knowledge and skills, while remaining as an affordable -yet growing- Bootcamp."
+  image_second: "../../../static/images/nacho-chriss.jpg"
+  heading_second: "What you need to know"
+  content_second: "We are with you throughout the process. If you have any question, please get in contact with your Admissions Advisor here. Now, let's break it down:"
+  bullets:
+    - "You need to choose a program."
+    - "You need to choose a city/Campus."
+    - "Each campus offers you different options. For example: Miami (Skills Fund, Climb), Madrid (Quotanda or Stuent Finance), Chile (Quotanda)."
+    - "Scholarships available (we are always finding new ways to lower the final price), and/or partnerships with special offers."
+    - "Apply, go through the admissions process or call us now. We are here to help. Your Coding Career at 4Geeks is about to start." 
 
-
+## TUITION AND PAYMENTS SECTION
 prices:
   heading: "SELECT A PROGRAM"
-  sub_heading: "Start by choosing a program and location"
+  paragraph: "Start by choosing a program and location"
+  closed_label: "Select a program"
+  opened_label: "Close"
+
+label:
+  program: 
+    title: "Program"
+    closedLabel: "Select a program"
+  modality:
+    title: "Modality"
+    closedLabel: "Select a modality"
+  campus:
+    title: "Campus"
+    closedLabel: "Select a campus"
+
+syllabus_button_text: "Search"
+
+iconogram:
+  heading:
+    text: "Paying your tuition should never be a concern"
+    style: '{ "textAlign": "center", "width": "60%" }'
+  sub_heading:
+    text: ""
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    style: '{ "textAlign": "center", "width": "60%" }'
+  text_link: "#"
+  swipable: false
+  icons:
+  - icon: "bill"
+    title: Interest Free Payment Plans
+    content: "Pay in up to 6 months with no interest"
+  - icon: "money"
+    color: "#0084FF"
+    title: Long Term Loans
+    content: "3, 4 or 5 year loans"
+  - icon: "hands-group"
+    color: "#25BF6C"
+    title: Scholarships
+    content: "Full and partial scholarships for qualifying students"
+  - icon: "contract-2"
+    color: "#BE8BFF"
+    title: Partnerships
+    content: "Special programs funded by institutional partners."
+  button:
+    text: "Conditions apply."
+    color: ""
+    path: "#prices_and_payment"
+    background: ""
+    hover_color: ""
+
+who_is_hiring:
+  title: Who is hiring our students?
+  paragraph: A few of the companies hiring our graduates
+  images:
+    - '/images/partner/microsoft-2.png'
+    - '/images/coding/google-developers.png'
+    - '/images/partner/boats.jpg'
+    - '/images/partner/meta-logo.png'
+    - '/images/partner/ebay.png'
+    - '/images/partner/natgeo.png'
+    - '/images/partner/evernote.png'
+    - '/images/partner/telefonica.png'
+    - '/images/partner/twilio.png'
+    - '/images/partner/uber.png'
+    - '/images/partner/Neo9.png'
+    - '/images/partner/jooble.png'
+    - '/images/partner/kpmg-logo1.png'
+    - '/images/partner/ultimate.png'
+    - '/images/partner/tcg.png'
+    - '/images/partner/razz.png'
+    - '/images/partner/overseas.png'
+    - '/images/partner/ds9.png'
+    - '/images/partner/coinet.jpg'
+    - '/images/partner/strata.png'
+    - '/images/partner/mdc_ce.png'
+    - '/images/partner/beacon_council.jpg'
+    - '/images/partner/blackstone.png'
+    - '/images/partner/cemex.png'
+
+
+two_column:
+  - image:
+      style: '{ "backgroundSize": "contain"}'
+      src: "/images/pretty-woman-in-a-computer.png"
+    background: "veryLightBlue"
+    heading:
+      style: '{ "fontWeight": 700 }'
+      text: "Need extra confidence?  Add a  Job Guarantee"
+      font_size: ["38px", "38px", "38px", "30px", "28px"]
+    sub_heading:
+      style: '{ "color": "#4D4D5C", "fontWeight": 400, "textAlign": "justify" }'
+      text: 'For additional peace of mind, enroll with a Job Guarantee. If you don’t get hired after 9 months of graduation you’ll receive 
+            a <strong style="text-decoration: none; color: #000000; font-weight: 700;">full tuition refund</strong>. The job guarantee can also be financed.'
+      font_size: ["20px", "20px", "20px", "18px", "16px"]
+    content:
+      text: " "  
+    bullets:
+      item_style: ""
+      items:
+        - heading: ""
+    button:
+      text: "MORE DETAILS HERE"
+      color: "white"
+      background: "black"
+      hover_color: "white"
+      path: "/us/job-guarantee"
+
+
+
+partners:
+  paragraph: "Don't miss out on the awesome allies of 4Geeks Academy! Here are just a few of them."
+  badges:
+    - name: "Miami Tech Works"
+      url: ""
+      image: "../../../static/images/allies/miamitech-works-logo.png"
+      alt: "Miami Tech Works"
+    - name: "UTEC"
+      url: ""
+      image: "../../../static/images/allies/utec.png"
+      alt: "Best cooding bootcamp Course Report 2023"
+    - name: "Universidad Tecnologica"
+      url: ""
+      image: "../../../static/images/allies/clark-uni-rounded-logo.png"
+      alt: "Clark University"
+    - name: "CINDE"
+      url: ""
+      image: "../../../static/images/allies/cinde.png"
+      alt: "CINDE Invest in Costa Rica"
+    - name: "IDB"
+      url: ""
+      image: "../../../static/images/allies/idb.png"
+      alt: "Inter-American Development Bank"
+  link_text: "See all parthers"
+  link_to: "/us/partners"
 
 we_trust_section:
   title: Affordable Tech Education with Proven Results
@@ -38,26 +186,4 @@ we_trust_section:
       title: "55%"
       text: Salary increase after graduation
 
-components:
-  - name: job_guarantee_section
-    position: 1
-    layout: two_column
-    background: veryLightBlue
-    proportions: [6, 6]
-    image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/pretty-woman-in-a-computer.png"
-    heading:
-      style: '{ "fontWeight": 700 }'
-      text: "Need extra confidence? Add a Job Guarantee"
-      font_size: ["38px", "38px", "38px", "30px", "28px"]
-    sub_heading:
-      style: '{ "color": "#4D4D5C", "fontWeight": 400, "textAlign": "justify" }'
-      text: 'For additional peace of mind, enroll with a Job Guarantee. If you donʼt get hired after 9 months of graduation youʼll receive a <strong style="text-decoration: none; color: #000000; font-weight: 700;">full tuition refund</strong>. The job guarantee can also be financed.'
-      font_size: ["20px", "20px", "20px", "18px", "16px"]
-    button:
-      text: "MORE DETAILS HERE"
-      color: "white"
-      background: "black"
-      hover_color: "white"
-      path: "/us/job-guarantee"
+
