@@ -5,7 +5,7 @@ import { Link } from "../Styling/index";
 import { GridContainer, Div, Grid } from "../Sections";
 import { SelectRaw } from "../Select";
 import { H2, H3, H4, H5, Paragraph } from "../Heading";
-import { Button, Colors, RoundImage, Img } from "../Styling";
+import { Button, Colors, RoundImage, Img, Toggle } from "../Styling";
 import { SessionContext } from "../../session";
 import { isWindow } from "../../utils/utils";
 
@@ -321,6 +321,191 @@ const PaymentOptionCard = ({ option, isExpanded, onToggle }) => {
   );
 };
 
+// Desktop-only enhanced financial options component
+const FinancialOptionsDesktop = ({
+  info,
+  selectedPlan,
+  setSelectedPlan,
+  jobGuarantee,
+  setJobGuarantee,
+  session,
+  setSession,
+  availablePlans,
+}) => {
+  const [localSelected, setLocalSelected] = useState(null);
+
+  // Build options list from available plans (YAML-driven)
+  const paymentOptions = (availablePlans || []).map((plan) => ({
+    id: plan.slug,
+    title: plan.scholarship,
+    description: plan.payment_time,
+    details: plan.warning_message,
+    price: plan.price,
+    originalPrice: plan.original_price,
+    icons: plan.icons,
+    recomended: plan.recomended,
+  }));
+
+  const activeOption = paymentOptions.find((o) => o.id === (localSelected || selectedPlan)) || paymentOptions[0];
+
+  return (
+    <Div
+      display="none"
+      display_tablet="flex"
+      width="100%"
+      maxWidth_md="1280px"
+      gap="16px"
+      margin="24px 0"
+    >
+      {/* Left column */}
+      <Div
+        display="block"
+        background={Colors.white}
+        border={`4px solid ${Colors.black}`}
+        borderRadius="8px"
+        padding="24px"
+        width_tablet="50%"
+      >
+        <H3 color={Colors.blue} fontWeight="700" margin="0 0 16px 0">
+          {"Invest in your future, stress-free"}
+        </H3>
+
+        <Div display="block" margin="0 0 12px 0">
+          <H2 fontSize="36px" lineHeight="42px" fontWeight="700" color={Colors.black} margin="0 0 6px 0">
+            {activeOption?.price || ""}
+          </H2>
+          {activeOption?.originalPrice && (
+            <Paragraph color="#B4B4B4" margin="0 0 8px 0">
+              <s>{activeOption.originalPrice}</s>
+            </Paragraph>
+          )}
+          <Paragraph color={Colors.black} fontSize="14px" margin="0 0 6px 0">
+            {activeOption?.description}
+          </Paragraph>
+          {activeOption?.details && (
+            <Paragraph color={Colors.darkGray} fontSize="12px" opacity="1">
+              {activeOption.details}
+            </Paragraph>
+          )}
+        </Div>
+
+        {/* Job Guarantee toggle */}
+        {availablePlans?.some((p) => p.price) && (
+          <Div margin="8px 0 0 0" display="block">
+            <Div alignItems="center">
+              <Toggle
+                onClick={() => setJobGuarantee && setJobGuarantee(!jobGuarantee)}
+                width="40px"
+                height="20px"
+                bg={jobGuarantee ? Colors.blue : Colors.lightGray}
+                b_radius="9999px"
+              />
+              <H4 fontSize_tablet="18px" fontSize_xs="16px" margin="0 0 0 10px">
+                {info.job_guarantee.title}
+              </H4>
+            </Div>
+            <Paragraph textAlign="left" color={Colors.black} margin="8px 0 0 0">
+              {info.job_guarantee.description}
+            </Paragraph>
+          </Div>
+        )}
+
+        {/* Partner logos */}
+        <Div alignItems="center" gap="12px" padding="16px 0 0 0" borderTop={`1px solid ${Colors.lightGray}`}>
+          <Div padding="4px 8px" border={`1px solid ${Colors.lightGray}`} borderRadius="4px" fontSize="12px" color={Colors.darkGray}>
+            {"Ascent"}
+          </Div>
+          <Div padding="4px 8px" border={`1px solid ${Colors.lightGray}`} borderRadius="4px" fontSize="12px" color={Colors.darkGray}>
+            {"Climb"}
+          </Div>
+          <Div padding="4px 8px" border={`1px solid ${Colors.lightGray}`} borderRadius="4px" fontSize="12px" color={Colors.darkGray}>
+            {"Quotanda"}
+          </Div>
+        </Div>
+
+        {/* CTA */}
+        <Div margin="16px 0 0 0">
+          <Link
+            to={`${info.apply_button.link}${(localSelected || selectedPlan) ? `?utm_plan=${(localSelected || selectedPlan)}` : ""}`}
+          >
+            <Button
+              variant="full"
+              color={Colors.black}
+              textColor={Colors.white}
+              fontSize="16px"
+              borderRadius="4px"
+              onClick={() => {
+                const planToTrack = localSelected || selectedPlan;
+                if (planToTrack) {
+                  setSession({ ...session, utm: { ...session.utm, utm_plan: planToTrack } });
+                }
+              }}
+            >
+              {info.apply_button.label}
+            </Button>
+          </Link>
+        </Div>
+      </Div>
+
+      {/* Right column */}
+      <Div
+        display="block"
+        background={Colors.verylightGray3}
+        border={`1px solid ${Colors.lightGray}`}
+        borderRadius="8px"
+        padding="24px"
+        width_tablet="50%"
+      >
+        <H3 color={Colors.blue} fontWeight="700" margin="0 0 12px 0">
+          {"Other payment options"}
+        </H3>
+        {(paymentOptions || []).map((option) => {
+          const isSelected = (localSelected || selectedPlan) === option.id;
+          return (
+            <Div
+              key={option.id}
+              border={isSelected ? `2px solid ${Colors.blue}` : `1px solid ${Colors.lightGray}`}
+              background={isSelected ? Colors.veryLightBlue3 : Colors.white}
+              padding="16px"
+              borderRadius="8px"
+              margin="0 0 12px 0"
+              cursor="pointer"
+              onClick={() => {
+                setLocalSelected(option.id);
+                setSelectedPlan && setSelectedPlan(option.id);
+              }}
+            >
+              <Div justifyContent="between" alignItems="flex-start">
+                <Div display="block">
+                  <Paragraph fontWeight="700" color={Colors.black} margin="0 0 6px 0">
+                    {option.title}
+                  </Paragraph>
+                  <Paragraph color={Colors.darkGray} fontSize="14px">
+                    {option.description}
+                  </Paragraph>
+                </Div>
+                {option.recomended && (
+                  <Div
+                    padding="4px 8px"
+                    background={Colors.lightGreen}
+                    color={Colors.green}
+                    borderRadius="9999px"
+                    fontSize="12px"
+                    fontWeight="700"
+                  >
+                    {info.recomended}
+                  </Div>
+                )}
+              </Div>
+            </Div>
+          );
+        })}
+      </Div>
+    </Div>
+  );
+};
+
+// Keep the original mobile card implementation for MobileFinancialDropdown
 const FinancialOptionsCard = ({ info, selectedPlan, session, setSession }) => {
   const [expandedOption, setExpandedOption] = useState(null);
 
@@ -915,14 +1100,16 @@ const PricesAndPayment = (props) => {
         </Div>
       </Grid>
       {/* Financial explainer card (desktop/tablet) */}
-      <Div display_tablet="flex" justifyContent="center" width="100%">
-        <FinancialOptionsCard
-          info={info}
-          selectedPlan={selectedPlan}
-          session={session}
-          setSession={setSession}
-        />
-      </Div>
+      <FinancialOptionsDesktop
+        info={info}
+        selectedPlan={selectedPlan}
+        setSelectedPlan={setSelectedPlan}
+        jobGuarantee={jobGuarantee}
+        setJobGuarantee={setJobGuarantee}
+        session={session}
+        setSession={setSession}
+        availablePlans={availablePlans}
+      />
       {/* Financial explainer card (mobile dropdown) */}
       <MobileFinancialDropdown
         info={info}
