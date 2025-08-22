@@ -344,9 +344,12 @@ const FinancialOptionsDesktop = ({
     originalPrice: plan.original_price,
     icons: plan.icons,
     recomended: plan.recomended,
+    bullets: plan.bullets,
   }));
 
-  const activeOption = paymentOptions.find((o) => o.id === (localSelected || selectedPlan)) || paymentOptions[0];
+  const activeId = localSelected || selectedPlan;
+  const currentPlan = (availablePlans || []).find((p) => p.slug === activeId) || (availablePlans || [])[0];
+  const activeOption = paymentOptions.find((o) => o.id === (activeId)) || paymentOptions[0];
 
   return (
     <Div
@@ -372,34 +375,70 @@ const FinancialOptionsDesktop = ({
 
         <Div display="block" margin="0 0 12px 0">
           <H2 fontSize="36px" lineHeight="42px" fontWeight="700" color={Colors.black} margin="0 0 6px 0">
-            {activeOption?.price || ""}
+            {currentPlan?.price || ""}
           </H2>
-          {activeOption?.originalPrice && (
+          {currentPlan?.original_price && (
             <Paragraph color="#B4B4B4" margin="0 0 8px 0">
-              <s>{activeOption.originalPrice}</s>
+              <s>{currentPlan.original_price}</s>
             </Paragraph>
           )}
           <Paragraph color={Colors.black} fontSize="14px" margin="0 0 6px 0">
-            {activeOption?.description}
+            {currentPlan?.payment_time}
           </Paragraph>
-          {activeOption?.details && (
+          {currentPlan?.warning_message && (
             <Paragraph color={Colors.darkGray} fontSize="12px" opacity="1">
-              {activeOption.details}
+              {currentPlan.warning_message}
             </Paragraph>
           )}
         </Div>
+
+        {/* Bullets from selected plan */}
+        {currentPlan?.bullets && currentPlan.bullets.length > 0 && (
+          <Div display="block" margin="12px 0 0 0">
+            <Div borderTop={`1px solid #ebebeb`} width="60%" margin="0 0 12px 0" />
+            {currentPlan.bullets.map((bullet, index) => (
+              <Div key={index} alignItems="center" margin="12px 0 0 0">
+                <Icon
+                  icon="check"
+                  width="17px"
+                  height="17px"
+                  style={{ marginRight: "10px" }}
+                  color={Colors.blue}
+                  fill={Colors.blue}
+                />
+                <Paragraph
+                  color={Colors.black}
+                  textAlign="left"
+                  dangerouslySetInnerHTML={{ __html: bullet }}
+                />
+              </Div>
+            ))}
+          </Div>
+        )}
 
         {/* Job Guarantee toggle */}
         {availablePlans?.some((p) => p.price) && (
           <Div margin="8px 0 0 0" display="block">
             <Div alignItems="center">
-              <Toggle
+              <Div
+                position="relative"
+                width="42px"
+                height="22px"
+                borderRadius="9999px"
+                background={jobGuarantee ? Colors.blue : Colors.lightGray}
                 onClick={() => setJobGuarantee && setJobGuarantee(!jobGuarantee)}
-                width="40px"
-                height="20px"
-                bg={jobGuarantee ? Colors.blue : Colors.lightGray}
-                b_radius="9999px"
-              />
+                cursor="pointer"
+              >
+                <Div
+                  position="absolute"
+                  top="2px"
+                  left={jobGuarantee ? "22px" : "2px"}
+                  width="18px"
+                  height="18px"
+                  borderRadius="9999px"
+                  background={Colors.white}
+                />
+              </Div>
               <H4 fontSize_tablet="18px" fontSize_xs="16px" margin="0 0 0 10px">
                 {info.job_guarantee.title}
               </H4>
@@ -410,41 +449,31 @@ const FinancialOptionsDesktop = ({
           </Div>
         )}
 
-        {/* Partner logos */}
-        <Div alignItems="center" gap="12px" padding="16px 0 0 0" borderTop={`1px solid ${Colors.lightGray}`}>
-          <Div padding="4px 8px" border={`1px solid ${Colors.lightGray}`} borderRadius="4px" fontSize="12px" color={Colors.darkGray}>
-            {"Ascent"}
-          </Div>
-          <Div padding="4px 8px" border={`1px solid ${Colors.lightGray}`} borderRadius="4px" fontSize="12px" color={Colors.darkGray}>
-            {"Climb"}
-          </Div>
-          <Div padding="4px 8px" border={`1px solid ${Colors.lightGray}`} borderRadius="4px" fontSize="12px" color={Colors.darkGray}>
-            {"Quotanda"}
-          </Div>
-        </Div>
-
-        {/* CTA */}
-        <Div margin="16px 0 0 0">
-          <Link
-            to={`${info.apply_button.link}${(localSelected || selectedPlan) ? `?utm_plan=${(localSelected || selectedPlan)}` : ""}`}
+        {/* Partner logos from YAML icons */}
+        {currentPlan?.icons && currentPlan.icons.length > 0 && (
+          <Div
+            className="icons"
+            background={Colors.verylightGray}
+            padding="4px 7px"
+            borderRadius="26px"
+            width="fit-content"
+            alignItems="center"
+            margin="16px 0 0 0"
           >
-            <Button
-              variant="full"
-              color={Colors.black}
-              textColor={Colors.white}
-              fontSize="16px"
-              borderRadius="4px"
-              onClick={() => {
-                const planToTrack = localSelected || selectedPlan;
-                if (planToTrack) {
-                  setSession({ ...session, utm: { ...session.utm, utm_plan: planToTrack } });
-                }
-              }}
-            >
-              {info.apply_button.label}
-            </Button>
-          </Link>
-        </Div>
+            {currentPlan.icons.map((icon) => (
+              <Img
+                key={`${icon}-${currentPlan.slug}`}
+                src={icon}
+                alt="4Geeks Academy Icon"
+                backgroundSize="contain"
+                height="17px"
+                minWidth="30px"
+                width="50px"
+                margin="0 5px"
+              />
+            ))}
+          </Div>
+        )}
       </Div>
 
       {/* Right column */}
