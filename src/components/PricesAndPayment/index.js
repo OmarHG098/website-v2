@@ -483,76 +483,7 @@ const MobileFinancialDropdown = ({ info, selectedPlan, session, setSession }) =>
   );
 };
 
-const ChartSection = ({ info, currentLocation }) => {
-  const statistics = currentLocation?.chart_section || info.chart_section;
-  return (
-    <Div
-      className="chart-section"
-      maxWidth_md="800px"
-      width_xs="80%"
-      margin="auto"
-      display="block"
-    >
-      <H3 margin=" 0 auto 10px auto" fontSize="26px" lineHeight="31.2px">
-        {info.chart_section.title}
-      </H3>
-      <Div
-        margin="25px 0 15px 0"
-        gap="10px"
-        flexWrap="wrap"
-        flexWrap_md="nowrap"
-      >
-        <Div
-          id="chart-image"
-          width="100%"
-          width_xs="300px"
-          margin="auto"
-          // height="256px"
-        >
-          <Icon icon="payments_chart" style={{ margin: "auto" }} />
-        </Div>
-        <Div id="data" flexWrap="wrap" justifyContent="between">
-          {statistics &&
-            Array.isArray(statistics.data) &&
-            statistics.data.map((item, i) => (
-              <Div
-                width={i === 0 ? "100%" : "48%"}
-                height="auto"
-                border={`1px solid ${item.color}`}
-                className="info"
-                margin="0 0 4% 0"
-              >
-                <Div
-                  flexShrink_tablet="0"
-                  // height="100%"
-                  width="19.39px"
-                  background={item.color}
-                />
-                <Div padding="10px" display="block">
-                  <H5
-                    margin={i !== 0 && "0 0 10px 0"}
-                    textAlign="left"
-                    color={item.color}
-                  >
-                    {item.percentage}
-                  </H5>
-                  <Paragraph
-                    fontWeight_tablet="700"
-                    fontSize="16px"
-                    lineHeight="19px"
-                    textAlign="left"
-                    opacity="1"
-                  >
-                    {item.description}
-                  </Paragraph>
-                </Div>
-              </Div>
-            ))}
-        </Div>
-      </Div>
-    </Div>
-  );
-};
+
 
 const PricesAndPayment = (props) => {
   const data = useStaticQuery(graphql`
@@ -586,14 +517,7 @@ const PricesAndPayment = (props) => {
               label
               link
             }
-            chart_section {
-              title
-              data {
-                percentage
-                color
-                description
-              }
-            }
+
             button {
               button_text
               button_link
@@ -1173,8 +1097,7 @@ const PricesAndPayment = (props) => {
           </>
         )}
       </Div>
-      {/* Stats/chart section */}
-      <ChartSection info={info} currentLocation={currentLocation} />
+
       <GridContainer
         columns_tablet="12"
         gridGap="0"
