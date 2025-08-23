@@ -6,8 +6,7 @@ contact_link: /us/contact
 we_accept: "We Accept:"
 top_label: Location
 top_label_2: Program
-recomended: Recommended
-plans_title: Plans and prices
+plans_title: Explore financial options
 plan_details: Plan details
 select: Select the location and payment option that suits you best.
 select_2: Select the location, program and payment option that best meets your needs
@@ -20,7 +19,6 @@ apply_button:
   link: /us/apply
 not_available: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>No payment information has been found for this location and program.</p> <p>Please apply for more information or <a class="faq-link" href="/us/contact" rel="noopener noreferrer nofollow">send us a message.</a></p>'
 not_available_job_guarantee: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>We have no plans available with the modality Job Guarantee on this program at this location.</p> <p>Please apply for more information or <a class="faq-link" href="/us/contact" rel="noopener noreferrer nofollow">send us a message.</a></p>'
-
 
 button:
   button_text: See plans and prices

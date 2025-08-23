@@ -357,6 +357,8 @@ const FinancialOptionsDesktop = ({
       display_tablet="flex"
       width="100%"
       maxWidth_md="1280px"
+      border="4px solid black"
+      borderRadius="12px"
       gap="16px"
       margin="24px 0"
     >
@@ -364,61 +366,36 @@ const FinancialOptionsDesktop = ({
       <Div
         display="block"
         background={Colors.white}
-        border={`4px solid ${Colors.black}`}
-        borderRadius="8px"
+        borderRight={`1px solid ${Colors.lightGray}`}
         padding="24px"
         width_tablet="50%"
       >
-        <H3 color={Colors.blue} fontWeight="700" margin="0 0 16px 0">
+        <H3 color={Colors.blue} fontWeight="700" margin="0 0 16px 0" textAlign="left">
           {"Invest in your future, stress-free"}
         </H3>
 
         <Div display="block" margin="0 0 12px 0">
-          <H2 fontSize="36px" lineHeight="42px" fontWeight="700" color={Colors.black} margin="0 0 6px 0">
+          <H2 fontSize="36px" lineHeight="42px" fontWeight="700" color={Colors.black} margin="0 0 6px 0" textAlign="left">
             {currentPlan?.price || ""}
           </H2>
           {currentPlan?.original_price && (
-            <Paragraph color="#B4B4B4" margin="0 0 8px 0">
+            <Paragraph color="#B4B4B4" margin="0 0 8px 0" textAlign="left">
               <s>{currentPlan.original_price}</s>
             </Paragraph>
           )}
-          <Paragraph color={Colors.black} fontSize="14px" margin="0 0 6px 0">
+          <Paragraph color={Colors.black} fontSize="14px" margin="0 0 6px 0" textAlign="left">
             {currentPlan?.payment_time}
           </Paragraph>
           {currentPlan?.warning_message && (
-            <Paragraph color={Colors.darkGray} fontSize="12px" opacity="1">
+            <Paragraph color={Colors.darkGray} fontSize="12px" opacity="1" textAlign="left">
               {currentPlan.warning_message}
             </Paragraph>
           )}
         </Div>
 
-        {/* Bullets from selected plan */}
-        {currentPlan?.bullets && currentPlan.bullets.length > 0 && (
-          <Div display="block" margin="12px 0 0 0">
-            <Div borderTop={`1px solid #ebebeb`} width="60%" margin="0 0 12px 0" />
-            {currentPlan.bullets.map((bullet, index) => (
-              <Div key={index} alignItems="center" margin="12px 0 0 0">
-                <Icon
-                  icon="check"
-                  width="17px"
-                  height="17px"
-                  style={{ marginRight: "10px" }}
-                  color={Colors.blue}
-                  fill={Colors.blue}
-                />
-                <Paragraph
-                  color={Colors.black}
-                  textAlign="left"
-                  dangerouslySetInnerHTML={{ __html: bullet }}
-                />
-              </Div>
-            ))}
-          </Div>
-        )}
-
         {/* Job Guarantee toggle */}
         {availablePlans?.some((p) => p.price) && (
-          <Div margin="8px 0 0 0" display="block">
+          <Div margin="16px 0 0 0" display="block">
             <Div alignItems="center">
               <Div
                 position="relative"
@@ -437,6 +414,7 @@ const FinancialOptionsDesktop = ({
                   height="18px"
                   borderRadius="9999px"
                   background={Colors.white}
+                  transition="left 0.2s ease-in-out"
                 />
               </Div>
               <H4 fontSize_tablet="18px" fontSize_xs="16px" margin="0 0 0 10px">
@@ -446,6 +424,30 @@ const FinancialOptionsDesktop = ({
             <Paragraph textAlign="left" color={Colors.black} margin="8px 0 0 0">
               {info.job_guarantee.description}
             </Paragraph>
+          </Div>
+        )}
+
+        {/* Bullets from selected plan */}
+        {currentPlan?.bullets && currentPlan.bullets.length > 0 && (
+          <Div display="block" margin="24px 0 0 0">
+            <Div borderTop={`1px solid #ebebeb`} width="60%" margin="0 0 12px 0" />
+            {currentPlan.bullets.map((bullet, index) => (
+              <Div key={index} alignItems="center" margin="12px 0 0 0">
+                <Icon
+                  icon="check"
+                  width="17px"
+                  height="17px"
+                  style={{ marginRight: "10px" }}
+                  color={Colors.blue}
+                  fill={Colors.blue}
+                />
+                <Paragraph
+                  color={Colors.black}
+                  textAlign="left"
+                  dangerouslySetInnerHTML={{ __html: bullet }}
+                />
+              </Div>
+            ))}
           </Div>
         )}
 
@@ -480,12 +482,10 @@ const FinancialOptionsDesktop = ({
       <Div
         display="block"
         background={Colors.verylightGray3}
-        border={`1px solid ${Colors.lightGray}`}
-        borderRadius="8px"
         padding="24px"
         width_tablet="50%"
       >
-        <H3 color={Colors.blue} fontWeight="700" margin="0 0 12px 0">
+        <H3 color={Colors.blue} fontWeight="700" margin="0 0 12px 0" textAlign="left">
           {"Other payment options"}
         </H3>
         {(paymentOptions || []).map((option) => {
@@ -504,25 +504,26 @@ const FinancialOptionsDesktop = ({
                 setSelectedPlan && setSelectedPlan(option.id);
               }}
             >
-              <Div justifyContent="between" alignItems="flex-start">
-                <Div display="block">
-                  <Paragraph fontWeight="700" color={Colors.black} margin="0 0 6px 0">
+              <Div justifyContent="between" alignItems="flex-start" width="100%">
+                <Div display="block" width="calc(100% - 100px)">
+                  <Paragraph fontWeight="700" color={Colors.black} margin="0 0 6px 0" textAlign="left">
                     {option.title}
                   </Paragraph>
-                  <Paragraph color={Colors.darkGray} fontSize="14px">
+                  <Paragraph color={Colors.darkGray} fontSize="14px" textAlign="left">
                     {option.description}
                   </Paragraph>
                 </Div>
                 {option.recomended && (
                   <Div
                     padding="4px 8px"
-                    background={Colors.lightGreen}
-                    color={Colors.green}
+                    background={option.recommended_color || Colors.blue}
+                    color={option.recommended_color || Colors.white}
                     borderRadius="9999px"
                     fontSize="12px"
                     fontWeight="700"
+                    flexShrink="0"
                   >
-                    {info.recomended}
+                    {option.recomended}
                   </Div>
                 )}
               </Div>
@@ -746,6 +747,7 @@ const PricesAndPayment = (props) => {
               slug
               academies
               recomended
+              recommended_color
               scholarship
               payment_time
               price
@@ -759,6 +761,7 @@ const PricesAndPayment = (props) => {
               slug
               academies
               recomended
+              recommended_color
               scholarship
               payment_time
               price
@@ -845,8 +848,7 @@ const PricesAndPayment = (props) => {
             return false;
           }
           return true;
-        })
-        .sort((a) => (a.recomended ? -1 : 1));
+        });
     }
     return [];
   };
@@ -1365,3 +1367,4 @@ const PricesAndPayment = (props) => {
   );
 };
 export default PricesAndPayment;
+
