@@ -18,8 +18,8 @@ full_time:
 
   - slug: 'usa-financed-ft'
     academies: ['dallas-usa', 'downtown-miami']
-    recomended: "Flexible Financing"
-    recommended_color: "#2196F3"
+    recomended: "Low monthly payments"
+    recommended_color: "veryLightBlue"
     scholarship: "Financed"
     payment_time: "Pay in 3, 4, or 5 years payment"
     price: "From $349/mo"
@@ -99,7 +99,8 @@ full_time:
 
   - slug: 'spain-scholarships-fs-ft'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Scholarships Available"
     payment_time: ""
     price: "From €150 /mo."
@@ -131,7 +132,8 @@ full_time:
 
   - slug: 'chile-fs-ft'
     academies: ['santiago-chile']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Financed"
     payment_time: "18 months payment"
     price: "~184.000 CLP"
@@ -147,7 +149,7 @@ part_time:
 #USA Part-time
   - slug: 'usa-upfront-pt'
     recomended: "★ Best Deal!"
-    recommended_color: "green"
+    recommended_color: "lightGreen"
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
     scholarship: "Pay upfront"
     payment_time: "Get a 10% discount"
@@ -176,8 +178,8 @@ part_time:
       
   - slug: 'usa-job-guarantee-pt'
     academies: ['atlanta-usa', 'toronto-canada', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'dallas-usa']
-    recomended: "Job Guarantee"
-    recommended_color: "#673AB7"
+    recomended: "Job placement or tuition refunded."
+    recommended_color: "pink"
     scholarship: "Job Guarantee"
     payment_time: "Get hired or your money back"
     price: "+$2,000"
@@ -225,7 +227,8 @@ part_time:
 
   - slug: 'north-europe-scholarships-fs-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Financed. From €150* per month"
     payment_time: "Apply for a scholarship (limited scholarship slots available)."
     price: "€4,900*"
@@ -255,7 +258,8 @@ part_time:
 
   - slug: 'south-europe-scholarships-fs-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Financed. From €150* per month"
     payment_time: "Apply for a scholarship (limited scholarship slots available)."
     price: "€4,900*"
@@ -287,7 +291,8 @@ part_time:
 
   - slug: 'spain-scholarships-fs-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Financed. From €150* per month"
     payment_time: "Apply for a scholarship (limited scholarship slots available)."
     price: "€4,900*"
@@ -322,7 +327,8 @@ part_time:
 
   - slug: 'chile-solo-fs-pt'
     academies: ['santiago-chile']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Full Stack"
     payment_time: "Program Only"
     price: "2.700.000 CLP"
@@ -335,7 +341,8 @@ part_time:
 
   - slug: 'chile-fs-pt'
     academies: ['santiago-chile']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Financed"
     payment_time: "18 months payment"
     price: "~168.000 CLP"
@@ -366,7 +373,8 @@ part_time:
 
   - slug: 'latam-apoyo-profesional-pt'
     academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador', 'caracas-venezuela', 'bogota-colombia']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Career Support Only"
     payment_time: "Get expert career support."
     price: " USD $3,000"
@@ -380,7 +388,8 @@ part_time:
 
   - slug: 'latam-program-only-fs-pt'
     academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador', 'bogota-colombia', 'caracas-venezuela']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Full-Stack Program Only"
     payment_time: "Focus on learning to code. Pay upfront."
     price: "USD $2,000"

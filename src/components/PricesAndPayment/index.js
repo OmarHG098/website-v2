@@ -344,6 +344,7 @@ const FinancialOptionsDesktop = ({
     originalPrice: plan.original_price,
     icons: plan.icons,
     recomended: plan.recomended,
+    recommended_color: plan.recommended_color,
     bullets: plan.bullets,
   }));
 
@@ -361,6 +362,7 @@ const FinancialOptionsDesktop = ({
       borderRadius="12px"
       gap="16px"
       margin="24px 0"
+      boxShadow={Colors.shadow}
     >
       {/* Left column */}
       <Div
@@ -504,28 +506,24 @@ const FinancialOptionsDesktop = ({
                 setSelectedPlan && setSelectedPlan(option.id);
               }}
             >
-              <Div justifyContent="between" alignItems="flex-start" width="100%">
-                <Div display="block" width="calc(100% - 100px)">
-                  <Paragraph fontWeight="700" color={Colors.black} margin="0 0 6px 0" textAlign="left">
-                    {option.title}
-                  </Paragraph>
-                  <Paragraph color={Colors.darkGray} fontSize="14px" textAlign="left">
-                    {option.description}
-                  </Paragraph>
-                </Div>
+              <Div display="block" width="100%">
                 {option.recomended && (
-                  <Div
-                    padding="4px 8px"
-                    background={option.recommended_color || Colors.blue}
-                    color={option.recommended_color || Colors.white}
-                    borderRadius="9999px"
+                  <Paragraph
                     fontSize="12px"
                     fontWeight="700"
-                    flexShrink="0"
+                    color={option.recommended_color?.startsWith("#") ? option.recommended_color : Colors[option.recommended_color?.toLowerCase()] || Colors.green}
+                    margin="0 0 4px 0"
+                    textAlign="left"
                   >
                     {option.recomended}
-                  </Div>
+                  </Paragraph>
                 )}
+                <Paragraph fontWeight="700" color={Colors.black} margin="0 0 6px 0" textAlign="left">
+                  {option.title}
+                </Paragraph>
+                <Paragraph color={Colors.darkGray} fontSize="14px" textAlign="left">
+                  {option.description}
+                </Paragraph>
               </Div>
             </Div>
           );

@@ -2,7 +2,7 @@ full_time: []
 part_time:
 ## USA Part-time
   - slug: 'usa-upfront-cybersecurity-pt'
-    recomended: true
+    recomended: "★ Best Deal!"
     academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     scholarship: "Full Payment"
     payment_time: "Pay today"
@@ -20,7 +20,8 @@ part_time:
 
   - slug: 'usa-financed-cybersecurity-pt'
     academies: ['atlanta-usa', 'tampa-usa',  'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
-    recomended: false
+    recomended: "Low monthly payments"
+    recommended_color: "veryLightBlue"
     scholarship: "Financed"
     payment_time: "You can pay in 3, 4 or 5 years"
     price: "$200 - $299/mo"
@@ -34,7 +35,8 @@ part_time:
 
   - slug: 'usa-job-guarantee-pt'
     academies: ['atlanta-usa', 'austin-usa',  'toronto-canada', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'dallas-usa']
-    recomended: false
+    recomended: "Job placement or tuition refunded."
+    recommended_color: "pink"
     scholarship: "Job Guarantee"
     payment_time: "Get hired or your money back"
     price: "+$2,000"
@@ -48,7 +50,8 @@ part_time:
     
   - slug: 'edly-payment'
     academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'dallas-usa']
-    recomended: false
+    recomended: "Learn now, pay later"
+    recommended_color: "yellow"
     scholarship: "Income-Based Repayment Loan"
     payment_time: "Flexible payments after graduation"
     price: "IBR"
@@ -63,7 +66,7 @@ part_time:
 ## Spain & Europe
   - slug: 'spain-scholarships-cs-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Financed. From €200* per month"
     payment_time: "Apply for a scholarship (limited scholarship slots available)."
     price: "€5,500*"
@@ -81,7 +84,8 @@ part_time:
 
   - slug: 'spain-upfront-cs-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€5.500*"
@@ -96,7 +100,7 @@ part_time:
 
   - slug: 'north-europe-scholarships-cs-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Financed. From €200* per month"
     payment_time: "Apply for a scholarship (limited scholarship slots available)."
     price: "€5,500*"
@@ -114,7 +118,8 @@ part_time:
 
   - slug: 'north-europe-upfront-cs-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€5.500*"
@@ -129,7 +134,7 @@ part_time:
 
   - slug: 'south-europe-scholarships-cs-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Financed. From €200* per month"
     payment_time: "Apply for a scholarship (limited scholarship slots available)."
     price: "€5,500*"
@@ -147,7 +152,8 @@ part_time:
 
   - slug: 'south-europe-upfront-cs-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€5.500*"
@@ -165,7 +171,7 @@ part_time:
 
   - slug: 'chile-geekforce-cs-pt'
     academies: ['santiago-chile']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Cybersecurity + Career Support"
     payment_time: "Pay Upfront and get a discount"
     price: "2.975.000 CLP*"
@@ -180,7 +186,8 @@ part_time:
 
   - slug: 'chile-solo-cs-pt'
     academies: ['santiago-chile']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Cybersecurity"
     payment_time: "Program Only"
     price: "2.750.000 CLP"
@@ -193,7 +200,8 @@ part_time:
 
   - slug: 'chile-cs-pt'
     academies: ['santiago-chile']
-    recomended: false
+    recomended: "Low monthly payments"
+    recommended_color: "veryLightBlue"
     scholarship: "Financed"
     payment_time: "18 months payment"
     price: "~158.000 CLP"
@@ -207,7 +215,7 @@ part_time:
 ## LATAM
   - slug: 'latam-upfront-cs'
     academies: ['montevideo-uruguay','bogota-colombia','caracas-venezuela', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Cybersecurity program + Career Support"
     payment_time: "We help you build your professional profile"
     price: "$ 2.500 USD"
