@@ -213,21 +213,21 @@ faq:
 
       # Dallas-USA
       - question: "How do I apply to 4Geeks Academy in Dallas?"
-        locations: ["dallas"]
+        locations: ["dallas-usa"]
         templates: ["faq"]
         priority: 1
         answer: |-
           To apply to our <strong>Dallas campus</strong>, simply click the <a class="faq-link" href="https://4geeksacademy.com/us/apply">application link</a> and complete a brief form. Once submitted, you'll receive detailed information about the Dallas programs you’re interested in. Our local admissions team will also reach out by email to assist you and answer any Dallas-specific questions you might have about schedules, tuition, or campus visits.
 
       - question: "Do I need to have my own laptop in Dallas?"
-        locations: ["Dallas"]
+        locations: ["dallas-usa"]
         templates: ["faq"]
         priority: 1
         answer: |-
           Yes, having your own laptop is essential for classes at our Dallas campus. While we don't mandate a specific operating system for most programs, it’s recommended to have a laptop with Windows, macOS, or Linux. For our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity program</a>, it’s highly recommended to use Windows or Linux to ensure compatibility with course tools such as VirtualBox and Packet Tracer. Classes and exercises are accessed through the cloud, so you can work from anywhere in Dallas.
 
       - question: "How do I pay for my tuition in Dallas?"
-        locations: ["Dallas"]
+        locations: ["dallas-usa"]
         related_features: ["price", "job-guarantee", "scholarships"]
         templates: ["faq"]
         priority: 1
@@ -235,28 +235,28 @@ faq:
           In the United States, including our <strong>Dallas campus</strong>, we offer multiple payment options: loans with payments starting as low as $120/month, extended payment plans, and scholarships based on your background. You can also explore Dallas-based financing partners and local scholarship opportunities. For more information, visit our <a class="faq-link" href="https://4geeksacademy.com/us/financials">Financials page</a> or speak with our Dallas admissions team.
 
       - question: "What is the extended payment plan at the Dallas campus?"
-        locations: ["Dallas"]
+        locations: ["dallas-usa"]
         templates: ["faq"]
         priority: 1
         answer: |-
           Our extended payment plan allows Dallas students to spread tuition payments over up to 2 years, paying gradually during and after the course. A $500 deposit is required upfront, and the remaining balance is split into equal monthly payments — <strong>with no interest charged</strong>. For more details, visit our <a class="faq-link" href="https://4geeksacademy.com/us/financials">Financials page</a> or speak directly with our Dallas admissions team.
 
       - question: "How does career support in Dallas work?"
-        locations: ["Dallas"]
+        locations: ["dallas-usa"]
         templates: ["faq"]
         priority: 1
         answer: |-
           Career support for Dallas students is part of our <a class="faq-link" href="https://4geeksacademy.com/us/geekforce-career-support"><strong>GeekForce</strong></a> program. You’ll get unlimited lifetime career coaching, including resume and LinkedIn optimization, job search strategies, and connections to the <strong>Houston tech ecosystem</strong>. We tap into local tech communities, meetups, startups, and hiring partners to support your job search.
 
       - question: "Does 4Geeks Academy in Dallas offer mentorship and networking opportunities?"
-        locations: ["Dallas"]
+        locations: ["dallas-usa"]
         templates: ["faq"]
         priority: 1
         answer: |-
           Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As a Dallas student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/rigobot"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Dallas’s tech community through events.
 
       - question: "Do students in Dallas need prior experience to join 4Geeks Academy?"
-        locations: ["Dallas"]
+        locations: ["dallas-usa"]
         templates: ["faq"]
         priority: 1
         answer: |-
@@ -490,7 +490,44 @@ faq:
         priority: 1
         answer: |-
           Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+   
+    #Toronto-Canada Questions
+      - question: "How do I apply to 4Geeks Academy in Toronto?"
+        locations: ["toronto-canada"]
+        templates: ["faq"]
+        priority: 1
+        answer: |-
+          To apply to our <strong>Toronto campus</strong>, fill out the <a class="faq-link" href="https://4geeksacademy.com/us/apply">application</a>. After submission, you’ll receive detailed information about Toronto programs and schedules. Our admissions team will follow up to assist with Toronto-specific questions on tuition, format, or campus orientation.
 
+      - question: "How do I pay for my tuition in Toronto?"
+        locations: ["toronto-canada"]
+        related_features: ["price", "job-guarantee", "scholarships"]
+        templates: ["faq"]
+        priority: 1
+        answer: |-
+          At the <strong>Toronto campus</strong>, tuition payment options include loans, extended payment plans, and scholarships tailored to your profile. You can explore more <a class="faq-link" href="https://4geeksacademy.com/us/financials">here</a> or reach out to our Toronto admissions team to discuss local payment partners or financing opportunities.
+
+      - question: "How does career support in Toronto work?"
+        locations: ["toronto-canada"]
+        templates: ["faq"]
+        priority: 1
+        answer: |-
+          Career support for Toronto students is part of our <a class="faq-link" href="https://4geeksacademy.com/us/geekforce-career-support"><strong>GeekForce</strong></a> program. You’ll get unlimited lifetime career coaching, including resume and LinkedIn optimization, job search strategies, and connections to the <strong>Toronto tech ecosystem</strong>. We tap into local tech communities, meetups, startups, and hiring partners to support your job search.
+
+      - question: "Does 4Geeks Academy in Toronto offer mentorship and networking opportunities?"
+        locations: ["toronto-canada"]
+        templates: ["faq"]
+        priority: 1
+        answer: |-
+          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As an Toronto student, you'll enjoy unlimited lifetime mentorship, including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/rigobot"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Toronto’s tech community through local tech meetups and events.
+
+      - question: "Do students in Toronto need prior experience to join 4Geeks Academy?"
+        locations: ["toronto-canada"]
+        templates: ["faq"]
+        priority: 1
+        answer: |-
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Toronto students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+      
     # EUROPE
 
     # Madrid, Spain Questions
