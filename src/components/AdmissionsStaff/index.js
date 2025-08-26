@@ -45,13 +45,13 @@ const AdmissionsStaff = (props) => {
   if (lang !== "us" && lang !== "en" && lang !== "es") return null;
 
   // Check if current location is in the US
-  const isUSLocation = session?.location?.country === "USA" || 
-                      session?.location?.country === "US" ||
-                      (session?.location?.slug && (
-                        session?.location?.slug.includes("-usa") ||
-                        session?.location?.slug === "downtown-miami"
-                      ));
-                      
+  const isUSLocation =
+    session?.location?.country === "USA" ||
+    session?.location?.country === "US" ||
+    (session?.location?.slug &&
+      (session?.location?.slug.includes("-usa") ||
+        session?.location?.slug === "downtown-miami"));
+
   if (!isUSLocation) return null;
 
   let admissionsStaff = data.allAdmissionsStaffYaml.edges.find(
