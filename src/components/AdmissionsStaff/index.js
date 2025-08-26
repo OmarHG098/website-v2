@@ -44,6 +44,16 @@ const AdmissionsStaff = (props) => {
   const lang = props.lang || session?.language;
   if (lang !== "us" && lang !== "en" && lang !== "es") return null;
 
+  // Check if current location is in the US
+  const isUSLocation = session?.location?.country === "USA" || 
+                      session?.location?.country === "US" ||
+                      (session?.location?.slug && (
+                        session?.location?.slug.includes("-usa") ||
+                        session?.location?.slug === "downtown-miami"
+                      ));
+                      
+  if (!isUSLocation) return null;
+
   let admissionsStaff = data.allAdmissionsStaffYaml.edges.find(
     ({ node }) => node.fields.lang === lang
   );
@@ -55,15 +65,15 @@ const AdmissionsStaff = (props) => {
       columns_tablet="12"
       flexDirection="column"
       padding="20px 20px"
-      padding_md="40px 80px"
-      padding_lg="40px 0px"
-      padding_tablet="40px 40px 10px 40px"
-      margin_tablet="0 auto 30px auto"
-      margin="0 0 36px 0"
+      padding_md="30px 60px"
+      padding_lg="30px 0px"
+      padding_tablet="30px 40px 10px 40px"
+      margin_tablet="0 auto 20px auto"
+      margin="0 0 24px 0"
       maxWidth="1280px"
       containerColumns_tablet="repeat(12,1fr)"
       gridColumn_tablet="1 / span 12"
-      gap="36px 0px"
+      gap="24px 0px"
     >
       <Div flexDirection="column">
         <H3 fontSize="28px" lineHeight="34px" margin="0 0 8px 0">
@@ -82,14 +92,14 @@ const AdmissionsStaff = (props) => {
             display="grid"
             gridTemplateColumns="repeat(12,1fr)"
             gridTemplateColumns_tablet="repeat(12,1fr)"
-            gap="20px"
-            margin="0 0 32px 0"
+            gap="16px"
+            margin="0 0 24px 0"
             alignItems="center"
           >
-            <Div gridColumn="1 / span 5" gridColumn_tablet="1 / span 5">
+            <Div gridColumn="2 / span 4" gridColumn_tablet="2 / span 4">
               <Div
                 width="100%"
-                height_tablet="300px"
+                height_tablet="240px"
                 height_sm="280px"
                 height="180px"
                 alignItems="center"
@@ -109,10 +119,14 @@ const AdmissionsStaff = (props) => {
                 )}
               </Div>
             </Div>
-            <Div gridColumn="6 / span 7" gridColumn_tablet="6 / span 7" flexDirection="column">
-              <H3 
-                fontSize="18px" 
-                fontSize_tablet="22px" 
+            <Div
+              gridColumn="7 / span 5"
+              gridColumn_tablet="7 / span 5"
+              flexDirection="column"
+            >
+              <H3
+                fontSize="18px"
+                fontSize_tablet="22px"
                 lineHeight="22px"
                 lineHeight_tablet="26px"
                 margin="0 0 6px 0"
@@ -120,17 +134,17 @@ const AdmissionsStaff = (props) => {
               >
                 {item.name} {item.last_name}
               </H3>
-              <H4 
+              <H4
                 fontSize="14px"
                 fontSize_tablet="16px"
                 lineHeight="18px"
                 lineHeight_tablet="20px"
                 margin="0 0 8px 0"
-                margin_tablet="0 0 12px 0"
+                margin_tablet="0 0 8px 0"
               >
                 {item.job_title}
               </H4>
-              <Paragraph 
+              <Paragraph
                 fontSize="13px"
                 fontSize_tablet="15px"
                 margin="0 0 4px 0"
@@ -142,11 +156,11 @@ const AdmissionsStaff = (props) => {
                   {item.phone}
                 </Anchor>
               </Paragraph>
-              <Paragraph 
+              <Paragraph
                 fontSize="13px"
                 fontSize_tablet="15px"
                 margin="0 0 12px 0"
-                margin_tablet="0 0 16px 0"
+                margin_tablet="0 0 12px 0"
                 color="#444"
               >
                 <strong>Email:</strong>{" "}

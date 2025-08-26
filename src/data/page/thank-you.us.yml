@@ -67,7 +67,7 @@ components:
     background: "#FFFFFF"
     image:
       style: '{ "backgroundSize": "contain", "background-position": "center" }'
-      src: "/images/landing/feliz-empresario.png"
+      src: "/images/landing/feliz-empresario-laptop.png"
       shadow: false
     heading:
       text: "💰 Discover Salary Negotiation Strategies"
