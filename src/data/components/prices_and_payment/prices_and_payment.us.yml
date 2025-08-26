@@ -7,7 +7,7 @@ we_accept: "We Accept:"
 top_label: Location
 top_label_2: Program
 plans_title: Explore financial options
-plan_details: Plan details
+plan_details: Invest in your future, stress-free
 select: Select the location and payment option that suits you best.
 select_2: Select the location, program and payment option that best meets your needs
 job_guarantee:
@@ -25,3 +25,8 @@ button:
   button_text: See plans and prices
   button_link: "/us/financials"
 loading: Loading Resources...
+
+cta:
+  advisor_text: Book a call with an advisor to find a payment option or special offer that works for you!
+  book_call: Book a call →
+  more_details: More details

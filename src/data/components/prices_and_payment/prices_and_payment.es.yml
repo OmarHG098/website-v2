@@ -8,7 +8,7 @@ top_label: Sede
 top_label_2: Programa
 recomended: Recomendado
 plans_title: Explora las opciones de financiamiento
-plan_details: Detalles del plan
+plan_details: Invierte en tu futuro, sin preocupaciones
 select: Selecciona la ubicacion y el plan que mejor se ajusta a ti
 select_2: Selecciona la ubicación, el programa y la opción de pago que mejor se adapte a sus necesidades
 job_guarantee:
@@ -24,3 +24,8 @@ button:
   button_text: Ver planes y precios
   button_link: "/es/financiacion"
 loading: Cargando Recursos...
+
+cta:
+  advisor_text: ¡Agenda una llamada con un asesor para encontrar una opción de pago u oferta especial que funcione para ti!
+  book_call: Agendar llamada →
+  more_details: Más detalles

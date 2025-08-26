@@ -5,36 +5,45 @@ import { Link } from "../Styling/index";
 import { GridContainer, Div, Grid } from "../Sections";
 import { SelectRaw } from "../Select";
 import { H2, H3, H4, H5, Paragraph } from "../Heading";
-import { Button, Colors, RoundImage, Img, Toggle } from "../Styling";
+import { Button, Colors, RoundImage, Img, Toggle, Spinner } from "../Styling";
 import { SessionContext } from "../../session";
 import { isWindow } from "../../utils/utils";
 
 
 
 // Additional UI per new Figma: payment options explainer and mobile dropdown
+const LoadingSpinner = () => (
+  <Div display="flex" justifyContent="center" alignItems="center" height="300px">
+    <Spinner color={Colors.blue} />
+  </Div>
+);
+
 const PaymentOptionCard = ({ option, selectedOption, setSelectedOption }) => {
   return (
     <Div border="1px solid #E5E5E5" borderRadius="8px" margin="0 0 12px 0" background={Colors.white} display="block" display_xs="block" display_xxs="block">
-      <Div padding="16px 20px" cursor="pointer" onClick={() => setSelectedOption(selectedOption === option.id ? null : option.id)} justifyContent="space-between" alignItems="center">
-        <Div display="block">
+      <Div padding="16px 20px" cursor="pointer" onClick={() => setSelectedOption(selectedOption === option.id ? null : option.id)} display="flex" justifyContent="space-between" alignItems="flex-start">
+        <Div display="block" width="calc(100% - 32px)">
           {option.recomended && (
             <Paragraph
               fontSize="12px"
               fontWeight="700"
               color={option.recommended_color?.startsWith("#") ? option.recommended_color : Colors[option.recommended_color?.toLowerCase()] || Colors.green}
               margin="0 0 4px 0"
+              textAlign="left"
             >
               {option.recomended}
             </Paragraph>
           )}
-          <Paragraph fontSize="14px" fontWeight="600" color={Colors.black} margin="0 0 4px 0">
+          <Paragraph fontSize="14px" fontWeight="600" color={Colors.black} margin="0 0 4px 0" textAlign="left">
             {option.title}
           </Paragraph>
-          <Paragraph fontSize="12px" color="#666666" margin="0">
+          <Paragraph fontSize="12px" color="#666666" margin="0" textAlign="left">
             {option.description}
           </Paragraph>
         </Div>
-        <Icon icon={selectedOption === option.id ? "angleup" : "angledown"} width="16px" height="16px" color="#666666" />
+        <Div flexShrink="0" width="24px" display="flex" justifyContent="center" marginTop="10px">
+          <Icon icon={selectedOption === option.id ? "angleup" : "angledown"} width="16px" height="16px" color="#666666" />
+        </Div>
       </Div>
 
       {selectedOption === option.id && (
@@ -47,24 +56,16 @@ const PaymentOptionCard = ({ option, selectedOption, setSelectedOption }) => {
           display_xxs="block"
         >
 
-          {option.bullets && option.bullets.map((bullet, index) => (
-            <Div key={index} alignItems="center" margin="8px 0">
-              <Icon
-                icon="check"
-                width="14px"
-                height="14px"
-                color={Colors.blue}
-                fill={Colors.blue}
-                style={{ marginRight: "8px", marginTop: "2px", flexShrink: 0 }}
-              />
-              <Paragraph
-                fontSize="14px"
-                color={Colors.black}
-                margin="0"
-                dangerouslySetInnerHTML={{ __html: bullet }}
-              />
-            </Div>
-          ))}
+          {option.bullets && (
+            <Paragraph
+              fontSize="14px"
+              color={Colors.black}
+              margin="16px 0 0 0"
+              textAlign="left"
+              lineHeight="24px"
+              dangerouslySetInnerHTML={{ __html: option.bullets.join(". ") + " " }}
+            />
+          )}
 
           {option.icons && option.icons.length > 0 && (
             <Div
@@ -128,49 +129,50 @@ const FinancialOptionsDesktop = ({
   const activeOption = paymentOptions.find((o) => o.id === (activeId)) || paymentOptions[0];
 
   return (
-    <Div
-      display="none"
-      display_tablet="flex"
-      width="100%"
-      maxWidth_md="1280px"
-      border="4px solid black"
-      borderRadius="12px"
-      gap="16px"
-      margin="24px 0"
-      boxShadow={Colors.shadow}
-    >
-      {/* Left column */}
+    <>
       <Div
-        display="block"
-        background={Colors.white}
-        borderRight={`1px solid ${Colors.lightGray}`}
-        padding="24px"
-        width_tablet="50%"
+        display="none"
+        display_tablet="flex"
+        width="100%"
+        maxWidth_md="1280px"
+        border="4px solid black"
+        boxShadow="0 8px 32px rgba(0,0,0,0.25)"
+        borderRadius="12px"
+        gap="16px"
+        margin="24px 0"
       >
-        <H3 color={Colors.blue} fontWeight="700" margin="0 0 16px 0" textAlign="left">
-          {"Invest in your future, stress-free"}
-        </H3>
+        {/* Left column */}
+        <Div
+          display="block"
+          background={Colors.white}
+          borderRight={`1px solid ${Colors.lightGray}`}
+          padding="24px"
+          width_tablet="50%"
+        >
+          <H3 color={Colors.blue} fontWeight="700" margin="0 0 16px 0" textAlign="left">
+            {"Invest in your future, stress-free"}
+          </H3>
 
-        <Div display="block" margin="0 0 12px 0">
-          <H2 fontSize="36px" lineHeight="42px" fontWeight="700" color={Colors.black} margin="0 0 6px 0" textAlign="left">
-            {currentPlan?.price || ""}
-          </H2>
-          {currentPlan?.original_price && (
-            <Paragraph color="#B4B4B4" margin="0 0 8px 0" textAlign="left">
-              <s>{currentPlan.original_price}</s>
+          <Div display="block" margin="0 0 12px 0">
+            <H2 fontSize="36px" lineHeight="42px" fontWeight="700" color={Colors.black} margin="0 0 6px 0" textAlign="left">
+              {currentPlan?.price || ""}
+            </H2>
+            {currentPlan?.original_price && (
+              <Paragraph color="#B4B4B4" margin="0 0 8px 0" textAlign="left">
+                <s>{currentPlan.original_price}</s>
+              </Paragraph>
+            )}
+            <Paragraph color={Colors.black} fontSize="14px" margin="0 0 6px 0" textAlign="left">
+              {currentPlan?.payment_time}
             </Paragraph>
-          )}
-          <Paragraph color={Colors.black} fontSize="14px" margin="0 0 6px 0" textAlign="left">
-            {currentPlan?.payment_time}
-          </Paragraph>
-          {currentPlan?.warning_message && (
-            <Paragraph color={Colors.darkGray} fontSize="12px" opacity="1" textAlign="left">
-              {currentPlan.warning_message}
-            </Paragraph>
-          )}
-        </Div>
+            {currentPlan?.warning_message && (
+              <Paragraph color={Colors.darkGray} fontSize="12px" opacity="1" textAlign="left">
+                {currentPlan.warning_message}
+              </Paragraph>
+            )}
+          </Div>
 
-        {/* Job Guarantee toggle */}
+                  {/* Job Guarantee toggle - Commented out for review
         {availablePlans?.some((p) => p.price) && (
           <Div margin="16px 0 0 0" display="block">
             <Div alignItems="center">
@@ -202,109 +204,150 @@ const FinancialOptionsDesktop = ({
               {info.job_guarantee.description}
             </Paragraph>
           </Div>
-        )}
+        )} */}
 
-        {/* Bullets from selected plan */}
-        {currentPlan?.bullets && currentPlan.bullets.length > 0 && (
-          <Div display="block" margin="24px 0 0 0">
-            <Div borderTop={`1px solid #ebebeb`} width="60%" margin="0 0 12px 0" />
-            {currentPlan.bullets.map((bullet, index) => (
-              <Div key={index} alignItems="center" margin="12px 0 0 0">
-                <Icon
-                  icon="check"
-                  width="17px"
+          {/* Bullets from selected plan */}
+          {currentPlan?.bullets && currentPlan.bullets.length > 0 && (
+            <Div display="block" margin="24px 0 0 0">
+              <Div borderTop={`1px solid #ebebeb`} width="60%" margin="0 0 12px 0" />
+              {currentPlan.bullets.map((bullet, index) => (
+                <Div key={index} alignItems="center" margin="12px 0 0 0">
+                  <Icon
+                    icon="check"
+                    width="17px"
+                    height="17px"
+                    style={{ marginRight: "10px" }}
+                    color={Colors.blue}
+                    fill={Colors.blue}
+                  />
+                  <Paragraph
+                    color={Colors.black}
+                    textAlign="left"
+                    dangerouslySetInnerHTML={{ __html: bullet }}
+                  />
+                </Div>
+              ))}
+            </Div>
+          )}
+
+          {/* Partner logos from YAML icons */}
+          {currentPlan?.icons && currentPlan.icons.length > 0 && (
+            <Div
+              className="icons"
+              background={Colors.verylightGray}
+              padding="4px 7px"
+              borderRadius="26px"
+              width="fit-content"
+              alignItems="center"
+              margin="16px 0 24px 0"
+            >
+              {currentPlan.icons.map((icon) => (
+                <Img
+                  key={`${icon}-${currentPlan.slug}`}
+                  src={icon}
+                  alt="4Geeks Academy Icon"
+                  backgroundSize="contain"
                   height="17px"
-                  style={{ marginRight: "10px" }}
-                  color={Colors.blue}
-                  fill={Colors.blue}
+                  minWidth="30px"
+                  width="50px"
+                  margin="0 5px"
                 />
-                <Paragraph
-                  color={Colors.black}
-                  textAlign="left"
-                  dangerouslySetInnerHTML={{ __html: bullet }}
-                />
-              </Div>
-            ))}
-          </Div>
-        )}
+              ))}
+            </Div>
+          )}
 
-        {/* Partner logos from YAML icons */}
-        {currentPlan?.icons && currentPlan.icons.length > 0 && (
-          <Div
-            className="icons"
-            background={Colors.verylightGray}
-            padding="4px 7px"
-            borderRadius="26px"
-            width="fit-content"
-            alignItems="center"
-            margin="16px 0 0 0"
-          >
-            {currentPlan.icons.map((icon) => (
-              <Img
-                key={`${icon}-${currentPlan.slug}`}
-                src={icon}
-                alt="4Geeks Academy Icon"
-                backgroundSize="contain"
-                height="17px"
-                minWidth="30px"
-                width="50px"
-                margin="0 5px"
-              />
-            ))}
-          </Div>
-        )}
+        </Div>
+
+        {/* Right column */}
+        <Div
+          display="block"
+          background={Colors.verylightGray3}
+          padding="24px"
+          width_tablet="50%"
+        >
+          <H3 color={Colors.blue} fontWeight="700" margin="0 0 12px 0" textAlign="left">
+            {"Other payment options"}
+          </H3>
+          {(paymentOptions || []).map((option) => {
+            const isSelected = (localSelected || selectedPlan) === option.id;
+            return (
+              <Div
+                key={option.id}
+                border={isSelected ? `2px solid ${Colors.blue}` : `1px solid ${Colors.lightGray}`}
+                background={isSelected ? Colors.veryLightBlue3 : Colors.white}
+                padding="16px"
+                borderRadius="8px"
+                margin="0 0 12px 0"
+                cursor="pointer"
+                onClick={() => {
+                  setLocalSelected(option.id);
+                  setSelectedPlan && setSelectedPlan(option.id);
+                }}
+              >
+                <Div display="block" width="100%">
+                  {option.recomended && (
+                    <Paragraph
+                      fontSize="12px"
+                      fontWeight="700"
+                      color={option.recommended_color?.startsWith("#") ? option.recommended_color : Colors[option.recommended_color?.toLowerCase()] || Colors.green}
+                      margin="0 0 4px 0"
+                      textAlign="left"
+                    >
+                      {option.recomended}
+                    </Paragraph>
+                  )}
+                  <Paragraph fontWeight="700" color={Colors.black} margin="0 0 6px 0" textAlign="left">
+                    {option.title}
+                  </Paragraph>
+                  <Paragraph color={Colors.darkGray} fontSize="14px" textAlign="left">
+                    {option.description}
+                  </Paragraph>
+                </Div>
+              </Div>
+            );
+          })}
+        </Div>
       </Div>
 
-      {/* Right column */}
-      <Div
-        display="block"
-        background={Colors.verylightGray3}
-        padding="24px"
-        width_tablet="50%"
-      >
-        <H3 color={Colors.blue} fontWeight="700" margin="0 0 12px 0" textAlign="left">
-          {"Other payment options"}
-        </H3>
-        {(paymentOptions || []).map((option) => {
-          const isSelected = (localSelected || selectedPlan) === option.id;
-          return (
-            <Div
-              key={option.id}
-              border={isSelected ? `2px solid ${Colors.blue}` : `1px solid ${Colors.lightGray}`}
-              background={isSelected ? Colors.veryLightBlue3 : Colors.white}
-              padding="16px"
-              borderRadius="8px"
-              margin="0 0 12px 0"
-              cursor="pointer"
+      {/* CTA Section - Desktop */}
+      <Div display="none" display_tablet="block" textAlign="center" margin="24px 0 0 0">
+        <Paragraph fontSize="12px" color="#666666" margin="0 0 16px 0">
+          {info.cta.advisor_text}
+        </Paragraph>
+
+        <Div display="flex" alignItems="center" justifyContent="center" gap="12px">
+          <Link to={`${info?.apply_button?.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""}`}>
+            <Button
+              variant="full"
+              background={Colors.blue}
+              textColor={Colors.white}
+              fontSize="14px"
+              padding="12px 24px"
+              borderRadius="6px"
+              fontWeight="600"
               onClick={() => {
-                setLocalSelected(option.id);
-                setSelectedPlan && setSelectedPlan(option.id);
+                if (selectedPlan) {
+                  setSession({ ...session, utm: { ...session.utm, utm_plan: selectedPlan } });
+                }
               }}
             >
-              <Div display="block" width="100%">
-                {option.recomended && (
-                  <Paragraph
-                    fontSize="12px"
-                    fontWeight="700"
-                    color={option.recommended_color?.startsWith("#") ? option.recommended_color : Colors[option.recommended_color?.toLowerCase()] || Colors.green}
-                    margin="0 0 4px 0"
-                    textAlign="left"
-                  >
-                    {option.recomended}
-                  </Paragraph>
-                )}
-                <Paragraph fontWeight="700" color={Colors.black} margin="0 0 6px 0" textAlign="left">
-                  {option.title}
-                </Paragraph>
-                <Paragraph color={Colors.darkGray} fontSize="14px" textAlign="left">
-                  {option.description}
-                </Paragraph>
-              </Div>
-            </Div>
-          );
-        })}
+              {info.cta.book_call}
+            </Button>
+          </Link>
+
+          <Button
+            background="transparent"
+            textColor={Colors.blue}
+            fontSize="14px"
+            padding="12px 24px"
+            borderRadius="6px"
+            fontWeight="600"
+          >
+            {info.cta.more_details}
+          </Button>
+        </Div>
       </Div>
-    </Div>
+    </>
   );
 };
 
@@ -330,95 +373,95 @@ const FinancialOptionsCard = ({ info, selectedPlan, session, setSession, availab
   const currentOption = paymentOptions.find(opt => opt.id === selectedOption) || paymentOptions[0];
 
   return (
-    <Div
-      background={Colors.white}
-      border="1px solid #E5E5E5"
-      borderRadius="12px"
-      padding="24px"
-      maxWidth="600px"
-      width="100%"
-      display="block"
-      boxShadow="0 2px 8px rgba(0,0,0,0.1)"
-    >
-      <Div display="block" margin="0 0 24px 0">
-        <H3 fontSize="18px" fontWeight="600" color={Colors.black} margin="0 0 8px 0" textAlign="center">
-          {"Explore financial options"}
-        </H3>
+    <>
+      <Div
+        background={Colors.white}
+        border="4px solid black"
+        borderRadius="12px"
+        padding="24px"
+        maxWidth="600px"
+        width="100%"
+        display="block"
+        boxShadow="0 8px 32px rgba(0,0,0,0.25)"
+      >
+        <Div display="block" margin="0 0 24px 0">
+          <H3 fontSize="18px" fontWeight="600" color={Colors.blue} margin="0 0 8px 0" textAlign="center">
+            {info.plan_details}
+          </H3>
 
-        <Div alignItems="center" justifyContent="center" margin="0 0 16px 0">
-          <H2 fontSize="32px" fontWeight="700" color={Colors.blue} margin="0 8px 0 0">{currentOption?.price || ""}</H2>
-          <Paragraph fontSize="16px" color={Colors.black} margin="0">{currentOption?.description || ""}</Paragraph>
+          <Div alignItems="center" justifyContent="center" margin="0 0 16px 0">
+            <H2 fontSize="32px" fontWeight="700" color={Colors.black} margin="0 8px 0 0">{currentOption?.price || ""}</H2>
+            <Paragraph fontSize="16px" color={Colors.black} margin="0">{currentOption?.description || ""}</Paragraph>
+          </Div>
+
+          {currentOption?.originalPrice && (
+            <Paragraph color="#B4B4B4" margin="0 0 8px 0" textAlign="center">
+              <s>{currentOption.originalPrice}</s>
+            </Paragraph>
+          )}
+          {currentOption?.warning_message && (
+            <Paragraph color={Colors.darkGray} fontSize="12px" opacity="1" textAlign="center" margin="0 0 16px 0">
+              {currentOption.warning_message}
+            </Paragraph>
+          )}
         </Div>
 
-        <Paragraph fontSize="14px" color="#666666" textAlign="center" margin="0 0 16px 0">
-          {"Invest in your future, stress-free"}
-        </Paragraph>
+        <Div display="block" margin="0 0 24px 0">
+          <Paragraph fontSize="14px" fontWeight="600" color={Colors.black} margin="0 0 12px 0">
+            {"Other payment options"}
+          </Paragraph>
 
-        {currentOption?.originalPrice && (
-          <Paragraph color="#B4B4B4" margin="0 0 8px 0" textAlign="center">
-            <s>{currentOption.originalPrice}</s>
-          </Paragraph>
-        )}
-        {currentOption?.warning_message && (
-          <Paragraph color={Colors.darkGray} fontSize="12px" opacity="1" textAlign="center" margin="0 0 16px 0">
-            {currentOption.warning_message}
-          </Paragraph>
-        )}
+          {paymentOptions.map((option) => (
+            <PaymentOptionCard
+              key={option.id}
+              option={option}
+              selectedOption={selectedOption}
+              setSelectedOption={setSelectedOption}
+            />
+          ))}
+        </Div>
+
       </Div>
 
-      <Div display="block" margin="0 0 24px 0">
-        <Paragraph fontSize="14px" fontWeight="600" color={Colors.black} margin="0 0 12px 0">
-          {"Other payment options"}
-        </Paragraph>
-
-        {paymentOptions.map((option) => (
-          <PaymentOptionCard
-            key={option.id}
-            option={option}
-            selectedOption={selectedOption}
-            setSelectedOption={setSelectedOption}
-          />
-        ))}
-      </Div>
-
-      <Div display="block" justifyContent="center" alignItems="center">
+      {/* CTA Section - Mobile */}
+      <Div display="block" textAlign="center" margin="24px 0 0 0">
         <Paragraph fontSize="12px" color="#666666" textAlign="center" margin="0 0 16px 0">
-          {"Book a call with an advisor to find a payment option or special offer that works for you!"}
+          {info.cta.advisor_text}
         </Paragraph>
 
-        <Div gap="12px" justifyContent="center" flexWrap="wrap" display="block">
-          <Link to={`${info?.apply_button?.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""}`}>
-            <Button
-              variant="full"
-              background={Colors.blue}
-              textColor={Colors.white}
-              fontSize="14px"
-              padding="12px 24px"
-              borderRadius="6px"
-              fontWeight="600"
+                  <Div display="flex" flexDirection="column" alignItems="center" gap="12px" maxWidth="280px" margin="0 auto">
+            <Link to={`${info?.apply_button?.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""}`}>
+              <Button
+                variant="full"
+                background={Colors.blue}
+                textColor={Colors.white}
+                fontSize="14px"
+                padding="12px 32px"
+                borderRadius="6px"
+                fontWeight="600"
               onClick={() => {
                 if (selectedPlan) {
                   setSession({ ...session, utm: { ...session.utm, utm_plan: selectedPlan } });
                 }
               }}
             >
-              {"Book a call →"}
+              {info.cta.book_call}
             </Button>
           </Link>
 
-          <Button
-            background="transparent"
-            textColor={Colors.blue}
-            fontSize="14px"
-            padding="12px 24px"
-            borderRadius="6px"
-            fontWeight="600"
+                      <Button
+              background="transparent"
+              textColor={Colors.blue}
+              fontSize="14px"
+              padding="12px 32px"
+              borderRadius="6px"
+              fontWeight="600"
           >
-            {"More details"}
+            {info.cta.more_details}
           </Button>
         </Div>
       </Div>
-    </Div>
+    </>
   );
 };
 
@@ -426,6 +469,7 @@ const FinancialOptionsCard = ({ info, selectedPlan, session, setSession, availab
 
 
 const PricesAndPayment = (props) => {
+  const [isLoading, setIsLoading] = useState(true);
   const data = useStaticQuery(graphql`
     query PricesAndPayment {
       content: allPricesAndPaymentYaml {
@@ -461,6 +505,12 @@ const PricesAndPayment = (props) => {
             button {
               button_text
               button_link
+            }
+
+            cta {
+              advisor_text
+              book_call
+              more_details
             }
           }
         }
@@ -549,15 +599,15 @@ const PricesAndPayment = (props) => {
   const programs = !Array.isArray(props.programs)
     ? []
     : props.programs
-        .filter(
-          ({ node }) =>
-            !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
-            node.meta_info.show_in_apply
-        )
-        .map(({ node }) => ({
-          label: node.apply_form.label,
-          value: node.meta_info.bc_slug,
-        }));
+      .filter(
+        ({ node }) =>
+          !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
+          node.meta_info.show_in_apply
+      )
+      .map(({ node }) => ({
+        label: node.apply_form.label,
+        value: node.meta_info.bc_slug,
+      }));
 
   const getAvailablePlans = () => {
     const currentPlans = getCurrentPlans();
@@ -621,9 +671,15 @@ const PricesAndPayment = (props) => {
   }, [currentLocation]);
 
   useEffect(() => {
+    if (!currentLocation || !course) {
+      setIsLoading(true);
+      return;
+    }
+    setIsLoading(true);
     const filteredPlans = getAvailablePlans();
     setAvailablePlans(filteredPlans);
     setSelectedPlan(filteredPlans[0]?.slug);
+    setIsLoading(false);
   }, [jobGuarantee, currentLocation, course]);
 
   const city = session && session.location ? session.location.city : [];
@@ -664,6 +720,22 @@ const PricesAndPayment = (props) => {
       setCourseArrayFiltered(courseFilteredAux);
     }
   }, [currentLocation]);
+
+  if (isLoading) {
+    return (
+      <Div
+        ref={mainContainer}
+        id="prices_and_payment"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        background={props.background}
+        height="600px"
+      >
+        <LoadingSpinner />
+      </Div>
+    );
+  }
 
   return (
     <Div
@@ -867,7 +939,7 @@ const PricesAndPayment = (props) => {
         availablePlans={availablePlans}
       />
       {/* Financial explainer card (mobile) */}
-      <Div display_tablet="none" width="100%" margin="20px 0">
+      <Div display_tablet="none" width="100%" margin="20px 0" display="flex" flexDirection="column">
         <FinancialOptionsCard
           info={info}
           selectedPlan={selectedPlan}
@@ -933,8 +1005,8 @@ const PricesAndPayment = (props) => {
             session && session?.location && session?.location.phone
               ? `https://wa.me/${phoneNumberClean(session?.location?.phone)}`
               : session?.email
-              ? `mailto:${session?.email}`
-              : `${info?.contact_link}`
+                ? `mailto:${session?.email}`
+                : `${info?.contact_link}`
           }
         >
           {info.contact_carrer_advisor}

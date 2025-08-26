@@ -34,7 +34,7 @@ full_time:
   - slug: 'plan-2'
     academies: ['downtown-miami', 'orlando']
     recomended: "Low monthly payments"
-    recommended_color: "veryLightBlue"
+    recommended_color: "blue"
     scholarship: "Financed"
     payment_time: "24 months payment"
     price: "$310"
