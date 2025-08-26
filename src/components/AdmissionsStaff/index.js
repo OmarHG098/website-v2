@@ -4,7 +4,6 @@ import { H3, H4, Paragraph } from "../Heading";
 import { Div } from "../Sections";
 import { Anchor, Button, Colors } from "../Styling";
 import { SessionContext } from "../../session";
-import Carousel from "../Carousel";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const AdmissionsStaff = (props) => {
@@ -43,7 +42,7 @@ const AdmissionsStaff = (props) => {
 
   const { session } = useContext(SessionContext);
   const lang = props.lang || session?.language;
-  if (lang !== "us" && lang !== "en") return null;
+  if (lang !== "us" && lang !== "en" && lang !== "es") return null;
 
   let admissionsStaff = data.allAdmissionsStaffYaml.edges.find(
     ({ node }) => node.fields.lang === lang
@@ -66,76 +65,53 @@ const AdmissionsStaff = (props) => {
       gridColumn_tablet="1 / span 12"
       gap="36px 0px"
     >
-      <Div
-        alignItems="center"
-        justifyContent="between"
-        position="relative"
-        display="block"
-      >
-        <Carousel
-          previousArrow
-          nextArrow
-          content={{
-            heading: props.heading || admissionsStaff.heading,
-            content: props.paragraph || admissionsStaff.sub_heading,
-          }}
-          settings={{
-            dotsClass: "slick-dots-staff",
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            className: "staff-class ",
-            responsive: [
-              {
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2,
-                  infinite: false,
-                  dots: true,
-                },
-              },
-              {
-                breakpoint: 768,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  infinite: false,
-                  dots: true,
-                },
-              },
-            ],
-          }}
-        >
-          {admissionsStaff.staff.map((item, index) => (
-            <Div
-              key={index}
-              height="fit-content"
-              flexDirection="column"
-              gap="8px"
-              alignItems="center"
-            >
+      <Div flexDirection="column">
+        <H3 fontSize="28px" lineHeight="34px" margin="0 0 8px 0">
+          {props.heading || admissionsStaff.heading}
+        </H3>
+        {admissionsStaff.sub_heading && (
+          <Paragraph fontSize="16px" lineHeight="24px" margin="0 0 24px 0">
+            {props.paragraph || admissionsStaff.sub_heading}
+          </Paragraph>
+        )}
+      </Div>
+      <Div>
+        {admissionsStaff.staff.map((item, index) => (
+          <Div
+            key={index}
+            display="grid"
+            gridTemplateColumns_tablet="repeat(12,1fr)"
+            gap="20px"
+            margin="0 0 32px 0"
+            alignItems="center"
+          >
+            <Div gridColumn_tablet="1 / span 5">
               <Div
                 width="100%"
                 height_tablet="300px"
-                height_sm="360px"
-                height="320px"
+                height_sm="300px"
+                height="260px"
                 alignItems_tablet="center"
+                justifyContent="center"
               >
                 {item.image && item.image.childImageSharp && (
                   <GatsbyImage
                     image={getImage(item.image.childImageSharp.gatsbyImageData)}
-                    style={{ height: "100%", backgroundSize: `cover` }}
-                    alt={item.name}
+                    style={{ height: "100%", width: "100%" }}
+                    imgStyle={{ objectFit: "contain", objectPosition: "center" }}
+                    alt={`${item.name} ${item.last_name}`}
                   />
                 )}
               </Div>
-              <H3 fontSize="18px" lineHeight="22px" margin="14px 0 0 0">
+            </Div>
+            <Div gridColumn_tablet="6 / span 7" flexDirection="column">
+              <H3 fontSize="22px" lineHeight="26px" margin="0 0 8px 0">
                 {item.name} {item.last_name}
               </H3>
-              <H4 fontSize="15px" lineHeight="18px" margin="8px 0">
+              <H4 fontSize="16px" lineHeight="20px" margin="0 0 12px 0">
                 {item.job_title}
               </H4>
-              <Paragraph fontSize="15px" margin="0 0 4px 0" color="#444">
+              <Paragraph fontSize="15px" margin="0 0 6px 0" color="#444">
                 <strong>Phone:</strong>{" "}
                 <Anchor to={`tel:${item.phone.replace(/[^ -9]/g, "")}`}>
                   {item.phone}
@@ -148,6 +124,7 @@ const AdmissionsStaff = (props) => {
               <Div display="flex" justifyContent="center" marginTop="auto">
                 <Link to={item.calendly_link}>
                   <Button
+                    aria-label={`Book a call with ${item.name} ${item.last_name}`}
                     variant="full"
                     background={Colors.blue}
                     textColor={Colors.white}
@@ -161,7 +138,7 @@ const AdmissionsStaff = (props) => {
                     }}
                     onMouseEnter={(e) => {
                       e.target.style.backgroundColor = "#ffb718";
-                      e.target.style.transform = "scale(1.1)";
+                      e.target.style.transform = "scale(1.05)";
                     }}
                     onMouseLeave={(e) => {
                       e.target.style.backgroundColor = Colors.blue;
@@ -173,8 +150,8 @@ const AdmissionsStaff = (props) => {
                 </Link>
               </Div>
             </Div>
-          ))}
-        </Carousel>
+          </Div>
+        ))}
       </Div>
     </Div>
   );
