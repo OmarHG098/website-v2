@@ -80,17 +80,19 @@ const AdmissionsStaff = (props) => {
           <Div
             key={index}
             display="grid"
+            gridTemplateColumns="repeat(12,1fr)"
             gridTemplateColumns_tablet="repeat(12,1fr)"
             gap="20px"
             margin="0 0 32px 0"
             alignItems="center"
           >
-            <Div gridColumn_tablet="1 / span 5">
+            <Div gridColumn="1 / span 5" gridColumn_tablet="1 / span 5">
               <Div
                 width="100%"
                 height_tablet="300px"
-                height_sm="300px"
-                height="260px"
+                height_sm="280px"
+                height="180px"
+                alignItems="center"
                 alignItems_tablet="center"
                 justifyContent="center"
               >
@@ -98,26 +100,55 @@ const AdmissionsStaff = (props) => {
                   <GatsbyImage
                     image={getImage(item.image.childImageSharp.gatsbyImageData)}
                     style={{ height: "100%", width: "100%" }}
-                    imgStyle={{ objectFit: "contain", objectPosition: "center" }}
+                    imgStyle={{
+                      objectFit: "contain",
+                      objectPosition: "center",
+                    }}
                     alt={`${item.name} ${item.last_name}`}
                   />
                 )}
               </Div>
             </Div>
-            <Div gridColumn_tablet="6 / span 7" flexDirection="column">
-              <H3 fontSize="22px" lineHeight="26px" margin="0 0 8px 0">
+            <Div gridColumn="6 / span 7" gridColumn_tablet="6 / span 7" flexDirection="column">
+              <H3 
+                fontSize="18px" 
+                fontSize_tablet="22px" 
+                lineHeight="22px"
+                lineHeight_tablet="26px"
+                margin="0 0 6px 0"
+                margin_tablet="0 0 8px 0"
+              >
                 {item.name} {item.last_name}
               </H3>
-              <H4 fontSize="16px" lineHeight="20px" margin="0 0 12px 0">
+              <H4 
+                fontSize="14px"
+                fontSize_tablet="16px"
+                lineHeight="18px"
+                lineHeight_tablet="20px"
+                margin="0 0 8px 0"
+                margin_tablet="0 0 12px 0"
+              >
                 {item.job_title}
               </H4>
-              <Paragraph fontSize="15px" margin="0 0 6px 0" color="#444">
+              <Paragraph 
+                fontSize="13px"
+                fontSize_tablet="15px"
+                margin="0 0 4px 0"
+                margin_tablet="0 0 6px 0"
+                color="#444"
+              >
                 <strong>Phone:</strong>{" "}
                 <Anchor to={`tel:${item.phone.replace(/[^ -9]/g, "")}`}>
                   {item.phone}
                 </Anchor>
               </Paragraph>
-              <Paragraph fontSize="15px" margin="0 0 16px 0" color="#444">
+              <Paragraph 
+                fontSize="13px"
+                fontSize_tablet="15px"
+                margin="0 0 12px 0"
+                margin_tablet="0 0 16px 0"
+                color="#444"
+              >
                 <strong>Email:</strong>{" "}
                 <Anchor to={`mailto:${item.email}`}>{item.email}</Anchor>
               </Paragraph>
@@ -128,8 +159,10 @@ const AdmissionsStaff = (props) => {
                     variant="full"
                     background={Colors.blue}
                     textColor={Colors.white}
-                    fontSize="14px"
-                    padding="12px 24px"
+                    fontSize="13px"
+                    fontSize_tablet="14px"
+                    padding="10px 20px"
+                    padding_tablet="12px 24px"
                     borderRadius="6px"
                     fontWeight="600"
                     style={{

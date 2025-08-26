@@ -20,6 +20,7 @@ social:
   title: "Follow Us"
   message: "Select where you like to follow us"
   button_text: "Take me to"
+  
 components:
   - name: free_resources
     layout: two_column_left
@@ -40,8 +41,8 @@ components:
       background: "blue"
       color: "white"
 
-  - name: career_guides
-    layout: two_column_right
+  - name: builidng_relationships
+    layout: two_column_left
     position: 3
     proportions: [6, 6]
     background: "#FFFFFF"
@@ -54,14 +55,33 @@ components:
     content:
       text: "Get a taste of how we help students navigate networking, career growth, and real-world job strategies — even before day one."
     button:
-      text: "👉 Get the Guides"
-      path: "https://4geeksacademy.com/us/job-guarantee"
+      text: "👉 Get the Guide"
+      path: "https://storage.googleapis.com/media-breathecode/f5db5a88c24d96a753a27d5fde198a3932717b2741cde56417db76b4842d6b98"
+      background: "blue"
+      color: "white"
+
+  - name: salary_negotiation
+    layout: two_column_left
+    position: 5
+    proportions: [6, 6]
+    background: "#FFFFFF"
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center" }'
+      src: "/images/landing/feliz-empresario.png"
+      shadow: false
+    heading:
+      text: "💰 Discover Salary Negotiation Strategies"
+    content:
+      text: "Learn how to negotiate your salary and get the best deal for your skills and experience."
+    button:
+      text: "👉 Get the Guide"
+      path: "https://storage.googleapis.com/media-breathecode/caf84c93e43000deb02356389ff3bf9ea1cd59e8744c5e2ab2170ace27523f7a"
       background: "blue"
       color: "white"
 
   - name: job_guarantee
     layout: two_column_left
-    position: 5
+    position: 7
     proportions: [6, 6]
     background: "#FFFFFF"
     image:
