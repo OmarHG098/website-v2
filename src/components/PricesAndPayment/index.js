@@ -5,7 +5,7 @@ import { Link } from "../Styling/index";
 import { GridContainer, Div, Grid } from "../Sections";
 import { SelectRaw } from "../Select";
 import { H2, H3, H4, H5, Paragraph } from "../Heading";
-import { Button, Colors, RoundImage, Img, Toggle, Spinner } from "../Styling";
+import { Button, Colors, RoundImage, Img, Toggle, Spinner, OfferTag } from "../Styling";
 import { SessionContext } from "../../session";
 import { isWindow } from "../../utils/utils";
 
@@ -18,10 +18,14 @@ const LoadingSpinner = () => (
   </Div>
 );
 
-const PaymentOptionCard = ({ option, selectedOption, setSelectedOption }) => {
+const PaymentOptionCard = ({ option, selectedOption, setSelectedOption, onDropdownChange }) => {
   return (
     <Div border="1px solid #E5E5E5" borderRadius="8px" margin="0 0 12px 0" background={Colors.white} display="block" display_xs="block" display_xxs="block">
-      <Div padding="16px 20px" cursor="pointer" onClick={() => setSelectedOption(selectedOption === option.id ? null : option.id)} display="flex" justifyContent="space-between" alignItems="flex-start">
+      <Div padding="16px 20px" cursor="pointer" onClick={() => {
+        const newValue = selectedOption === option.id ? null : option.id;
+        setSelectedOption(newValue);
+        onDropdownChange && onDropdownChange(!!newValue);
+      }} display="flex" justifyContent="space-between" alignItems="flex-start">
         <Div display="block" width="calc(100% - 32px)">
           {option.recomended && (
             <Paragraph
@@ -107,6 +111,8 @@ const FinancialOptionsDesktop = ({
   session,
   setSession,
   availablePlans,
+  isLocationDropdownOpen,
+  isProgramDropdownOpen,
 }) => {
   const [localSelected, setLocalSelected] = useState(null);
 
@@ -122,6 +128,7 @@ const FinancialOptionsDesktop = ({
     recomended: plan.recomended,
     recommended_color: plan.recommended_color,
     bullets: plan.bullets,
+    offer: plan.offer,
   }));
 
   const activeId = localSelected || selectedPlan;
@@ -140,7 +147,9 @@ const FinancialOptionsDesktop = ({
         borderRadius="12px"
         gap="16px"
         margin="24px 0"
+        position="relative"
       >
+        {currentPlan?.offer && <OfferTag isHidden={isLocationDropdownOpen || isProgramDropdownOpen}>{currentPlan.offer}</OfferTag>}
         {/* Left column */}
         <Div
           display="block"
@@ -352,8 +361,9 @@ const FinancialOptionsDesktop = ({
 };
 
 // Keep the original mobile card implementation for MobileFinancialDropdown
-const FinancialOptionsCard = ({ info, selectedPlan, session, setSession, availablePlans }) => {
+const FinancialOptionsCard = ({ info, selectedPlan, session, setSession, availablePlans, isLocationDropdownOpen, isProgramDropdownOpen }) => {
   const [selectedOption, setSelectedOption] = useState(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   // Build options list from available plans (YAML-driven)
   const paymentOptions = (availablePlans || []).map((plan) => ({
@@ -367,6 +377,7 @@ const FinancialOptionsCard = ({ info, selectedPlan, session, setSession, availab
     recomended: plan.recomended,
     recommended_color: plan.recommended_color,
     bullets: plan.bullets,
+    offer: plan.offer,
   }));
 
   // Get currently selected option or default to first one
@@ -383,7 +394,9 @@ const FinancialOptionsCard = ({ info, selectedPlan, session, setSession, availab
         width="100%"
         display="block"
         boxShadow="0 8px 32px rgba(0,0,0,0.25)"
+        position="relative"
       >
+        {currentOption?.offer && <OfferTag isHidden={(isLocationDropdownOpen || isProgramDropdownOpen) && selectedOption !== currentOption.id}>{currentOption.offer}</OfferTag>}
         <Div display="block" margin="0 0 24px 0">
           <H3 fontSize="18px" fontWeight="600" color={Colors.blue} margin="0 0 8px 0" textAlign="center">
             {info.plan_details}
@@ -417,6 +430,7 @@ const FinancialOptionsCard = ({ info, selectedPlan, session, setSession, availab
               option={option}
               selectedOption={selectedOption}
               setSelectedOption={setSelectedOption}
+              onDropdownChange={setIsDropdownOpen}
             />
           ))}
         </Div>
@@ -470,6 +484,8 @@ const FinancialOptionsCard = ({ info, selectedPlan, session, setSession, availab
 
 const PricesAndPayment = (props) => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isLocationDropdownOpen, setIsLocationDropdownOpen] = useState(false);
+  const [isProgramDropdownOpen, setIsProgramDropdownOpen] = useState(false);
   const data = useStaticQuery(graphql`
     query PricesAndPayment {
       content: allPricesAndPaymentYaml {
@@ -582,11 +598,14 @@ const PricesAndPayment = (props) => {
   const [courseArrayFiltered, setCourseArrayFiltered] = useState([]);
 
   const getCurrentPlans = () => {
+    // If we're on a specific course page, use defaultCourse directly
+    const courseToUse = props.financial ? (course?.value || props.defaultCourse) : props.defaultCourse;
+    
     let _plans = data.allPlansYaml.edges
       .filter(({ node }) => node.fields.lang === props.lang)
       .find((p) =>
         p.node.fields.file_name.includes(
-          course ? course.value?.replaceAll("_", "-") : props.defaultCourse
+          courseToUse?.replaceAll("_", "-")
         )
       );
 
@@ -671,16 +690,16 @@ const PricesAndPayment = (props) => {
   }, [currentLocation]);
 
   useEffect(() => {
-    if (!currentLocation || !course) {
-      setIsLoading(true);
+    setIsLoading(true);
+    // On specific course pages, we don't need to wait for course selection
+    if (!currentLocation || (!course && props.financial)) {
       return;
     }
-    setIsLoading(true);
     const filteredPlans = getAvailablePlans();
     setAvailablePlans(filteredPlans);
     setSelectedPlan(filteredPlans[0]?.slug);
     setIsLoading(false);
-  }, [jobGuarantee, currentLocation, course]);
+  }, [jobGuarantee, currentLocation, course, props.financial]);
 
   const city = session && session.location ? session.location.city : [];
 
@@ -837,6 +856,8 @@ const PricesAndPayment = (props) => {
                   ).node;
                   setCurrentLocation(current);
                 }}
+                onMenuOpen={() => setIsLocationDropdownOpen(true)}
+                onMenuClose={() => setIsLocationDropdownOpen(false)}
                 style={{
                   input: (styles) => ({
                     ...styles,
@@ -864,6 +885,10 @@ const PricesAndPayment = (props) => {
                       border: "1px solid #000000",
                     },
                   }),
+                  menu: (styles) => ({
+                    ...styles,
+                    zIndex: 3,
+                  }),
                   option: (
                     styles,
                     { data, isDisabled, isFocused, isSelected }
@@ -884,6 +909,8 @@ const PricesAndPayment = (props) => {
                   placeholder={info.top_label_2}
                   value={course}
                   onChange={(opt) => setCourse(opt)}
+                  onMenuOpen={() => setIsProgramDropdownOpen(true)}
+                  onMenuClose={() => setIsProgramDropdownOpen(false)}
                   style={{
                     input: (styles) => ({
                       ...styles,
@@ -927,29 +954,35 @@ const PricesAndPayment = (props) => {
           </Div>
         </Div>
       </Grid>
-      {/* Financial explainer card (desktop/tablet) */}
-      <FinancialOptionsDesktop
-        info={info}
-        selectedPlan={selectedPlan}
-        setSelectedPlan={setSelectedPlan}
-        jobGuarantee={jobGuarantee}
-        setJobGuarantee={setJobGuarantee}
-        session={session}
-        setSession={setSession}
-        availablePlans={availablePlans}
-      />
-      {/* Financial explainer card (mobile) */}
-      <Div display_tablet="none" width="100%" margin="20px 0" display="flex" flexDirection="column">
-        <FinancialOptionsCard
-          info={info}
-          selectedPlan={selectedPlan}
-          session={session}
-          setSession={setSession}
-          availablePlans={availablePlans}
-        />
-      </Div>
-
-      {availablePlans && availablePlans.length === 0 && (
+      {availablePlans && availablePlans.length > 0 ? (
+        <>
+          {/* Financial explainer card (desktop/tablet) */}
+          <FinancialOptionsDesktop
+            info={info}
+            selectedPlan={selectedPlan}
+            setSelectedPlan={setSelectedPlan}
+            jobGuarantee={jobGuarantee}
+            setJobGuarantee={setJobGuarantee}
+            session={session}
+            setSession={setSession}
+            availablePlans={availablePlans}
+            isLocationDropdownOpen={isLocationDropdownOpen}
+            isProgramDropdownOpen={isProgramDropdownOpen}
+          />
+          {/* Financial explainer card (mobile) */}
+          <Div display_tablet="none" width="100%" margin="20px 0" display="flex" flexDirection="column">
+            <FinancialOptionsCard
+              info={info}
+              selectedPlan={selectedPlan}
+              session={session}
+              setSession={setSession}
+              availablePlans={availablePlans}
+              isLocationDropdownOpen={isLocationDropdownOpen}
+              isProgramDropdownOpen={isProgramDropdownOpen}
+            />
+          </Div>
+        </>
+      ) : availablePlans && availablePlans.length === 0 && (
         <Div
           margin_xs="20px 15px"
           margin_tablet="30px 60px"
