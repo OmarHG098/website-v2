@@ -66,7 +66,7 @@ components:
     background: "#FFFFFF"
     image:
       style: '{ "backgroundSize": "contain", "background-position": "center" }'
-      src: "/images/landing/feliz-empresario.png"
+      src: "/images/programs-heading.webp"
       shadow: false
     heading:
       text: "🚀 Discover Our Job Guarantee"

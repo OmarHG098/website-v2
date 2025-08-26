@@ -47,77 +47,67 @@ const ThankYou = (props) => {
 
   return (
     <>
-      <Div
-        className="circles-container"
-        display="none"
-        display_tablet="inherit"
-        position="fixed"
-        width="100%"
-        height="0"
-        top="0"
-        left="0"
-        overflow="visible"
-        pointerEvents="none"
-        zIndex="1"
-      >
-        <Div className="circles-left" position="relative">
-          <Icon
-            icon="landingCircles/smCircle-red"
-            width="23px"
-            height="23px"
-            style={{
-              position: "absolute",
-              left: "218px",
-              top: "225px",
-            }}
-          />
-          <Icon
-            icon="landingCircles/mdCircle-lightBlue"
-            style={{ position: "absolute", left: "53px", top: "97px" }}
-          />
-          <Icon
-            icon="landingCircles/bigCircle-yellowLight"
-            width="115px"
-            height="329px"
-            style={{ position: "absolute", left: "0px", top: "250px" }}
-          />
-        </Div>
-        <Div className="circles-right" position="relative">
-          <Icon
-            icon="landingCircles/lgCircle-mustard"
-            style={{
-              position: "absolute",
-              right: "0px",
-              top: "269px",
-            }}
-          />
-          <Icon
-            icon="landingCircles/mdCircle-blue"
-            width="67px"
-            height="67px"
-            style={{
-              position: "absolute",
-              right: "116px",
-              top: "169px",
-            }}
-          />
-          <Icon
-            icon="landingCircles/smCircle-mustard"
-            style={{
-              position: "absolute",
-              right: "299px",
-              top: "122px",
-            }}
-          />
-        </Div>
+      <Div className="circles-left" display="none" display_tablet="inherit">
+        <Icon
+          icon="landingCircles/smCircle-red"
+          width="23px"
+          height="23px"
+          style={{
+            zIndex: 2,
+            position: "absolute",
+            left: "218px",
+            top: "225px",
+          }}
+        />
+        <Icon
+          icon="landingCircles/mdCircle-lightBlue"
+          style={{ zIndex: 2, position: "absolute", left: "53px", top: "97px" }}
+        />
+        <Icon
+          icon="landingCircles/bigCircle-yellowLight"
+          width="115px"
+          height="329px"
+          style={{ zIndex: 2, position: "absolute", left: "0px", top: "250px" }}
+        />
+      </Div>
+      <Div className="circles-right" display="none" display_tablet="inherit">
+        <Icon
+          icon="landingCircles/lgCircle-mustard"
+          style={{
+            zIndex: 2,
+            position: "absolute",
+            right: "0px",
+            top: "269px",
+          }}
+        />
+        <Icon
+          icon="landingCircles/mdCircle-blue"
+          width="67px"
+          height="67px"
+          style={{
+            zIndex: 2,
+            position: "absolute",
+            right: "116px",
+            top: "169px",
+          }}
+        />
+        <Icon
+          icon="landingCircles/smCircle-mustard"
+          style={{
+            zIndex: 2,
+            position: "absolute",
+            right: "299px",
+            top: "122px",
+          }}
+        />
       </Div>
 
       <Div
         flexDirection="column"
         background={Colors.lightYellow}
-        padding={{ xs: "24px 0", md: "60px 0" }}
+        padding="68px 0"
         height="auto"
-        margin={{ xs: "0", md: "60px 0 0 0" }}
+        margin={isCustomBarActive(session) ? "140px 0 0 0" : "80px 0 0 0"}
       >
         <H1
           type="h1"
@@ -134,9 +124,9 @@ const ThankYou = (props) => {
         <H2
           type="h2"
           zIndex="5"
-          fontSize={{ xs: "32px", md: "48px" }}
-          lineHeight={{ xs: "42px", md: "60px" }}
-          margin={{ xs: "12px 0px 15px 0px", md: "16px 0px 19px 0px" }}
+          fontSize="48px"
+          lineHeight="60px"
+          margin="16px 0px 19px 0px"
         >
           {`< ${yml.banner.tagline} >`}
         </H2>
