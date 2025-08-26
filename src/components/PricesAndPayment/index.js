@@ -1,56 +1,149 @@
-import React, { useState, useContext, useEffect, useRef } from "react";
+import React, { useState, useContext, useEffect, useRef, useMemo, useCallback } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Icon from "../Icon";
 import { Link } from "../Styling/index";
 import { GridContainer, Div, Grid } from "../Sections";
 import { SelectRaw } from "../Select";
 import { H2, H3, H4, H5, Paragraph } from "../Heading";
-import { Button, Colors, RoundImage, Img, Toggle, Spinner, OfferTag } from "../Styling";
+import {
+  Button,
+  Colors,
+  RoundImage,
+  Img,
+  Toggle,
+  Spinner,
+  OfferTag,
+} from "../Styling";
 import { SessionContext } from "../../session";
 import { isWindow } from "../../utils/utils";
 
-
+// Shared styles to avoid recreating objects per render
+const selectStyles = {
+  input: (styles) => ({
+    ...styles,
+    width: "100%",
+    margin: "5px 0px",
+  }),
+  control: (styles) => ({
+    ...styles,
+    fontFamily: "Lato, sans-serif",
+    background: "#ffffff",
+    border: "1px solid #000",
+    boxShadow: "none",
+    borderRadius: "0",
+    marginBottom: "0px",
+    marginTop: "0px",
+    width: "100%",
+    fontSize: "15px",
+    fontWeight: "400",
+    fontStyle: "italic",
+    color: "#000",
+    lineHeight: "22px",
+    "&:hover": { boxShadow: "0 0 0 1px black" },
+    "&:focus": {
+      boxShadow: "0 0 0 1px black",
+      border: "1px solid #000000",
+    },
+  }),
+  menu: (styles) => ({
+    ...styles,
+    zIndex: 3,
+  }),
+  option: (styles) => ({
+    ...styles,
+    fontFamily: "Lato, sans-serif",
+  }),
+};
 
 // Additional UI per new Figma: payment options explainer and mobile dropdown
 const LoadingSpinner = () => (
-  <Div display="flex" justifyContent="center" alignItems="center" height="300px">
+  <Div
+    display="flex"
+    justifyContent="center"
+    alignItems="center"
+    height="300px"
+  >
     <Spinner color={Colors.blue} />
   </Div>
 );
 
-const PaymentOptionCard = ({ option, selectedOption, setSelectedOption, onDropdownChange }) => {
+const PaymentOptionCard = ({
+  option,
+  selectedPlan,
+  setSelectedPlan,
+}) => {
   return (
-    <Div border="1px solid #E5E5E5" borderRadius="8px" margin="0 0 12px 0" background={Colors.white} display="block" display_xs="block" display_xxs="block">
-      <Div padding="16px 20px" cursor="pointer" onClick={() => {
-        const newValue = selectedOption === option.id ? null : option.id;
-        setSelectedOption(newValue);
-        onDropdownChange && onDropdownChange(!!newValue);
-      }} display="flex" justifyContent="space-between" alignItems="flex-start">
+    <Div
+      border="1px solid #E5E5E5"
+      borderRadius="8px"
+      margin="0 0 12px 0"
+      background={Colors.white}
+      display="block"
+      display_xs="block"
+      display_xxs="block"
+    >
+      <Div
+        padding="16px 20px"
+        cursor="pointer"
+        onClick={() => {
+          setSelectedPlan(option.id);
+        }}
+        display="flex"
+        justifyContent="space-between"
+        alignItems="flex-start"
+      >
         <Div display="block" width="calc(100% - 32px)">
           {option.recomended && (
             <Paragraph
               fontSize="12px"
               fontWeight="700"
-              color={option.recommended_color?.startsWith("#") ? option.recommended_color : Colors[option.recommended_color?.toLowerCase()] || Colors.green}
+              color={
+                option.recommended_color?.startsWith("#")
+                  ? option.recommended_color
+                  : Colors[option.recommended_color?.toLowerCase()] ||
+                    Colors.green
+              }
               margin="0 0 4px 0"
               textAlign="left"
             >
               {option.recomended}
             </Paragraph>
           )}
-          <Paragraph fontSize="14px" fontWeight="600" color={Colors.black} margin="0 0 4px 0" textAlign="left">
+          <Paragraph
+            fontSize="14px"
+            fontWeight="600"
+            color={Colors.black}
+            margin="0 0 4px 0"
+            textAlign="left"
+          >
             {option.title}
           </Paragraph>
-          <Paragraph fontSize="12px" color="#666666" margin="0" textAlign="left">
+          <Paragraph
+            fontSize="12px"
+            color="#666666"
+            margin="0"
+            textAlign="left"
+          >
             {option.description}
           </Paragraph>
         </Div>
-        <Div flexShrink="0" width="24px" display="flex" justifyContent="center" marginTop="10px">
-          <Icon icon={selectedOption === option.id ? "angleup" : "angledown"} width="16px" height="16px" color="#666666" />
+        <Div
+          flexShrink="0"
+          width="24px"
+          display="flex"
+          justifyContent="center"
+          marginTop="10px"
+        >
+          <Icon
+            icon={selectedPlan === option.id ? "angleup" : "angledown"}
+            width="16px"
+            height="16px"
+            color="#666666"
+          />
         </Div>
       </Div>
 
-      {selectedOption === option.id && (
+      {selectedPlan === option.id && (
         <Div
           borderTop="1px solid #E5E5E5"
           padding="16px 20px"
@@ -59,7 +152,6 @@ const PaymentOptionCard = ({ option, selectedOption, setSelectedOption, onDropdo
           display_xs="block"
           display_xxs="block"
         >
-
           {option.bullets && (
             <Paragraph
               fontSize="14px"
@@ -67,7 +159,9 @@ const PaymentOptionCard = ({ option, selectedOption, setSelectedOption, onDropdo
               margin="16px 0 0 0"
               textAlign="left"
               lineHeight="24px"
-              dangerouslySetInnerHTML={{ __html: option.bullets.join(". ") + " " }}
+              dangerouslySetInnerHTML={{
+                __html: option.bullets.join(". ") + " ",
+              }}
             />
           )}
 
@@ -114,26 +208,31 @@ const FinancialOptionsDesktop = ({
   isLocationDropdownOpen,
   isProgramDropdownOpen,
 }) => {
-  const [localSelected, setLocalSelected] = useState(null);
-
   // Build options list from available plans (YAML-driven)
-  const paymentOptions = (availablePlans || []).map((plan) => ({
-    id: plan.slug,
-    title: plan.scholarship,
-    description: plan.payment_time,
-    details: plan.warning_message,
-    price: plan.price,
-    originalPrice: plan.original_price,
-    icons: plan.icons,
-    recomended: plan.recomended,
-    recommended_color: plan.recommended_color,
-    bullets: plan.bullets,
-    offer: plan.offer,
-  }));
+  const paymentOptions = useMemo(
+    () =>
+      (availablePlans || []).map((plan) => ({
+        id: plan.slug,
+        title: plan.scholarship,
+        description: plan.payment_time,
+        details: plan.warning_message,
+        price: plan.price,
+        originalPrice: plan.original_price,
+        icons: plan.icons,
+        recomended: plan.recomended,
+        recommended_color: plan.recommended_color,
+        bullets: plan.bullets,
+        offer: plan.offer,
+      })),
+    [availablePlans]
+  );
 
-  const activeId = localSelected || selectedPlan;
-  const currentPlan = (availablePlans || []).find((p) => p.slug === activeId) || (availablePlans || [])[0];
-  const activeOption = paymentOptions.find((o) => o.id === (activeId)) || paymentOptions[0];
+  const currentPlan = useMemo(
+    () =>
+      (availablePlans || []).find((p) => p.slug === selectedPlan) ||
+      (availablePlans || [])[0],
+    [availablePlans, selectedPlan]
+  );
 
   return (
     <>
@@ -149,7 +248,11 @@ const FinancialOptionsDesktop = ({
         margin="24px 0"
         position="relative"
       >
-        {currentPlan?.offer && <OfferTag isHidden={isLocationDropdownOpen || isProgramDropdownOpen}>{currentPlan.offer}</OfferTag>}
+        {currentPlan?.offer && (
+          <OfferTag isHidden={isLocationDropdownOpen || isProgramDropdownOpen}>
+            {currentPlan.offer}
+          </OfferTag>
+        )}
         {/* Left column */}
         <Div
           display="block"
@@ -158,12 +261,24 @@ const FinancialOptionsDesktop = ({
           padding="24px"
           width_tablet="50%"
         >
-          <H3 color={Colors.blue} fontWeight="700" margin="0 0 16px 0" textAlign="left">
+          <H3
+            color={Colors.blue}
+            fontWeight="700"
+            margin="0 0 16px 0"
+            textAlign="left"
+          >
             {"Invest in your future, stress-free"}
           </H3>
 
           <Div display="block" margin="0 0 12px 0">
-            <H2 fontSize="36px" lineHeight="42px" fontWeight="700" color={Colors.black} margin="0 0 6px 0" textAlign="left">
+            <H2
+              fontSize="36px"
+              lineHeight="42px"
+              fontWeight="700"
+              color={Colors.black}
+              margin="0 0 6px 0"
+              textAlign="left"
+            >
               {currentPlan?.price || ""}
             </H2>
             {currentPlan?.original_price && (
@@ -171,17 +286,27 @@ const FinancialOptionsDesktop = ({
                 <s>{currentPlan.original_price}</s>
               </Paragraph>
             )}
-            <Paragraph color={Colors.black} fontSize="14px" margin="0 0 6px 0" textAlign="left">
+            <Paragraph
+              color={Colors.black}
+              fontSize="14px"
+              margin="0 0 6px 0"
+              textAlign="left"
+            >
               {currentPlan?.payment_time}
             </Paragraph>
             {currentPlan?.warning_message && (
-              <Paragraph color={Colors.darkGray} fontSize="12px" opacity="1" textAlign="left">
+              <Paragraph
+                color={Colors.darkGray}
+                fontSize="12px"
+                opacity="1"
+                textAlign="left"
+              >
                 {currentPlan.warning_message}
               </Paragraph>
             )}
           </Div>
 
-                  {/* Job Guarantee toggle - Commented out for review
+          {/* Job Guarantee toggle - Commented out for review
         {availablePlans?.some((p) => p.price) && (
           <Div margin="16px 0 0 0" display="block">
             <Div alignItems="center">
@@ -218,7 +343,11 @@ const FinancialOptionsDesktop = ({
           {/* Bullets from selected plan */}
           {currentPlan?.bullets && currentPlan.bullets.length > 0 && (
             <Div display="block" margin="24px 0 0 0">
-              <Div borderTop={`1px solid #ebebeb`} width="60%" margin="0 0 12px 0" />
+              <Div
+                borderTop={`1px solid #ebebeb`}
+                width="60%"
+                margin="0 0 12px 0"
+              />
               {currentPlan.bullets.map((bullet, index) => (
                 <Div key={index} alignItems="center" margin="12px 0 0 0">
                   <Icon
@@ -264,7 +393,6 @@ const FinancialOptionsDesktop = ({
               ))}
             </Div>
           )}
-
         </Div>
 
         {/* Right column */}
@@ -274,22 +402,30 @@ const FinancialOptionsDesktop = ({
           padding="24px"
           width_tablet="50%"
         >
-          <H3 color={Colors.blue} fontWeight="700" margin="0 0 12px 0" textAlign="left">
+          <H3
+            color={Colors.blue}
+            fontWeight="700"
+            margin="0 0 12px 0"
+            textAlign="left"
+          >
             {"Other payment options"}
           </H3>
           {(paymentOptions || []).map((option) => {
-            const isSelected = (localSelected || selectedPlan) === option.id;
+            const isSelected = selectedPlan === option.id;
             return (
               <Div
                 key={option.id}
-                border={isSelected ? `2px solid ${Colors.blue}` : `1px solid ${Colors.lightGray}`}
+                border={
+                  isSelected
+                    ? `2px solid ${Colors.blue}`
+                    : `1px solid ${Colors.lightGray}`
+                }
                 background={isSelected ? Colors.veryLightBlue3 : Colors.white}
                 padding="16px"
                 borderRadius="8px"
                 margin="0 0 12px 0"
                 cursor="pointer"
                 onClick={() => {
-                  setLocalSelected(option.id);
                   setSelectedPlan && setSelectedPlan(option.id);
                 }}
               >
@@ -298,17 +434,31 @@ const FinancialOptionsDesktop = ({
                     <Paragraph
                       fontSize="12px"
                       fontWeight="700"
-                      color={option.recommended_color?.startsWith("#") ? option.recommended_color : Colors[option.recommended_color?.toLowerCase()] || Colors.green}
+                      color={
+                        option.recommended_color?.startsWith("#")
+                          ? option.recommended_color
+                          : Colors[option.recommended_color?.toLowerCase()] ||
+                            Colors.green
+                      }
                       margin="0 0 4px 0"
                       textAlign="left"
                     >
                       {option.recomended}
                     </Paragraph>
                   )}
-                  <Paragraph fontWeight="700" color={Colors.black} margin="0 0 6px 0" textAlign="left">
+                  <Paragraph
+                    fontWeight="700"
+                    color={Colors.black}
+                    margin="0 0 6px 0"
+                    textAlign="left"
+                  >
                     {option.title}
                   </Paragraph>
-                  <Paragraph color={Colors.darkGray} fontSize="14px" textAlign="left">
+                  <Paragraph
+                    color={Colors.darkGray}
+                    fontSize="14px"
+                    textAlign="left"
+                  >
                     {option.description}
                   </Paragraph>
                 </Div>
@@ -319,13 +469,27 @@ const FinancialOptionsDesktop = ({
       </Div>
 
       {/* CTA Section - Desktop */}
-      <Div display="none" display_tablet="block" textAlign="center" margin="24px 0 0 0">
+      <Div
+        display="none"
+        display_tablet="block"
+        textAlign="center"
+        margin="24px 0 0 0"
+      >
         <Paragraph fontSize="12px" color="#666666" margin="0 0 16px 0">
           {info.cta.advisor_text}
         </Paragraph>
 
-        <Div display="flex" alignItems="center" justifyContent="center" gap="12px">
-          <Link to={`${info?.apply_button?.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""}`}>
+        <Div
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          gap="12px"
+        >
+          <Link
+            to={`${info?.cta?.apply_link || "/us/apply"}${
+              selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+            }`}
+          >
             <Button
               variant="full"
               background={Colors.blue}
@@ -336,7 +500,10 @@ const FinancialOptionsDesktop = ({
               fontWeight="600"
               onClick={() => {
                 if (selectedPlan) {
-                  setSession({ ...session, utm: { ...session.utm, utm_plan: selectedPlan } });
+                  setSession({
+                    ...session,
+                    utm: { ...session.utm, utm_plan: selectedPlan },
+                  });
                 }
               }}
             >
@@ -344,16 +511,18 @@ const FinancialOptionsDesktop = ({
             </Button>
           </Link>
 
-          <Button
-            background="transparent"
-            textColor={Colors.blue}
-            fontSize="14px"
-            padding="12px 24px"
-            borderRadius="6px"
-            fontWeight="600"
-          >
-            {info.cta.more_details}
-          </Button>
+          <Link to={info?.cta?.more_details_link || "/us/financials"}>
+            <Button
+              background="transparent"
+              textColor={Colors.blue}
+              fontSize="14px"
+              padding="12px 24px"
+              borderRadius="6px"
+              fontWeight="600"
+            >
+              {info.cta.more_details}
+            </Button>
+          </Link>
         </Div>
       </Div>
     </>
@@ -361,27 +530,40 @@ const FinancialOptionsDesktop = ({
 };
 
 // Keep the original mobile card implementation for MobileFinancialDropdown
-const FinancialOptionsCard = ({ info, selectedPlan, session, setSession, availablePlans, isLocationDropdownOpen, isProgramDropdownOpen }) => {
-  const [selectedOption, setSelectedOption] = useState(null);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
+const FinancialOptionsCard = ({
+  info,
+  selectedPlan,
+  setSelectedPlan,
+  session,
+  setSession,
+  availablePlans,
+  isLocationDropdownOpen,
+  isProgramDropdownOpen,
+}) => {
   // Build options list from available plans (YAML-driven)
-  const paymentOptions = (availablePlans || []).map((plan) => ({
-    id: plan.slug,
-    title: plan.scholarship,
-    description: plan.payment_time,
-    details: plan.warning_message,
-    price: plan.price,
-    originalPrice: plan.original_price,
-    icons: plan.icons,
-    recomended: plan.recomended,
-    recommended_color: plan.recommended_color,
-    bullets: plan.bullets,
-    offer: plan.offer,
-  }));
+  const paymentOptions = useMemo(
+    () =>
+      (availablePlans || []).map((plan) => ({
+        id: plan.slug,
+        title: plan.scholarship,
+        description: plan.payment_time,
+        details: plan.warning_message,
+        price: plan.price,
+        originalPrice: plan.original_price,
+        icons: plan.icons,
+        recomended: plan.recomended,
+        recommended_color: plan.recommended_color,
+        bullets: plan.bullets,
+        offer: plan.offer,
+      })),
+    [availablePlans]
+  );
 
   // Get currently selected option or default to first one
-  const currentOption = paymentOptions.find(opt => opt.id === selectedOption) || paymentOptions[0];
+  const currentOption = useMemo(
+    () => paymentOptions.find((opt) => opt.id === selectedPlan) || paymentOptions[0],
+    [paymentOptions, selectedPlan]
+  );
 
   return (
     <>
@@ -396,15 +578,34 @@ const FinancialOptionsCard = ({ info, selectedPlan, session, setSession, availab
         boxShadow="0 8px 32px rgba(0,0,0,0.25)"
         position="relative"
       >
-        {currentOption?.offer && <OfferTag isHidden={(isLocationDropdownOpen || isProgramDropdownOpen) && selectedOption !== currentOption.id}>{currentOption.offer}</OfferTag>}
+        {currentOption?.offer && (
+          <OfferTag isHidden={isLocationDropdownOpen || isProgramDropdownOpen}>
+            {currentOption.offer}
+          </OfferTag>
+        )}
         <Div display="block" margin="0 0 24px 0">
-          <H3 fontSize="18px" fontWeight="600" color={Colors.blue} margin="0 0 8px 0" textAlign="center">
+          <H3
+            fontSize="18px"
+            fontWeight="600"
+            color={Colors.blue}
+            margin="0 0 8px 0"
+            textAlign="center"
+          >
             {info.plan_details}
           </H3>
 
           <Div alignItems="center" justifyContent="center" margin="0 0 16px 0">
-            <H2 fontSize="32px" fontWeight="700" color={Colors.black} margin="0 8px 0 0">{currentOption?.price || ""}</H2>
-            <Paragraph fontSize="16px" color={Colors.black} margin="0">{currentOption?.description || ""}</Paragraph>
+            <H2
+              fontSize="32px"
+              fontWeight="700"
+              color={Colors.black}
+              margin="0 8px 0 0"
+            >
+              {currentOption?.price || ""}
+            </H2>
+            <Paragraph fontSize="16px" color={Colors.black} margin="0">
+              {currentOption?.description || ""}
+            </Paragraph>
           </Div>
 
           {currentOption?.originalPrice && (
@@ -413,14 +614,25 @@ const FinancialOptionsCard = ({ info, selectedPlan, session, setSession, availab
             </Paragraph>
           )}
           {currentOption?.warning_message && (
-            <Paragraph color={Colors.darkGray} fontSize="12px" opacity="1" textAlign="center" margin="0 0 16px 0">
+            <Paragraph
+              color={Colors.darkGray}
+              fontSize="12px"
+              opacity="1"
+              textAlign="center"
+              margin="0 0 16px 0"
+            >
               {currentOption.warning_message}
             </Paragraph>
           )}
         </Div>
 
         <Div display="block" margin="0 0 24px 0">
-          <Paragraph fontSize="14px" fontWeight="600" color={Colors.black} margin="0 0 12px 0">
+          <Paragraph
+            fontSize="14px"
+            fontWeight="600"
+            color={Colors.black}
+            margin="0 0 12px 0"
+          >
             {"Other payment options"}
           </Paragraph>
 
@@ -428,34 +640,51 @@ const FinancialOptionsCard = ({ info, selectedPlan, session, setSession, availab
             <PaymentOptionCard
               key={option.id}
               option={option}
-              selectedOption={selectedOption}
-              setSelectedOption={setSelectedOption}
-              onDropdownChange={setIsDropdownOpen}
+              selectedPlan={selectedPlan}
+              setSelectedPlan={setSelectedPlan}
             />
           ))}
         </Div>
-
       </Div>
 
       {/* CTA Section - Mobile */}
       <Div display="block" textAlign="center" margin="24px 0 0 0">
-        <Paragraph fontSize="12px" color="#666666" textAlign="center" margin="0 0 16px 0">
+        <Paragraph
+          fontSize="12px"
+          color="#666666"
+          textAlign="center"
+          margin="0 0 16px 0"
+        >
           {info.cta.advisor_text}
         </Paragraph>
 
-                  <Div display="flex" flexDirection="column" alignItems="center" gap="12px" maxWidth="280px" margin="0 auto">
-            <Link to={`${info?.apply_button?.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""}`}>
-              <Button
-                variant="full"
-                background={Colors.blue}
-                textColor={Colors.white}
-                fontSize="14px"
-                padding="12px 32px"
-                borderRadius="6px"
-                fontWeight="600"
+        <Div
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          gap="12px"
+          maxWidth="280px"
+          margin="0 auto"
+        >
+          <Link
+            to={`${info?.cta?.apply_link || "/us/apply"}${
+              selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+            }`}
+          >
+            <Button
+              variant="full"
+              background={Colors.blue}
+              textColor={Colors.white}
+              fontSize="14px"
+              padding="12px 32px"
+              borderRadius="6px"
+              fontWeight="600"
               onClick={() => {
                 if (selectedPlan) {
-                  setSession({ ...session, utm: { ...session.utm, utm_plan: selectedPlan } });
+                  setSession({
+                    ...session,
+                    utm: { ...session.utm, utm_plan: selectedPlan },
+                  });
                 }
               }}
             >
@@ -463,24 +692,23 @@ const FinancialOptionsCard = ({ info, selectedPlan, session, setSession, availab
             </Button>
           </Link>
 
-                      <Button
+          <Link to={info?.cta?.more_details_link || "/us/financials"}>
+            <Button
               background="transparent"
               textColor={Colors.blue}
               fontSize="14px"
               padding="12px 32px"
               borderRadius="6px"
               fontWeight="600"
-          >
-            {info.cta.more_details}
-          </Button>
+            >
+              {info.cta.more_details}
+            </Button>
+          </Link>
         </Div>
       </Div>
     </>
   );
 };
-
-
-
 
 const PricesAndPayment = (props) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -494,8 +722,6 @@ const PricesAndPayment = (props) => {
             fields {
               lang
             }
-            pricing_error_contact
-            pricing_error
             get_notified
             contact_carrer_advisor
             contact_link
@@ -513,20 +739,12 @@ const PricesAndPayment = (props) => {
             recomended
             not_available
             not_available_job_guarantee
-            apply_button {
-              label
-              link
-            }
-
-            button {
-              button_text
-              button_link
-            }
-
             cta {
               advisor_text
               book_call
               more_details
+              apply_link
+              more_details_link
             }
           }
         }
@@ -597,16 +815,28 @@ const PricesAndPayment = (props) => {
   const [availablePlans, setAvailablePlans] = useState([]);
   const [courseArrayFiltered, setCourseArrayFiltered] = useState([]);
 
+  // Stable handlers (avoid conditional hook calls in JSX)
+  const handleLocationChange = useCallback(
+    (opt) => {
+      const current = locations.find(
+        (l) => l.node.active_campaign_location_slug === opt.value
+      ).node;
+      setCurrentLocation(current);
+    },
+    [locations]
+  );
+  const handleProgramChange = useCallback((opt) => setCourse(opt), []);
+
   const getCurrentPlans = () => {
     // If we're on a specific course page, use defaultCourse directly
-    const courseToUse = props.financial ? (course?.value || props.defaultCourse) : props.defaultCourse;
-    
+    const courseToUse = props.financial
+      ? course?.value || props.defaultCourse
+      : props.defaultCourse;
+
     let _plans = data.allPlansYaml.edges
       .filter(({ node }) => node.fields.lang === props.lang)
       .find((p) =>
-        p.node.fields.file_name.includes(
-          courseToUse?.replaceAll("_", "-")
-        )
+        p.node.fields.file_name.includes(courseToUse?.replaceAll("_", "-"))
       );
 
     if (_plans) _plans = _plans.node[schedule];
@@ -618,15 +848,15 @@ const PricesAndPayment = (props) => {
   const programs = !Array.isArray(props.programs)
     ? []
     : props.programs
-      .filter(
-        ({ node }) =>
-          !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
-          node.meta_info.show_in_apply
-      )
-      .map(({ node }) => ({
-        label: node.apply_form.label,
-        value: node.meta_info.bc_slug,
-      }));
+        .filter(
+          ({ node }) =>
+            !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
+            node.meta_info.show_in_apply
+        )
+        .map(({ node }) => ({
+          label: node.apply_form.label,
+          value: node.meta_info.bc_slug,
+        }));
 
   const getAvailablePlans = () => {
     const currentPlans = getCurrentPlans();
@@ -656,7 +886,7 @@ const PricesAndPayment = (props) => {
         });
       }
     }
-  }, [mainContainer.current]);
+  }, []);
 
   useEffect(() => {
     setLocations(
@@ -850,104 +1080,23 @@ const PricesAndPayment = (props) => {
                   label: currentLocation?.name,
                   value: currentLocation?.active_campaign_location_slug,
                 }}
-                onChange={(opt) => {
-                  const current = locations.find(
-                    (l) => l.node.active_campaign_location_slug === opt.value
-                  ).node;
-                  setCurrentLocation(current);
-                }}
+                onChange={handleLocationChange}
                 onMenuOpen={() => setIsLocationDropdownOpen(true)}
                 onMenuClose={() => setIsLocationDropdownOpen(false)}
-                style={{
-                  input: (styles) => ({
-                    ...styles,
-                    width: "100%",
-                    margin: "5px 0px",
-                  }),
-                  control: (styles, state) => ({
-                    ...styles,
-                    fontFamily: "Lato, sans-serif",
-                    background: "#ffffff",
-                    border: "1px solid #000",
-                    boxShadow: "none",
-                    borderRadius: "0",
-                    marginBottom: "0px",
-                    marginTop: "0px",
-                    width: "100%",
-                    fontSize: "15px",
-                    fontWeight: "400",
-                    fontStyle: "italic",
-                    color: "#000",
-                    lineHeight: "22px",
-                    "&:hover": { boxShadow: "0 0 0 1px black" },
-                    "&:focus": {
-                      boxShadow: "0 0 0 1px black",
-                      border: "1px solid #000000",
-                    },
-                  }),
-                  menu: (styles) => ({
-                    ...styles,
-                    zIndex: 3,
-                  }),
-                  option: (
-                    styles,
-                    { data, isDisabled, isFocused, isSelected }
-                  ) => {
-                    return {
-                      ...styles,
-                      fontFamily: "Lato, sans-serif",
-                    };
-                  },
-                }}
+                style={selectStyles}
               />
               {props.financial && (
                 <SelectRaw
                   placeholderFloat
                   bgColor={Colors.white}
-                  single={props.financial ? false : true}
+                  single={true}
                   options={currentLocation && courseArrayFiltered}
                   placeholder={info.top_label_2}
                   value={course}
-                  onChange={(opt) => setCourse(opt)}
+                  onChange={handleProgramChange}
                   onMenuOpen={() => setIsProgramDropdownOpen(true)}
                   onMenuClose={() => setIsProgramDropdownOpen(false)}
-                  style={{
-                    input: (styles) => ({
-                      ...styles,
-                      width: "100%",
-                      margin: "5px 0px",
-                    }),
-                    control: (styles, state) => ({
-                      ...styles,
-                      fontFamily: "Lato, sans-serif",
-                      background: "#ffffff",
-                      border: "1px solid #000",
-                      boxShadow: "none",
-                      borderRadius: "0",
-                      marginBottom: "0px",
-                      marginTop: "0px",
-                      width: "100%",
-                      fontSize: "15px",
-                      fontWeight: "400",
-                      fontStyle: "italic",
-                      color: "#000",
-                      lineHeight: "22px",
-                      "&:hover": { boxShadow: "0 0 0 1px black" },
-                      "&:focus": {
-                        boxShadow: "0 0 0 1px black",
-                        border: "1px solid #000000",
-                      },
-                    }),
-                    option: (
-                      styles,
-                      { data, isDisabled, isFocused, isSelected }
-                    ) => {
-                      return {
-                        ...styles,
-                        fontFamily: "Lato, sans-serif",
-                      };
-                    },
-                  }}
+                  style={selectStyles}
                 />
               )}
             </Div>
@@ -970,10 +1119,17 @@ const PricesAndPayment = (props) => {
             isProgramDropdownOpen={isProgramDropdownOpen}
           />
           {/* Financial explainer card (mobile) */}
-          <Div display_tablet="none" width="100%" margin="20px 0" display="flex" flexDirection="column">
+          <Div
+            display_tablet="none"
+            width="100%"
+            margin="20px 0"
+            display="flex"
+            flexDirection="column"
+          >
             <FinancialOptionsCard
               info={info}
               selectedPlan={selectedPlan}
+              setSelectedPlan={setSelectedPlan}
               session={session}
               setSession={setSession}
               availablePlans={availablePlans}
@@ -982,20 +1138,23 @@ const PricesAndPayment = (props) => {
             />
           </Div>
         </>
-      ) : availablePlans && availablePlans.length === 0 && (
-        <Div
-          margin_xs="20px 15px"
-          margin_tablet="30px 60px"
-          margin_lg="60px 0"
-          fontSize="25px"
-          display="block"
-          textAlign="center"
-          dangerouslySetInnerHTML={{
-            __html: jobGuarantee
-              ? info.not_available_job_guarantee
-              : info.not_available,
-          }}
-        />
+      ) : (
+        availablePlans &&
+        availablePlans.length === 0 && (
+          <Div
+            margin_xs="20px 15px"
+            margin_tablet="30px 60px"
+            margin_lg="60px 0"
+            fontSize="25px"
+            display="block"
+            textAlign="center"
+            dangerouslySetInnerHTML={{
+              __html: jobGuarantee
+                ? info.not_available_job_guarantee
+                : info.not_available,
+            }}
+          />
+        )
       )}
 
       <GridContainer
@@ -1038,8 +1197,8 @@ const PricesAndPayment = (props) => {
             session && session?.location && session?.location.phone
               ? `https://wa.me/${phoneNumberClean(session?.location?.phone)}`
               : session?.email
-                ? `mailto:${session?.email}`
-                : `${info?.contact_link}`
+              ? `mailto:${session?.email}`
+              : `${info?.contact_link}`
           }
         >
           {info.contact_carrer_advisor}
@@ -1049,4 +1208,3 @@ const PricesAndPayment = (props) => {
   );
 };
 export default PricesAndPayment;
-

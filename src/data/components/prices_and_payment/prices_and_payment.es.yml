@@ -14,9 +14,7 @@ select_2: Selecciona la ubicación, el programa y la opción de pago que mejor s
 job_guarantee:
   title:  "Compromiso de Garantía de Empleo:"
   description:  "Ambos nos comprometemos con tu futura carrera (te devolvemos el dinero si no lo logras)."
-apply_button: 
-  label: APLICAR
-  link: /es/aplica
+
 not_available: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>No se ha encontrado information de pago para este programa en este país.</p> <p>Para conocer más le invitamos a aplicar al programa y sera contactado por uno de nuestros asesores vocacionales o <a class="faq-link" href="/es/contactanos" rel="noopener noreferrer nofollow">envíenos un mensaje.</a></p>'
 not_available_job_guarantee: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>No tenemos disponible la modalidad Garantía de Empleo en este programa en esta locación.</p> <p>Para conocer más le invitamos a aplicar al programa y sera contactado por uno de nuestros asesores vocacionales o <a class="faq-link" href="/es/contactanos" rel="noopener noreferrer nofollow">envíenos un mensaje.</a></p>'
 
@@ -29,3 +27,5 @@ cta:
   advisor_text: ¡Agenda una llamada con un asesor para encontrar una opción de pago u oferta especial que funcione para ti!
   book_call: Agendar llamada →
   more_details: Más detalles
+  apply_link: /es/apply
+  more_details_link: /es/financiacion
