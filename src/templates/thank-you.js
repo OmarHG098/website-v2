@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { graphql } from "gatsby";
 import BaseRender from "./_baseLayout";
 import { Div, GridContainer, HR } from "../components/Sections";
@@ -8,11 +8,12 @@ import Icon from "../components/Icon";
 import { SessionContext } from "../session.js";
 import { isCustomBarActive } from "../actions";
 import AdmissionsStaff from "../components/AdmissionsStaff";
-import FreeResources from "../components/FreeResources";
+import { landingSections } from "../components/Landing";
 
 const ThankYou = (props) => {
   const { data, pageContext, yml } = props;
   const { session } = useContext(SessionContext);
+  const [components, setComponents] = useState({});
   const [checkStatus, setCheckStatus] = useState([
     { label: "facebook", status: false, iconColor: "#166fe5" },
     { label: "twitter", status: false, iconColor: "#1da1f2" },
@@ -34,6 +35,15 @@ const ThankYou = (props) => {
         ...checkStatus.slice(index + 1),
       ]);
   };
+
+  useEffect(() => {
+    let _components = {};
+    if (yml.components)
+      yml.components.forEach(({ name, ...rest }) => {
+        _components[name] = rest;
+      });
+    setComponents({ ...yml, ..._components });
+  }, [yml]);
 
   return (
     <>
@@ -144,8 +154,25 @@ const ThankYou = (props) => {
       {/* Render AdmissionsStaff only for English */}
       <AdmissionsStaff lang={session?.language} />
 
-      {/* Free Resources (YAML-driven) */}
-      {pageContext.lang === "us" && <FreeResources lang={session?.language} />}
+      {/* Dynamic Components (YAML-driven) */}
+      {Object.keys(components)
+        .filter(
+          (name) =>
+            components[name] &&
+            (landingSections[name] || landingSections[components[name].layout])
+        )
+        .sort((a, b) =>
+          components[b].position > components[a].position ? -1 : 1
+        )
+        .map((name, index) => {
+          const layout = components[name].layout || name;
+          return landingSections[layout]({
+            ...props,
+            yml: components[name],
+            session,
+            index: index,
+          });
+        })}
 
       <GridContainer
         flexDirection="column"
@@ -220,6 +247,30 @@ export const query = graphql`
             title
             message
             button_text
+          }
+          components {
+            name
+            position
+            background
+            proportions
+            layout
+            image {
+              src
+              style
+              shadow
+            }
+            button {
+              text
+              color
+              path
+              background
+            }
+            heading {
+              text
+            }
+            content {
+              text
+            }
           }
         }
       }

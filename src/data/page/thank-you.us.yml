@@ -20,7 +20,60 @@ social:
   title: "Follow Us"
   message: "Select where you like to follow us"
   button_text: "Take me to"
-      
-      
-    
-  
+components:
+  - name: free_resources
+    layout: two_column_left
+    position: 1
+    proportions: [6, 6]
+    background: "#FFFFFF"
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center" }'
+      src: "/images/landing/4geeksacademy.webp"
+      shadow: false
+    heading:
+      text: "💻 Explore Free Resources"
+    content:
+      text: "Start coding today! Check out exercises and tutorials on 4Geeks.com to practice your skills while you wait."
+    button:
+      text: "👉 Start Practicing"
+      path: "https://4geeks.com/"
+      background: "blue"
+      color: "white"
+
+  - name: career_guides
+    layout: two_column_right
+    position: 3
+    proportions: [6, 6]
+    background: "#FFFFFF"
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center" }'
+      src: "/images/landing/feliz-empresario.png"
+      shadow: false
+    heading:
+      text: "📚 Download Free Career Guides"
+    content:
+      text: "Get a taste of how we help students navigate networking, career growth, and real-world job strategies — even before day one."
+    button:
+      text: "👉 Get the Guides"
+      path: "https://4geeksacademy.com/us/job-guarantee"
+      background: "blue"
+      color: "white"
+
+  - name: job_guarantee
+    layout: two_column_left
+    position: 5
+    proportions: [6, 6]
+    background: "#FFFFFF"
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center" }'
+      src: "/images/landing/feliz-empresario.png"
+      shadow: false
+    heading:
+      text: "🚀 Discover Our Job Guarantee"
+    content:
+      text: "See how this optional add-on gives you extra confidence while building your tech career."
+    button:
+      text: "👉 Learn More"
+      path: "https://4geeksacademy.com/us/job-guarantee"
+      background: "blue"
+      color: "white"
