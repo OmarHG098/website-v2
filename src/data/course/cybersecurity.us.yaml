@@ -208,9 +208,11 @@ details:
   about:
     title: "About the Program"
     sub_title: |-
-      Gain a solid Windows, Linux, network, and server administration foundation, and the practical skills to secure these environments.
-      Learn to master cloud security, penetration testing (both offensive and defensive), and cyber threat intelligence analysis. 
-      Become proficient at managing risks using data loss prevention (DLP) strategies and <strong>navigating compliance with international standards such as ISO 27001 and NIST.</strong>
+      Our intensive Cybersecurity Bootcamp trains you to protect systems, detect threats, and respond to incidents—using industry-standard tools like Nessus, Nmap, Wireshark, and Metasploit.
+      Developed with top global experts,  the curriculum is built for real-world readiness. You’ll master skills like:
+      <strong>Data Loss Prevention – keeping sensitive information secure.</strong>
+      <strong>Penetration Testing – finding and fixing vulnerabilities.</strong>
+      <strong>System Hardening – securing Windows, Linux, and other platforms against evolving threats</strong>
     list:
       - label: "Duration"
         content: "16 weeks"

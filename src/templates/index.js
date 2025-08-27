@@ -2,7 +2,12 @@ import React, { useRef, useState, useContext, useEffect } from "react";
 import { graphql, navigate } from "gatsby";
 import { H1, H2, Paragraph } from "../components/Heading";
 import { GridContainerWithImage, Div } from "../components/Sections";
-import { Button, Colors, StyledBackgroundSection, MaskedIframe } from "../components/Styling";
+import {
+  Button,
+  Colors,
+  StyledBackgroundSection,
+  MaskedIframe,
+} from "../components/Styling";
 import { Circle } from "../components/BackgroundDrawing";
 import Iconogram from "../components/Iconogram";
 import News from "../components/News";

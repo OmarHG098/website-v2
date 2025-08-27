@@ -87,9 +87,10 @@ const SchemaOrg = ({
   };
 
   // Get FAQs for the current language
-  const faqsData = dataQuery.allFaqYaml.edges
-    .find(({ node }) => node.fields.lang === context.lang)
-    ?.node.faq || [];
+  const faqsData =
+    dataQuery.allFaqYaml.edges.find(
+      ({ node }) => node.fields.lang === context.lang
+    )?.node.faq || [];
 
   // Build a set of available topic slugs to validate requested topics
   const availableTopicSlugs = new Set(faqsData.map((t) => t.slug));
@@ -140,7 +141,9 @@ const SchemaOrg = ({
 
     // Filter topics by topicSlug only when valid
     if (topicSlug) {
-      filteredTopics = filteredTopics.filter((topic) => topic.slug === topicSlug);
+      filteredTopics = filteredTopics.filter(
+        (topic) => topic.slug === topicSlug
+      );
     }
 
     // Apply question-level filters to each topic
@@ -212,9 +215,7 @@ const SchemaOrg = ({
   };
 
   const page = [...baseSchema];
-  const location = [
-    ...baseSchema,
-  ];
+  const location = [...baseSchema];
   const blog = [
     ...baseSchema,
     {

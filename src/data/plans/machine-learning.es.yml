@@ -2,7 +2,7 @@ full_time:
 #USA 
   - slug: 'plan-4'
     academies: ['downtown-miami', 'orlando']
-    recomended: true
+    recomended: "★ ¡Mejor precio!"
     scholarship: "Pago completo"
     payment_time: "Paga hoy"
     price: "$10,999"
@@ -18,7 +18,8 @@ full_time:
 
   - slug: 'plan-1'
     academies: ['downtown-miami', 'orlando']
-    recomended: false
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
     scholarship: "Beca"
     payment_time: "Paga hoy"
     price: "$4999"
@@ -32,7 +33,8 @@ full_time:
 
   - slug: 'plan-2'
     academies: ['downtown-miami', 'orlando']
-    recomended: false
+    recomended: "Pagos mensuales bajos"
+    recommended_color: "veryLightBlue"
     scholarship: "Financiado"
     payment_time: "Pago en 24 meses"
     price: "$310"
@@ -48,7 +50,7 @@ part_time:
 
 ## USA Medio Tiempo
   - slug: 'usa-upfront-pt'
-    recomended: true
+    recomended: "★ ¡Mejor precio!"
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'dallas-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'tampa-usa', 'toronto-canada', 'newyork-usa', 'orlando', 'online']
     scholarship: "Pago completo"
     payment_time: "Paga hoy"
@@ -65,7 +67,8 @@ part_time:
 
   - slug: 'usa-financed-pt'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'dallas-usa', 'downtown-miami', 'houston-usa', 'tampa-usa', 'losangeles-usa', 'toronto-canada', 'newyork-usa', 'orlando', 'online']
-    recomended: false
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
     scholarship: "Financiado"
     payment_time: "Paga en 3, 4 o 5 años"
     price: "$200 - $299/mes"
@@ -82,7 +85,8 @@ part_time:
 
   - slug: 'usa-job-guarantee-pt'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
-    recomended: false
+    recomended: "Colocación laboral o reembolso de matrícula."
+    recommended_color: "pink"
     scholarship: "Garantía de Empleo"
     payment_time: "Consigue empleo o te devolvemos tu dinero"
     price: "+$2,000"
@@ -97,7 +101,8 @@ part_time:
 
   - slug: 'edly-payment'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'dallas-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'tampa-usa', 'toronto-canada', 'newyork-usa', 'orlando', 'online']
-    recomended: false
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
     scholarship: "Préstamo de Pago Basado en Ingresos (IBR)"
     payment_time: "Pagos flexibles después de la graduación"
     price: "IBR"
@@ -112,7 +117,7 @@ part_time:
 ## spain & Europe
   - slug: 'spain-upfront-ds-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
+    recomended: "★ ¡Mejor precio!"
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
     price: "€5.200*"
@@ -128,7 +133,8 @@ part_time:
 
   - slug: 'spain-scholarships-ds-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
     scholarship: "Becas disponibles"
     payment_time: ""
     price: "~200 € al mes"
@@ -144,7 +150,7 @@ part_time:
 
   - slug: 'north-europe-upfront-ds-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
-    recomended: true
+    recomended: "★ ¡Mejor precio!"
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
     price: "€5.200*"
@@ -160,7 +166,8 @@ part_time:
 
   - slug: 'north-europe-scholarships-ds-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
-    recomended: false
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
     scholarship: "Becas disponibles"
     payment_time: ""
     price: "~200 € al mes"
@@ -173,7 +180,7 @@ part_time:
 
   - slug: 'south-europe-upfront-ds-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: true
+    recomended: "★ ¡Mejor precio!"
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
     price: "€5.200*"
@@ -189,7 +196,8 @@ part_time:
 
   - slug: 'south-europe-scholarships-ds-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: false
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
     scholarship: "Becas disponibles"
     payment_time: ""
     price: "~200 € al mes"
@@ -201,7 +209,7 @@ part_time:
 
   - slug: 'chile-ds-gf-pt'
     academies: ['santiago-chile']
-    recomended: true
+    recomended: "★ ¡Mejor precio!"
     scholarship: "Programa + Apoyo Profesional"
     payment_time: "Paga por adelantado"
     price: "3.375.000 CLP*"
@@ -218,7 +226,8 @@ part_time:
 
   - slug: 'chile-ds-solo-pt'
     academies: ['santiago-chile']
-    recomended: false
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
     scholarship: "Solo Programa de Ciencia de Datos"
     payment_time: "Enfócate en adquirir habilidades. Paga por adelantado."
     price: "3.750.000 CLP*"
@@ -232,7 +241,8 @@ part_time:
 
   - slug: 'chile-ds-financed-pt'
     academies: ['santiago-chile']
-    recomended: false
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
     scholarship: "Financiado"
     payment_time: "Programa + Apoyo Profesional. Paga mensualmente, A partir de :"
     price: "~220.500 CLP por mes"
@@ -248,7 +258,7 @@ part_time:
 
   - slug: 'latam-trabajo-garantizado-ml-pt'
     academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador', 'caracas-venezuela', 'bogota-colombia']
-    recomended: true
+    recomended: "★ ¡Mejor precio!"
     scholarship: "Trabajo Garantizado"
     payment_time: "Consigue un trabajo dentro de los 9 meses posteriores a la graduación o te devolvemos tu dinero"
     price: "USD $4,000"
@@ -264,7 +274,8 @@ part_time:
 
   - slug: 'latam-career-support-ds-cs'
     academies: ['buenosaires-argentina', 'caracas-venezuela', 'bogota-colombia', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
-    recomended: false
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
     scholarship: "Programa de Ciencia de Datos + Apoyo Profesional"
     payment_time: "Te ayudamos a construir tu perfil profesional"
     price: "USD $3,250"
@@ -278,7 +289,8 @@ part_time:
 
   - slug: 'latam-program-only-ml-pt'
     academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'bogota-colombia', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador', 'caracas-venezuela']
-    recomended: false
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
     scholarship: "Solo Programa de Machine Learning"
     payment_time: "Enfócate en aprender machine learning. Paga por adelantado."
     price: "USD $2,500"

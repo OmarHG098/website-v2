@@ -117,12 +117,14 @@ const Apply = (props) => {
         .map((l) => l.node)
         .sort((a, b) => {
           // First, sort by availability (both in-person and online first)
-          const aHasBoth = a.online_available === true && a.in_person_available === true;
-          const bHasBoth = b.online_available === true && b.in_person_available === true;
-          
+          const aHasBoth =
+            a.online_available === true && a.in_person_available === true;
+          const bHasBoth =
+            b.online_available === true && b.in_person_available === true;
+
           if (aHasBoth && !bHasBoth) return -1;
           if (!aHasBoth && bHasBoth) return 1;
-          
+
           // If both have same availability, sort by position
           return a.meta_info.position > b.meta_info.position ? 1 : -1;
         })
