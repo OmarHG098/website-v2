@@ -754,6 +754,28 @@ export const Spinner = styled.div`
   }
 `;
 
+
+export const PhoneText = styled.p`
+  text-decoration: none;
+  text-align: center;
+  margin-top: 6px;
+  font-size: 15px;
+  
+  @media ${Break.xs} {
+    font-size: 12px;
+  }
+`;
+
+export const PhoneTextDesktop = styled.p`
+  text-decoration: none;
+  text-align: right;
+  margin-top: 3px;
+  margin-right: 10px;
+  font-size: 15px;
+  
+  @media ${Break.xs} {
+    font-size: 12px;
+
 export const CarouselContainer = styled.div`
   .slick-slide {
     padding: ${(props) => props.slidePadding || "0 8px"};
@@ -790,5 +812,6 @@ export const CarouselContainer = styled.div`
     &:hover {
       opacity: ${(props) => props.arrowHoverOpacity || "0.8"};
     }
+
   }
 `;
