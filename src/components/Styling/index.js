@@ -754,6 +754,7 @@ export const Spinner = styled.div`
   }
 `;
 
+
 export const PhoneText = styled.p`
   text-decoration: none;
   text-align: center;
@@ -774,5 +775,43 @@ export const PhoneTextDesktop = styled.p`
   
   @media ${Break.xs} {
     font-size: 12px;
+
+export const CarouselContainer = styled.div`
+  .slick-slide {
+    padding: ${(props) => props.slidePadding || "0 8px"};
+  }
+  .slick-track {
+    margin-left: ${(props) => props.trackMargin || "0"};
+  }
+  .slick-list {
+    margin: ${(props) => props.listMargin || "0 -8px"};
+  }
+  .slick-slide > div {
+    display: flex;
+    flex-direction: ${(props) => props.slideDirection || "column"};
+    align-items: ${(props) => props.slideAlignment || "center"};
+    height: ${(props) => props.slideHeight || "auto"};
+    min-height: ${(props) => props.slideMinHeight || "100%"};
+  }
+  .slick-slide .button-container {
+    margin-top: ${(props) => props.buttonMarginTop || "24px"};
+    display: flex;
+    justify-content: ${(props) => props.buttonJustify || "center"};
+    width: ${(props) => props.buttonWidth || "100%"};
+  }
+
+  /* Optional carousel navigation styling */
+  .slick-dots {
+    margin-top: ${(props) => props.dotsMarginTop || "20px"};
+  }
+
+  .slick-arrow {
+    opacity: ${(props) => props.arrowOpacity || "1"};
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: ${(props) => props.arrowHoverOpacity || "0.8"};
+    }
+
   }
 `;
