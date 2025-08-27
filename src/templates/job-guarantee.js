@@ -505,17 +505,13 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         session={session}
       />
 
-
       {/* Programs: 4. Job Guarantee Available for our top tech programs */}
       <ChooseYourProgram
         id="choose-program"
         lang={pageContext.lang}
         programs={data.allChooseYourProgramYaml.edges[0].node.programs.filter(
           (p) => {
-            const linkSlug = p.link
-              ?.split("/")
-              .filter(Boolean)
-              .pop();
+            const linkSlug = p.link?.split("/").filter(Boolean).pop();
             return jobGuaranteeSlugs.includes(linkSlug);
           }
         )}
