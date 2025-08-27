@@ -277,7 +277,11 @@ const Location = ({ data, pageContext, yml }) => {
           heading: yml.two_columns?.heading,
           sub_heading: yml.two_columns?.sub_heading,
           bullets: yml.two_columns?.bullets,
-          content: yml.two_columns?.content,
+          content:
+            yml.two_columns?.content ||
+            (yml.two_columns?.paragraph
+              ? { text: yml.two_columns?.paragraph }
+              : undefined),
           button: yml.two_columns?.button,
         }}
         proportions={yml.two_columns?.proportions}
@@ -546,6 +550,9 @@ export const query = graphql`
               items {
                 text
               }
+            }
+            content {
+              text
             }
           }
           two_columns_rigo {

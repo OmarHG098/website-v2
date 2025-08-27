@@ -28,9 +28,12 @@ header:
 badges:
   title: ""
   paragraph: |
-    4Geeks Academy is a globally recognized coding bootcamp where future-ready developers grow and thrive.
-    Licensed by the Florida Department of Education, we’ve been ranked as one of the top 5 coding bootcamps in the United States by SwitchUp and among the top 10 nationwide by Newsweek.
-    At 4Geeks, we’re more than a school—we’re a community built to equip developers with the skills needed to succeed in the AI era.
+
+divider:
+  heading:
+    text: "4Geeks Academy is a globally recognized coding bootcamp where future-ready developers grow and thrive. Licensed by the Florida Department of Education, we’ve been ranked as one of the top 5 coding bootcamps in the United States by SwitchUp and among the top 10 nationwide by Newsweek. At 4Geeks, we’re more than a school—we’re a community built to equip developers with the skills needed to succeed in the AI era."
+    font_size: ["34px", "34px", "34px", "28px", "26px"] # [xl, lg, md, sm, xs]
+    style: '{ "color": "#FFFFFF" }'
 
 news:
   title: "4Geeks Academy Dallas has been reviewed in:"
@@ -100,6 +103,9 @@ two_columns:
       - text: "Build practical, job-ready skills through project-based learning"
       - text: "Explore the tools and workflows used in today’s tech careers"
       - text: "Get expert coaching tailored to Dallas’s evolving job market"
+
+  content:
+    text: "Watch Alissa explain how 4Geeks empowers learners in Dallas."
 
 # Two Columns - Rigo
 two_columns_rigo:

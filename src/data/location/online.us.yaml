@@ -50,11 +50,12 @@ custom_bar:
 badges:
   title: ""
   paragraph: |
-    4Geeks Academy is a globally recognized coding bootcamp where future-ready developers grow and thrive. 
-  
-    Licensed by the Florida Department of Education, we’ve been ranked as one of the top 5 coding bootcamps in the United States by SwitchUp and among the top 10 nationwide by Newsweek. 
-    
-    At 4Geeks, we’re more than a school—we’re a community built to equip developers with the skills needed to succeed in the AI era.
+
+divider:
+  heading:
+    text: "4Geeks Academy is a globally recognized coding bootcamp where future-ready developers grow and thrive. Licensed by the Florida Department of Education, we’ve been ranked as one of the top 5 coding bootcamps in the United States by SwitchUp and among the top 10 nationwide by Newsweek. At 4Geeks, we’re more than a school—we’re a community built to equip developers with the skills needed to succeed in the AI era."
+    font_size: ["34px", "34px", "34px", "28px", "26px"] # [xl, lg, md, sm, xs]
+    style: '{ "color": "#FFFFFF" }'
 
 news:
   title: "4Geeks Academy in the news..."
@@ -111,6 +112,9 @@ two_columns:
     - text: "Learn AI-aligned skills through guided, live instruction"
     - text: "Work on practical projects to build real confidence"
     - text: "Get expert career support tailored to your location and goals"
+
+  content:
+    text: "Watch Alissa explain why 4Geeks is a great option for learners across the U.S."
 
 # Two Columns - Rigo
 two_columns_rigo:

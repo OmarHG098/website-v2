@@ -30,10 +30,7 @@ badges:
   # NOTE: If you want to break the text into many lines avoid using double quotes
   # use the pipe operator ' | ' instead, like the example below
   paragraph: |
-    4Geeks Academy is a globally recognized coding bootcamp where future-ready developers grow and thrive.
-
-    Licensed by the Florida Department of Education, we've been ranked as one of the top 5 coding bootcamps in the United States by SwitchUp and among the top 10 nationwide by Newsweek.
-    At 4Geeks, we're more than a school—we're a community built to equip developers with the skills needed to succeed in the AI era.
+ 
 
 # Optional divider section that can be added after badges
 divider:
@@ -113,7 +110,8 @@ two_columns:
       - text: "Learn industry-relevant tools used by Atlanta employers"
       - text: "Build real-world projects to showcase your development skills"
       - text: "Get personalized coaching to navigate Atlanta’s tech job market"
-  paragraph: "Hear from Alissa on how 4Geeks helps Atlanta students thrive in tech."
+  content:
+    text: "Hear from Alissa on how 4Geeks helps Atlanta students thrive in tech."
 
 # Two Columns - Rigo
 two_columns_rigo:
