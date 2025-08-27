@@ -809,7 +809,7 @@ const PricesAndPayment = (props) => {
               gridGap="32px 0px"
               className="inner-container"
             >
-             {/* {availablePlans.some((plan) => plan.price) && (
+              {/* {availablePlans.some((plan) => plan.price) && (
                 <Div
                   className="job-guarantee"
                   padding="8px"
