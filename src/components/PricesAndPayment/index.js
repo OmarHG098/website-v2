@@ -1,4 +1,11 @@
-import React, { useState, useContext, useEffect, useRef, useMemo, useCallback } from "react";
+import React, {
+  useState,
+  useContext,
+  useEffect,
+  useRef,
+  useMemo,
+  useCallback,
+} from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Icon from "../Icon";
 import { Link } from "../Styling/index";
@@ -67,11 +74,7 @@ const LoadingSpinner = () => (
   </Div>
 );
 
-const PaymentOptionCard = ({
-  option,
-  selectedPlan,
-  setSelectedPlan,
-}) => {
+const PaymentOptionCard = ({ option, selectedPlan, setSelectedPlan }) => {
   return (
     <Div
       border="1px solid #E5E5E5"
@@ -561,7 +564,9 @@ const FinancialOptionsCard = ({
 
   // Get currently selected option or default to first one
   const currentOption = useMemo(
-    () => paymentOptions.find((opt) => opt.id === selectedPlan) || paymentOptions[0],
+    () =>
+      paymentOptions.find((opt) => opt.id === selectedPlan) ||
+      paymentOptions[0],
     [paymentOptions, selectedPlan]
   );
 
