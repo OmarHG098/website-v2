@@ -74,6 +74,31 @@ const Apply = (props) => {
       value: node.meta_info.bc_slug,
     }));
 
+  // Filter programs based on selected location
+  const filteredPrograms = React.useMemo(() => {
+    // Define course restrictions - full-stack-ft only available in Dallas and Miami
+    const courseLocationRestrictions = {
+      "full-stack-ft": ["dallas-usa", "downtown-miami"],
+    };
+
+    return programs.filter((program) => {
+      // If no location is selected, show all programs except restricted ones
+      if (!formData.location.value) {
+        return !courseLocationRestrictions[program.value];
+      }
+
+      // Check if this program has location restrictions
+      const restrictedLocations = courseLocationRestrictions[program.value];
+      if (restrictedLocations) {
+        // Only show if current location is in the allowed list
+        return restrictedLocations.includes(formData.location.value);
+      }
+
+      // No restrictions, show the program
+      return true;
+    });
+  }, [programs, formData.location.value]);
+
   const [regionVal, setRegionVal] = useState(null);
   const [showPhoneWarning, setShowPhoneWarning] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -90,16 +115,26 @@ const Apply = (props) => {
     () =>
       data.allLocationYaml.edges
         .map((l) => l.node)
-        .sort((a, b) => (a.meta_info.position > b.meta_info.position ? 1 : -1))
+        .sort((a, b) => {
+          // First, sort by availability (both in-person and online first)
+          const aHasBoth =
+            a.online_available === true && a.in_person_available === true;
+          const bHasBoth =
+            b.online_available === true && b.in_person_available === true;
+
+          if (aHasBoth && !bHasBoth) return -1;
+          if (!aHasBoth && bHasBoth) return 1;
+
+          // If both have same availability, sort by position
+          return a.meta_info.position > b.meta_info.position ? 1 : -1;
+        })
         .map((m) => ({
           label:
             m.name +
             " " +
-            (m.online_available == false
-              ? ""
-              : m.in_person_available == true
+            (m.online_available == true && m.in_person_available == true
               ? trans[pageContext.lang]["(In-person and from home available)"]
-              : trans[pageContext.lang]["(From home until further notice)"]),
+              : ""),
           value: m.active_campaign_location_slug,
           region: m.meta_info.region,
           dialCode: m.meta_info.dialCode,
@@ -139,6 +174,28 @@ const Apply = (props) => {
     }
   }, [formData.location.value, locations, pageContext.lang]);
 
+  // Clear course selection if current course is not available for selected location
+  React.useEffect(() => {
+    if (formData.location.value && formData.course.value) {
+      const courseLocationRestrictions = {
+        "full-stack-ft": ["dallas-usa", "downtown-miami"],
+      };
+
+      const restrictedLocations =
+        courseLocationRestrictions[formData.course.value];
+      if (
+        restrictedLocations &&
+        !restrictedLocations.includes(formData.location.value)
+      ) {
+        // Clear the course selection if it's not available for the current location
+        setVal((prev) => ({
+          ...prev,
+          course: { value: null, valid: false },
+        }));
+      }
+    }
+  }, [formData.location.value, formData.course.value]);
+
   React.useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
 
@@ -166,8 +223,32 @@ const Apply = (props) => {
     // Pre-fill the course
     let _course = urlParams.get("course");
     if (!_course && props.location.state) _course = props.location.state.course;
-    if (typeof _course === "string")
-      _course = programs.find((p) => p.value === _course);
+    if (typeof _course === "string") {
+      // Find the course in the original programs array
+      const foundCourse = programs.find((p) => p.value === _course);
+
+      // If we found the course, check if it's available for the selected location
+      if (foundCourse) {
+        const courseLocationRestrictions = {
+          "full-stack-ft": ["dallas-usa", "downtown-miami"],
+        };
+
+        const restrictedLocations =
+          courseLocationRestrictions[foundCourse.value];
+        if (restrictedLocations) {
+          // If the course has restrictions, only set it if the location is allowed
+          if (_location && restrictedLocations.includes(_location)) {
+            _course = foundCourse;
+          } else {
+            _course = null; // Don't pre-fill restricted courses if location doesn't match
+          }
+        } else {
+          _course = foundCourse; // No restrictions, use the course
+        }
+      } else {
+        _course = null;
+      }
+    }
 
     // Pre-fill the utm_url
     let _utm_url = undefined;
@@ -561,7 +642,7 @@ const Apply = (props) => {
             >
               <SelectRaw
                 bgColor={Colors.white}
-                options={programs}
+                options={filteredPrograms}
                 value={formData.course.value || ""}
                 defaultValue={formData.course.value}
                 placeholder={yml.left.course_title.open}

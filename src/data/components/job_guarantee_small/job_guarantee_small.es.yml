@@ -37,5 +37,6 @@ icons:
   - icon: "hands-w-purple"
     title: Nos comprometemos con tu carrera.
 link:
-  url: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf
-  label: Condiciones que aplican
+  url: /es/trabajo-garantizado
+  label: Consulta los Detalles Completos Aquí
+text: "*Las condiciones varían según tu estado en EE. UU."

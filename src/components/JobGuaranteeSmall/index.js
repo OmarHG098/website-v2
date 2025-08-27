@@ -75,6 +75,16 @@ const JobGuaranteeSmall = ({ content, customTitle }) => {
           </Anchor>
         </Paragraph>
       )}
+      {content.text && (
+        <Paragraph
+          margin="15px 0 0 0"
+          fontSize="14px"
+          color={Colors.black}
+          style={{ textAlign: "center", fontStyle: "italic" }}
+        >
+          {content.text}
+        </Paragraph>
+      )}
     </Div>
   );
 };

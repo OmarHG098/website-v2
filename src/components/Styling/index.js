@@ -68,6 +68,7 @@ export const Colors = {
   red: "red",
   lightRed: "#ffcdc9",
   whitePink: "#FFF1D1",
+  pink: "#EB5757",
   shadow: "0px 0px 16px rgba(0, 0, 0, 0.15)",
 };
 
@@ -291,6 +292,24 @@ const StyledImageV2 = styled.div`
 `;
 export const ImgV2 = React.memo(StyledImageV2);
 
+// Cropped iframe to mask third-party UI (e.g., VideoAsk controls/banners)
+export const MaskedIframe = styled.iframe`
+  border: none;
+  width: 100%;
+  height: 120%;
+  transform: translateY(-10%);
+  border-radius: 0;
+
+  @media (max-width: 425px) {
+    height: 145%;
+    transform: translateY(-16%);
+  }
+  @media (max-width: 390px) {
+    height: 155%;
+    transform: translateY(-18%);
+  }
+`;
+
 export const BackgroundSection = ({
   id,
   children,
@@ -437,7 +456,7 @@ const getVariant = (props) => ({
   },
   full: {
     border: "none",
-    background: props.color,
+    background: props.background || props.color,
     color: props.textColor || "white",
   },
   empty: {
@@ -533,12 +552,16 @@ export const Button = styled(SmartButton)`
   }}
 
   &:hover {
-    background-color: ${(props) =>
-      props.colorHover ||
-      (props.variant === "outline" ? props.color : props.color)};
-    color: ${(props) =>
-      props.colorHoverText ||
-      (props.variant === "outline" ? "white" : props.textColor || "white")};
+    ${(props) =>
+      props.variant === "outline"
+        ? css`
+            background-color: ${props.colorHover || props.color};
+            color: ${props.colorHoverText || "white"};
+          `
+        : css`
+            ${props.colorHover ? `background-color: ${props.colorHover};` : ""}
+            ${props.colorHoverText ? `color: ${props.colorHoverText};` : ""}
+          `}
   }
   @media ${Devices.xxs} {
     padding: ${(props) => props.padding_xxs};
@@ -729,5 +752,44 @@ export const Spinner = styled.div`
     to {
       transform: rotate(360deg);
     }
+  }
+`;
+
+export const OfferTag = styled.div`
+  position: absolute;
+  top: -12px;
+  right: 16px;
+  background: ${Colors.pink};
+  color: ${Colors.white};
+
+  @media ${Devices.tablet} {
+    right: 100px;
+  }
+  @media ${Devices.md} {
+    right: 100px;
+  }
+  padding: 4px 24px;
+  border-radius: 4px;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 2;
+  visibility: ${props => props.isHidden ? 'hidden' : 'visible'};
+  pointer-events: ${props => props.isHidden ? 'none' : 'auto'};
+
+  &:before {
+    content: "🔥";
+    font-size: 16px;
+  }
+
+  @media ${Devices.tablet} {
+    font-size: 12px;
+    padding: 3px 10px;
+    top: -10px;
+    right: 45px;
   }
 `;
