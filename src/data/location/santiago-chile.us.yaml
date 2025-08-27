@@ -21,13 +21,13 @@ meta_info:
   # for example: for this location, only show cohorts starting with usa-xx-spanish
   cohort_include_regex: []
   cohort_exclude_regex: []
-  home_video: "https://www.videoask.com/fyq2h2hvx"
+  home_video: "https://www.videoask.com/frhjxdk8z"
 
 seo_title: "Coding Bootcamp Santiago, Chile with Job Guarantee"
 header:
   tagline: "4Geeks Academy in Santiago de Chile"
   sub_header: "All programs are taught "
-  sub_header_highlighted: "Online or Hybrid."
+  sub_header_highlighted: "Online"
   paragraph: "Chile is positioned as one of the countries with the highest digital growth in the coming years, and particularly in Santiago the trend of bootcamps has been fostered in recent years, among them is 4GeeksAcademy. We have become a great study opportunity for many Chileans and foreigners who want to change their lives and learn about web development."
   image: "../../../static/images/locations/santiago-home.png"
   alt: ""
@@ -51,7 +51,7 @@ custom_bar:
 
 info_box:
   heading: "Find us in Santiago de Chile"
-  address: "Av. Manquehue Sur 350, Oficina 110, Las Condes"
+  address: "Av. Manquehue Sur 350, Oficina 110, Las Condes (not open to the public)."
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1469.1601939813802!2d-70.56719882328042!3d-33.41054249403315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cfff900b7a6b%3A0x37af5bee84731bcc!2s4Geeks%20Academy%20Chile!5e0!3m2!1ses-419!2scl!4v1621011176304!5m2!1ses-419!2scl"
   contact_heading: "Contacts"
   whatsapp: "+56 9 7284 8039"
@@ -167,7 +167,7 @@ two_columns_rigo:
 
 active_campaign_location_slug: "santiago-chile"
 breathecode_location_slug: "santiago-chile"
-in_person_available: true # important to accept in-person applicants
+in_person_available: false # important to accept in-person applicants
 
 consents:
   - slug: "gdpr_consent"
@@ -191,7 +191,7 @@ name: "Chile"
 latitude: "-33.408837"
 longitude: "-70.567958"
 phone: "+56 (9) 7284 8039"
-address: "Av. Manquehue Sur 350, Oficina 110, Las Condes"
+address: "Av. Manquehue Sur 350, Oficina 110, Las Condes (not open to the public)."
 zip_code: ""
 state: ""
 country: "Chile"

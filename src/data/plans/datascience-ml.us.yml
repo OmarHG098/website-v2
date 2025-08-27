@@ -2,7 +2,7 @@ full_time:
 #USA 
   - slug: 'plan-4'
     academies: ['downtown-miami', 'orlando']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Full Payment"
     payment_time: "Pay today"
     price: "$10,999"
@@ -17,7 +17,8 @@ full_time:
 
   - slug: 'plan-1'
     academies: ['downtown-miami', 'orlando']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Scholarship"
     payment_time: "Pay today"
     price: "$4999"
@@ -31,7 +32,8 @@ full_time:
 
   - slug: 'plan-2'
     academies: ['downtown-miami', 'orlando']
-    recomended: false
+    recomended: "Low monthly payments"
+    recommended_color: "veryLightBlue"
     scholarship: "Financed"
     payment_time: "24 months payment"
     price: "$310"
@@ -46,7 +48,7 @@ part_time:
 
 ## USA Part-Time 
   - slug: 'plan-4'
-    recomended: true
+    recomended: "★ Best Deal!"
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
     scholarship: "Full Payment"
     payment_time: "Pay today"
@@ -63,7 +65,8 @@ part_time:
 
   - slug: 'plan-1'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Scholarship"
     payment_time: "Full or partial funding  if you qualify"
     price: "$7,999"
@@ -76,7 +79,8 @@ part_time:
 
   - slug: 'plan-2'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
-    recomended: false
+    recomended: "Low monthly payments"
+    recommended_color: "veryLightBlue"
     scholarship: "Financed"
     payment_time: "Pay in 3, 4 or 5 years"
     price: "~$100p/m"
@@ -94,7 +98,7 @@ part_time:
 ## Spain & Europe
   - slug: 'spain-upfront-ds-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€5,200*"
@@ -110,7 +114,8 @@ part_time:
 
   - slug: 'spain-scholarships-ds-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Financed. From €200* per month"
     payment_time: "Apply for a scholarship (limited scholarship slots available)."
     price: "€5,409*"
@@ -127,7 +132,7 @@ part_time:
 
   - slug: 'north-europe-upfront-ds-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€5,200*"
@@ -143,7 +148,8 @@ part_time:
 
   - slug: 'north-europe-scholarships-ds-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Financed. From €200* per month"
     payment_time: "Apply for a scholarship (limited scholarship slots available)."
     price: "€5,409*"
@@ -159,7 +165,7 @@ part_time:
 
   - slug: 'south-europe-upfront-ds-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€5,200*"
@@ -175,7 +181,8 @@ part_time:
 
   - slug: 'south-europe-scholarships-ds-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Financed. From €200* per month"
     payment_time: "Apply for a scholarship (limited scholarship slots available)."
     price: "€5,409*"
@@ -191,7 +198,7 @@ part_time:
 
   - slug: 'chile-ds-gf-pt'
     academies: ['santiago-chile']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Program + Career Support"
     payment_time: "Pay Upfront"
     price: "3.375.000 CLP*"
@@ -208,7 +215,8 @@ part_time:
 
   - slug: 'chile-ds-solo-pt'
     academies: ['santiago-chile']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Data Science Program Only"
     payment_time: "Focus on gaining skills. Pay upfront."
     price: "3.750.000 CLP*"
@@ -222,7 +230,8 @@ part_time:
 
   - slug: 'chile-ds-financed-pt'
     academies: ['santiago-chile']
-    recomended: false
+    recomended: "Low monthly payments"
+    recommended_color: "veryLightBlue"
     scholarship: "Financed"
     payment_time: "Program + Career Support. Pay monthly"
     price: "~220.500 CLP per month"
@@ -237,7 +246,7 @@ part_time:
 ##  LATAM
   - slug: 'latam-upfront-ds-cs'
     academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Data Science program + Career Support"
     payment_time: "We help you build your professional profile"
     price: "USD $3.600"
@@ -253,7 +262,7 @@ part_time:
 
   - slug: 'colombia-upfront-ds-cs'
     academies: ['bogota-colombia']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Data Science program + Career Support"
     payment_time: "We help you build your professional profile"
     price: "USD $3.600"
@@ -301,7 +310,7 @@ part_time:
 
   - slug: 'venezuela-full-payment-ds-pt'
     academies: ['caracas-venezuela']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Pay upfront"
     payment_time: "Pay early and $250 off"
     price: "$2.400*"

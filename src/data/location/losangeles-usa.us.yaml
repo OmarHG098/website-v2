@@ -1,5 +1,5 @@
 meta_info:
-  slug: "coding-bootcamp-losangeles"
+  slug: "coding-bootcamp-los-angeles"
   title: "Los Angeles Coding Bootcamp"
   position: 1
   description: "Join 4Geeks Academy’s Los Angeles Coding Bootcamp with a Job Guarantee. Learn coding, get real-world experience, and land your dream job."
@@ -14,13 +14,13 @@ meta_info:
   # for example: for this location, only show cohorts starting with usa-xx-spanish
   cohort_include_regex: ["miami"]
   cohort_exclude_regex: ['usa-\d{1,10}-spanish']
-  home_video: "https://www.videoask.com/fyq2h2hvx"
+  home_video: "https://www.videoask.com/frhjxdk8z"
 
-seo_title: "Los Angeles Coding Bootcamp with Job Guarantee"
+seo_title: "Coding Bootcamp in Los Angeles with a Job Guarantee"
 header:
-  tagline: "4Geeks Academy in Los Angeles"
-  sub_header: "All programs are taught "
-  sub_header_highlighted: "Online"
+  tagline: "4Geeks Academy: Launch an AI-Ready Tech Career in Los Angeles"
+  sub_header: "Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist—with skills built for the AI era."
+  sub_header_highlighted: "All programs are taught online with live support."
   paragraph: ""
   image: "../../../static/images/locations/california-home.png"
   alt: "4Geeks Academy live coding bootcamp in Los Angeles, Texas"
@@ -28,16 +28,12 @@ header:
 badges:
   title: ""
   paragraph: |
-    4Geeks Academy is the place where developers grow and thrive.
-  
-    We are licensed by the USA F. Dep. of Education.
-      
-    Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Los Angeles according to SwitchUp.
-
-    4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
-
-
-    A community built for developers.
+   
+divider:
+  heading:
+    text: "4Geeks Academy is a globally recognized coding bootcamp where future-ready developers grow and thrive. Licensed by the Florida Department of Education, we’ve been ranked as one of the top 5 coding bootcamps in the United States by SwitchUp and among the top 10 nationwide by Newsweek. At 4Geeks, we’re more than a school—we’re a community built to equip developers with the skills needed to succeed in the AI era."
+    font_size: ["34px", "34px", "34px", "28px", "26px"] # [xl, lg, md, sm, xs]
+    style: '{ "color": "#FFFFFF" }'
 news:
   title: "4Geeks Academy Los Angeles has been reviewed in:"
 upcoming:
@@ -69,7 +65,7 @@ info_box:
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
 images_box:
-  heading: "What you should know about this location: "
+  heading: "Why Los Angeles Is a Smart Place to Launch Your Tech Career"
   content: "LA boasts a flourishing tech ecosystem and a dynamic startup community. The city has witnessed remarkable expansion in its tech industry, where coding and programming have become pivotal. Coding bootcamps, gaining traction among individuals from diverse backgrounds, have become increasingly popular in the region."
   images:
     - path: "../../../static/images/locations/losangeles-new.png"
@@ -92,10 +88,10 @@ two_columns:
     shadow: true
   video: "EcqasocRKHo"
   heading:
-    text: "Master Your Coding Journey in LA with 4Geeks Academy's Unique Support"
+    text: "Step Into LA’s Tech Scene"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "4Geeks Academy goes beyond a typical coding bootcamp. We offer lifetime mentorship from industry professionals, a focused code curriculum, and flexible learning schedules. This unique combination allows you to master the skills needed to succeed as a full-stack developer while balancing your life."
+    text: "At 4Geeks Academy, we equip you with the skills, mindset, and support to succeed in Los Angeles’s competitive tech industry. Our approach combines real-world projects with unlimited mentorship and career guidance."
     font_size: ["18px", "18px", "18px", "18px", "18px"]
   button:
     text: "APPLY NOW"
@@ -104,9 +100,12 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "Job guarantee ensuring career empowerment"
-    - text: "Courses dedicated to enhancing programming skills and mastering coding"
-    - text: "Professional guidance maximizing opportunities within Los Angeles' tech industry"
+    - text: "Learn in an environment focused on real-world application"
+    - text: "Build a portfolio that reflects your potential and growth"
+    - text: "Receive expert coaching tailored to LA’s job market"
+
+  content:
+    text: "Hear Alissa explain how 4Geeks helps learners succeed in LA’s tech space."
 
 # Two Columns - Rigo
 two_columns_rigo:
@@ -157,8 +156,8 @@ two_columns_rigo:
  
 active_campaign_location_slug: "losangeles-usa"
 breathecode_location_slug: "losangeles-usa"
-in_person_available: true # important to accept in-person applicants
-online_available: false # important to accept online-only applicants
+in_person_available: false # important to accept in-person applicants
+online_available: true # important to accept online-only applicants
 
 consents:
   - slug: "gdpr_consent"

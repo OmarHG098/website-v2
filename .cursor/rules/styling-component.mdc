@@ -1,0 +1,177 @@
+---
+description: Centralized styling system that defines component architecture, prevents duplication, and ensures consistent styling patterns across the application. Includes guidelines for component organization, variant handling, and dependency management.
+globs: 
+alwaysApply: false
+---
+# Rule: Styling Components and Structure
+Type: Workspace Rule
+Description: Centralized styling system that defines component architecture, prevents duplication, and ensures consistent styling patterns across the application. Includes guidelines for component organization, variant handling, and dependency management.
+
+**Purpose:**
+This document defines how to handle styling components, their structure, and reusability across the project to ensure consistency and maintainability.
+
+---
+
+## 1. Component Location and Organization
+
+### Styling Component Directory
+- **Purpose:** Centralize all reusable styling components.
+- **Scope:** `/src/components/Styling/`
+- **Guidelines:** 
+  - All shared styling components must be defined in the Styling directory
+  - Never duplicate styling components in specific feature components
+  - Export all components from `index.js`
+- **Examples:**
+  - ✅ Define ButtonText in `/src/components/Styling/index.js`
+  - ❌ Define ButtonText in `/src/components/NavbarMobile/index.js`
+- **Enforcement:** Code review, linting
+- **Version:** v1.0, 2024-03-21
+
+---
+
+## 2. Available Styling Components
+
+### Current Component List
+The following components must be imported from Styling:
+- `Button`
+- `ButtonText`
+- `Link`
+- `Paragraph`
+- `H1`, `H2`, `H3`, `H4`, `H5`
+- `Span`
+- `Colors`
+- `Select`
+- `Input`
+- `Anchor`
+- `Img`
+- `ImgV2`
+- `RoundImage`
+- `BackgroundSection`
+- `StyledBackgroundSection`
+- `Small`
+- `Toggle`
+- `Tooltip`
+- `Spinner`
+
+Any new styling component must be added to this list after team review.
+
+---
+
+## 3. Code Structure Standards
+
+### Variant Handling
+- **Purpose:** Maintain consistent variant application across components
+- **Guidelines:** 
+  - Use object-based variant definitions
+  - Avoid if/else chains for variant styles
+  - Define variants as pure functions
+- **Example:**
+```javascript
+// ✅ Correct Implementation
+const getVariant = (props) => ({
+  outline: {
+    border: `1px solid ${props.color}`,
+    background: props.background || "initial",
+    color: props.color,
+  },
+  full: {
+    border: "none",
+    background: props.color,
+    color: props.textColor || "white",
+  },
+  empty: {
+    border: "none",
+    background: "none",
+    color: "#0097CD",
+    textTransform: "capitalize",
+  },
+});
+
+// ❌ Incorrect Implementation
+const applyVariantStyles = (variant, props) => {
+  if (variant === "outline") {
+    return {
+      border: `1px solid ${props.color}`,
+      background: props.background || "initial",
+      color: props.color,
+    };
+  } else if (variant === "full") {
+    // ...
+  }
+};
+```
+
+---
+
+## 4. Circular Dependencies
+
+### Avoid Circular Dependencies
+- **Purpose:** Prevent runtime errors and maintain clean architecture
+- **Guidelines:**
+  - Never import components from other component directories into Styling
+  - Use native HTML elements (h1, h2, h3, p, span, etc.) as base for styled components
+  - If you need to extend existing components, create a new standalone component
+- **Examples:**
+  - ✅ `styled.h3` instead of `styled(H3)`
+  - ❌ Importing H3 from Heading into Styling
+- **Enforcement:** ESLint rules, build-time checks
+- **Version:** v1.1, 2024-03-21
+
+---
+
+## 5. Component Props
+
+### Required Documentation
+- Each component must document its props
+- Include type definitions and default values
+- List all available variants
+
+### Example Props Documentation
+```javascript
+/**
+ * @prop {string} variant - Style variant ("outline" | "full" | "empty")
+ * @prop {string} color - Primary color for the component
+ * @prop {string} [background] - Optional background color
+ * @prop {string} [textColor] - Optional text color, defaults to "white" for full variant
+ */
+```
+
+---
+
+## 6. Testing Requirements
+- Components must have unit tests
+- Test all variants and prop combinations
+- Ensure responsive behavior works as expected
+- Run `npm run test` before submitting changes
+
+---
+
+## 7. Migration Guidelines
+- Identify and migrate duplicate styling components to Styling directory
+- Update imports in affected components
+- Maintain backwards compatibility during transition
+- Document breaking changes
+
+---
+
+## 8. Review Process
+- All new styling components require team review
+- Changes to existing components need approval
+- Document performance implications
+- Update component list in this rule
+
+---
+
+## 9. Enforcement
+- Use ESLint rules to prevent style component duplication
+- Implement pre-commit hooks for style validation
+- Regular codebase audits
+- CI/CD pipeline checks
+
+---
+
+**Note:**
+- Keep this document updated as new components are added
+- Review and update version number with significant changes
+- Ensure all team members understand and follow these guidelines
+- Link this file in the project's contributing documentation

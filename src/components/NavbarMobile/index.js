@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { Devices } from "../Responsive";
 import { SessionContext } from "../../session";
 import { H3, H4, Paragraph } from "../Heading";
-import { Colors, Button, Anchor, Link } from "../Styling";
+import { Colors, Button, Anchor, Link, ButtonText } from "../Styling";
 import { Div, Grid } from "../Sections";
 import Icon from "../Icon";
 import { locByLanguage } from "../../actions";
@@ -19,7 +19,7 @@ const BurgerIcon = (props) => (
     onClick={props.onClick}
     viewBox="0 0 28 23"
     fill="none"
-    xmlns="https:://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"
   >
     <line
       x1="1"
@@ -339,7 +339,7 @@ const CampusMenu = ({ status, setStatus, menu }) => {
             menu[status.itemIndex].sub_menu.links.map((m, i) => (
               <Button
                 color={activeOpt.title === m.title ? Colors.black : Colors.gray}
-                width="33%"
+                width="25%"
                 borderBottom={
                   activeOpt.title === m.title
                     ? `5px solid ${Colors.blue}`
@@ -637,7 +637,7 @@ export const MegaMenu = ({
                                   return (
                                     <Link to={m.link} key={i}>
                                       <Div alignItems="baseline">
-                                        <H3
+                                        <ButtonText
                                           textAlign="left"
                                           width="fit-content"
                                           fontSize="15px"
@@ -646,7 +646,7 @@ export const MegaMenu = ({
                                           margin="10px 5px 0 0"
                                         >
                                           {m.text}
-                                        </H3>
+                                        </ButtonText>
                                         <Icon
                                           icon="arrow-right"
                                           color="#A4A4A4"

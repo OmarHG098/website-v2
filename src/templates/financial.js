@@ -407,7 +407,6 @@ export const query = graphql`
             scholarship
             payment_time
             price
-            job_guarantee_price
           }
           part_time {
             slug
@@ -416,7 +415,6 @@ export const query = graphql`
             payment_time
             price
             original_price
-            job_guarantee_price
           }
         }
       }

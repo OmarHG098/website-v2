@@ -19,8 +19,8 @@ meta_info:
 seo_title: "Bootcamp de Programación en Orlando"
 header:
   tagline: "4Geeks Academy en Orlando"
-  sub_header: "Todos los programas son enseñados "
-  sub_header_highlighted: "Online, Híbrida o En Persona."
+  sub_header: "¡Cónviertete en un Desarrollador Full-Stack en 20 semanas! "
+  sub_header_highlighted: "Todos los programas son enseñados Online. "
   paragraph: ""
   image: "../../../static/images/locations/orlando-header.png"
   alt: "4Geeks Academy modalidad online y presencial en Orlando, Florida"
@@ -43,13 +43,12 @@ custom_bar:
 
 badges:
   title: ""
-  paragraph: |
-    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. 
-    Estamos autorizados por el Departamento de Educación de Florida. 
-    Elegido como uno de los 35 mejores cursos de programacion del mundo y 
-    el mejor <a href="/es/curso-de-programacion-desde-cero">curso de programacion</a> en Orlando según SwitchUp. 
-    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
-    Una comunidad construida para desarrolladores.
+
+divider:
+  heading:
+    text: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida, y hemos sido reconocidos como uno de los 5 mejores bootcamps de codificación en los Estados Unidos por SwitchUp y entre los 10 mejores a nivel nacional por Newsweek. En 4Geeks, somos más que una escuela: somos una comunidad construida para equipar a los desarrolladores con las habilidades necesarias para tener éxito en la era de la IA."
+    font_size: ["34px", "34px", "34px", "28px", "26px"]
+    style: '{ "color": "#FFFFFF" }'
 news:
   title: "4Geeks Academy Orlando en las noticias..."
 upcoming:
@@ -58,7 +57,6 @@ upcoming:
 
 info_box:
   heading: "Encuéntranos en Orlando"
-  address: "450 S Orange Ave, Orlando, FL 32801"
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.0886003492096!2d-81.37933699999999!3d28.5370565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77b01bf992b61%3A0xaecd468d9c4f262c!2sCNL%20Center%20City%20Commons%2C%20450%20S%20Orange%20Ave%2C%20Orlando%2C%20FL%2032801%2C%20USA!5e0!3m2!1sen!2sve!4v1684182525637!5m2!1sen!2sve"
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
@@ -88,7 +86,7 @@ two_columns:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
     src: "/static/images/testimonials/allisa-testimonial.jpg"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  video: "EcqasocRKHo"
   heading:
     text: " Tu Sendero hacia la Tecnología con 4Geeks Academy en Orlando"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -105,6 +103,9 @@ two_columns:
     - text: "Plan de estudios adaptado para nutrir tus habilidades tecnológicas y crecimiento profesional"
     - text: "Cursos dirigidos por expertos que enfatizan el dominio práctico en codificación para aplicaciones reales"
     - text: "Enfoque centrado en la carrera profesional que te prepara para destacar en el competitivo mercado laboral"
+
+  content:
+    text: "Mira a Alissa explicar cómo 4Geeks ayuda a los estudiantes de Orlando a prosperar."
 
 # Two Columns - Rigo
 two_columns_rigo:
@@ -155,7 +156,7 @@ two_columns_rigo:
 
 active_campaign_location_slug: "orlando"
 breathecode_location_slug: "orlando"
-in_person_available: true # important to accept in-person applicants
+in_person_available: false # important to accept in-person applicants
 
 consents:
   - slug: "gdpr_consent"

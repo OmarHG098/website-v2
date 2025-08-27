@@ -80,7 +80,7 @@ two_column_left:
     text: "APLICAR AHORA"
     color: "white"
     background: "black"
-    hover_color: "white"
+    hover_color: "black"
     path: "/es/aplica"
 
 we_trust_section:

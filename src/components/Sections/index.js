@@ -766,6 +766,7 @@ export const Header = ({
   textAlign_tablet,
   display_mobile,
   fontSize_title,
+  fontSize_xxs,
   fontSizeTitle_tablet,
   fontFamily_title,
   fontSize_seo,
@@ -825,10 +826,12 @@ export const Header = ({
           </H1>
           <H2
             type="h2"
+            textAlign="center"
             textAlign_tablet={textAlign_tablet}
             padding="0 20px"
             padding_tablet={paddingTitle_tablet || paddingTitle || "0 20px"}
             fontSize={fontSize_title || "40px"}
+            fontSize_xxs={fontSize_xxs || "30px"}
             fontSize_tablet={fontSizeTitle_tablet || "50px"}
             lineHeight={lineHeight || "50px"}
             lineHeight_tablet={lineHeight_tablet || "60px"}

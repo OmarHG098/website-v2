@@ -43,18 +43,12 @@ custom_bar:
 
 badges:
   title: ""
-  # NOTE: If you want to break the text into many lines avoid using double quotes
-  # use the pipe operator ' | ' instead, like the example below
-  paragraph: |
-    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan.
 
-    Estamos autorizados por el Departamento de Educación de Florida.
-      
-    Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Atlanta según SwitchUp.
-
-    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.
-
-    Una comunidad construida para desarrolladores.
+divider:
+  heading:
+    text: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida, y hemos sido reconocidos como uno de los 5 mejores bootcamps de codificación en los Estados Unidos por SwitchUp y entre los 10 mejores a nivel nacional por Newsweek. En 4Geeks, somos más que una escuela: somos una comunidad construida para equipar a los desarrolladores con las habilidades necesarias para tener éxito en la era de la IA."
+    font_size: ["34px", "34px", "34px", "28px", "26px"]
+    style: '{ "color": "#FFFFFF" }'
 news:
   title: "4Geeks Academy Atlanta en las noticias..."
 upcoming:
@@ -69,7 +63,7 @@ two_columns:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
     src: "/static/images/testimonials/allisa-testimonial.jpg"
     shadow: true
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  video: "EcqasocRKHo"
   heading:
     text: "Aprende a programar desde Atlanta"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -165,8 +159,8 @@ images_box:
 
 active_campaign_location_slug: "atlanta-usa"
 breathecode_location_slug: "atlanta-usa"
-in_person_available: true # important to accept in-person applicants
-online_available: false # important to accept online-only applicants
+in_person_available: false # important to accept in-person applicants
+online_available: true # important to accept online-only applicants
 
 consents:
   - slug: "gdpr_consent"

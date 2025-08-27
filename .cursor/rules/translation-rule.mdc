@@ -1,0 +1,134 @@
+---
+description: Comprehensive translation guidelines ensuring consistent multilingual content across English (US) and Spanish (ES) pages, maintaining technical accuracy and tone while preserving component structure and relationships.
+globs: 
+alwaysApply: false
+---
+# Translation Rule for Landing Pages
+Type: Workspace Rule
+Description: Comprehensive translation guidelines ensuring consistent multilingual content across English (US) and Spanish (ES) pages, maintaining technical accuracy and tone while preserving component structure and relationships.
+
+**Purpose:**
+This rule ensures consistency and completeness in translations between English (US) and Spanish (ES) pages, maintaining a youthful tone while preserving technical accuracy.
+
+---
+
+## 1. File Structure
+- **Naming Convention:** `[page_name].us.yml` for English, `[page_name].es.yml` for Spanish
+- **Location:** Files requiring translation are primarily found in:
+  - `/src/data/course/`
+  - `/src/data/location/`
+  - `/src/data/page/`
+  - `/src/data/plans/`
+- **Excluded Directories:** Some directories do not require translations:
+  - `/src/data/landing/` (English-only content)
+- **Required Files:** Both `.us.yml` and `.es.yml` must exist for each translatable content
+
+## 2. Content Guidelines
+
+### Meta Information
+- **Character Limits:**
+  - Title: Max 60 characters
+  - Description: Max 160 characters
+  - Keywords: Max 200 characters
+- **URLs:** Keep slugs language-specific (e.g., "inicio" for Spanish, "index" for English)
+- **Redirects:** Include all necessary language-specific redirects
+
+### Language Style
+- **Tone:** Informal and direct
+  - ✅ Use "tú" form in Spanish (e.g., "Aprende a programar")
+  - ❌ Avoid "usted" form (e.g., "Aprenda a programar")
+- **Target Audience:** 18-25 year olds
+- **Technical Terms:** Keep consistent across languages
+  - Example: "bootcamp", "JavaScript", "Python" remain unchanged
+
+### Component Management Requirements
+- **Component Order:** Maintain identical component order between language versions
+- **Component Coverage:** 
+  - ✅ **Translate existing components:** All components present in the English version must have corresponding translations in Spanish
+  - ✅ **Add missing components:** If a component exists in English but not in Spanish, add it with proper translation
+  - ✅ **Remove outdated components:** If a component exists in Spanish but not in English, remove it from Spanish version
+  - ✅ **Preserve component structure:** Keep the same nested structure, properties, and formatting
+- **Component Types:**
+  - **Required Translation:** All text content, headings, descriptions, buttons, links
+  - **Keep Unchanged:** Technical identifiers (slugs, IDs), image paths, style properties, configuration values
+  - **Adapt Appropriately:** URLs should be language-specific (e.g., `/us/apply` → `/es/aplica`)
+
+## 3. Quality Control Process
+- **Pre-commit Checks:**
+  1. **Component Inventory:** Compare all components between US and ES versions
+  2. **Missing Components:** Identify and add any components present in US but missing in ES
+  3. **Outdated Components:** Remove any components present in ES but not in US
+  4. **Component Order:** Verify identical component order between versions
+  5. **Translation Quality:** Ensure all translatable content is properly translated
+  6. **Character Limits:** Check meta tag character limits
+  7. **Link Validation:** Ensure all links are working and language-appropriate
+  8. **YAML Syntax:** Validate YAML syntax in both files
+
+- **Testing:**
+  ```bash
+  npm run test  # Run after translation to validate content
+  npm run build # Execute only after successful test
+  ```
+
+## 4. Examples
+
+### Component Management
+✅ **Good - Complete Component Coverage:**
+```yaml
+# US Version
+header:
+  title: "Become a Cybersecurity Specialist"
+  paragraph: "Launch a high-paying career..."
+
+# ES Version (Complete Translation)
+header:
+  title: "Conviértete en un Especialista en Ciberseguridad"
+  paragraph: "Lanza una carrera bien pagada..."
+```
+
+❌ **Bad - Missing Component:**
+```yaml
+# US Version
+header:
+  title: "Become a Cybersecurity Specialist"
+  paragraph: "Launch a high-paying career..."
+overlaped:
+  heading: "Cybersecurity Specialists Are in High Demand"
+
+# ES Version (Missing overlaped section)
+header:
+  title: "Conviértete en un Especialista en Ciberseguridad"
+  paragraph: "Lanza una carrera bien pagada..."
+# Missing overlaped section!
+```
+
+### Meta Description
+✅ Good (Spanish):
+```yaml
+description: "El bootcamp #1 con más de 6,000 graduados y soporte profesional de por vida. Bootcamp en USA, España, Portugal, Alemania, Chile y Venezuela."
+```
+❌ Bad (Spanish):
+```yaml
+description: "El bootcamp número uno de programación con más de seis mil graduados y soporte profesional de por vida. Ofrecemos programas en los Estados Unidos, España, Portugal, Alemania, Chile y Venezuela con la mejor calidad."  # Too long
+```
+
+### Informal Tone
+✅ Good:
+```yaml
+sub_heading: "Queremos que te concentres en lo importante: aprender, crecer y lanzar tu carrera tech"
+```
+❌ Bad:
+```yaml
+sub_heading: "Deseamos que usted se concentre en lo importante: el aprendizaje, crecimiento y lanzamiento de su carrera tech"
+```
+
+## 5. Enforcement
+- Code review required for all translation changes
+- Automated tests must pass before merge
+- Build must complete successfully
+- Character count validation in CI/CD pipeline
+- Component comparison validation in CI/CD pipeline
+
+---
+
+**Version:** v1.2, 2024-03-21

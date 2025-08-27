@@ -28,12 +28,13 @@ meta_info:
     ]
   related_clusters: ["desarrollador-full-stack"]
   template: "course-fullstack"
-  duration: "P18W"  # 18 weeks duration in ISO 8601 format
+  duration: "P20W"  # 20 weeks duration in ISO 8601 format
+  job_guarantee: true
 
 apply_form:
   label: Full Stack Developer
 
-seo_title: "Desarrollador Full Stack"
+seo_title: "Desarrollador Full Stack - Part Time"
 header:
   title: "Full Stack Developer"
   image: "../../../static/images/bg/program-bg.png"
@@ -232,6 +233,7 @@ details:
   heading: DETALLES DEL PROGRAMA PART-TIME
   weeks: 18
   week_unit: "sem"
+  weeks_label: "semanas"
   sub_heading: "Proyectos de la vida real y exactamente lo que buscan las empresas"
   left_labels:
     description: "DESCRIPCION:"

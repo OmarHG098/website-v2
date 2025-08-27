@@ -1,7 +1,7 @@
 full_time: []
 part_time:
   - slug: 'plan-4'
-    recomended: true
+    recomended: "★ ¡Mejor precio!"
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     scholarship: "Pago completo"
     payment_time: "Paga hoy"
@@ -14,7 +14,8 @@ part_time:
 
   - slug: 'plan-2'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
-    recomended: false
+    recomended: "Pagos mensuales bajos"
+    recommended_color: "veryLightBlue"
     scholarship: "Financiado"
     payment_time: "Paga en 12 meses"
     price: "~$266 al mes"
@@ -28,7 +29,8 @@ part_time:
 
   - slug: 'plan-3'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
-    recomended: false
+    recomended: "Pagos mensuales bajos"
+    recommended_color: "veryLightBlue"
     scholarship: "Financiado"
     payment_time: "Paga en 24 meses"
     price: "~$145 al mes"
@@ -44,7 +46,7 @@ part_time:
 
   - slug: 'spain-upfront-ai-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
+    recomended: "★ ¡Mejor precio!"
     scholarship: "Pago completo"
     payment_time: "Paga hoy"
     price: "€3000*"
@@ -60,7 +62,7 @@ part_time:
 
   - slug: 'europe-upfront-ai-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany', 'lisbon-portugal','milan-italy','rome-italy']
-    recomended: true
+    recomended: "★ ¡Mejor precio!"
     scholarship: "Pago completo"
     payment_time: "Paga hoy"
     price: "€3000*"
@@ -78,7 +80,7 @@ part_time:
                        
   - slug: 'chile-ai-upfront'
     academies: ['santiago-chile']
-    recomended: true
+    recomended: "★ ¡Mejor precio!"
     scholarship: "Paga por Adelantado"
     payment_time: "Y obtén un descuento"
     price: "700.000 CLP*"
@@ -92,7 +94,8 @@ part_time:
 
   - slug: 'chile-financed-ai'
     academies: ['santiago-chile']
-    recomended: false
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
     scholarship: "Financiado"
     payment_time: "Pago en 12 meses"
     price: "Desde 58.000 CLP"
@@ -108,7 +111,7 @@ part_time:
 
   - slug: 'latam-upfront-ai'
     academies: ['montevideo-uruguay','bogota-colombia','caracas-venezuela',  'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
-    recomended: true
+    recomended: "★ ¡Mejor precio!"
     scholarship: "Paga por Adelantado y "
     payment_time: "ahorra $500"
     price: "USD $1.399"

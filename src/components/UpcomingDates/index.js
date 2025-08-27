@@ -50,7 +50,6 @@ const UpcomingDates = ({
               default_course
               course_slug
               name
-              duration
             }
             email_form_content {
               heading
@@ -67,6 +66,8 @@ const UpcomingDates = ({
               duration_part_time
               duration_full_time
               location_label
+              date
+              action_label
             }
             no_course_message
             footer {
@@ -77,6 +78,21 @@ const UpcomingDates = ({
             }
             fields {
               lang
+            }
+          }
+        }
+      }
+      allCourseYaml {
+        edges {
+          node {
+            fields {
+              file_name
+              lang
+            }
+            details {
+              weeks
+              week_unit
+              weeks_label
             }
           }
         }
@@ -115,6 +131,33 @@ const UpcomingDates = ({
   );
   if (content) content = content.node;
   else return null;
+
+  // Get course data to map durations dynamically
+  const courseData = dataQuery.allCourseYaml.edges;
+
+  // Helper function to get course duration from course files
+  const getCourseDuration = (courseSlug) => {
+    const course = courseData.find(({ node }) => {
+      const fileName = node.fields.file_name;
+      const fileLang = node.fields.lang;
+
+      // Extract the base name from the filename (remove .us.yaml or .es.yaml)
+      const baseName = fileName.split(".")[0];
+
+      return baseName === courseSlug && fileLang === lang;
+    });
+
+    if (course && course.node.details && course.node.details.weeks) {
+      const weeks = course.node.details.weeks;
+      const weeksLabel =
+        course.node.details.weeks_label ||
+        course.node.details.week_unit ||
+        "weeks";
+      return `${weeks} ${weeksLabel}`;
+    }
+
+    return null;
+  };
 
   const emailFormContent = content.email_form_content;
   const syllabusAlias = content.syllabus_alias;
@@ -167,7 +210,11 @@ const UpcomingDates = ({
         if (syllabus) {
           cohort.syllabus_version.name = syllabus.name;
           cohort.syllabus_version.courseSlug = syllabus.course_slug;
-          cohort.syllabus_version.duration = syllabus.duration;
+
+          // Get dynamic duration from course files
+          const dynamicDuration = getCourseDuration(syllabus.course_slug);
+          cohort.syllabus_version.duration =
+            dynamicDuration || syllabus.duration;
         }
       });
 
@@ -215,6 +262,11 @@ const UpcomingDates = ({
     }
   }, [session]);
   const buttonText = session?.location?.button.apply_button_text;
+
+  const isAliasLocation = (slug) => {
+    const mapped = session?.academyAliasDictionary?.[slug];
+    return Boolean(mapped && mapped !== slug);
+  };
 
   return (
     <GridContainer
@@ -297,371 +349,457 @@ const UpcomingDates = ({
             </Div>
           )}
         </Div>
-        {isLoading ? (
-          <Div margin="30px 0" justifyContent="center">
-            <Spinner />
-          </Div>
-        ) : (
-          <>
-            {Array.isArray(data.cohorts.filtered) &&
-            data.cohorts.filtered.length > 0 ? (
-              data.cohorts.filtered.map((cohort, i) => {
-                const loc = locations.find(
-                  ({ node }) =>
-                    node.breathecode_location_slug === cohort.academy.slug
-                );
-                return (
-                  i < 4 && (
-                    <Div
-                      key={i}
-                      flexDirection="column"
-                      flexDirection_tablet="row"
-                      style={{ borderBottom: "1px solid black" }}
-                      padding="30px 0"
-                      justifyContent="between"
-                    >
-                      <Div
-                        flexDirection_tablet="column"
-                        width_tablet="15%"
-                        alignItems="center"
-                        alignItems_tablet="start"
-                        margin="0 0 10px 0"
+        <Div flexDirection="column" alignItems="stretch" width="100%">
+          {isLoading ? (
+            <Div margin="30px 0" justifyContent="center">
+              <Spinner />
+            </Div>
+          ) : (
+            <>
+              {Array.isArray(data.cohorts.filtered) &&
+              data.cohorts.filtered.length > 0 ? (
+                <>
+                  {/* Header row for consistent alignment */}
+                  <Div
+                    flexDirection="column"
+                    flexDirection_tablet="row"
+                    style={{
+                      borderTop: "1px solid black",
+                      borderBottom: "2px solid black",
+                    }}
+                    padding="15px 0"
+                    justifyContent="between"
+                    alignItems="stretch"
+                    display="none"
+                    display_tablet="flex"
+                  >
+                    <Div width_tablet="20%" flexShrink="0">
+                      <H4
+                        textAlign="left"
+                        textTransform="uppercase"
+                        fontWeight="700"
                       >
-                        <H4
-                          textAlign="left"
-                          textTransform="uppercase"
-                          width="fit-content"
-                          margin="0 10px 0 0"
-                          fontWeight="700"
-                          lineHeight="22px"
+                        {content.info.date}
+                      </H4>
+                    </Div>
+                    <Div width_tablet="25%" flexShrink="0">
+                      <H4
+                        textAlign="left"
+                        textTransform="uppercase"
+                        fontWeight="700"
+                      >
+                        {content.info.program_label}
+                      </H4>
+                    </Div>
+                    <Div width_tablet="20%" flexShrink="0">
+                      <H4
+                        textAlign="left"
+                        textTransform="uppercase"
+                        fontWeight="700"
+                      >
+                        {content.info.location_label}
+                      </H4>
+                    </Div>
+                    <Div width_tablet="15%" flexShrink="0">
+                      <H4
+                        textAlign="left"
+                        textTransform="uppercase"
+                        fontWeight="700"
+                      >
+                        {content.info.duration_label}
+                      </H4>
+                    </Div>
+                    <Div width_tablet="20%" flexShrink="0">
+                      <H4
+                        textAlign="left"
+                        textTransform="uppercase"
+                        fontWeight="700"
+                      >
+                        {content.info.action_label}
+                      </H4>
+                    </Div>
+                  </Div>
+                  {data.cohorts.filtered.map((cohort, i) => {
+                    const loc = locations.find(
+                      ({ node }) =>
+                        node.breathecode_location_slug === cohort.academy.slug
+                    );
+                    return (
+                      i < 4 && (
+                        <Div
+                          key={i}
+                          flexDirection="column"
+                          flexDirection_tablet="row"
+                          style={{ borderBottom: "1px solid black" }}
+                          padding="30px 0"
+                          justifyContent="between"
+                          alignItems="stretch"
                         >
-                          {dayjs(cohort.kickoff_date)
-                            .locale(`${lang === "us" ? "en" : "es"}`)
-                            .format("MMMM")}
-                        </H4>
-                        <Paragraph textAlign="left" fontWeight="700">
-                          {`
-                        ${
-                          lang === "us"
-                            ? dayjs(cohort.kickoff_date)
-                                .locale("en")
-                                .format("MM/DD")
-                            : dayjs(cohort.kickoff_date)
-                                .locale("es")
-                                .format("DD/MM")
-                        } 
-                        ${content.to} 
-                        ${
-                          lang === "us"
-                            ? dayjs(cohort.ending_date)
-                                .locale("en")
-                                .format("MM/DD")
-                            : dayjs(cohort.ending_date)
-                                .locale("es")
-                                .format("DD/MM")
-                        }
-                      `}
-                        </Paragraph>
-                      </Div>
-                      <Div
-                        flexDirection="column"
-                        width_tablet="calc(35% - 15%)"
-                        margin="0 0 20px 0"
-                      >
-                        <H4 textAlign="left" textTransform="uppercase">
-                          {content.info.program_label}
-                        </H4>
-
-                        <Link
-                          to={
-                            cohort.syllabus_version.courseSlug
-                              ? `/${lang}/coding-bootcamps/${cohort.syllabus_version.courseSlug}`
-                              : ""
-                          }
-                        >
-                          <Paragraph textAlign="left" color={Colors.blue}>
-                            {cohort.syllabus_version.name}
-                          </Paragraph>
-                        </Link>
-                      </Div>
-                      <Div
-                        flexDirection="column"
-                        display="none"
-                        display_tablet="flex"
-                        minWidth="120px"
-                      >
-                        <H4 textAlign="left" textTransform="uppercase">
-                          {content.info.location_label}
-                        </H4>
-                        <Div>
-                          <Link
-                            to={
-                              loc
-                                ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
-                                : ""
-                            }
+                          <Div
+                            flexDirection_tablet="column"
+                            width_tablet="20%"
+                            alignItems="center"
+                            alignItems_tablet="start"
+                            margin="0 0 10px 0"
+                            flexShrink="0"
                           >
-                            <Paragraph textAlign="left" color={Colors.blue}>
-                              {cohort.academy.city.name === "Remote"
-                                ? content.remote
-                                : `${cohort.academy.city.name} (${content.remote})`}
+                            <H4
+                              textAlign="left"
+                              textTransform="uppercase"
+                              width="fit-content"
+                              margin="0 10px 0 0"
+                              fontWeight="700"
+                              lineHeight="22px"
+                            >
+                              {dayjs(cohort.kickoff_date)
+                                .locale(`${lang === "us" ? "en" : "es"}`)
+                                .format("MMMM")}
+                            </H4>
+                            <Paragraph textAlign="left" fontWeight="700">
+                              {`
+                          ${
+                            lang === "us"
+                              ? dayjs(cohort.kickoff_date)
+                                  .locale("en")
+                                  .format("MM/DD")
+                              : dayjs(cohort.kickoff_date)
+                                  .locale("es")
+                                  .format("DD/MM")
+                          } 
+                          ${content.to} 
+                          ${
+                            lang === "us"
+                              ? dayjs(cohort.ending_date)
+                                  .locale("en")
+                                  .format("MM/DD")
+                              : dayjs(cohort.ending_date)
+                                  .locale("es")
+                                  .format("DD/MM")
+                          }
+                        `}
                             </Paragraph>
-                          </Link>
-                        </Div>
-                      </Div>
-
-                      <Div
-                        flexDirection="column"
-                        display="none"
-                        display_tablet="flex"
-                      >
-                        <H4 textAlign="left" textTransform="uppercase">
-                          {content.info.duration_label}
-                        </H4>
-                        <Paragraph textAlign="left">
-                          {cohort?.syllabus_version?.duration ||
-                            content.info.duration_weeks}
-                        </Paragraph>
-                      </Div>
-
-                      <Div
-                        display="flex"
-                        display_tablet="none"
-                        justifyContent="between"
-                        margin="0 0 20px 0"
-                      >
-                        <Div flexDirection="column" width="50%">
-                          <H4 textAlign="left" textTransform="uppercase">
-                            {content.info.location_label}
-                          </H4>
-                          <Div>
+                          </Div>
+                          <Div
+                            flexDirection="column"
+                            width_tablet="25%"
+                            margin="0 0 20px 0"
+                            flexShrink="0"
+                            alignItems_tablet="flex-start"
+                          >
                             <Link
                               to={
-                                loc
-                                  ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+                                cohort.syllabus_version.courseSlug
+                                  ? `/${lang}/coding-bootcamps/${cohort.syllabus_version.courseSlug}`
                                   : ""
                               }
                             >
                               <Paragraph textAlign="left" color={Colors.blue}>
-                                {cohort.academy.city.name === "Remote"
-                                  ? `${cohort.academy.city.name} ${content.remote}`
-                                  : cohort.academy.city.name}
-                                {cohort.academy.slug !== "online" &&
-                                  cohort.academy.city.name !== "Remote" &&
-                                  ` (${content.remote})`}
+                                {cohort.syllabus_version.name}
                               </Paragraph>
                             </Link>
                           </Div>
-                        </Div>
-                        <Div flexDirection="column" width="50%">
-                          <H4 textAlign="left" textTransform="uppercase">
-                            {content.info.duration_label}
-                          </H4>
-                          <Paragraph textAlign="left">
-                            {cohort?.syllabus_version?.duration ||
-                              content.info.duration_weeks}
-                          </Paragraph>
-                        </Div>
-                      </Div>
-
-                      <Div flexDirection="column">
-                        <Link to={content.info.button_link}>
-                          <Button
-                            variant="full"
-                            width="fit-content"
-                            color={Colors.black}
-                            margin="10px 0"
-                            textColor="white"
+                          <Div
+                            flexDirection="column"
+                            display="none"
+                            display_tablet="flex"
+                            width_tablet="20%"
+                            flexShrink="0"
+                            alignItems_tablet="flex-start"
                           >
-                            {buttonText || content.info.button_text}
-                          </Button>
-                        </Link>
-                      </Div>
-                    </Div>
-                  )
-                );
-              })
-            ) : (
-              <>
-                <Div
-                  display={showForm ? "none" : "flex"}
-                  padding="70px 0"
-                  flexDirection="column"
-                  justifyContent="center"
-                  alignItems="center"
-                  padding_tablet="90px 0"
-                >
-                  <Icon icon="agenda" />
-                  {message && (
-                    <Paragraph margin="25px 0 0 0">{message}</Paragraph>
-                  )}
-                  {actionMessage && (
-                    <Paragraph
-                      color={Colors.blue}
-                      onClick={() => setShowForm(true)}
-                      width="auto"
-                      cursor="pointer"
-                      margin="10px 0 0 0"
-                      fontWeight="700"
-                    >
-                      {actionMessage}
-                    </Paragraph>
-                  )}
-                </Div>
-                <Div
-                  padding="70px 10%"
-                  padding_tablet="90px 32%"
-                  display={showForm ? "flex" : "none"}
-                  flexDirection="column"
-                >
-                  {formStatus.status === "thank-you" ? (
-                    <Div alignItems="center" flexDirection="column">
-                      <Icon icon="success" width="80px" height="80px" />{" "}
-                      <H4
-                        fontSize="15px"
-                        lineHeight="22px"
-                        margin="25px 0 10px 10px"
-                        align="center"
-                      >
-                        {emailFormContent.successful_text}
-                      </H4>
-                    </Div>
-                  ) : (
-                    <>
-                      <H4
-                        margin="0 0 25px 0"
-                        textAlign="left"
-                        display="block"
-                        display_tablet="block"
-                      >
-                        {emailFormContent.heading}
-                      </H4>
-                      <Div justifyContent="center" width="100%">
-                        <Form
-                          onSubmit={async (e) => {
-                            e.preventDefault();
-                            if (formStatus.status === "error") {
-                              setFormStatus({
-                                status: "idle",
-                                msg: "Resquest",
-                              });
-                            }
-                            if (!formIsValid(formData)) {
-                              setFormStatus({
-                                status: "error",
-                                msg: "There are some errors in your form",
-                              });
-                            } else {
-                              setFormStatus({
-                                status: "loading",
-                                msg: "Loading...",
-                              });
-                              const token =
-                                await captcha.current.executeAsync();
-                              newsletterSignup(
-                                {
-                                  ...formData,
-                                  token: { value: token, valid: true },
-                                },
-                                session
-                              )
-                                .then((data) => {
-                                  if (
-                                    data.error !== false &&
-                                    data.error !== undefined
-                                  ) {
-                                    setFormStatus({
-                                      status: "error",
-                                      msg: "Fix errors",
-                                    });
-                                  } else {
-                                    setFormStatus({
-                                      status: "thank-you",
-                                      msg: "Thank you",
-                                    });
-                                  }
-                                })
-                                .catch((error) => {
-                                  console.log("error", error);
-                                  setFormStatus({
-                                    status: "error",
-                                    msg: error.message || error,
-                                  });
-                                });
-                            }
-                          }}
-                        >
-                          <Input
-                            type="email"
-                            className="form-control"
+                            <Div>
+                              <Link
+                                to={
+                                  loc
+                                    ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+                                    : ""
+                                }
+                              >
+                                <Paragraph textAlign="left" color={Colors.blue}>
+                                  {(() => {
+                                    const selectedSlug =
+                                      academy?.value ||
+                                      location ||
+                                      cohort.academy.slug;
+                                    return isAliasLocation(selectedSlug) ||
+                                      cohort.academy.city.name === "Remote"
+                                      ? content.remote
+                                      : `${cohort.academy.city.name} (${content.remote})`;
+                                  })()}
+                                </Paragraph>
+                              </Link>
+                            </Div>
+                          </Div>
+
+                          <Div
+                            flexDirection="column"
+                            display="none"
+                            display_tablet="flex"
+                            width_tablet="15%"
+                            flexShrink="0"
+                            alignItems_tablet="flex-start"
+                          >
+                            <Paragraph textAlign="left">
+                              {cohort?.syllabus_version?.duration ||
+                                content.info.duration_weeks}
+                            </Paragraph>
+                          </Div>
+
+                          <Div
+                            display="flex"
+                            display_tablet="none"
+                            justifyContent="between"
+                            margin="0 0 20px 0"
                             width="100%"
-                            placeholder="E-mail *"
-                            borderRadius="3px"
-                            bgColor={Colors.white}
-                            margin="0"
-                            onChange={(value, valid) => {
-                              setVal({ ...formData, email: { value, valid } });
+                          >
+                            <Div flexDirection="column" width="50%">
+                              <H4 textAlign="left" textTransform="uppercase">
+                                {content.info.location_label}
+                              </H4>
+                              <Div>
+                                <Link
+                                  to={
+                                    loc
+                                      ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+                                      : ""
+                                  }
+                                >
+                                  <Paragraph
+                                    textAlign="left"
+                                    color={Colors.blue}
+                                  >
+                                    {(() => {
+                                      const selectedSlug =
+                                        academy?.value ||
+                                        location ||
+                                        cohort.academy.slug;
+                                      return isAliasLocation(selectedSlug) ||
+                                        cohort.academy.city.name === "Remote"
+                                        ? content.remote
+                                        : `${cohort.academy.city.name} (${content.remote})`;
+                                    })()}
+                                  </Paragraph>
+                                </Link>
+                              </Div>
+                            </Div>
+                            <Div flexDirection="column" width="50%">
+                              <H4 textAlign="left" textTransform="uppercase">
+                                {content.info.duration_label}
+                              </H4>
+                              <Paragraph textAlign="left">
+                                {cohort?.syllabus_version?.duration ||
+                                  content.info.duration_weeks}
+                              </Paragraph>
+                            </Div>
+                          </Div>
+
+                          <Div
+                            flexDirection="column"
+                            width_tablet="20%"
+                            flexShrink="0"
+                            alignItems_tablet="flex-start"
+                          >
+                            <Link to={content.info.button_link}>
+                              <Button
+                                variant="full"
+                                width="fit-content"
+                                color={Colors.black}
+                                margin="0"
+                                textColor="white"
+                              >
+                                {buttonText || content.info.button_text}
+                              </Button>
+                            </Link>
+                          </Div>
+                        </Div>
+                      )
+                    );
+                  })}
+                </>
+              ) : (
+                <>
+                  <Div
+                    display={showForm ? "none" : "flex"}
+                    padding="70px 0"
+                    flexDirection="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    padding_tablet="90px 0"
+                  >
+                    <Icon icon="agenda" />
+                    {message && (
+                      <Paragraph margin="25px 0 0 0">{message}</Paragraph>
+                    )}
+                    {actionMessage && (
+                      <Paragraph
+                        color={Colors.blue}
+                        onClick={() => setShowForm(true)}
+                        width="auto"
+                        cursor="pointer"
+                        margin="10px 0 0 0"
+                        fontWeight="700"
+                      >
+                        {actionMessage}
+                      </Paragraph>
+                    )}
+                  </Div>
+                  <Div
+                    padding="70px 10%"
+                    padding_tablet="90px 32%"
+                    display={showForm ? "flex" : "none"}
+                    flexDirection="column"
+                  >
+                    {formStatus.status === "thank-you" ? (
+                      <Div alignItems="center" flexDirection="column">
+                        <Icon icon="success" width="80px" height="80px" />{" "}
+                        <H4
+                          fontSize="15px"
+                          lineHeight="22px"
+                          margin="25px 0 10px 10px"
+                          align="center"
+                        >
+                          {emailFormContent.successful_text}
+                        </H4>
+                      </Div>
+                    ) : (
+                      <>
+                        <H4
+                          margin="0 0 25px 0"
+                          textAlign="left"
+                          display="block"
+                          display_tablet="block"
+                        >
+                          {emailFormContent.heading}
+                        </H4>
+                        <Div justifyContent="center" width="100%">
+                          <Form
+                            onSubmit={async (e) => {
+                              e.preventDefault();
                               if (formStatus.status === "error") {
                                 setFormStatus({
                                   status: "idle",
                                   msg: "Resquest",
                                 });
                               }
+                              if (!formIsValid(formData)) {
+                                setFormStatus({
+                                  status: "error",
+                                  msg: "There are some errors in your form",
+                                });
+                              } else {
+                                setFormStatus({
+                                  status: "loading",
+                                  msg: "Loading...",
+                                });
+                                const token =
+                                  await captcha.current.executeAsync();
+                                newsletterSignup(
+                                  {
+                                    ...formData,
+                                    token: { value: token, valid: true },
+                                  },
+                                  session
+                                )
+                                  .then((data) => {
+                                    if (
+                                      data.error !== false &&
+                                      data.error !== undefined
+                                    ) {
+                                      setFormStatus({
+                                        status: "error",
+                                        msg: "Fix errors",
+                                      });
+                                    } else {
+                                      setFormStatus({
+                                        status: "thank-you",
+                                        msg: "Thank you",
+                                      });
+                                    }
+                                  })
+                                  .catch((error) => {
+                                    console.log("error", error);
+                                    setFormStatus({
+                                      status: "error",
+                                      msg: error.message || error,
+                                    });
+                                  });
+                              }
                             }}
-                            value={formData.email.value}
-                            errorMsg="Please specify a valid email"
-                            required
-                          />
-                          <Div width="fit-content" margin="10px auto 0 auto">
-                            <ReCAPTCHA
-                              ref={captcha}
-                              sitekey={process.env.GATSBY_CAPTCHA_KEY}
-                              size="invisible"
-                            />
-                          </Div>
-                          <Button
-                            height="40px"
-                            background={Colors.blue}
-                            // margin="0 0 0 10px"
-                            type="submit"
-                            fontWeight="700"
-                            justifyContent="center"
-                            margin="35px 0 0 0"
-                            width="100%"
-                            fontSize="14px"
-                            variant="full"
-                            color={
-                              formStatus.status === "loading"
-                                ? Colors.darkGray
-                                : Colors.blue
-                            }
-                            textColor={Colors.white}
-                            disabled={
-                              formStatus.status === "loading" ? true : false
-                            }
                           >
-                            {formStatus.status === "loading"
-                              ? "Loading..."
-                              : emailFormContent.button_text}
-                          </Button>
-                        </Form>
-                      </Div>
-                    </>
-                  )}
-                </Div>
-              </>
-            )}
-            {Array.isArray(data.cohorts.filtered) &&
-              data.cohorts.filtered.length > 0 &&
-              showMoreRedirect && (
-                <Link to={content.footer.button_link}>
-                  <Paragraph margin="20px 0" color={Colors.blue}>
-                    {content.footer.button_text}
-                  </Paragraph>
-                </Link>
+                            <Input
+                              type="email"
+                              className="form-control"
+                              width="100%"
+                              placeholder="E-mail *"
+                              borderRadius="3px"
+                              bgColor={Colors.white}
+                              margin="0"
+                              onChange={(value, valid) => {
+                                setVal({
+                                  ...formData,
+                                  email: { value, valid },
+                                });
+                                if (formStatus.status === "error") {
+                                  setFormStatus({
+                                    status: "idle",
+                                    msg: "Resquest",
+                                  });
+                                }
+                              }}
+                              value={formData.email.value}
+                              errorMsg="Please specify a valid email"
+                              required
+                            />
+                            <Div width="fit-content" margin="10px auto 0 auto">
+                              <ReCAPTCHA
+                                ref={captcha}
+                                sitekey={process.env.GATSBY_CAPTCHA_KEY}
+                                size="invisible"
+                              />
+                            </Div>
+                            <Button
+                              height="40px"
+                              background={Colors.blue}
+                              // margin="0 0 0 10px"
+                              type="submit"
+                              fontWeight="700"
+                              justifyContent="center"
+                              margin="35px 0 0 0"
+                              width="100%"
+                              fontSize="14px"
+                              variant="full"
+                              color={
+                                formStatus.status === "loading"
+                                  ? Colors.darkGray
+                                  : Colors.blue
+                              }
+                              textColor={Colors.white}
+                              disabled={
+                                formStatus.status === "loading" ? true : false
+                              }
+                            >
+                              {formStatus.status === "loading"
+                                ? "Loading..."
+                                : emailFormContent.button_text}
+                            </Button>
+                          </Form>
+                        </Div>
+                      </>
+                    )}
+                  </Div>
+                </>
               )}
-          </>
-        )}
+              {Array.isArray(data.cohorts.filtered) &&
+                data.cohorts.filtered.length > 0 &&
+                showMoreRedirect && (
+                  <Link to={content.footer.button_link}>
+                    <Paragraph margin="20px 0" color={Colors.blue}>
+                      {content.footer.button_text}
+                    </Paragraph>
+                  </Link>
+                )}
+            </>
+          )}
+        </Div>
       </Div>
     </GridContainer>
   );
