@@ -1,4 +1,11 @@
-import React, { useState, useContext, useEffect, useRef, useMemo, useCallback } from "react";
+import React, {
+  useState,
+  useContext,
+  useEffect,
+  useRef,
+  useMemo,
+  useCallback,
+} from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Icon from "../Icon";
 import { Link } from "../Styling/index";
@@ -67,11 +74,7 @@ const LoadingSpinner = () => (
   </Div>
 );
 
-const PaymentOptionCard = ({
-  option,
-  selectedPlan,
-  setSelectedPlan,
-}) => {
+const PaymentOptionCard = ({ option, selectedPlan, setSelectedPlan }) => {
   return (
     <Div
       border="1px solid #E5E5E5"
@@ -235,7 +238,6 @@ const FinancialOptionsDesktop = ({
     [availablePlans, selectedPlan]
   );
 
-
   return (
     <>
       <Div
@@ -268,7 +270,7 @@ const FinancialOptionsDesktop = ({
           </H3>
 
           <Div display="block" margin="0 0 12px 0">
-            {(jobGuarantee && info?.job_guarantee?.monthly_label) ? (
+            {jobGuarantee && info?.job_guarantee?.monthly_label ? (
               <H2
                 fontSize="36px"
                 lineHeight="42px"
@@ -279,7 +281,7 @@ const FinancialOptionsDesktop = ({
               >
                 {info.job_guarantee.monthly_label}
               </H2>
-            ) : (info?.no_job_guarantee?.monthly_label) ? (
+            ) : info?.no_job_guarantee?.monthly_label ? (
               <H2
                 fontSize="36px"
                 lineHeight="42px"
@@ -310,7 +312,13 @@ const FinancialOptionsDesktop = ({
               margin="0 0 6px 0"
               textAlign="left"
             >
-              {(jobGuarantee && info?.job_guarantee?.monthly_label) ? "" : (info?.no_job_guarantee?.monthly_label ? "" : (monthlyPriceText ? "" : currentPlan?.price || ""))}
+              {jobGuarantee && info?.job_guarantee?.monthly_label
+                ? ""
+                : info?.no_job_guarantee?.monthly_label
+                ? ""
+                : monthlyPriceText
+                ? ""
+                : currentPlan?.price || ""}
             </H2>
             <Paragraph
               color={Colors.black}
@@ -333,42 +341,49 @@ const FinancialOptionsDesktop = ({
           </Div>
 
           {availablePlans?.some((p) => p.price) &&
-            currentLocation?.active_campaign_location_slug !== "downtown-miami" && (
-            <Div margin="16px 0 0 0" display="block">
-              <Div alignItems="center">
-                <Toggle
-                  width="42px"
-                  height="22px"
-                  b_radius="9999px"
-                  bg={jobGuarantee ? Colors.blue : Colors.lightGray}
-                  onClick={() => setJobGuarantee && setJobGuarantee(!jobGuarantee)}
-                >
-                  <Div
-                    position="relative"
+            currentLocation?.active_campaign_location_slug !==
+              "downtown-miami" && (
+              <Div margin="16px 0 0 0" display="block">
+                <Div alignItems="center">
+                  <Toggle
                     width="42px"
                     height="22px"
+                    b_radius="9999px"
+                    bg={jobGuarantee ? Colors.blue : Colors.lightGray}
+                    onClick={() =>
+                      setJobGuarantee && setJobGuarantee(!jobGuarantee)
+                    }
                   >
-                    <Div
-                      position="absolute"
-                      top="2px"
-                      left={jobGuarantee ? "22px" : "2px"}
-                      width="18px"
-                      height="18px"
-                      borderRadius="9999px"
-                      background={Colors.white}
-                      transition="left 0.2s ease-in-out"
-                    />
-                  </Div>
-                </Toggle>
-                <H4 fontSize_tablet="18px" fontSize_xs="16px" margin="0 0 0 10px">
-                  {info.job_guarantee.title}
-                </H4>
+                    <Div position="relative" width="42px" height="22px">
+                      <Div
+                        position="absolute"
+                        top="2px"
+                        left={jobGuarantee ? "22px" : "2px"}
+                        width="18px"
+                        height="18px"
+                        borderRadius="9999px"
+                        background={Colors.white}
+                        transition="left 0.2s ease-in-out"
+                      />
+                    </Div>
+                  </Toggle>
+                  <H4
+                    fontSize_tablet="18px"
+                    fontSize_xs="16px"
+                    margin="0 0 0 10px"
+                  >
+                    {info.job_guarantee.title}
+                  </H4>
+                </Div>
+                <Paragraph
+                  textAlign="left"
+                  color={Colors.black}
+                  margin="8px 0 0 0"
+                >
+                  {info.job_guarantee.description}
+                </Paragraph>
               </Div>
-              <Paragraph textAlign="left" color={Colors.black} margin="8px 0 0 0">
-                {info.job_guarantee.description}
-              </Paragraph>
-            </Div>
-          )}
+            )}
 
           {/* Bullets from selected plan removed on desktop per revamp */}
 
@@ -560,7 +575,9 @@ const FinancialOptionsCard = ({
 
   // Get currently selected option or default to first one
   const currentOption = useMemo(
-    () => paymentOptions.find((opt) => opt.id === selectedPlan) || paymentOptions[0],
+    () =>
+      paymentOptions.find((opt) => opt.id === selectedPlan) ||
+      paymentOptions[0],
     [paymentOptions, selectedPlan]
   );
 
@@ -590,7 +607,7 @@ const FinancialOptionsCard = ({
           </H3>
 
           <Div alignItems="center" justifyContent="center" margin="0 0 16px 0">
-            {(jobGuarantee && info?.job_guarantee?.monthly_label) ? (
+            {jobGuarantee && info?.job_guarantee?.monthly_label ? (
               <H2
                 fontSize="32px"
                 fontWeight="700"
@@ -599,7 +616,7 @@ const FinancialOptionsCard = ({
               >
                 {info.job_guarantee.monthly_label}
               </H2>
-            ) : (info?.no_job_guarantee?.monthly_label) ? (
+            ) : info?.no_job_guarantee?.monthly_label ? (
               <H2
                 fontSize="32px"
                 fontWeight="700"
@@ -618,44 +635,65 @@ const FinancialOptionsCard = ({
                 {currentOption?.price || ""}
               </H2>
             )}
-            <Paragraph fontSize="16px" color={Colors.black} margin="0" textAlign="center">
+            <Paragraph
+              fontSize="16px"
+              color={Colors.black}
+              margin="0"
+              textAlign="center"
+            >
               {info?.financing_message}
             </Paragraph>
           </Div>
 
           {availablePlans?.some((p) => p.price) &&
-            currentLocation?.active_campaign_location_slug !== "downtown-miami" && (
-            <Div margin="8px 0 0 0" display="block" alignItems="center" justifyContent="center">
-              <Div alignItems="center" justifyContent="center">
-                <Toggle
-                  width="42px"
-                  height="22px"
-                  b_radius="9999px"
-                  bg={jobGuarantee ? Colors.blue : Colors.lightGray}
-                  onClick={() => setJobGuarantee && setJobGuarantee(!jobGuarantee)}
+            currentLocation?.active_campaign_location_slug !==
+              "downtown-miami" && (
+              <Div
+                margin="8px 0 0 0"
+                display="block"
+                alignItems="center"
+                justifyContent="center"
+              >
+                <Div alignItems="center" justifyContent="center">
+                  <Toggle
+                    width="42px"
+                    height="22px"
+                    b_radius="9999px"
+                    bg={jobGuarantee ? Colors.blue : Colors.lightGray}
+                    onClick={() =>
+                      setJobGuarantee && setJobGuarantee(!jobGuarantee)
+                    }
+                  >
+                    <Div position="relative" width="42px" height="22px">
+                      <Div
+                        position="absolute"
+                        top="2px"
+                        left={jobGuarantee ? "22px" : "2px"}
+                        width="18px"
+                        height="18px"
+                        borderRadius="9999px"
+                        background={Colors.white}
+                        transition="left 0.2s ease-in-out"
+                      />
+                    </Div>
+                  </Toggle>
+                  <H4
+                    fontSize_tablet="18px"
+                    fontSize_xs="16px"
+                    margin="0 0 0 10px"
+                  >
+                    {info.job_guarantee.title}
+                  </H4>
+                </Div>
+                <Paragraph
+                  textAlign="center"
+                  color={Colors.black}
+                  margin="8px 0 0 0"
                 >
-                  <Div position="relative" width="42px" height="22px">
-                    <Div
-                      position="absolute"
-                      top="2px"
-                      left={jobGuarantee ? "22px" : "2px"}
-                      width="18px"
-                      height="18px"
-                      borderRadius="9999px"
-                      background={Colors.white}
-                      transition="left 0.2s ease-in-out"
-                    />
-                  </Div>
-                </Toggle>
-                <H4 fontSize_tablet="18px" fontSize_xs="16px" margin="0 0 0 10px">
-                  {info.job_guarantee.title}
-                </H4>
+                  {info.job_guarantee.description}
+                </Paragraph>
               </Div>
-              <Paragraph textAlign="center" color={Colors.black} margin="8px 0 0 0">
-                {info.job_guarantee.description}
-              </Paragraph>
-            </Div>
-          )}
+            )}
 
           {currentOption?.originalPrice && (
             <Paragraph color="#B4B4B4" margin="0 0 8px 0" textAlign="center">

@@ -776,10 +776,10 @@ export const OfferTag = styled.div`
   display: flex;
   align-items: center;
   gap: 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 2;
-  visibility: ${props => props.isHidden ? 'hidden' : 'visible'};
-  pointer-events: ${props => props.isHidden ? 'none' : 'auto'};
+  visibility: ${(props) => (props.isHidden ? "hidden" : "visible")};
+  pointer-events: ${(props) => (props.isHidden ? "none" : "auto")};
 
   &:before {
     content: "🔥";
@@ -791,5 +791,28 @@ export const OfferTag = styled.div`
     padding: 3px 10px;
     top: -10px;
     right: 45px;
+  }
+`;
+
+export const PhoneText = styled.p`
+  text-decoration: none;
+  text-align: center;
+  margin-top: 6px;
+  font-size: 15px;
+
+  @media ${Break.xs} {
+    font-size: 12px;
+  }
+`;
+
+export const PhoneTextDesktop = styled.p`
+  text-decoration: none;
+  text-align: right;
+  margin-top: 3px;
+  margin-right: 10px;
+  font-size: 15px;
+
+  @media ${Break.xs} {
+    font-size: 12px;
   }
 `;
