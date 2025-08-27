@@ -17,11 +17,7 @@ meta_info:
   home_video: "https://www.videoask.com/frhjxdk8z"
 
 seo_title: "Coding Bootcamp in Atlanta with a Job Guarantee"
-seo_title: "Coding Bootcamp in Atlanta with a Job Guarantee"
 header:
-  tagline: " 4Geeks Academy: Launch an AI-Ready Tech Career in Atlanta"
-  sub_header: "Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist—with skills built for the AI era."
-  sub_header_highlighted: "All programs are taught online with live support."
   tagline: " 4Geeks Academy: Launch an AI-Ready Tech Career in Atlanta"
   sub_header: "Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist—with skills built for the AI era."
   sub_header_highlighted: "All programs are taught online with live support."
@@ -34,7 +30,6 @@ badges:
   # NOTE: If you want to break the text into many lines avoid using double quotes
   # use the pipe operator ' | ' instead, like the example below
   paragraph: |
-    4Geeks Academy is a globally recognized coding bootcamp where future-ready developers grow and thrive.
     4Geeks Academy is a globally recognized coding bootcamp where future-ready developers grow and thrive.
 
     Licensed by the Florida Department of Education, we've been ranked as one of the top 5 coding bootcamps in the United States by SwitchUp and among the top 10 nationwide by Newsweek.
@@ -79,7 +74,6 @@ info_box:
   email: "info@4GeeksAcademy.com"
 images_box:
   heading: "Why Atlanta Is a Smart Place to Launch Your Tech Career: "
-  heading: "Why Atlanta Is a Smart Place to Launch Your Tech Career: "
   content: "Atlanta's tech ecosystem is flourishing with over 850 tech companies and 70,000+ tech workers. Major tech firms like Google and Facebook have set up local outposts drawn by the city's diverse talent pool. As Atlanta vies to become a tech hub, coding bootcamps aim to close the skills gap by supplying tech talent to meet the surging demand for coding expertise from expanding tech companies."
   images:
     - path: "../../../static/images/locations/atlanta-new.jpg"
@@ -105,10 +99,8 @@ two_columns:
   video: "EcqasocRKHo"
   heading:
     text: "Unlock Atlanta’s Tech Potential"
-    text: "Unlock Atlanta’s Tech Potential"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "At 4Geeks Academy, we offer unlimited mentorship, flexible learning, and expert career support to help you break into Atlanta’s fast-growing tech scene. Our hands-on, AI-driven curriculum is designed to build practical, job-ready skills."
     text: "At 4Geeks Academy, we offer unlimited mentorship, flexible learning, and expert career support to help you break into Atlanta’s fast-growing tech scene. Our hands-on, AI-driven curriculum is designed to build practical, job-ready skills."
     font_size: ["18px", "18px", "18px", "18px", "18px"]
   button:
@@ -118,10 +110,6 @@ two_columns:
     path: "/us/apply"
   bullets:
     items:
-      - text: "Learn industry-relevant tools used by Atlanta employers"
-      - text: "Build real-world projects to showcase your development skills"
-      - text: "Get personalized coaching to navigate Atlanta’s tech job market"
-  paragraph: "Hear from Alissa on how 4Geeks helps Atlanta students thrive in tech."
       - text: "Learn industry-relevant tools used by Atlanta employers"
       - text: "Build real-world projects to showcase your development skills"
       - text: "Get personalized coaching to navigate Atlanta’s tech job market"
