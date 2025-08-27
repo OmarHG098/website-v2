@@ -207,6 +207,7 @@ const FinancialOptionsDesktop = ({
   availablePlans,
   isLocationDropdownOpen,
   isProgramDropdownOpen,
+  currentLocation,
 }) => {
   // Build options list from available plans (YAML-driven)
   const paymentOptions = useMemo(
@@ -234,6 +235,7 @@ const FinancialOptionsDesktop = ({
     [availablePlans, selectedPlan]
   );
 
+
   return (
     <>
       <Div
@@ -248,16 +250,11 @@ const FinancialOptionsDesktop = ({
         margin="24px 0"
         position="relative"
       >
-        {currentPlan?.offer && (
-          <OfferTag isHidden={isLocationDropdownOpen || isProgramDropdownOpen}>
-            {currentPlan.offer}
-          </OfferTag>
-        )}
+        {/* Offer tag removed on desktop per revamp */}
         {/* Left column */}
         <Div
           display="block"
           background={Colors.white}
-          borderRight={`1px solid ${Colors.lightGray}`}
           padding="24px"
           width_tablet="50%"
         >
@@ -271,6 +268,40 @@ const FinancialOptionsDesktop = ({
           </H3>
 
           <Div display="block" margin="0 0 12px 0">
+            {(jobGuarantee && info?.job_guarantee?.monthly_label) ? (
+              <H2
+                fontSize="36px"
+                lineHeight="42px"
+                fontWeight="700"
+                color={Colors.black}
+                margin="0 0 6px 0"
+                textAlign="left"
+              >
+                {info.job_guarantee.monthly_label}
+              </H2>
+            ) : (info?.no_job_guarantee?.monthly_label) ? (
+              <H2
+                fontSize="36px"
+                lineHeight="42px"
+                fontWeight="700"
+                color={Colors.black}
+                margin="0 0 6px 0"
+                textAlign="left"
+              >
+                {info.no_job_guarantee.monthly_label}
+              </H2>
+            ) : monthlyPriceText ? (
+              <H2
+                fontSize="36px"
+                lineHeight="42px"
+                fontWeight="700"
+                color={Colors.black}
+                margin="0 0 6px 0"
+                textAlign="left"
+              >
+                {monthlyPriceText}
+              </H2>
+            ) : null}
             <H2
               fontSize="36px"
               lineHeight="42px"
@@ -279,20 +310,15 @@ const FinancialOptionsDesktop = ({
               margin="0 0 6px 0"
               textAlign="left"
             >
-              {currentPlan?.price || ""}
+              {(jobGuarantee && info?.job_guarantee?.monthly_label) ? "" : (info?.no_job_guarantee?.monthly_label ? "" : (monthlyPriceText ? "" : currentPlan?.price || ""))}
             </H2>
-            {currentPlan?.original_price && (
-              <Paragraph color="#B4B4B4" margin="0 0 8px 0" textAlign="left">
-                <s>{currentPlan.original_price}</s>
-              </Paragraph>
-            )}
             <Paragraph
               color={Colors.black}
               fontSize="14px"
               margin="0 0 6px 0"
               textAlign="left"
             >
-              {currentPlan?.payment_time}
+              {info?.financing_message}
             </Paragraph>
             {currentPlan?.warning_message && (
               <Paragraph
@@ -306,67 +332,45 @@ const FinancialOptionsDesktop = ({
             )}
           </Div>
 
-          {/* Job Guarantee toggle - Commented out for review
-        {availablePlans?.some((p) => p.price) && (
-          <Div margin="16px 0 0 0" display="block">
-            <Div alignItems="center">
-              <Div
-                position="relative"
-                width="42px"
-                height="22px"
-                borderRadius="9999px"
-                background={jobGuarantee ? Colors.blue : Colors.lightGray}
-                onClick={() => setJobGuarantee && setJobGuarantee(!jobGuarantee)}
-                cursor="pointer"
-              >
-                <Div
-                  position="absolute"
-                  top="2px"
-                  left={jobGuarantee ? "22px" : "2px"}
-                  width="18px"
-                  height="18px"
-                  borderRadius="9999px"
-                  background={Colors.white}
-                  transition="left 0.2s ease-in-out"
-                />
+          {availablePlans?.some((p) => p.price) &&
+            currentLocation?.active_campaign_location_slug !== "downtown-miami" && (
+            <Div margin="16px 0 0 0" display="block">
+              <Div alignItems="center">
+                <Toggle
+                  width="42px"
+                  height="22px"
+                  b_radius="9999px"
+                  bg={jobGuarantee ? Colors.blue : Colors.lightGray}
+                  onClick={() => setJobGuarantee && setJobGuarantee(!jobGuarantee)}
+                >
+                  <Div
+                    position="relative"
+                    width="42px"
+                    height="22px"
+                  >
+                    <Div
+                      position="absolute"
+                      top="2px"
+                      left={jobGuarantee ? "22px" : "2px"}
+                      width="18px"
+                      height="18px"
+                      borderRadius="9999px"
+                      background={Colors.white}
+                      transition="left 0.2s ease-in-out"
+                    />
+                  </Div>
+                </Toggle>
+                <H4 fontSize_tablet="18px" fontSize_xs="16px" margin="0 0 0 10px">
+                  {info.job_guarantee.title}
+                </H4>
               </Div>
-              <H4 fontSize_tablet="18px" fontSize_xs="16px" margin="0 0 0 10px">
-                {info.job_guarantee.title}
-              </H4>
-            </Div>
-            <Paragraph textAlign="left" color={Colors.black} margin="8px 0 0 0">
-              {info.job_guarantee.description}
-            </Paragraph>
-          </Div>
-        )} */}
-
-          {/* Bullets from selected plan */}
-          {currentPlan?.bullets && currentPlan.bullets.length > 0 && (
-            <Div display="block" margin="24px 0 0 0">
-              <Div
-                borderTop={`1px solid #ebebeb`}
-                width="60%"
-                margin="0 0 12px 0"
-              />
-              {currentPlan.bullets.map((bullet, index) => (
-                <Div key={index} alignItems="center" margin="12px 0 0 0">
-                  <Icon
-                    icon="check"
-                    width="17px"
-                    height="17px"
-                    style={{ marginRight: "10px" }}
-                    color={Colors.blue}
-                    fill={Colors.blue}
-                  />
-                  <Paragraph
-                    color={Colors.black}
-                    textAlign="left"
-                    dangerouslySetInnerHTML={{ __html: bullet }}
-                  />
-                </Div>
-              ))}
+              <Paragraph textAlign="left" color={Colors.black} margin="8px 0 0 0">
+                {info.job_guarantee.description}
+              </Paragraph>
             </Div>
           )}
+
+          {/* Bullets from selected plan removed on desktop per revamp */}
 
           {/* Partner logos from YAML icons */}
           {currentPlan?.icons && currentPlan.icons.length > 0 && (
@@ -411,23 +415,15 @@ const FinancialOptionsDesktop = ({
             {"Other payment options"}
           </H3>
           {(paymentOptions || []).map((option) => {
-            const isSelected = selectedPlan === option.id;
             return (
               <Div
                 key={option.id}
-                border={
-                  isSelected
-                    ? `2px solid ${Colors.blue}`
-                    : `1px solid ${Colors.lightGray}`
-                }
-                background={isSelected ? Colors.veryLightBlue3 : Colors.white}
+                border="none"
+                background={Colors.verylightGray3}
                 padding="16px"
                 borderRadius="8px"
                 margin="0 0 12px 0"
-                cursor="pointer"
-                onClick={() => {
-                  setSelectedPlan && setSelectedPlan(option.id);
-                }}
+                cursor="default"
               >
                 <Div display="block" width="100%">
                   {option.recomended && (
@@ -539,6 +535,9 @@ const FinancialOptionsCard = ({
   availablePlans,
   isLocationDropdownOpen,
   isProgramDropdownOpen,
+  jobGuarantee,
+  setJobGuarantee,
+  currentLocation,
 }) => {
   // Build options list from available plans (YAML-driven)
   const paymentOptions = useMemo(
@@ -578,11 +577,7 @@ const FinancialOptionsCard = ({
         boxShadow="0 8px 32px rgba(0,0,0,0.25)"
         position="relative"
       >
-        {currentOption?.offer && (
-          <OfferTag isHidden={isLocationDropdownOpen || isProgramDropdownOpen}>
-            {currentOption.offer}
-          </OfferTag>
-        )}
+        {/* Offer tag removed on mobile per revamp */}
         <Div display="block" margin="0 0 24px 0">
           <H3
             fontSize="18px"
@@ -595,18 +590,72 @@ const FinancialOptionsCard = ({
           </H3>
 
           <Div alignItems="center" justifyContent="center" margin="0 0 16px 0">
-            <H2
-              fontSize="32px"
-              fontWeight="700"
-              color={Colors.black}
-              margin="0 8px 0 0"
-            >
-              {currentOption?.price || ""}
-            </H2>
-            <Paragraph fontSize="16px" color={Colors.black} margin="0">
-              {currentOption?.description || ""}
+            {(jobGuarantee && info?.job_guarantee?.monthly_label) ? (
+              <H2
+                fontSize="32px"
+                fontWeight="700"
+                color={Colors.black}
+                margin="0 8px 0 0"
+              >
+                {info.job_guarantee.monthly_label}
+              </H2>
+            ) : (info?.no_job_guarantee?.monthly_label) ? (
+              <H2
+                fontSize="32px"
+                fontWeight="700"
+                color={Colors.black}
+                margin="0 8px 0 0"
+              >
+                {info.no_job_guarantee.monthly_label}
+              </H2>
+            ) : (
+              <H2
+                fontSize="32px"
+                fontWeight="700"
+                color={Colors.black}
+                margin="0 8px 0 0"
+              >
+                {currentOption?.price || ""}
+              </H2>
+            )}
+            <Paragraph fontSize="16px" color={Colors.black} margin="0" textAlign="center">
+              {info?.financing_message}
             </Paragraph>
           </Div>
+
+          {availablePlans?.some((p) => p.price) &&
+            currentLocation?.active_campaign_location_slug !== "downtown-miami" && (
+            <Div margin="8px 0 0 0" display="block" alignItems="center" justifyContent="center">
+              <Div alignItems="center" justifyContent="center">
+                <Toggle
+                  width="42px"
+                  height="22px"
+                  b_radius="9999px"
+                  bg={jobGuarantee ? Colors.blue : Colors.lightGray}
+                  onClick={() => setJobGuarantee && setJobGuarantee(!jobGuarantee)}
+                >
+                  <Div position="relative" width="42px" height="22px">
+                    <Div
+                      position="absolute"
+                      top="2px"
+                      left={jobGuarantee ? "22px" : "2px"}
+                      width="18px"
+                      height="18px"
+                      borderRadius="9999px"
+                      background={Colors.white}
+                      transition="left 0.2s ease-in-out"
+                    />
+                  </Div>
+                </Toggle>
+                <H4 fontSize_tablet="18px" fontSize_xs="16px" margin="0 0 0 10px">
+                  {info.job_guarantee.title}
+                </H4>
+              </Div>
+              <Paragraph textAlign="center" color={Colors.black} margin="8px 0 0 0">
+                {info.job_guarantee.description}
+              </Paragraph>
+            </Div>
+          )}
 
           {currentOption?.originalPrice && (
             <Paragraph color="#B4B4B4" margin="0 0 8px 0" textAlign="center">
@@ -730,11 +779,16 @@ const PricesAndPayment = (props) => {
             top_label_2
             plans_title
             plan_details
+            financing_message
             select
             select_2
             job_guarantee {
               title
               description
+              monthly_label
+            }
+            no_job_guarantee {
+              monthly_label
             }
             recomended
             not_available
@@ -1117,6 +1171,7 @@ const PricesAndPayment = (props) => {
             availablePlans={availablePlans}
             isLocationDropdownOpen={isLocationDropdownOpen}
             isProgramDropdownOpen={isProgramDropdownOpen}
+            currentLocation={currentLocation}
           />
           {/* Financial explainer card (mobile) */}
           <Div
@@ -1135,6 +1190,9 @@ const PricesAndPayment = (props) => {
               availablePlans={availablePlans}
               isLocationDropdownOpen={isLocationDropdownOpen}
               isProgramDropdownOpen={isProgramDropdownOpen}
+              jobGuarantee={jobGuarantee}
+              setJobGuarantee={setJobGuarantee}
+              currentLocation={currentLocation}
             />
           </Div>
         </>
