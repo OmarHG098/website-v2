@@ -105,10 +105,11 @@ two_columns:
     background: "black"
     path: "/us/apply"
   bullets:
-    items: 
-    - text: "Work on industry-informed projects that reflect Chicago’s market"
-    - text: "Build coding skills employers in the region are hiring for"
-    - text: "Receive ongoing mentorship and career guidance from experts"
+    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+    items:
+      - text: "• Work on industry-informed projects that reflect Chicago’s market"
+      - text: "• Build coding skills employers in the region are hiring for"
+      - text: "• Receive ongoing mentorship and career guidance from experts"
 
   content:
     text: "Hear from Alissa on how 4Geeks helps Chicago students launch tech careers."

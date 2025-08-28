@@ -132,9 +132,9 @@ two_columns:
     path: "/es/aplica"
   bullets:
     items: 
-    - text: "Siempre hay becas completas o parciales disponibles."
-    - text: "Hay oportunidades para todos en los condados de Miami-Dade, Broward y Palm Beach."
-    - text: "Mantenemos colaboraciones continuas con Miami Dade College, Miami Tech Coalition, UWM, la Ciudad de Miami, Miami Dade County y muchos más."
+      - text: "• Siempre hay becas completas o parciales disponibles."
+      - text: "• Hay oportunidades para todos en los condados de Miami-Dade, Broward y Palm Beach."
+      - text: "• Mantenemos colaboraciones continuas con Miami Dade College, Miami Tech Coalition, UWM, la Ciudad de Miami, Miami Dade County y muchos más."
 
 # Two Columns - Rigo
 two_columns_rigo:

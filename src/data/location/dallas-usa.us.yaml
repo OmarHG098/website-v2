@@ -105,9 +105,9 @@ two_columns:
     path: "/us/apply"
   bullets:
     items:
-      - text: "Build practical, job-ready skills through project-based learning"
-      - text: "Explore the tools and workflows used in today’s tech careers"
-      - text: "Get expert coaching tailored to Dallas’s evolving job market"
+      - text: "• Build practical, job-ready skills through project-based learning"
+      - text: "• Explore the tools and workflows used in today’s tech careers"
+      - text: "• Get expert coaching tailored to Dallas’s evolving job market"
 
   content:
     text: "Watch Alissa explain how 4Geeks empowers learners in Dallas."

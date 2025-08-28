@@ -103,10 +103,10 @@ two_columns:
     background: "black"
     path: "/us/apply"
   bullets:
-    items: 
-    - text: "Learn in an environment focused on real-world application"
-    - text: "Build a portfolio that reflects your potential and growth"
-    - text: "Receive expert coaching tailored to LA’s job market"
+    items:
+      - text: "• Learn in an environment focused on real-world application"
+      - text: "• Build a portfolio that reflects your potential and growth"
+      - text: "• Receive expert coaching tailored to LA’s job market"
 
   content:
     text: "Hear Alissa explain how 4Geeks helps learners succeed in LA’s tech space."

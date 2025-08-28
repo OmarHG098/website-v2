@@ -108,10 +108,10 @@ two_columns:
     background: "black"
     path: "/us/apply"
   bullets:
-    items: 
-    - text: "Work on real-world projects that demonstrate your readiness."
-    - text: "Learn with a future-focused, AI-aligned approach."
-    - text: "Personalized career support to guide your journey into Tampa's tech industry."
+    items:
+      - text: "• Work on real-world projects that demonstrate your readiness."
+      - text: "• Learn with a future-focused, AI-aligned approach."
+      - text: "• Personalized career support to guide your journey into Tampa's tech industry."
 
   content:
     text: "Watch Alissa share how 4Geeks supports learners in Tampa."

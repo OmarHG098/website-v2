@@ -106,10 +106,10 @@ two_columns:
     background: "black"
     path: "/us/apply"
   bullets:
-    items: 
-    - text: "Learn the tools and techniques powering modern tech careers"
-    - text: "Create real-world projects that demonstrate your ability"
-    - text: "Get career support to stand out in NYC’s competitive market"
+    items:
+      - text: "• Learn the tools and techniques powering modern tech careers"
+      - text: "• Create real-world projects that demonstrate your ability"
+      - text: "• Get career support to stand out in NYC’s competitive market"
 
   content:
     text: "Watch Alissa share how 4Geeks helps learners grow in New York City."

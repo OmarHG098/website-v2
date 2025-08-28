@@ -111,10 +111,11 @@ two_columns:
     background: "black"
     path: "/us/apply"
   bullets:
+    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
     items:
-      - text: "Learn industry-relevant tools used by Atlanta employers"
-      - text: "Build real-world projects to showcase your development skills"
-      - text: "Get personalized coaching to navigate Atlanta’s tech job market"
+      - text: "• Learn industry-relevant tools used by Atlanta employers"
+      - text: "• Build real-world projects to showcase your development skills"
+      - text: "• Get personalized coaching to navigate Atlanta’s tech job market"
   content:
     text: "Hear from Alissa on how 4Geeks helps Atlanta students thrive in tech."
 

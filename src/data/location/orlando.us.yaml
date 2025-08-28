@@ -105,10 +105,10 @@ two_columns:
     background: "black"
     path: "/us/apply"
   bullets:
-    items: 
-    - text: "Build confidence through hands-on projects and guided practice"
-    - text: "Explore technologies and tools relevant to today’s tech jobs"
-    - text: "Get personalized career support aligned with Orlando’s job market"
+    items:
+      - text: "• Build confidence through hands-on projects and guided practice"
+      - text: "• Explore technologies and tools relevant to today’s tech jobs"
+      - text: "• Get personalized career support aligned with Orlando’s job market"
 
   content:
     text: "Watch Alissa explain how 4Geeks helps Orlando learners thrive."

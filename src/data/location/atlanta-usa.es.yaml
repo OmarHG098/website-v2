@@ -82,10 +82,11 @@ two_columns:
     background: "black"
     path: "/es/aplica"
   bullets:
+    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
     items:
-      - text: "Proyectos prácticos donde obtendrás un dominio de las herramientas."
-      - text: "Plan de estudios alineado con la industria para estar listo para el mundo real"
-      - text: "Apoyo profesional para navegar la próspera industria tecnológica de Atlanta"
+      - text: "• Proyectos prácticos donde obtendrás un dominio de las herramientas."
+      - text: "• Plan de estudios alineado con la industria para estar listo para el mundo real"
+      - text: "• Apoyo profesional para navegar la próspera industria tecnológica de Atlanta"
 
 # Two Columns - Rigo
 two_columns_rigo:

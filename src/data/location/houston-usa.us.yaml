@@ -105,10 +105,11 @@ two_columns:
     background: "black"
     path: "/us/apply"
   bullets:
-    items: 
-    - text: "Gain confidence through hands-on, project-based learning"
-    - text: "Develop technical and professional skills relevant to today’s job market"
-    - text: "Access mentorship and career coaching every step of the way"
+    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+    items:
+      - text: "• Gain confidence through hands-on, project-based learning"
+      - text: "• Develop technical and professional skills relevant to today’s job market"
+      - text: "• Access mentorship and career coaching every step of the way"
 
   content:
     text: "Watch Alissa talk about how 4Geeks helps Houston learners grow in tech."

@@ -137,10 +137,10 @@ two_columns:
     background: "black"
     path: "/us/apply"
   bullets:
-    items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "Join 4Geeks Academy in creating pathways for innovation, creativity, and learning in the heart of Miami's tech ecosystem."
+    items:
+      - text: "• There is always a full or partial scholarship open"
+      - text: "• There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
+      - text: "• Join 4Geeks Academy in creating pathways for innovation, creativity, and learning in the heart of Miami's tech ecosystem."
 
 # Two Columns - Rigo
 two_columns_rigo:

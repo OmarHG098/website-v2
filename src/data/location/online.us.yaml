@@ -114,9 +114,9 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "Learn AI-aligned skills through guided, live instruction"
-    - text: "Work on practical projects to build real confidence"
-    - text: "Get expert career support tailored to your location and goals"
+      - text: "• Learn AI-aligned skills through guided, live instruction"
+      - text: "• Work on practical projects to build real confidence"
+      - text: "• Get expert career support tailored to your location and goals"
 
   content:
     text: "Watch Alissa explain why 4Geeks is a great option for learners across the U.S."

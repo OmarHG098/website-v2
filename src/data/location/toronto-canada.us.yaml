@@ -105,10 +105,10 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "Tailored courses aligned with Toronto's tech demands for career advancement"
-    - text: "Networking opportunities within Toronto's thriving tech community"
-    - text: "Expert guidance and insights shared by industry professionals"
-    - text: "Preparation for real-world challenges and job opportunities in technology"
+    - text: "• Tailored courses aligned with Toronto's tech demands for career advancement"
+    - text: "• Networking opportunities within Toronto's thriving tech community"
+    - text: "• Expert guidance and insights shared by industry professionals"
+    - text: "• Preparation for real-world challenges and job opportunities in technology"
 
   content:
     text: "Hear from Alissa about how 4Geeks supports students across Toronto."
