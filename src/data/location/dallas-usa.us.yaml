@@ -16,11 +16,11 @@ meta_info:
   cohort_exclude_regex: ['usa-\d{1,10}-spanish']
   home_video: "https://www.videoask.com/frhjxdk8z"
 
-seo_title: "Dallas Coding Bootcamp with Job Guarantee"
+seo_title: " Coding Bootcamp in Dallas with a Job Guarantee"
 header:
-  tagline: "4Geeks Academy in Dallas"
-  sub_header: "Transform into a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist in 18 weeks or less "
-  sub_header_highlighted: "All programs are taught online"
+  tagline: " 4Geeks Academy: Launch an AI-Ready Tech Career in Dallas"
+  sub_header: "Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist—with skills built for the AI era."
+  sub_header_highlighted: "Our programs are taught online or in person with live support."
   paragraph: ""
   image: "../../../static/images/locations/dallas-usa.webp"
   alt: "4Geeks Academy online coding bootcamp in Dallas, Texas"
@@ -28,12 +28,12 @@ header:
 badges:
   title: ""
   paragraph: |
-    4Geeks Academy is the place where developers grow and thrive.
 
-    We are licensed by the Florida Dept. of Education.
-    Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Dallas according to SwitchUp.
-    According to Newsweek, 4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States.
-    A community built for developers.
+divider:
+  heading:
+    text: "4Geeks Academy is a globally recognized coding bootcamp where future-ready developers grow and thrive. Licensed by the Florida Department of Education, we’ve been ranked as one of the top 5 coding bootcamps in the United States by SwitchUp and among the top 10 nationwide by Newsweek. At 4Geeks, we’re more than a school—we’re a community built to equip developers with the skills needed to succeed in the AI era."
+    font_size: ["34px", "34px", "34px", "28px", "26px"] # [xl, lg, md, sm, xs]
+    style: '{ "color": "#FFFFFF" }'
 
 news:
   title: "4Geeks Academy Dallas has been reviewed in:"
@@ -65,7 +65,7 @@ info_box:
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
 images_box:
-  heading: "What you should know about this location: "
+  heading: "Why Dallas Is a Smart Place to Launch Your Tech Career"
   content: "Dallas's tech ecosystem is thriving with a growing number of tech companies and startups. The city has become a hub for innovation and technology, with major corporations establishing their presence. As Dallas continues to expand its tech sector, coding bootcamps play a crucial role in developing the next generation of tech talent to meet the increasing demand for skilled developers in the region."
   images:
     - path: "../../../static/images/locations/dallas-usa.webp"
@@ -88,10 +88,10 @@ two_columns:
     shadow: true
   video: "EcqasocRKHo"
   heading:
-    text: "Unlocking Dallas's Coding Potential"
+    text: "Launch Your Tech Career in Dallas"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Receive unlimited guidance and support from experienced mentors throughout your journey, even after graduation. Master in-demand skills and launch your coding career with confidence."
+    text: "4Geeks Academy offers the guidance, structure, and hands-on experience you need to succeed in Dallas’s growing tech ecosystem. With unlimited mentorship, real-world projects, and personalized career support, we help you confidently enter the industry."
     font_size: ["18px", "18px", "18px", "18px", "18px"]
   button:
     text: "APPLY NOW"
@@ -100,9 +100,12 @@ two_columns:
     path: "/us/apply"
   bullets:
     items:
-      - text: "Hands-on projects fostering practical skill mastery"
-      - text: "Industry-aligned curriculum for real-world readiness"
-      - text: "Career support navigating Dallas's thriving tech industry"
+      - text: "Build practical, job-ready skills through project-based learning"
+      - text: "Explore the tools and workflows used in today’s tech careers"
+      - text: "Get expert coaching tailored to Dallas’s evolving job market"
+
+  content:
+    text: "Watch Alissa explain how 4Geeks empowers learners in Dallas."
 
 # Two Columns - Rigo
 two_columns_rigo:

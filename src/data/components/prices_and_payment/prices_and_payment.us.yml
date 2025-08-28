@@ -6,9 +6,8 @@ contact_link: /us/contact
 we_accept: "We Accept:"
 top_label: Location
 top_label_2: Program
-recomended: Recommended
-plans_title: Plans and prices
-plan_details: Plan details
+plans_title: Explore financial options
+plan_details: Invest in your future, stress-free
 select: Select the location and payment option that suits you best.
 select_2: Select the location, program and payment option that best meets your needs
 job_guarantee:
@@ -18,22 +17,18 @@ job_guarantee:
 apply_button: 
   label: APPLY NOW
   link: /us/apply
+
 not_available: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>No payment information has been found for this location and program.</p> <p>Please apply for more information or <a class="faq-link" href="/us/contact" rel="noopener noreferrer nofollow">send us a message.</a></p>'
 not_available_job_guarantee: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>We have no plans available with the modality Job Guarantee on this program at this location.</p> <p>Please apply for more information or <a class="faq-link" href="/us/contact" rel="noopener noreferrer nofollow">send us a message.</a></p>'
-chart_section:
-  title: '4Geeks: Breaking Down Barriers to Education'
-  data:
-    - percentage: '76%'
-      color: '#00A0DA'
-      description: 'of graduates benefited from our diverse financial assistance options that ensure education is accessible to all.'
-    - percentage: '28%'
-      color: '#FFB718'
-      description: 'of our students are women'
-    - percentage: '19%'
-      color: '#23C520'
-      description: 'of our students identify as African American'
 
 button:
   button_text: See plans and prices
   button_link: "/us/financials"
 loading: Loading Resources...
+
+cta:
+  advisor_text: Book a call with an advisor to find a payment option or special offer that works for you!
+  book_call: Book a call →
+  more_details: More details
+  apply_link: /us/apply
+  more_details_link: /us/financials

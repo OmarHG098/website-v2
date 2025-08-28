@@ -7,31 +7,25 @@ we_accept: "Aceptamos:"
 top_label: Sede
 top_label_2: Programa
 recomended: Recomendado
-plans_title: Planes y precios
-plan_details: Detalles del plan
+plans_title: Explora las opciones de financiamiento
+plan_details: Invierte en tu futuro, sin preocupaciones
 select: Selecciona la ubicacion y el plan que mejor se ajusta a ti
 select_2: Selecciona la ubicación, el programa y la opción de pago que mejor se adapte a sus necesidades
 job_guarantee:
   title:  "Compromiso de Garantía de Empleo:"
   description:  "Ambos nos comprometemos con tu futura carrera (te devolvemos el dinero si no lo logras)."
-apply_button: 
-  label: APLICAR
-  link: /es/aplica
+
 not_available: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>No se ha encontrado information de pago para este programa en este país.</p> <p>Para conocer más le invitamos a aplicar al programa y sera contactado por uno de nuestros asesores vocacionales o <a class="faq-link" href="/es/contactanos" rel="noopener noreferrer nofollow">envíenos un mensaje.</a></p>'
 not_available_job_guarantee: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>No tenemos disponible la modalidad Garantía de Empleo en este programa en esta locación.</p> <p>Para conocer más le invitamos a aplicar al programa y sera contactado por uno de nuestros asesores vocacionales o <a class="faq-link" href="/es/contactanos" rel="noopener noreferrer nofollow">envíenos un mensaje.</a></p>'
-chart_section:
-  title: '4Geeks: Cuando pagar deja de ser una preocupación'
-  data:
-    - percentage: '76%'
-      color: '#00A0DA'
-      description: 'de nuestros graduados recibió una beca total o parcial gracias a nuestras opciones de pago integrales.'
-    - percentage: '46%'
-      color: '#FFB718'
-      description: 'de nuestros estudiantes son mujeres'
-    - percentage: '24%'
-      color: '#23C520'
-      description: 'de nuestros estudiantes son parte de la comunidad afrodescendiente'
+
 button:
   button_text: Ver planes y precios
   button_link: "/es/financiacion"
 loading: Cargando Recursos...
+
+cta:
+  advisor_text: ¡Agenda una llamada con un asesor para encontrar una opción de pago u oferta especial que funcione para ti!
+  book_call: Agendar llamada →
+  more_details: Más detalles
+  apply_link: /es/apply
+  more_details_link: /es/financiacion
