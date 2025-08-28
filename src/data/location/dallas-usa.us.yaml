@@ -20,7 +20,7 @@ seo_title: " Coding Bootcamp in Dallas with a Job Guarantee"
 header:
   tagline: " 4Geeks Academy: Launch an AI-Ready Tech Career in Dallas"
   sub_header: "Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist—with skills built for the AI era."
-  sub_header_highlighted: "Our programs are taught online or in person with live support."
+  sub_header_highlighted: " Our programs are taught online or in person with live support."
   paragraph: ""
   image: "../../../static/images/locations/dallas-usa.webp"
   alt: "4Geeks Academy online coding bootcamp in Dallas, Texas"
@@ -28,10 +28,15 @@ header:
 badges:
   title: ""
   paragraph: |
-
+    4Geeks Academy is the place where developers grow and thrive.
+    We are licensed by the Florida Dept. of Education.
+    Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Atlanta according to SwitchUp.
+    According to Newsweek, 4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States.
+    A community built for developers.
+    
 divider:
   heading:
-    text: "4Geeks Academy is a globally recognized coding bootcamp where future-ready developers grow and thrive. Licensed by the Florida Department of Education, we’ve been ranked as one of the top 5 coding bootcamps in the United States by SwitchUp and among the top 10 nationwide by Newsweek. At 4Geeks, we’re more than a school—we’re a community built to equip developers with the skills needed to succeed in the AI era."
+    text: "Looking for a coding bootcamp in Dallas that actually helps you get hired? 4Geeks Academy offers a practical, project-based approach to learning code, backed by career coaching and a job guarantee. From downtown Dallas to Plano and beyond, our graduates are working at top tech companies across Texas. Start your journey today and join a growing network of Dallas-based developers."
     font_size: ["34px", "34px", "34px", "28px", "26px"] # [xl, lg, md, sm, xs]
     style: '{ "color": "#FFFFFF" }'
 
@@ -100,9 +105,9 @@ two_columns:
     path: "/us/apply"
   bullets:
     items:
-      - text: "Build practical, job-ready skills through project-based learning"
-      - text: "Explore the tools and workflows used in today’s tech careers"
-      - text: "Get expert coaching tailored to Dallas’s evolving job market"
+      - text: "• Build practical, job-ready skills through project-based learning"
+      - text: "• Explore the tools and workflows used in today’s tech careers"
+      - text: "• Get expert coaching tailored to Dallas’s evolving job market"
 
   content:
     text: "Watch Alissa explain how 4Geeks empowers learners in Dallas."
