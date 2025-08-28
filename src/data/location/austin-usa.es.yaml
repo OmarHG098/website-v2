@@ -19,7 +19,7 @@ seo_title: "Bootcamp de Programación en Austin"
 header:
   tagline: "4Geeks Academy: Inicia una Carrera Tech Lista para la IA en Austin"
   sub_header: "Conviértete en Desarrollador Full-Stack, Científico de Datos o Especialista en Ciberseguridad, con habilidades construidas para la era de la IA."
-  sub_header_highlighted: "Todos los programas son impartidos en línea con soporte en vivo."
+  sub_header_highlighted: " Todos los programas son impartidos en línea con soporte en vivo."
   paragraph: ""
   image: "../../../static/images/locations/austin-location.webp"
   alt: "4Geeks Academy modalidad online en Austin, Texas"
@@ -43,10 +43,17 @@ custom_bar:
 
 badges:
   title: ""
-
+  paragraph: |
+    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. 
+    Estamos autorizados por el Departamento de Educación de Florida. 
+    Elegido como uno de los 35 mejores cursos de programacion del mundo y 
+    el mejor <a href="/es/curso-de-programacion-desde-cero">curso de programacion</a> en Miami según SwitchUp. 
+    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
+    Una comunidad construida para desarrolladores.
+ 
 divider:
   heading:
-    text: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida, y hemos sido reconocidos como uno de los 5 mejores bootcamps de codificación en los Estados Unidos por SwitchUp y entre los 10 mejores a nivel nacional por Newsweek. En 4Geeks, somos más que una escuela: somos una comunidad construida para equipar a los desarrolladores con las habilidades necesarias para tener éxito en la era de la IA."
+    text: "¿Buscas el mejor bootcamp de programación en Austin? En 4Geeks Academy, combinamos instrucción experta con proyectos del mundo real para ayudarte a construir una carrera tecnológica en la ciudad más innovadora de Texas. Con horarios flexibles y garantía de trabajo, nuestros graduados de Austin han conseguido roles en empresas como IBM, Indeed y startups locales. Desarrolla habilidades tecnológicas en demanda y únete a una próspera comunidad de innovación en el corazón de Texas."
     font_size: ["34px", "34px", "34px", "28px", "26px"] # [xl, lg, md, sm, xs]
     style: '{ "color": "#FFFFFF" }'
 news:
@@ -103,10 +110,11 @@ two_columns:
     background: "black"
     path: "/es/aplica"
   bullets:
-    items: 
-    - text: "Desarrolla habilidades alineadas con las principales empresas tecnológicas de Austin"
-    - text: "Crea proyectos que reflejen la rápida innovación de la ciudad"
-    - text: "Obtén asesoramiento profesional experto para el competitivo mercado laboral de Austin"
+    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+    items:
+      - text: "• Desarrolla habilidades alineadas con las principales empresas tecnológicas de Austin"
+      - text: "• Crea proyectos que reflejen la rápida innovación de la ciudad"
+      - text: "• Obtén asesoramiento profesional experto para el competitivo mercado laboral de Austin"
 
   content:
     text: "Mira a Alissa contar por qué 4Geeks es la opción ideal para el talento tech en Austin."
