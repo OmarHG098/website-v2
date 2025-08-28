@@ -24,9 +24,9 @@ meta_info:
 seo_title: "Online Coding Bootcamps with Job Guarantee"
 header:
   tagline: "Learn To Code Online"
-  sub_header: "All programs are taught "
-  sub_header_highlighted: "Online, Hybrid or In-person."
-  paragraph: "Learning online is hard: Lucky for you, we offer: unlimited support, amazing content and lifetime career support. \\n Yes, it really is available for the rest of your life."
+  sub_header: ""
+  sub_header_highlighted: ""
+  paragraph: "Online learning can feel overwhelming—but not here. At 4Geeks Academy, you’ll get unlimited 1:1 support, cutting-edge AI-powered learning content, and lifetime career support. Yes—lifetime. Your success is backed for the rest of your career."
   image: "../../../static/images/locations/online-home.png"
   alt: ""
 
@@ -51,14 +51,17 @@ badges:
   title: ""
   paragraph: |
     4Geeks Academy is the place where developers grow and thrive.
- 
-    We are licensed by the USA F. Dep. of Education.
-  
-    Chosen as one of the top 35 coding bootcamps of the world and the top <a href="https://4geeksacademy.com/us/coding-bootcamp" rel="nofollow">coding bootcamp</a> in Miami according to SwitchUp.
-
-    4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
-
+    We are licensed by the Florida Dept. of Education.
+    Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Atlanta according to SwitchUp.
+    According to Newsweek, 4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States.
     A community built for developers.
+    
+divider:
+  heading:
+    text: "No matter where you live in the U.S., you can launch your tech career with 4Geeks Academy. Our remote coding bootcamp gives you access to expert instructors, real-world projects, and ongoing career support—all from the comfort of your home. Join thousands of graduates across the country who’ve built new futures in tech, and start learning today."
+    font_size: ["34px", "34px", "34px", "28px", "26px"] # [xl, lg, md, sm, xs]
+    style: '{ "color": "#FFFFFF" }'
+
 news:
   title: "4Geeks Academy in the news..."
 upcoming:
@@ -75,9 +78,9 @@ info_box:
   image: "../../../static/images/locations/remote.jpeg"
   alt: ""
 images_box:
-  heading: "What you should know about this location: "
+  heading: "Unlimited Mentorship, Global Community, Real Results"
   content: >
-    Online real life classes - NOT "Go watch the video and figure it out for yourself": You have unlimited One-on-One mentoring, access to live chat support 12 hours a day, hundreds of interactive exercises and videos, real time streaming classes and our very own social network where our thousands of graduates are actively engaged around the world."
+    "Learn online the real way—not by being told to ‘watch the video and figure it out.’ At 4Geeks Academy, you’ll get unlimited 1-on-1 mentoring, live chat support 12 hours a day, hundreds of interactive exercises and videos, real-time streaming classes, and access to our global graduate network. Thousands of alumni worldwide stay active, ready to support you every step of your career."
   images:
     - path: "../../../static/images/locations/remote.jpeg"
       alt: "Remote Coding Bootcamp"
@@ -99,10 +102,10 @@ two_columns:
     shadow: true
   video: "EcqasocRKHo"
   heading:
-    text: "Master Your Coding Journey Online with 4Geeks Academy's Unmatched Support"
+    text: "Your Tech Career Starts Here—Anywhere in America"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Develop Your Tech Skills from Anywhere and Enjoy the perks of unlimited coding mentorship and career support with personalized 1-on-1 sessions with your mentor and career support team and become developer."
+    text: "No matter where you are, 4Geeks Academy gives you access to live mentorship, real-world learning, and career coaching. Our flexible schedule and future-focused curriculum help you grow from anywhere."
     font_size: ["18px", "18px", "18px", "18px", "18px"]
   button:
     text: "APPLY NOW"
@@ -111,9 +114,12 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "Interactive courses focusing on essential technical skills for today's digital world"
-    - text: "Access to experienced instructors and a collaborative learning community"
-    - text: "Preparation for real-world challenges and job opportunities in technology"
+      - text: "• Learn AI-aligned skills through guided, live instruction"
+      - text: "• Work on practical projects to build real confidence"
+      - text: "• Get expert career support tailored to your location and goals"
+
+  content:
+    text: "Watch Alissa explain why 4Geeks is a great option for learners across the U.S."
 
 # Two Columns - Rigo
 two_columns_rigo:

@@ -47,9 +47,15 @@ badges:
     4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. 
     Estamos autorizados por el Departamento de Educación de Florida. 
     Elegido como uno de los 35 mejores cursos de programacion del mundo y 
-    el mejor <a href="https://4geeksacademy.com/es/curso-de-programacion-desde-cero" rel="nofollow">curso de programacion</a> en Tampa según SwitchUp. 
+    el mejor <a href="/es/curso-de-programacion-desde-cero">curso de programacion</a> en Miami según SwitchUp. 
     4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
     Una comunidad construida para desarrolladores.
+ 
+divider:
+  heading:
+    text: "¿Listo para elevar tu carrera en la creciente escena tecnológica de Tampa? 4Geeks Academy ofrece entrenamiento flexible y basado en proyectos diseñado para prepararte para el trabajo. Con la guía de mentores experimentados y apoyo profesional personalizado, nuestros estudiantes de Tampa han hecho transiciones exitosas a roles en toda la industria tecnológica de la costa oeste de Florida, sin importar su punto de partida."
+    font_size: ["34px", "34px", "34px", "28px", "26px"]
+    style: '{ "color": "#FFFFFF" }'
 news:
   title: "4Geeks Academy Tampa en las noticias..."
 upcoming:
@@ -89,7 +95,7 @@ two_columns:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
     src: "/static/images/testimonials/allisa-testimonial.jpg"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  video: "EcqasocRKHo"
   heading:
     text: " Tu Sendero hacia la Tecnología con 4Geeks Academy en Tampa"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -103,9 +109,12 @@ two_columns:
     path: "/es/aplica"
   bullets:
     items: 
-    - text: "Plan de estudios adaptado para nutrir tus habilidades tecnológicas y crecimiento profesional"
-    - text: "Cursos dirigidos por expertos que enfatizan el dominio práctico en codificación para aplicaciones reales"
-    - text: "Enfoque centrado en la carrera profesional que te prepara para destacar en el competitivo mercado laboral"
+      - text: "• Plan de estudios adaptado para nutrir tus habilidades tecnológicas y crecimiento profesional"
+      - text: "• Cursos dirigidos por expertos que enfatizan el dominio práctico en codificación para aplicaciones reales"
+      - text: "• Enfoque centrado en la carrera profesional que te prepara para destacar en el competitivo mercado laboral"
+
+  content:
+    text: "Mira a Alissa compartir cómo 4Geeks apoya a los estudiantes en Tampa."
 
 # Two Columns - Rigo
 two_columns_rigo:
