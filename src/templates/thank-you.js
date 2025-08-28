@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import BaseRender from "./_baseLayout";
 import { Div, GridContainer, HR } from "../components/Sections";
 import { H1, H2, H3, Paragraph } from "../components/Heading";
-import { Colors, Anchor } from "../components/Styling";
+import { Colors, Anchor, Img } from "../components/Styling";
 import Icon from "../components/Icon";
 import { SessionContext } from "../session.js";
 import { isCustomBarActive } from "../actions";
@@ -44,6 +44,67 @@ const ThankYou = (props) => {
       });
     setComponents({ ...yml, ..._components });
   }, [yml]);
+
+  const renderCompactSection = (comp, keyIndex) => {
+    const { image, heading, content, button, background } = comp || {};
+    const bg = background ? Colors[background] || background : undefined;
+    const imageStyle = image && image.style ? JSON.parse(image.style) : null;
+    const contentStyle = content && content.style ? JSON.parse(content.style) : null;
+    return (
+      <Div
+        key={`compact-${keyIndex}`}
+        background={bg || Colors.white}
+        padding="16px"
+        margin="10px 0"
+        display="grid"
+        gridTemplateColumns="60px 1fr"
+        gap="12px"
+        alignItems="start"
+        borderRadius="8px"
+        style={{ boxShadow: "0px 4px 16px rgba(0,0,0,0.08)" }}
+      >
+        {image?.src && (
+          <Img
+            src={image.src}
+            alt="section"
+            width="60px"
+            height="60px"
+            style={imageStyle}
+            backgroundSize="cover"
+          />
+        )}
+        <Div flexDirection="column" gap="6px" textAlign="left">
+          {heading?.text && (
+            <H3 fontSize="16px" lineHeight="20px" margin="0" textAlign="left">
+              {heading.text}
+            </H3>
+          )}
+          {content?.text && (
+            <Paragraph
+              fontSize="13px"
+              lineHeight="18px"
+              margin="0 0 8px 0"
+              textAlign="left"
+              style={contentStyle}
+              dangerouslySetInnerHTML={{ __html: content.text }}
+            />
+          )}
+          {button?.text && button?.path && (
+            <Div display="flex" justifyContent="flex-end" width="100%">
+              <Anchor
+                to={button.path}
+                display="inline-block"
+                color={Colors.blue}
+                style={{ textDecoration: "none", fontSize: "13px", fontWeight: "600" }}
+              >
+                {button.text}
+              </Anchor>
+            </Div>
+          )}
+        </Div>
+      </Div>
+    );
+  };
 
   return (
     <>
@@ -140,9 +201,8 @@ const ThankYou = (props) => {
           </Paragraph>
         ))}
       </Div>
-
-      {/* Render AdmissionsStaff only for English */}
-      <AdmissionsStaff lang={session?.language} />
+      
+      <AdmissionsStaff />
 
       {/* Dynamic Components (YAML-driven) */}
       {Object.keys(components)
@@ -155,13 +215,24 @@ const ThankYou = (props) => {
           components[b].position > components[a].position ? -1 : 1
         )
         .map((name, index) => {
-          const layout = components[name].layout || name;
-          return landingSections[layout]({
+          const comp = components[name];
+          const layout = comp.layout || name;
+          const original = landingSections[layout]({
             ...props,
-            yml: components[name],
+            yml: comp,
             session,
             index: index,
           });
+          return (
+            <React.Fragment key={`section-${index}`}>
+              <Div display="none" display_tablet="block">
+                {original}
+              </Div>
+              <Div display="block" display_tablet="none">
+                {renderCompactSection(comp, index)}
+              </Div>
+            </React.Fragment>
+          );
         })}
 
       <GridContainer

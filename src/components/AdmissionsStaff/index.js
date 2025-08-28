@@ -113,52 +113,50 @@ const AdmissionsStaff = (props) => {
           </Paragraph>
         )}
       </Div>
-      <Div>
+      <Div display="flex" flexDirection="column" alignItems="center">
         {admissionsStaff.staff.map((item, index) => (
           <Div
             key={index}
-            display="grid"
-            gridTemplateColumns="repeat(12,1fr)"
-            gridTemplateColumns_tablet="repeat(12,1fr)"
-            gap="16px"
-            margin="0 0 24px 0"
+            display="flex"
+            flexDirection="row"
             alignItems="center"
+            gap="12px"
+            margin="0 0 24px 0"
+            padding="16px"
+            border={`2px solid ${Colors.lightGray}`}
+            borderRadius="4px"
+            width="100%"
+            maxWidth="500px"
           >
-            <Div gridColumn="2 / span 4" gridColumn_tablet="2 / span 4">
+            <Div width="160px" width_tablet="200px" width_sm="120px" width_xs="80px">
               <Div
                 width="100%"
                 height_tablet="240px"
-                height_sm="280px"
-                height="180px"
+                height_sm="120px"
+                height="160px"
+                height_xs="90px"
                 alignItems="center"
-                alignItems_tablet="center"
                 justifyContent="center"
               >
                 {item.image && item.image.childImageSharp && (
                   <GatsbyImage
                     image={getImage(item.image.childImageSharp.gatsbyImageData)}
-                    style={{ height: "100%", width: "100%" }}
-                    imgStyle={{
-                      objectFit: "contain",
-                      objectPosition: "center",
-                    }}
+                    style={{ height: "100%", width: "100%", borderRadius: "4px" }}
+                    imgStyle={{ objectFit: "cover", objectPosition: "center" }}
                     alt={`${item.name} ${item.last_name}`}
                   />
                 )}
               </Div>
             </Div>
-            <Div
-              gridColumn="7 / span 5"
-              gridColumn_tablet="7 / span 5"
-              flexDirection="column"
-            >
+            <Div flex="1" flexDirection="column">
               <H3
-                fontSize="18px"
-                fontSize_tablet="22px"
-                lineHeight="22px"
+                fontSize="16px"
+                fontSize_tablet="20px"
+                lineHeight="20px"
                 lineHeight_tablet="26px"
                 margin="0 0 6px 0"
                 margin_tablet="0 0 8px 0"
+                textAlign="left"
               >
                 {item.name} {item.last_name}
               </H3>
@@ -169,6 +167,7 @@ const AdmissionsStaff = (props) => {
                 lineHeight_tablet="20px"
                 margin="0 0 8px 0"
                 margin_tablet="0 0 8px 0"
+                textAlign="left"
               >
                 {item.job_title}
               </H4>
@@ -178,6 +177,7 @@ const AdmissionsStaff = (props) => {
                 margin="0 0 4px 0"
                 margin_tablet="0 0 6px 0"
                 color="#444"
+                textAlign="left"
               >
                 <strong>Phone:</strong>{" "}
                 <Anchor to={`tel:${item.phone.replace(/[^ -9]/g, "")}`}>
@@ -190,11 +190,12 @@ const AdmissionsStaff = (props) => {
                 margin="0 0 12px 0"
                 margin_tablet="0 0 12px 0"
                 color="#444"
+                textAlign="left"
               >
                 <strong>Email:</strong>{" "}
                 <Anchor to={`mailto:${item.email}`}>{item.email}</Anchor>
               </Paragraph>
-              <Div display="flex" justifyContent="center" marginTop="auto">
+              <Div display="flex" justifyContent="flex-start" marginTop="auto">
                 <Link to={item.calendly_link}>
                   <Button
                     aria-label={`Book a call with ${item.name} ${item.last_name}`}
