@@ -67,7 +67,10 @@ const AdmissionsStaff = (props) => {
   };
 
   // Prefer explicit prop.lang, then session.language; fallback to us for data selection only
-  const dataLang = (props.lang || session?.language || "us").replace("en", "us");
+  const dataLang = (props.lang || session?.language || "us").replace(
+    "en",
+    "us"
+  );
   let admissionsStaff = data.allAdmissionsStaffYaml.edges.find(
     ({ node }) => node.fields.lang === dataLang
   );
@@ -75,7 +78,9 @@ const AdmissionsStaff = (props) => {
   else return null;
 
   // Filter staff members based on current location
-  const filteredStaff = (Array.isArray(admissionsStaff.staff) ? admissionsStaff.staff : []).filter(filterByLocation);
+  const filteredStaff = (
+    Array.isArray(admissionsStaff.staff) ? admissionsStaff.staff : []
+  ).filter(filterByLocation);
   // Avoid flicker: if session exists but no candidates yet, do not render until location resolves
   const candidates = [
     session?.location?.breathecode_location_slug,
@@ -128,7 +133,12 @@ const AdmissionsStaff = (props) => {
             width="100%"
             maxWidth="500px"
           >
-            <Div width="160px" width_tablet="200px" width_sm="120px" width_xs="80px">
+            <Div
+              width="160px"
+              width_tablet="200px"
+              width_sm="120px"
+              width_xs="80px"
+            >
               <Div
                 width="100%"
                 height_tablet="240px"
@@ -141,7 +151,11 @@ const AdmissionsStaff = (props) => {
                 {item.image && item.image.childImageSharp && (
                   <GatsbyImage
                     image={getImage(item.image.childImageSharp.gatsbyImageData)}
-                    style={{ height: "100%", width: "100%", borderRadius: "4px" }}
+                    style={{
+                      height: "100%",
+                      width: "100%",
+                      borderRadius: "4px",
+                    }}
                     imgStyle={{ objectFit: "cover", objectPosition: "center" }}
                     alt={`${item.name} ${item.last_name}`}
                   />

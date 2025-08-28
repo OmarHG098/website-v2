@@ -49,7 +49,8 @@ const ThankYou = (props) => {
     const { image, heading, content, button, background } = comp || {};
     const bg = background ? Colors[background] || background : undefined;
     const imageStyle = image && image.style ? JSON.parse(image.style) : null;
-    const contentStyle = content && content.style ? JSON.parse(content.style) : null;
+    const contentStyle =
+      content && content.style ? JSON.parse(content.style) : null;
     return (
       <Div
         key={`compact-${keyIndex}`}
@@ -95,7 +96,11 @@ const ThankYou = (props) => {
                 to={button.path}
                 display="inline-block"
                 color={Colors.blue}
-                style={{ textDecoration: "none", fontSize: "13px", fontWeight: "600" }}
+                style={{
+                  textDecoration: "none",
+                  fontSize: "13px",
+                  fontWeight: "600",
+                }}
               >
                 {button.text}
               </Anchor>
@@ -201,14 +206,23 @@ const ThankYou = (props) => {
           </Paragraph>
         ))}
       </Div>
-      
+
       <AdmissionsStaff />
 
       {/* Dynamic Components (YAML-driven) */}
+      {components?.title?.heading?.text && (
+        <H2 type="h2" margin="30px 0 10px 0">
+          {components.title.heading.text}
+        </H2>
+      )}
+      {!components?.title?.heading?.text && (
+        <H2 type="h2" margin="30px 0 10px 0">Explore Free Resources</H2>
+      )}
       {Object.keys(components)
         .filter(
           (name) =>
             components[name] &&
+            name !== "title" &&
             (landingSections[name] || landingSections[components[name].layout])
         )
         .sort((a, b) =>
@@ -303,6 +317,11 @@ export const query = graphql`
             title
             message
             button
+          }
+          title {
+            heading {
+              text
+            }
           }
           social {
             title
