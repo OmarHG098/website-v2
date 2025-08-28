@@ -211,13 +211,14 @@ const ThankYou = (props) => {
 
       {/* Dynamic Components (YAML-driven) */}
       {components?.title?.heading?.text && (
-        <H2 type="h2" margin="30px 0 10px 0">
+        <H2 type="h2"
+          margin="30px 0 10px 0"
+          fontSize="48px"
+          fontSize_xs="32px">
           {components.title.heading.text}
         </H2>
       )}
-      {!components?.title?.heading?.text && (
-        <H2 type="h2" margin="30px 0 10px 0">Explore Free Resources</H2>
-      )}
+
       {Object.keys(components)
         .filter(
           (name) =>
