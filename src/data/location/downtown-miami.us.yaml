@@ -25,9 +25,9 @@ meta_info:
 
 seo_title: "Miami Coding Bootcamp"
 header:
-  tagline: "4Geeks Academy in Miami"
-  sub_header: "All programs are taught "
-  sub_header_highlighted: "Online or In-person."
+  tagline: "4Geeks Academy: Launch an AI-Ready Tech Career in Miami"
+  sub_header: "Master the Skills of the AI Era and Build a Future-Proof Career in 20 Weeks."
+  sub_header_highlighted: " Our programs are taught online or in person with live support."
   paragraph: ""
   image: "../../../static/images/locations/miami-home.png"
   alt: "4Geeks Academy live coding bootcamp in Miami, Florida"
@@ -46,15 +46,17 @@ badges:
   title: ""
   paragraph: |
     4Geeks Academy is the place where developers grow and thrive.
- 
-    We are licensed by the USA F. Dep. of Education.
-  
-    Chosen as one of the top 35 coding bootcamps of the world and the top <a href="https://4geeksacademy.com/us/coding-bootcamp" rel="nofollow">coding bootcamp</a> in Miami according to SwitchUp.
-
-    4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
-
-
+    We are licensed by the Florida Dept. of Education.
+    Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Atlanta according to SwitchUp.
+    According to Newsweek, 4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States.
     A community built for developers.
+
+divider:
+  heading:
+    text: "Miami is one of the fastest-growing tech hubs in the U.S.—and 4Geeks Academy is at the center of it. As a leading coding bootcamp in Miami, we’ve helped hundreds of students launch tech careers at startups, agencies, and global companies like Microsoft and Meta. With flexible schedules, expert instructors, and a strong local presence, we’re here to help you succeed in South Florida’s tech industry."
+    font_size: ["34px", "34px", "34px", "28px", "26px"] # [xl, lg, md, sm, xs]
+    style: '{ "color": "#FFFFFF" }'
+
 news:
   title: "4Geeks Academy Miami has been reviewed in:"
 upcoming:
@@ -100,7 +102,7 @@ info_box:
   image: "../../../static/images/locations/miami-map.png"
   alt: ""
 images_box:
-  heading: "What you should know about this location: "
+  heading: "Why Miami Is a Smart Place to Launch Your Tech Career "
   content: "Miami is one of the fastest growing tech ecosystems in the world. Join the #1 part-time Coding Bootcamp in Miami and become part of the best place to learn to code in Florida. \n Career Support and Mentorship for our students is for life. Located in Brickell and 5 mins away from the Metro Mover (subway station). Our place is full of amenities, and close to everything. We have parking (free for students and members of the community), and we have a great terrace! Brickell is one of the most active areas in the city. The office is opened 24/7 during the week and on Saturday we host our famous 'Coding Weekends' when students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
   images:
     - path: "../../../static/images/locations/miami-loc.jpg"
@@ -135,10 +137,10 @@ two_columns:
     background: "black"
     path: "/us/apply"
   bullets:
-    items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "Join 4Geeks Academy in creating pathways for innovation, creativity, and learning in the heart of Miami's tech ecosystem."
+    items:
+      - text: "• There is always a full or partial scholarship open"
+      - text: "• There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
+      - text: "• Join 4Geeks Academy in creating pathways for innovation, creativity, and learning in the heart of Miami's tech ecosystem."
 
 # Two Columns - Rigo
 two_columns_rigo:

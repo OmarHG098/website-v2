@@ -42,7 +42,7 @@ custom_bar:
     path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:
-  title: ""
+  title: ""  
   paragraph: |
     4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. 
     Estamos autorizados por el Departamento de Educación de Florida. 
@@ -50,6 +50,12 @@ badges:
     el mejor <a href="/es/curso-de-programacion-desde-cero">curso de programacion</a> en Miami según SwitchUp. 
     4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
     Una comunidad construida para desarrolladores.
+    
+divider:
+  heading:
+    text: "No importa dónde vivas en Estados Unidos, puedes lanzar tu carrera tech con 4Geeks Academy. Nuestro bootcamp de programación remoto te da acceso a instructores expertos, proyectos del mundo real y apoyo profesional continuo—todo desde la comodidad de tu hogar. Únete a miles de graduados en todo el país que han construido nuevos futuros en tech, y comienza a aprender hoy."
+    font_size: ["34px", "34px", "34px", "28px", "26px"]
+    style: '{ "color": "#FFFFFF" }'
 news:
   title: "4Geeks Academy Online en las noticias..."
 upcoming:
@@ -87,7 +93,7 @@ two_columns:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
     src: "/static/images/testimonials/allisa-testimonial.jpg"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  video: "EcqasocRKHo"
   heading:
     text: "Tu Viaje con 4Geeks Academy en Línea"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -100,10 +106,12 @@ two_columns:
     background: "black"
     path: "/es/aplica"
   bullets:
-    items: 
-    - text: "Cursos interactivos enfocados en habilidades técnicas esenciales para el mundo digital actual"
-    - text: "Acceso a profesores experimentados y una comunidad colaborativa de aprendizaje"
-    - text: "Preparación para desafíos del mundo real y oportunidades laborales en tecnología"
+    items:
+      - text: "• Cursos interactivos enfocados en habilidades técnicas esenciales para el mundo digital actual"
+      - text: "• Acceso a profesores experimentados y una comunidad colaborativa de aprendizaje"
+      - text: "• Preparación para desafíos del mundo real y oportunidades laborales en tecnología"
+  content:
+    text: "Mira a Alissa explicar por qué 4Geeks es una gran opción para estudiantes en todo Estados Unidos."
 
 # Two Columns - Rigo
 two_columns_rigo:

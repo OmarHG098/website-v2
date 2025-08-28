@@ -749,6 +749,34 @@ exports.createSchemaCustomization = ({ actions }) => {
       redirects: [String]
       related_clusters: [String]
     }
+    type PlansYamlFull_time implements Node {
+      recomended: String
+      recommended_color: String
+      scholarship: String
+      payment_time: String
+      price: String
+      original_price: String
+      warning_message: String
+      offer: String
+      bullets: [String]
+      icons: [String]
+      academies: [String]
+      slug: String
+    }
+    type PlansYamlPart_time implements Node {
+      recomended: String
+      recommended_color: String
+      scholarship: String
+      payment_time: String
+      price: String
+      original_price: String
+      warning_message: String
+      offer: String
+      bullets: [String]
+      icons: [String]
+      academies: [String]
+      slug: String
+    }
   `;
   createTypes(typeDefs);
 };
