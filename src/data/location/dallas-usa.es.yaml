@@ -28,15 +28,18 @@ header:
 badges:
   title: ""
   paragraph: |
-    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan.
-  
-    Estamos autorizados por el Departamento de Educación de Florida.
-      
-    Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Dallas según SwitchUp.
-
-    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.
-
+    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. 
+    Estamos autorizados por el Departamento de Educación de Florida. 
+    Elegido como uno de los 35 mejores cursos de programacion del mundo y 
+    el mejor <a href="/es/curso-de-programacion-desde-cero">curso de programacion</a> en Miami según SwitchUp. 
+    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
     Una comunidad construida para desarrolladores.
+ 
+divider:
+  heading:
+    text: "¿Buscas un bootcamp de programación en Dallas que realmente te ayude a conseguir trabajo? 4Geeks Academy ofrece un enfoque práctico y basado en proyectos para aprender a programar, respaldado por coaching profesional y garantía de trabajo. Desde el centro de Dallas hasta Plano y más allá, nuestros graduados trabajan en las principales empresas tecnológicas de Texas. Comienza tu viaje hoy y únete a una creciente red de desarrolladores en Dallas."
+    font_size: ["34px", "34px", "34px", "28px", "26px"]
+    style: '{ "color": "#FFFFFF" }'
 
 news:
   title: "4Geeks Academy Dallas en las noticias..."
@@ -90,7 +93,7 @@ two_columns:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
     src: "/static/images/testimonials/allisa-testimonial.jpg"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  video: "EcqasocRKHo"
   heading:
     text: "Descubre el Escenario de la Programación en Dallas"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -103,10 +106,13 @@ two_columns:
     background: "black"
     path: "/es/aplica"
   bullets:
-    items: 
-    - text: "Plan de estudios alineado con la industria enfocado en su aplicabilidad práctica"
-    - text: "Aprendizaje práctico basado en proyectos para el perfeccionamiento de habilidades"
-    - text: "Orientación profesional para navegar el dinámico sector tecnológico de Dallas"
+    items:
+      - text: "• Plan de estudios alineado con la industria enfocado en su aplicabilidad práctica"
+      - text: "• Aprendizaje práctico basado en proyectos para el perfeccionamiento de habilidades"
+      - text: "• Orientación profesional para navegar el dinámico sector tecnológico de Dallas"
+
+  content:
+    text: "Mira a Alissa explicar cómo 4Geeks potencia a los estudiantes en Dallas."
 
 # Two Columns - Rigo
 two_columns_rigo:

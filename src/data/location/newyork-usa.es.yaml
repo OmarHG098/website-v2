@@ -44,15 +44,18 @@ custom_bar:
 badges:
   title: ""
   paragraph: |
-    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan.
-    
-    Estamos autorizados por el Departamento de Educación de Florida.
-      
-    Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en NYC según SwitchUp.
-
-    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.
-
+    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. 
+    Estamos autorizados por el Departamento de Educación de Florida. 
+    Elegido como uno de los 35 mejores cursos de programacion del mundo y 
+    el mejor <a href="/es/curso-de-programacion-desde-cero">curso de programacion</a> en Miami según SwitchUp. 
+    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
     Una comunidad construida para desarrolladores.
+ 
+divider:
+  heading:
+    text: "¿Sueñas con un trabajo en tecnología en NYC? 4Geeks Academy ofrece entrenamiento flexible, mentoría personalizada y un sistema de apoyo profesional comprobado, perfecto para quienes están listos para lanzar una carrera en la ciudad que nunca duerme. Aprende desde cualquier lugar en Nueva York y únete a graduados que han conseguido roles en startups y empresas Fortune 500. Construyamos tu futuro en tecnología, aquí mismo en la ciudad de Nueva York."
+    font_size: ["34px", "34px", "34px", "28px", "26px"]
+    style: '{ "color": "#FFFFFF" }'
 news:
   title: "4Geeks Academy NYC en las noticias..."
 upcoming:
@@ -90,7 +93,7 @@ two_columns:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
     src: "/static/images/testimonials/allisa-testimonial.jpg"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  video: "EcqasocRKHo"
   heading:
     text: "Explorando 4Geeks Academy en Nueva York"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -104,9 +107,12 @@ two_columns:
     path: "/es/aplica"
   bullets:
     items: 
-    - text: "Plan de estudios orientado al empleo asegurando el éxito profesional"
-    - text: "Cursos que enfatizan el dominio en codificación y mejora de habilidades"
-    - text: "Asesoramiento profesional maximizando oportunidades dentro de la vibrante industria tecnológica de Nueva York"
+      - text: "• Plan de estudios orientado al empleo asegurando el éxito profesional"
+      - text: "• Cursos que enfatizan el dominio en codificación y mejora de habilidades"
+      - text: "• Asesoramiento profesional maximizando oportunidades dentro de la vibrante industria tecnológica de Nueva York"
+
+  content:
+    text: "Mira a Alissa compartir cómo 4Geeks ayuda a los estudiantes a crecer en Nueva York City."
 
 # Two Columns - Rigo
 two_columns_rigo:

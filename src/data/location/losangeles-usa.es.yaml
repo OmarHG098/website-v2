@@ -45,15 +45,18 @@ custom_bar:
 badges:
   title: ""
   paragraph: |
-    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan.
-  
-    Estamos autorizados por el Departamento de Educación de Florida.
-      
-    Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Los Angeles según SwitchUp.
-
-    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.
-
+    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. 
+    Estamos autorizados por el Departamento de Educación de Florida. 
+    Elegido como uno de los 35 mejores cursos de programacion del mundo y 
+    el mejor <a href="/es/curso-de-programacion-desde-cero">curso de programacion</a> en Miami según SwitchUp. 
+    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
     Una comunidad construida para desarrolladores.
+ 
+divider:
+  heading:
+    text: "La escena tecnológica de LA está en auge, y 4Geeks Academy puede ayudarte a ser parte de ella. Nuestro bootcamp de programación en Los Ángeles ofrece entrenamiento práctico, mentoría experta y apoyo profesional para ayudarte a conseguir trabajo. Ya sea que estés en Hollywood o Huntington Beach, únete a una red global de profesionales y comienza tu viaje hacia la tecnología."
+    font_size: ["34px", "34px", "34px", "28px", "26px"]
+    style: '{ "color": "#FFFFFF" }'
 news:
   title: "4Geeks Academy Los Angeles en las noticias..."
 upcoming:
@@ -91,7 +94,7 @@ two_columns:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
     src: "/static/images/testimonials/allisa-testimonial.jpg"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  video: "EcqasocRKHo"
   heading:
     text: "Potenciando Carreras en LA"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -104,10 +107,13 @@ two_columns:
     background: "black"
     path: "/es/aplica"
   bullets:
-    items: 
-    - text: "Garantía laboral asegurando el desarrollo profesional"
-    - text: "Cursos dedicados a mejorar habilidades de programación y dominar la codificación"
-    - text: "Asesoramiento profesional maximizando oportunidades dentro de la industria tecnológica"
+    items:
+      - text: "• Garantía laboral asegurando el desarrollo profesional"
+      - text: "• Cursos dedicados a mejorar habilidades de programación y dominar la codificación"
+      - text: "• Asesoramiento profesional maximizando oportunidades dentro de la industria tecnológica"
+
+  content:
+    text: "Escucha a Alissa explicar cómo 4Geeks ayuda a los estudiantes a triunfar en el ecosistema tech de LA."
 
 # Two Columns - Rigo
 two_columns_rigo:
