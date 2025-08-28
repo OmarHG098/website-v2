@@ -24,6 +24,7 @@ const AdmissionsStaff = (props) => {
               phone
               email
               calendly_link
+              locations
               image {
                 childImageSharp {
                   gatsbyImageData(
@@ -41,24 +42,51 @@ const AdmissionsStaff = (props) => {
   `);
 
   const { session } = useContext(SessionContext);
-  const lang = props.lang || session?.language;
-  if (lang !== "us" && lang !== "en" && lang !== "es") return null;
 
-  // Check if current location is in the US
-  const isUSLocation =
-    session?.location?.country === "USA" ||
-    session?.location?.country === "US" ||
-    (session?.location?.slug &&
-      (session?.location?.slug.includes("-usa") ||
-        session?.location?.slug === "downtown-miami"));
+  const filterByLocation = (staffMember) => {
+    const locations = Array.isArray(staffMember.locations)
+      ? staffMember.locations
+          .filter((s) => typeof s === "string" && s.trim() !== "")
+          .map((s) => s.trim())
+      : [];
 
-  if (!isUSLocation) return null;
+    const candidates = [
+      session?.location?.breathecode_location_slug,
+      session?.location?.meta_info?.slug,
+      session?.location?.active_campaign_location_slug,
+    ].filter((s) => typeof s === "string" && s.length > 0);
 
+    // If the location is not resolved yet, render only if staff targets at least one location
+    if (candidates.length === 0) return locations.length > 0;
+
+    // Match any candidate or "all"
+    for (const id of candidates) {
+      if (locations.includes(id) || locations.includes("all")) return true;
+    }
+    return false;
+  };
+
+  // Prefer explicit prop.lang, then session.language; fallback to us for data selection only
+  const dataLang = (props.lang || session?.language || "us").replace("en", "us");
   let admissionsStaff = data.allAdmissionsStaffYaml.edges.find(
-    ({ node }) => node.fields.lang === lang
+    ({ node }) => node.fields.lang === dataLang
   );
   if (admissionsStaff) admissionsStaff = admissionsStaff.node;
   else return null;
+
+  // Filter staff members based on current location
+  const filteredStaff = (Array.isArray(admissionsStaff.staff) ? admissionsStaff.staff : []).filter(filterByLocation);
+  // Avoid flicker: if session exists but no candidates yet, do not render until location resolves
+  const candidates = [
+    session?.location?.breathecode_location_slug,
+    session?.location?.meta_info?.slug,
+    session?.location?.active_campaign_location_slug,
+  ].filter((s) => typeof s === "string" && s.length > 0);
+  if (session && candidates.length === 0) return null;
+  if (filteredStaff.length === 0) return null;
+
+  // Update the admissionsStaff object with filtered staff
+  admissionsStaff = { ...admissionsStaff, staff: filteredStaff };
 
   return (
     <Div
