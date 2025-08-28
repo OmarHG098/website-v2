@@ -42,11 +42,17 @@ custom_bar:
     path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:
-  title: ""
-
+  title: ""  
+  paragraph: |
+    4Geeks Academy is the place where developers grow and thrive.
+    We are licensed by the Florida Dept. of Education.
+    Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Atlanta according to SwitchUp.
+    According to Newsweek, 4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States.
+    A community built for developers.
+ 
 divider:
   heading:
-    text: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida, y hemos sido reconocidos como uno de los 5 mejores bootcamps de codificación en los Estados Unidos por SwitchUp y entre los 10 mejores a nivel nacional por Newsweek. En 4Geeks, somos más que una escuela: somos una comunidad construida para equipar a los desarrolladores con las habilidades necesarias para tener éxito en la era de la IA."
+    text: "No matter where you live in the U.S., you can launch your tech career with 4Geeks Academy. Our remote coding bootcamp gives you access to expert instructors, real-world projects, and ongoing career support—all from the comfort of your home. Join thousands of graduates across the country who’ve built new futures in tech, and start learning today."
     font_size: ["34px", "34px", "34px", "28px", "26px"]
     style: '{ "color": "#FFFFFF" }'
 news:
@@ -103,7 +109,6 @@ two_columns:
     - text: "Cursos interactivos enfocados en habilidades técnicas esenciales para el mundo digital actual"
     - text: "Acceso a profesores experimentados y una comunidad colaborativa de aprendizaje"
     - text: "Preparación para desafíos del mundo real y oportunidades laborales en tecnología"
-
   content:
     text: "Mira a Alissa explicar por qué 4Geeks es una gran opción para estudiantes en todo Estados Unidos."
 

@@ -30,12 +30,17 @@ badges:
   # NOTE: If you want to break the text into many lines avoid using double quotes
   # use the pipe operator ' | ' instead, like the example below
   paragraph: |
+    4Geeks Academy is the place where developers grow and thrive.
+    We are licensed by the Florida Dept. of Education.
+    Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Atlanta according to SwitchUp.
+    According to Newsweek, 4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States.
+    A community built for developers.
  
 
 # Optional divider section that can be added after badges
 divider:
   heading:
-    text: "4Geeks Academy is a globally recognized coding bootcamp where future-ready developers grow and thrive. Licensed by the Florida Department of Education, we’ve been ranked as one of the top 5 coding bootcamps in the United States by SwitchUp and among the top 10 nationwide by Newsweek. At 4Geeks, we’re more than a school—we’re a community built to equip developers with the skills needed to succeed in the AI era."
+    text: "Looking for a top-rated coding bootcamp in Atlanta? 4Geeks Academy offers a flexible, hands-on program designed to help you land a job in tech—right here in Georgia. With expert mentorship, small class sizes, and proven career support, our Atlanta students have launched successful careers at both startups and major companies across the Southeast."
     font_size: ["34px", "34px", "34px", "28px", "26px"] # [xl, lg, md, sm, xs]
     style: '{ "color": "#FFFFFF" }'
 

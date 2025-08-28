@@ -43,10 +43,16 @@ custom_bar:
 
 badges:
   title: ""
+  paragraph: |
+    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan.
+    Estamos autorizados por el Departamento de Educación de Florida.
+    Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Austin según SwitchUp.
+    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.
+    Una comunidad construida para desarrolladores.
 
 divider:
   heading:
-    text: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida, y hemos sido reconocidos como uno de los 5 mejores bootcamps de codificación en los Estados Unidos por SwitchUp y entre los 10 mejores a nivel nacional por Newsweek. En 4Geeks, somos más que una escuela: somos una comunidad construida para equipar a los desarrolladores con las habilidades necesarias para tener éxito en la era de la IA."
+    text: "¿Buscas un bootcamp de programación de primera clase en Atlanta? 4Geeks Academy ofrece un programa flexible y práctico diseñado para ayudarte a conseguir un trabajo en tecnología aquí mismo en Georgia. Con mentoría experta, clases pequeñas y apoyo profesional comprobado, nuestros estudiantes de Atlanta han lanzado carreras exitosas tanto en startups como en grandes empresas de todo el Sureste."
     font_size: ["34px", "34px", "34px", "28px", "26px"]
     style: '{ "color": "#FFFFFF" }'
 news:
