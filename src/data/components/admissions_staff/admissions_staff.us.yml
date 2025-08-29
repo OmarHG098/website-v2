@@ -3,6 +3,7 @@ sub_heading: "Have questions or want to chat now? Meet Eli, your Admissions Deve
 staff:
   - name: "Eli"
     last_name: "Pilowsky"
+    locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
     job_title: "Admissions Advisor"
     phone: "(786) 305-5288"
     email: "epilowsky@4geeksacademy.com"
