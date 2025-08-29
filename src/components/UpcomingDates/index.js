@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext, useRef } from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import ReCAPTCHA from "react-google-recaptcha";
 import { GridContainer, Div } from "../Sections";
 import { H2, H3, H4, Paragraph } from "../Heading";
 import { Colors, Button, Spinner } from "../Styling";
@@ -12,6 +11,7 @@ import styled from "styled-components";
 import { Input } from "../Form";
 import { getCohorts, newsletterSignup } from "../../actions";
 import { SessionContext } from "../../session";
+import SafeReCAPTCHA from "../SafeReCAPTCHA";
 
 const Form = styled.form`
   margin: 0 11px 0 0;
@@ -750,9 +750,8 @@ const UpcomingDates = ({
                               required
                             />
                             <Div width="fit-content" margin="10px auto 0 auto">
-                              <ReCAPTCHA
+                              <SafeReCAPTCHA
                                 ref={captcha}
-                                sitekey={process.env.GATSBY_CAPTCHA_KEY}
                                 size="invisible"
                               />
                             </Div>
