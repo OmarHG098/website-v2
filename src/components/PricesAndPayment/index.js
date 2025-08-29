@@ -31,6 +31,53 @@ const FALLBACK_VALUES = {
   financialsLink: "/us/financials",
 };
 
+// Helper function to check if job guarantee should be shown for current location
+const shouldShowJobGuarantee = (session, info) => {
+  if (!session?.location || !info?.job_guarantee_locations) return false;
+
+  const candidates = [
+    session?.location?.breathecode_location_slug,
+    session?.location?.meta_info?.slug,
+    session?.location?.active_campaign_location_slug,
+  ].filter((s) => typeof s === "string" && s.length > 0);
+
+  // Check if any candidate location is in the job_guarantee_locations array
+  for (const locationSlug of candidates) {
+    if (info.job_guarantee_locations.includes(locationSlug)) {
+      return true;
+    }
+  }
+  return false;
+};
+
+// Helper function to determine if location is in America region
+const isAmericaLocation = (session) => {
+  if (!session?.location) return false;
+
+  const locationSlug = session.location.active_campaign_location_slug;
+  if (!locationSlug) return false;
+
+  // US locations typically end with "-usa" or are special cases
+  return (
+    locationSlug.includes("-usa") ||
+    locationSlug === "downtown-miami" ||
+    locationSlug === "orlando"
+  );
+};
+
+// Helper function to get regional CTA configuration
+const getRegionalCTA = (session, info) => {
+  if (!info?.cta) return null;
+
+  const isAmerica = isAmericaLocation(session);
+  return isAmerica ? info.cta.america : info.cta.international;
+};
+
+// Helper function to check if "More details" button should be shown
+const shouldShowMoreDetails = (financial) => {
+  return !financial; // Hide if on financials page
+};
+
 // Shared styles to avoid recreating objects per render
 const selectStyles = {
   input: (styles) => ({
@@ -81,7 +128,7 @@ const LoadingSpinner = () => (
   </Div>
 );
 
-const PaymentOptionCard = ({ option, selectedPlan, setSelectedPlan }) => {
+const PaymentOptionCard = ({ option, selectedPlan, setSelectedPlan, jobGuarantee }) => {
   return (
     <Div
       border="1px solid #E5E5E5"
@@ -123,18 +170,10 @@ const PaymentOptionCard = ({ option, selectedPlan, setSelectedPlan }) => {
             fontSize="14px"
             fontWeight="600"
             color={Colors.black}
-            margin="0 0 4px 0"
-            textAlign="left"
-          >
-            {option.title}
-          </Paragraph>
-          <Paragraph
-            fontSize="12px"
-            color="#666666"
             margin="0"
             textAlign="left"
           >
-            {option.description}
+            {option.title}
           </Paragraph>
         </Div>
         <Div
@@ -162,6 +201,14 @@ const PaymentOptionCard = ({ option, selectedPlan, setSelectedPlan }) => {
           display_xs="block"
           display_xxs="block"
         >
+          <Paragraph
+            fontSize="12px"
+            color="#666666"
+            margin="0 0 16px 0"
+            textAlign="left"
+          >
+            {(jobGuarantee && option.job_guarantee_description) ? option.job_guarantee_description : option.description}
+          </Paragraph>
           {option.icons && option.icons.length > 0 && (
             <Div
               className="icons"
@@ -205,6 +252,8 @@ const FinancialOptionsDesktop = ({
   isLocationDropdownOpen,
   isProgramDropdownOpen,
   currentLocation,
+  financial,
+  schedule,
 }) => {
   // Build options list from available plans (YAML-driven)
   const paymentOptions = useMemo(
@@ -213,6 +262,7 @@ const FinancialOptionsDesktop = ({
         id: plan.slug,
         title: plan.scholarship,
         description: plan.description,
+        job_guarantee_description: plan.job_guarantee_description,
         details: plan.warning_message,
         price: plan.price,
         originalPrice: plan.original_price,
@@ -518,7 +568,7 @@ const FinancialOptionsDesktop = ({
             </Button>
           </Link>
 
-          {shouldShowMoreDetails() && (
+                      {shouldShowMoreDetails(financial) && (
             <Link
               to={
                 info?.cta?.more_details_link || FALLBACK_VALUES.financialsLink
@@ -555,6 +605,8 @@ const FinancialOptionsCard = ({
   jobGuarantee,
   setJobGuarantee,
   currentLocation,
+  financial,
+  schedule,
 }) => {
   // Build options list from available plans (YAML-driven)
   const paymentOptions = useMemo(
@@ -563,6 +615,7 @@ const FinancialOptionsCard = ({
         id: plan.slug,
         title: plan.scholarship,
         description: plan.description,
+        job_guarantee_description: plan.job_guarantee_description,
         details: plan.warning_message,
         price: plan.price,
         originalPrice: plan.original_price,
@@ -731,6 +784,7 @@ const FinancialOptionsCard = ({
               option={option}
               selectedPlan={selectedPlan}
               setSelectedPlan={setSelectedPlan}
+              jobGuarantee={jobGuarantee}
             />
           ))}
         </Div>
@@ -783,7 +837,7 @@ const FinancialOptionsCard = ({
             </Button>
           </Link>
 
-          {shouldShowMoreDetails() && (
+                      {shouldShowMoreDetails(financial) && (
             <Link
               to={
                 info?.cta?.more_details_link || FALLBACK_VALUES.financialsLink
@@ -911,53 +965,6 @@ const PricesAndPayment = (props) => {
     }
     return phoneNumber;
   }
-
-  // Helper function to check if job guarantee should be shown for current location
-  const shouldShowJobGuarantee = (session, info) => {
-    if (!session?.location || !info?.job_guarantee_locations) return false;
-
-    const candidates = [
-      session?.location?.breathecode_location_slug,
-      session?.location?.meta_info?.slug,
-      session?.location?.active_campaign_location_slug,
-    ].filter((s) => typeof s === "string" && s.length > 0);
-
-    // Check if any candidate location is in the job_guarantee_locations array
-    for (const locationSlug of candidates) {
-      if (info.job_guarantee_locations.includes(locationSlug)) {
-        return true;
-      }
-    }
-    return false;
-  };
-
-  // Helper function to determine if location is in America region
-  const isAmericaLocation = (session) => {
-    if (!session?.location) return false;
-
-    const locationSlug = session.location.active_campaign_location_slug;
-    if (!locationSlug) return false;
-
-    // US locations typically end with "-usa" or are special cases
-    return (
-      locationSlug.includes("-usa") ||
-      locationSlug === "downtown-miami" ||
-      locationSlug === "orlando"
-    );
-  };
-
-  // Helper function to get regional CTA configuration
-  const getRegionalCTA = (session, info) => {
-    if (!info?.cta) return null;
-
-    const isAmerica = isAmericaLocation(session);
-    return isAmerica ? info.cta.america : info.cta.international;
-  };
-
-  // Helper function to check if "More details" button should be shown
-  const shouldShowMoreDetails = () => {
-    return !props.financial; // Hide if on financials page
-  };
 
   const mainContainer = useRef(null);
   const { session, setSession } = useContext(SessionContext);
@@ -1274,6 +1281,8 @@ const PricesAndPayment = (props) => {
             isLocationDropdownOpen={isLocationDropdownOpen}
             isProgramDropdownOpen={isProgramDropdownOpen}
             currentLocation={currentLocation}
+            financial={props.financial}
+            schedule={schedule}
           />
           {/* Financial explainer card (mobile) */}
           <Div
@@ -1295,6 +1304,8 @@ const PricesAndPayment = (props) => {
               jobGuarantee={jobGuarantee}
               setJobGuarantee={setJobGuarantee}
               currentLocation={currentLocation}
+              financial={props.financial}
+              schedule={schedule}
             />
           </Div>
         </>
