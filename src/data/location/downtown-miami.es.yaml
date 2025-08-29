@@ -52,6 +52,12 @@ badges:
     4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
     Una comunidad construida para desarrolladores.
 
+divider:
+  heading:
+    text: "Miami es uno de los centros tecnológicos de más rápido crecimiento en EE.UU., y 4Geeks Academy está en el centro de todo. Como bootcamp de programación líder en Miami, hemos ayudado a cientos de estudiantes a lanzar carreras tecnológicas en startups, agencias y empresas globales como Microsoft y Meta. Con horarios flexibles, instructores expertos y una fuerte presencia local, estamos aquí para ayudarte a tener éxito en la industria tecnológica del sur de Florida."
+    font_size: ["34px", "34px", "34px", "28px", "26px"] # [xl, lg, md, sm, xs]
+    style: '{ "color": "#FFFFFF" }'
+
 news:
   title: "4Geeks Academy Miami en las noticias..."
 upcoming:
@@ -126,9 +132,9 @@ two_columns:
     path: "/es/aplica"
   bullets:
     items: 
-    - text: "Siempre hay becas completas o parciales disponibles."
-    - text: "Hay oportunidades para todos en los condados de Miami-Dade, Broward y Palm Beach."
-    - text: "Mantenemos colaboraciones continuas con Miami Dade College, Miami Tech Coalition, UWM, la Ciudad de Miami, Miami Dade County y muchos más."
+      - text: "• Siempre hay becas completas o parciales disponibles."
+      - text: "• Hay oportunidades para todos en los condados de Miami-Dade, Broward y Palm Beach."
+      - text: "• Mantenemos colaboraciones continuas con Miami Dade College, Miami Tech Coalition, UWM, la Ciudad de Miami, Miami Dade County y muchos más."
 
 # Two Columns - Rigo
 two_columns_rigo:
