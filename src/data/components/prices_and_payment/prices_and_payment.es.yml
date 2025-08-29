@@ -1,3 +1,6 @@
+# Location-based job guarantee configuration
+job_guarantee_locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
+
 pricing_error: En este momento no estan disponibles los precios para
 pricing_error_contact: Para más información por favor contáctanos a info@4geeksacademy.com.
 get_notified: Pregunta por nuestras Becas. Siempre estamos trabajando y aliándonos para poder ofrecerte mejores opciones. 
@@ -30,7 +33,11 @@ loading: Cargando Recursos...
 
 cta:
   advisor_text: ¡Agenda una llamada con un asesor para encontrar una opción de pago u oferta especial que funcione para ti!
-  book_call: Agendar llamada →
+  america:
+    book_call: "Agendar llamada →"
+    apply_link: "/es/apply"
+  international:
+    book_call: "Aplicar ahora"
+    apply_link: "/es/apply"
   more_details: Más detalles
-  apply_link: /es/apply
   more_details_link: /es/financiacion
