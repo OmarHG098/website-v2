@@ -24,6 +24,13 @@ import {
 import { SessionContext } from "../../session";
 import { isWindow } from "../../utils/utils";
 
+// Constants for fallback values
+const FALLBACK_VALUES = {
+  bookCallText: "Book a call →",
+  applyLink: "/us/apply",
+  financialsLink: "/us/financials",
+};
+
 // Shared styles to avoid recreating objects per render
 const selectStyles = {
   input: (styles) => ({
@@ -89,7 +96,7 @@ const PaymentOptionCard = ({ option, selectedPlan, setSelectedPlan }) => {
         padding="16px 20px"
         cursor="pointer"
         onClick={() => {
-          setSelectedPlan(option.id);
+          setSelectedPlan(selectedPlan === option.id ? null : option.id);
         }}
         display="flex"
         justifyContent="space-between"
@@ -155,19 +162,6 @@ const PaymentOptionCard = ({ option, selectedPlan, setSelectedPlan }) => {
           display_xs="block"
           display_xxs="block"
         >
-          {option.bullets && (
-            <Paragraph
-              fontSize="14px"
-              color={Colors.black}
-              margin="16px 0 0 0"
-              textAlign="left"
-              lineHeight="24px"
-              dangerouslySetInnerHTML={{
-                __html: option.bullets.join(". ") + " ",
-              }}
-            />
-          )}
-
           {option.icons && option.icons.length > 0 && (
             <Div
               className="icons"
@@ -218,14 +212,14 @@ const FinancialOptionsDesktop = ({
       (availablePlans || []).map((plan) => ({
         id: plan.slug,
         title: plan.scholarship,
-        description: plan.payment_time,
+        description: plan.description,
         details: plan.warning_message,
         price: plan.price,
         originalPrice: plan.original_price,
         icons: plan.icons,
         recomended: plan.recomended,
         recommended_color: plan.recommended_color,
-        bullets: plan.bullets,
+
         offer: plan.offer,
       })),
     [availablePlans]
@@ -341,8 +335,8 @@ const FinancialOptionsDesktop = ({
           </Div>
 
           {availablePlans?.some((p) => p.price) &&
-            currentLocation?.active_campaign_location_slug !==
-              "downtown-miami" && (
+            shouldShowJobGuarantee(session, info) &&
+            schedule !== "full_time" && (
               <Div margin="16px 0 0 0" display="block">
                 <Div alignItems="center">
                   <Toggle
@@ -497,9 +491,10 @@ const FinancialOptionsDesktop = ({
           gap="12px"
         >
           <Link
-            to={`${info?.cta?.apply_link || "/us/apply"}${
-              selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-            }`}
+            to={`${
+              getRegionalCTA(session, info)?.apply_link ||
+              FALLBACK_VALUES.applyLink
+            }${selectedPlan ? `?utm_plan=${selectedPlan}` : ""}`}
           >
             <Button
               variant="full"
@@ -518,22 +513,29 @@ const FinancialOptionsDesktop = ({
                 }
               }}
             >
-              {info.cta.book_call}
+              {getRegionalCTA(session, info)?.book_call ||
+                FALLBACK_VALUES.bookCallText}
             </Button>
           </Link>
 
-          <Link to={info?.cta?.more_details_link || "/us/financials"}>
-            <Button
-              background="transparent"
-              textColor={Colors.blue}
-              fontSize="14px"
-              padding="12px 24px"
-              borderRadius="6px"
-              fontWeight="600"
+          {shouldShowMoreDetails() && (
+            <Link
+              to={
+                info?.cta?.more_details_link || FALLBACK_VALUES.financialsLink
+              }
             >
-              {info.cta.more_details}
-            </Button>
-          </Link>
+              <Button
+                background="transparent"
+                textColor={Colors.blue}
+                fontSize="14px"
+                padding="12px 24px"
+                borderRadius="6px"
+                fontWeight="600"
+              >
+                {info.cta.more_details}
+              </Button>
+            </Link>
+          )}
         </Div>
       </Div>
     </>
@@ -560,14 +562,14 @@ const FinancialOptionsCard = ({
       (availablePlans || []).map((plan) => ({
         id: plan.slug,
         title: plan.scholarship,
-        description: plan.payment_time,
+        description: plan.description,
         details: plan.warning_message,
         price: plan.price,
         originalPrice: plan.original_price,
         icons: plan.icons,
         recomended: plan.recomended,
         recommended_color: plan.recommended_color,
-        bullets: plan.bullets,
+
         offer: plan.offer,
       })),
     [availablePlans]
@@ -606,7 +608,12 @@ const FinancialOptionsCard = ({
             {info.plan_details}
           </H3>
 
-          <Div alignItems="center" justifyContent="center" margin="0 0 16px 0">
+          <Div
+            alignItems="center"
+            justifyContent="center"
+            margin="0 0 16px 0"
+            display="block"
+          >
             {jobGuarantee && info?.job_guarantee?.monthly_label ? (
               <H2
                 fontSize="32px"
@@ -646,8 +653,8 @@ const FinancialOptionsCard = ({
           </Div>
 
           {availablePlans?.some((p) => p.price) &&
-            currentLocation?.active_campaign_location_slug !==
-              "downtown-miami" && (
+            shouldShowJobGuarantee(session, info) &&
+            schedule !== "full_time" && (
               <Div
                 margin="8px 0 0 0"
                 display="block"
@@ -695,11 +702,6 @@ const FinancialOptionsCard = ({
               </Div>
             )}
 
-          {currentOption?.originalPrice && (
-            <Paragraph color="#B4B4B4" margin="0 0 8px 0" textAlign="center">
-              <s>{currentOption.originalPrice}</s>
-            </Paragraph>
-          )}
           {currentOption?.warning_message && (
             <Paragraph
               color={Colors.darkGray}
@@ -754,9 +756,10 @@ const FinancialOptionsCard = ({
           margin="0 auto"
         >
           <Link
-            to={`${info?.cta?.apply_link || "/us/apply"}${
-              selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-            }`}
+            to={`${
+              getRegionalCTA(session, info)?.apply_link ||
+              FALLBACK_VALUES.applyLink
+            }${selectedPlan ? `?utm_plan=${selectedPlan}` : ""}`}
           >
             <Button
               variant="full"
@@ -775,22 +778,29 @@ const FinancialOptionsCard = ({
                 }
               }}
             >
-              {info.cta.book_call}
+              {getRegionalCTA(session, info)?.book_call ||
+                FALLBACK_VALUES.bookCallText}
             </Button>
           </Link>
 
-          <Link to={info?.cta?.more_details_link || "/us/financials"}>
-            <Button
-              background="transparent"
-              textColor={Colors.blue}
-              fontSize="14px"
-              padding="12px 32px"
-              borderRadius="6px"
-              fontWeight="600"
+          {shouldShowMoreDetails() && (
+            <Link
+              to={
+                info?.cta?.more_details_link || FALLBACK_VALUES.financialsLink
+              }
             >
-              {info.cta.more_details}
-            </Button>
-          </Link>
+              <Button
+                background="transparent"
+                textColor={Colors.blue}
+                fontSize="14px"
+                padding="12px 32px"
+                borderRadius="6px"
+                fontWeight="600"
+              >
+                {info.cta.more_details}
+              </Button>
+            </Link>
+          )}
         </Div>
       </Div>
     </>
@@ -809,6 +819,7 @@ const PricesAndPayment = (props) => {
             fields {
               lang
             }
+            job_guarantee_locations
             get_notified
             contact_carrer_advisor
             contact_link
@@ -833,9 +844,15 @@ const PricesAndPayment = (props) => {
             not_available_job_guarantee
             cta {
               advisor_text
-              book_call
+              america {
+                book_call
+                apply_link
+              }
+              international {
+                book_call
+                apply_link
+              }
               more_details
-              apply_link
               more_details_link
             }
           }
@@ -850,12 +867,12 @@ const PricesAndPayment = (props) => {
               recomended
               recommended_color
               scholarship
-              payment_time
+              description
               price
               original_price
               warning_message
               offer
-              bullets
+
               icons
             }
             part_time {
@@ -864,12 +881,12 @@ const PricesAndPayment = (props) => {
               recomended
               recommended_color
               scholarship
-              payment_time
+              description
               price
               original_price
               warning_message
               offer
-              bullets
+
               icons
             }
             fields {
@@ -894,6 +911,53 @@ const PricesAndPayment = (props) => {
     }
     return phoneNumber;
   }
+
+  // Helper function to check if job guarantee should be shown for current location
+  const shouldShowJobGuarantee = (session, info) => {
+    if (!session?.location || !info?.job_guarantee_locations) return false;
+
+    const candidates = [
+      session?.location?.breathecode_location_slug,
+      session?.location?.meta_info?.slug,
+      session?.location?.active_campaign_location_slug,
+    ].filter((s) => typeof s === "string" && s.length > 0);
+
+    // Check if any candidate location is in the job_guarantee_locations array
+    for (const locationSlug of candidates) {
+      if (info.job_guarantee_locations.includes(locationSlug)) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  // Helper function to determine if location is in America region
+  const isAmericaLocation = (session) => {
+    if (!session?.location) return false;
+
+    const locationSlug = session.location.active_campaign_location_slug;
+    if (!locationSlug) return false;
+
+    // US locations typically end with "-usa" or are special cases
+    return (
+      locationSlug.includes("-usa") ||
+      locationSlug === "downtown-miami" ||
+      locationSlug === "orlando"
+    );
+  };
+
+  // Helper function to get regional CTA configuration
+  const getRegionalCTA = (session, info) => {
+    if (!info?.cta) return null;
+
+    const isAmerica = isAmericaLocation(session);
+    return isAmerica ? info.cta.america : info.cta.international;
+  };
+
+  // Helper function to check if "More details" button should be shown
+  const shouldShowMoreDetails = () => {
+    return !props.financial; // Hide if on financials page
+  };
 
   const mainContainer = useRef(null);
   const { session, setSession } = useContext(SessionContext);
@@ -1019,7 +1083,7 @@ const PricesAndPayment = (props) => {
     }
     const filteredPlans = getAvailablePlans();
     setAvailablePlans(filteredPlans);
-    setSelectedPlan(filteredPlans[0]?.slug);
+    setSelectedPlan(null);
     setIsLoading(false);
   }, [jobGuarantee, currentLocation, course, props.financial]);
 
