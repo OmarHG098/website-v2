@@ -44,6 +44,15 @@ const Location = ({ data, pageContext, yml }) => {
   }, []);
   const chooseProgramRef = useRef(null);
 
+  const showJobGuarantee =
+    data.allJobGuaranteeSmallYaml.edges[0]?.node?.locations?.includes(
+      yml.breathecode_location_slug
+    );
+  const slugsWithStaffPlacement = ["orlando", "downtown-miami", "tampa-usa"];
+  const shouldPlaceUnderStaff = slugsWithStaffPlacement.includes(
+    yml.breathecode_location_slug
+  );
+
   const goToChooseProgram = (e) => {
     e.preventDefault();
     window.scrollTo({
@@ -263,12 +272,8 @@ const Location = ({ data, pageContext, yml }) => {
         </Div>
       )}
 
-      {data.allJobGuaranteeSmallYaml.edges[0].node.locations.includes(
-        yml.breathecode_location_slug
-      ) && (
-        <JobGuaranteeSmall
-          content={data.allJobGuaranteeSmallYaml.edges[0].node}
-        />
+      {showJobGuarantee && !shouldPlaceUnderStaff && (
+        <JobGuaranteeSmall content={data.allJobGuaranteeSmallYaml.edges[0].node} />
       )}
 
       <TwoColumn
@@ -344,6 +349,10 @@ const Location = ({ data, pageContext, yml }) => {
       />
 
       <Staff lang={pageContext.lang} heading={yml?.staff?.heading} />
+
+      {showJobGuarantee && shouldPlaceUnderStaff && (
+        <JobGuaranteeSmall content={data.allJobGuaranteeSmallYaml.edges[0].node} />
+      )}
 
       {/* IFRAME map
       <Div>
