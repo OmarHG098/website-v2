@@ -201,7 +201,7 @@ const ThankYou = (props) => {
           {yml.content.title}
         </H3>
         {yml.content.message.split("\n").map((m, i) => (
-          <Paragraph key={i} align="center">
+          <Paragraph key={i} align="center" paddingLeft="15px" paddingRight="10px"> 
             {m}
           </Paragraph>
         ))}
@@ -213,8 +213,7 @@ const ThankYou = (props) => {
       {components?.title?.heading?.text && (
         <H2 type="h2"
           margin="30px 0 10px 0"
-          fontSize="48px"
-          fontSize_xs="32px">
+          fontSize="40px">
           {components.title.heading.text}
         </H2>
       )}

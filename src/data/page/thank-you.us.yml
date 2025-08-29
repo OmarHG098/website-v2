@@ -11,7 +11,7 @@ banner:
   sub_heading: ""
 content:
   title: "🎉 Congratulations! You just took the first step toward your tech career!"
-  message: "A confirmation email should be arriving in your inbox shortly, and our Admissions Team is already reviewing your info. One of our Geeky Advisors will reach out very soon! In the meantime, here are a few ways to jump-start your journey right now:"
+  message: "A confirmation email should be arriving in your inbox shortly, and our Admissions Team is already reviewing your info. \nOne of our Geeky Advisors will reach out very soon! In the meantime, here are a few ways to jump-start your journey right now:"
 
     
   articles_title: " "
@@ -34,7 +34,7 @@ components:
     background: "#FFFFFF"
     image:
       style: '{ "backgroundSize": "contain", "background-position": "center" }'
-      src: "/images/landing/4geeksacademy.webp"
+      src: "/images/landing/4geekasacademy.webp"
       shadow: false
     heading:
       text: "💻 Start Coding Today"
@@ -53,7 +53,7 @@ components:
     background: "#FFFFFF"
     image:
       style: '{ "backgroundSize": "contain", "background-position": "center" }'
-      src: "/images/landing/feliz-empresario.png"
+      src: "/images/landing/PeopleStudying.jpeg"
       shadow: false
     heading:
       text: "📚 Optimize your Networking Skills"
