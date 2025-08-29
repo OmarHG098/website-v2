@@ -5,8 +5,8 @@ part_time:
     recomended: "★ Best Deal!"
     academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     scholarship: "Full Payment"
-    payment_time: "Regular tuition is $9,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
-    job_guarantee_payment_time: "Regular tuition is $11,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
+    description: "Regular tuition is $9,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
+    job_guarantee_description: "Regular tuition is $11,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
     price: "$8,999"
     original_price: "$9,999"
     offer: "10% OFF"
@@ -24,7 +24,7 @@ part_time:
     recomended: "Low monthly payments"
     recommended_color: "blue"
     scholarship: "Financed"
-    payment_time: "Finance your tuition through Climb or Ascent (credit-based), or TFC Tuition (flexible entry). Repayment terms range from 3 to 5+ years, with some plans offering the option to defer payments until after graduation."
+    description: "Finance your tuition through Climb or Ascent (credit-based), or TFC Tuition (flexible entry). Repayment terms range from 3 to 5+ years, with some plans offering the option to defer payments until after graduation."
     price: "$200 - $299/mo"
     bullets: 
       - "Several partners offering loans and payment plans"
@@ -38,7 +38,7 @@ part_time:
     academies: ['atlanta-usa', 'austin-usa',  'toronto-canada', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'dallas-usa']
     recomended: false
     scholarship: "Job Guarantee"
-    payment_time: "Get hired or your money back"
+    description: "Get hired or your money back"
     price: "+$2,000"
     original_price: ""
     bullets: 
@@ -55,7 +55,7 @@ part_time:
     recomended: "Learn now, pay later"
     recommended_color: "yellow"
     scholarship: "Learn now, pay later"
-    payment_time: "Offered through EDLY. Start paying only once you earn $35K/year. Payments scale with income, and total repayment is capped"
+    description: "Offered through EDLY. Start paying only once you earn $35K/year. Payments scale with income, and total repayment is capped"
     price: "IBR"
     bullets:
       - "Edly is proud to help 4Geeks Academy provide affordable, income-based repayment (IBR) loans to its students"
@@ -70,7 +70,7 @@ part_time:
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: "★ Best Deal!"
     scholarship: "Financed. From €200* per month"
-    payment_time: "Apply for a scholarship (limited scholarship slots available)."
+    description: "Apply for a scholarship (limited scholarship slots available)."
     price: "€5,500*"
     original_price: "€7,800"
     offer: "Launch Offer!"
@@ -89,7 +89,7 @@ part_time:
     recomended: "Accessible payment plan"
     recommended_color: "yellow"
     scholarship: "Pay upfront"
-    payment_time: "And get a discount"
+    description: "And get a discount"
     price: "€5.500*"
     original_price: "€7.800"
     bullets:
@@ -104,7 +104,7 @@ part_time:
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
     recomended: "★ Best Deal!"
     scholarship: "Financed. From €200* per month"
-    payment_time: "Apply for a scholarship (limited scholarship slots available)."
+    description: "Apply for a scholarship (limited scholarship slots available)."
     price: "€5,500*"
     original_price: "€7,800"
     offer: "Launch Offer!"
@@ -123,7 +123,7 @@ part_time:
     recomended: "Accessible payment plan"
     recommended_color: "yellow"
     scholarship: "Pay upfront"
-    payment_time: "And get a discount"
+    description: "And get a discount"
     price: "€5.500*"
     original_price: "€7.800"
     bullets:
@@ -138,7 +138,7 @@ part_time:
     academies: ['lisbon-portugal','milan-italy','rome-italy']
     recomended: "★ Best Deal!"
     scholarship: "Financed. From €200* per month"
-    payment_time: "Apply for a scholarship (limited scholarship slots available)."
+    description: "Apply for a scholarship (limited scholarship slots available)."
     price: "€5,500*"
     original_price: "€7,800"
     offer: "Launch Offer!"
@@ -157,7 +157,7 @@ part_time:
     recomended: "Accessible payment plan"
     recommended_color: "yellow"
     scholarship: "Pay upfront"
-    payment_time: "And get a discount"
+    description: "And get a discount"
     price: "€5.500*"
     original_price: "€7.800"
     bullets:
@@ -175,7 +175,7 @@ part_time:
     academies: ['santiago-chile']
     recomended: "★ Best Deal!"
     scholarship: "Cybersecurity + Career Support"
-    payment_time: "Pay Upfront and get a discount"
+    description: "Pay Upfront and get a discount"
     price: "2.975.000 CLP*"
     original_price: "3.500.000 CLP*"
     offer: "15% OFF"
@@ -191,7 +191,7 @@ part_time:
     recomended: "Accessible payment plan"
     recommended_color: "yellow"
     scholarship: "Cybersecurity"
-    payment_time: "Program Only"
+    description: "Program Only"
     price: "2.750.000 CLP"
     bullets:
       - "You will have full and forever access to the Cybersecurity program" 
@@ -205,7 +205,7 @@ part_time:
     recomended: "Low monthly payments"
     recommended_color: "blue"
     scholarship: "Financed"
-    payment_time: "18 months payment"
+    description: "18 months payment"
     price: "~158.000 CLP"
     warning_message: "Limited seats!"
     bullets:
@@ -219,7 +219,7 @@ part_time:
     academies: ['montevideo-uruguay','bogota-colombia','caracas-venezuela', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: "★ Best Deal!"
     scholarship: "Cybersecurity program + Career Support"
-    payment_time: "We help you build your professional profile"
+    description: "We help you build your professional profile"
     price: "$ 2.500 USD"
     original_price: "$ 3.500 USD"
     offer: "~28% OFF"

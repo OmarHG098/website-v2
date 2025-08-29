@@ -5,8 +5,8 @@ part_time:
     recomended: "★ ¡Mejor precio!"
     academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     scholarship: "Pago completo"
-    payment_time: "La matrícula regular es de $9,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
-    job_guarantee_payment_time: "La matrícula regular es de $11,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
+    description: "La matrícula regular es de $9,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
+    job_guarantee_description: "La matrícula regular es de $11,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
     price: "$9,999"
     original_price: "$11,110"
     offer: "10% DE DESCUENTO"
@@ -24,7 +24,7 @@ part_time:
     recomended: "Pagos mensuales bajos"
     recommended_color: "veryLightBlue"
     scholarship: "Financiado"
-    payment_time: "Puedes pagar en 3, 4 o 5 años"
+    description: "Puedes pagar en 3, 4 o 5 años"
     price: "$200 - $299/mes"
     bullets: 
       - "Varios socios ofrecen préstamos y planes de pago"
@@ -39,7 +39,7 @@ part_time:
     recomended: "Colocación laboral o reembolso de matrícula."
     recommended_color: "pink"
     scholarship: "Garantía de Empleo"
-    payment_time: "Consigue empleo o te devolvemos tu dinero"
+    description: "Consigue empleo o te devolvemos tu dinero"
     price: "+$2,000"
     original_price: ""
     bullets: 
@@ -54,7 +54,7 @@ part_time:
     recomended: "Pagos mensuales bajos"
     recommended_color: "veryLightBlue"
     scholarship: "Préstamo de Pago Basado en Ingresos (IBR)"
-    payment_time: "Pagos flexibles después de la graduación"
+    description: "Pagos flexibles después de la graduación"
     price: "IBR"
     bullets:
       - "Edly se enorgullece de ayudar a 4Geeks Academy a ofrecer préstamos asequibles con pagos basados en ingresos (IBR) a sus estudiantes."
@@ -69,7 +69,7 @@ part_time:
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Financiado. Desde 200 €* al mes"
-    payment_time: "Aplica a una beca (plazas con becas limitadas)."
+    description: "Aplica a una beca (plazas con becas limitadas)."
     price: "€ 5.500*"
     original_price: "€ 7.800"
     offer: "Oferta de Lanzamiento"
@@ -88,7 +88,7 @@ part_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Paga de contado"
-    payment_time: "Y obtén un descuento"
+    description: "Y obtén un descuento"
     price: "€ 5.500*"
     original_price: "€ 7.800"
     bullets:
@@ -104,7 +104,7 @@ part_time:
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Financiado. Desde 200 €* al mes"
-    payment_time: "Aplica a una beca (plazas con becas limitadas)."
+    description: "Aplica a una beca (plazas con becas limitadas)."
     price: "€ 5.500*"
     original_price: "€ 7.800"
     offer: "Oferta de Lanzamiento"
@@ -123,7 +123,7 @@ part_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Paga de contado"
-    payment_time: "Y obtén un descuento"
+    description: "Y obtén un descuento"
     price: "€ 5.500*"
     original_price: "€ 7.800"
     bullets:
@@ -139,7 +139,7 @@ part_time:
     academies: ['lisbon-portugal','milan-italy','rome-italy']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Financiado. Desde 200 €* al mes"
-    payment_time: "Aplica a una beca (plazas con becas limitadas)."
+    description: "Aplica a una beca (plazas con becas limitadas)."
     price: "€ 5.500*"
     original_price: "€ 7.800"
     offer: "Oferta de Lanzamiento"
@@ -158,7 +158,7 @@ part_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Paga de contado"
-    payment_time: "Y obtén un descuento"
+    description: "Y obtén un descuento"
     price: "€ 5.500*"
     original_price: "€ 7.800"
     bullets:
@@ -176,7 +176,7 @@ part_time:
     academies: ['santiago-chile']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Ciberseguridad + Apoyo Profesional"
-    payment_time: "Paga por adelantado y obtén un descuento"
+    description: "Paga por adelantado y obtén un descuento"
     price: "2.975.000 CLP*"
     original_price: "3.500.000 CLP*"
     offer: "15% DE DESCUENTO"
@@ -192,7 +192,7 @@ part_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Ciberseguridad"
-    payment_time: "Solo Programa"
+    description: "Solo Programa"
     price: "2.750.000 CLP"
     bullets:
       - "Tendrás acceso completo y permanente al programa de Ciberseguridad" 
@@ -206,7 +206,7 @@ part_time:
     recomended: "Pagos mensuales bajos"
     recommended_color: "veryLightBlue"
     scholarship: "Financiado"
-    payment_time: "Pago en 18 meses"
+    description: "Pago en 18 meses"
     price: "~158.000 CLP"
     warning_message: "¡Plazas limitadas!"
     bullets:
@@ -221,7 +221,7 @@ part_time:
     academies: ['montevideo-uruguay','bogota-colombia','caracas-venezuela', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Programa de Ciberseguridad + Apoyo Profesional"
-    payment_time: "Te ayudamos a construir tu perfil profesional"
+    description: "Te ayudamos a construir tu perfil profesional"
     price: "$ 2.500 USD"
     original_price: "$ 3.500 USD"
     offer: "~28% DE DESCUENTO"

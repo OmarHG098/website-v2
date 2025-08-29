@@ -4,8 +4,8 @@ full_time:
     academies: ['downtown-miami', 'orlando']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Pago completo"
-    payment_time: "La matrícula regular es de $10,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
-    job_guarantee_payment_time: "La matrícula regular es de $12,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
+    description: "La matrícula regular es de $10,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
+    job_guarantee_description: "La matrícula regular es de $12,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
     price: "$11,999"
     original_price: "$19,998"
     offer: "40% de descuento"
@@ -21,7 +21,7 @@ full_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Beca"
-    payment_time: "Paga hoy"
+    description: "Paga hoy"
     price: "$4999"
     original_price: "$16,665"
     warning_message: "¡Plazas limitadas!"
@@ -36,7 +36,7 @@ full_time:
     recomended: "Pagos mensuales bajos"
     recommended_color: "veryLightBlue"
     scholarship: "Financiado"
-    payment_time: "Pago en 24 meses"
+    description: "Pago en 24 meses"
     price: "$310"
     bullets: 
       - "Con $400 p/ semana de estipendios para gastos de subsistencia"
@@ -53,8 +53,8 @@ part_time:
     recomended: "★ ¡Mejor precio!"
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
     scholarship: "Pago completo"
-    payment_time: "La matrícula regular es de $10,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
-    job_guarantee_payment_time: "La matrícula regular es de $12,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
+    description: "La matrícula regular es de $10,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
+    job_guarantee_description: "La matrícula regular es de $12,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
     price: "$11,999"
     original_price: "$19,998"
     offer: "40% de descuento"
@@ -71,7 +71,7 @@ part_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Beca"
-    payment_time: "No hay nada como esto"
+    description: "No hay nada como esto"
     price: "$7,999"
     original_price: "$16,665"
     warning_message: "¡Plazas limitadas!"
@@ -85,7 +85,7 @@ part_time:
     recomended: "Pagos mensuales bajos"
     recommended_color: "veryLightBlue"
     scholarship: "Financiado"
-    payment_time: "Paga en 3, 4 o 5 años"
+    description: "Paga en 3, 4 o 5 años"
     price: "~$200 p/m"
     bullets: 
       - "Varios socios ofrecen préstamos y planes de pago"
@@ -103,7 +103,7 @@ part_time:
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Paga de contado"
-    payment_time: "Y obtén un descuento"
+    description: "Y obtén un descuento"
     price: "€5.200*"
     original_price: "€7.800"
     offer: "~ 30% de descuento"
@@ -120,7 +120,7 @@ part_time:
     recomended: "Pagos mensuales bajos"
     recommended_color: "veryLightBlue"
     scholarship: "Financiado. Desde 200 €* al mes"
-    payment_time: "Aplica a una beca (plazas con becas limitadas)."
+    description: "Aplica a una beca (plazas con becas limitadas)."
     price: "5.409 €*"
     original_price: "€ 7.800"
     bullets:
@@ -138,7 +138,7 @@ part_time:
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Paga de contado"
-    payment_time: "Y obtén un descuento"
+    description: "Y obtén un descuento"
     price: "€5.200*"
     original_price: "€7.800"
     offer: "~ 30% de descuento"
@@ -155,7 +155,7 @@ part_time:
     recomended: "Pagos mensuales bajos"
     recommended_color: "veryLightBlue"
     scholarship: "Financiado. Desde 200 €* al mes"
-    payment_time: "Aplica a una beca (plazas con becas limitadas)."
+    description: "Aplica a una beca (plazas con becas limitadas)."
     price: "5.409 €*"
     original_price: "€ 7.800"
     bullets:
@@ -169,7 +169,7 @@ part_time:
     academies: ['lisbon-portugal','milan-italy','rome-italy']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Paga de contado"
-    payment_time: "Y obtén un descuento"
+    description: "Y obtén un descuento"
     price: "€5.200*"
     original_price: "€7.800"
     offer: "~ 30% de descuento"
@@ -186,7 +186,7 @@ part_time:
     recomended: "Pagos mensuales bajos"
     recommended_color: "veryLightBlue"
     scholarship: "Financiado. Desde 200 €* al mes"
-    payment_time: "Aplica a una beca (plazas con becas limitadas)."
+    description: "Aplica a una beca (plazas con becas limitadas)."
     price: "5.409 €*"
     original_price: "€ 7.800"
     bullets:
@@ -202,7 +202,7 @@ part_time:
     academies: ['santiago-chile']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Programa + Apoyo Profesional"
-    payment_time: "Paga por adelantado"
+    description: "Paga por adelantado"
     price: "3.375.000 CLP*"
     original_price: "€4.500.000"
     offer: "25% de descuento"
@@ -220,7 +220,7 @@ part_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Solo Programa de Ciencia de Datos"
-    payment_time: "Enfócate en adquirir habilidades. Paga por adelantado."
+    description: "Enfócate en adquirir habilidades. Paga por adelantado."
     price: "3.750.000 CLP*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"
@@ -235,7 +235,7 @@ part_time:
     recomended: "Pagos mensuales bajos"
     recommended_color: "veryLightBlue"
     scholarship: "Financiado"
-    payment_time: "Programa + Apoyo Profesional. Paga mensualmente, A partir de :"
+    description: "Programa + Apoyo Profesional. Paga mensualmente, A partir de :"
     price: "~220.500 CLP por mes"
     bullets:
       - "Financiamiento a medida de 6 a 18 meses"
@@ -251,7 +251,7 @@ part_time:
     academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Programa de Ciencia de Datos + Apoyo Profesional"
-    payment_time: "Te ayudamos a construir tu perfil profesional"
+    description: "Te ayudamos a construir tu perfil profesional"
     price: "USD $3.600"
     original_price: "USD $5.000"
     offer: "28% de descuento"
@@ -267,7 +267,7 @@ part_time:
     academies: ['bogota-colombia']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Programa de Ciencia de Datos + Apoyo Profesional"
-    payment_time: "Te ayudamos a construir tu perfil profesional"
+    description: "Te ayudamos a construir tu perfil profesional"
     price: "USD $3.600"
     original_price: "USD $5.000"
     offer: "28% de descuento"
@@ -285,7 +285,7 @@ part_time:
   #   academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
   #   recomended: "★ ¡Mejor precio!"
   #   scholarship: "Sólo paga el programa"
-  #   payment_time: "Enfócate en obtener nuevas habilidades. Paga mensualmente."
+  #   description: "Enfócate en obtener nuevas habilidades. Paga mensualmente."
   #   price: "A partir de $120/m"
   #   bullets: 
   #     - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
@@ -299,7 +299,7 @@ part_time:
   #   academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
   #   recomended: false
   #   scholarship: "Sólo el Programa Data Science"
-  #   payment_time: "Enfócate en obtener nuevas habilidades. Paga de contado."
+  #   description: "Enfócate en obtener nuevas habilidades. Paga de contado."
   #   price: "USD $4000"
   #   bullets: 
   #     - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
@@ -315,7 +315,7 @@ part_time:
     academies: ['caracas-venezuela']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Sólo el Programa Data Science"
-    payment_time: "Enfócate en obtener nuevas habilidades. Paga de contado."
+    description: "Enfócate en obtener nuevas habilidades. Paga de contado."
     price: "$2.400*"
     original_price: "$4000"
     offer: "40% OFF"
