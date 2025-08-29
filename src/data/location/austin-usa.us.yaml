@@ -20,7 +20,7 @@ seo_title: "Coding Bootcamp in Austin with a Job Guarantee"
 header:
   tagline: "4Geeks Academy: Launch an AI-Ready Tech Career in Austin"
   sub_header: "Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist—with skills built for the AI era."
-  sub_header_highlighted: "All programs are taught online with live support."
+  sub_header_highlighted: " All programs are taught online with live support."
   paragraph: ""
   image: "../../../static/images/locations/austin-location.webp"
   alt: "4Geeks Academy live coding bootcamp in Austin, Texas"
@@ -45,10 +45,15 @@ consents:
 badges:
   title: ""
   paragraph: |
+    4Geeks Academy is the place where developers grow and thrive.
+    We are licensed by the Florida Dept. of Education.
+    Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Atlanta according to SwitchUp.
+    According to Newsweek, 4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States.
+    A community built for developers.
    
 divider:
   heading:
-    text: "4Geeks Academy is a globally recognized coding bootcamp where future-ready developers grow and thrive. Licensed by the Florida Department of Education, we’ve been ranked as one of the top 5 coding bootcamps in the United States by SwitchUp and among the top 10 nationwide by Newsweek. At 4Geeks, we’re more than a school—we’re a community built to equip developers with the skills needed to succeed in the AI era."
+    text: "Searching for the best coding bootcamp in Austin? At 4Geeks Academy, we combine expert instruction with real-world projects to help you build a tech career in Texas’ most innovative city. With flexible schedules and a job guarantee, our Austin graduates have landed roles in companies like IBM, Indeed, and local startups.Build in-demand tech skills and join a thriving innovation community in the heart of Texas."
     font_size: ["34px", "34px", "34px", "28px", "26px"] # [xl, lg, md, sm, xs]
     style: '{ "color": "#FFFFFF" }'
 
@@ -123,10 +128,11 @@ two_columns:
     background: "black"
     path: "/us/apply"
   bullets:
-    items: 
-    - text: "Develop skills aligned with Austin’s top tech companies"
-    - text: "Create projects that reflect the city’s fast-paced innovation"
-    - text: "Get expert career coaching for Austin’s competitive job market"
+    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+    items:
+      - text: "• Develop skills aligned with Austin’s top tech companies"
+      - text: "• Create projects that reflect the city’s fast-paced innovation"
+      - text: "• Get expert career coaching for Austin’s competitive job market"
 
 # Two Columns - Rigo
 two_columns_rigo:

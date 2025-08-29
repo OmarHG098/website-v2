@@ -27,7 +27,7 @@ seo_title: "Miami Coding Bootcamp"
 header:
   tagline: "4Geeks Academy: Launch an AI-Ready Tech Career in Miami"
   sub_header: "Master the Skills of the AI Era and Build a Future-Proof Career in 20 Weeks."
-  sub_header_highlighted: "Our programs are taught online or in person with live support."
+  sub_header_highlighted: " Our programs are taught online or in person with live support."
   paragraph: ""
   image: "../../../static/images/locations/miami-home.png"
   alt: "4Geeks Academy live coding bootcamp in Miami, Florida"
@@ -45,10 +45,15 @@ button:
 badges:
   title: ""
   paragraph: |
+    4Geeks Academy is the place where developers grow and thrive.
+    We are licensed by the Florida Dept. of Education.
+    Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Atlanta according to SwitchUp.
+    According to Newsweek, 4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States.
+    A community built for developers.
 
 divider:
   heading:
-    text: "4Geeks Academy is a globally recognized coding bootcamp where future-ready developers grow and thrive. Licensed by the Florida Department of Education, we’ve been ranked as one of the top 5 coding bootcamps in the United States by SwitchUp and among the top 10 nationwide by Newsweek. At 4Geeks, we’re more than a school—we’re a community built to equip developers with the skills needed to succeed in the AI era."
+    text: "Miami is one of the fastest-growing tech hubs in the U.S.—and 4Geeks Academy is at the center of it. As a leading coding bootcamp in Miami, we’ve helped hundreds of students launch tech careers at startups, agencies, and global companies like Microsoft and Meta. With flexible schedules, expert instructors, and a strong local presence, we’re here to help you succeed in South Florida’s tech industry."
     font_size: ["34px", "34px", "34px", "28px", "26px"] # [xl, lg, md, sm, xs]
     style: '{ "color": "#FFFFFF" }'
 
@@ -132,10 +137,10 @@ two_columns:
     background: "black"
     path: "/us/apply"
   bullets:
-    items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "Join 4Geeks Academy in creating pathways for innovation, creativity, and learning in the heart of Miami's tech ecosystem."
+    items:
+      - text: "• There is always a full or partial scholarship open"
+      - text: "• There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
+      - text: "• Join 4Geeks Academy in creating pathways for innovation, creativity, and learning in the heart of Miami's tech ecosystem."
 
 # Two Columns - Rigo
 two_columns_rigo:
