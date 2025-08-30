@@ -207,7 +207,7 @@ const PaymentOptionCard = ({
                 option.recommended_color?.startsWith("#")
                   ? option.recommended_color
                   : Colors[option.recommended_color?.toLowerCase()] ||
-                    Colors.green
+                  Colors.green
               }
               margin="0 0 4px 0"
               textAlign="left"
@@ -363,12 +363,12 @@ const FinancialOptionsDesktop = ({
             margin="0 0 16px 0"
             textAlign="left"
           >
-            {"Invest in your future, stress-free"}
+            {info.plan_details}
           </H3>
 
           <Div display="block" margin="0 0 12px 0">
             {jobGuarantee &&
-            getJobGuaranteeConfig(currentLocation, info)?.monthly_label ? (
+              getJobGuaranteeConfig(currentLocation, info)?.monthly_label ? (
               <H2
                 fontSize="36px"
                 lineHeight="42px"
@@ -380,7 +380,7 @@ const FinancialOptionsDesktop = ({
                 {getJobGuaranteeConfig(currentLocation, info).monthly_label}
               </H2>
             ) : getNoJobGuaranteeConfig(currentLocation, info)
-                ?.monthly_label ? (
+              ?.monthly_label ? (
               <H2
                 fontSize="36px"
                 lineHeight="42px"
@@ -412,13 +412,13 @@ const FinancialOptionsDesktop = ({
               textAlign="left"
             >
               {jobGuarantee &&
-              getJobGuaranteeConfig(currentLocation, info)?.monthly_label
+                getJobGuaranteeConfig(currentLocation, info)?.monthly_label
                 ? ""
                 : getNoJobGuaranteeConfig(currentLocation, info)?.monthly_label
-                ? ""
-                : monthlyPriceText
-                ? ""
-                : currentPlan?.price || ""}
+                  ? ""
+                  : monthlyPriceText
+                    ? ""
+                    : currentPlan?.price || ""}
             </H2>
             <Paragraph
               color={Colors.black}
@@ -550,7 +550,7 @@ const FinancialOptionsDesktop = ({
                         option.recommended_color?.startsWith("#")
                           ? option.recommended_color
                           : Colors[option.recommended_color?.toLowerCase()] ||
-                            Colors.green
+                          Colors.green
                       }
                       margin="0 0 4px 0"
                       textAlign="left"
@@ -600,10 +600,9 @@ const FinancialOptionsDesktop = ({
           gap="12px"
         >
           <Link
-            to={`${
-              getRegionalCTA(session, info)?.apply_link ||
+            to={`${getRegionalCTA(session, info)?.apply_link ||
               FALLBACK_VALUES.applyLink
-            }${selectedPlan ? `?utm_plan=${selectedPlan}` : ""}`}
+              }${selectedPlan ? `?utm_plan=${selectedPlan}` : ""}`}
           >
             <Button
               variant="full"
@@ -727,7 +726,7 @@ const FinancialOptionsCard = ({
             display="block"
           >
             {jobGuarantee &&
-            getJobGuaranteeConfig(currentLocation, info)?.monthly_label ? (
+              getJobGuaranteeConfig(currentLocation, info)?.monthly_label ? (
               <H2
                 fontSize="32px"
                 fontWeight="700"
@@ -737,7 +736,7 @@ const FinancialOptionsCard = ({
                 {getJobGuaranteeConfig(currentLocation, info).monthly_label}
               </H2>
             ) : getNoJobGuaranteeConfig(currentLocation, info)
-                ?.monthly_label ? (
+              ?.monthly_label ? (
               <H2
                 fontSize="32px"
                 fontWeight="700"
@@ -871,10 +870,9 @@ const FinancialOptionsCard = ({
           margin="0 auto"
         >
           <Link
-            to={`${
-              getRegionalCTA(session, info)?.apply_link ||
+            to={`${getRegionalCTA(session, info)?.apply_link ||
               FALLBACK_VALUES.applyLink
-            }${selectedPlan ? `?utm_plan=${selectedPlan}` : ""}`}
+              }${selectedPlan ? `?utm_plan=${selectedPlan}` : ""}`}
           >
             <Button
               variant="full"
@@ -1077,15 +1075,15 @@ const PricesAndPayment = (props) => {
   const programs = !Array.isArray(props.programs)
     ? []
     : props.programs
-        .filter(
-          ({ node }) =>
-            !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
-            node.meta_info.show_in_apply
-        )
-        .map(({ node }) => ({
-          label: node.apply_form.label,
-          value: node.meta_info.bc_slug,
-        }));
+      .filter(
+        ({ node }) =>
+          !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
+          node.meta_info.show_in_apply
+      )
+      .map(({ node }) => ({
+        label: node.apply_form.label,
+        value: node.meta_info.bc_slug,
+      }));
 
   const getAvailablePlans = () => {
     const currentPlans = getCurrentPlans();
@@ -1434,8 +1432,8 @@ const PricesAndPayment = (props) => {
             session && session?.location && session?.location.phone
               ? `https://wa.me/${phoneNumberClean(session?.location?.phone)}`
               : session?.email
-              ? `mailto:${session?.email}`
-              : `${info?.contact_link}`
+                ? `mailto:${session?.email}`
+                : `${info?.contact_link}`
           }
         >
           {info.contact_carrer_advisor}
