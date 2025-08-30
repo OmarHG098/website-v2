@@ -161,6 +161,11 @@ part_time:
     bullets:
       - Pay upfront and save 10%
       - Regular tuition is $ 10,999 and can be financed interest free-up to 6 months.
+    icons:
+      - "/images/edly.png"
+      - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
+      - "/images/climb-logo.png"
 
   - slug: 'usa-financed-pt'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'toronto-canada', 'dallas-usa']
@@ -179,7 +184,7 @@ part_time:
       - "/images/climb-logo.png"
       
   - slug: 'usa-job-guarantee-pt'
-    academies: ['']
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
     recomended: "Job placement or tuition refunded."
     recommended_color: "pink"
     scholarship: "Job Guarantee"

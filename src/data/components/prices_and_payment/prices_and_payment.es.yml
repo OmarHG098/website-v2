@@ -47,7 +47,7 @@ cta:
   advisor_text: ¡Agenda una llamada con un asesor para encontrar una opción de pago u oferta especial que funcione para ti!
   america:
     book_call: "Agendar llamada →"
-    apply_link: "/es/apply"
+    apply_link: "https://calendly.com/epilowsky-4geeksacademy/30min?month=2025-08"
   international:
     book_call: "Aplicar ahora"
     apply_link: "/es/apply"

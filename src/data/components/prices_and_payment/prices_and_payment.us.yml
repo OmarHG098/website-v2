@@ -27,7 +27,7 @@ job_guarantee:
     monthly_label: "From $349 USD per month"
   - slug: europe_academies
     academies: ['madrid-spain']
-    monthly_label: "From €150 per month"
+    monthly_label: "From €200 per month"
 
 
 no_job_guarantee:
@@ -39,14 +39,10 @@ no_job_guarantee:
     monthly_label: "From $299 USD per month"
   - slug: europe_no_guarantee
     academies: ['madrid-spain']
-    monthly_label: "From €150 per month"
+    monthly_label: "From €200 per month"
   - slug: chile_no_guarantee
     academies: ['santiago-chile']
     monthly_label: "From $168.000 CLP per month"
-
-apply_button: 
-  label: APPLY NOW
-  link: /us/apply
 
 not_available: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>No payment information has been found for this location and program.</p> <p>Please apply for more information or <a class="faq-link" href="/us/contact" rel="noopener noreferrer nofollow">send us a message.</a></p>'
 not_available_job_guarantee: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>We have no plans available with the modality Job Guarantee on this program at this location.</p> <p>Please apply for more information or <a class="faq-link" href="/us/contact" rel="noopener noreferrer nofollow">send us a message.</a></p>'
@@ -60,7 +56,7 @@ cta:
   advisor_text: Book a call with an advisor to find a payment option or special offer that works for you!
   america:
     book_call: "Book a call →"
-    apply_link: "/us/apply"
+    apply_link: "https://calendly.com/epilowsky-4geeksacademy/30min?month=2025-08"
   international:
     book_call: "Apply now"
     apply_link: "/us/apply"
