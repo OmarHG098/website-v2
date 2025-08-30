@@ -269,6 +269,7 @@ const PaymentOptionCard = ({
               width="fit-content"
               alignItems="center"
               margin="16px 0 0 0"
+              position="bottom"
             >
               {option.icons.map((icon) => (
                 <Img
@@ -316,7 +317,7 @@ const FinancialOptionsDesktop = ({
         job_guarantee_description: plan.job_guarantee_description,
         details: plan.warning_message,
         price: plan.price,
-        originalPrice: plan.original_price,
+
         icons: plan.icons,
         recomended: plan.recomended,
         recommended_color: plan.recommended_color,
@@ -674,7 +675,7 @@ const FinancialOptionsCard = ({
         job_guarantee_description: plan.job_guarantee_description,
         details: plan.warning_message,
         price: plan.price,
-        originalPrice: plan.original_price,
+
         icons: plan.icons,
         recomended: plan.recomended,
         recommended_color: plan.recommended_color,
@@ -955,7 +956,6 @@ const PricesAndPayment = (props) => {
               academies
               monthly_label
             }
-            recomended
             not_available
             not_available_job_guarantee
             cta {
@@ -986,7 +986,7 @@ const PricesAndPayment = (props) => {
               description
               job_guarantee_description
               price
-              original_price
+
               warning_message
               offer
 
@@ -1001,7 +1001,7 @@ const PricesAndPayment = (props) => {
               description
               job_guarantee_description
               price
-              original_price
+
               warning_message
               offer
 

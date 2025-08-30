@@ -48,48 +48,61 @@ full_time:
 
 part_time:
 
-## USA Medio Tiempo
+#USA Part-time
   - slug: 'usa-upfront-pt'
     recomended: "★ ¡Mejor precio!"
+    recommended_color: "lightGreen"
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'dallas-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'tampa-usa', 'toronto-canada', 'newyork-usa', 'orlando', 'online']
-    scholarship: "Pago completo"
-    description: "La matrícula regular es de $10,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
+    scholarship: "Paga de contado"
+    description: "La matrícula regular es de $9,899. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
     job_guarantee_description: "La matrícula regular es de $12,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
     price: "$9,899"
     original_price: "$10,999"
-    offer: "10% de descuento"
+    offer: "10% DE DESCUENTO"
     bullets:
-      - "Paga por adelantado y ahorra un 10% en tu matrícula."
-      - "La matrícula regular es de $10,999, pero sólo pagas $9,899."
+      - Paga por adelantado y ahorra un 10%
+      - La matrícula regular es de $9,899 y se puede financiar sin intereses hasta en 6 meses.
     icons:
-      - "/images/visa-mastercard.png"
-      - "/images/ethereum.png"
-      - "/images/bitcoin.png"
+      - "/images/edly.png"
+      - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
+      - "/images/climb-logo.png"
 
   - slug: 'usa-financed-pt'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'dallas-usa', 'downtown-miami', 'houston-usa', 'tampa-usa', 'losangeles-usa', 'toronto-canada', 'newyork-usa', 'orlando', 'online']
-    recomended: "Plan de pago accesible"
-    recommended_color: "yellow"
-    scholarship: "Financiado"
-    description: "Paga en 3, 4 o 5 años"
+    recomended: "Pagos mensuales bajos"
+    recommended_color: "blue"
+    scholarship: "Planes de Pago y Préstamos"
+    description: "Financia tu matrícula a través de Climb o Ascent (basado en crédito), o TFC Tuition (entrada flexible). Los plazos de pago van de 3 a 5+ años, con algunos planes que ofrecen la opción de diferir pagos hasta después de la graduación."
     price: "$200 - $299/mes"
     bullets: 
-      - "Varios socios ofrecen préstamos y planes de pago"
-      - "El saldo restante se puede pagar a lo largo del tiempo, $200 al mes"
-      - "Puedes obtener una beca parcial y el saldo restante con un plan de pago"
-      - "Estamos totalmente comprometidos a hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir con nuestra promesa."
-      - "Puedes adaptar tu camino de aprendizaje a tus necesidades financieras. Elige incluir o excluir nuestros servicios de apoyo profesional."
+      - "Elige entre planes de financiamiento a corto o largo plazo."
+      - "Préstamos asequibles a largo plazo basados en puntaje crediticio."
+      - "Los términos de los préstamos mostrados están vigentes al 11/03/2025. Para ver ejemplos completos de reembolso, visita <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">nuestra página de 4Geeks y Ascent</a>."
     icons: 
       - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
-
-  - slug: 'usa-job-guarantee-pt'
+      
+  - slug: 'usa-scholarships-pt'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
+    recomended: "Financiamiento total y parcial"
+    recommended_color: "pink"
+    scholarship: "Becas"
+    description: "Becas parciales y totales disponibles a través de socios en EE. UU. La elegibilidad y el monto varían según la ubicación. Contáctanos para explorar tus opciones."
+    price: "+$2,000"
+    original_price: ""
+    bullets: 
+      - "Inscríbete aceptando los términos y condiciones."
+      - "Cumple con la carga académica y asistencia requeridas."
+      - "Si no consigues empleo en los 9 meses posteriores a la graduación, te reembolsamos el 100% de la matrícula."
+    icons: 
+  - slug: 'usa-job-guarantee-pt'
+    academies: ['']
     recomended: "Colocación laboral o reembolso de matrícula."
     recommended_color: "pink"
     scholarship: "Garantía de Empleo"
-    description: "Consigue empleo o te devolvemos tu dinero"
+    payment_time: "Consigue empleo o te devolvemos tu dinero"
     price: "+$2,000"
     original_price: ""
     warning_message: ""
@@ -98,20 +111,20 @@ part_time:
       - "Cumple con la carga académica y asistencia requeridas."
       - "Si no consigues empleo en los 9 meses posteriores a la graduación, te reembolsamos el 100% de la matrícula."
     icons: 
-      - "/images/visa-mastercard.png"
-
+      - "/images/visa-mastercard.png" 
+      
   - slug: 'edly-payment'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'dallas-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'tampa-usa', 'toronto-canada', 'newyork-usa', 'orlando', 'online']
-    recomended: "Plan de pago accesible"
-    recommended_color: "yellow"
-    scholarship: "Préstamo de Pago Basado en Ingresos (IBR)"
-    description: "Pagos flexibles después de la graduación"
+    recomended: "Aprende ahora, paga después"
+    recommended_color: "#FF9800"
+    scholarship: "Pagos Basados en Ingresos (IBR)"
+    description: "Ofrecido a través de EDLY. Comienza a pagar solo cuando ganes $35K/año. Los pagos se ajustan según tus ingresos y el reembolso total tiene un límite"
     price: "IBR"
     bullets:
-      - "Edly se enorgullece de ayudar a 4Geeks Academy a ofrecer préstamos asequibles con pagos basados en ingresos (IBR) a sus estudiantes."
-      - "Solo comienzas a pagar una vez que consigas un trabajo y alcances el ingreso mínimo."
-      - "Pagos flexibles que se ajustan según tus ingresos."
-      - "La matrícula se paga directamente a la academia."
+      - "Edly se enorgullece de ayudar a 4Geeks Academy a ofrecer préstamos asequibles con pagos basados en ingresos (IBR) a sus estudiantes"
+      - "Solo comienzas a pagar una vez que consigas un trabajo y alcances el ingreso mínimo"
+      - "Pagos flexibles que se ajustan según tus ingresos"
+      - "La matrícula se paga directamente a la academia"
     icons:
       - "/images/edly.png"
 

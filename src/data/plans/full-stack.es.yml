@@ -231,6 +231,20 @@ part_time:
       - "/images/climb-logo.png"
       - "/images/bcas.png"
 
+  - slug: 'usa-scholarships-pt'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
+    recomended: "Financiamiento total y parcial"
+    recommended_color: "pink"
+    scholarship: "Becas"
+    description: "Becas parciales y totales disponibles a través de socios en EE. UU. La elegibilidad y el monto varían según la ubicación. Contáctanos para explorar tus opciones."
+    price: "+$2,000"
+    original_price: ""
+    bullets: 
+      - "Inscríbete aceptando los términos y condiciones."
+      - "Cumple con la carga académica y asistencia requeridas."
+      - "Si no consigues empleo en los 9 meses posteriores a la graduación, te reembolsamos el 100% de la matrícula."
+    icons: 
+
   - slug: 'usa-clark-scholarship-pt'
     academies: ['']
     recomended: "Plan de pago accesible"

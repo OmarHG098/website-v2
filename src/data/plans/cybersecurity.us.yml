@@ -1,60 +1,60 @@
 full_time: []
 part_time:
-## USA Part-time
-  - slug: 'usa-upfront-cybersecurity-pt'
+#USA Part-time
+  - slug: 'usa-upfront-pt'
     recomended: "★ Best Deal!"
+    recommended_color: "lightGreen"
     academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
-    scholarship: "Full Payment"
-    description: "Regular tuition is $9,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
+    scholarship: "Pay upfront"
+    description: "Regular tuition is $8,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
     job_guarantee_description: "Regular tuition is $11,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
     price: "$8,999"
     original_price: "$9,999"
     offer: "10% OFF"
     bullets:
-      - "You're saving $1,000 USD."
-      - "We are extremely invested in making quality coding education accessible to everyone"
+      - Pay upfront and save 10%
+      - Regular tuition is $8,999 and can be financed interest free-up to 6 months.
     icons:
-      - "/images/visa-mastercard.png"    
-      - "/images/bitcoin_logo.png"  
-      - "/images/ethereum.png"   
+      - "/images/edly.png"
+      - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
+      - "/images/climb-logo.png"
 
-
-  - slug: 'usa-financed-cybersecurity-pt'
-    academies: ['atlanta-usa', 'tampa-usa',  'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+  - slug: 'usa-financed-pt'
+    academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: "Low monthly payments"
     recommended_color: "blue"
-    scholarship: "Financed"
+    scholarship: "Payment Plans & Loans"
     description: "Finance your tuition through Climb or Ascent (credit-based), or TFC Tuition (flexible entry). Repayment terms range from 3 to 5+ years, with some plans offering the option to defer payments until after graduation."
     price: "$200 - $299/mo"
     bullets: 
-      - "Several partners offering loans and payment plans"
-      - "You can get a partial scholarship and the remaining balance with a payment plan"
+      - "Choose among short or long term financing plans."
+      - "Affordable long term loans based on credit score."
+      - "Loan terms displayed are effective as of 3/11/2025. To see full repayment examples, visit <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">our 4Geeks and Ascent page</a>."
     icons: 
       - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
       
-  - slug: 'usa-job-guarantee-pt'
-    academies: ['atlanta-usa', 'austin-usa',  'toronto-canada', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'dallas-usa']
-    recomended: false
-    scholarship: "Job Guarantee"
-    description: "Get hired or your money back"
+  - slug: 'usa-scholarships-pt'
+    academies: ['atlanta-usa', 'austin-usa', 'toronto-canada', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'dallas-usa']
+    recomended: "Full and partial funding"
+    recommended_color: "pink"
+    scholarship: "Scholarships"
+    description: "Partial and full scholarships available through partners across the U.S. Eligibility and amount vary by location. Contact us to explore your options."
     price: "+$2,000"
     original_price: ""
     bullets: 
       - "Enroll, agreeing to terms and conditions."
       - "Fulfill required coursework and attendance."
-      - "Get hired within 9 months of graduation or we’ll refund 100% of your tuition."
+      - "Get hired within 9 months of graduation or we'll refund 100% of your tuition."
     icons: 
-      # - "/images/clarkuniversity.png" 
-    
- 
-    
+
   - slug: 'edly-payment'
     academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'dallas-usa']
     recomended: "Learn now, pay later"
-    recommended_color: "yellow"
-    scholarship: "Learn now, pay later"
+    recommended_color: "#FF9800"
+    scholarship: "Income-Based Payments (IBR)"
     description: "Offered through EDLY. Start paying only once you earn $35K/year. Payments scale with income, and total repayment is capped"
     price: "IBR"
     bullets:
@@ -64,7 +64,23 @@ part_time:
       - "Tuition paid directly to your school"
     icons:
       - "/images/edly.png"
-
+      
+  - slug: 'usa-job-guarantee-pt'
+    academies: ['']
+    recomended: "Colocación laboral o reembolso de matrícula."
+    recommended_color: "pink"
+    scholarship: "Garantía de Empleo"
+    payment_time: "Consigue empleo o te devolvemos tu dinero"
+    price: "+$2,000"
+    original_price: ""
+    warning_message: ""
+    bullets: 
+      - "Inscríbete aceptando los términos y condiciones."
+      - "Cumple con la carga académica y asistencia requeridas."
+      - "Si no consigues empleo en los 9 meses posteriores a la graduación, te reembolsamos el 100% de la matrícula."
+    icons: 
+      - "/images/visa-mastercard.png" 
+      
 ## Spain & Europe
   - slug: 'spain-scholarships-cs-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']

@@ -39,7 +39,7 @@ full_time:
     academies: ['dallas-usa', 'downtown-miami']
     recomended: "Learn now, pay later"
     recommended_color: "#FF9800"
-    scholarship: "Learn now, pay later"
+    scholarship: "Income-Based Payments (IBR)"
     description: "Start paying once hired"
     price: "IBR"
     bullets:
@@ -183,12 +183,12 @@ part_time:
       - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
       
-  - slug: 'usa-job-guarantee-pt'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
-    recomended: "Job placement or tuition refunded."
+  - slug: 'usa-scholarships-pt'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
+    recomended: "Full and partial funding"
     recommended_color: "pink"
-    scholarship: "Job Guarantee"
-    description: "Get hired or your money back"
+    scholarship: "Scholarships"
+    description: "Partial and full scholarships available through partners across the U.S. Eligibility and amount vary by location. Contact us to explore your options."
     price: "$12,999"
     original_price: ""
     bullets: 
@@ -197,11 +197,27 @@ part_time:
       - "Get hired within 9 months of graduation or we'll refund 100% of your tuition."
     icons: 
 
+  - slug: 'usa-job-guarantee-pt'
+    academies: ['']
+    recomended: "Colocación laboral o reembolso de matrícula."
+    recommended_color: "pink"
+    scholarship: "Garantía de Empleo"
+    payment_time: "Consigue empleo o te devolvemos tu dinero"
+    price: "+$2,000"
+    original_price: ""
+    warning_message: ""
+    bullets: 
+      - "Inscríbete aceptando los términos y condiciones."
+      - "Cumple con la carga académica y asistencia requeridas."
+      - "Si no consigues empleo en los 9 meses posteriores a la graduación, te reembolsamos el 100% de la matrícula."
+    icons: 
+      - "/images/visa-mastercard.png" 
+
   - slug: 'edly-payment'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
     recomended: "Learn now, pay later"
     recommended_color: "#FF9800"
-    scholarship: "Learn now, pay later"
+    scholarship: "Income-Based Payments (IBR)"
     description: "Offered through EDLY. Start paying only once you earn $35K/year. Payments scale with income, and total repayment is capped"
     price: "IBR"
     bullets:

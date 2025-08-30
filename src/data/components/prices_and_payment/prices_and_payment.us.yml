@@ -11,7 +11,7 @@ top_label: Location
 top_label_2: Program
 plans_title: Payment plans
 plan_details: Invest in your future, stress-free
-financing_message: "We work with trusted partners to offer flexible and affordable financing—so you can focus on your future, not your fees."
+financing_message: "Pick your flexible payment plan and focus on your future, not your fees."
 select: Select the location and payment option that suits you best.
 select_2: Select the location, program and payment option that best meets your needs
 job_guarantee:   
@@ -26,7 +26,7 @@ job_guarantee:
     description: "Get hired within 9 months of graduation or your money back."   
     monthly_label: "From $349 USD per month"
   - slug: europe_academies
-    academies: ['madrid-spain']
+    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain', 'berlin-germany', 'hamburg-germany', 'munich-germany', 'dublin-ireland', 'milan-italy', 'rome-italy', 'lisbon-portugal']
     monthly_label: "From €200 per month"
 
 
@@ -38,7 +38,7 @@ no_job_guarantee:
     academies: ['buenosaires-argentina', 'bogota-colombia', 'caracas-venezuela', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
     monthly_label: "From $299 USD per month"
   - slug: europe_no_guarantee
-    academies: ['madrid-spain']
+    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain', 'berlin-germany', 'hamburg-germany', 'munich-germany', 'dublin-ireland', 'milan-italy', 'rome-italy', 'lisbon-portugal']
     monthly_label: "From €200 per month"
   - slug: chile_no_guarantee
     academies: ['santiago-chile']
