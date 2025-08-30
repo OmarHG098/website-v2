@@ -128,7 +128,12 @@ const LoadingSpinner = () => (
   </Div>
 );
 
-const PaymentOptionCard = ({ option, selectedPlan, setSelectedPlan, jobGuarantee }) => {
+const PaymentOptionCard = ({
+  option,
+  selectedPlan,
+  setSelectedPlan,
+  jobGuarantee,
+}) => {
   return (
     <Div
       border="1px solid #E5E5E5"
@@ -207,7 +212,9 @@ const PaymentOptionCard = ({ option, selectedPlan, setSelectedPlan, jobGuarantee
             margin="0 0 16px 0"
             textAlign="left"
           >
-            {(jobGuarantee && option.job_guarantee_description) ? option.job_guarantee_description : option.description}
+            {jobGuarantee && option.job_guarantee_description
+              ? option.job_guarantee_description
+              : option.description}
           </Paragraph>
           {option.icons && option.icons.length > 0 && (
             <Div
@@ -568,7 +575,7 @@ const FinancialOptionsDesktop = ({
             </Button>
           </Link>
 
-                      {shouldShowMoreDetails(financial) && (
+          {shouldShowMoreDetails(financial) && (
             <Link
               to={
                 info?.cta?.more_details_link || FALLBACK_VALUES.financialsLink
@@ -837,7 +844,7 @@ const FinancialOptionsCard = ({
             </Button>
           </Link>
 
-                      {shouldShowMoreDetails(financial) && (
+          {shouldShowMoreDetails(financial) && (
             <Link
               to={
                 info?.cta?.more_details_link || FALLBACK_VALUES.financialsLink
