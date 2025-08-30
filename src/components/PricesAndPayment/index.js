@@ -78,6 +78,50 @@ const shouldShowMoreDetails = (financial) => {
   return !financial; // Hide if on financials page
 };
 
+// Helper function to get job guarantee configuration for selected location
+const getJobGuaranteeConfig = (selectedLocation, info) => {
+  if (!selectedLocation || !info?.job_guarantee) return null;
+  
+  const candidates = [
+    selectedLocation?.breathecode_location_slug,
+    selectedLocation?.meta_info?.slug,
+    selectedLocation?.active_campaign_location_slug,
+  ].filter((s) => typeof s === "string" && s.length > 0);
+
+  // Find matching job guarantee configuration
+  for (const locationSlug of candidates) {
+    const matchingConfig = info.job_guarantee.find(config => 
+      config.academies && config.academies.includes(locationSlug)
+    );
+    if (matchingConfig) return matchingConfig;
+  }
+  
+  // Return first config as fallback
+  return info.job_guarantee[0] || null;
+};
+
+// Helper function to get no job guarantee configuration for selected location  
+const getNoJobGuaranteeConfig = (selectedLocation, info) => {
+  if (!selectedLocation || !info?.no_job_guarantee) return null;
+  
+  const candidates = [
+    selectedLocation?.breathecode_location_slug,
+    selectedLocation?.meta_info?.slug,
+    selectedLocation?.active_campaign_location_slug,
+  ].filter((s) => typeof s === "string" && s.length > 0);
+
+  // Find matching no job guarantee configuration
+  for (const locationSlug of candidates) {
+    const matchingConfig = info.no_job_guarantee.find(config => 
+      config.academies && config.academies.includes(locationSlug)
+    );
+    if (matchingConfig) return matchingConfig;
+  }
+  
+  // Return first config as fallback
+  return info.no_job_guarantee[0] || null;
+};
+
 // Shared styles to avoid recreating objects per render
 const selectStyles = {
   input: (styles) => ({
@@ -321,7 +365,7 @@ const FinancialOptionsDesktop = ({
           </H3>
 
           <Div display="block" margin="0 0 12px 0">
-            {jobGuarantee && info?.job_guarantee?.monthly_label ? (
+            {jobGuarantee && getJobGuaranteeConfig(currentLocation, info)?.monthly_label ? (
               <H2
                 fontSize="36px"
                 lineHeight="42px"
@@ -330,9 +374,9 @@ const FinancialOptionsDesktop = ({
                 margin="0 0 6px 0"
                 textAlign="left"
               >
-                {info.job_guarantee.monthly_label}
+                {getJobGuaranteeConfig(currentLocation, info).monthly_label}
               </H2>
-            ) : info?.no_job_guarantee?.monthly_label ? (
+            ) : getNoJobGuaranteeConfig(currentLocation, info)?.monthly_label ? (
               <H2
                 fontSize="36px"
                 lineHeight="42px"
@@ -341,7 +385,7 @@ const FinancialOptionsDesktop = ({
                 margin="0 0 6px 0"
                 textAlign="left"
               >
-                {info.no_job_guarantee.monthly_label}
+                {getNoJobGuaranteeConfig(currentLocation, info).monthly_label}
               </H2>
             ) : monthlyPriceText ? (
               <H2
@@ -363,9 +407,9 @@ const FinancialOptionsDesktop = ({
               margin="0 0 6px 0"
               textAlign="left"
             >
-              {jobGuarantee && info?.job_guarantee?.monthly_label
+              {jobGuarantee && getJobGuaranteeConfig(currentLocation, info)?.monthly_label
                 ? ""
-                : info?.no_job_guarantee?.monthly_label
+                : getNoJobGuaranteeConfig(currentLocation, info)?.monthly_label
                 ? ""
                 : monthlyPriceText
                 ? ""
@@ -423,7 +467,7 @@ const FinancialOptionsDesktop = ({
                     fontSize_xs="16px"
                     margin="0 0 0 10px"
                   >
-                    {info.job_guarantee.title}
+                    {getJobGuaranteeConfig(currentLocation, info)?.title}
                   </H4>
                 </Div>
                 <Paragraph
@@ -431,7 +475,7 @@ const FinancialOptionsDesktop = ({
                   color={Colors.black}
                   margin="8px 0 0 0"
                 >
-                  {info.job_guarantee.description}
+                  {getJobGuaranteeConfig(currentLocation, info)?.description}
                 </Paragraph>
               </Div>
             )}
@@ -674,23 +718,23 @@ const FinancialOptionsCard = ({
             margin="0 0 16px 0"
             display="block"
           >
-            {jobGuarantee && info?.job_guarantee?.monthly_label ? (
+            {jobGuarantee && getJobGuaranteeConfig(currentLocation, info)?.monthly_label ? (
               <H2
                 fontSize="32px"
                 fontWeight="700"
                 color={Colors.black}
                 margin="0 8px 0 0"
               >
-                {info.job_guarantee.monthly_label}
+                {getJobGuaranteeConfig(currentLocation, info).monthly_label}
               </H2>
-            ) : info?.no_job_guarantee?.monthly_label ? (
+            ) : getNoJobGuaranteeConfig(currentLocation, info)?.monthly_label ? (
               <H2
                 fontSize="32px"
                 fontWeight="700"
                 color={Colors.black}
                 margin="0 8px 0 0"
               >
-                {info.no_job_guarantee.monthly_label}
+                {getNoJobGuaranteeConfig(currentLocation, info).monthly_label}
               </H2>
             ) : (
               <H2
@@ -749,7 +793,7 @@ const FinancialOptionsCard = ({
                     fontSize_xs="16px"
                     margin="0 0 0 10px"
                   >
-                    {info.job_guarantee.title}
+                    {getJobGuaranteeConfig(currentLocation, info)?.title}
                   </H4>
                 </Div>
                 <Paragraph
@@ -757,7 +801,7 @@ const FinancialOptionsCard = ({
                   color={Colors.black}
                   margin="8px 0 0 0"
                 >
-                  {info.job_guarantee.description}
+                  {getJobGuaranteeConfig(currentLocation, info)?.description}
                 </Paragraph>
               </Div>
             )}
@@ -893,11 +937,15 @@ const PricesAndPayment = (props) => {
             select
             select_2
             job_guarantee {
+              slug
+              academies
               title
               description
               monthly_label
             }
             no_job_guarantee {
+              slug
+              academies
               monthly_label
             }
             recomended

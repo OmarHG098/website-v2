@@ -14,13 +14,35 @@ plan_details: Invest in your future, stress-free
 financing_message: "We work with trusted partners to offer flexible and affordable financing—so you can focus on your future, not your fees."
 select: Select the location and payment option that suits you best.
 select_2: Select the location, program and payment option that best meets your needs
-job_guarantee:
-  title:  "Enroll with Job Guarantee"
-  description:  "Get hired within 9 months of graduation or your money back."
-  monthly_label: "$349 a month or less"
+job_guarantee:   
+  - slug: usa_academies
+    academies: ['atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada', 'austin-usa', 'dallas-usa']
+    title: "Enroll with Job Guarantee"   
+    description: "Get hired within 9 months of graduation or your money back."   
+    monthly_label: "$349 a month or less"
+  - slug: latam_academies
+    academies: ['buenosaires-argentina', 'bogota-colombia', 'caracas-venezuela', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    title: "Enroll with Job Guarantee"   
+    description: "Get hired within 9 months of graduation or your money back."   
+    monthly_label: "From $349 USD per month"
+  - slug: europe_academies
+    academies: ['madrid-spain']
+    monthly_label: "From €150 per month"
+
 
 no_job_guarantee:
-  monthly_label: "$299 a month or less"
+  - slug: usa_no_guarantee
+    academies: ['atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada', 'austin-usa', 'dallas-usa']
+    monthly_label: "$299 a month or less"
+  - slug: latam_no_guarantee  
+    academies: ['buenosaires-argentina', 'bogota-colombia', 'caracas-venezuela', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    monthly_label: "From $299 USD per month"
+  - slug: europe_no_guarantee
+    academies: ['madrid-spain']
+    monthly_label: "From €150 per month"
+  - slug: chile_no_guarantee
+    academies: ['santiago-chile']
+    monthly_label: "From $168.000 CLP per month"
 
 apply_button: 
   label: APPLY NOW
@@ -41,6 +63,6 @@ cta:
     apply_link: "/us/apply"
   international:
     book_call: "Apply now"
-    apply_link: "/apply"
+    apply_link: "/us/apply"
   more_details: More details
   more_details_link: /us/financials

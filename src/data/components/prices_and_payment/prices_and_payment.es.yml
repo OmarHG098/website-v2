@@ -15,13 +15,25 @@ plan_details: Invierte en tu futuro, sin preocupaciones
 financing_message: "Trabajamos con socios de confianza para ofrecer financiación flexible y asequible—para que te enfoques en tu futuro, no en tus cuotas."
 select: Selecciona la ubicacion y el plan que mejor se ajusta a ti
 select_2: Selecciona la ubicación, el programa y la opción de pago que mejor se adapte a sus necesidades
-job_guarantee:
-  title:  "Inscríbete con Garantía de Empleo"
-  description:  "Obtén un empleo dentro de 9 meses de graduarte o te devolvemos tu dinero."
-  monthly_label: "$349 al mes o menos"
+job_guarantee:   
+  - slug: usa_academies
+    academies: ['atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada', 'austin-usa', 'dallas-usa']
+    title: "Inscríbete con Garantía de Empleo"   
+    description: "Obtén un empleo dentro de 9 meses de graduarte o te devolvemos tu dinero."   
+    monthly_label: "$349 al mes o menos"
+  - slug: latam_academies
+    academies: ['buenosaires-argentina', 'bogota-colombia', 'caracas-venezuela', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    title: "Inscríbete con Garantía de Empleo"   
+    description: "Obtén un empleo dentro de 9 meses de graduarte o te devolvemos tu dinero."   
+    monthly_label: "Desde $349 USD al mes"
 
 no_job_guarantee:
-  monthly_label: "$299 al mes o menos"
+  - slug: usa_no_guarantee
+    academies: ['atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada', 'austin-usa', 'dallas-usa']
+    monthly_label: "$299 al mes o menos"
+  - slug: latam_no_guarantee  
+    academies: ['buenosaires-argentina', 'bogota-colombia', 'caracas-venezuela', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    monthly_label: "Desde $299 USD al mes"
 
 not_available: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>No se ha encontrado information de pago para este programa en este país.</p> <p>Para conocer más le invitamos a aplicar al programa y sera contactado por uno de nuestros asesores vocacionales o <a class="faq-link" href="/es/contactanos" rel="noopener noreferrer nofollow">envíenos un mensaje.</a></p>'
 not_available_job_guarantee: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>No tenemos disponible la modalidad Garantía de Empleo en este programa en esta locación.</p> <p>Para conocer más le invitamos a aplicar al programa y sera contactado por uno de nuestros asesores vocacionales o <a class="faq-link" href="/es/contactanos" rel="noopener noreferrer nofollow">envíenos un mensaje.</a></p>'
