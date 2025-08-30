@@ -1099,7 +1099,7 @@ const PricesAndPayment = (props) => {
     setAvailablePlans(filteredPlans);
     setSelectedPlan(null);
     setIsLoading(false);
-  }, [jobGuarantee, currentLocation, course, props.financial]);
+  }, [currentLocation, course, props.financial]);
 
   const city = session && session.location ? session.location.city : [];
 
