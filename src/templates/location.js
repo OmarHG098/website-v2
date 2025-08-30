@@ -273,7 +273,9 @@ const Location = ({ data, pageContext, yml }) => {
       )}
 
       {showJobGuarantee && !shouldPlaceUnderStaff && (
-        <JobGuaranteeSmall content={data.allJobGuaranteeSmallYaml.edges[0].node} />
+        <JobGuaranteeSmall
+          content={data.allJobGuaranteeSmallYaml.edges[0].node}
+        />
       )}
 
       <TwoColumn
@@ -351,7 +353,9 @@ const Location = ({ data, pageContext, yml }) => {
       <Staff lang={pageContext.lang} heading={yml?.staff?.heading} />
 
       {showJobGuarantee && shouldPlaceUnderStaff && (
-        <JobGuaranteeSmall content={data.allJobGuaranteeSmallYaml.edges[0].node} />
+        <JobGuaranteeSmall
+          content={data.allJobGuaranteeSmallYaml.edges[0].node}
+        />
       )}
 
       {/* IFRAME map
