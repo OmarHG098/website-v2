@@ -760,7 +760,7 @@ export const PhoneText = styled.p`
   text-align: center;
   margin-top: 6px;
   font-size: 15px;
-  
+
   @media ${Break.xs} {
     font-size: 12px;
   }
@@ -772,10 +772,10 @@ export const PhoneTextDesktop = styled.p`
   margin-top: 3px;
   margin-right: 10px;
   font-size: 15px;
-  
+
   @media ${Break.xs} {
     font-size: 12px;
-   }
+  }
 `;
 
 export const OfferTag = styled.div`
