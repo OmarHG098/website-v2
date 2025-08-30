@@ -1,5 +1,5 @@
 # Location-based job guarantee configuration
-job_guarantee_locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
+job_guarantee_locations: ["atlanta-usa", "austin-usa", "chicago-usa", "dallas-usa", "houston-usa", "losangeles-usa", "newyork-usa", "toronto-canada", "online", "online-spanish-usa", "buenosaires-argentina", "bogota-colombia", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador"]
 
 pricing_error: Prices are currently not available for
 pricing_error_contact: For more information please contact us at info@4geeksacademy.com
