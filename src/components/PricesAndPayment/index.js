@@ -31,14 +31,14 @@ const FALLBACK_VALUES = {
   financialsLink: "/us/financials",
 };
 
-// Helper function to check if job guarantee should be shown for current location
-const shouldShowJobGuarantee = (session, info) => {
-  if (!session?.location || !info?.job_guarantee_locations) return false;
+// Helper function to check if job guarantee should be shown for selected location
+const shouldShowJobGuarantee = (selectedLocation, info) => {
+  if (!selectedLocation || !info?.job_guarantee_locations) return false;
 
   const candidates = [
-    session?.location?.breathecode_location_slug,
-    session?.location?.meta_info?.slug,
-    session?.location?.active_campaign_location_slug,
+    selectedLocation?.breathecode_location_slug,
+    selectedLocation?.meta_info?.slug,
+    selectedLocation?.active_campaign_location_slug,
   ].filter((s) => typeof s === "string" && s.length > 0);
 
   // Check if any candidate location is in the job_guarantee_locations array
@@ -392,7 +392,7 @@ const FinancialOptionsDesktop = ({
           </Div>
 
           {availablePlans?.some((p) => p.price) &&
-            shouldShowJobGuarantee(session, info) &&
+            shouldShowJobGuarantee(currentLocation, info) &&
             schedule !== "full_time" && (
               <Div margin="16px 0 0 0" display="block">
                 <Div alignItems="center">
@@ -713,7 +713,7 @@ const FinancialOptionsCard = ({
           </Div>
 
           {availablePlans?.some((p) => p.price) &&
-            shouldShowJobGuarantee(session, info) &&
+            shouldShowJobGuarantee(currentLocation, info) &&
             schedule !== "full_time" && (
               <Div
                 margin="8px 0 0 0"
