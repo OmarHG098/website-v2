@@ -351,7 +351,8 @@ const FinancialOptionsDesktop = ({
         {/* Offer tag removed on desktop per revamp */}
         {/* Left column */}
         <Div
-          display="block"
+          display="flex"
+          flexDirection="column"
           background={Colors.white}
           padding="24px"
           width_tablet="50%"
@@ -487,6 +488,7 @@ const FinancialOptionsDesktop = ({
           {/* Bullets from selected plan removed on desktop per revamp */}
 
           {/* Partner logos from YAML icons */}
+          <Div flexGrow="1" /> {/* This pushes the icons to the bottom */}
           {currentPlan?.icons && currentPlan.icons.length > 0 && (
             <Div
               className="icons"
@@ -495,7 +497,7 @@ const FinancialOptionsDesktop = ({
               borderRadius="26px"
               width="fit-content"
               alignItems="center"
-              margin="16px 0 24px 0"
+              margin="0 0 24px 0"
             >
               {currentPlan.icons.map((icon) => (
                 <Img
