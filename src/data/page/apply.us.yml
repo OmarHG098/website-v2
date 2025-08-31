@@ -13,7 +13,7 @@ header:
   title: "Your Future in Tech Starts Here"
   image:
   image_alt: "Apply to 4Geeks Academy, Coding Bootcamp"
-  paragraph: "You’re one step closer to your new career in tech — congratulations! Fill out the form below, and our admissions team will walk you through the next steps.<br/><span style=\"color:#6E6B6B\"> (And don’t worry — you won’t be committing to anything yet, just starting the conversation.)</span>"
+  paragraph: "You’re one step closer to your new career in tech — congratulations! Fill out the form below, and our admissions team will walk you through the next steps.<br/><span style=\"color:#6E6B6B;font-size:18px\"> (And don’t worry — you won’t be committing to anything yet, just starting the conversation.)</span>"
   button:
 
 ## APPLY LEFT SECTION
