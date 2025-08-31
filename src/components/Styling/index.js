@@ -167,7 +167,7 @@ export const Span = styled.div`
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-weight: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
   ${Tooltip}:hover {

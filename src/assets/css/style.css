@@ -14,6 +14,10 @@ body {
   scroll-padding: 10%;
 }
 
+strong {
+  font-weight: 700 !important;
+}
+
 .set-overflow {
   overflow: auto !important;
   /* overflow-y: clip!important;

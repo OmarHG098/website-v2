@@ -854,10 +854,10 @@ export const Header = ({
             margin_tablet={paragraphMargin_Tablet}
             fontSize={fontSize_paragraph}
             fontWeight={fontWeight_paragraph}
+            maxWidth="64rem"
             color={Colors.black}
-          >
-            {paragraph}
-          </SubTitle>
+            dangerouslySetInnerHTML={{ __html: paragraph }}
+          />
           {children}
         </Div>
         {svg_image ? (
