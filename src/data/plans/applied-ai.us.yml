@@ -4,7 +4,7 @@ part_time:
     recomended: "★ Best Deal!"
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     scholarship: "Full Payment"
-    payment_time: "Pay today"
+    description: "Pay today"
     price: "$3000"
     original_price: "$3500"
     offer: "500$ OFF"
@@ -17,7 +17,7 @@ part_time:
     recomended: "Low monthly payments"
     recommended_color: "veryLightBlue"
     scholarship: "Financed"
-    payment_time: "Pay in 12 months"
+    description: "Pay in 12 months"
     price: "~$266 p/m"
     bullets: 
       - "There is always a payment plan available to help you join 4Geeks Academy."
@@ -32,7 +32,7 @@ part_time:
     recomended: "Low monthly payments"
     recommended_color: "veryLightBlue"
     scholarship: "Financed"
-    payment_time: "Pay in 24 months"
+    description: "Pay in 24 months"
     price: "~$145 p/m"
     bullets: 
       - "There is always a payment plan available to help you join 4Geeks Academy."
@@ -47,7 +47,7 @@ part_time:
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: "★ Best Deal!"
     scholarship: "Pay upfront"
-    payment_time: "And get a discount"
+    description: "And get a discount"
     price: "€3000*"
     original_price: "€3500"
     offer: "500$ OFF"
@@ -63,7 +63,7 @@ part_time:
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany', 'lisbon-portugal','milan-italy','rome-italy']
     recomended: "★ Best Deal!"
     scholarship: "Pay upfront"
-    payment_time: "And get a discount"
+    description: "And get a discount"
     price: "€3000*"
     original_price: "€3500"
     offer: "500$ OFF"
@@ -81,7 +81,7 @@ part_time:
     academies: ['santiago-chile']
     recomended: "★ Best Deal!"
     scholarship: "Pay Upfront"
-    payment_time: "And get a discount"
+    description: "And get a discount"
     price: "700.000 CLP*"
     original_price: "1.000.000 CLP"
     offer: "30% OFF"
@@ -96,7 +96,7 @@ part_time:
     recomended: "Accessible payment plan"
     recommended_color: "yellow"
     scholarship: "Financed"
-    payment_time: "12 months payment"
+    description: "12 months payment"
     price: Starting from 58.000 CLP"
     warning_message: "Limited seats!"
     bullets:
@@ -112,7 +112,7 @@ part_time:
     academies: ['montevideo-uruguay','bogota-colombia','caracas-venezuela',  'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: "★ Best Deal!"
     scholarship: "Pay upfront and "
-    payment_time: "save $500"
+    description: "save $500"
     price: "USD $1.399"
     original_price: "USD $2.500"
     offer: "44% OFF"
