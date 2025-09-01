@@ -832,19 +832,46 @@ export const landingSections = {
   who_is_hiring: ({ session, data, pageContext, yml, location, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node?.who_is_hiring !== null
+        data.allLandingYaml.edges[0].node?.who_is_hiring !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
 
     const hiring = data.allPartnerYaml.edges[0].node;
-    let landingHiriging = dataYml[0].node?.who_is_hiring;
+    let landingHiring = dataYml[0].node?.who_is_hiring;
+
+    // Lógica de priorización:
+    // 1. Si hay custom_logos, usar solo esos (ignora todo lo demás)
+    // 2. Si hay featured, usar esos con showFeatured
+    // 3. Si no hay ninguno, usar los globales del partner.yaml
+
+    const customLogos = landingHiring?.custom_logos;
+    const featuredLogos = landingHiring?.featured;
+
+    let imagesToShow;
+    let showFeaturedLogos = false;
+    let featuredImagesToShow = [];
+
+    if (customLogos && customLogos.length > 0) {
+      // Opción 1: Hay logos custom - usar SOLO estos
+      imagesToShow = customLogos;
+      showFeaturedLogos = false;
+    } else if (featuredLogos && featuredLogos.length > 0) {
+      // Opción 2: Hay featured específicos - usar estos como featured
+      imagesToShow = hiring.partners.images;
+      featuredImagesToShow = featuredLogos;
+      showFeaturedLogos = true;
+    } else {
+      // Opción 3: Usar configuración global por defecto
+      imagesToShow = hiring.partners.images;
+      showFeaturedLogos = true;
+      featuredImagesToShow = hiring.partners.images.filter(img => img.featured === true);
+    }
 
     return (
       <Div
         id="who_is_hiring"
         key={index}
         flexDirection="column"
-        //margin="40px auto"
         margin_tablet="60px auto 60px auto"
         m_sm="0"
         p_xs="0"
@@ -853,20 +880,20 @@ export const landingSections = {
         <OurPartners
           multiLine
           variant="carousel"
-          images={hiring.partners.images}
+          images={imagesToShow}
           margin="0"
           padding="0 ​0 75px 0"
           marquee
           paddingFeatured="0 0 70px 0"
-          featuredImages={landingHiriging?.featured}
-          showFeatured
+          featuredImages={featuredImagesToShow}
+          showFeatured={showFeaturedLogos}
           withoutLine
           title={
-            landingHiriging ? landingHiriging.heading : hiring.partners.tagline
+            landingHiring ? landingHiring.heading : hiring.partners.tagline
           }
           paragraph={
-            landingHiriging
-              ? landingHiriging.sub_heading
+            landingHiring
+              ? landingHiring.sub_heading
               : hiring.partners.sub_heading
           }
         />

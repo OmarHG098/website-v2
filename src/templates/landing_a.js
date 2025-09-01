@@ -91,17 +91,17 @@ const Landing = (props) => {
     session &&
     (yml.meta_info.utm_location?.length > 1
       ? session.locations?.find(
-          (l) =>
-            l.breathecode_location_slug ===
-            yml.meta_info.utm_location?.find(
-              (loc) => loc === session.location?.breathecode_location_slug
-            )
-        )
+        (l) =>
+          l.breathecode_location_slug ===
+          yml.meta_info.utm_location?.find(
+            (loc) => loc === session.location?.breathecode_location_slug
+          )
+      )
       : session.locations?.find(
-          (l) =>
-            Array.isArray(yml.meta_info.utm_location) &&
-            l.breathecode_location_slug === yml.meta_info.utm_location[0]
-        ));
+        (l) =>
+          Array.isArray(yml.meta_info.utm_location) &&
+          l.breathecode_location_slug === yml.meta_info.utm_location[0]
+      ));
 
   return (
     <>
@@ -110,8 +110,8 @@ const Landing = (props) => {
           yml.navbar
             ? yml.navbar.buttonText
             : pageContext.lang === "us"
-            ? "Apply"
-            : "¡Postúlate Ahora!"
+              ? "Apply"
+              : "¡Postúlate Ahora!"
         }
         buttonUrl={yml.navbar?.buttonUrl}
         logoUrl={yml.navbar?.logoUrl}
@@ -246,7 +246,7 @@ const Landing = (props) => {
                 applySchollarship
                   ? applySchollarship?.image.childImageSharp.gatsbyImageData
                   : data.allPageYaml.edges[0].node.list[0].image.childImageSharp
-                      .gatsbyImageData
+                    .gatsbyImageData
               }
               bgSize="contain"
               alt="geekforce image"
@@ -499,7 +499,20 @@ export const query = graphql`
                 }
               }
             }
-          }
+              custom_logos {
+    name
+    image {
+      childImageSharp {
+        gatsbyImageData(
+          layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+          width: 150
+          placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+        )
+      }
+    }
+  }
+}
+          
           why_python {
             position
             heading
@@ -813,7 +826,6 @@ export const query = graphql`
               }
             }
           }
-
           why_python {
             position
             heading

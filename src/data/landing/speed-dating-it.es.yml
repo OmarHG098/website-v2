@@ -14,7 +14,7 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
   utm_location: ["madrid-spain"]
-  automation: hiring-partner # comma separated, "soft" is the default value
+  automation: soft # comma separated, "soft" is the default value
   tag: hiring_partner # comma separated, "request_more_info" is the default value
 
 navbar:
@@ -90,7 +90,7 @@ follow_bar:
     path: "#leadform_header"
   phone:
     text: ""
-    number: ""
+    number: " "
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
@@ -100,6 +100,9 @@ who_is_hiring:
   limit: 4
   heading: "Más de 500 empresas contratan a nuestros graduados"
   sub_heading: "Trabajamos con empresas nacionales e internacionales que apuestan por talento junior."
+  custom_logos:
+    - name: "Get Pits"
+      image: "../../../static/images/partner/get-pits.webp"
 
 badges:
   position: 3
@@ -120,7 +123,7 @@ components:
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     sub_heading:
       text: |
-        🌐 Dónde: La Nave, Madrid <br>  
+        🌐 Dónde: <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">La Nave, Madrid</a> <br>  
         📅 Cuándo: 9 de Octubre <br>
         🕥 Duración: de 10:00 a 15:00 <br>
       font_size: ["20px"]
