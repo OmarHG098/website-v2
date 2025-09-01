@@ -265,7 +265,7 @@ we_trust_section:
       text: Job placement rate
     - icon: chart
       title: "60K"
-      text: Avg. income at new job
+      text: Average income at new job
     - icon: graduation-2
       title: "20M"
       text: Funding for scholarships 

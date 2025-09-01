@@ -42,6 +42,7 @@ const BaseHeading = styled(Heading)`
   text-shadow: ${(props) => props.textShadow};
   background-color: ${(props) => props.background};
   margin-top: ${(props) => props.marginTop};
+  text-wrap: ${(props) => props.textWrap};
   text-transform: ${(props) => props.textTransform};
   text-decoration: ${(props) => props.textDecoration};
   text-align: ${(props) => props.textAlign || "center"};

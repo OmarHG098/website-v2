@@ -327,6 +327,8 @@ const FinancialOptionsDesktop = ({
     [availablePlans]
   );
 
+  const jobGuaranteeInfo = getJobGuaranteeConfig(currentLocation, info);
+
   const currentPlan = useMemo(
     () =>
       (availablePlans || []).find((p) => p.slug === selectedPlan) ||
@@ -367,7 +369,7 @@ const FinancialOptionsDesktop = ({
           </H3>
           <Div display="block" margin="0 0 12px 0">
             {jobGuarantee &&
-            getJobGuaranteeConfig(currentLocation, info)?.monthly_label ? (
+            jobGuaranteeInfo?.monthly_label ? (
               <H2
                 fontSize="36px"
                 lineHeight="42px"
@@ -376,7 +378,7 @@ const FinancialOptionsDesktop = ({
                 margin="0 0 6px 0"
                 textAlign="left"
               >
-                {getJobGuaranteeConfig(currentLocation, info).monthly_label}
+                {jobGuaranteeInfo.monthly_label}
               </H2>
             ) : getNoJobGuaranteeConfig(currentLocation, info)
                 ?.monthly_label ? (
@@ -411,7 +413,7 @@ const FinancialOptionsDesktop = ({
               textAlign="left"
             >
               {jobGuarantee &&
-              getJobGuaranteeConfig(currentLocation, info)?.monthly_label
+              jobGuaranteeInfo?.monthly_label
                 ? ""
                 : getNoJobGuaranteeConfig(currentLocation, info)?.monthly_label
                 ? ""
@@ -443,42 +445,54 @@ const FinancialOptionsDesktop = ({
             schedule !== "full_time" && (
               <Div margin="16px 0 0 0" display="block">
                 <Div alignItems="center">
-                  <Toggle
-                    width="42px"
-                    height="22px"
-                    b_radius="9999px"
-                    bg={jobGuarantee ? Colors.blue : Colors.lightGray}
+                  <label
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      cursor: 'pointer',
+                      userSelect: 'none'
+                    }}
                     onClick={() =>
                       setJobGuarantee && setJobGuarantee(!jobGuarantee)
                     }
                   >
-                    <Div position="relative" width="42px" height="22px">
-                      <Div
-                        position="absolute"
-                        top="2px"
-                        left={jobGuarantee ? "22px" : "2px"}
-                        width="18px"
-                        height="18px"
-                        borderRadius="9999px"
-                        background={Colors.white}
-                        transition="left 0.2s ease-in-out"
-                      />
-                    </Div>
-                  </Toggle>
-                  <H4
-                    fontSize_tablet="18px"
-                    fontSize_xs="16px"
-                    margin="0 0 0 10px"
-                  >
-                    {getJobGuaranteeConfig(currentLocation, info)?.title}
-                  </H4>
+                    <Toggle
+                      width="42px"
+                      height="22px"
+                      b_radius="9999px"
+                      bg={jobGuarantee ? Colors.blue : Colors.lightGray}
+                      as="div"
+                    >
+                      <Div position="relative" width="42px" height="22px">
+                        <Div
+                          position="absolute"
+                          top="2px"
+                          left={jobGuarantee ? "22px" : "2px"}
+                          width="18px"
+                          height="18px"
+                          borderRadius="9999px"
+                          background={Colors.white}
+                          transition="left 0.2s ease-in-out"
+                        />
+                      </Div>
+                    </Toggle>
+                    <H4
+                      fontSize_tablet="18px"
+                      fontSize_xs="16px"
+                      margin="0 0 0 10px"
+                      width="auto"
+                      as="span"
+                    >
+                      {jobGuaranteeInfo?.title}
+                    </H4>
+                  </label>
                 </Div>
                 <Paragraph
                   textAlign="left"
                   color={Colors.black}
                   margin="8px 0 0 0"
                 >
-                  {getJobGuaranteeConfig(currentLocation, info)?.description}
+                  {jobGuaranteeInfo?.description}
                 </Paragraph>
               </Div>
             )}
@@ -691,6 +705,8 @@ const FinancialOptionsCard = ({
     [paymentOptions, selectedPlan]
   );
 
+  const jobGuaranteeInfo = getJobGuaranteeConfig(currentLocation, info);
+
   return (
     <>
       <Div
@@ -700,6 +716,7 @@ const FinancialOptionsCard = ({
         padding="24px"
         maxWidth="600px"
         width="100%"
+        margin="0 auto"
         display="block"
         boxShadow="0 8px 32px rgba(0,0,0,0.25)"
         position="relative"
@@ -723,14 +740,14 @@ const FinancialOptionsCard = ({
             display="block"
           >
             {jobGuarantee &&
-            getJobGuaranteeConfig(currentLocation, info)?.monthly_label ? (
+            jobGuaranteeInfo?.monthly_label ? (
               <H2
                 fontSize="32px"
                 fontWeight="700"
                 color={Colors.black}
                 margin="0 8px 0 0"
               >
-                {getJobGuaranteeConfig(currentLocation, info).monthly_label}
+                {jobGuaranteeInfo.monthly_label}
               </H2>
             ) : getNoJobGuaranteeConfig(currentLocation, info)
                 ?.monthly_label ? (
@@ -772,42 +789,54 @@ const FinancialOptionsCard = ({
                 justifyContent="center"
               >
                 <Div alignItems="center" justifyContent="center">
-                  <Toggle
-                    width="42px"
-                    height="22px"
-                    b_radius="9999px"
-                    bg={jobGuarantee ? Colors.blue : Colors.lightGray}
+                  <label
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      cursor: 'pointer',
+                      userSelect: 'none'
+                    }}
                     onClick={() =>
                       setJobGuarantee && setJobGuarantee(!jobGuarantee)
                     }
                   >
-                    <Div position="relative" width="42px" height="22px">
-                      <Div
-                        position="absolute"
-                        top="2px"
-                        left={jobGuarantee ? "22px" : "2px"}
-                        width="18px"
-                        height="18px"
-                        borderRadius="9999px"
-                        background={Colors.white}
-                        transition="left 0.2s ease-in-out"
-                      />
-                    </Div>
-                  </Toggle>
-                  <H4
-                    fontSize_tablet="18px"
-                    fontSize_xs="16px"
-                    margin="0 0 0 10px"
-                  >
-                    {getJobGuaranteeConfig(currentLocation, info)?.title}
-                  </H4>
+                    <Toggle
+                      width="42px"
+                      height="22px"
+                      b_radius="9999px"
+                      bg={jobGuarantee ? Colors.blue : Colors.lightGray}
+                      as="div"
+                    >
+                      <Div position="relative" width="42px" height="22px">
+                        <Div
+                          position="absolute"
+                          top="2px"
+                          left={jobGuarantee ? "22px" : "2px"}
+                          width="18px"
+                          height="18px"
+                          borderRadius="9999px"
+                          background={Colors.white}
+                          transition="left 0.2s ease-in-out"
+                        />
+                      </Div>
+                    </Toggle>
+                    <H4
+                      fontSize_tablet="18px"
+                      fontSize_xs="16px"
+                      margin="0 0 0 10px"
+                      width="auto"
+                      as="span"
+                    >
+                      {jobGuaranteeInfo?.title}
+                    </H4>
+                  </label>
                 </Div>
                 <Paragraph
                   textAlign="center"
                   color={Colors.black}
                   margin="8px 0 0 0"
                 >
-                  {getJobGuaranteeConfig(currentLocation, info)?.description}
+                  {jobGuaranteeInfo?.description}
                 </Paragraph>
               </Div>
             )}
@@ -1239,20 +1268,12 @@ const PricesAndPayment = (props) => {
         {info?.plans_title}
       </H2>
       <Grid
-        gridTemplateColumns_lg={
-          props.financial ? "repeat(26,1fr)" : "repeat(23,1fr)"
-        }
-        gridTemplateColumns_md="1fr repeat(14,1fr) 1fr"
-        gridTemplateColumns_tablet={
-          props.financial ? "1fr repeat(14,1fr) 1fr" : "1fr repeat(13,1fr) 1fr"
-        }
         gridGap="8px"
         margin_tablet="20px 0 0 0"
       >
         <Div
-          gridColumn_md="1/9"
-          gridColumn_lg={props.financial ? "2/14" : "1/16"}
-          gridColumn_tablet={props.financial ? "1/9" : "1/10"}
+          gridColumn="1"
+          gridColumn_tablet="1/ 15"
           alignItems="center"
         >
           <H3
@@ -1260,20 +1281,22 @@ const PricesAndPayment = (props) => {
             fontSize_md="24px"
             lineHeight="26px"
             fontWeight="400"
-            textAlign_tablet="start"
-            textAlign_xs="center"
+            textAlign="center"
+            textWrap="balance"
+            // textAlign_tablet="start"
+            // textAlign_xs="center"
             opacity="1"
             color={Colors.black}
-            padding="0 0 16px 0"
+            margin="0 0 2.5rem 0"
           >
             {props.financial ? info.select_2 : info.select}
           </H3>
         </Div>
         {/* SELECT COUNTRY */}
         <Div
-          gridColumn_lg={props.financial ? "14/26" : "16/25"}
-          gridColumn_md={props.financial ? "9/16" : "10/16"}
-          gridColumn_tablet={props.financial ? "9/16" : "10/15"}
+          gridColumn="1"
+          gridColumn_tablet="2/ 14"
+          gridColumn_md="4/12"
           justifyContent_xxs="center"
           justifyContent_tablet="start"
         >
@@ -1350,7 +1373,6 @@ const PricesAndPayment = (props) => {
           <Div
             display_tablet="none"
             width="100%"
-            margin="20px 0"
             display="flex"
             flexDirection="column"
           >
