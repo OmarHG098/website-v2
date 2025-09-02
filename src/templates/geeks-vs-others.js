@@ -67,7 +67,7 @@ const View = (props) => {
         <H2 type="h2" textAlign_tablet="center">
           {yml.section_heading?.text}
         </H2>
-        
+
         <Div
           style={{
             maxWidth: "1280px",
@@ -83,7 +83,9 @@ const View = (props) => {
               fontSize: "22px",
               textAlign: "center",
             }}
-            dangerouslySetInnerHTML={{ __html: yml.section_heading?.sub_heading }}
+            dangerouslySetInnerHTML={{
+              __html: yml.section_heading?.sub_heading,
+            }}
           />
         </Div>
       </Div>
