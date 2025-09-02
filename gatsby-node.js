@@ -777,6 +777,15 @@ exports.createSchemaCustomization = ({ actions }) => {
       academies: [String]
       slug: String
     }
+    type CourseYamlCourse_instructorsInstructors {
+      image: File
+    }
+    type DataScienceYamlCourse_instructorsInstructors {
+      image: File
+    }
+    type EngineeringYamlCourse_instructorsInstructors {
+      image: File
+    }
   `;
   createTypes(typeDefs);
 };
