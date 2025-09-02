@@ -10,11 +10,11 @@ we_accept: "Aceptamos:"
 top_label: Sede
 top_label_2: Programa
 recomended: Recomendado
-plans_title: Planes de pago
+plans_title: Lanza tu Carrera Tecnológica, Sin Estrés
 plan_details: Invierte en tu futuro, sin preocupaciones
 financing_message: "Elige un plan de pago flexible y enfócate en tu futuro, no en tus tarifas."
 select: Selecciona la ubicacion y el plan que mejor se ajusta a ti
-select_2: Selecciona la ubicación, el programa y la opción de pago que mejor se adapte a sus necesidades
+select_2: Explora nuestras opciones de financiamiento — desde pagos mensuales bajos hasta planes basados en ingresos — y elige la opción que mejor funcione para ti.
 job_guarantee:   
   - slug: usa_academies
     academies: ['atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada', 'austin-usa', 'dallas-usa']
