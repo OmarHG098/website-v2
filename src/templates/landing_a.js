@@ -676,6 +676,7 @@ export const query = graphql`
           we_trust_section {
             position
             title
+            bg_full
             text
             boxes {
               icon

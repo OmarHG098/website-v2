@@ -5,6 +5,9 @@ import { Div } from "../Sections";
 import { Colors } from "../Styling";
 
 const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
+  const backgroundColor = background || Colors.lightBlue;
+  const isBgFull = !!we_trust?.bg_full;
+
   return (
     <Div
       id="we-trust"
@@ -12,6 +15,7 @@ const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
       margin="0 auto"
       padding="0"
       padding_lg="0"
+      background={isBgFull && backgroundColor}
       padding_tablet="40px 40px"
       width="100%"
     >
@@ -21,7 +25,7 @@ const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
         padding_lg="40px"
         padding_tablet="40px 0"
         margin="0 auto"
-        background={background || Colors.lightBlue}
+        background={!isBgFull && backgroundColor}
         display="block"
         maxWidth="1280px"
       >

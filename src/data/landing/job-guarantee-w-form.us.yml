@@ -69,6 +69,7 @@ features:
 we_trust_section:
   position: 1
   title: Does the Job Guarantee Deliver Results You Can Count On?
+  bg_full: true
   text: |
     Yes — and we've got the numbers to back it up.
     <br><br>
