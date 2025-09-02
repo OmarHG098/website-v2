@@ -5,6 +5,7 @@ import { Button, Colors, Img } from "../components/Styling";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session";
 import { isCustomBarActive } from "../actions";
+import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
 
 // components
 import { Div } from "../components/Sections";
@@ -12,6 +13,7 @@ import { H1, H2, Paragraph } from "../components/Heading";
 import WeTrust from "../components/WeTrust";
 import CarouselV2 from "../components/CarouselV2";
 import PricesAndPayment from "../components/PricesAndPayment";
+import PaymentPlans from "../components/PaymentPlans";
 import Iconogram from "../components/Iconogram";
 import TwoColumn from "../components/TwoColumn";
 
@@ -110,8 +112,29 @@ const Financial = (props) => {
           />
         </Div>
       </Div>
+      <PaymentPlans lang={pageContext.lang} />
 
-      <Iconogram yml={yml.iconogram} />
+      <TwoColumn
+        left={{ image: ymlTwoColumn[0].image }}
+        right={{
+          heading: ymlTwoColumn[0].heading,
+          sub_heading: ymlTwoColumn[0].sub_heading,
+          bullets: ymlTwoColumn[0].bullets,
+          content: ymlTwoColumn[0].content,
+          button: ymlTwoColumn[0].button,
+          boxes: ymlTwoColumn[0].boxes,
+          gap_tablet: "40px",
+        }}
+        background={ymlTwoColumn[0].background}
+        proportions={ymlTwoColumn.proportions}
+        session={session}
+      />
+      <WeTrust
+        we_trust={yml.we_trust_section}
+        background="none"
+        titleProps={{ textAlign: "center" }}
+        paragraphProps={{ textAlign: "center" }}
+      />
 
       <PricesAndPayment
         type={pageContext.slug}
@@ -125,82 +148,8 @@ const Financial = (props) => {
         financial
       />
 
-      <TwoColumn
-        right={{ image: ymlTwoColumn[0].image }}
-        left={{
-          heading: ymlTwoColumn[0].heading,
-          sub_heading: ymlTwoColumn[0].sub_heading,
-          bullets: ymlTwoColumn[0].bullets,
-          content: ymlTwoColumn[0].content,
-          button: ymlTwoColumn[0].button,
-          boxes: ymlTwoColumn[0].boxes,
-          gap_tablet: "40px",
-        }}
-        proportions={ymlTwoColumn.proportions}
-        session={session}
-      />
-
-      <CarouselV2
-        margin="20px 0"
-        background="#F4F9FF"
-        padding="20px"
-        heading={yml.who_is_hiring.title}
-        content={yml.who_is_hiring.paragraph}
-      >
-        {yml.who_is_hiring.images.map((image) => (
-          <Div key={image} marginBottom="80px">
-            <Div
-              border="1px solid #C4C4C4"
-              width="240px !important"
-              height="240px"
-              display="flex"
-              flexDirection="column"
-              justifyContent="center"
-              margin="auto"
-            >
-              <Img
-                backgroundSize="contain"
-                src={image}
-                width="112px"
-                height="112px"
-                margin="auto"
-              />
-            </Div>
-          </Div>
-        ))}
-      </CarouselV2>
-
-      <TwoColumn
-        left={{ image: ymlTwoColumn[1].image }}
-        right={{
-          heading: ymlTwoColumn[1].heading,
-          sub_heading: ymlTwoColumn[1].sub_heading,
-          bullets: ymlTwoColumn[1].bullets,
-          content: ymlTwoColumn[1].content,
-          button: ymlTwoColumn[1].button,
-          gap_tablet: "40px",
-        }}
-        session={session}
-      />
-
-      <WeTrust
-        we_trust={yml.we_trust_section}
-        background="none"
-        titleProps={{ textAlign: "center" }}
-        paragraphProps={{ textAlign: "center" }}
-      />
-
-      <TwoColumn
-        right={{ image: ymlTwoColumn[2].image }}
-        left={{
-          heading: ymlTwoColumn[2].heading,
-          sub_heading: ymlTwoColumn[2].sub_heading,
-          bullets: ymlTwoColumn[2].bullets,
-          content: ymlTwoColumn[2].content,
-          button: ymlTwoColumn[2].button,
-          gap_tablet: "40px",
-        }}
-        session={session}
+      <ScholarshipSuccessCases
+        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
     </>
   );
@@ -324,11 +273,6 @@ export const query = graphql`
               hover_color
             }
           }
-          who_is_hiring {
-            title
-            paragraph
-            images
-          }
           two_column {
             image {
               style
@@ -368,6 +312,7 @@ export const query = graphql`
               title
               text
             }
+            background
           }
         }
       }
@@ -431,6 +376,39 @@ export const query = graphql`
           }
           apply_form {
             label
+          }
+        }
+      }
+    }
+    allScholarshipSuccessCasesYaml(
+      filter: { fields: { lang: { eq: $lang } } }
+    ) {
+      edges {
+        node {
+          title
+          subtitle
+          contributor
+          cases {
+            name
+            img {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 700
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  breakpoints: [200, 340, 520, 890]
+                )
+              }
+            }
+            status
+            country {
+              iso
+              name
+            }
+            contributor
+            description
+            achievement
           }
         }
       }
