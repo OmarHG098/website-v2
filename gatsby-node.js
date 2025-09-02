@@ -83,6 +83,8 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
   ) {
     let url = null;
     if (node.internal.type == "MarkdownRemark") {
+      // IMPORTANT: Any /src/**/*.md file will attempt to be created as a page or blog post
+
       // skip without formatting
       if (!node.frontmatter) {
         logger.error("Missing frontmatter on node: " + node.id);
