@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 /**
@@ -6,7 +6,7 @@ import ReCAPTCHA from "react-google-recaptcha";
  * Only renders ReCAPTCHA if the environment variable exists
  * Prevents the app from breaking in development when not configured
  */
-const SafeReCAPTCHA = forwardRef((props, ref) => {
+const SafeReCAPTCHA = React.forwardRef((props, ref) => {
   // Check if the environment variable exists
   const captchaKey = process.env.GATSBY_CAPTCHA_KEY;
   
