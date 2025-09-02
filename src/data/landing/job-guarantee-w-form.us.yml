@@ -82,7 +82,8 @@ we_trust_section:
       text: Job placement rate
     - icon: graduation-2
       title: "3 - 6"
-      text: Months on avg. to get hired
+      label: "months"
+      text: Average time, to get hired
     - icon: chart
       title: "55%"
       text: Salary increase after graduation
