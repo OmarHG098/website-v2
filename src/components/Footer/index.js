@@ -271,10 +271,7 @@ const Footer = ({ yml }) => {
                 </Form>
               </Div>
               <Div width="fit-content" margin="10px auto 0 auto">
-                <SafeReCAPTCHA
-                  ref={captcha}
-                  size="invisible"
-                />
+                <SafeReCAPTCHA ref={captcha} size="invisible" />
               </Div>
             </>
           )}

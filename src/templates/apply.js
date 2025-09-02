@@ -797,10 +797,7 @@ const Apply = (props) => {
                   </Div>
                 ))}
             <Div width="fit-content" margin="10px auto 0 auto">
-              <SafeReCAPTCHA
-                ref={captcha}
-                size="invisible"
-              />
+              <SafeReCAPTCHA ref={captcha} size="invisible" />
             </Div>
             <Div
               flexDirection_tablet="column"
@@ -909,7 +906,12 @@ const Apply = (props) => {
           </H3>
           {yml.right.content_section.map((m, i) => {
             return (
-              <Paragraph textAlign="left" margin="20px 0" key={i} dangerouslySetInnerHTML={{__html: m}} />
+              <Paragraph
+                textAlign="left"
+                margin="20px 0"
+                key={i}
+                dangerouslySetInnerHTML={{ __html: m }}
+              />
             );
           })}
         </Div>

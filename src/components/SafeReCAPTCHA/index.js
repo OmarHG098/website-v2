@@ -9,23 +9,19 @@ import ReCAPTCHA from "react-google-recaptcha";
 const SafeReCAPTCHA = React.forwardRef((props, ref) => {
   // Check if the environment variable exists
   const captchaKey = process.env.GATSBY_CAPTCHA_KEY;
-  
+
   // If key doesn't exist, don't render anything (development mode)
   if (!captchaKey) {
-    console.warn('GATSBY_CAPTCHA_KEY is not defined. ReCAPTCHA will not be rendered.');
+    console.warn(
+      "GATSBY_CAPTCHA_KEY is not defined. ReCAPTCHA will not be rendered."
+    );
     return null;
   }
-  
+
   // If key exists, render ReCAPTCHA normally
-  return (
-    <ReCAPTCHA
-      ref={ref}
-      sitekey={captchaKey}
-      {...props}
-    />
-  );
+  return <ReCAPTCHA ref={ref} sitekey={captchaKey} {...props} />;
 });
 
-SafeReCAPTCHA.displayName = 'SafeReCAPTCHA';
+SafeReCAPTCHA.displayName = "SafeReCAPTCHA";
 
 export default SafeReCAPTCHA;
