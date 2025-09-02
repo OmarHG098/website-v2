@@ -427,7 +427,14 @@ const Side = ({
   );
 };
 
-const TwoColumn = ({ left, right, proportions, session, alignment, background }) => {
+const TwoColumn = ({
+  left,
+  right,
+  proportions,
+  session,
+  alignment,
+  background,
+}) => {
   const [left_size, right_size] = proportions ? proportions : [];
   return (
     <Div

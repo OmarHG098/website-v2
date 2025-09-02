@@ -5,7 +5,6 @@ import { H2, H3, Paragraph } from "../Heading";
 import { Colors } from "../Styling";
 import Icon from "../Icon";
 
-
 const PaymentPlans = (props) => {
   const data = useStaticQuery(graphql`
     query PaymentPlansQuery {
@@ -87,10 +86,17 @@ const PaymentPlans = (props) => {
               flexDirection={isOpen && "column"}
               style={{ position: "relative" }}
             >
-              <Div display="flex" flexDirection="column" alignItems="flex-start">
+              <Div
+                display="flex"
+                flexDirection="column"
+                alignItems="flex-start"
+              >
                 <H3 textAlign="left">{item.title}</H3>
               </Div>
-              <Div style={{ position: "absolute", right: "13px", top: "15px" }} transform={isOpen ? "rotate(180deg)" : "rotate(0deg)"}>
+              <Div
+                style={{ position: "absolute", right: "13px", top: "15px" }}
+                transform={isOpen ? "rotate(180deg)" : "rotate(0deg)"}
+              >
                 <Icon icon="arrowdown" width="32px" height="32px" />
               </Div>
               {isOpen && (
@@ -99,9 +105,9 @@ const PaymentPlans = (props) => {
                   {item.bullets?.items && item.bullets.items.length > 0 && (
                     <Div flexDirection="column" gap="8px">
                       {item.bullets.items.map((bullet, index) => (
-                        <Paragraph 
-                          key={index} 
-                          textAlign="left" 
+                        <Paragraph
+                          key={index}
+                          textAlign="left"
                           margin="0"
                           style={{ display: "flex", alignItems: "flex-start" }}
                         >
@@ -122,5 +128,3 @@ const PaymentPlans = (props) => {
 };
 
 export default PaymentPlans;
-
-

@@ -117,15 +117,15 @@ const Financial = (props) => {
       <TwoColumn
         left={{ image: ymlTwoColumn[0].image }}
         right={{
-            heading: ymlTwoColumn[0].heading,
-            sub_heading: ymlTwoColumn[0].sub_heading,
-            bullets: ymlTwoColumn[0].bullets,
-            content: ymlTwoColumn[0].content,
-            button: ymlTwoColumn[0].button,
-            boxes: ymlTwoColumn[0].boxes,
-            gap_tablet: "40px",
-          }}
-          background={ymlTwoColumn[0].background}
+          heading: ymlTwoColumn[0].heading,
+          sub_heading: ymlTwoColumn[0].sub_heading,
+          bullets: ymlTwoColumn[0].bullets,
+          content: ymlTwoColumn[0].content,
+          button: ymlTwoColumn[0].button,
+          boxes: ymlTwoColumn[0].boxes,
+          gap_tablet: "40px",
+        }}
+        background={ymlTwoColumn[0].background}
         proportions={ymlTwoColumn.proportions}
         session={session}
       />
@@ -148,9 +148,9 @@ const Financial = (props) => {
         financial
       />
 
-      <ScholarshipSuccessCases content={data.allScholarshipSuccessCasesYaml.edges[0].node} />
-
-
+      <ScholarshipSuccessCases
+        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+      />
     </>
   );
 };
