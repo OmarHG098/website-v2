@@ -2,8 +2,8 @@ meta_info:
   slug: einar-hack-curso-de-ciberseguridad # <--- URL 4geeksacademy.com/es/landing/math2me-curso-de-programacion
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
-  title: "Bootcamp de ciberseguridad | 4Geeks Academy"
-  description: "Únete a 4Geeks Academy con Einar Hack para aprender ciberseguridad. El único coding bootcamp que te ofrece mentorías ilimitadas de por vida."
+  title: "Bootcamp de Ciberseguridad 16 Semanas | 4Geeks Academy"
+  description: "Aprende ciberseguridad en 16 semanas con 4Geeks Academy. Programa especializado con mentorías ilimitadas y certificación internacional."
   image: "/images/bg/einar-hack.webp"
   keywords: ""
   template: "landing_a" # <--- choose your landing template
@@ -33,10 +33,10 @@ apply_schollarship: # form that is displayed at the end of the landing
   
 header_data:
   background: "#FFFFFF"
-  tagline: "Aprende a programar con 4Geeks Academy"
+  tagline: "Especialízate en Ciberseguridad en 16 Semanas"
   tagline_color: "#1b1b1b"
   partner_logo_url: ""
-  sub_heading: "El bootcamp de programación #1 en Latinoamérica te ofrece la experiencia de aprendizaje más completa y personalizada"
+  sub_heading: "El bootcamp de ciberseguridad #1 en Latinoamérica. Aprende a proteger sistemas y datos con las técnicas más avanzadas del mercado."
   form_styles:
     background: "#0084FF"
     color: "white"
@@ -48,10 +48,10 @@ features:
   marginTop: 0px
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Mentorías de código ilimitadas, apoyo profesional de por vida y mucho más…
-    - Programa 100% Remoto y Medio Tiempo. ¡Certificate en tan solo 18 semanas!
+    - Mentorías especializadas en ciberseguridad, apoyo profesional de por vida y mucho más…
+    - Programa 100% Remoto y Medio Tiempo. ¡Especialízate en ciberseguridad en tan solo 16 semanas!
     - Contamos con un plan de Trabajo Garantizado y distintas opciones de Financiamiento.
-  text: Al aprender a programar con 4Geeks Academy tendrás clases online completamente en vivo, la oportunidad de certificarte internacionalmente en poco tiempo y de conseguir tu primer empleo como programador con nuestro apoyo. Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora!
+  text: Al especializarte en ciberseguridad con 4Geeks Academy tendrás clases online completamente en vivo, la oportunidad de certificarte internacionalmente en poco tiempo y de conseguir tu primer empleo como especialista en ciberseguridad con nuestro apoyo. Descubre cómo puede ser tu vida como un profesional en ciberseguridad con 4Geeks Academy, ¡comienza ahora!
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"
@@ -85,8 +85,8 @@ follow_bar:
 
 program_details:
   position: 2
-  heading: "Programa de Contenidos de Nuestro Curso de Ciberseguridad"
-  sub_heading: "Aprende a proteger sistemas y datos con las técnicas más avanzadas."
+  heading: "Programa de Contenidos de Ciberseguridad"
+  sub_heading: "Aprende a proteger sistemas y datos con las técnicas más avanzadas del mercado en solo 16 semanas."
 
 why_4geeks:
   position: 4
@@ -95,7 +95,7 @@ why_4geeks:
 
 geeks_vs_others:
   position: 5
-  heading: "¿Por qué nuestro coding bootcamp es tan exitoso?"
+  heading: "¿Por qué nuestro bootcamp de ciberseguridad es tan exitoso?"
   paragraph: ""
   total_rows: 5
 
@@ -107,8 +107,8 @@ badges:
 who_is_hiring:
   position: 6
   limit: 4
-  heading: "¿Quién contrata a nuestros alumnos?"
-  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
+  heading: "¿Quién contrata a nuestros especialistas en ciberseguridad?"
+  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente como especialista en ciberseguridad."
 
 components:
   - name: leadform_header
@@ -120,7 +120,7 @@ components:
       style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
       src: "/images/landing/hombre-joven-con-laptop.webp"
     heading:
-      text: "¿Cómo Funciona?"
+      text: "¿Cómo Funciona el Bootcamp de Ciberseguridad?"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: ""
@@ -134,17 +134,17 @@ components:
       path: "#leadform_header"
     bullets:
       items:
-        - text: "¡Conviértete en un Full-Stack developer en tan solo 18 semanas!"
+        - text: "¡Especialízate en ciberseguridad en tan solo 16 semanas!"
           icon: "check"
-        - text: "Desarrollo de habilidades altamente valoradas en el mercado profesional."
+        - text: "Desarrollo de habilidades en ciberseguridad altamente valoradas en el mercado profesional."
           icon: "check"
-        - text: "Acceso a oportunidades laborales al momento de la graduación."
+        - text: "Acceso a oportunidades laborales como especialista en ciberseguridad al momento de la graduación."
           icon: "check"
     content:
       font_size: ["16px"]
       text: |
-        Imagina certificarte a nivel internacional en un tiempo récord, abriendo las puertas a nuevas oportunidades laborales. Y lo mejor de todo, no estarás solo en este camino. <br>Nuestro apoyo no termina con la certificación; estamos comprometidos contigo hasta que consigas tu primer empleo como programador. <br>
-        <strong style="font-weight: bold;">Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora! </strong>
+        Imagina especializarte en ciberseguridad a nivel internacional en solo 16 semanas, abriendo las puertas a nuevas oportunidades laborales en una de las áreas más demandadas del mercado. Y lo mejor de todo, no estarás solo en este camino. <br>Nuestro apoyo no termina con la certificación; estamos comprometidos contigo hasta que consigas tu primer empleo como especialista en ciberseguridad. <br>
+        <strong style="font-weight: bold;">Descubre cómo puede ser tu vida como un profesional en ciberseguridad con 4Geeks Academy, ¡comienza ahora! </strong>
 
   - name: top_coding_bootcamp
     position: 3
