@@ -129,9 +129,17 @@ follow_bar:
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
+## BADGES SECTION /components/Badges
+badges:
+  position: 4
+  heading: |-
+    Ranked Among the World's Top Coding Bootcamps. 
+    Trusted by Thousands.
+  sub_heading: "Licensed by the Florida Department of Education, recognized by Forbes as a top 5 Coding School, and consistently ranked among the world's best coding bootcamps by major independent listings."
+
 rating_reviews:
   background: "#FBFBFB"
-  position: 4
+  position: 5
   rating_list:
     - alt: "Career Karma"
       image: "../../../static/images/badges/career-karma.png"
@@ -186,7 +194,7 @@ who_is_hiring:
   padding: '0'
   padding_tablet: '60px 0'
   background: '#FBFCFC'
-  heading: "Who is hiring our students?"
+  heading: "WHO’S HIRING OUR GRADUATES?"
   sub_heading: |
     Top companies hire 4Geeks graduates, with 84% landing jobs within 6 months of graduation thanks to their skills and our personalized career support. Our grads don’t just get hired—they launch successful careers and consistently earn recognition for their technical expertise and professionalism:   
     <br/>
