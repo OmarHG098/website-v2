@@ -1,10 +1,10 @@
 meta_info:
-  slug: einar-hack-curso-de-programacion # <--- URL 4geeksacademy.com/es/landing/math2me-curso-de-programacion
+  slug: einar-hack-curso-de-ciberseguridad # <--- URL 4geeksacademy.com/es/landing/math2me-curso-de-programacion
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
-  title: "Bootcamp de programación | 4Geeks Academy"
-  description: "Únete a 4Geeks Academy con Einar Hack para aprender programación. El único coding bootcamp que te ofrece mentorías ilimitadas de por vida."
-  image: "../../../static/images/bg/math2me.webp"
+  title: "Bootcamp de ciberseguridad | 4Geeks Academy"
+  description: "Únete a 4Geeks Academy con Einar Hack para aprender ciberseguridad. El único coding bootcamp que te ofrece mentorías ilimitadas de por vida."
+  image: "/images/bg/einar-hack.webp"
   keywords: ""
   template: "landing_a" # <--- choose your landing template
   redirects: [] # <--- URL redirections to avoid 404 errors
