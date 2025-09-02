@@ -4,7 +4,8 @@ full_time:
     academies: ['downtown-miami', 'dallas-usa']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Pago completo"
-    payment_time: "Obtén un 10% de descuento"
+    description: "La matrícula regular es de $10,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
+    job_guarantee_description: "La matrícula regular es de $12,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
     price: "$13,499"
     original_price: "$14,999"
     offer: "10% DE DESCUENTO"
@@ -21,7 +22,7 @@ full_time:
     recomended: "Pagos mensuales bajos"
     recommended_color: "veryLightBlue"
     scholarship: "Financiado"
-    payment_time: "Pago en 3, 4 o 5 años"
+    description: "Pago en 3, 4 o 5 años"
     price: "Desde $349/mes"
     bullets: 
       - "Préstamos asequibles disponibles a través de Climb y Ascent, basados en tu puntaje de crédito"
@@ -39,7 +40,7 @@ full_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Préstamo de Pago Basado en Ingresos (IBR)"
-    payment_time: "Comienza a pagar una vez contratado"
+    description: "Comienza a pagar una vez contratado"
     price: "IBR"
     bullets:
       - "Préstamos asequibles con pagos basados en ingresos (IBR) ofrecidos a través de EDLY"
@@ -54,7 +55,7 @@ full_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Beca Completa"
-    payment_time: "Si vives o trabajas en Miami"
+    description: "Si vives o trabajas en Miami"
     price: "$0"
     bullets:
       - "Enfócate en tu carrera y no en cómo costear tu educación."
@@ -70,7 +71,7 @@ full_time:
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Paga de contado"
-    payment_time: "Y obtén un descuento"
+    description: "Y obtén un descuento"
     price: "4.750 €*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
@@ -85,7 +86,7 @@ full_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Becas Disponibles"
-    payment_time: ""
+    description: ""
     price: "Desde €150 /mes."
     bullets:
       - "Financiamiento personalizado sin intereses. De 4 a 30 meses."
@@ -103,7 +104,7 @@ full_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Pago por adelantado"
-    payment_time: "Y obtén un descuento"
+    description: "Y obtén un descuento"
     price: "€4,800*"
     bullets:
       - "Paga usando tu cuenta bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum."
@@ -117,7 +118,7 @@ full_time:
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Becas disponibles"
-    payment_time: ""
+    description: ""
     price: "Desde €150 /mes."
     bullets:
       - "Financiamiento personalizado sin intereses. De 4 a 30 meses."
@@ -129,7 +130,7 @@ full_time:
     academies: ['lisbon-portugal', 'milan-italy', 'rome-italy']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Pago por adelantado"
-    payment_time: "Y obtén un descuento"
+    description: "Y obtén un descuento"
     price: "€4,750*"
     original_price: "€6,800"
     offer: "Hasta €2,050 de descuento"
@@ -147,7 +148,7 @@ full_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Becas disponibles"
-    payment_time: ""
+    description: ""
     price: "Desde €150 /mes."
     bullets:
       - "Financiamiento personalizado sin intereses. De 4 a 30 meses."
@@ -161,7 +162,7 @@ full_time:
     academies: ['santiago-chile']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Pago Anticipado"
-    payment_time: "¡Paga por adelantado y obtén un 20% DE DESCUENTO!"
+    description: "¡Paga por adelantado y obtén un 20% DE DESCUENTO!"
     price: "3.040.000 CLP"
     original_price: "3.800.000 CLP"
     offer: "20% DE DESCUENTO"
@@ -176,7 +177,7 @@ full_time:
     recomended: "Plan de pago accesible"
     recommended_color: "veryLightBlue"
     scholarship: "Financiado"
-    payment_time: "Pago en 18 meses"
+    description: "Pago en 18 meses"
     price: "~184.000 CLP"
     bullets:
       - "Financiamiento a medida de 6 a 18 meses."
@@ -190,7 +191,7 @@ full_time:
     academies: ['caracas-venezuela']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Paga de Contado"
-    payment_time: "Descuento especial por pago temprano"
+    description: "Descuento especial por pago temprano"
     price: "$1300*"
     bullets: 
       - "Ahorra $500 de la matrícula"
@@ -206,7 +207,8 @@ part_time:
     recomended: "★ ¡Mejor precio!"
     academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada', 'austin-usa', 'tampa-usa', 'dallas-usa']
     scholarship: "Pago Completo"
-    payment_time: "Pagar hoy"
+    description: "La matrícula regular es de $10,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
+    job_guarantee_description: "La matrícula regular es de $12,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
     price: "$9,899"
     original_price: "$10,999"
     offer: "10% DE DESCUENTO"
@@ -219,7 +221,7 @@ part_time:
     recomended: "Plan de pago accesible"
     recommended_color: "veryLightBlue"
     scholarship: "Financiado"
-    payment_time: "Puedes pagar en 3, 4 o 5 años"
+    description: "Puedes pagar en 3, 4 o 5 años"
     price: "$200 - $299/mes"
     bullets: 
       - "Varios socios ofrecen préstamos y planes de pago"
@@ -229,12 +231,26 @@ part_time:
       - "/images/climb-logo.png"
       - "/images/bcas.png"
 
+  - slug: 'usa-scholarships-pt'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
+    recomended: "Financiamiento total y parcial"
+    recommended_color: "pink"
+    scholarship: "Becas"
+    description: "Becas parciales y totales disponibles a través de socios en EE. UU. La elegibilidad y el monto varían según la ubicación. Contáctanos para explorar tus opciones."
+    price: "+$2,000"
+    original_price: ""
+    bullets: 
+      - "Inscríbete aceptando los términos y condiciones."
+      - "Cumple con la carga académica y asistencia requeridas."
+      - "Si no consigues empleo en los 9 meses posteriores a la graduación, te reembolsamos el 100% de la matrícula."
+    icons: 
+
   - slug: 'usa-clark-scholarship-pt'
     academies: ['']
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Beca"
-    payment_time: "Podrías estar ahorrando más de los $5,000 ya descontados."
+    description: "Podrías estar ahorrando más de los $5,000 ya descontados."
     price: ""
     original_price: "$15,000"
     warning_message: "¡Cupos limitados!"
@@ -251,7 +267,7 @@ part_time:
     recomended: "Colocación laboral o reembolso de matrícula."
     recommended_color: "pink"
     scholarship: "Garantía de Empleo"
-    payment_time: "Consigue empleo o te devolvemos tu dinero"
+    description: "Consigue empleo o te devolvemos tu dinero"
     price: "+$2,000"
     original_price: ""
     warning_message: ""
@@ -267,7 +283,7 @@ part_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Préstamo de Pago Basado en Ingresos (IBR)"
-    payment_time: "Pagos flexibles después de la graduación"
+    description: "Pagos flexibles después de la graduación"
     price: "IBR"
     bullets:
       - "Edly se enorgullece de ayudar a 4Geeks Academy a ofrecer préstamos asequibles con pagos basados en ingresos (IBR) a sus estudiantes."
@@ -282,7 +298,7 @@ part_time:
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Paga de contado"
-    payment_time: "Y obtén un descuento"
+    description: "Y obtén un descuento"
     price: "€4.750*"
     original_price: "€ 6.800"
     offer: "~30% de DESCUENTO"
@@ -299,7 +315,7 @@ part_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Financiado. Desde 150 €* al mes"
-    payment_time: "Aplica a una beca (plazas con becas limitadas)."
+    description: "Aplica a una beca (plazas con becas limitadas)."
     price: "4.900 €*"
     original_price: "€ 6.800"
     bullets:
@@ -314,7 +330,7 @@ part_time:
     academies: ['lisbon-portugal','milan-italy','rome-italy']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Paga de contado"
-    payment_time: "Y obtén un descuento"
+    description: "Y obtén un descuento"
     price: "€4.750*"
     original_price: "€ 6.800"
     offer: "~30% de DESCUENTO"
@@ -331,7 +347,7 @@ part_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Financiado. Desde 150 €* al mes"
-    payment_time: "Aplica a una beca (plazas con becas limitadas)."
+    description: "Aplica a una beca (plazas con becas limitadas)."
     price: "4.900 €*"
     original_price: "€ 6.800"
     bullets:
@@ -348,7 +364,7 @@ part_time:
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Paga de contado"
-    payment_time: "Y obtén un descuento"
+    description: "Y obtén un descuento"
     price: "€4.750*"
     original_price: "€ 6.800"
     offer: "~30% de DESCUENTO"
@@ -365,7 +381,7 @@ part_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Financiado. Desde 150 €* al mes"
-    payment_time: "Aplica a una beca (plazas con becas limitadas)."
+    description: "Aplica a una beca (plazas con becas limitadas)."
     price: "4.900 €*"
     original_price: "€ 6.800"
     bullets:
@@ -385,7 +401,7 @@ part_time:
     academies: ['santiago-chile']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Full Stack + Apoyo Profesional"
-    payment_time: "Paga por adelantado y obtén un descuento"
+    description: "Paga por adelantado y obtén un descuento"
     price: "2.760.000 CLP*"
     original_price: "3.450.000 CLP*"
     offer: "20% DE DESCUENTO"
@@ -401,7 +417,7 @@ part_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Full Stack"
-    payment_time: "Solo el Programa"
+    description: "Solo el Programa"
     price: "2.700.000 CLP"
     bullets:
       - "Tendrás acceso completo y permanente al programa Full-Stack" 
@@ -415,7 +431,7 @@ part_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Financiado"
-    payment_time: "Pago en 18 meses"
+    description: "Pago en 18 meses"
     price: "~168.000 CLP"
     warning_message: "Limited seats!"
     bullets:
@@ -430,7 +446,7 @@ part_time:
     academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador', 'caracas-venezuela', 'bogota-colombia']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Trabajo Garantizado"
-    payment_time: "Consigue un trabajo dentro de los 9 meses posteriores a la graduación o te devolvemos tu dinero"
+    description: "Consigue un trabajo dentro de los 9 meses posteriores a la graduación o te devolvemos tu dinero"
     price: "USD $4,000"
     original_price: "USD $5,000"
     offer: "20% DE DESCUENTO"
@@ -449,7 +465,7 @@ part_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Solo Apoyo Profesional"
-    payment_time: "Recibe apoyo profesional experto."
+    description: "Recibe apoyo profesional experto."
     price: "USD $3,000"
     bullets:
       - "Recibe apoyo profesional personalizado de nuestro equipo experto para impulsar tu carrera en tecnología."
@@ -465,7 +481,7 @@ part_time:
     recomended: "Plan de pago accesible"
     recommended_color: "yellow"
     scholarship: "Solo Programa Full-Stack"
-    payment_time: "Enfócate en aprender a programar. Paga por adelantado."
+    description: "Enfócate en aprender a programar. Paga por adelantado."
     price: "USD $2,000"
     bullets: 
       - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
