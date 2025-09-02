@@ -44,6 +44,15 @@ const Location = ({ data, pageContext, yml }) => {
   }, []);
   const chooseProgramRef = useRef(null);
 
+  const showJobGuarantee =
+    data.allJobGuaranteeSmallYaml.edges[0]?.node?.locations?.includes(
+      yml.breathecode_location_slug
+    );
+  const slugsWithStaffPlacement = ["orlando", "downtown-miami", "tampa-usa"];
+  const shouldPlaceUnderStaff = slugsWithStaffPlacement.includes(
+    yml.breathecode_location_slug
+  );
+
   const goToChooseProgram = (e) => {
     e.preventDefault();
     window.scrollTo({
@@ -236,9 +245,34 @@ const Location = ({ data, pageContext, yml }) => {
         paddingText_tablet="0 10% 55px 10%"
       />
 
-      {data.allJobGuaranteeSmallYaml.edges[0].node.locations.includes(
-        yml.breathecode_location_slug
-      ) && (
+      {yml.divider && (
+        <Div
+          flexDirection="column"
+          background={Colors.blue}
+          padding="20px 0"
+          alignItems="center"
+          margin="10px 0"
+        >
+          {yml.divider.heading && yml.divider.heading.text && (
+            <Paragraph
+              fontSize={yml.divider.heading.font_size[4] || "18px"}
+              fontSize_xl={yml.divider.heading.font_size[0]}
+              fontSize_md={yml.divider.heading.font_size[2]}
+              fontSize_sm={yml.divider.heading.font_size[3]}
+              color={Colors.white}
+              textAlign="center"
+              margin="0"
+              maxWidth="80%"
+              padding="0 20px"
+              lineHeight="1.5"
+            >
+              {yml.divider.heading.text}
+            </Paragraph>
+          )}
+        </Div>
+      )}
+
+      {showJobGuarantee && !shouldPlaceUnderStaff && (
         <JobGuaranteeSmall
           content={data.allJobGuaranteeSmallYaml.edges[0].node}
         />
@@ -250,7 +284,11 @@ const Location = ({ data, pageContext, yml }) => {
           heading: yml.two_columns?.heading,
           sub_heading: yml.two_columns?.sub_heading,
           bullets: yml.two_columns?.bullets,
-          content: yml.two_columns?.content,
+          content:
+            yml.two_columns?.content ||
+            (yml.two_columns?.paragraph
+              ? { text: yml.two_columns?.paragraph }
+              : undefined),
           button: yml.two_columns?.button,
         }}
         proportions={yml.two_columns?.proportions}
@@ -313,6 +351,12 @@ const Location = ({ data, pageContext, yml }) => {
       />
 
       <Staff lang={pageContext.lang} heading={yml?.staff?.heading} />
+
+      {showJobGuarantee && shouldPlaceUnderStaff && (
+        <JobGuaranteeSmall
+          content={data.allJobGuaranteeSmallYaml.edges[0].node}
+        />
+      )}
 
       {/* IFRAME map
       <Div>
@@ -407,6 +451,13 @@ export const query = graphql`
           badges {
             title
             paragraph
+          }
+          divider {
+            heading {
+              text
+              font_size
+              style
+            }
           }
           our_partners {
             tagline
@@ -512,6 +563,9 @@ export const query = graphql`
               items {
                 text
               }
+            }
+            content {
+              text
             }
           }
           two_columns_rigo {

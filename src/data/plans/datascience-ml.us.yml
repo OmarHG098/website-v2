@@ -2,9 +2,10 @@ full_time:
 #USA 
   - slug: 'plan-4'
     academies: ['downtown-miami', 'orlando']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Full Payment"
-    payment_time: "Pay today"
+    description: "Regular tuition is $10,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
+    job_guarantee_description: "Regular tuition is $12,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
     price: "$10,999"
     original_price: "$19,998"
     offer: "40% OFF"
@@ -17,9 +18,10 @@ full_time:
 
   - slug: 'plan-1'
     academies: ['downtown-miami', 'orlando']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Scholarship"
-    payment_time: "Pay today"
+    description: "Pay today"
     price: "$4999"
     original_price: "$16,665"
     warning_message: "Limited seats!"
@@ -31,9 +33,10 @@ full_time:
 
   - slug: 'plan-2'
     academies: ['downtown-miami', 'orlando']
-    recomended: false
+    recomended: "Low monthly payments"
+    recommended_color: "veryLightBlue"
     scholarship: "Financed"
-    payment_time: "24 months payment"
+    description: "24 months payment"
     price: "$310"
     bullets: 
       - "With $400 p/ week living stipends"
@@ -44,59 +47,94 @@ full_time:
 
 part_time:
 
-## USA Part-Time 
-  - slug: 'plan-4'
-    recomended: true
+#USA Part-time
+  - slug: 'usa-upfront-pt'
+    recomended: "★ Best Deal!"
+    recommended_color: "lightGreen"
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
-    scholarship: "Full Payment"
-    payment_time: "Pay today"
+    scholarship: "Pay upfront"
+    description: "Regular tuition is $11,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
+    job_guarantee_description: "Regular tuition is $12,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
     price: "$11,999"
     original_price: "$19,998"
-    offer: "40% OFF"
-    bullets: 
-      - "You're saving $7,999 USD"
-      - "Only if the Clark University Scholarship doesn't apply (unemployed or underemployed)"
+    offer: "10% OFF"
+    bullets:
+      - Pay upfront and save 10%
+      - Regular tuition is $11,999 and can be financed interest free-up to 6 months.
     icons:
-      - "/images/visa-mastercard.png"
-      - "/images/ethereum.png"
-      - "/images/bitcoin.png"
+      - "/images/edly.png"
+      - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
+      - "/images/climb-logo.png"
 
-  - slug: 'plan-1'
+  - slug: 'usa-financed-pt'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
-    recomended: false
-    scholarship: "Scholarship"
-    payment_time: "Full or partial funding  if you qualify"
-    price: "$7,999"
-    original_price: "$16,665"
-    warning_message: "Limited seats!"
+    recomended: "Low monthly payments"
+    recommended_color: "blue"
+    scholarship: "Payment Plans & Loans"
+    description: "Finance your tuition through Climb or Ascent (credit-based), or TFC Tuition (flexible entry). Repayment terms range from 3 to 5+ years, with some plans offering the option to defer payments until after graduation."
+    price: "$200 - $299/mo"
     bullets: 
-      - "You're saving 40% + 4K USD. Thanks to Clark University and the TechBoost Fund"
-    icons: 
-      - "/images/clarkuniversity.png"
-
-  - slug: 'plan-2'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
-    recomended: false
-    scholarship: "Financed"
-    payment_time: "Pay in 3, 4 or 5 years"
-    price: "~$100p/m"
-    bullets: 
-      - "Several partners offering loans and payment plans"
-      - "Remaining balance could be paid over time $200 p/mo"
-      - "You can get a partial scholarship and the remaining balance with a payment plan"
-      - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
-      - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services."
+      - "Choose among short or long term financing plans."
+      - "Affordable long term loans based on credit score."
+      - "Loan terms displayed are effective as of 3/11/2025. To see full repayment examples, visit <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">our 4Geeks and Ascent page</a>."
     icons: 
       - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
+      
+  - slug: 'usa-scholarships-pt'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
+    recomended: "Full and partial funding"
+    recommended_color: "pink"
+    scholarship: "Scholarships"
+    description: "Partial and full scholarships available through partners across the U.S. Eligibility and amount vary by location. Contact us to explore your options."
+    price: "$12,999"
+    original_price: ""
+    bullets: 
+      - "Enroll, agreeing to terms and conditions."
+      - "Fulfill required coursework and attendance."
+      - "Get hired within 9 months of graduation or we'll refund 100% of your tuition."
+    icons: 
+
+  - slug: 'usa-job-guarantee-pt'
+    academies: ['']
+    recomended: "Colocación laboral o reembolso de matrícula."
+    recommended_color: "pink"
+    scholarship: "Garantía de Empleo"
+    payment_time: "Consigue empleo o te devolvemos tu dinero"
+    price: "+$2,000"
+    original_price: ""
+    warning_message: ""
+    bullets: 
+      - "Inscríbete aceptando los términos y condiciones."
+      - "Cumple con la carga académica y asistencia requeridas."
+      - "Si no consigues empleo en los 9 meses posteriores a la graduación, te reembolsamos el 100% de la matrícula."
+    icons: 
+      - "/images/visa-mastercard.png" 
+
+  - slug: 'edly-payment'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
+    recomended: "Learn now, pay later"
+    recommended_color: "#FF9800"
+    scholarship: "Income-Based Payments (IBR)"
+    description: "Offered through EDLY. Start paying only once you earn $35K/year. Payments scale with income, and total repayment is capped"
+    price: "IBR"
+    bullets:
+      - "Edly is proud to help 4Geeks Academy provide affordable, income-based repayment (IBR) loans to its students"
+      - "Only make payments once you land a job and earn the minimum income."
+      - "Flexible payments adjust based on your income"
+      - "Tuition paid directly to your school"
+    icons:
+      - "/images/edly.png"
 
 
 ## Spain & Europe
   - slug: 'spain-upfront-ds-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Pay upfront"
-    payment_time: "And get a discount"
+    description: "And get a discount"
     price: "€5,200*"
     original_price: "€7,800"
     offer: "~ 30% discount"
@@ -110,9 +148,10 @@ part_time:
 
   - slug: 'spain-scholarships-ds-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Financed. From €200* per month"
-    payment_time: "Apply for a scholarship (limited scholarship slots available)."
+    description: "Apply for a scholarship (limited scholarship slots available)."
     price: "€5,409*"
     original_price: "€7,800"
     bullets:
@@ -127,9 +166,9 @@ part_time:
 
   - slug: 'north-europe-upfront-ds-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Pay upfront"
-    payment_time: "And get a discount"
+    description: "And get a discount"
     price: "€5,200*"
     original_price: "€7,800"
     offer: "~ 30% discount"
@@ -143,9 +182,10 @@ part_time:
 
   - slug: 'north-europe-scholarships-ds-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Financed. From €200* per month"
-    payment_time: "Apply for a scholarship (limited scholarship slots available)."
+    description: "Apply for a scholarship (limited scholarship slots available)."
     price: "€5,409*"
     original_price: "€7,800"
     bullets:
@@ -159,9 +199,9 @@ part_time:
 
   - slug: 'south-europe-upfront-ds-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Pay upfront"
-    payment_time: "And get a discount"
+    description: "And get a discount"
     price: "€5,200*"
     original_price: "€7,800"
     offer: "~ 30% discount"
@@ -175,9 +215,10 @@ part_time:
 
   - slug: 'south-europe-scholarships-ds-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Financed. From €200* per month"
-    payment_time: "Apply for a scholarship (limited scholarship slots available)."
+    description: "Apply for a scholarship (limited scholarship slots available)."
     price: "€5,409*"
     original_price: "€7,800"
     bullets:
@@ -191,9 +232,9 @@ part_time:
 
   - slug: 'chile-ds-gf-pt'
     academies: ['santiago-chile']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Program + Career Support"
-    payment_time: "Pay Upfront"
+    description: "Pay Upfront"
     price: "3.375.000 CLP*"
     original_price: "€4.500.000"
     offer: "25% OFF"
@@ -208,9 +249,10 @@ part_time:
 
   - slug: 'chile-ds-solo-pt'
     academies: ['santiago-chile']
-    recomended: false
+    recomended: "Accessible payment plan"
+    recommended_color: "yellow"
     scholarship: "Data Science Program Only"
-    payment_time: "Focus on gaining skills. Pay upfront."
+    description: "Focus on gaining skills. Pay upfront."
     price: "3.750.000 CLP*"
     bullets:
       - "Pay with bank transfer, credit or debit card"    
@@ -222,9 +264,10 @@ part_time:
 
   - slug: 'chile-ds-financed-pt'
     academies: ['santiago-chile']
-    recomended: false
+    recomended: "Low monthly payments"
+    recommended_color: "veryLightBlue"
     scholarship: "Financed"
-    payment_time: "Program + Career Support. Pay monthly"
+    description: "Program + Career Support. Pay monthly"
     price: "~220.500 CLP per month"
     bullets:
       - "Tailor-made financing from 6 to 18 months"  
@@ -237,9 +280,9 @@ part_time:
 ##  LATAM
   - slug: 'latam-upfront-ds-cs'
     academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Data Science program + Career Support"
-    payment_time: "We help you build your professional profile"
+    description: "We help you build your professional profile"
     price: "USD $3.600"
     original_price: "USD $5.000"
     offer: "28% OFF"
@@ -253,9 +296,9 @@ part_time:
 
   - slug: 'colombia-upfront-ds-cs'
     academies: ['bogota-colombia']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Data Science program + Career Support"
-    payment_time: "We help you build your professional profile"
+    description: "We help you build your professional profile"
     price: "USD $3.600"
     original_price: "USD $5.000"
     offer: "28% OFF"
@@ -272,7 +315,7 @@ part_time:
   #   academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
   #   recomended: false
   #   scholarship: "Only pay for the program"
-  #   payment_time: "Focus on gaining skills. Pay monthly."
+  #   description: "Focus on gaining skills. Pay monthly."
   #   price: "Starting from $120/m"
   #   bullets: 
   #     - "There is always a payment plan available for you to join 4Geeks Academy"
@@ -287,7 +330,7 @@ part_time:
   #   academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
   #   recomended: false
   #   scholarship: "Data Science Program Only"
-  #   payment_time: "Focus on gaining skills. Pay upfront."
+  #   description: "Focus on gaining skills. Pay upfront."
   #   price: "$4000"
   #   bullets: 
   #     - "There is always a payment plan available for you to join 4Geeks Academy"
@@ -301,9 +344,9 @@ part_time:
 
   - slug: 'venezuela-full-payment-ds-pt'
     academies: ['caracas-venezuela']
-    recomended: true
+    recomended: "★ Best Deal!"
     scholarship: "Pay upfront"
-    payment_time: "Pay early and $250 off"
+    description: "Pay early and $250 off"
     price: "$2.400*"
     original_price: "$4000"
     offer: "40% OFF"

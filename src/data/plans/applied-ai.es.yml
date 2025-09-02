@@ -1,10 +1,10 @@
 full_time: []
 part_time:
   - slug: 'plan-4'
-    recomended: true
+    recomended: "★ ¡Mejor precio!"
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     scholarship: "Pago completo"
-    payment_time: "Paga hoy"
+    description: "Paga hoy"
     price: "$3000"
     original_price: "$3500"
     offer: "$500 DE DESCUENTO"
@@ -14,9 +14,10 @@ part_time:
 
   - slug: 'plan-2'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
-    recomended: false
+    recomended: "Pagos mensuales bajos"
+    recommended_color: "veryLightBlue"
     scholarship: "Financiado"
-    payment_time: "Paga en 12 meses"
+    description: "Paga en 12 meses"
     price: "~$266 al mes"
     bullets: 
       - "Siempre hay un plan de pago disponible para ayudarte a unirte a 4Geeks Academy."
@@ -28,9 +29,10 @@ part_time:
 
   - slug: 'plan-3'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
-    recomended: false
+    recomended: "Pagos mensuales bajos"
+    recommended_color: "veryLightBlue"
     scholarship: "Financiado"
-    payment_time: "Paga en 24 meses"
+    description: "Paga en 24 meses"
     price: "~$145 al mes"
     bullets: 
       - "Siempre hay un plan de pago disponible para ayudarte a unirte a 4Geeks Academy."
@@ -44,9 +46,9 @@ part_time:
 
   - slug: 'spain-upfront-ai-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
+    recomended: "★ ¡Mejor precio!"
     scholarship: "Pago completo"
-    payment_time: "Paga hoy"
+    description: "Paga hoy"
     price: "€3000*"
     original_price: "€3500"
     offer: "€500 DE DESCUENTO"
@@ -60,9 +62,9 @@ part_time:
 
   - slug: 'europe-upfront-ai-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany', 'lisbon-portugal','milan-italy','rome-italy']
-    recomended: true
+    recomended: "★ ¡Mejor precio!"
     scholarship: "Pago completo"
-    payment_time: "Paga hoy"
+    description: "Paga hoy"
     price: "€3000*"
     original_price: "€3500"
     offer: "€500 DE DESCUENTO"
@@ -78,9 +80,9 @@ part_time:
                        
   - slug: 'chile-ai-upfront'
     academies: ['santiago-chile']
-    recomended: true
+    recomended: "★ ¡Mejor precio!"
     scholarship: "Paga por Adelantado"
-    payment_time: "Y obtén un descuento"
+    description: "Y obtén un descuento"
     price: "700.000 CLP*"
     original_price: "1.000.000 CLP"
     offer: "30% de descuento"
@@ -92,9 +94,10 @@ part_time:
 
   - slug: 'chile-financed-ai'
     academies: ['santiago-chile']
-    recomended: false
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
     scholarship: "Financiado"
-    payment_time: "Pago en 12 meses"
+    description: "Pago en 12 meses"
     price: "Desde 58.000 CLP"
     warning_message: "¡Plazas limitadas!"
     bullets:
@@ -108,9 +111,9 @@ part_time:
 
   - slug: 'latam-upfront-ai'
     academies: ['montevideo-uruguay','bogota-colombia','caracas-venezuela',  'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
-    recomended: true
+    recomended: "★ ¡Mejor precio!"
     scholarship: "Paga por Adelantado y "
-    payment_time: "ahorra $500"
+    description: "ahorra $500"
     price: "USD $1.399"
     original_price: "USD $2.500"
     offer: "44% de descuento"

@@ -18,9 +18,9 @@ meta_info:
 
 seo_title: "Bootcamp de Programación en Atlanta"
 header:
-  tagline: "4Geeks Academy en Atlanta"
-  sub_header: "Todos los programas son enseñados "
-  sub_header_highlighted: "Online"
+  tagline: "4Geeks Academy: Inicia una Carrera Tech Lista para la IA en Atlanta"
+  sub_header: "Conviértete en Desarrollador Full-Stack, Científico de Datos o Especialista en Ciberseguridad, con habilidades construidas para la era de la IA. "
+  sub_header_highlighted: "Todos los programas son enseñados online"
   paragraph: ""
   image: "../../../static/images/locations/atlanta-home.png"
   alt: "4Geeks Academy modalidad online en Atlanta, Georgia"
@@ -43,18 +43,18 @@ custom_bar:
 
 badges:
   title: ""
-  # NOTE: If you want to break the text into many lines avoid using double quotes
-  # use the pipe operator ' | ' instead, like the example below
   paragraph: |
     4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan.
-
     Estamos autorizados por el Departamento de Educación de Florida.
-      
-    Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Atlanta según SwitchUp.
-
+    Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Austin según SwitchUp.
     4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.
-
     Una comunidad construida para desarrolladores.
+
+divider:
+  heading:
+    text: "¿Buscas un bootcamp de programación de primera clase en Atlanta? 4Geeks Academy ofrece un programa flexible y práctico diseñado para ayudarte a conseguir un trabajo en tecnología aquí mismo en Georgia. Con mentoría experta, clases pequeñas y apoyo profesional comprobado, nuestros estudiantes de Atlanta han lanzado carreras exitosas tanto en startups como en grandes empresas de todo el Sureste."
+    font_size: ["34px", "34px", "34px", "28px", "26px"]
+    style: '{ "color": "#FFFFFF" }'
 news:
   title: "4Geeks Academy Atlanta en las noticias..."
 upcoming:
@@ -69,7 +69,7 @@ two_columns:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
     src: "/static/images/testimonials/allisa-testimonial.jpg"
     shadow: true
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  video: "EcqasocRKHo"
   heading:
     text: "Aprende a programar desde Atlanta"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -82,10 +82,11 @@ two_columns:
     background: "black"
     path: "/es/aplica"
   bullets:
+    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
     items:
-      - text: "Proyectos prácticos donde obtendrás un dominio de las herramientas."
-      - text: "Plan de estudios alineado con la industria para estar listo para el mundo real"
-      - text: "Apoyo profesional para navegar la próspera industria tecnológica de Atlanta"
+      - text: "• Proyectos prácticos donde obtendrás un dominio de las herramientas."
+      - text: "• Plan de estudios alineado con la industria para estar listo para el mundo real"
+      - text: "• Apoyo profesional para navegar la próspera industria tecnológica de Atlanta"
 
 # Two Columns - Rigo
 two_columns_rigo:

@@ -1,3 +1,6 @@
+# Location-based job guarantee configuration
+job_guarantee_locations: ["atlanta-usa", "austin-usa", "chicago-usa", "dallas-usa", "houston-usa", "losangeles-usa", "newyork-usa", "toronto-canada", "online", "online-spanish-usa", "buenosaires-argentina", "bogota-colombia", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador"]
+
 pricing_error: En este momento no estan disponibles los precios para
 pricing_error_contact: Para más información por favor contáctanos a info@4geeksacademy.com.
 get_notified: Pregunta por nuestras Becas. Siempre estamos trabajando y aliándonos para poder ofrecerte mejores opciones. 
@@ -7,31 +10,57 @@ we_accept: "Aceptamos:"
 top_label: Sede
 top_label_2: Programa
 recomended: Recomendado
-plans_title: Planes y precios
-plan_details: Detalles del plan
+plans_title: Planes de pago
+plan_details: Invierte en tu futuro, sin preocupaciones
+financing_message: "Elige un plan de pago flexible y enfócate en tu futuro, no en tus tarifas."
 select: Selecciona la ubicacion y el plan que mejor se ajusta a ti
 select_2: Selecciona la ubicación, el programa y la opción de pago que mejor se adapte a sus necesidades
-job_guarantee:
-  title:  "Compromiso de Garantía de Empleo:"
-  description:  "Ambos nos comprometemos con tu futura carrera (te devolvemos el dinero si no lo logras)."
-apply_button: 
-  label: APLICAR
-  link: /es/aplica
+job_guarantee:   
+  - slug: usa_academies
+    academies: ['atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada', 'austin-usa', 'dallas-usa']
+    title: "Inscríbete con Garantía de Empleo"   
+    description: "Obtén un empleo dentro de 9 meses de graduarte o te devolvemos tu dinero."   
+    monthly_label: "$349 al mes o menos"
+  - slug: latam_academies
+    academies: ['buenosaires-argentina', 'bogota-colombia', 'caracas-venezuela', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    title: "Inscríbete con Garantía de Empleo"   
+    description: "Obtén un empleo dentro de 9 meses de graduarte o te devolvemos tu dinero."   
+    monthly_label: "Desde $349 USD al mes"
+  - slug: europe_academies
+    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain', 'berlin-germany', 'hamburg-germany', 'munich-germany', 'dublin-ireland', 'milan-italy', 'rome-italy', 'lisbon-portugal']
+    title: "Inscríbete con Garantía de Empleo"   
+    description: "Obtén un empleo dentro de 9 meses de graduarte o te devolvemos tu dinero."   
+    monthly_label: "Desde €200 al mes"
+
+no_job_guarantee:
+  - slug: usa_no_guarantee
+    academies: ['atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada', 'austin-usa', 'dallas-usa']
+    monthly_label: "$299 al mes o menos"
+  - slug: latam_no_guarantee  
+    academies: ['buenosaires-argentina', 'bogota-colombia', 'caracas-venezuela', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    monthly_label: "Desde $299 USD al mes"
+  - slug: europe_no_guarantee
+    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain', 'berlin-germany', 'hamburg-germany', 'munich-germany', 'dublin-ireland', 'milan-italy', 'rome-italy', 'lisbon-portugal']
+    monthly_label: "Desde €200 al mes"
+  - slug: chile_no_guarantee
+    academies: ['santiago-chile']
+    monthly_label: "Desde $168.000 CLP al mes"
+
 not_available: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>No se ha encontrado information de pago para este programa en este país.</p> <p>Para conocer más le invitamos a aplicar al programa y sera contactado por uno de nuestros asesores vocacionales o <a class="faq-link" href="/es/contactanos" rel="noopener noreferrer nofollow">envíenos un mensaje.</a></p>'
 not_available_job_guarantee: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>No tenemos disponible la modalidad Garantía de Empleo en este programa en esta locación.</p> <p>Para conocer más le invitamos a aplicar al programa y sera contactado por uno de nuestros asesores vocacionales o <a class="faq-link" href="/es/contactanos" rel="noopener noreferrer nofollow">envíenos un mensaje.</a></p>'
-chart_section:
-  title: '4Geeks: Cuando pagar deja de ser una preocupación'
-  data:
-    - percentage: '76%'
-      color: '#00A0DA'
-      description: 'de nuestros graduados recibió una beca total o parcial gracias a nuestras opciones de pago integrales.'
-    - percentage: '46%'
-      color: '#FFB718'
-      description: 'de nuestros estudiantes son mujeres'
-    - percentage: '24%'
-      color: '#23C520'
-      description: 'de nuestros estudiantes son parte de la comunidad afrodescendiente'
+
 button:
   button_text: Ver planes y precios
   button_link: "/es/financiacion"
-loading: Cargando Recursos...
+loading: Cargando Recursos...Elige un plan de pago flexible y enfócate en tu futuro, no en tus tarifas.
+
+cta:
+  advisor_text: ¡Agenda una llamada con un asesor para encontrar una opción de pago u oferta especial que funcione para ti!
+  america:
+    book_call: "Agendar llamada →"
+    apply_link: "https://calendly.com/epilowsky-4geeksacademy/30min?month=2025-08"
+  international:
+    book_call: "Aplicar ahora"
+    apply_link: "/es/apply"
+  more_details: Más detalles
+  more_details_link: /es/financiacion

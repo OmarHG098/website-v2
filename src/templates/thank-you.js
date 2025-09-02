@@ -1,17 +1,19 @@
-import React, { useState, useContext } from "react";
-import { graphql, Link } from "gatsby";
+import React, { useState, useContext, useEffect } from "react";
+import { graphql } from "gatsby";
 import BaseRender from "./_baseLayout";
 import { Div, GridContainer, HR } from "../components/Sections";
-import { H1, H2, H3, H4, Paragraph } from "../components/Heading";
-import { Button, Colors, Anchor, RoundImage } from "../components/Styling";
+import { H1, H2, H3, Paragraph } from "../components/Heading";
+import { Colors, Anchor, Img } from "../components/Styling";
 import Icon from "../components/Icon";
 import { SessionContext } from "../session.js";
 import { isCustomBarActive } from "../actions";
-import LazyLoad from "react-lazyload";
+import AdmissionsStaff from "../components/AdmissionsStaff";
+import { landingSections } from "../components/Landing";
 
 const ThankYou = (props) => {
   const { data, pageContext, yml } = props;
   const { session } = useContext(SessionContext);
+  const [components, setComponents] = useState({});
   const [checkStatus, setCheckStatus] = useState([
     { label: "facebook", status: false, iconColor: "#166fe5" },
     { label: "twitter", status: false, iconColor: "#1da1f2" },
@@ -34,7 +36,81 @@ const ThankYou = (props) => {
       ]);
   };
 
-  const blog_posts = data.featured.edges;
+  useEffect(() => {
+    let _components = {};
+    if (yml.components)
+      yml.components.forEach(({ name, ...rest }) => {
+        _components[name] = rest;
+      });
+    setComponents({ ...yml, ..._components });
+  }, [yml]);
+
+  const renderCompactSection = (comp, keyIndex) => {
+    const { image, heading, content, button, background } = comp || {};
+    const bg = background ? Colors[background] || background : undefined;
+    const imageStyle = image && image.style ? JSON.parse(image.style) : null;
+    const contentStyle =
+      content && content.style ? JSON.parse(content.style) : null;
+    return (
+      <Div
+        key={`compact-${keyIndex}`}
+        background={bg || Colors.white}
+        padding="16px"
+        margin="10px 0"
+        display="grid"
+        gridTemplateColumns="60px 1fr"
+        gap="12px"
+        alignItems="start"
+        borderRadius="8px"
+        style={{ boxShadow: "0px 4px 16px rgba(0,0,0,0.08)" }}
+      >
+        {image?.src && (
+          <Img
+            src={image.src}
+            alt="section"
+            width="60px"
+            height="60px"
+            style={imageStyle}
+            backgroundSize="cover"
+          />
+        )}
+        <Div flexDirection="column" gap="6px" textAlign="left">
+          {heading?.text && (
+            <H3 fontSize="16px" lineHeight="20px" margin="0" textAlign="left">
+              {heading.text}
+            </H3>
+          )}
+          {content?.text && (
+            <Paragraph
+              fontSize="13px"
+              lineHeight="18px"
+              margin="0 0 8px 0"
+              textAlign="left"
+              style={contentStyle}
+              dangerouslySetInnerHTML={{ __html: content.text }}
+            />
+          )}
+          {button?.text && button?.path && (
+            <Div display="flex" justifyContent="flex-end" width="100%">
+              <Anchor
+                to={button.path}
+                display="inline-block"
+                color={Colors.blue}
+                style={{
+                  textDecoration: "none",
+                  fontSize: "13px",
+                  fontWeight: "600",
+                }}
+              >
+                {button.text}
+              </Anchor>
+            </Div>
+          )}
+        </Div>
+      </Div>
+    );
+  };
+
   return (
     <>
       <Div className="circles-left" display="none" display_tablet="inherit">
@@ -125,16 +201,62 @@ const ThankYou = (props) => {
           {yml.content.title}
         </H3>
         {yml.content.message.split("\n").map((m, i) => (
-          <Paragraph key={i} align="center">
+          <Paragraph
+            key={i}
+            align="center"
+            paddingLeft="15px"
+            paddingRight="10px"
+          >
             {m}
           </Paragraph>
         ))}
       </Div>
 
+      <AdmissionsStaff />
+
+      {/* Dynamic Components (YAML-driven) */}
+      {components?.title?.heading?.text && (
+        <H2 type="h2" margin="30px 0 10px 0" fontSize="40px">
+          {components.title.heading.text}
+        </H2>
+      )}
+
+      {Object.keys(components)
+        .filter(
+          (name) =>
+            components[name] &&
+            name !== "title" &&
+            (landingSections[name] || landingSections[components[name].layout])
+        )
+        .sort((a, b) =>
+          components[b].position > components[a].position ? -1 : 1
+        )
+        .map((name, index) => {
+          const comp = components[name];
+          const layout = comp.layout || name;
+          const original = landingSections[layout]({
+            ...props,
+            yml: comp,
+            session,
+            index: index,
+          });
+          return (
+            <React.Fragment key={`section-${index}`}>
+              <Div display="none" display_tablet="block">
+                {original}
+              </Div>
+              <Div display="block" display_tablet="none">
+                {renderCompactSection(comp, index)}
+              </Div>
+            </React.Fragment>
+          );
+        })}
+
       <GridContainer
         flexDirection="column"
         gridColumn_tablet="3 / span 10"
-        margin="58px 0 0 0"
+        margin={{ xs: "20px 0 0 0", md: "40px 0 0 0" }}
+        padding={{ xs: "0 15px", md: "0" }}
       >
         <H3
           type="h3"
@@ -164,7 +286,6 @@ const ThankYou = (props) => {
               {ln.icon && (
                 <Icon
                   icon={ln.icon}
-                  // style={{ margin: '0 15px 0 0' }}
                   color={Colors.black}
                   fill={Colors.black}
                   height="42px"
@@ -174,123 +295,6 @@ const ThankYou = (props) => {
             </Anchor>
           ))}
         </Div>
-        <HR
-          background="none"
-          border="1px solid #EBEBEB"
-          height="0px"
-          margin="30px 0"
-        />
-
-        <H3
-          type="h3"
-          margin="20px 0 40px 0"
-          fontSize="15px"
-          lineHeight="22px"
-          fontWeight="400"
-          letterSpacing="0.05em"
-        >
-          {yml.content.articles_title}
-        </H3>
-
-        <GridContainer
-          containerColumns_tablet="0fr repeat(12, 1fr) 0fr"
-          columns_tablet="3"
-        >
-          {blog_posts.map((item, i) => {
-            return (
-              <Div key={i} flexDirection="Column" margin="0 0 87px 0">
-                {item.node.frontmatter.image !== "" && (
-                  <Link
-                    to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}
-                  >
-                    <LazyLoad height={10} scroll={true} once={true}>
-                      <RoundImage
-                        url={
-                          item.node.frontmatter.image !== null
-                            ? item.node.frontmatter.image
-                            : yml.banner.no_image
-                        }
-                        bsize="cover"
-                        border="0px"
-                        position="center"
-                        width="100%"
-                        height="329px"
-                      />
-                    </LazyLoad>
-                  </Link>
-                )}
-
-                {/* Boton */}
-                <Div
-                  flexDirection_md="row"
-                  flexDirection="column"
-                  justifyContent="left"
-                >
-                  <Link
-                    to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}
-                  >
-                    <Button
-                      variant="outline"
-                      border={`1px solid ${Colors.darkGray}`}
-                      color={Colors.darkGray}
-                      font='"Lato", sans-serif'
-                      margin="20px 10px 20px 0"
-                      pointer
-                      textColor={Colors.darkGray}
-                      fontSize={"13px"}
-                    >
-                      {item.node.frontmatter.cluster?.replace(/-|_/g, " ") ||
-                        "4Geeks"}
-                    </Button>
-                  </Link>
-                </Div>
-
-                {/* Titulo */}
-                <Div>
-                  <Link
-                    to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}
-                  >
-                    <H4
-                      textAlign="left"
-                      align_sm="left"
-                      margin="0 0 30px 0"
-                      fs_xs="20px"
-                      fs_sm="24px"
-                      fs_md="16px"
-                      fs_lg="20px"
-                      fontSize="22px"
-                    >
-                      {item.node.frontmatter.title}
-                    </H4>
-                  </Link>
-                </Div>
-
-                {/* Comentario acerca del post */}
-                <Div>
-                  <Paragraph textAlign="left" margin="0 0 15px 0">
-                    {item.node.frontmatter.excerpt}
-                  </Paragraph>
-                </Div>
-
-                {/* Link de leer articulo */}
-                <Div>
-                  <Paragraph
-                    fontSize="13px"
-                    color="#0097cd"
-                    margin="0 0 0 0"
-                    textAlign="left"
-                  >
-                    <Link
-                      to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}
-                    >
-                      {"Read more >"}
-                    </Link>
-                  </Paragraph>
-                </Div>
-              </Div>
-            );
-          })}
-        </GridContainer>
       </GridContainer>
     </>
   );
@@ -316,63 +320,40 @@ export const query = graphql`
             title
             message
             button
-            articles_title
+          }
+          title {
+            heading {
+              text
+            }
           }
           social {
             title
             message
             button_text
           }
-        }
-      }
-    }
-    featured: allMarkdownRemark(
-      limit: 3
-      sort: { frontmatter: { date: DESC } }
-      filter: {
-        frontmatter: { status: { eq: "published" } }
-        fields: { lang: { eq: $lang } }
-      }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            author
-            date
-            image
-            slug
-            title
-            excerpt
-            featured
-            status
-            cluster
-          }
-        }
-      }
-    }
-    posts: allMarkdownRemark(
-      limit: 3
-      sort: { frontmatter: { date: DESC } }
-      filter: {
-        frontmatter: { status: { eq: "published" } }
-        fields: { lang: { eq: $lang } }
-      }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            author
-            date
-            image
-            title
-            excerpt
-            featured
-            status
-            cluster
-          }
-          fields {
-            lang
-            slug
+          components {
+            name
+            position
+            background
+            proportions
+            layout
+            image {
+              src
+              style
+              shadow
+            }
+            button {
+              text
+              color
+              path
+              background
+            }
+            heading {
+              text
+            }
+            content {
+              text
+            }
           }
         }
       }

@@ -754,3 +754,65 @@ export const Spinner = styled.div`
     }
   }
 `;
+
+export const PhoneText = styled.p`
+  text-decoration: none;
+  text-align: center;
+  margin-top: 6px;
+  font-size: 15px;
+
+  @media ${Break.xs} {
+    font-size: 12px;
+  }
+`;
+
+export const PhoneTextDesktop = styled.p`
+  text-decoration: none;
+  text-align: right;
+  margin-top: 3px;
+  margin-right: 10px;
+  font-size: 15px;
+
+  @media ${Break.xs} {
+    font-size: 12px;
+  }
+`;
+
+export const OfferTag = styled.div`
+  position: absolute;
+  top: -12px;
+  right: 16px;
+  background: ${Colors.pink};
+  color: ${Colors.white};
+
+  @media ${Devices.tablet} {
+    right: 100px;
+  }
+  @media ${Devices.md} {
+    right: 100px;
+  }
+  padding: 4px 24px;
+  border-radius: 4px;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  visibility: ${(props) => (props.isHidden ? "hidden" : "visible")};
+  pointer-events: ${(props) => (props.isHidden ? "none" : "auto")};
+
+  &:before {
+    content: "🔥";
+    font-size: 16px;
+  }
+
+  @media ${Devices.tablet} {
+    font-size: 12px;
+    padding: 3px 10px;
+    top: -10px;
+    right: 45px;
+  }
+`;

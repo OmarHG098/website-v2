@@ -1,0 +1,10 @@
+heading: "Admissions Staff"
+sub_heading: "Contact our admissions team for any questions or guidance."
+staff:
+  - name: "Eli"
+    last_name: "Pilowsky"
+    job_title: "Admissions Advisor"
+    locations: [""]
+    phone: "(786) 305-5288"
+    email: "epilowsky@4geeksacademy.com"
+    image: "../../../../static/images/staff/eli-pilowsky.webp"

@@ -88,7 +88,7 @@ two_columns:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
     src: "/static/images/testimonials/allisa-testimonial.jpg"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  video: "EcqasocRKHo"
   heading:
     text: "Tu Viaje con 4Geeks Academy desde Hamburgo"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
