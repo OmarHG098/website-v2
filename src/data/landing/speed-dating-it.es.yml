@@ -12,14 +12,14 @@ meta_info:
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack"]
+  utm_course: ["front-end-development"]
   utm_location: ["madrid-spain"]
   automation: hiring-partner # comma separated, "soft" is the default value
   tag: hiring_partner # comma separated, "request_more_info" is the default value
 
 navbar:
   logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
-  buttonText: "Solicitar plaza"
+  buttonText: "Solicitar invitación"
   buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 form:
