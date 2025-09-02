@@ -66,7 +66,13 @@ const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
               alignItems_tablet="normal"
               overflow="hidden"
             >
-              <Icon style={{ flexShrink: 0 }} icon={box.icon} width="89px" height="89px" color={null} />
+              <Icon
+                style={{ flexShrink: 0 }}
+                icon={box.icon}
+                width="89px"
+                height="89px"
+                color={null}
+              />
               <Div
                 margin="0 0 0 15px"
                 margin_tablet="30px 0 0 0"
@@ -86,7 +92,7 @@ const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
                     flexWrap: "wrap",
                     gap: "0",
                     alignItems: "baseline",
-                    lineHeight: "1.2"
+                    lineHeight: "1.2",
                   }}
                 >
                   <span>{box.title}</span>
@@ -100,7 +106,7 @@ const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
                       style={{
                         flex: "0 0 auto",
                         whiteSpace: "nowrap",
-                        minWidth: "0"
+                        minWidth: "0",
                       }}
                     >
                       {box.label}

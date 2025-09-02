@@ -83,7 +83,7 @@ we_trust_section:
     - icon: graduation-2
       title: "3 - 6"
       label: "months"
-      text: Average time, to get hired
+      text: Average time to get hired
     - icon: chart
       title: "55%"
       text: Salary increase after graduation
