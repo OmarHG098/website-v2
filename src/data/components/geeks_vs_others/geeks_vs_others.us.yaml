@@ -2,7 +2,7 @@
 ## THIS COMPONENT IS USED IN "/home" AND "/course/..."
 ## THE HEADINGS ALLOW YOU TO SET DIFFERENT HEADINGS IN "/home" AND "/the-academy" TEMPLATES.
 titles:
-  featured: "4Geeks vs Others Feature"
+  featured: "Feature"
   at_geeks: "4Geeks Academy"
   average: "Industry Average / Competitors"
   logo: "/images/rigobot-logo.png"
