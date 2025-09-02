@@ -832,7 +832,7 @@ export const landingSections = {
   who_is_hiring: ({ session, data, pageContext, yml, location, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-        data.allLandingYaml.edges[0].node?.who_is_hiring !== null
+      data.allLandingYaml.edges[0].node?.who_is_hiring !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
 
@@ -864,7 +864,9 @@ export const landingSections = {
       // Opción 3: Usar configuración global por defecto
       imagesToShow = hiring.partners.images;
       showFeaturedLogos = true;
-      featuredImagesToShow = hiring.partners.images.filter(img => img.featured === true);
+      featuredImagesToShow = hiring.partners.images.filter(
+        (img) => img.featured === true
+      );
     }
 
     return (

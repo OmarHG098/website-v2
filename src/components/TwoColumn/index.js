@@ -163,8 +163,8 @@ const Side = ({
           </H2>
         </Div>
       )}
-      {sub_heading && (
-        /<\/?[a-z0-9]+>/g.test(sub_heading.text) ? (
+      {sub_heading &&
+        (/<\/?[a-z0-9]+>/g.test(sub_heading.text) ? (
           <Paragraph
             textAlign_tablet="left"
             fontFamily="Archivo"
@@ -206,8 +206,7 @@ const Side = ({
                 )
               : sub_heading.text}
           </Paragraph>
-        )
-      )}
+        ))}
 
       {Array.isArray(bullets?.items) && (
         <Div
