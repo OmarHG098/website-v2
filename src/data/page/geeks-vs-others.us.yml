@@ -10,12 +10,12 @@ meta_info:
 ## 4GEEKS VS OTHERS  HEADING
 seo_title: "Comparison: 4Geeks vs Other Bootcamps"
 header:
-  title: WHY 4GEEKS ACADEMY
-  sub_title: "Find out what makes us stand out"
-  paragraph: "We live and breathe code. Helping aspiring techies achieve their career goals is our calling, and we’ve perfected our hands-on teaching methods to ensure you gain the skills and confidence to launch a thriving tech career. <br> From our  industry-aligned syllabus to a lifetime career network, here’s why our bootcamps beat the rest."
+  title: 4Geeks Academy vs Other Bootcamps
+  sub_title: "Why 4Geeks Stands Out"
+  paragraph: "Discover why 4Geeks Academy is different. Our AI-integrated curriculum, hands-on projects, and personalized mentorship help students launch high-demand, future-proof tech careers—no prior experience needed. With lifetime mentorship and career support, we make sure you keep thriving long after graduation."
 
 section_heading: 
-  text: "4GEEKS vs OTHERS"
+  text: "Launching Successful Tech Careers in the AI Era"
 
 # Two Columns
 two_columns:
@@ -26,40 +26,34 @@ two_columns:
     src: "/images/landing/hombre-joven-con-laptop-senalando.webp"
     shadow: false
   section_heading:
-    text: "A Support System Like No Other"
+    text: "Hyperpersonalized Learning & Support That Lasts a Lifetime"
   heading: 
     text: ""
     font_size: ["33px", "33px", "33px", "33px", "33px"]
     style: '{ "lineHeight": "30px" }'
   sub_heading:
-    text: ""
+    text: "Most bootcamps give you a handful of mentorship hours and generic resources — and then leave you on your own. At 4Geeks, we built an entire support system around personalization:"
     font_size: ["16px", "16px", "16px", "16px", "16px"]
     style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600" }'
   content:
     style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
-    text: ""
+    text: "👉 The result: a truly hyperpersonalized experience that combines human mentorship with AI intelligence — something no other bootcamp offers."
   bullets:
     item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
     items:
-      - heading: "Geekpal"
+      - heading: "Unlimited 1:1 Mentorship with Real Humans"
         text: |
-          Unlimited 1:1 Mentorship
-          <br />
-          Weekly study halls and as many 1-on-1 sessions as you need. Our expert mentors are always here to help you tackle coding challenges, big or small.
+         Get as much personal guidance as you need, for life. From debugging code to preparing for a senior role years down the line, our mentors are always just a message away.
         icon: "check"
         icon_color: '#25BF6C'
-      - heading: "Geekforce"
+      - heading: "AI-Powered Progress Tracking & Feedback"
         text: |
-          Lifetime Career Support
-          <br />
-          From optimizing your CV, LinkedIn, GitHub, and portfolio to tailored mock interviews, our career experts provide personalized guidance to help you launch your career—even after you’ve landed your first job.
+          Rigobot + LearnPack adapt to your learning style, giving instant feedback, helping you debug faster, and tracking your skill growth over time. You’re never left wondering where you stand.
         icon: "check"
         icon_color: '#25BF6C'
-      - heading: "Slack Channels"
+      - heading: "Career Support That Grows With You "
         text: |
-          Join Our Global Community
-          <br />
-          Be part of a supportive network of over 6,100 people worldwide. Share advice, get feedback, and grow together in dedicated channels you can access from day one to forever.
+          GeekFORCE isn’t just for your first job. It’s personalized, ongoing career coaching you can tap into again and again, whether you’re changing roles, freelancing, or leveling up into leadership.
         icon: "check"
         icon_color: '#25BF6C'
 
@@ -73,7 +67,7 @@ two_columns_first:
     src: "/images/landing/community-support-2.webp"
     shadow: false
   section_heading:
-    text: "A Support System Like No Other"
+    text: "Hyperpersonalized Learning & Support That Lasts a Lifetime"
   heading: 
     text: ""
     font_size: ["33px", "33px", "33px", "33px", "33px"]
@@ -115,20 +109,26 @@ two_columns_second:
     font_size: ["33px", "33px", "33px", "33px", "33px"]
     style: '{ "lineHeight": "30px" }'
   sub_heading:
-    text: "At 4Geeks Academy, we believe a tech career should be within everyone’s reach. Our programs are designed to meet real-world needs, with financial options to ensure you can join our bootcamp stress-free."
+    text: "Tech careers change lives, and we believe finances should never hold anyone back. That’s why we’ve built some of the most flexible, student-friendly options in the industry:"
     font_size: ["16px", "16px", "16px", "16px", "16px"]
     style: '{ "font-size": "16px", "margin": "15px 0", "font-weight": "600" }'
   content:
-    text: "Our admissions team is always ready to help you choose the financing option that best suits your needs."
+    text: " "
     style: '{ "font-size": "16px", "margin": "15px 0", "font-weight": "600"}'
   bullets:
     item_style: '{ "padding": "0", "font-weight": "100", "margin": "0" }'
     items:
-      - heading: "Full and partial scholarships for qualifying applicants."
-        text: ""
+      - heading: " "
+        text: "💸 Among the most affordable tuition of any top-ranked bootcamp (recognized by Forbes)."
         icon: "check"
-      - heading: "Flexible financing and loan options, starting as low as $150/month."
-        text: ""
+      - heading: " "
+        text: "📉 Financing starting at $299/month, so you can start learning now without the stress."
+        icon: "check"
+      - heading: " "
+        text: "📊 Income-based payment options, where you only pay once you’re earning. "
+        icon: "check"
+      - heading: " "
+        text: "🎓 Scholarships available for eligible students."
         icon: "check"
   button:
     text: "See financing options"
@@ -140,32 +140,29 @@ two_columns_third:
   proportions: [6, 6]
   justify: "center"
   heading:
-    text: "Enroll with a Job Guarantee"
+    text: "The Confidence of a Job Guarantee"
     font_size: ["33px", "30px", "26px", "22px", "20px"]
     style: '{ "lineHeight": "30px", "font-weight": "700" }'
   sub_heading:
     text: |
-      Your success is our promise. 
-      Get hired within 9 months of graduation, or we’ll give you a full refund.
-      Here’s how it works:
+      The strongest proof that we believe in our model? We back it with a Job Guarantee.
+      Most schools promise "career support." At 4Geeks, we promise results: get hired within 9 months, or we refund your tuition in full.
+      We can do this because:
     font_size: ["20px", "20px", "20px", "20px", "20px"]
     style: '{ "margin": "0", "font-weight": "400" }'
   content:
     style: '{ "font-size": "16px", "margin": "15px 0", "font-weight": "400"}'
-    text: "Follow every step, and if you still don’t land a job, we’ll refund 100% of your tuition—no questions asked."
+    text: "Follow the program, lean on your mentors, and if you still don’t land a job, we stand by you — financially."
   bullets:
     item_style: '{ "padding": "0", "font-weight": "100", "margin": "0" }'
     items:
-      - text: "Start the program"
+      - text: "Our curriculum is industry-aligned and AI-ready"
         icon: "check"
-      - text: "Stay on track with assignments and attendance"
+      - text: "Our mentorship is unlimited and personalized"
         icon: "check"
-      - text: "Complete and approve your final project"
+      - text: "Our career support never expires"
         icon: "check"
-      - text: "Graduate successfully"
-        icon: "check"
-      - text: "Fully participate in our career support process"
-        icon: "check"
+
   image:
     style: '{"backgroundSize": "contain", "background-position": "center"}'
     src: "/images/landing/hombre-joven-con-laptop.webp" 

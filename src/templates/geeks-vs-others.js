@@ -79,6 +79,41 @@ const View = (props) => {
           proportions={yml.two_columns?.proportions}
           session={session}
         />
+
+        {/* second twocolumns */}
+        <TwoColumn
+          right={{
+            image: yml.two_columns_second?.image,
+            video: yml.two_columns_second?.video,
+          }}
+          left={{
+            heading: yml.two_columns_second?.heading,
+            sub_heading: yml.two_columns_second?.sub_heading,
+            bullets: yml.two_columns_second?.bullets,
+            content: yml.two_columns_second?.content,
+            button: yml.two_columns_second?.button,
+          }}
+          proportions={yml.two_columns_second?.proportions}
+          session={session}
+        />
+
+        {/* two_columns_third */}
+        <TwoColumn
+          left={{
+            heading: yml.two_columns_third?.heading,
+            sub_heading: yml.two_columns_third?.sub_heading,
+            bullets: yml.two_columns_third?.bullets,
+            content: yml.two_columns_third?.content,
+            button: yml.two_columns_third?.button,
+          }}
+          right={{
+            image: yml.two_columns_third?.image,
+            video: yml.two_columns_third?.video,
+          }}
+          proportions={yml.two_columns_third?.proportions}
+          session={session}
+        />
+
         <TwoColumn
           right={{
             image: yml.two_columns_first?.image,
@@ -93,39 +128,7 @@ const View = (props) => {
         />
       </Div>
 
-      {/* second twocolumns */}
-      <TwoColumn
-        left={{
-          image: yml.two_columns_second?.image,
-          video: yml.two_columns_second?.video,
-        }}
-        right={{
-          heading: yml.two_columns_second?.heading,
-          sub_heading: yml.two_columns_second?.sub_heading,
-          bullets: yml.two_columns_second?.bullets,
-          content: yml.two_columns_second?.content,
-          button: yml.two_columns_second?.button,
-        }}
-        proportions={yml.two_columns_second?.proportions}
-        session={session}
-      />
 
-      {/* two_columns_third */}
-      <TwoColumn
-        left={{
-          heading: yml.two_columns_third?.heading,
-          sub_heading: yml.two_columns_third?.sub_heading,
-          bullets: yml.two_columns_third?.bullets,
-          content: yml.two_columns_third?.content,
-          button: yml.two_columns_third?.button,
-        }}
-        right={{
-          image: yml.two_columns_third?.image,
-          video: yml.two_columns_third?.video,
-        }}
-        proportions={yml.two_columns_third?.proportions}
-        session={session}
-      />
     </>
   );
 };
