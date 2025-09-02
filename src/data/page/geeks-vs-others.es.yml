@@ -13,159 +13,202 @@ header:
   title: "4Geeks Academy vs Otros Bootcamps"
   sub_title: "Por qué 4Geeks se Destaca"
   paragraph: "Descubre por qué 4Geeks Academy es diferente. Nuestro plan de estudios integrado con IA, proyectos prácticos y mentoría personalizada ayudan a los estudiantes a lanzar carreras tecnológicas de alta demanda y preparadas para el futuro—sin experiencia previa necesaria. Con mentoría de por vida y apoyo profesional, nos aseguramos de que sigas prosperando mucho después de graduarte."
+  sub_heading: "Ayudando a los estudiantes a construir carreras tecnológicas duraderas es nuestra misión. Desde un plan de estudios alineado con la industria y preparado para el futuro hasta un sistema de apoyo de por vida, aquí es cómo superamos a la competencia:"
 
 section_heading: 
   text: "Lanzando Carreras Tecnológicas Exitosas en la Era de la IA"
 
-# Two Columns
-two_columns:
-  proportions: [6, 6]
-  justify: "center" #start,end,center
-  image:
-    style: '{"backgroundSize": "contain", "background-position": "center"}'
-    src: "/images/landing/hombre-joven-con-laptop-senalando.webp"
-    shadow: false
-  section_heading:
-    text: "Aprendizaje Hiperpersonalizado y Apoyo que Dura Toda la Vida"
-  heading:
-    text: ""
-    font_size: ["33px", "33px", "33px", "33px", "33px"]
-    style: '{ "lineHeight": "30px" }'
-  sub_heading:
-    text: "La mayoría de bootcamps te dan unas pocas horas de mentoría y recursos genéricos — y luego te dejan solo. En 4Geeks, construimos todo un sistema de apoyo alrededor de la personalización:"
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
-    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600" }'
-  content:
-    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
-    text: "👉 El resultado: una experiencia verdaderamente hiperpersonalizada que combina mentoría humana con inteligencia de IA — algo que ningún otro bootcamp ofrece."
-  bullets:
-    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
-    items:
-      - heading: "Mentoría 1:1 Ilimitada con Humanos Reales"
-        text: |
-         Obtén toda la orientación personal que necesites, de por vida. Desde depurar código hasta prepararte para un rol senior años después, nuestros mentores siempre están a solo un mensaje de distancia.
-        icon: "check"
-        icon_color: "#25BF6C"
-      - heading: "Seguimiento de Progreso y Retroalimentación con IA"
-        text: |
-          Rigobot + LearnPack se adaptan a tu estilo de aprendizaje, dando retroalimentación instantánea, ayudándote a depurar más rápido y rastreando tu crecimiento de habilidades a lo largo del tiempo. Nunca te quedarás preguntándote dónde te encuentras.
-        icon: "check"
-        icon_color: "#25BF6C"
-      - heading: "Apoyo de Carrera que Crece Contigo"
-        text: |
-          GeekFORCE no es solo para tu primer trabajo. Es coaching de carrera personalizado y continuo al que puedes recurrir una y otra vez, ya sea que estés cambiando de roles, trabajando como freelancer o ascendiendo a liderazgo.
-        icon: "check"
-        icon_color: "#25BF6C"
+components:
+  - name: hyperpersonalized_learning
+    position: 1
+    layout: two_column_left
+    proportions: [6, 6]
+    background: "#F4F9FF"
+    justify: "center"
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      src: "/images/landing/hombre-joven-con-laptop-senalando.webp"
+      shadow: false
+    section_heading:
+      text: ""
+    heading:
+      text: "Aprendizaje Hiperpersonalizado y Apoyo que Dura Toda la Vida"
+      font_size: ["33px", "33px", "33px", "33px", "33px"]
+      style: '{ "lineHeight": "30px" }'
+    sub_heading:
+      text: "La mayoría de bootcamps te dan unas pocas horas de mentoría y recursos genéricos — y luego te dejan solo. En 4Geeks, construimos todo un sistema de apoyo alrededor de la personalización:"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600" }'
+    content:
+      style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
+      text: "👉 El resultado: una experiencia verdaderamente hiperpersonalizada que combina mentoría humana con inteligencia de IA — algo que ningún otro bootcamp ofrece."
+    bullets:
+      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+      items:
+        - heading: "Mentoría 1:1 Ilimitada con Humanos Reales"
+          text: |
+           Obtén toda la orientación personal que necesites, de por vida. Desde depurar código hasta prepararte para un rol senior años después, nuestros mentores siempre están a solo un mensaje de distancia.
+          icon: "check"
+          icon_color: "#25BF6C"
+        - heading: "Seguimiento de Progreso y Retroalimentación con IA"
+          text: |
+            Rigobot + LearnPack se adaptan a tu estilo de aprendizaje, dando retroalimentación instantánea, ayudándote a depurar más rápido y rastreando tu crecimiento de habilidades a lo largo del tiempo. Nunca te quedarás preguntándote dónde te encuentras.
+          icon: "check"
+          icon_color: "#25BF6C"
+        - heading: "Apoyo de Carrera que Crece Contigo"
+          text: |
+            GeekFORCE no es solo para tu primer trabajo. Es coaching de carrera personalizado y continuo al que puedes recurrir una y otra vez, ya sea que estés cambiando de roles, trabajando como freelancer o ascendiendo a liderazgo.
+          icon: "check"
+          icon_color: "#25BF6C"
 
-two_columns_first:
-  proportions: [5, 7]
-  justify: "center" #start,end,center
-  image:
-    style: '{"backgroundSize": "contain", "background-position": "center"}'
-    src: "/images/landing/community-support-2.webp"
-    shadow: false
-  section_heading:
-    text: "Aprendizaje Hiperpersonalizado y Apoyo que Dura Toda la Vida"
-  heading:
-    text: ""
-    font_size: ["33px", "33px", "33px", "33px", "33px"]
-    style: '{ "lineHeight": "30px" }'
-  sub_heading:
-    text: ""
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
-    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600" }'
-  content:
-    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
-    text: ""
-  bullets:
-    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
-    items:
-      - heading: "4Geeks.com"
-        text: |
-          Tu Centro de Aprendizaje
-          <br />
-          Accede a recursos adicionales para acelerar tu crecimiento, incluyendo eventos en vivo, ejercicios interactivos y una amplia variedad de herramientas de codificación para todos los niveles de habilidad.
-        icon: "check"
-        icon_color: "#25BF6C"
-      - heading: "Rigobot"
-        text: |
-          Tu Asistente de Codificación con IA
-          <br />
-          Ya sea que estés depurando código, evaluando tu progreso con pruebas de habilidades o necesitando tutoría instantánea, Rigobot está disponible 24/7. Nuestro asistente de IA experto garantiza que te mantengas en el camino y resuelvas desafíos más rápido, sin importar la hora del día.
-        icon: "check"
-        icon_color: "#25BF6C"
+  - name: learning_tools
+    position: 5
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "#F4F9FF"
+    justify: "center"
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      src: "/images/landing/community-support-2.webp"
+      shadow: false
+    section_heading:
+      text: " "
+    heading: 
+      text: "Reconocidos Globalmente por la Excelencia"
+      font_size: ["33px", "33px", "33px", "33px", "33px"]
+      style: '{ "lineHeight": "30px" }'
+    sub_heading:
+      text: "No solo decimos que somos diferentes — otros también lo dicen:"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600" }'
+    content:
+      style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
+      text: "Cuando eliges 4Geeks, te unes a una de las escuelas de programación más respetadas del mundo."
+    bullets:
+      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+      items:
+        - heading: " "
+          text: |
+            ⭐ Calificado entre los 5 mejores Bootcamps de Programación del mundo (Newsweek, Forbes, SwitchUp, Course Report)
+          icon: "check"
+          icon_color: '#25BF6C'
+        - heading: " "
+          text: |
+            🏆 Reconocido consistentemente por el Mejor Apoyo Estudiantil y Mejor Relación Calidad-Precio
+          icon: "check"
+          icon_color: '#25BF6C'
+        - heading: " "
+          text: |
+            🌍 Confiado por más de 20,000 estudiantes en todo el mundo
+          icon: "check"
+          icon_color: '#25BF6C'
 
-# Two Columns - Second
-two_columns_second:
-  proportions: [6, 6]
-  image:
-    style: '{"backgroundSize": "contain", "background-position": "center"}'
-    src: "/images/landing/reservation-es.webp"
-    shadow: false
-  heading:
-    text: "Haciendo que las Carreras Tecnológicas Sean Accesibles"
-    font_size: ["33px", "33px", "33px", "33px", "33px"]
-    style: '{ "lineHeight": "30px" }'
-  sub_heading:
-    text: "Las carreras tecnológicas cambian vidas, y creemos que las finanzas nunca deberían detener a nadie. Por eso hemos construido algunas de las opciones más flexibles y amigables para estudiantes en la industria:"
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
-    style: '{ "font-size": "16px", "margin": "15px 0", "font-weight": "600" }'
-  content:
-    text: " "
-    style: '{ "font-size": "16px", "margin": "15px 0", "font-weight": "600"}'
-  bullets:
-    item_style: '{ "padding": "0", "font-weight": "100", "margin": "0" }'
-    items:
-      - heading: " "
-        text: "💸 Entre las matrículas más asequibles de cualquier bootcamp de primer nivel (reconocido por Forbes)."
-        icon: "check"
-      - heading: " "
-        text: "📉 Financiamiento desde $299/mes, para que puedas empezar a aprender ahora sin estrés."
-        icon: "check"
-      - heading: " "
-        text: "📊 Opciones de pago basadas en ingresos, donde solo pagas una vez que estés ganando."
-        icon: "check"
-      - heading: " "
-        text: "🎓 Becas disponibles para estudiantes elegibles."
-        icon: "check"
-  button:
-    text: "Ver opciones de financiamiento"
-    color: "white"
-    background: "black"
-    path: "/es/financiacion"
+  - name: making_tech_accessible
+    position: 3
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "#F4F9FF"
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      src: "/images/landing/reservation-es.webp"
+      shadow: false
+    heading:
+      text: "Haciendo que las Carreras Tecnológicas Sean Accesibles"
+      font_size: ["33px", "33px", "33px", "33px", "33px"]
+      style: '{ "lineHeight": "30px" }'
+    sub_heading:
+      text: "Las carreras tecnológicas cambian vidas, y creemos que las finanzas nunca deberían detener a nadie. Por eso hemos construido algunas de las opciones más flexibles y amigables para estudiantes en la industria:"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "font-size": "16px", "margin": "15px 0", "font-weight": "600" }'
+    content:
+      text: " "
+      style: '{ "font-size": "16px", "margin": "15px 0", "font-weight": "600"}'
+    bullets:
+      item_style: '{ "padding": "0", "font-weight": "100", "margin": "0" }'
+      items:
+        - heading: " "
+          text: "💸 Entre las matrículas más asequibles de cualquier bootcamp de primer nivel (reconocido por Forbes)."
+          icon: "check"
+        - heading: " "
+          text: "📉 Financiamiento desde $299/mes, para que puedas empezar a aprender ahora sin estrés."
+          icon: "check"
+        - heading: " "
+          text: "📊 Opciones de pago basadas en ingresos, donde solo pagas una vez que estés ganando."
+          icon: "check"
+        - heading: " "
+          text: "🎓 Becas disponibles para estudiantes elegibles."
+          icon: "check"
+    button:
+      text: "Ver opciones de financiamiento"
+      color: "white"
+      background: "black"
+      path: "/es/financiacion"
 
-# Two Columns - Third
-two_columns_third:
-  proportions: [6, 6]
-  justify: "center"
-  heading:
-    text: "La Confianza de una Garantía de Empleo"
-    font_size: ["33px", "30px", "26px", "22px", "20px"]
-    style: '{ "lineHeight": "30px", "font-weight": "700" }'
-  sub_heading:
-    text: |
-      ¿La prueba más fuerte de que creemos en nuestro modelo? Lo respaldamos con una Garantía de Empleo.
-      La mayoría de escuelas prometen "apoyo de carrera." En 4Geeks, prometemos resultados: consigue trabajo en 9 meses, o te reembolsamos tu matrícula en su totalidad.
-      Podemos hacer esto porque:
-    font_size: ["20px", "20px", "20px", "20px", "20px"]
-    style: '{ "margin": "0", "font-weight": "400" }'
-  content:
-    style: '{ "font-size": "16px", "margin": "15px 0", "font-weight": "400"}'
-    text: "Sigue el programa, apóyate en tus mentores, y si aún no consigues trabajo, te respaldamos — financieramente."
-  bullets:
-    item_style: '{ "padding": "0", "font-weight": "100", "margin": "0" }'
-    items:
-      - text: "Nuestro plan de estudios está alineado con la industria y listo para IA"
-        icon: "check"
-      - text: "Nuestra mentoría es ilimitada y personalizada"
-        icon: "check"
-      - text: "Nuestro apoyo de carrera nunca expira"
-        icon: "check"
-  image:
-    style: '{"backgroundSize": "contain", "background-position": "center"}'
-    src: "/images/landing/hombre-joven-con-laptop.webp"
-  button:
-    text: "Más información"
-    color: "white"
-    background: "black"
-    path: "/es/trabajo-garantizado"
+  - name: job_guarantee
+    position: 4
+    layout: two_column_left
+    proportions: [6, 6]
+    background: "#F4F9FF"
+    justify: "center"
+    heading:
+      text: "La Confianza de una Garantía de Empleo"
+      font_size: ["33px", "30px", "26px", "22px", "20px"]
+      style: '{ "lineHeight": "30px", "font-weight": "700" }'
+    sub_heading:
+      text: |
+        ¿La prueba más fuerte de que creemos en nuestro modelo? Lo respaldamos con una Garantía de Empleo.
+        La mayoría de escuelas prometen "apoyo de carrera." En 4Geeks, prometemos resultados: consigue trabajo en 9 meses, o te reembolsamos tu matrícula en su totalidad.
+        Podemos hacer esto porque:
+      font_size: ["20px", "20px", "20px", "20px", "20px"]
+      style: '{ "margin": "0", "font-weight": "400" }'
+    content:
+      style: '{ "font-size": "16px", "margin": "15px 0", "font-weight": "400"}'
+      text: "Sigue el programa, apóyate en tus mentores, y si aún no consigues trabajo, te respaldamos — financieramente."
+    bullets:
+      item_style: '{ "padding": "0", "font-weight": "100", "margin": "0" }'
+      items:
+        - text: "Nuestro plan de estudios está alineado con la industria y listo para IA"
+          icon: "check"
+        - text: "Nuestra mentoría es ilimitada y personalizada"
+          icon: "check"
+        - text: "Nuestro apoyo de carrera nunca expira"
+          icon: "check"
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      src: "/images/landing/hombre-joven-con-laptop.webp"
+    button:
+      text: "Más información"
+      color: "white"
+      background: "black"
+      path: "/es/trabajo-garantizado"
+
+  - name: how-it-works
+    position: 11
+    background: "#0084FF"
+    layout: iconogram
+    swipable: true
+    heading:
+      text: "¿Nuestros Bootcamps Entregarán Resultados en los que Puedas Confiar?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "color": "white" }'
+    sub_heading:
+      text: 'Sí — y tenemos los números para respaldarlo.'
+      font_size: ["20px", "20px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%", "color": "white"}'      
+    icons:
+      - icon: "graduation-2"
+        color: "#0084FF"
+        title: "87% tasa de contratación"
+        content: "Los graduados consiguen trabajo en promedio en 100 días."
+      - icon: "briefcase-2"
+        color: "#FF0000"
+        title: "+46% Aumento Salarial Promedio"
+        content: "La mayoría de estudiantes ven un impulso que cambia la vida después de su primer rol tecnológico"
+      - icon: "stairswflag"
+        color: "#BE8BFF"
+        title: "<4 Meses para Conseguir Trabajo"
+        content: "En promedio, nuestros graduados aseguran su primer trabajo tecnológico en menos de 4 meses."
+      - icon: "network"
+        color: "#EB5757"
+        title: "20,000+ Graduados"
+        content: "Una red global de desarrolladores, científicos de datos y profesionales de ciberseguridad."
