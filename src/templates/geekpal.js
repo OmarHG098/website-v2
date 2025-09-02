@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { graphql } from "gatsby";
 import BaseRender from "./_baseLayout";
 import { isCustomBarActive } from "../actions";
 import { SessionContext } from "../session";
+import { landingSections } from "../components/Landing";
 
 //new components
 import Icon from "../components/Icon";
@@ -29,6 +30,7 @@ const GeekPal = (props) => {
   const { session } = React.useContext(SessionContext);
   const partnersData = data.allPartnerYaml.edges[0].node;
   const content = data.allPageYaml.edges[0].node;
+  const [components, setComponents] = React.useState({});
 
   const bulletIcons = [
     {
@@ -46,8 +48,18 @@ const GeekPal = (props) => {
     },
   ];
 
+  useEffect(() => {
+    let _components = {};
+    if (yml.components)
+      yml.components.forEach(({ name, ...rest }) => {
+        _components[name] = rest;
+      });
+    setComponents({ ...yml, ..._components });
+  }, [yml]);
+
   return (
     <>
+      {/* Header Section */}
       <Grid
         padding="24px 20px"
         padding_tablet="100px 40px 40px 40px"
@@ -74,8 +86,6 @@ const GeekPal = (props) => {
             right: "-150px",
             top: "-100px",
           }}
-          // display_xs="none"
-          // display_tablet="flex"
         />
         <Img
           src="/images/vector-stroke-light.png"
@@ -96,8 +106,6 @@ const GeekPal = (props) => {
           <Paragraph
             fontSize="50px"
             lineHeight="54px"
-            //fontFamily="Lato-Bold"
-            //fontWeight="black"
             padding_xs="10px 0"
             padding_md="0px"
             margin="0"
@@ -177,7 +185,6 @@ const GeekPal = (props) => {
             height="10px"
             style={{
               position: "absolute",
-              // bottom: "0px",
             }}
             left_xs="0"
             bottom_tablet="10%"
@@ -207,7 +214,6 @@ const GeekPal = (props) => {
                       id={item.videoId}
                       thumb={item.image}
                       margin_tablet="0px"
-                      //imageSize="maxresdefault"
                       videoHeight="280px"
                       bgSize="contain"
                       style={{
@@ -224,215 +230,26 @@ const GeekPal = (props) => {
         </Div>
       </Grid>
 
-      {/* ICONOGRAM-GEEKPAL */}
-      <Div
-        display="flex"
-        flexDirection="column"
-        id="iconogram"
-        containerColumns_tablet="repeat(14, 1fr)"
-        columns="1"
-        rows="2"
-        margin="auto"
-        height="auto"
-        width="100%"
-        background={Colors.lightYellow}
-      >
-        <Div
-          display="flex"
-          flexDirection="column"
-          flexDirection_tablet="row "
-          justifyContent="center"
-          maxWidth="1280px"
-          margin="20px auto 0 auto"
-          padding_tablet="50px 40px"
-          padding_md="50px 80px"
-          padding_lg="50px 0"
-          //className="badge-slider hideOverflowX__"
-        >
-          {Array.isArray(content.icons) &&
-            content.icons?.map((item, index) => {
-              return (
-                <React.Fragment key={index}>
-                  <IconsBanner
-                    icon={item.icon}
-                    title={item.title}
-                    content={item.content}
-                  />
-                </React.Fragment>
-              );
-            })}
-        </Div>
-      </Div>
-
-      {/* Two Columns Rigo */}
-      <TwoColumn
-        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
-        right={{
-          heading: yml.two_columns?.heading,
-          heading_image: yml.two_columns?.heading_image,
-          sub_heading: yml.two_columns?.sub_heading,
-          bullets: yml.two_columns?.bullets,
-          content: yml.two_columns?.content,
-          button: yml.two_columns?.button,
-        }}
-        proportions={yml.two_columns?.proportions}
-        session={session}
-      />
-
-      {Array.isArray(content.list) &&
-        content.list.map((m, i) => {
-          return (
-            <>
-              {i === 1 ? (
-                <Overlaped
-                  heading={m?.title}
-                  content={m?.text}
-                  button={m?.button}
-                  image={m.image.childImageSharp.gatsbyImageData}
-                />
-              ) : (
-                <React.Fragment key={`${i}-${m.title}`}>
-                  <Grid
-                    gridTemplateColumns_tablet="repeat(20, 1fr)"
-                    imageSide={i % 2 != 0 ? "left" : "right"}
-                    padding_tablet="50px 40px 20px 40px"
-                    padding_md="50px 80px 20px 80px"
-                    padding_lg={i === 0 ? "50px 0 0 0" : "0 0 50px 0"}
-                    padding_xxs="0 20px"
-                    columns_tablet="14"
-                    maxWidth_tablet="1280px"
-                    margin_tablet="0 auto"
-                    gridGap="0px"
-                  >
-                    <Div
-                      flexDirection="row"
-                      flexWrap="wrap"
-                      justifyContent_tablet="start"
-                      alignContent={i % 2 == 0 ? "center" : "flex-start"}
-                      padding="0"
-                      padding_tablet={i % 2 == 0 ? "0 14px 0 0" : "0 0 0 14px"}
-                      padding_lg={i % 2 == 0 ? "0 25px 0 0" : "0 0 0 23px"}
-                      gridArea_lg={i % 2 == 0 ? "1/1/1/11" : "1/11/1/21"}
-                      gridArea_tablet={i % 2 == 0 ? "1/1/1/11" : "1/11/1/21"}
-                    >
-                      <H2
-                        key={i}
-                        type="h2"
-                        padding="20px 0"
-                        lineHeight="36px"
-                        textAlign="center"
-                        textAlign_tablet="left"
-                        margin="0"
-                        fontWeight="700"
-                        fontSize="30px"
-                      >
-                        {m.title}
-                      </H2>
-                      {m.sub ? (
-                        <>
-                          {m.sub?.map((sub, index) => {
-                            return (
-                              <React.Fragment
-                                key={`${index}-${sub.title || sub.text}`}
-                              >
-                                <Div display="" inline>
-                                  <Icon
-                                    icon={"check"}
-                                    width="13px"
-                                    display="inline"
-                                    color={Colors.blue}
-                                    fill={Colors.yellow}
-                                    style={{ strokeWidth: "2px" }}
-                                  />
-                                  <H3
-                                    type="h3"
-                                    padding="10px 0px 10px 5px"
-                                    textAlign="left"
-                                    margin="0"
-                                    fontWeight="900"
-                                    textTransform="uppercase"
-                                    fontSize="15px"
-                                  >
-                                    {sub?.title}
-                                  </H3>
-                                </Div>
-                                <Paragraph
-                                  letterSpacing="0.05em"
-                                  textAlign="left"
-                                  margin="0 0 20px 0"
-                                  fontSize="15px"
-                                  lineHeight="22px"
-                                  dangerouslySetInnerHTML={{
-                                    __html: sub?.text,
-                                  }}
-                                />
-                              </React.Fragment>
-                            );
-                          })}
-                        </>
-                      ) : (
-                        <>
-                          <Paragraph
-                            letterSpacing="0.05em"
-                            fontSize="15px"
-                            textAlign="left"
-                            margin="0 0 20px 0"
-                            lineHeight="22px"
-                            dangerouslySetInnerHTML={{ __html: m?.text }}
-                          />
-                        </>
-                      )}
-                    </Div>
-                    <Div
-                      height="auto"
-                      width="100%"
-                      margin_xs={i % 2 != 0 && "0 0 20px 0"}
-                      margin_sm={i % 2 == 0 && "0 0 20px 0"}
-                      margin_tablet="0px"
-                      padding_lg={i === 0 ? "0 0 0 0" : "0 0 0 0"}
-                      gridArea_lg={i % 2 == 0 ? "1/11/1/21" : "1/1/1/11"}
-                      gridArea_tablet={i % 2 == 0 ? "1/11/1/21" : "1/1/1/11"}
-                      style={{ position: "relative" }}
-                    >
-                      {i === 0 ? (
-                        <>
-                          <Img
-                            src="/images/Ellipse-79.png"
-                            display_xxs="none"
-                            display_tablet="flex"
-                            width="164px"
-                            height="164px"
-                            style={{
-                              position: "absolute",
-                              zIndex: "0",
-                            }}
-                            right_lg="-7%"
-                            top_lg="-4%"
-                            right_md="-15%"
-                            top_md="-12%"
-                            right_tablet="-25%"
-                            top_tablet="8%"
-                          />
-                        </>
-                      ) : (
-                        i === 2 && <></>
-                      )}
-                      <StyledBackgroundSection
-                        height_lg={i === 0 ? "600px" : "600px"}
-                        height_xxs="200px"
-                        height_xs="300px"
-                        height_tablet="350px"
-                        // width={`85%`}
-                        image={m.image.childImageSharp.gatsbyImageData}
-                        bgSize="contain"
-                        alt="geekforce image"
-                      />
-                    </Div>
-                  </Grid>
-                </React.Fragment>
-              )}
-            </>
-          );
+      {/* Dynamic Components */}
+      {Object.keys(components)
+        .filter(
+          (name) =>
+            components[name] &&
+            (landingSections[name] || landingSections[components[name].layout])
+        )
+        .sort((a, b) =>
+          components[b].position > components[a].position ? -1 : 1
+        )
+        .map((name, index) => {
+          const layout = components[name].layout || name;
+          return landingSections[layout]({
+            ...props,
+            yml: components[name],
+            session,
+            course: yml.meta_info?.utm_course,
+            location: components.meta_info?.utm_location,
+            index: index,
+          });
         })}
     </>
   );
@@ -469,15 +286,8 @@ export const query = graphql`
             image_alt
             image_logo
           }
-          tagline
-          sub_heading
-          list {
-            title
-            text
-            sub {
-              title
-              text
-            }
+          geekPal {
+            videoId
             image {
               childImageSharp {
                 gatsbyImageData(
@@ -485,23 +295,22 @@ export const query = graphql`
                   width: 1000
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   quality: 100
-                  outputPixelDensities: 2
                 )
               }
             }
+          }
+          components {
+            name
             position
-            button {
-              link
-              text
+            layout
+            background
+            proportions
+            justify
+            icons {
+              icon
+              title
               color
             }
-          }
-          icons {
-            icon
-            title
-          }
-          two_columns {
-            proportions
             image {
               style
               src
@@ -525,6 +334,7 @@ export const query = graphql`
               style
             }
             bullets {
+              item_style
               items {
                 heading
                 text
@@ -532,18 +342,11 @@ export const query = graphql`
                 icon_color
               }
             }
-          }
-          geekPal {
-            videoId
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 1000
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  quality: 100
-                )
-              }
+            button {
+              text
+              color
+              path
+              background
             }
           }
         }

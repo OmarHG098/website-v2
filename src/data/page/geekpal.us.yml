@@ -8,9 +8,9 @@ meta_info:
   redirects: ["/geekpal", "/us/career-support"]
 
 header:
-  title: "<strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
-    <strong style = 'color:#CD0000; font-family: Archivo-Black;'>PAL</strong> <br>
-    <strong style='font-family: Archivo;'>never code alone again</strong>"
+  title: "Welcome to <strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
+    <strong style = 'color:#CD0000; font-family: Archivo-Black;'>PAL</strong>:<br>
+    Lifetime Mentorship & AI-Powered Coding Support"
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: "GeekPal - Have mentors for the rest of your life "
   paragraph: "GeekPAL is an instant membership you get when you become a student at 4Geeks Academy."
@@ -28,172 +28,142 @@ geekPal:
   - videoId: "MBXqEnhodx0"
     image: ../../../static/images/staff/joao.png
 
-# Banner of icons 
-icons:
-  - icon: "capacity"
-    title: "MAXIMUM 8 STUDENTS PER CLASS"
-  - icon: "ratio"
-    title: "1:7 RATIO TEACHER STUDENT"
-  - icon: "talk"
-    title: "AVG. 50 TUTORSHIPS PER STUDENT"
-  - icon: "timer"
-    title: "RESPONSE TIME OF 15 MINUTES"  
+components:
+  - name: icons_banner
+    heading:
+      text: "Welcome to GeekPAL"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "color": "black" }'
+    position: 1
+    layout: iconogram
+    background: "#F4F9FF"
+    icons:
+      - icon: "capacity"
+        title: "MAXIMUM 8 STUDENTS PER CLASS"
+        color: "#0084FF"
+      - icon: "ratio"
+        title: "1:7 RATIO TEACHER STUDENT"
+        color: "#FF0000"
+      - icon: "talk"
+        title: "AVG. 50 TUTORSHIPS PER STUDENT"
+        color: "#BE8BFF"
+      - icon: "timer"
+        title: "RESPONSE TIME OF 15 MINUTES"
+        color: "#EB5757"
 
-list:
-  - title: "Customized process"
-    image: "../../../static/images/professional-support.png"
-    position: "right"
-    sub:
-      - title: "EXCLUSIVE CLASSES"
-        text: "At 4Geeks we believe that the personalized process gives better results, that is why our classes are designed for a maximum of 8 students and we have a ratio of <span style='font-weight: bold'> 1 teacher for every 5 students.</span>"
-      - title: "1:1 MENTORSHIPS"
-        text: "We have a network of mentors who are willing to give you 
-          <span style='font-weight: bold'> 1:1 support</span> in person or remotely, unlimitedly. These 
-          <span style='font-weight: bold'> unlimited mentoring continues</span> even after you finish your studies at 4Geeks."
+  - name: customized_process
+    position: 3
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "#F4F9FF"
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      src: "/images/professional-support.png"
+      shadow: false
+    heading:
+      text: "Customized process"
+      font_size: ["33px", "33px", "33px", "33px", "33px"]
+      style: '{ "lineHeight": "30px" }'
+    bullets:
+      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+      items:
+        - heading: "EXCLUSIVE CLASSES"
+          text: "At 4Geeks we believe that the personalized process gives better results, that is why our classes are designed for a maximum of 8 students and we have a ratio of <span style='font-weight: bold'> 1 teacher for every 5 students.</span>"
+          icon: "check"
+          icon_color: '#25BF6C'
+        - heading: "1:1 MENTORSHIPS"
+          text: "We have a network of mentors who are willing to give you <span style='font-weight: bold'> 1:1 support</span> in person or remotely, unlimitedly. These <span style='font-weight: bold'> unlimited mentoring continues</span> even after you finish your studies at 4Geeks."
+          icon: "check"
+          icon_color: '#25BF6C'
 
-  - title: "Wherever and whenever"
-    image: "../../../static/images/mujer-leyendo-cafeteria.webp"
-    position: "left"
-    text: "In 4Geeks we not only adjust the sessions 
-      <span style='font-weight: bold'> according to your calendar</span>, but we also give you the opportunity to see them 
-      <span style='font-weight: bold'> online or in person</span>, this because we have campus in many different cities and therefore time zones.<br/>
-      <br/>In any case, we assure you that you have the opportunity for constant mentoring whenever you need it."
+  - name: wherever_whenever
+    position: 5
+    layout: overlaped
+    background: "#F4F9FF"
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      src: "/images/mujer-leyendo-cafeteria.webp"
+      shadow: false
+    heading:
+      text: "Wherever and whenever"
+      font_size: ["33px", "33px", "33px", "33px", "33px"]
+      style: '{ "lineHeight": "30px" }'
+    content:
+      text: "In 4Geeks we not only adjust the sessions <span style='font-weight: bold'> according to your calendar</span>, but we also give you the opportunity to see them <span style='font-weight: bold'> online or in person</span>, this because we have campus in many different cities and therefore time zones.<br/><br/>In any case, we assure you that you have the opportunity for constant mentoring whenever you need it."
+      style: '{ "font-size": "16px", "margin": "15px 0", "font-weight": "600"}'
     button:
       link: "/"
       text: ""
       color: "black"
 
-  - title: "Community Support"
-    image: "../../../static/images/Group-6606.webp"
-    position: "right"
-    sub:
-      - title: "4Geeks.com"
-        text: "Is a community created to accelerate the way junior developers learn and evolve using technology. <a href='https://4geeks.com'>4Geeks.com</a> gives you access to many resources to improve your skills, but also you can contribute to help others with their code."
-      - title: "Slack Community"
-        text: "Our international community of more than 
-          <span style='font-weight: bold'> 6100 people</span>, who will provide you with all the support you need."
+  - name: community_support
+    position: 7
+    layout: two_column_left
+    proportions: [6, 6]
+    background: "#F4F9FF"
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      src: "/images/Group-6606.webp"
+      shadow: false
+    heading:
+      text: "Community Support"
+      font_size: ["33px", "33px", "33px", "33px", "33px"]
+      style: '{ "lineHeight": "30px" }'
+    bullets:
+      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+      items:
+        - heading: "4Geeks.com"
+          text: "Is a community created to accelerate the way junior developers learn and evolve using technology. <a href='https://4geeks.com'>4Geeks.com</a> gives you access to many resources to improve your skills, but also you can contribute to help others with their code."
+          icon: "check"
+          icon_color: '#25BF6C'
+        - heading: "Slack Community"
+          text: "Our international community of more than <span style='font-weight: bold'> 6100 people</span>, who will provide you with all the support you need."
+          icon: "check"
+          icon_color: '#25BF6C'
 
-# Two Columns - Rigo
-two_columns:
-  proportions: [5, 7]
-  justify: "center" #start,end,center
-  image:
-    style: '{"backgroundSize": "contain", "background-position": "center"}'
-    src: "/images/landing/rigobot-section.webp"
-    shadow: false
-  # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
-  heading: 
-    text: "Our AI-powered features make all the difference!"
-    font_size: ["33px", "33px", "33px", "33px", "33px"]
-    style: '{ "lineHeight": "30px" }'
-    heading_image:
-      src: "/images/rigobot-logo.png"
-  sub_heading:
-    text: "Through years of research and experience, we've perfected the strategies and tools to ensure your constant and efficient progress. To optimize your learning curve and empower you to tackle challenges with confidence, we've now incorporated the power of AI."
-    font_size: ["16px","16px","16px","16px","16px"]
-    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300" }'
-  content:
-    style: '{ "font-size":"16px", "margin":"15px 0" }'
-    text: "Experience the difference our AI-powered features make. Our tried-and-tested approach keeps you engaged, motivated, and on the fast track to achieving your coding goals!"
-  bullets:
-    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
-    items:
-      - heading: "Meet Rigobot, our AI coding assistant:"
-        text: |
-          • Instant tutoring as you code.
-          <br />
-          • Skill evaluations to track your progress.
-          <br />
-          • Expert bug fixing assistance.
-          <br /><br />
-          It perfectly complements our human mentorship program!
-        icon: "check" #string with icon for example ['check', 'cicle', etc]
-        icon_color: '#25BF6C'
-      - heading: "Learnpack, our interactive learning software, provides:"
-        text: |
-          • There are hundreds of interactive exercises to help you master and retain skills.
-          <br />
-          • Automated tests to help track your progress.
-          <br />
-          • Structured practice.
-        icon: "check" #string with icon for example ['check', 'cicle', etc]
-        icon_color: '#25BF6C'
-
-# benefits:
-#   - p:
-#     heading: "Personal"
-#     items:
-#       - title: Exclusive classes
-#         sub_title: (up to 8 students per class)
-#       - title: 1:4 teacher-student-ratio
-#         sub_title: (one mentor for every 8 students)
-#       - title: Mentoring 1-1
-#         sub_title: (unlimited sessions)
-#       - title: Tailored career
-#         sub_title: (based on each job opportunity)
-#   - a:
-#     heading: "Anywhere & time"
-#     items:
-#       - title: Adjusted to your schedule
-#         sub_title: (on demand session w/appointment)
-#       - title: Permanent mentor schedule
-#         sub_title: (Always on mentorship & chat support)
-#       - title: Online or in-person
-#         sub_title: (Locations around the world)
-#       - title: Tailored career support
-#         sub_title: (based on each job opportunity)
-#   - l:
-#     heading: "Limitless"
-#     items:
-#       - title: All the mentoring you need
-#         sub_title: (on demand session w/appointment)
-#       - title: Mentoring after you graduate
-#         sub_title: (even after you get the job so that you can keep the job)
-#       - title: Mentoring for life
-#         sub_title: (Keep coming back, scheduling or attending)
-#       - title: Tailored career
-#         sub_title: (based on each job opportunity)
-
-
-
-
-###### OLD ONE
-#   redirects: ["/geekpal", "/us/career-support"]
-# tagline: NEVER BE STUCK AGAIN
-# sub_heading: "LEARN FASTER THAN ANYONE ON EARTH"
-# image: "../../../static/images/bg/companies-bg.jpg"
-# image_logo: "/images/geekpal.png"
-# benefits:
-#   - p:
-#     heading: "Personal"
-#     items:
-#       - title: Exclusive classes
-#         sub_title: (up to 8 students per class)
-#       - title: 1:4 teacher-student-ratio
-#         sub_title: (one mentor for every 8 students)
-#       - title: Mentoring 1-1
-#         sub_title: (unlimited sessions)
-#       - title: Tailored career
-#         sub_title: (based on each job opportunity)
-#   - a:
-#     heading: "Anywhere & time"
-#     items:
-#       - title: Adjusted to your schedule
-#         sub_title: (on demand session w/appointment)
-#       - title: Permanent mentor schedule
-#         sub_title: (Always on mentorship & chat support)
-#       - title: Online or in-person
-#         sub_title: (Locations around the world)
-#       - title: Tailored career support
-#         sub_title: (based on each job opportunity)
-#   - l:
-#     heading: "Limitless"
-#     items:
-#       - title: All the mentoring you need
-#         sub_title: (on demand session w/appointment)
-#       - title: Mentoring after you graduate
-#         sub_title: (even after you get the job so that you can keep the job)
-#       - title: Mentoring for life
-#         sub_title: (Keep coming back, scheduling or attending)
-#       - title: Tailored career
-#         sub_title: (based on each job opportunity)
+  - name: ai_features
+    position: 9
+    layout: two_column_right
+    proportions: [5, 7]
+    background: "#FFFFFF"
+    justify: "center"
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      src: "/images/landing/rigobot-section.webp"
+      shadow: false
+    heading: 
+      text: "Our AI-powered features make all the difference!"
+      font_size: ["33px", "33px", "33px", "33px", "33px"]
+      style: '{ "lineHeight": "30px" }'
+      heading_image:
+        src: "/images/rigobot-logo.png"
+    sub_heading:
+      text: "Through years of research and experience, we've perfected the strategies and tools to ensure your constant and efficient progress. To optimize your learning curve and empower you to tackle challenges with confidence, we've now incorporated the power of AI."
+      font_size: ["16px","16px","16px","16px","16px"]
+      style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300" }'
+    content:
+      style: '{ "font-size":"16px", "margin":"15px 0" }'
+      text: "Experience the difference our AI-powered features make. Our tried-and-tested approach keeps you engaged, motivated, and on the fast track to achieving your coding goals!"
+    bullets:
+      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+      items:
+        - heading: "Meet Rigobot, our AI coding assistant:"
+          text: |
+            • Instant tutoring as you code.
+            <br />
+            • Skill evaluations to track your progress.
+            <br />
+            • Expert bug fixing assistance.
+            <br /><br />
+            It perfectly complements our human mentorship program!
+          icon: "check"
+          icon_color: '#25BF6C'
+        - heading: "Learnpack, our interactive learning software, provides:"
+          text: |
+            • There are hundreds of interactive exercises to help you master and retain skills.
+            <br />
+            • Automated tests to help track your progress.
+            <br />
+            • Structured practice.
+          icon: "check"
+          icon_color: '#25BF6C'
