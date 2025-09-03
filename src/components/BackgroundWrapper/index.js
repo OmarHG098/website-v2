@@ -15,21 +15,11 @@ const BackgroundWrapper = ({
         background={Colors[background] || background}
         flexDirection="column"
       >
-        <Div
-          {...props}
-        >
-          {children}
-        </Div>
+        <Div {...props}>{children}</Div>
       </Div>
     );
   } else {
-    return (
-      <Div
-        {...props}
-      >
-        {children}
-      </Div>
-    );
+    return <Div {...props}>{children}</Div>;
   }
 };
 
