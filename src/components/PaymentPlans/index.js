@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { Div } from "../Sections";
 import { H2, H3, Paragraph } from "../Heading";
-import { Colors } from "../Styling";
+import { Button, Colors } from "../Styling";
 import Icon from "../Icon";
 
 const PaymentPlans = (props) => {
@@ -20,9 +20,14 @@ const PaymentPlans = (props) => {
               id
               title
               description
+              cta
               bullets {
                 items {
                   text
+                  cta
+                  sub_items {
+                    text
+                  }
                 }
               }
             }
@@ -54,6 +59,7 @@ const PaymentPlans = (props) => {
       maxWidth="1280px"
       margin="0 auto"
       padding="20px"
+      background={Colors.veryLightBlue3}
       padding_tablet="40px 60px"
       padding_lg="40px 0"
       gap="20px"
@@ -104,18 +110,66 @@ const PaymentPlans = (props) => {
                   <Paragraph textAlign="left">{item.description}</Paragraph>
                   {item.bullets?.items && item.bullets.items.length > 0 && (
                     <Div flexDirection="column" gap="8px">
-                      {item.bullets.items.map((bullet, index) => (
-                        <Paragraph
-                          key={index}
-                          textAlign="left"
-                          margin="0"
-                          style={{ display: "flex", alignItems: "flex-start" }}
-                        >
-                          <span style={{ marginRight: "8px" }}>•</span>
-                          {bullet.text}
-                        </Paragraph>
-                      ))}
+                      {item.bullets.items.map((bullet, index) => {
+                        const hasSubItems = bullet.sub_items && bullet.sub_items.length > 0;
+                        return (
+                          <Div as={!hasSubItems ? "li" : "div"} margin={!hasSubItems ? "0 0 0 16px" : "0"} key={index} flexDirection="column" gap="4px">
+                            {hasSubItems ? (
+                              <>
+                                <Paragraph
+                                  textAlign="left"
+                                  fontSize="18px"
+                                  fontWeight="700"
+                                  margin="0 0 4px 0"
+                                >
+                                  {bullet.text}
+                                </Paragraph>
+                                <Div flexDirection="column" gap="4px">
+                                  {bullet.sub_items.map((subBullet, subIndex) => (
+                                    <Paragraph
+                                      as="li"
+                                      key={subIndex}
+                                      margin="0 0 0 16px"
+                                      textAlign="left"
+                                      style={{ display: "flex", alignItems: "flex-start" }}
+                                    >
+                                      <span style={{ marginRight: "8px" }}>•</span>
+                                      <span dangerouslySetInnerHTML={{ __html: subBullet.text }} />
+                                    </Paragraph>
+                                  ))}
+                                  {bullet.cta && (
+                                    <Div 
+                                      dangerouslySetInnerHTML={{ __html: bullet.cta }}
+                                      margin="4px 0 8px 0"
+                                    />
+                                  )}
+                                </Div>
+                              </>
+                            ) : (
+                              <>
+                                <Paragraph
+                                  textAlign="left"
+                                  margin="0"
+                                  style={{ display: "flex", alignItems: "flex-start" }}
+                                >
+                                  <span style={{ marginRight: "8px" }}>•</span>
+                                  {bullet.text}
+                                </Paragraph>
+                                {bullet.cta && (
+                                  <Div 
+                                    dangerouslySetInnerHTML={{ __html: bullet.cta }} 
+                                    margin="4px 0 0 16px"
+                                  />
+                                )}
+                              </>
+                            )}
+                          </Div>
+                        )
+                      })}
                     </Div>
+                  )}
+                  {item?.cta && (
+                    <Div dangerouslySetInnerHTML={{ __html: item.cta }} />
                   )}
                 </Div>
               )}
