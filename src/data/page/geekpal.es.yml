@@ -5,9 +5,9 @@ meta_info:
   description: "Conoce nuestro sistema de apoyo integral a los egresados de 4Geeks Academy"
   image: null
   keywords: ""
-  redirects: []
+  redirects: ["/geekpal", "/es/career-support"]
 
-seo_title: Geekpal de 4Geeks Academy
+seo_title: "Geekpal de 4Geeks Academy"
 
 header:
   title: "Bienvenido a <strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
@@ -20,6 +20,7 @@ header:
     - " "
   image_logo: "/images/geekpal.png"
 
+# Introduction Video here
 geekPal:
   - videoId: "D5nUZNL52-Q"
     image: ../../../static/images/landing/geek-pal-thumbnail.webp
@@ -42,15 +43,15 @@ components:
         title: "Ratio 7:1 Estudiante–Profesor"
         color: "#0084FF"
         content: "Atención individual en cada clase."
-      - icon: "ratio"
+      - icon: "talk"
         title: "Mentoría 1:1 Ilimitada"
         color: "#FF0000"
         content: "Desde el primer día — y de por vida."
-      - icon: "talk"
+      - icon: "timer"
         title: "Asistente de IA 24/7 (Rigobot)"
         color: "#BE8BFF"
         content: "Retroalimentación instantánea mientras programas."
-      - icon: "timer"
+      - icon: "ratio"
         title: "Apoyo de Comunidad Real"
         color: "#EB5757"
         content: "Mentores, egresados y compañeros siempre listos para ayudar."
@@ -140,9 +141,20 @@ components:
       text:
         "Escucha a Uno de Nuestros Egresados"
         #xl      lg     md     sm    xs
-      font_size: ["40px", "34px", "34px", "25px", "20px"]
-    content:
+      font_size: ["40px", "40px", "34px", "34px", "34px"]
+    sub_heading:
       text: "Escucha a Joao hablar sobre su experiencia durante y después de nuestro bootcamp y cómo el acceso ilimitado a mentoría de programación marcó una gran diferencia en su carrera."
+      font_size: ["28px"]
+    content:
+    bullets:
+      items:
+        - text: |
+            <br />
+            <br />
+            <br />
+            <br />
+          icon: "check"
+          icon_color: '#FFFFFF'
       font_size: ["16px"]
 
 

@@ -144,7 +144,7 @@ components:
       text:
         "Hear From One of Our Graduates"
         #xl      lg     md     sm    xs
-      font_size: ["40px", "34px", "34px", "25px", "20px"]
+      font_size: ["40px", "40px", "34px", "34px", "34px"]
     sub_heading:
       text: "Listen to Joao talk about  his experience during and after our bootcamp and how unlimited access to coding mentorship made a huge difference to his career."
       font_size: ["28px"]
