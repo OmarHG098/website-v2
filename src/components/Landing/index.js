@@ -847,27 +847,44 @@ export const landingSections = {
     const customLogos = landingHiring?.custom_logos;
     const featuredLogos = landingHiring?.featured;
 
-    let imagesToShow;
-    let showFeaturedLogos = false;
-    let featuredImagesToShow = [];
+    // Configuration-based approach to replace if-else logic
+    const logoConfigurations = [
+      {
+        condition: () => customLogos && customLogos.length > 0,
+        config: {
+          imagesToShow: customLogos,
+          showFeaturedLogos: false,
+          featuredImagesToShow: []
+        }
+      },
+      {
+        condition: () => featuredLogos && featuredLogos.length > 0,
+        config: {
+          imagesToShow: hiring.partners.images,
+          showFeaturedLogos: true,
+          featuredImagesToShow: featuredLogos
+        }
+      },
+      {
+        condition: () => true, // Default fallback
+        config: {
+          imagesToShow: hiring.partners.images,
+          showFeaturedLogos: true,
+          featuredImagesToShow: hiring.partners.images.filter(
+            (img) => img.featured === true
+          )
+        }
+      }
+    ];
 
-    if (customLogos && customLogos.length > 0) {
-      // Opción 1: Hay logos custom - usar SOLO estos
-      imagesToShow = customLogos;
-      showFeaturedLogos = false;
-    } else if (featuredLogos && featuredLogos.length > 0) {
-      // Opción 2: Hay featured específicos - usar estos como featured
-      imagesToShow = hiring.partners.images;
-      featuredImagesToShow = featuredLogos;
-      showFeaturedLogos = true;
-    } else {
-      // Opción 3: Usar configuración global por defecto
-      imagesToShow = hiring.partners.images;
-      showFeaturedLogos = true;
-      featuredImagesToShow = hiring.partners.images.filter(
-        (img) => img.featured === true
-      );
-    }
+    // Find the first configuration that matches the condition
+    const selectedConfig = logoConfigurations.find(config => config.condition())?.config;
+    
+    const {
+      imagesToShow,
+      showFeaturedLogos,
+      featuredImagesToShow
+    } = selectedConfig;
 
     return (
       <Div
