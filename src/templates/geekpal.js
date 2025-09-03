@@ -171,13 +171,16 @@ const GeekPal = (props) => {
         </Div>
         <Div
           height="auto"
-          width="100%"
+          width="90%"
+          width_tablet="80%"
+          width_md="70%"
           padding_xs="40px 0 0 0"
           padding_tablet="15% 0 0 0"
           padding_md="0% 16px 0 10%"
           padding_lg="0 15px 0 10%"
           gridColumn_tablet="12 / 22"
           position="relative"
+          margin="0 auto"
         >
           <Img
             src="/images/Group-6400.png"
@@ -198,30 +201,47 @@ const GeekPal = (props) => {
             zIndex="1"
             height="fit-content"
             width="100%"
+            overflow="hidden"
+            borderRadius="24px"
+            background="white"
+            position="relative"
           >
             {yml.geekPal.map((item, i) => {
               return (
                 <React.Fragment key={i}>
                   {item.videoId === "" ? (
                     <StyledBackgroundSection
-                      height="280px"
+                      height="427px"
+                      height_tablet="380px"
+                      height_md="380px"
                       image={item.image.childImageSharp.gatsbyImageData}
                       bgSize="contain"
                       alt="geekforce image"
                     />
                   ) : (
-                    <ReactPlayer
-                      id={item.videoId}
-                      thumb={item.image}
-                      margin_tablet="0px"
-                      videoHeight="280px"
-                      bgSize="contain"
-                      style={{
-                        width: "100%",
-                        height: "280px",
-                      }}
-                      margin="-3px 0 0 0"
-                    />
+                    <Div
+                      width="100%"
+                      height="427px"
+                      height_tablet="380px"
+                      height_md="380px"
+                      margin="0"
+                      overflow="hidden"
+                    >
+                      <ReactPlayer
+                        id={item.videoId}
+                        thumb={item.image}
+                        margin_tablet="0px"
+                        videoHeight="427px"
+                        videoHeight_tablet="380px"
+                        videoHeight_md="380px"
+                        bgSize="contain"
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                        }}
+                        margin="0"
+                      />
+                    </Div>
                   )}
                 </React.Fragment>
               );
@@ -305,7 +325,6 @@ export const query = graphql`
             layout
             background
             proportions
-            justify
             video
             icons {
               icon
@@ -322,9 +341,6 @@ export const query = graphql`
               text
               font_size
               style
-              heading_image {
-                src
-              }
             }
             sub_heading {
               text
@@ -333,7 +349,6 @@ export const query = graphql`
             }
             content {
               text
-              style
             }
             bullets {
               item_style

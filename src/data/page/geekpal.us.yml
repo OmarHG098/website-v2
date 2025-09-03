@@ -44,15 +44,15 @@ components:
         title: "7:1 Student–Teacher Ratio"
         color: "#0084FF"
         content: "Individual attention in every class."
-      - icon: "ratio"
+      - icon: "talk"
         title: "Unlimited 1:1 Mentorship"
         color: "#FF0000"
         content: "From day one — and for a lifetime."
-      - icon: "talk"
+      - icon: "timer"
         title: "24/7 AI Coding Assistant (Rigobot)"
         color: "#BE8BFF"
         content: "Instant feedback while you code."
-      - icon: "timer"
+      - icon: "ratio"
         title: "Real Community Support"
         color: "#EB5757"
         content: "Mentors, alumni & peers always ready to help."
@@ -87,9 +87,10 @@ components:
             • Offers live troubleshooting and debugging support
             <br />
             • Expert bug fixing assistance.
-            <br /><br />
-            Shares industry insights, career advice, and learning strategies
+            <br />
+            • Shares industry insights, career advice, and learning strategies
           icon: "check"
+          icon_color: '#FFFFFF'
         - heading: "Rigobot + Learnpack:"
           text: |
             • Provides instant feedback and tutoring while you code
@@ -100,6 +101,8 @@ components:
             <br />
             • Hundreds of hands-on coding exercises and structured practice on Learnpack
           icon: "check"
+          icon_color: '#FFFFFF'
+
   - name: community_support
     position: 3
     layout: two_column_left
@@ -123,11 +126,11 @@ components:
         - heading: "Slack Community (6,000+ members)"
           text: "Get real-time help from mentors, alumni, and peers through our active, theme specific channels — from coding support, to job boards and career advice (and yes, there’s coding humor too!)."
           icon: "check"
-          icon_color: '#25BF6C'
+          icon_color: '#F4F9FF'
         - heading: "4Geeks.com"
           text: "Keep advancing your skills with further training resources, live events, and collaborative projects. Connect with people who’ve been where you are — and know how to help you get where you want to go."
           icon: "check"
-          icon_color: '#25BF6C'
+          icon_color: '#F4F9FF'
 
  
   - name: joao_testimonial
@@ -142,7 +145,18 @@ components:
         "Hear From One of Our Graduates"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
-    content:
+    sub_heading:
       text: "Listen to Joao talk about  his experience during and after our bootcamp and how unlimited access to coding mentorship made a huge difference to his career."
+      font_size: ["28px"]
+    content:
+    bullets:
+      items:
+        - text: |
+            <br />
+            <br />
+            <br />
+            <br />
+          icon: "check"
+          icon_color: '#FFFFFF'
       font_size: ["16px"]
 
