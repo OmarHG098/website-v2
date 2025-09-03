@@ -338,8 +338,8 @@ export const query = graphql`
             proportions
             layout
             image {
-              src
               style
+              src
               shadow
             }
             button {

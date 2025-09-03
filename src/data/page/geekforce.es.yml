@@ -16,170 +16,133 @@ header:
   image_alt: "GeekForce - bootcamp de programacion con apoyo profesional de por vida"
   paragraph: "La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología."
   image_logo: "/images/geekforce.png"
+  bullets:
+    - "86% de nuestros alumnos contratados"
+    - "Soporte laboral post programa"
+    - "Preparación a entrevistas"
+    - "1500 hojas de vida creadas"
 
 geekForce:
-  - videoId: "AoUs8ZgqGMY"
+  - videoId: "FcQw0bNkXOA"
     image: ../../../static/images/staff/geekforce-video-esp.webp
 
-iconogram:
-  heading:
-    text: "Beneficios"
-    style: '{ "textAlign": "center" }'
-  swipable: false
-  icons:
-    - icon: "briefcase-new"
-      content: "86% de nuestros alumnos contratados"
-    - icon: "four_persons"
-      content: "Soporte laboral post programa"
-    - icon: "teacher_teaching"
-      content: "Preparación a entrevistas"
-    - icon: "resume"
-      content: "1500 hojas de vida creadas"
+# Dynamic Components Array
+components:
+  - name: "benefits_iconogram"
+    position: 1
+    layout: "iconogram"
+    heading:
+      text: "Beneficios"
+      style: '{ "textAlign": "center" }'
+    swipable: false
+    icons:
+      - icon: "briefcase-new"
+        content: "86% de nuestros alumnos contratados"
+      - icon: "four_persons"
+        content: "Soporte laboral post programa"
+      - icon: "teacher_teaching"
+        content: "Preparación a entrevistas"
+      - icon: "resume"
+        content: "1500 hojas de vida creadas"
 
-list:
-  - title: "Apoyo Profesional Ilimitado"
-    image: "../../../static/images/Group-6618-2.png"
-    position: "right"
-    sub:
-      - title: "Asesoría y creación de perfil profesional"
-        text: "En 4Geeks te ayudaremos a perfeccionar tu perfil profesional. Contarás con la asesoría personalizada con nuestros expertos para mejorar tu CV, Linkedin, GitHub y Portafolio."
+  - name: "unlimited_support"
+    position: 3
+    layout: "two_column"
+    proportions: [7, 5]
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      src: "../../../static/images/Group-6618-2.png"
+      shadow: true
+    heading:
+      text: "Apoyo Profesional Ilimitado"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "fontWeight": "700", "lineHeight": "36px" }'
+    bullets:
+      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+      items:
+        - heading: "Asesoría y creación de perfil profesional"
+          text: "En 4Geeks te ayudaremos a perfeccionar tu perfil profesional. Contarás con la asesoría personalizada con nuestros expertos para mejorar tu CV, Linkedin, GitHub y Portafolio."
+          icon: "check"
+          icon_color: '#25BF6C'
 
-  - title: "Simulación de Entrevistas"
-    image: "../../../static/images/landing/two-womans-and-laptop.webp"
-    position: "left"
-    text: "Realizaremos simulacros de entrevistas para evaluar sus fortalezas y debilidades para crear un perfil más fuerte antes de las entrevistas reales. Cada vez que tenga una entrevista, practicaremos el uso de diferentes tecnologías. Tenemos nuestro propio grupo de ejercicios autocalificados, por lo que puede practicar hasta que domine las habilidades para obtener el trabajo que desea."
-    
+  - name: "interview_simulation"
+    position: 5
+    layout: "two_column"
+    proportions: [5, 7]
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      src: "../../../static/images/landing/two-womans-and-laptop.webp"
+      shadow: true
+    heading:
+      text: "Simulación de Entrevistas"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "fontWeight": "700", "lineHeight": "36px" }'
+    content:
+      text: "Realizaremos simulacros de entrevistas para evaluar sus fortalezas y debilidades para crear un perfil más fuerte antes de las entrevistas reales. Cada vez que tenga una entrevista, practicaremos el uso de diferentes tecnologías. Tenemos nuestro propio grupo de ejercicios autocalificados, por lo que puede practicar hasta que domine las habilidades para obtener el trabajo que desea."
+      style: '{ "font-size":"16px", "margin":"15px 0" }'
+    button:
+      text: ""
+      color: "black"
+      path: "/"
 
-  - title: "Mentorías de por vida"
-    image: "../../../static/images/Group-6617.webp"
-    position: "right"
-    text: "Iniciar una carrera en tecnología implica evaluar su situación actual y tomar decisiones informadas sobre el futuro. Requiere evaluación de usted mismo, su contexto y ACCIÓN. Puede hacer esto solo; o puede confiar en la experiencia de un mentor que puede brindarle
-      perspectiva, información y acceso a los recursos adecuados. En 4Geeks ajustamos las sesiones según tu calendario, también le damos la oportunidad de tenerlos en línea o en persona. En cualquier caso, te aseguramos que tienes la oportunidad de una mentoría constante siempre que la necesites." 
+  - name: "lifetime_mentoring"
+    position: 7
+    layout: "two_column"
+    proportions: [7, 5]
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      src: "../../../static/images/Group-6617.webp"
+      shadow: true
+    heading:
+      text: "Mentorías de por vida"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "fontWeight": "700", "lineHeight": "36px" }'
+    content:
+      text: "Iniciar una carrera en tecnología implica evaluar su situación actual y tomar decisiones informadas sobre el futuro. Requiere evaluación de usted mismo, su contexto y ACCIÓN. Puede hacer esto solo; o puede confiar en la experiencia de un mentor que puede brindarle perspectiva, información y acceso a los recursos adecuados. En 4Geeks ajustamos las sesiones según tu calendario, también le damos la oportunidad de tenerlos en línea o en persona. En cualquier caso, te aseguramos que tienes la oportunidad de una mentoría constante siempre que la necesites."
+      style: '{ "font-size":"16px", "margin":"15px 0" }'
 
-# Two Columns - Rigo
-two_columns:
-  proportions: [5, 7]
-  background: "#FFFFFF"
-  justify: "center" #start,end,center
-  image:
-    style: '{"backgroundSize": "cover", "background-position": "center", "border-radius": "4px"}'
-    src: "/images/landing/ai-mentor-esp.jpg"
-    shadow: true
-  video: "cOFm_deKj6Q"
-  heading: 
-    text: "¡Nuestras herramientas de IA mejoran y agilizan tu aprendizaje!"
-    font_size: ["31px", "31px", "31px", "29px", "29px"]
-    style: '{ "lineHeight": "30px" }'
-    heading_image:
-      src: "/images/rigobot-logo.png"
-  sub_heading:
-    text: "Luego de años de investigación y experiencia, hemos perfeccionado nuestros métodos de enseñanza para optimizar tu curva de aprendizaje y tu tasa de éxito. A través de nuestra plataforma de aprendizaje 4Geeks.com, te brindamos las estrategias y herramientas para garantizar tu progreso constante y eficiente."
-    font_size: ["16px","16px","16px","16px","16px"]
-    style: '{ "font-weight":"600"}'
-  content:
-    style: '{ "font-size":"16px", "margin":"0", "font-weight":"600" }'
-    text: "¡Experimenta la diferencia que marcan nuestras nuevas herramientas de Inteligencia Artificial! Nuestro enfoque ha demostrado mantenerte comprometido, motivado y encaminado a lograr tus objetivos de programación."
-  bullets:
-    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
-    items:
-      - heading: "Rigobot, nuestra IA personalizada, ofrece de forma ilimitada:"
-        text: |
-          • Tutoría instantánea mientras programas.
-          <br />
-          • Evaluaciones de habilidades para seguir tu progreso.
-          <br />
-          • Asistencia para corregir errores.
-          <br /><br />
-          ¡Es el complemento perfecto para nuestro programa de mentoría humana!
-        icon: "check" #string with icon for example ['check', 'cicle', etc]
-        icon_color: '#25BF6C'
-      - heading: "LearnPack, nuestro software de aprendizaje fácil de usar, proporciona:"
-        text: |
-          • Cientos de ejercicios interactivos para ayudarte a dominar y retener habilidades.
-          <br />
-          • Pruebas automatizadas para ayudarte a seguir tu progreso.
-          <br />
-          • Y mucho más…
-        icon: "check" #string with icon for example ['check', 'cicle', etc]
-        icon_color: '#25BF6C'
-
-# benefits:
-#   - p:
-#     heading: "Personal"
-#     items:
-#       - title: Clases exclusivas
-#         sub_title: (máx 8 students)
-#       - title: 1:4 teacher-student-ratio
-#         sub_title: (one mentor every 4 students)
-#       - title: Mentoría 1-1
-#         sub_title: (sesiones ilimitadas)
-#       - title: Soporte profesional customizado
-#         sub_title: (basado en la oportunidad laboral)
-#   - a:
-#     heading: "Donde sea y cuánto sea necesario"
-#     items:
-#       - title: Ajustado a tu calendario
-#         sub_title: (Sesiones según agenda en el calendario)
-#       - title: Oportunidad de mentorías constantes
-#         sub_title: (Siempre habilitado en persona o remoto)
-#       - title: Online o en persona
-#         sub_title: (Campus en muchas ciudades y en muchos husos horarios)
-#       - title: Apoyo profesional customizado
-#         sub_title: (Basado en la oportunidad laboral)
-#   - l:
-#     heading: "Limitless"
-#     items:
-#       - title: Toda la mentoría que necesites
-#         sub_title: (sesiones habilitadas para que puedas agendar con nuestros mentores)
-#       - title: Mentoría ilimitada después de graduarte 
-#         sub_title: (incluso después que consigas trabajo)
-#       - title: Mentoría de por vida
-#         sub_title: (Sigue trabajando con nosotros y recibiendo mentoría)
-#       - title: Apoyo profesional customizado
-#         sub_title: (Basado en la oportunidad laboral)
-
-# image1: "../../../static/images/geeksinfo/geeksinfo.png"
-# image2: "../../../static/images/bg/community.png"
+  - name: "ai_features"
+    position: 9
+    layout: "two_column"
+    proportions: [5, 7]
+    image:
+      style: '{"backgroundSize": "cover", "background-position": "center", "border-radius": "4px"}'
+      src: "/images/landing/ai-mentor-esp.jpg"
+      shadow: true
+    video: "cOFm_deKj6Q"
+    heading: 
+      text: "¡Nuestras herramientas de IA mejoran y agilizan tu aprendizaje!"
+      font_size: ["31px", "31px", "31px", "29px", "29px"]
+      style: '{ "lineHeight": "30px" }'
+    sub_heading:
+      text: "Luego de años de investigación y experiencia, hemos perfeccionado nuestros métodos de enseñanza para optimizar tu curva de aprendizaje y tu tasa de éxito. A través de nuestra plataforma de aprendizaje 4Geeks.com, te brindamos las estrategias y herramientas para garantizar tu progreso constante y eficiente."
+      font_size: ["16px","16px","16px","16px","16px"]
+      style: '{ "font-weight":"600"}'
+    content:
+      style: '{ "font-size":"16px", "margin":"0", "font-weight":"600" }'
+      text: "¡Experimenta la diferencia que marcan nuestras nuevas herramientas de Inteligencia Artificial! Nuestro enfoque ha demostrado mantenerte comprometido, motivado y encaminado a lograr tus objetivos de programación."
+    bullets:
+      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+      items:
+        - heading: "Rigobot, nuestra IA personalizada, ofrece de forma ilimitada:"
+          text: |
+            • Tutoría instantánea mientras programas.
+            <br />
+            • Evaluaciones de habilidades para seguir tu progreso.
+            <br />
+            • Asistencia para corregir errores.
+            <br /><br />
+            ¡Es el complemento perfecto para nuestro programa de mentoría humana!
+          icon: "check"
+          icon_color: '#25BF6C'
+        - heading: "LearnPack, nuestro software de aprendizaje fácil de usar, proporciona:"
+          text: |
+            • Cientos de ejercicios interactivos para ayudarte a dominar y retener habilidades.
+            <br />
+            • Pruebas automatizadas para ayudarte a seguir tu progreso.
+            <br />
+            • Y mucho más…
+          icon: "check"
+          icon_color: '#25BF6C'
 
 
-######### OLD ONE
-# tagline: ENCUENTRA UN GRAN EMPLEO
-# sub_heading: La búsqueda de empleo nunca volverá a ser un problema
-# image: "../../../static/images/bg/companies-bg.jpg"
-# image_logo: "/images/geekforce.png"
-# benefits:
-#   - p:
-#     heading: "Obtén entrevistas"
-#     items:
-#       - title: Preparación de Currículum
-#         sub_title: (máx 8 students)
-#       - title: Preparación de LinkedIn
-#         sub_title: (one mentor every 4 students)
-#       - title: Preparación de Github
-#         sub_title: (sesiones ilimitadas)
-#       - title: Preparación de Portafolio
-#         sub_title: (basado en la oportunidad laboral)
-#       - title: Proyecto Final
-#         sub_title: (basado en la oportunidad laboral)
-#   - a:
-#     heading: "Obtén ofertas de trabajo"
-#     items:
-#       - title: Obtén ofertas de trabajo de nuestros socios
-#         sub_title: Referencias provenientes de nuestra propia red de cientos de socios
-#       - title: Entrenamientos de entrevistas simuladas
-#         sub_title: Varias entrevistas simuladas para evaluar sus debilidades y crear un perfil más fuerte antes de las entrevistas reales.
-#       - title: Coaching objetivo por entrevista
-#         sub_title: Coaching individual intensivo. Cada vez que tengas una entrevista importante, practicaremos el uso y el trabajo con diferentes tecnologías.
-#       - title: Miles de ejercicios personalizados
-#         sub_title: Nuestro propio grupo de miles de ejercicios autocalificados te permitirá practicar hasta que puedas dominar esas habilidades.
-#   - l:
-#     heading: "Conserva tu trabajo para siempre"
-#     items:
-#       - title: El coaching nunca termina
-#         sub_title: Una vez que consigues el trabajo, recibe ayuda para seguir haciéndolo.
-#       - title: Cambia tu trabajo
-#         sub_title: Nuestro sistema de referencias nunca termina; siempre puedes volver a buscar mejores trabajos.
-#       - title: Sigue creciendo
-#         sub_title: Invitaciones privadas a ferias profesionales, eventos y sesiones de networking.
-#       - title: Conviértete en mentor
-#         sub_title: Recibe dinero para ayudar a otros estudiantes; conviértete en parte de la red de mentores para siempre.
