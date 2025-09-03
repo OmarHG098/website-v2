@@ -306,10 +306,12 @@ export const query = graphql`
             background
             proportions
             justify
+            video
             icons {
               icon
               title
               color
+              content
             }
             image {
               style
