@@ -7,6 +7,7 @@ import { Button, Colors, Img, StyledBackgroundSection } from "../Styling";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { navigate } from "gatsby";
 import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
+import BackgroundWrapper from "../BackgroundWrapper";
 
 const Side = ({
   video,
@@ -434,10 +435,12 @@ const TwoColumn = ({
   session,
   alignment,
   background,
+  bg_full,
 }) => {
   const [left_size, right_size] = proportions ? proportions : [];
   return (
-    <Div
+    <BackgroundWrapper
+      bg_full={bg_full}
       flexDirection="column"
       gap={left?.gap || right?.gap || "0px"}
       gap_tablet={left?.gap_tablet || right?.gap_tablet || "20px"}
@@ -494,7 +497,7 @@ const TwoColumn = ({
       >
         <Side session={session} {...right} side="right" />
       </Div>
-    </Div>
+    </BackgroundWrapper>
   );
 };
 TwoColumn.defaultProps = {

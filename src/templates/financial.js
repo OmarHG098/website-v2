@@ -115,6 +115,7 @@ const Financial = (props) => {
       <PaymentPlans lang={pageContext.lang} />
 
       <TwoColumn
+        bg_full={true}
         left={{ image: ymlTwoColumn[0].image }}
         right={{
           heading: ymlTwoColumn[0].heading,
