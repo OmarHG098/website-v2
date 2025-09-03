@@ -126,7 +126,7 @@ const GeekPal = (props) => {
             dangerouslySetInnerHTML={{ __html: yml.header.paragraph }}
           />
 
-          {Array.isArray(yml.header.bullets) &&
+          {/*{Array.isArray(yml.header.bullets) &&
             yml.header.bullets.map((bullet, index) => (
               <Paragraph
                 zIndex="2"
@@ -167,7 +167,7 @@ const GeekPal = (props) => {
               bottom: "21px",
               zIndex: "-1",
             }}
-          />
+          />*/}
         </Div>
         <Div
           height="auto"
