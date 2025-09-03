@@ -368,8 +368,7 @@ const FinancialOptionsDesktop = ({
             {info.plan_details}
           </H3>
           <Div display="block" margin="0 0 12px 0">
-            {jobGuarantee &&
-            jobGuaranteeInfo?.monthly_label ? (
+            {jobGuarantee && jobGuaranteeInfo?.monthly_label ? (
               <H2
                 fontSize="36px"
                 lineHeight="42px"
@@ -412,8 +411,7 @@ const FinancialOptionsDesktop = ({
               margin="0 0 6px 0"
               textAlign="left"
             >
-              {jobGuarantee &&
-              jobGuaranteeInfo?.monthly_label
+              {jobGuarantee && jobGuaranteeInfo?.monthly_label
                 ? ""
                 : getNoJobGuaranteeConfig(currentLocation, info)?.monthly_label
                 ? ""
@@ -447,10 +445,10 @@ const FinancialOptionsDesktop = ({
                 <Div alignItems="center">
                   <label
                     style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      cursor: 'pointer',
-                      userSelect: 'none'
+                      display: "flex",
+                      alignItems: "center",
+                      cursor: "pointer",
+                      userSelect: "none",
                     }}
                     onClick={() =>
                       setJobGuarantee && setJobGuarantee(!jobGuarantee)
@@ -739,8 +737,7 @@ const FinancialOptionsCard = ({
             margin="0 0 16px 0"
             display="block"
           >
-            {jobGuarantee &&
-            jobGuaranteeInfo?.monthly_label ? (
+            {jobGuarantee && jobGuaranteeInfo?.monthly_label ? (
               <H2
                 fontSize="32px"
                 fontWeight="700"
@@ -791,10 +788,10 @@ const FinancialOptionsCard = ({
                 <Div alignItems="center" justifyContent="center">
                   <label
                     style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      cursor: 'pointer',
-                      userSelect: 'none'
+                      display: "flex",
+                      alignItems: "center",
+                      cursor: "pointer",
+                      userSelect: "none",
                     }}
                     onClick={() =>
                       setJobGuarantee && setJobGuarantee(!jobGuarantee)
@@ -1267,15 +1264,8 @@ const PricesAndPayment = (props) => {
         >
           {info?.plans_title}
         </H2>
-        <Grid
-          gridGap="8px"
-          margin_tablet="20px 0 0 0"
-        >
-          <Div
-            gridColumn="1"
-            gridColumn_tablet="1/ 15"
-            alignItems="center"
-          >
+        <Grid gridGap="8px" margin_tablet="20px 0 0 0">
+          <Div gridColumn="1" gridColumn_tablet="1/ 15" alignItems="center">
             <H3
               fontSize="16px"
               fontSize_md="24px"

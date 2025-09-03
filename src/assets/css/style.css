@@ -106,7 +106,7 @@ strong {
   color: #0097ce;
   text-decoration: none;
   font-weight: 500;
-  font-family: "Lato",sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .link:hover {
@@ -122,21 +122,21 @@ strong {
   text-decoration: none;
   position: relative;
   font-weight: 500;
-  font-family: Lato,sans-serif;
+  font-family: Lato, sans-serif;
   display: inline-block;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 9px 8px 0px 0px rgba(0,0,0,1);
+  box-shadow: 9px 8px 0px 0px rgba(0, 0, 0, 1);
 }
 .cta_button:hover {
   background-color: #007ba3;
   border-color: #007ba3;
   transform: translate(2px, 2px);
-  box-shadow: 7px 6px 0px 0px rgba(0,0,0,1);
+  box-shadow: 7px 6px 0px 0px rgba(0, 0, 0, 1);
 }
 .cta_button:active {
   transform: translate(4px, 4px);
-  box-shadow: 5px 4px 0px 0px rgba(0,0,0,1);
+  box-shadow: 5px 4px 0px 0px rgba(0, 0, 0, 1);
 }
 
 .nav__item--active a.nav-item.nav-link.side {

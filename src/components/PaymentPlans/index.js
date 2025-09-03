@@ -111,9 +111,16 @@ const PaymentPlans = (props) => {
                   {item.bullets?.items && item.bullets.items.length > 0 && (
                     <Div flexDirection="column" gap="8px">
                       {item.bullets.items.map((bullet, index) => {
-                        const hasSubItems = bullet.sub_items && bullet.sub_items.length > 0;
+                        const hasSubItems =
+                          bullet.sub_items && bullet.sub_items.length > 0;
                         return (
-                          <Div as={!hasSubItems ? "li" : "div"} margin={!hasSubItems ? "0 0 0 16px" : "0"} key={index} flexDirection="column" gap="4px">
+                          <Div
+                            as={!hasSubItems ? "li" : "div"}
+                            margin={!hasSubItems ? "0 0 0 16px" : "0"}
+                            key={index}
+                            flexDirection="column"
+                            gap="4px"
+                          >
                             {hasSubItems ? (
                               <>
                                 <Paragraph
@@ -125,21 +132,34 @@ const PaymentPlans = (props) => {
                                   {bullet.text}
                                 </Paragraph>
                                 <Div flexDirection="column" gap="4px">
-                                  {bullet.sub_items.map((subBullet, subIndex) => (
-                                    <Paragraph
-                                      as="li"
-                                      key={subIndex}
-                                      margin="0 0 0 16px"
-                                      textAlign="left"
-                                      style={{ display: "flex", alignItems: "flex-start" }}
-                                    >
-                                      <span style={{ marginRight: "8px" }}>•</span>
-                                      <span dangerouslySetInnerHTML={{ __html: subBullet.text }} />
-                                    </Paragraph>
-                                  ))}
+                                  {bullet.sub_items.map(
+                                    (subBullet, subIndex) => (
+                                      <Paragraph
+                                        as="li"
+                                        key={subIndex}
+                                        margin="0 0 0 16px"
+                                        textAlign="left"
+                                        style={{
+                                          display: "flex",
+                                          alignItems: "flex-start",
+                                        }}
+                                      >
+                                        <span style={{ marginRight: "8px" }}>
+                                          •
+                                        </span>
+                                        <span
+                                          dangerouslySetInnerHTML={{
+                                            __html: subBullet.text,
+                                          }}
+                                        />
+                                      </Paragraph>
+                                    )
+                                  )}
                                   {bullet.cta && (
-                                    <Div 
-                                      dangerouslySetInnerHTML={{ __html: bullet.cta }}
+                                    <Div
+                                      dangerouslySetInnerHTML={{
+                                        __html: bullet.cta,
+                                      }}
                                       margin="4px 0 8px 0"
                                     />
                                   )}
@@ -150,21 +170,26 @@ const PaymentPlans = (props) => {
                                 <Paragraph
                                   textAlign="left"
                                   margin="0"
-                                  style={{ display: "flex", alignItems: "flex-start" }}
+                                  style={{
+                                    display: "flex",
+                                    alignItems: "flex-start",
+                                  }}
                                 >
                                   <span style={{ marginRight: "8px" }}>•</span>
                                   {bullet.text}
                                 </Paragraph>
                                 {bullet.cta && (
-                                  <Div 
-                                    dangerouslySetInnerHTML={{ __html: bullet.cta }} 
+                                  <Div
+                                    dangerouslySetInnerHTML={{
+                                      __html: bullet.cta,
+                                    }}
                                     margin="4px 0 0 16px"
                                   />
                                 )}
                               </>
                             )}
                           </Div>
-                        )
+                        );
                       })}
                     </Div>
                   )}
