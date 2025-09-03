@@ -10,19 +10,16 @@ meta_info:
 seo_title: "Career Support"
 header:
   title: |
-    <strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
+    Welcome to <strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
     <strong style = 'color:rgba(255, 183, 24, 1); font-family: Archivo-Black;'>FORCE</strong> <br>
-    <strong style='font-family: Archivo;'>the collective process of Career Support at the Academy</strong>
+    <strong style='font-family: Archivo;'>- Career Development for the AI Era</strong>
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: "GeekForce - Coding bootcamp with unlimited carreer support."
   paragraph: |
-    The "force" stands For Career Empowerment and it is a lifetime membership. It provides you job placement assistance so you get ready to get a job in tech.
+    Get unlimited 1:1 career support designed for your unique profile and goals—for life. From resume and portfolio building to interviews and AI-driven hiring platforms, we’ll give you the personalized mentorship you need to land your first job and keep thriving in today’s tech.
   image_logo: "/images/geekforce.png"
   bullets:
-    - "86% of our students hired"
-    - "Post program labor support"
-    - "Preparing for interviews"
-    - "+1500 life sheets created"
+    - " "
   
 # Introduction Video here
 geekForce:
@@ -50,11 +47,11 @@ components:
 
   - name: "unlimited_support"
     position: 3
-    layout: "two_column"
+    layout: "two_column_left"
     proportions: [7, 5]
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "../../../static/images/Group-6618-2.png"
+      src: "/static/images/Group-6618-2.png"
       shadow: true
     heading:
       text: "Unlimited Professional Support"
@@ -70,11 +67,11 @@ components:
 
   - name: "interview_simulation"
     position: 5
-    layout: "two_column"
+    layout: "two_column_right"
     proportions: [5, 7]
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "../../../static/images/landing/two-womans-and-laptop.webp"
+      src: "/images/landing/two-womans-and-laptop.webp"
       shadow: true
     heading:
       text: "Interview Simulation"
@@ -92,11 +89,11 @@ components:
 
   - name: "lifetime_mentoring"
     position: 7
-    layout: "two_column"
+    layout: "two_column_left"
     proportions: [7, 5]
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "../../../static/images/Group-6617.webp"
+      src: "/images/Group-6617.webp"
       shadow: true
     heading:
       text: "Lifetime Mentoring"
@@ -113,7 +110,7 @@ components:
 
   - name: "ai_features"
     position: 9
-    layout: "two_column"
+    layout: "two_column_right"
     proportions: [5, 7]
     image:
       style: '{"backgroundSize": "contain", "background-position": "center", "border-radius": "4px"}'

@@ -47,11 +47,11 @@ components:
 
   - name: "unlimited_support"
     position: 3
-    layout: "two_column"
+    layout: "two_column_left"
     proportions: [7, 5]
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "../../../static/images/Group-6618-2.png"
+      src: "/images/Group-6618-2.png"
       shadow: true
     heading:
       text: "Apoyo Profesional Ilimitado"
@@ -67,11 +67,11 @@ components:
 
   - name: "interview_simulation"
     position: 5
-    layout: "two_column"
+    layout: "two_column_right"
     proportions: [5, 7]
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "../../../static/images/landing/two-womans-and-laptop.webp"
+      src: "/images/landing/two-womans-and-laptop.webp"
       shadow: true
     heading:
       text: "Simulación de Entrevistas"
@@ -87,11 +87,11 @@ components:
 
   - name: "lifetime_mentoring"
     position: 7
-    layout: "two_column"
+    layout: "two_column_left"
     proportions: [7, 5]
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "../../../static/images/Group-6617.webp"
+      src: "/images/Group-6617.webp"
       shadow: true
     heading:
       text: "Mentorías de por vida"
@@ -103,7 +103,7 @@ components:
 
   - name: "ai_features"
     position: 9
-    layout: "two_column"
+    layout: "two_column_right"
     proportions: [5, 7]
     image:
       style: '{"backgroundSize": "cover", "background-position": "center", "border-radius": "4px"}'
