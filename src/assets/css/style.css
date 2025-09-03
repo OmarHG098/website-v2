@@ -112,31 +112,15 @@ strong {
 .link:hover {
   text-decoration: underline;
 }
-.cta_button {
-  color: white;
-  background-color: #0097ce;
-  border: 2px solid #0097ce;
-  padding: 8px 16px;
-  margin: 0 0 10px;
-  border-radius: 4px;
-  text-decoration: none;
-  position: relative;
-  font-weight: 500;
-  font-family: Lato, sans-serif;
-  display: inline-block;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 9px 8px 0px 0px rgba(0, 0, 0, 1);
+.cta_card {
+  transition: all .3s;
 }
-.cta_button:hover {
-  background-color: #007ba3;
-  border-color: #007ba3;
-  transform: translate(2px, 2px);
-  box-shadow: 7px 6px 0px 0px rgba(0, 0, 0, 1);
+.cta_card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px #0000001a;
 }
-.cta_button:active {
-  transform: translate(4px, 4px);
-  box-shadow: 5px 4px 0px 0px rgba(0, 0, 0, 1);
+.scale_hover:hover {
+  transform: scale(1.02);
 }
 
 .nav__item--active a.nav-item.nav-link.side {

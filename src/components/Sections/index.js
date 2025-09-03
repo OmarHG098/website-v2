@@ -172,9 +172,10 @@ export const Container = styled(Fragment)`
         : null};
     align-self: ${(props) => props.alignSelf_tablet};
     order: ${(props) => props.order_tablet};
-    gap: ${(props) => (props) => props.gap_tablet};
+    gap: ${(props) => props.gap_tablet};
     column-count: ${(props) => props.columnCount_tablet};
     place-self: ${(props) => props.placeSelf_tablet};
+    grid-template-columns: ${(props) => props.gridTemplateColumns_tablet};
     background: ${(props) => props.background_tablet};
     display: ${(props) => props.display_tablet};
     position: ${(props) => props.position_tablet};
@@ -513,6 +514,7 @@ export const Div = styled.div`
     grid-column: ${(props) => props.gridColumn_tablet};
     grid-row: ${(props) => props.gridRow_tablet};
     justify-self: ${(props) => props.justifySelf_tablet};
+    grid-template-columns: ${(props) => props.gridTemplateColumns_tablet};
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_tablet]};
     z-index: ${(props) => props.zIndex_tablet};
