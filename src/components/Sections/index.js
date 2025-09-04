@@ -859,7 +859,9 @@ export const Header = ({
             fontWeight={fontWeight_paragraph}
             maxWidth="64rem"
             color={Colors.black}
-            {...(paragraph_html ? { dangerouslySetInnerHTML: { __html: paragraph_html } } : {})}
+            {...(paragraph_html
+              ? { dangerouslySetInnerHTML: { __html: paragraph_html } }
+              : {})}
           >
             {!paragraph_html && paragraph}
           </SubTitle>
