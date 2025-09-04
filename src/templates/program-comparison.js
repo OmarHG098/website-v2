@@ -55,7 +55,6 @@ const View = (props) => {
         }
       />
 
-
       {/* Comparison Table */}
       {yml.comparison_table && (
         <DataTable

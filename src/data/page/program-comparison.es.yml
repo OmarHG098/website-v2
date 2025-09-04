@@ -2,7 +2,7 @@ meta_info:
   slug: comparar-programas
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   title: "Compara nuestros programas"
-  description: "Compara los programas de 4Geeks Academy y encuentra tu mejor camino hacia la tecnología. Explora las diferencias clave entre nuestros bootcamps para tomar la decisión correcta para tu carrera."
+  description: "Compara los programas de 4Geeks Academy y encuentra tu mejor camino hacia la tecnología. Explora las diferencias clave entre nuestros bootcamps."
   image: null
   keywords: "comparación programas 4Geeks Academy, comparación bootcamp, carreras tecnológicas"
   redirects: []
