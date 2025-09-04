@@ -745,6 +745,7 @@ export const Header = ({
   seo_title,
   title,
   paragraph,
+  paragraph_html,
   paragraphMargin,
   paragraphMargin_Tablet,
   height,
@@ -858,8 +859,10 @@ export const Header = ({
             fontWeight={fontWeight_paragraph}
             maxWidth="64rem"
             color={Colors.black}
-            dangerouslySetInnerHTML={{ __html: paragraph }}
-          />
+            {...(paragraph_html ? { dangerouslySetInnerHTML: { __html: paragraph_html } } : {})}
+          >
+            {!paragraph_html && paragraph}
+          </SubTitle>
           {children}
         </Div>
         {svg_image ? (
