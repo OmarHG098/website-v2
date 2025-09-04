@@ -861,10 +861,8 @@ export const Header = ({
             color={Colors.black}
             {...(paragraph_html
               ? { dangerouslySetInnerHTML: { __html: paragraph_html } }
-              : {})}
-          >
-            {!paragraph_html && paragraph}
-          </SubTitle>
+              : { children: paragraph })}
+          />
           {children}
         </Div>
         {svg_image ? (
