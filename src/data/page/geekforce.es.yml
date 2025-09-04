@@ -28,22 +28,6 @@ geekForce:
 
 # Dynamic Components Array
 components:
-  - name: "benefits_iconogram"
-    position: 1
-    layout: "iconogram"
-    heading:
-      text: "Beneficios"
-      style: '{ "textAlign": "center" }'
-    swipable: false
-    icons:
-      - icon: "briefcase-new"
-        content: "86% de nuestros alumnos contratados"
-      - icon: "four_persons"
-        content: "Soporte laboral post programa"
-      - icon: "teacher_teaching"
-        content: "Preparación a entrevistas"
-      - icon: "resume"
-        content: "1500 hojas de vida creadas"
 
   - name: "unlimited_support"
     position: 3
@@ -51,8 +35,8 @@ components:
     proportions: [7, 5]
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "/images/Group-6618-2.png"
-      shadow: true
+      src: "/images/landing/blonde-girl-laptop.png"
+      shadow: false
     heading:
       text: "Apoyo Profesional Ilimitado"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -72,7 +56,7 @@ components:
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
       src: "/images/landing/two-womans-and-laptop.webp"
-      shadow: true
+      shadow: false
     heading:
       text: "Simulación de Entrevistas"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -92,7 +76,7 @@ components:
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
       src: "/images/Group-6617.webp"
-      shadow: true
+      shadow: false
     heading:
       text: "Mentorías de por vida"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -108,7 +92,7 @@ components:
     image:
       style: '{"backgroundSize": "cover", "background-position": "center", "border-radius": "4px"}'
       src: "/images/landing/ai-mentor-esp.jpg"
-      shadow: true
+      shadow: false
     video: "cOFm_deKj6Q"
     heading: 
       text: "¡Nuestras herramientas de IA mejoran y agilizan tu aprendizaje!"

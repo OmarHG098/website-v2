@@ -315,6 +315,7 @@ export const query = graphql`
               }
             }
           }
+            
           components {
             name
             position
@@ -325,6 +326,8 @@ export const query = graphql`
             icons {
               icon
               content
+              color
+              title
             }
             image {
               style
