@@ -315,7 +315,25 @@ export const query = graphql`
               }
             }
           }
-            
+
+          who_is_hiring {
+            position
+            heading
+            sub_heading
+            featured {
+              name
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 150
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
+            }
+          }
+
           components {
             name
             position

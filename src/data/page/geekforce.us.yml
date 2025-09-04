@@ -24,8 +24,24 @@ header:
 # Introduction Video here
 geekForce:
   - videoId: "FcQw0bNkXOA"
-    image: ../../../static/images/staff/hernan-new.webp
+    image: ../../../static/images/landing/geekforce-thumbnail.webp
 
+who_is_hiring:
+  position: 13
+  heading: "WHO’S HIRING OUR GRADUATES?"
+  sub_heading: |
+    Top companies hire 4Geeks graduates, with 84% landing jobs within 6 months of graduation thanks to their skills and our personalized career support. Our grads don’t just get hired—they launch successful careers and consistently earn recognition for their technical expertise and professionalism:
+    <br/>
+    <br/>
+    "I’m continually impressed by the depth of knowledge possessed by 4Geeks students. One of my hires ended up becoming a team leader." - CodeNinjas.
+  
+  featured: 
+    - name: "Facebook"
+      image: "../../../static/images/partner/meta-logo.png"
+    - name: "Microsoft"
+      image: "../../../static/images/partner/microsoft.png"
+    - name: "Apple"
+      image: "../../../static/images/partner/apple.png"
 
 # Dynamic Components Array
 components:
@@ -62,36 +78,66 @@ components:
           icon: "check"
           icon_color: '#25BF6C'
 
-  - name: "interview_simulation"
-    position: 5
-    layout: "two_column_right"
-    proportions: [5, 7]
-    image:
-      style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "/images/landing/two-womans-and-laptop.webp"
-      shadow: false
-    heading:
-      text: "Interview Simulation"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
-      style: '{ "fontWeight": "700", "lineHeight": "36px" }'
-    content:
-      text: |
-        We will hold mock interviews to assess your strengths and weaknesses to create a stronger profile before the actual interviews. Every time you have an interview, we will practice using different technologies.
-        We have our very own pool of auto-graded exercises, so you can practice until you master the skills to get the job you want.
-      style: '{ "font-size":"16px", "margin":"15px 0" }'
-    button:
-      text: ""
-      color: "black"
-      path: "/"
-
-  - name: "lifetime_mentoring"
+  - name: "career_development"
     position: 7
-    layout: "two_column_left"
+    layout: "two_column_right"
     proportions: [7, 5]
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
       src: "/images/Group-6617.webp"
       shadow: false
+    heading: 
+      text: "Get Hired with Our 3-Step Career Development Process"
+      font_size: ["33px", "33px", "33px", "33px", "33px"]
+      style: '{ "lineHeight": "30px" }'
+    sub_heading:
+      text: "Once you’ve mastered the technical skills, our structured process helps you build a lasting career in tech — taking you from learning to landing the job."
+      font_size: ["16px","16px","16px","16px","16px"]
+      style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300" }'
+    content:
+      style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"500" }'
+      text: "And remember: your access to career support doesn’t end when you land your first role—it’s for life."
+    bullets:
+      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+      items:
+        - heading: "1. Profile Optimization"
+          text: |
+            • Polish LinkedIn, GitHub, and portfolio to attract recruiters and pass AI-based filters.
+            <br />
+            • Build a resume that clears applicant tracking systems (ATS) and highlights your strengths.
+            <br />
+            • Showcase your skills with a recruiter-ready portfolio.
+            <br />
+          icon: "check"
+          icon_color: '#FFFFFF'
+        - heading: "2. Interview Preparation"
+          text: |
+            • Gain confidence with mock technical and behavioral interviews.
+            <br />
+            • Practice coding and problem-solving with auto-graded exercises.
+            <br />
+            • Develop tailored strategies for upcoming interviews..
+          icon: "check"
+          icon_color: '#FFFFFF'
+        - heading: "3. Strategic Job Search"
+          text: |
+            • Create a personalized job search plan aligned with your goals.
+            <br />
+            • Navigate AI-driven hiring platforms, from resume scanners to automated interviews.
+            <br />
+            • Connect with our extensive network of global hiring partners.
+          icon: "check"
+          icon_color: '#FFFFFF'
+
+  - name: "lifetime_mentoring"
+    position: 9
+    layout: "two_column_left"
+    proportions: [6, 6]
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center", "border-radius": "4px"}'
+      src: "/images/landing/ai-mentor.jpg"
+      shadow: false
+    video: "6m1Jyya7eCc"
     heading:
       text: "Accelerate Your Results with Hyperpersonalized Career Support"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -107,49 +153,7 @@ components:
         •  Get <strong style="text-decoration: none; color: #000000; font-weight: 700;">expert coaching from our mentors</strong> who tailor advice to your unique profile and goals.</strong><br /><br />  
       style: '{ "font-size":"16px", "margin":"15px 0" }'
 
-  - name: "ai_features"
-    position: 9
-    layout: "two_column_right"
-    proportions: [5, 7]
-    image:
-      style: '{"backgroundSize": "contain", "background-position": "center", "border-radius": "4px"}'
-      src: "/images/landing/ai-mentor.jpg"
-      shadow: false
-    video: "6m1Jyya7eCc"
-    heading: 
-      text: "Accelerate Your Results with Hyperpersonalized Career Support"
-      font_size: ["33px", "33px", "33px", "33px", "33px"]
-      style: '{ "lineHeight": "30px" }'
-    sub_heading:
-      text: "Combine unlimited 1:1 human mentorship with AI-powered tools to launch your career faster and smarter:"
-      font_size: ["16px","16px","16px","16px","16px"]
-      style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300" }'
-    content:
-      style: '{ "font-size":"16px", "margin":"15px 0" }'
-      text: "Experience the difference our AI-powered features make. Our tried-and-tested approach keeps you engaged, motivated, and on the fast track to achieving your coding goals!"
-    bullets:
-      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
-      items:
-        - heading: "Rigobot, our custom AI:"
-          text: |
-            • Instant tutoring as you code.
-            <br />
-            • Skill evaluations to track your progress.
-            <br />
-            • Expert bug fixing assistance.
-            <br /><br />
-            It perfectly complements our human mentorship program!
-          icon: "check"
-          icon_color: '#25BF6C'
-        - heading: "Learnpack, our interactive learning software, provides:"
-          text: |
-            • There are hundreds of interactive exercises to help you master and retain skills.
-            <br />
-            • Automated tests to help track your progress.
-            <br />
-            • Structured practice.
-          icon: "check"
-          icon_color: '#25BF6C'
+
 
   - name: how-it-works
     position: 11
@@ -157,7 +161,7 @@ components:
     layout: iconogram
     swipable: true
     heading:
-      text: "Do our Bootcamps Deliver Results You Can Count On?"
+      text: "Does Our Career Support Deliver Results You Can Count On?"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
       style: '{ "color": "white" }'
     sub_heading:

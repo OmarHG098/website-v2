@@ -831,13 +831,16 @@ export const landingSections = {
   ),
   who_is_hiring: ({ session, data, pageContext, yml, location, index }) => {
     let dataYml =
-      data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node?.who_is_hiring !== null
+      (data.allLandingYaml && data.allLandingYaml.edges.length !== 0 &&
+        data.allLandingYaml.edges[0].node?.who_is_hiring !== null)
         ? data.allLandingYaml.edges
-        : data.allDownloadableYaml.edges;
+        : (data.allPageYaml && data.allPageYaml.edges.length !== 0 &&
+          data.allPageYaml.edges[0].node?.who_is_hiring !== null)
+          ? data.allPageYaml.edges
+          : data.allDownloadableYaml.edges;
 
-    const hiring = data.allPartnerYaml.edges[0].node;
-    let landingHiriging = dataYml[0].node?.who_is_hiring;
+    const hiring = data.allPartnerYaml?.edges?.[0]?.node;
+    let landingHiriging = dataYml?.[0]?.node?.who_is_hiring;
 
     return (
       <Div
@@ -853,7 +856,7 @@ export const landingSections = {
         <OurPartners
           multiLine
           variant="carousel"
-          images={hiring.partners.images}
+          images={hiring?.partners?.images || []}
           margin="0"
           padding="0 ​0 75px 0"
           marquee
@@ -862,12 +865,12 @@ export const landingSections = {
           showFeatured
           withoutLine
           title={
-            landingHiriging ? landingHiriging.heading : hiring.partners.tagline
+            landingHiriging ? landingHiriging.heading : hiring?.partners?.tagline
           }
           paragraph={
             landingHiriging
               ? landingHiriging.sub_heading
-              : hiring.partners.sub_heading
+              : hiring?.partners?.sub_heading
           }
         />
       </Div>
