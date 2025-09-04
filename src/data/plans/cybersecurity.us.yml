@@ -20,6 +20,22 @@ part_time:
       - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
 
+  - slug: 'edly-payment'
+    academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'dallas-usa']
+    recomended: "Learn now, pay later"
+    recommended_color: "#FF9800"
+    scholarship: "Income-Based Payments (IBR)"
+    description: "Offered through EDLY. Start paying only once you earn $35K/year. Payments scale with income, and total repayment is capped"
+    price: "IBR"
+    bullets:
+      - "Edly is proud to help 4Geeks Academy provide affordable, income-based repayment (IBR) loans to its students"
+      - "Only make payments once you land a job and earn the minimum income."
+      - "Flexible payments adjust based on your income"
+      - "Tuition paid directly to your school"
+    icons:
+      - "/images/edly.png"
+      
+
   - slug: 'usa-financed-pt'
     academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: "Low monthly payments"
@@ -50,21 +66,7 @@ part_time:
       - "Get hired within 9 months of graduation or we'll refund 100% of your tuition."
     icons: 
 
-  - slug: 'edly-payment'
-    academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'dallas-usa']
-    recomended: "Learn now, pay later"
-    recommended_color: "#FF9800"
-    scholarship: "Income-Based Payments (IBR)"
-    description: "Offered through EDLY. Start paying only once you earn $35K/year. Payments scale with income, and total repayment is capped"
-    price: "IBR"
-    bullets:
-      - "Edly is proud to help 4Geeks Academy provide affordable, income-based repayment (IBR) loans to its students"
-      - "Only make payments once you land a job and earn the minimum income."
-      - "Flexible payments adjust based on your income"
-      - "Tuition paid directly to your school"
-    icons:
-      - "/images/edly.png"
-      
+
   - slug: 'usa-job-guarantee-pt'
     academies: ['']
     recomended: "Colocación laboral o reembolso de matrícula."
