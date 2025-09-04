@@ -31,4 +31,4 @@ cta:
     status_idle: "Request"
     status_error: "There are errors in your form"
     status_correct_errors: "Correct the errors"
-    success_message: "Thank you for subscribing! We have sent you a confirmation email."
+    success_message: "🎉 Thank you! You've been successfully subscribed to our newsletter."

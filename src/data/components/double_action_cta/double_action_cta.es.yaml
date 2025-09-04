@@ -31,4 +31,4 @@ cta:
     status_idle: "Solicitud"
     status_error: "Hay errores en tu formulario"
     status_correct_errors: "Corrige los errores"
-    success_message: "¡Gracias por suscribirte! Te hemos enviado un email de confirmación."
+    success_message: "🎉 ¡Gracias! Te has suscrito exitosamente a nuestro boletín."

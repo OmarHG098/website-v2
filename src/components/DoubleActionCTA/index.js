@@ -48,7 +48,7 @@ const DoubleActionCTA = ({ session, location, ctaData, lang = "us" }) => {
       width="100%"
       maxWidth="1280px"
       margin="0 auto"
-      padding="2rem 1rem"
+      padding="4rem 1rem 2rem 1rem"
       flexDirection="column"
     >
       <Div
@@ -58,11 +58,13 @@ const DoubleActionCTA = ({ session, location, ctaData, lang = "us" }) => {
       >
         <H2
           className="dual-cta-title"
-          fontSize="2rem"
+          fontSize="2.5rem"
           fontWeight="700"
           color="currentColor"
           margin="0 0 1rem 0"
           line-height="1.2"
+          fontFamily="var(--font-sans)"
+          letterSpacing="normal"
         >{content.cta.title}</H2>
         <Paragraph
           className="dual-cta-subtitle"
@@ -72,6 +74,8 @@ const DoubleActionCTA = ({ session, location, ctaData, lang = "us" }) => {
           maxWidth="42rem"
           margin="0 auto"
           line-height="1.5"
+          fontFamily="var(--font-sans)"
+          letterSpacing="normal"
         >
           {content.cta.description}
         </Paragraph>
@@ -105,6 +109,8 @@ const DoubleActionCTA = ({ session, location, ctaData, lang = "us" }) => {
               margin="0 0 0.5rem 0"
               lineHeight="1.3"
               textAlign="left"
+              fontFamily="var(--font-sans)"
+              letterSpacing="normal"
             >
               {content?.cta?.primary?.title || "Book Your Career Consultation"}
             </H3>
@@ -114,6 +120,8 @@ const DoubleActionCTA = ({ session, location, ctaData, lang = "us" }) => {
               margin="0"
               lineHeight="1.5"
               textAlign="left"
+              fontFamily="var(--font-sans)"
+              letterSpacing="normal"
             >
               {content?.cta?.primary?.description || "Get personalized guidance from our career experts. Discover the perfect tech path for your goals and learn about our programs."}
             </Paragraph>
@@ -167,7 +175,7 @@ const DoubleActionCTA = ({ session, location, ctaData, lang = "us" }) => {
               gap="0.5rem"
               margin="1.5rem 0"
             >
-              <Icon icon="calendar" width="18px" height="18px" />
+              <Icon icon="calendar" width="18px" height="18px" stroke={Colors.white} />
               <span>
                 {content?.cta?.primary?.action_text || "Schedule Free Consultation"}
               </span>
@@ -175,11 +183,12 @@ const DoubleActionCTA = ({ session, location, ctaData, lang = "us" }) => {
           </Link>
 
           <Paragraph
-            fontSize="0.875rem"
+            fontSize="0.75rem"
             color={Colors.lightGray3}
             textAlign="center"
             margin="0"
-            fontFamily="sans-serif"
+            fontFamily="var(--font-sans)"
+            letterSpacing="normal"
           >
             {content?.cta?.primary?.footer_text || "✨ Free 15-minute session • No commitment required"}
           </Paragraph>
@@ -205,6 +214,8 @@ const DoubleActionCTA = ({ session, location, ctaData, lang = "us" }) => {
               margin="0 0 0.5rem 0"
               lineHeight="1.3"
               textAlign="left"
+              fontFamily="var(--font-sans)"
+              letterSpacing="normal"
             >
               {content?.cta?.secondary?.title || "Stay Updated with Our Newsletter"}
             </H3>
@@ -214,6 +225,8 @@ const DoubleActionCTA = ({ session, location, ctaData, lang = "us" }) => {
               margin="0"
               lineHeight="1.5"
               textAlign="left"
+              fontFamily="var(--font-sans)"
+              letterSpacing="normal"
             >
               {content?.cta?.secondary?.description || "Get the latest tech industry insights, course updates, success stories, and exclusive content delivered to your inbox."}
             </Paragraph>
@@ -257,8 +270,10 @@ const DoubleActionCTA = ({ session, location, ctaData, lang = "us" }) => {
                 lineHeight="24px"
                 margin="25px 0 10px 10px"
                 textAlign="center"
+                fontFamily="var(--font-sans)"
+                letterSpacing="normal"
               >
-                {content?.cta?.secondary?.newsletter_form?.success_message}
+                {content?.cta?.newsletter_form?.success_message}
               </H3>
             </Div>
           ) : (
@@ -270,18 +285,18 @@ const DoubleActionCTA = ({ session, location, ctaData, lang = "us" }) => {
                   if (formStatus.status === "error") {
                     setFormStatus({
                       status: "idle",
-                      msg: content?.cta?.secondary?.newsletter_form?.status_idle || "Request"
+                      msg: content?.cta?.newsletter_form?.status_idle
                     });
                   }
                   if (!formIsValid(formData)) {
                     setFormStatus({
                       status: "error",
-                      msg: content?.cta?.secondary?.newsletter_form?.status_error || "There are errors in your form"
+                      msg: content?.cta?.newsletter_form?.status_error
                     });
                   } else {
                     setFormStatus({
                       status: "loading",
-                      msg: content?.cta?.secondary?.newsletter_form?.button_loading || "Loading..."
+                      msg: content?.cta?.newsletter_form?.button_loading
                     });
                     const token = await captcha.current.executeAsync();
                     newsletterSignup(
@@ -292,19 +307,17 @@ const DoubleActionCTA = ({ session, location, ctaData, lang = "us" }) => {
                       appSession
                     )
                       .then((data) => {
-                        if (
-                          data.error !== false &&
-                          data.error !== undefined
-                        ) {
+                        const hasError = data.error && data.error !== false;
+                        if (hasError) {
                           setFormStatus({
-                          status: "error",
-                          msg: content?.cta?.secondary?.newsletter_form?.status_correct_errors || "Correct the errors"
-                        });
+                            status: "error",
+                            msg: content?.cta?.newsletter_form?.status_correct_errors
+                          });
                         } else {
                           setFormStatus({
-                          status: "thank-you",
-                          msg: "Thank you"
-                        });
+                            status: "thank-you",
+                            msg: "Thank you"
+                          });
                         }
                       })
                       .catch((error) => {
@@ -322,7 +335,7 @@ const DoubleActionCTA = ({ session, location, ctaData, lang = "us" }) => {
                   className="form-control"
                   width="100%"
                   height="46px"
-                  placeholder={content?.cta?.secondary?.newsletter_form?.placeholder_email || "Enter your email address"}
+                  placeholder={content?.cta?.newsletter_form?.placeholder_email}
                   borderRadius="8px"
                   bgColor={Colors.white}
                   border="1px solid #e5e7eb"
@@ -338,12 +351,12 @@ const DoubleActionCTA = ({ session, location, ctaData, lang = "us" }) => {
                     if (formStatus.status === "error") {
                       setFormStatus({
                       status: "idle",
-                      msg: content?.cta?.secondary?.newsletter_form?.status_idle || "Request"
+                      msg: content?.cta?.newsletter_form?.status_idle
                     });
                     }
                   }}
                   value={formData.email.value}
-                  errorMsg={content?.cta?.secondary?.newsletter_form?.error_email || "Please enter a valid email"}
+                  errorMsg={content?.cta?.newsletter_form?.error_email}
                   required
                 />
                 <Div width="fit-content" margin="10px auto 0 auto">
@@ -355,7 +368,7 @@ const DoubleActionCTA = ({ session, location, ctaData, lang = "us" }) => {
                   height="auto"
                   padding="14px 24px"
                   padding_tablet="14px 24px"
-                  background={formStatus.status === "loading" ? Colors.darkGray : 'oklch(.97 0 0)'}
+                  background={formStatus.status === "loading" ? 'oklch(.92 0 0)' : 'oklch(.97 0 0)'}
                   type="submit"
                   borderRadius="8px"
                   fontWeight="600"
@@ -367,23 +380,24 @@ const DoubleActionCTA = ({ session, location, ctaData, lang = "us" }) => {
                   alignItems="center"
                   gap="0.5rem"
                   style={{
-                    color: Colors.black
+                    color: formStatus.status === "loading" ? Colors.black : Colors.black
                   }}
                 >
                   {formStatus.status === "loading"
-                    ? content?.cta?.secondary?.newsletter_form?.button_loading || "Loading..."
-                    : <><Icon icon="mail" width="18px" height="18px" /><span>{content?.cta?.secondary?.newsletter_form?.button_submit || "Subscribe to Newsletter"}</span></>}
+                    ? content?.cta?.newsletter_form?.button_loading
+                    : <><Icon icon="mail" width="18px" height="18px" /><span>{content?.cta?.newsletter_form?.button_submit}</span></>}
                 </Button>
               </Form>
             </Div>
           )}
 
           <Paragraph
-            fontSize="0.875rem"
+            fontSize="0.75rem"
             color={Colors.lightGray3}
             textAlign="center"
             margin="0"
-            fontFamily="sans-serif"
+            fontFamily="var(--font-sans)"
+            letterSpacing="normal"
           >
             {content?.cta?.secondary?.footer_text || "📧 Weekly updates • Unsubscribe anytime • No spam, ever"}
           </Paragraph>
