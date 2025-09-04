@@ -326,6 +326,7 @@ export const Div = styled.div`
     props.size ? `${(props.size / 12) * 100}%` : props.maxWidth || null};
   max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
   overflow: ${(props) => props.overflow};
+  box-shadow: ${(props) => props.boxShadow};
   overflow-wrap: ${(props) => props.overflowWrap};
   overflow-x: ${(props) => props.overflowX};
   grid-area: ${(props) => props.gridArea};
@@ -743,6 +744,7 @@ export const Header = ({
   seo_title,
   title,
   paragraph,
+  paragraph_html,
   paragraphMargin,
   paragraphMargin_Tablet,
   height,
@@ -821,6 +823,7 @@ export const Header = ({
             padding={paddingTitle || "0 20px"}
             color={Colors.darkGray2}
             fontSize={fontSize_seo}
+            textWrap="balance"
           >
             {seo_title}
           </H1>
@@ -842,22 +845,26 @@ export const Header = ({
           >
             {multilineTitle}
           </H2>
-          <SubTitle
-            width="auto"
-            letterSpacing="0.05em"
-            padding={paddingParagraph || "20px"}
-            padding_tablet={
-              paddingParagraph_tablet || paddingParagraph || "0 20px"
-            }
-            textAlign_tablet={textAlign_tablet}
-            margin={paragraphMargin || "26px 0"}
-            margin_tablet={paragraphMargin_Tablet}
-            fontSize={fontSize_paragraph}
-            fontWeight={fontWeight_paragraph}
-            maxWidth="64rem"
-            color={Colors.black}
-            dangerouslySetInnerHTML={{ __html: paragraph }}
-          />
+          {(paragraph || paragraph_html) && (
+            <SubTitle
+              width="auto"
+              letterSpacing="0.05em"
+              padding={paddingParagraph || "20px"}
+              padding_tablet={
+                paddingParagraph_tablet || paddingParagraph || "0 20px"
+              }
+              textAlign_tablet={textAlign_tablet}
+              margin={paragraphMargin || "26px auto"}
+              margin_tablet={paragraphMargin_Tablet}
+              fontSize={fontSize_paragraph}
+              fontWeight={fontWeight_paragraph}
+              maxWidth="64rem"
+              color={Colors.black}
+              {...(paragraph_html ? { dangerouslySetInnerHTML: { __html: paragraph_html } } : {})}
+            >
+              {!paragraph_html && paragraph}
+            </SubTitle>
+          )}
           {children}
         </Div>
         {svg_image ? (
