@@ -2,10 +2,10 @@ meta_info:
   slug: geekforce
   title: "GeekForce, un sistema de 4Geeks Academy"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  description: "Con el Apoyo Profesional de 4Geeks Academy, te ayudamos a encontrar el trabajo tech ideal. Consejos para tu CV, preparación para entrevistas y acceso a nuestra red de empleos."
+  description: "Con apoyo de 4Geeks: prepárate para entrevistas, mejora tu CV y accede a nuestra red de empleos tech. ¡Encuentra tu trabajo ideal!"
   image: null
-  keywords: "Geekforce, un sistema de 4Geeks Academy"
-  redirects: ["/apoyo-profesional", "/geekforce", "/es/geekforce"]
+  keywords: null
+  redirects: []
 
 seo_title: "Apoyo Profesional"
 header:

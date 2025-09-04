@@ -4,7 +4,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "With 4Geeks Academy’s Career Support, we’ll help you find the right tech job. Get resume tips, interview prep, and access to our job network."
   image: null
-  keywords: "Geekforce, a 4Geeks Academy system"
+  keywords: null
   redirects: ["/career-support", "/geekforce", "/us/geekforce"]
 
 seo_title: "Career Support"

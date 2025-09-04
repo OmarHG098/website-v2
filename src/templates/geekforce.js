@@ -11,12 +11,11 @@ import { Colors } from "../components/Styling";
 import ReactPlayer from "../components/ReactPlayer";
 import OurPartners from "../components/OurPartners";
 import Overlaped from "../components/Overlaped";
-import { Div, Grid } from "../components/Sections";
+import { Div, Grid, HR } from "../components/Sections";
 import { H2, H3, Paragraph } from "../components/Heading";
 import { Img } from "../components/Styling";
 import { StyledBackgroundSection } from "../components/Styling";
-import Iconogram from "../components/Iconogram";
-import TwoColumn from "../components/TwoColumn/index.js";
+import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
 
 const GeekForce = (props) => {
   const { data, pageContext, yml } = props;
@@ -267,6 +266,17 @@ const GeekForce = (props) => {
             index: index,
           });
         })}
+      {data.allScholarshipSuccessCasesYaml?.edges?.[0]?.node && (
+        <ScholarshipSuccessCases
+          content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+        />
+      )}
+      <HR
+        background={Colors.verylightGray}
+        width="70%"
+        height="1px"
+        margin="20px"
+      />
     </>
   );
 };
@@ -380,6 +390,39 @@ export const query = graphql`
               path
               background
             }
+          }
+        }
+      }
+    }
+    allScholarshipSuccessCasesYaml(
+      filter: { fields: { lang: { eq: $lang } } }
+    ) {
+      edges {
+        node {
+          title
+          subtitle
+          contributor
+          cases {
+            name
+            img {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 700
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  breakpoints: [200, 340, 520, 890]
+                )
+              }
+            }
+            status
+            country {
+              iso
+              name
+            }
+            contributor
+            description
+            achievement
           }
         }
       }
