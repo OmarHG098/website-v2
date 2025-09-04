@@ -81,6 +81,7 @@ we_trust_section:
       text: Job placement rate
     - icon: graduation-2
       title: "3 - 6"
+      label: "months"
       text: Months on avg. to get hired
     - icon: chart
       title: "55%"

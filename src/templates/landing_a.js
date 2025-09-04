@@ -680,6 +680,7 @@ export const query = graphql`
             boxes {
               icon
               title
+              label
               text
             }
           }
