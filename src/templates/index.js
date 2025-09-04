@@ -179,7 +179,11 @@ const Home = (props) => {
                   </Div>
                 ))}
               </Div>
-              <Div width="100%" justifyContent_tablet="start" justifyContent="center">
+              <Div
+                width="100%"
+                justifyContent_tablet="start"
+                justifyContent="center"
+              >
                 <Button
                   variant="full"
                   justifyContent="center"
