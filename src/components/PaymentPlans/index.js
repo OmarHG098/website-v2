@@ -55,10 +55,7 @@ const PaymentPlans = (props) => {
   }));
 
   return (
-    <Div
-      background={Colors.veryLightBlue3}
-      margin="3rem 0"
-    >
+    <Div background={Colors.veryLightBlue3} margin="3rem 0">
       <Div
         maxWidth="1280px"
         margin="0 auto"
@@ -179,7 +176,9 @@ const PaymentPlans = (props) => {
                                       alignItems: "flex-start",
                                     }}
                                   >
-                                    <span style={{ marginRight: "8px" }}>•</span>
+                                    <span style={{ marginRight: "8px" }}>
+                                      •
+                                    </span>
                                     {bullet.text}
                                   </Paragraph>
                                   {bullet.cta && (

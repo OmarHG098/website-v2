@@ -5,7 +5,8 @@
   outline: none !important;
 }
 :root {
-  --font-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 html,
 body {
@@ -116,7 +117,7 @@ strong {
   text-decoration: underline;
 }
 .cta_card {
-  transition: all .3s;
+  transition: all 0.3s;
 }
 .cta_card:hover {
   transform: translateY(-2px);

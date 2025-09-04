@@ -266,7 +266,10 @@ const Layout = ({ children, seo, context }) => {
           />
         </Helmet>
       )}
-      <PageWrapper pageContext={context} doubleActionCTA={myDoubleActionCTA?.node}>
+      <PageWrapper
+        pageContext={context}
+        doubleActionCTA={myDoubleActionCTA?.node}
+      >
         {children}
       </PageWrapper>
       <Footer yml={myFooter.node} />
