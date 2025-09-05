@@ -277,9 +277,16 @@ data_table:
             bottom: "-1px"
           }
           html: false
-        - content: ""
-          icon: "cross"
-          icon_color: "#dc3545"
+        - content: "Required"
+          icon: "check"
+          gap: "4px"
+          size: "16px"
+          icon_position: "left"
+          icon_color: "#28a745"
+          icon_style: {
+            position: "relative",
+            bottom: "-1px"
+          }
           html: false
         - content: "Required"
           icon: "check"

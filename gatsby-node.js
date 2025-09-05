@@ -81,6 +81,7 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
       "FaqYaml",
       "AdmissionsStaffYaml",
       "DoubleActionCtaYaml",
+      "DynamicFormYaml",
     ].includes(node.internal.type)
   ) {
     let url = null;
