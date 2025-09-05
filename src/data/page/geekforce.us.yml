@@ -95,30 +95,29 @@ components:
         - icon: "capacity"
           title: "1. Profile Optimization"
           content: |
-            • Polish LinkedIn, GitHub, and portfolio to attract recruiters and pass AI-based filters.
-            <br />
-            • Build a resume that clears applicant tracking systems (ATS) and highlights your strengths.
-            <br />
-            • Showcase your skills with a recruiter-ready portfolio.
-            <br />
+            <ul>
+              <li style="margin-top: 8px;">• Polish LinkedIn, GitHub, and portfolio to attract recruiters and pass AI-based filters.</li>
+              <li style="margin-top: 8px;">• Build a resume that clears applicant tracking systems (ATS) and highlights your strengths.</li>
+              <li style="margin-top: 8px;">• Showcase your skills with a recruiter-ready portfolio.</li>
+            </ul>
           color: '#0084FF'
         - icon: "talk"
           title: "2. Interview Preparation"
           content: |
-            • Gain confidence with mock technical and behavioral interviews.
-            <br />
-            • Practice coding and problem-solving with auto-graded exercises.
-            <br />
-            • Develop tailored strategies for upcoming interviews..
+            <ul>
+              <li style="margin-top: 8px;">• Gain confidence with mock technical and behavioral interviews.</li>
+              <li style="margin-top: 8px;">• Practice coding and problem-solving with auto-graded exercises.</li>
+              <li style="margin-top: 8px;">• Develop tailored strategies for upcoming interviews.</li>
+            </ul>
           color: '#FF9500'
         - icon: "ratio"
           title: "3. Strategic Job Search"
           content: |
-            • Create a personalized job search plan aligned with your goals.
-            <br />
-            • Navigate AI-driven hiring platforms, from resume scanners to automated interviews.
-            <br />
-            • Connect with our extensive network of global hiring partners.
+            <ul>
+              <li style="margin-top: 8px;">• Create a personalized job search plan aligned with your goals.</li>
+              <li style="margin-top: 8px;">• Navigate AI-driven hiring platforms, from resume scanners to automated interviews.</li>
+              <li style="margin-top: 8px;">• Connect with our extensive network of global hiring partners.</li>
+            </ul>
           color: '#EB5757'
 
   - name: "lifetime_mentoring"

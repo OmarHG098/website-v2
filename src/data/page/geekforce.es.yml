@@ -95,30 +95,29 @@ components:
         - icon: "capacity"
           title: "1. Optimización de Perfil"
           content: |
-            • Pule LinkedIn, GitHub y portafolio para atraer reclutadores y pasar filtros basados en IA.
-            <br />
-            • Construye un CV que pase los sistemas de seguimiento de candidatos (ATS) y destaque tus fortalezas.
-            <br />
-            • Muestra tus habilidades con un portafolio listo para reclutadores.
-            <br />
+            <ul>
+              <li style="margin-top: 8px;">• Pule LinkedIn, GitHub y portafolio para atraer reclutadores y pasar filtros basados en IA.</li>
+              <li style="margin-top: 8px;">• Construye un CV que pase los sistemas de seguimiento de candidatos (ATS) y destaque tus fortalezas.</li>
+              <li style="margin-top: 8px;">• Muestra tus habilidades con un portafolio listo para reclutadores.</li>
+            </ul>
           color: '#0084FF'
         - icon: "talk"
           title: "2. Preparación para Entrevistas"
           content: |
-            • Gana confianza con simulacros de entrevistas técnicas y de comportamiento.
-            <br />
-            • Practica programación y resolución de problemas con ejercicios autocalificados.
-            <br />
-            • Desarrolla estrategias personalizadas para próximas entrevistas.
+            <ul>
+              <li style="margin-top: 8px;">• Gana confianza con simulacros de entrevistas técnicas y de comportamiento.</li>
+              <li style="margin-top: 8px;">• Practica programación y resolución de problemas con ejercicios autocalificados.</li>
+              <li style="margin-top: 8px;">• Desarrolla estrategias personalizadas para próximas entrevistas.</li>
+            </ul>
           color: '#FF9500'
         - icon: "ratio"
           title: "3. Búsqueda Estratégica de Trabajo"
           content: |
-            • Crea un plan de búsqueda de trabajo personalizado alineado con tus objetivos.
-            <br />
-            • Navega plataformas de contratación impulsadas por IA, desde escáneres de CV hasta entrevistas automatizadas.
-            <br />
-            • Conéctate con nuestra extensa red de socios de contratación globales.
+            <ul>
+              <li style="margin-top: 8px;">• Crea un plan de búsqueda de trabajo personalizado alineado con tus objetivos.</li>
+              <li style="margin-top: 8px;">• Navega plataformas de contratación impulsadas por IA, desde escáneres de CV hasta entrevistas automatizadas.</li>
+              <li style="margin-top: 8px;">• Conéctate con nuestra extensa red de socios de contratación globales.</li>
+            </ul>
           color: '#EB5757'
 
   - name: "lifetime_mentoring"
