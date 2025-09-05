@@ -7,6 +7,7 @@ import { Button, Colors, Img, StyledBackgroundSection } from "../Styling";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { navigate } from "gatsby";
 import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
+import BackgroundWrapper from "../BackgroundWrapper";
 
 const Side = ({
   video,
@@ -163,7 +164,7 @@ const Side = ({
           </H2>
         </Div>
       )}
-      {sub_heading && (
+      {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) ? (
         <Paragraph
           textAlign_tablet="left"
           fontFamily="Archivo"
@@ -176,9 +177,28 @@ const Side = ({
           fontSize_tablet={sh_md}
           fonSize_md={sh_lg}
           style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
-        >
-          {sub_heading.text}
-        </Paragraph>
+          {...(isClient
+            ? { dangerouslySetInnerHTML: { __html: sub_heading.text } }
+            : { children: sub_heading.text })}
+        />
+      ) : (
+        sub_heading && (
+          <Paragraph
+            textAlign_tablet="left"
+            fontFamily="Archivo"
+            fontWeight="600"
+            textAlign="left"
+            margin="0"
+            fontSize={sh_xs || sh_xl || "21px"}
+            fontSize_xs={sh_xs}
+            fontSize_sm={sh_sm}
+            fontSize_tablet={sh_md}
+            fonSize_md={sh_lg}
+            style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
+          >
+            {sub_heading.text}
+          </Paragraph>
+        )
       )}
 
       {Array.isArray(bullets?.items) && (
@@ -408,10 +428,19 @@ const Side = ({
   );
 };
 
-const TwoColumn = ({ left, right, proportions, session, alignment }) => {
+const TwoColumn = ({
+  left,
+  right,
+  proportions,
+  session,
+  alignment,
+  background,
+  bg_full,
+}) => {
   const [left_size, right_size] = proportions ? proportions : [];
   return (
-    <Div
+    <BackgroundWrapper
+      bg_full={bg_full}
       flexDirection="column"
       gap={left?.gap || right?.gap || "0px"}
       gap_tablet={left?.gap_tablet || right?.gap_tablet || "20px"}
@@ -427,6 +456,7 @@ const TwoColumn = ({ left, right, proportions, session, alignment }) => {
       padding_tablet="40px 40px"
       width_tablet="100%"
       maxWidth_md="1280px"
+      background={Colors[background] || background}
     >
       <Div
         justifyContent={
@@ -467,7 +497,7 @@ const TwoColumn = ({ left, right, proportions, session, alignment }) => {
       >
         <Side session={session} {...right} side="right" />
       </Div>
-    </Div>
+    </BackgroundWrapper>
   );
 };
 TwoColumn.defaultProps = {

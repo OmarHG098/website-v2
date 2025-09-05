@@ -53,8 +53,10 @@ export const Colors = {
   verylightGray3: "#F9F9F9",
   lightGray: "#ebebeb",
   lightGray2: "#C4C4C4",
+  lightGray3: "oklch(.556 0 0)",
   lightGreen: "#c4f7b7",
   green: "#20630d",
+  green2: "#10b981",
   darkGray: "#3A3A3A",
   darkGray2: "#606060",
   darkGray3: "#4D4D5C",
@@ -504,6 +506,7 @@ export const Button = styled(SmartButton)`
   font-size: ${(props) => props.fontSize};
   font-family: "Lato", sans-serif;
   text-transform: ${(props) => props.textTransform};
+  gap: ${(props) => props.gap};
   text-decoration: ${(props) => props.textDecoration || "none"};
   text-decoration-line: ${(props) => props.textDecorationLine || "none"};
   font-weight: ${(props) => props.fontWeight || "700"};

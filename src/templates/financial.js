@@ -5,6 +5,7 @@ import { Button, Colors, Img } from "../components/Styling";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session";
 import { isCustomBarActive } from "../actions";
+import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
 
 // components
 import { Div } from "../components/Sections";
@@ -12,8 +13,11 @@ import { H1, H2, Paragraph } from "../components/Heading";
 import WeTrust from "../components/WeTrust";
 import CarouselV2 from "../components/CarouselV2";
 import PricesAndPayment from "../components/PricesAndPayment";
+import PaymentPlans from "../components/PaymentPlans";
 import Iconogram from "../components/Iconogram";
 import TwoColumn from "../components/TwoColumn";
+import DataTable from "../components/DataTable";
+import ContactForm from "../components/ContactForm";
 
 const Financial = (props) => {
   const { session } = useContext(SessionContext);
@@ -44,6 +48,7 @@ const Financial = (props) => {
   }
 
   const ymlTwoColumn = yml?.two_column;
+  const ymlTableStyling = yml?.data_table?.table_styling || {};
   const defaultCourse = "full-stack";
 
   return (
@@ -110,8 +115,50 @@ const Financial = (props) => {
           />
         </Div>
       </Div>
+      <PaymentPlans lang={pageContext.lang} />
 
-      <Iconogram yml={yml.iconogram} />
+      {yml.data_table && (
+        <DataTable
+          borderRadius={ymlTableStyling?.table_style?.borderRadius || "8px"}
+          withBorder={ymlTableStyling?.table_props?.withBorder || true}
+          stickyHeaders={ymlTableStyling?.table_props?.stickyHeaders || false}
+          title={yml.data_table.title}
+          sub_title={yml.data_table.sub_title}
+          columns={yml.data_table.columns}
+          rows={yml.data_table.rows}
+          headerStyle={ymlTableStyling?.header_style || {}}
+          cellStyle={ymlTableStyling?.cell_style || {}}
+          tableStyle={ymlTableStyling?.table_style || {}}
+        />
+      )}
+
+      <TwoColumn
+        bg_full={true}
+        left={{ image: ymlTwoColumn[0].image }}
+        right={{
+          heading: ymlTwoColumn[0].heading,
+          sub_heading: ymlTwoColumn[0].sub_heading,
+          bullets: ymlTwoColumn[0].bullets,
+          content: ymlTwoColumn[0].content,
+          button: ymlTwoColumn[0].button,
+          boxes: ymlTwoColumn[0].boxes,
+          gap_tablet: "40px",
+        }}
+        background={ymlTwoColumn[0].background}
+        proportions={ymlTwoColumn.proportions}
+        session={session}
+      />
+      <WeTrust
+        we_trust={yml.we_trust_section}
+        background="none"
+        titleProps={{
+          textAlign: "center",
+          maxWidth: "800px",
+          textWrap: "balance",
+          margin: "0 auto",
+        }}
+        paragraphProps={{ textAlign: "center" }}
+      />
 
       <PricesAndPayment
         type={pageContext.slug}
@@ -125,83 +172,37 @@ const Financial = (props) => {
         financial
       />
 
-      <TwoColumn
-        right={{ image: ymlTwoColumn[0].image }}
-        left={{
-          heading: ymlTwoColumn[0].heading,
-          sub_heading: ymlTwoColumn[0].sub_heading,
-          bullets: ymlTwoColumn[0].bullets,
-          content: ymlTwoColumn[0].content,
-          button: ymlTwoColumn[0].button,
-          boxes: ymlTwoColumn[0].boxes,
-          gap_tablet: "40px",
-        }}
-        proportions={ymlTwoColumn.proportions}
-        session={session}
+      <ScholarshipSuccessCases
+        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
-
-      <CarouselV2
-        margin="20px 0"
-        background="#F4F9FF"
-        padding="20px"
-        heading={yml.who_is_hiring.title}
-        content={yml.who_is_hiring.paragraph}
+      
+      {/* <Div
+        maxWidth="1280px"
+        margin="80px auto"
+        padding="40px 80px"
+        padding_tablet="60px"
+        padding_xxs="20px"
+        justifyContent="center"
       >
-        {yml.who_is_hiring.images.map((image) => (
-          <Div key={image} marginBottom="80px">
-            <Div
-              border="1px solid #C4C4C4"
-              width="240px !important"
-              height="240px"
-              display="flex"
-              flexDirection="column"
-              justifyContent="center"
-              margin="auto"
-            >
-              <Img
-                backgroundSize="contain"
-                src={image}
-                width="112px"
-                height="112px"
-                margin="auto"
-              />
-            </Div>
-          </Div>
-        ))}
-      </CarouselV2>
-
-      <TwoColumn
-        left={{ image: ymlTwoColumn[1].image }}
-        right={{
-          heading: ymlTwoColumn[1].heading,
-          sub_heading: ymlTwoColumn[1].sub_heading,
-          bullets: ymlTwoColumn[1].bullets,
-          content: ymlTwoColumn[1].content,
-          button: ymlTwoColumn[1].button,
-          gap_tablet: "40px",
-        }}
-        session={session}
-      />
-
-      <WeTrust
-        we_trust={yml.we_trust_section}
-        background="none"
-        titleProps={{ textAlign: "center" }}
-        paragraphProps={{ textAlign: "center" }}
-      />
-
-      <TwoColumn
-        right={{ image: ymlTwoColumn[2].image }}
-        left={{
-          heading: ymlTwoColumn[2].heading,
-          sub_heading: ymlTwoColumn[2].sub_heading,
-          bullets: ymlTwoColumn[2].bullets,
-          content: ymlTwoColumn[2].content,
-          button: ymlTwoColumn[2].button,
-          gap_tablet: "40px",
-        }}
-        session={session}
-      />
+        <ContactForm
+          title={yml.contact_form?.title || "Need Help with Financing?"}
+          subtitle={yml.contact_form?.subtitle}
+          submitButtonText={yml.contact_form?.submit_button_text || "Get Financing Help"}
+          loadingText={yml.contact_form?.loading_text}
+          successMessage={yml.contact_form?.success_message}
+          errorMessage={yml.contact_form?.error_message}
+          validationError={yml.contact_form?.validation_error}
+          statusMessages={yml.contact_form?.status_messages}
+          placeholders={yml.contact_form?.placeholders}
+          onSuccess={(data) => {
+            console.log('Contact form submitted:', data);
+          }}
+          onError={(error) => {
+            console.error('Contact form error:', error);
+          }}
+          className="financial-contact-form"
+        />
+      </Div> */}
     </>
   );
 };
@@ -285,6 +286,7 @@ export const query = graphql`
             boxes {
               icon
               title
+              label
               text
             }
           }
@@ -324,11 +326,6 @@ export const query = graphql`
               hover_color
             }
           }
-          who_is_hiring {
-            title
-            paragraph
-            images
-          }
           two_column {
             image {
               style
@@ -348,8 +345,6 @@ export const query = graphql`
               item_style
               items {
                 heading
-                text
-                icon
               }
             }
             content {
@@ -367,6 +362,74 @@ export const query = graphql`
               icon
               title
               text
+            }
+            background
+          }
+          contact_form {
+            title
+            subtitle
+            submit_button_text
+            loading_text
+            success_message
+            error_message
+            validation_error
+            placeholders {
+              firstName
+              lastName
+              email
+              message
+            }
+            status_messages {
+              loading
+              success
+              error
+            }
+          }
+          data_table {
+            title {
+              text
+            }
+            sub_title
+            table_styling {
+              header_style {
+                fontSize
+                fontSize_tablet
+                fontWeight
+                fontFamily
+              }
+              cell_style {
+                fontSize
+                fontSize_tablet
+                fontWeight
+                fontFamily
+                lineHeight
+              }
+              table_style {
+                borderRadius
+                boxShadow
+              }
+              table_props {
+                stickyHeaders
+                withBorder
+              }
+            }
+            columns {
+              title
+            }
+            rows {
+              cells {
+                content
+                icon
+                gap
+                size
+                icon_position
+                icon_color
+                icon_style {
+                  position
+                  bottom
+                }
+                html
+              }
             }
           }
         }
@@ -431,6 +494,65 @@ export const query = graphql`
           }
           apply_form {
             label
+          }
+        }
+      }
+    }
+    allPaymentPlansYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          fields {
+            lang
+          }
+          title
+          sub_title
+          options {
+            id
+            title
+            description
+            cta
+            bullets {
+              items {
+                text
+                cta
+                sub_items {
+                  text
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    allScholarshipSuccessCasesYaml(
+      filter: { fields: { lang: { eq: $lang } } }
+    ) {
+      edges {
+        node {
+          title
+          subtitle
+          contributor
+          cases {
+            name
+            img {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 700
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  breakpoints: [200, 340, 520, 890]
+                )
+              }
+            }
+            status
+            country {
+              iso
+              name
+            }
+            contributor
+            description
+            achievement
           }
         }
       }

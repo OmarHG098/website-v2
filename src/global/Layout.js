@@ -10,6 +10,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Footer from "../components/Footer";
 import CookieBot from "react-cookiebot";
 import CustomBar from "../components/CustomBar";
+import PageWrapper from "./PageWrapper";
 
 import GlobalStyle from "./GlobalStyle";
 import SEO from "./SEO";
@@ -144,6 +145,63 @@ const Layout = ({ children, seo, context }) => {
           id
         }
       }
+      allDoubleActionCtaYaml(filter: { fields: { lang: { eq: $lang } } }) {
+        edges {
+          node {
+            fields {
+              lang
+            }
+            cta {
+              title
+              description
+              primary {
+                title
+                description
+                benefits
+                footer_text
+                image {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 800
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                  }
+                }
+                action_text
+                action_url
+              }
+              secondary {
+                title
+                description
+                benefits
+                footer_text
+                image {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 800
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                  }
+                }
+                action_text
+                action_url
+              }
+              newsletter_form {
+                placeholder_email
+                error_email
+                button_submit
+                button_loading
+                status_idle
+                status_error
+                status_correct_errors
+                success_message
+              }
+            }
+          }
+        }
+      }
     }
   `);
   let myFooter = data.allFooterYaml.edges.find(
@@ -154,6 +212,10 @@ const Layout = ({ children, seo, context }) => {
   );
   let myLocations = data.allLocationYaml.edges.filter(
     (item) => item.node.fields.lang === context.lang
+  );
+
+  let myDoubleActionCTA = data.allDoubleActionCtaYaml.edges.find(
+    (item) => item.node.fields?.lang === context.lang
   );
   return (
     <>
@@ -208,7 +270,12 @@ const Layout = ({ children, seo, context }) => {
           />
         </Helmet>
       )}
-      <>{children}</>
+      <PageWrapper
+        pageContext={context}
+        doubleActionCTA={myDoubleActionCTA?.node}
+      >
+        {children}
+      </PageWrapper>
       <Footer yml={myFooter.node} />
     </>
   );
