@@ -175,7 +175,7 @@ const Financial = (props) => {
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
-      
+
       <Div
         maxWidth="1280px"
         margin="80px auto"
@@ -187,7 +187,9 @@ const Financial = (props) => {
         <DynamicForm
           title={yml.contact_form?.title || "Need Help with Financing?"}
           subtitle={yml.contact_form?.subtitle}
-          submitButtonText={yml.contact_form?.submit_button_text || "Get Financing Help"}
+          submitButtonText={
+            yml.contact_form?.submit_button_text || "Get Financing Help"
+          }
           loadingText={yml.contact_form?.loading_text}
           successMessage={yml.contact_form?.success_message}
           errorMessage={yml.contact_form?.error_message}
@@ -195,10 +197,10 @@ const Financial = (props) => {
           statusMessages={yml.contact_form?.status_messages}
           placeholders={yml.contact_form?.placeholders}
           onSuccess={(data) => {
-            console.log('Contact form submitted:', data);
+            console.log("Contact form submitted:", data);
           }}
           onError={(error) => {
-            console.error('Contact form error:', error);
+            console.error("Contact form error:", error);
           }}
           className="financial-contact-form"
         />
