@@ -171,14 +171,14 @@ const GeekPal = (props) => {
         </Div>
         <Div
           height="auto"
-          width="320px"
-          width_tablet="320px"
-          width_md="320px"
+          width="80%"
+          width_tablet="80%"
+          width_md="75%"
           padding_xs="40px 0 0 0"
           padding_tablet="15% 0 0 0"
-          padding_md="0% 16px 0 10%"
-          padding_lg="0 15px 0 10%"
-          gridColumn_tablet="12 / 22"
+          padding_md="0% 16px 0 5%"
+          padding_lg="0 15px 0 5%"
+          gridColumn_tablet="11 / 22"
           position="relative"
           margin="0 auto"
         >
@@ -199,8 +199,8 @@ const GeekPal = (props) => {
             border="3px solid black"
             boxShadow="13px 13px 0px 1px rgba(0,0,0,1)"
             zIndex="1"
-            height="427px"
-            width="320px"
+            height="fit-content"
+            width="100%"
             overflow="hidden"
             borderRadius="24px"
             background="white"
@@ -211,43 +211,37 @@ const GeekPal = (props) => {
                 <React.Fragment key={i}>
                   {item.videoId === "" ? (
                     <StyledBackgroundSection
-                      height="427px"
-                      height_tablet="427px"
-                      height_md="427px"
-                      width="320px"
-                      width_tablet="320px"
-                      width_md="320px"
+                      height="500px"
+                      height_tablet="450px"
+                      height_md="450px"
                       image={item.image.childImageSharp.gatsbyImageData}
-                      bgSize="cover"        
+                      bgSize="contain"
                       alt="geekforce image"
                     />
                   ) : (
-                      <Div
-                        width="320px"
-                        height="427px"        
-                        height_tablet="427px" 
-                        height_md="427px"
+                    <Div
+                      width="100%"
+                      height="500px"
+                      height_tablet="450px"
+                      height_md="450px"
+                      margin="0"
+                      overflow="hidden"
+                    >
+                      <ReactPlayer
+                        id={item.videoId}
+                        thumb={item.image}
+                        margin_tablet="0px"
+                        videoHeight="500px"
+                        videoHeight_tablet="450px"
+                        videoHeight_md="450px"
+                        bgSize="contain"
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                        }}
                         margin="0"
-                        overflow="hidden"
-                      >
-                        <ReactPlayer
-                          id={item.videoId}
-                          thumb={item.image}
-                          margin_tablet="0px"
-                          videoHeight="427px"        
-                          videoHeight_tablet="427px"
-                          videoHeight_md="427px"
-                          width="320px"
-                          width_tablet="320px"
-                          width_md="320px"
-                          bgSize="cover"            
-                          style={{
-                            width: "320px",
-                            height: "427px",
-                          }}
-                          margin="0"
-                        />
-                      </Div>
+                      />
+                    </Div>
                   )}
                 </React.Fragment>
               );

@@ -8,7 +8,7 @@ meta_info:
   redirects: ["/geekpal", "/us/career-support"]
 
 header:
-  title: "Welcome to <strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
+  title: "Welcome to <strong style='color:black; font-family: Archivo-Black;'><br>Geek</strong>
     <strong style = 'color:#CD0000; font-family: Archivo-Black;'>PAL</strong>:<br>
     Lifetime Mentorship & AI-Powered Coding Support"
   image: "../../../static/images/bg/companies-bg.jpg"
@@ -64,7 +64,7 @@ components:
     layout: two_column_right
     image:
       style: '{"backgroundSize": "cover"}'
-      src: "/images/ownmancoding.webp"
+      src: "/images/landing/Group-original.webp"
       shadow: true
     heading:
       text: "Human + AI: The Perfect Support Duo "

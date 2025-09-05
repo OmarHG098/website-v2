@@ -10,7 +10,7 @@ meta_info:
 seo_title: "Geekpal de 4Geeks Academy"
 
 header:
-  title: "Bienvenido a <strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
+  title: "Bienvenido a <strong style='color:black; font-family: Archivo-Black;'><br>Geek</strong>
     <strong style = 'color:#CD0000; font-family: Archivo-Black;'>PAL</strong>:<br>
     Mentoría de Por Vida y Apoyo de Programación Impulsado por IA"
   image: "../../../static/images/bg/companies-bg.jpg"
@@ -63,7 +63,7 @@ components:
     layout: two_column_right
     image:
       style: '{"backgroundSize": "cover"}'
-      src: "/images/ownmancoding.webp"
+      src: "/images/landing/Group-original.webp"
       shadow: true
     heading:
       text: "Humano + IA: El Dúo de Apoyo Perfecto"
