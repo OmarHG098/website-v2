@@ -110,9 +110,9 @@ const GeekForce = (props) => {
           />
           <Paragraph
             fontSize="24px"
-            fontFamily="Lato-Bold"
+            fontFamily="Lato"
             lineHeight="29px"
-            fontWeight="500"
+            fontWeight="400"
             padding_xs="10px 0px"
             textAlign_xs="center"
             textAlign_tablet="left"
@@ -166,14 +166,14 @@ const GeekForce = (props) => {
         </Div>
         <Div
           height="auto"
-          width="90%"
+          width="80%"
           width_tablet="80%"
-          width_md="70%"
+          width_md="75%"
           padding_xs="40px 0 0 0"
           padding_tablet="15% 0 0 0"
-          padding_md="0% 16px 0 10%"
-          padding_lg="0 15px 0 10%"
-          gridColumn_tablet="12 / 22"
+          padding_md="0% 16px 0 5%"
+          padding_lg="0 15px 0 5%"
+          gridColumn_tablet="11 / 22"
           position="relative"
           margin="0 auto"
         >
@@ -206,9 +206,9 @@ const GeekForce = (props) => {
                 <React.Fragment key={i}>
                   {item.videoId === "" ? (
                     <StyledBackgroundSection
-                      height="427px"
-                      height_tablet="380px"
-                      height_md="380px"
+                      height="500px"
+                      height_tablet="450px"
+                      height_md="450px"
                       image={item.image.childImageSharp.gatsbyImageData}
                       bgSize="contain"
                       alt="geekforce image"
@@ -216,9 +216,9 @@ const GeekForce = (props) => {
                   ) : (
                     <Div
                       width="100%"
-                      height="427px"
-                      height_tablet="380px"
-                      height_md="380px"
+                      height="500px"
+                      height_tablet="450px"
+                      height_md="450px"
                       margin="0"
                       overflow="hidden"
                     >
@@ -226,9 +226,9 @@ const GeekForce = (props) => {
                         id={item.videoId}
                         thumb={item.image}
                         margin_tablet="0px"
-                        videoHeight="427px"
-                        videoHeight_tablet="380px"
-                        videoHeight_md="380px"
+                        videoHeight="500px"
+                        videoHeight_tablet="450px"
+                        videoHeight_md="450px"
                         bgSize="contain"
                         style={{
                           width: "100%",
@@ -350,7 +350,6 @@ export const query = graphql`
             layout
             background
             proportions
-            video
             icons {
               icon
               content
