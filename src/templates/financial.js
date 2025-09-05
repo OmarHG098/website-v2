@@ -48,7 +48,7 @@ const Financial = (props) => {
   }
 
   const ymlTwoColumn = yml?.two_column;
-  const ymlTableStyling = yml.data_table.table_styling;
+  const ymlTableStyling = yml?.data_table?.table_styling || {};
   const defaultCourse = "full-stack";
 
   return (
