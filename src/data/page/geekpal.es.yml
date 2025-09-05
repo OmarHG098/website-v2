@@ -29,7 +29,7 @@ components:
   - name: icons_banner
     position: 1
     heading:
-      text: "Avanza Más Rápido, Nunca Pierdas el Momentum"
+      text: "Avanza Más Rápido, Nunca Pierdas el Impulso"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
       style: '{ "color": "black" }'
     sub_heading:
@@ -59,19 +59,22 @@ components:
   - name: two-column-rigobot
     position: 2
     proportions: [6, 6]
-    background: "#FFFFFF"
+    background: "#FFFFFF" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9 .
     layout: two_column_right
     image:
       style: '{"backgroundSize": "cover"}'
-      src: "../../../../static/images/landing/ai-mentor.jpg"
+      src: "/images/ownmancoding.webp"
       shadow: true
-    video: "6m1Jyya7eCc"
     heading:
-      text: "Humano + IA: El Duo de Apoyo Perfecto"
-      font_size: ["30px", "30px", "28px", "28px", "24px"]
+      text: "Humano + IA: El Dúo de Apoyo Perfecto"
+        #           xl      lg      md      sm      xs
+      font_size: ["32px", "32px", "30px", "30px", "30px"]
+      style: '{ "font-weight": "700" }'
     sub_heading:
       text: |-
         El aprendizaje funciona mejor cuando la experiencia humana y el apoyo de IA se unen. En 4Geeks, tendrás acceso a mentoría 1:1 ilimitada más retroalimentación guiada por IA de Rigobot, para que cada paso esté adaptado a tu viaje de aprendizaje.
+      font_size: ["18px"]
+      style: '{ "font-weight": "400" }'
     content:
       text: "Juntos, la mentoría humana y las herramientas impulsadas por IA aceleran tu aprendizaje, te mantienen comprometido y te empoderan para enfrentar desafíos con confianza."
       font_size: ["16px"]
@@ -85,9 +88,10 @@ components:
             • Ofrece soporte en vivo para resolución de problemas y depuración
             <br />
             • Asistencia experta para corrección de errores.
-            <br /><br />
-            Comparte perspectivas de la industria, consejos de carrera y estrategias de aprendizaje
+            <br />
+            • Comparte perspectivas de la industria, consejos de carrera y estrategias de aprendizaje
           icon: "check"
+          icon_color: '#FFFFFF'
         - heading: "Rigobot + Learnpack:"
           text: |
             • Proporciona retroalimentación instantánea y tutoría mientras programas
@@ -98,6 +102,7 @@ components:
             <br />
             • Cientos de ejercicios de programación prácticos y práctica estructurada en Learnpack
           icon: "check"
+          icon_color: '#FFFFFF'
 
   - name: community_support
     position: 3
@@ -122,11 +127,11 @@ components:
         - heading: "Comunidad Slack (6,000+ miembros)"
           text: "Obtén ayuda en tiempo real de mentores, egresados y compañeros a través de nuestros canales activos y temáticos — desde soporte de programación, hasta tableros de trabajo y consejos de carrera (¡y sí, también hay humor de programación!)."
           icon: "check"
-          icon_color: '#25BF6C'
+          icon_color: '#F4F9FF'
         - heading: "4Geeks.com"
           text: "Sigue avanzando tus habilidades con recursos de entrenamiento adicionales, eventos en vivo y proyectos colaborativos. Conecta con personas que han estado donde tú estás — y saben cómo ayudarte a llegar donde quieres ir."
           icon: "check"
-          icon_color: '#25BF6C'
+          icon_color: '#F4F9FF'
 
 
 
@@ -145,6 +150,7 @@ components:
     sub_heading:
       text: "Escucha a Joao hablar sobre su experiencia durante y después de nuestro bootcamp y cómo el acceso ilimitado a mentoría de programación marcó una gran diferencia en su carrera."
       font_size: ["28px"]
+      style: '{ "font-weight": "400" }'
     content:
     bullets:
       items:

@@ -64,16 +64,18 @@ components:
     layout: two_column_right
     image:
       style: '{"backgroundSize": "cover"}'
-      src: "../../../../static/images/landing/ai-mentor.jpg"
+      src: "/images/ownmancoding.webp"
       shadow: true
-    video: "6m1Jyya7eCc"
     heading:
       text: "Human + AI: The Perfect Support Duo "
         #           xl      lg      md      sm      xs
-      font_size: ["30px", "30px", "28px", "28px", "24px"]
+      font_size: ["32px", "32px", "30px", "30px", "30px"]
+      style: '{ "font-weight": "700" }'
     sub_heading:
       text: |-
         Learning works best when human expertise and AI support come together. At 4Geeks, you'll have access to unlimited 1:1 mentorship plus AI-guided feedback from Rigobot, so every step is tailored to your learning journey.
+      font_size: ["18px"]
+      style: '{ "font-weight": "400" }'
     content:
       text: "Together, human mentorship and AI-powered tools accelerate your learning, keep you engaged, and empower you to tackle challenges with confidence."
       font_size: ["16px"]
@@ -148,6 +150,7 @@ components:
     sub_heading:
       text: "Listen to Joao talk about  his experience during and after our bootcamp and how unlimited access to coding mentorship made a huge difference to his career."
       font_size: ["28px"]
+      style: '{ "font-weight": "400" }'
     content:
     bullets:
       items:
