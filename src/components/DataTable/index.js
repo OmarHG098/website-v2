@@ -8,7 +8,7 @@ import Icon from "../Icon";
 // Internal component to render cell content with optional icons
 const CellContent = ({ cell, cellStyle, isHeaderCell = false }) => {
   const TextComponent = isHeaderCell ? H4 : Paragraph;
-  const textProps = isHeaderCell 
+  const textProps = isHeaderCell
     ? {
         type: "h4",
         fontWeight: "700",
@@ -16,13 +16,13 @@ const CellContent = ({ cell, cellStyle, isHeaderCell = false }) => {
         fontSize_tablet: "16px",
         color: Colors.darkGray,
         textAlign: "left",
-        letterSpacing: "0.3px"
+        letterSpacing: "0.3px",
       }
     : {
         fontWeight: "400",
         color: Colors.black,
         textAlign: cell?.text_align || "left",
-        lineHeight: "1.4"
+        lineHeight: "1.4",
       };
 
   // Determinar si hay contenido para mostrar
@@ -61,7 +61,9 @@ const CellContent = ({ cell, cellStyle, isHeaderCell = false }) => {
     <Div
       display="flex"
       alignItems="center"
-      justifyContent={(isHeaderCell || cell?.text_align !== "center") ? "flex-start" : "center"}
+      justifyContent={
+        isHeaderCell || cell?.text_align !== "center" ? "flex-start" : "center"
+      }
       gap={cell.gap || "8px"}
       flexDirection={cell.icon_position === "right" ? "row" : "row"}
     >
@@ -71,7 +73,9 @@ const CellContent = ({ cell, cellStyle, isHeaderCell = false }) => {
           icon={cell.icon}
           width={cell.size || "16px"}
           height={cell.size || "16px"}
-          color={cell.icon_color || (isHeaderCell ? Colors.darkGray : Colors.black)}
+          color={
+            cell.icon_color || (isHeaderCell ? Colors.darkGray : Colors.black)
+          }
         />
       )}
       {hasContent && (
@@ -97,7 +101,9 @@ const CellContent = ({ cell, cellStyle, isHeaderCell = false }) => {
           style={{ flexShrink: 0, ...cell.icon_style }}
           width={cell.size || "16px"}
           height={cell.size || "16px"}
-          color={cell.icon_color || (isHeaderCell ? Colors.darkGray : Colors.black)}
+          color={
+            cell.icon_color || (isHeaderCell ? Colors.darkGray : Colors.black)
+          }
         />
       )}
     </Div>
@@ -414,17 +420,17 @@ const DataTable = ({
                       // {...cellStyle}
                     >
                       {cellIndex === 0 ? (
-                        <CellContent 
-                          cell={cell} 
-                          cellStyle={cellStyle} 
-                          isHeaderCell={true} 
+                        <CellContent
+                          cell={cell}
+                          cellStyle={cellStyle}
+                          isHeaderCell={true}
                         />
                       ) : (
                         <>
-                          <CellContent 
-                            cell={cell} 
-                            cellStyle={cellStyle} 
-                            isHeaderCell={false} 
+                          <CellContent
+                            cell={cell}
+                            cellStyle={cellStyle}
+                            isHeaderCell={false}
                           />
                           {(cell.primary_action || cell.secondary_action) && (
                             <Div

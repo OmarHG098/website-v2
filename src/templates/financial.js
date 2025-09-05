@@ -49,7 +49,7 @@ const Financial = (props) => {
   const ymlTwoColumn = yml?.two_column;
   const ymlTableStyling = yml.data_table.table_styling;
   const defaultCourse = "full-stack";
-  
+
   return (
     <>
       <Div
@@ -130,7 +130,7 @@ const Financial = (props) => {
           tableStyle={ymlTableStyling?.table_style || {}}
         />
       )}
-      
+
       <TwoColumn
         bg_full={true}
         left={{ image: ymlTwoColumn[0].image }}
@@ -337,52 +337,52 @@ export const query = graphql`
             background
           }
           data_table {
-          title {
-            text
-          }
-          sub_title
-          table_styling {
-            header_style {
-              fontSize
-              fontSize_tablet
-              fontWeight
-              fontFamily
+            title {
+              text
             }
-            cell_style {
-              fontSize
-              fontSize_tablet
-              fontWeight
-              fontFamily
-              lineHeight
-            }
-            table_style {
-              borderRadius
-              boxShadow
-            }
-            table_props {
-              stickyHeaders
-              withBorder
-            }
-          }
-          columns {
-            title
-          }
-          rows {
-            cells {
-              content
-              icon
-              gap
-              size
-              icon_position
-              icon_color
-              icon_style {
-                position
-                bottom
+            sub_title
+            table_styling {
+              header_style {
+                fontSize
+                fontSize_tablet
+                fontWeight
+                fontFamily
               }
-              html
+              cell_style {
+                fontSize
+                fontSize_tablet
+                fontWeight
+                fontFamily
+                lineHeight
+              }
+              table_style {
+                borderRadius
+                boxShadow
+              }
+              table_props {
+                stickyHeaders
+                withBorder
+              }
+            }
+            columns {
+              title
+            }
+            rows {
+              cells {
+                content
+                icon
+                gap
+                size
+                icon_position
+                icon_color
+                icon_style {
+                  position
+                  bottom
+                }
+                html
+              }
             }
           }
-        }
         }
       }
     }
