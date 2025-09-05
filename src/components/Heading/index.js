@@ -235,6 +235,7 @@ export const Paragraph = styled.p`
   z-index: ${(props) => props.zIndex};
   border-left: ${(props) => props.borderLeft};
   opacity: ${(props) => props.opacity};
+  position: ${(props) => props.position};
   top: ${(props) => props.top};
   left: ${(props) => props.left};
   a {

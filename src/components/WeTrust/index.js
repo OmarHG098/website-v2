@@ -103,6 +103,9 @@ const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
                       width="auto"
                       fontWeight="700"
                       lineHeight="1.3"
+                      position="relative"
+                      top="-1px"
+                      letterSpacing="0.05em"
                       style={{
                         flex: "0 0 auto",
                         whiteSpace: "nowrap",

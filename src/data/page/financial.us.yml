@@ -123,7 +123,7 @@ two_column:
     background: "veryLightBlue"
     heading:
       style: '{ "fontWeight": 700 }'
-      text: "Need extra confidence?  Add a  Job Guarantee"
+      text: "Need extra confidence? Add a Job Guarantee"
       font_size: ["38px", "38px", "38px", "30px", "28px"]
     sub_heading:
       style: '{ "color": "#4D4D5C", "fontWeight": 400, "textAlign": "justify" }'
@@ -180,7 +180,7 @@ we_trust_section:
       title: "84%"
       text: Job placement rate
     - icon: graduation-2
-      title: "3 - 6"
+      title: "3-6"
       label: "months"
       text: Average time to get hired
     - icon: chart

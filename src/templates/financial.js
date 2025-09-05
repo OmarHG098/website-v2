@@ -133,7 +133,12 @@ const Financial = (props) => {
       <WeTrust
         we_trust={yml.we_trust_section}
         background="none"
-        titleProps={{ textAlign: "center" }}
+        titleProps={{
+          textAlign: "center",
+          maxWidth: "800px",
+          textWrap: "balance",
+          margin: "0 auto",
+        }}
         paragraphProps={{ textAlign: "center" }}
       />
 
@@ -294,8 +299,6 @@ export const query = graphql`
               item_style
               items {
                 heading
-                text
-                icon
               }
             }
             content {
@@ -378,6 +381,32 @@ export const query = graphql`
           }
           apply_form {
             label
+          }
+        }
+      }
+    }
+    allPaymentPlansYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          fields {
+            lang
+          }
+          title
+          sub_title
+          options {
+            id
+            title
+            description
+            cta
+            bullets {
+              items {
+                text
+                cta
+                sub_items {
+                  text
+                }
+              }
+            }
           }
         }
       }
