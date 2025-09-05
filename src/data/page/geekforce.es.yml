@@ -49,10 +49,11 @@ components:
   - name: "unlimited_support"
     position: 3
     layout: "two_column_left"
+    background: "#F0F8FF"
     proportions: [6, 6]
     image:
       style: '{"backgroundSize": "cover", "background-position": "center", "border-radius": "4px"}'
-      src: "/images/landing/feliz-empresario-laptop-2.png"
+      src: "/images/Group-6617.webp"
       shadow: false
     heading:
       text: "Apoyo Profesional Ilimitado – Siempre Adelante de las Tendencias del Mercado Laboral"
@@ -80,54 +81,45 @@ components:
 
   - name: "career_development"
     position: 7
-    layout: "two_column_right"
-    proportions: [7, 5]
-    image:
-      style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "/images/Group-6617.webp"
-      shadow: false
+    layout: iconogram
+    swipable: true
     heading: 
       text: "Consigue Trabajo con Nuestro Proceso de Desarrollo Profesional de 3 Pasos"
       font_size: ["33px", "33px", "33px", "33px", "33px"]
-      style: '{ "lineHeight": "30px" }'
+      style: '{ "lineHeight": "35px", "textAlign": "center", "width": "50%" }'
     sub_heading:
       text: "Una vez que hayas dominado las habilidades técnicas, nuestro proceso estructurado te ayuda a construir una carrera duradera en tech — llevándote del aprendizaje a conseguir el trabajo."
-      font_size: ["16px","16px","16px","16px","16px"]
-      style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300" }'
-    content:
-      style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"500" }'
-      text: "Y recuerda: tu acceso al apoyo profesional no termina cuando consigues tu primer rol—es de por vida."
-    bullets:
-      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
-      items:
-        - heading: "1. Optimización de Perfil"
-          text: |
+      font_size: ["20px", "20px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%"}'
+    icons:
+        - icon: "capacity"
+          title: "1. Optimización de Perfil"
+          content: |
             • Pule LinkedIn, GitHub y portafolio para atraer reclutadores y pasar filtros basados en IA.
             <br />
             • Construye un CV que pase los sistemas de seguimiento de candidatos (ATS) y destaque tus fortalezas.
             <br />
             • Muestra tus habilidades con un portafolio listo para reclutadores.
             <br />
-          icon: "check"
-          icon_color: '#FFFFFF'
-        - heading: "2. Preparación para Entrevistas"
-          text: |
+          color: '#0084FF'
+        - icon: "talk"
+          title: "2. Preparación para Entrevistas"
+          content: |
             • Gana confianza con simulacros de entrevistas técnicas y de comportamiento.
             <br />
             • Practica programación y resolución de problemas con ejercicios autocalificados.
             <br />
             • Desarrolla estrategias personalizadas para próximas entrevistas.
-          icon: "check"
-          icon_color: '#FFFFFF'
-        - heading: "3. Búsqueda Estratégica de Trabajo"
-          text: |
+          color: '#FF9500'
+        - icon: "ratio"
+          title: "3. Búsqueda Estratégica de Trabajo"
+          content: |
             • Crea un plan de búsqueda de trabajo personalizado alineado con tus objetivos.
             <br />
             • Navega plataformas de contratación impulsadas por IA, desde escáneres de CV hasta entrevistas automatizadas.
             <br />
             • Conéctate con nuestra extensa red de socios de contratación globales.
-          icon: "check"
-          icon_color: '#FFFFFF'
+          color: '#EB5757'
 
   - name: "lifetime_mentoring"
     position: 9
@@ -135,9 +127,8 @@ components:
     proportions: [6, 6]
     image:
       style: '{"backgroundSize": "contain", "background-position": "center", "border-radius": "4px"}'
-      src: "/images/landing/ai-mentor.jpg"
+      src: "/images/ownmancoding.webp"
       shadow: false
-    video: "6m1Jyya7eCc"
     heading:
       text: "Acelera Tus Resultados con Apoyo Profesional Hiperpersonalizado"
       font_size: ["30px", "30px", "30px", "30px", "30px"]

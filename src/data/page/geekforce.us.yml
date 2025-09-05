@@ -10,9 +10,9 @@ meta_info:
 seo_title: "Career Support"
 header:
   title: |
-    Welcome to <strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
-    <strong style = 'color:rgba(255, 183, 24, 1); font-family: Archivo-Black;'>FORCE</strong> <br>
-    <strong style='font-family: Archivo;'>- Career Development for the AI Era</strong>
+    Welcome to <strong font-weight='500'> <br>Geek</strong>
+    <strong style = 'color:rgba(255, 183, 24, 1)' font-weight='500'>FORCE</strong>:<br>
+    <strong style='font-family: Archivo;'>Career Development <br>for the AI Era</strong>
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: "GeekForce - Coding bootcamp with unlimited carreer support."
   paragraph: |
@@ -23,7 +23,7 @@ header:
   
 # Introduction Video here
 geekForce:
-  - videoId: "FcQw0bNkXOA"
+  - videoId: "-2ZvlgDnltc"
     image: ../../../static/images/landing/geekforce-thumbnail.webp
 
 who_is_hiring:
@@ -49,10 +49,11 @@ components:
   - name: "unlimited_support"
     position: 3
     layout: "two_column_left"
+    background: "#F0F8FF"
     proportions: [6, 6]
     image:
       style: '{"backgroundSize": "cover", "background-position": "center", "border-radius": "4px"}'
-      src: "/images/landing/feliz-empresario-laptop-2.png"
+      src: "/images/Group-6617.webp"
       shadow: false
     heading:
       text: "Unlimited Career Support – Always Ahead of Job Market Trends"
@@ -80,54 +81,45 @@ components:
 
   - name: "career_development"
     position: 7
-    layout: "two_column_right"
-    proportions: [7, 5]
-    image:
-      style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "/images/Group-6617.webp"
-      shadow: false
+    layout: iconogram
+    swipable: true
     heading: 
       text: "Get Hired with Our 3-Step Career Development Process"
       font_size: ["33px", "33px", "33px", "33px", "33px"]
-      style: '{ "lineHeight": "30px" }'
+      style: '{ "lineHeight": "35px", "textAlign": "center", "width": "50%" }'
     sub_heading:
       text: "Once you’ve mastered the technical skills, our structured process helps you build a lasting career in tech — taking you from learning to landing the job."
-      font_size: ["16px","16px","16px","16px","16px"]
-      style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300" }'
-    content:
-      style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"500" }'
-      text: "And remember: your access to career support doesn’t end when you land your first role—it’s for life."
-    bullets:
-      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
-      items:
-        - heading: "1. Profile Optimization"
-          text: |
+      font_size: ["20px", "20px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%"}'    
+    icons:
+        - icon: "capacity"
+          title: "1. Profile Optimization"
+          content: |
             • Polish LinkedIn, GitHub, and portfolio to attract recruiters and pass AI-based filters.
             <br />
             • Build a resume that clears applicant tracking systems (ATS) and highlights your strengths.
             <br />
             • Showcase your skills with a recruiter-ready portfolio.
             <br />
-          icon: "check"
-          icon_color: '#FFFFFF'
-        - heading: "2. Interview Preparation"
-          text: |
+          color: '#0084FF'
+        - icon: "talk"
+          title: "2. Interview Preparation"
+          content: |
             • Gain confidence with mock technical and behavioral interviews.
             <br />
             • Practice coding and problem-solving with auto-graded exercises.
             <br />
             • Develop tailored strategies for upcoming interviews..
-          icon: "check"
-          icon_color: '#FFFFFF'
-        - heading: "3. Strategic Job Search"
-          text: |
+          color: '#FF9500'
+        - icon: "ratio"
+          title: "3. Strategic Job Search"
+          content: |
             • Create a personalized job search plan aligned with your goals.
             <br />
             • Navigate AI-driven hiring platforms, from resume scanners to automated interviews.
             <br />
             • Connect with our extensive network of global hiring partners.
-          icon: "check"
-          icon_color: '#FFFFFF'
+          color: '#EB5757'
 
   - name: "lifetime_mentoring"
     position: 9
@@ -135,9 +127,8 @@ components:
     proportions: [6, 6]
     image:
       style: '{"backgroundSize": "contain", "background-position": "center", "border-radius": "4px"}'
-      src: "/images/landing/ai-mentor.jpg"
+      src: "/images/ownmancoding.webp"
       shadow: false
-    video: "6m1Jyya7eCc"
     heading:
       text: "Accelerate Your Results with Hyperpersonalized Career Support"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
