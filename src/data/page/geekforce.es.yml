@@ -10,9 +10,9 @@ meta_info:
 seo_title: "Apoyo Profesional"
 header:
   title: |
-    Bienvenido a <strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
-    <strong style = 'color:rgba(255, 183, 24, 1); font-family: Archivo-Black;'>FORCE</strong> <br>
-    <strong style='font-family: Archivo;'>- Desarrollo Profesional para la Era de la IA</strong>
+    Bienvenido a <strong style='color:black; font-family: Archivo-Black;'><br>Geek</strong>
+    <strong style = 'color:rgba(255, 183, 24, 1); font-family: Archivo-Black;'>FORCE</strong>:<br>
+    <strong style='font-family: Archivo;'>Desarrollo Profesional para la Era de la IA</strong>
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: "GeekForce - Bootcamp de programación con apoyo profesional ilimitado."
   paragraph: |
@@ -127,7 +127,7 @@ components:
     proportions: [6, 6]
     image:
       style: '{"backgroundSize": "contain", "background-position": "center", "border-radius": "4px"}'
-      src: "/images/ownmancoding.webp"
+      src: "/images/landing/Group-original.webp"
       shadow: false
     heading:
       text: "Acelera Tus Resultados con Apoyo Profesional Hiperpersonalizado"

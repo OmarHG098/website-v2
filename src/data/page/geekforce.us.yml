@@ -10,8 +10,8 @@ meta_info:
 seo_title: "Career Support"
 header:
   title: |
-    Welcome to <strong font-weight='500'> <br>Geek</strong>
-    <strong style = 'color:rgba(255, 183, 24, 1)' font-weight='500'>FORCE</strong>:<br>
+    Welcome to <strong style='color:black; font-family: Archivo-Black;'> <br>Geek</strong>
+    <strong style = 'color:rgba(255, 183, 24, 1); font-family: Archivo-Black;'>FORCE</strong>:<br>
     <strong style='font-family: Archivo;'>Career Development <br>for the AI Era</strong>
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: "GeekForce - Coding bootcamp with unlimited carreer support."
@@ -127,7 +127,7 @@ components:
     proportions: [6, 6]
     image:
       style: '{"backgroundSize": "contain", "background-position": "center", "border-radius": "4px"}'
-      src: "/images/ownmancoding.webp"
+      src: "/images/landing/Group-original.webp"
       shadow: false
     heading:
       text: "Accelerate Your Results with Hyperpersonalized Career Support"
