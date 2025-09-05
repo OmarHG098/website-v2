@@ -55,16 +55,16 @@ const View = (props) => {
         }
       />
 
-      {/* Comparison Table */}
-      {yml.comparison_table && (
+      {/* Data Table */}
+      {yml.data_table && (
         <DataTable
           // stickyHeaders={true}
           borderRadius="8px"
           withBorder={true}
-          title={yml.comparison_table.title}
-          sub_title={yml.comparison_table.sub_title}
-          columns={yml.comparison_table.columns}
-          rows={yml.comparison_table.rows}
+          title={yml.data_table.title}
+          sub_title={yml.data_table.sub_title}
+          columns={yml.data_table.columns}
+          rows={yml.data_table.rows}
         />
       )}
 
@@ -107,7 +107,7 @@ export const query = graphql`
             sub_title
             paragraph
           }
-          comparison_table {
+          data_table {
             title {
               text
             }
@@ -119,6 +119,10 @@ export const query = graphql`
               cells {
                 content
                 html
+                text_align
+                icon
+                icon_position
+                icon_color
                 primary_action {
                   text
                   path

@@ -15,7 +15,7 @@ header:
   paragraph: "Choosing a bootcamp is a big decision — but we make it simple. At 4Geeks, every program is built to launch successful tech careers, whether you're switching paths or just starting out. The difference lies in where each path takes you and the skills you'll need. Keep reading to explore the key differences side by side."
 
 # foto de asiatico 4 cuadros program comparision page
-comparison_table:
+data_table:
   title:
     text: "Which Path Fits You Best?"
   sub_title: "Compare programs to see which one aligns with your interests, strengths, and goals. Every 4Geeks bootcamp will equip you with the skills, mentorship, and career support to thrive in the career of your choice."
@@ -85,28 +85,37 @@ comparison_table:
     - cells:
         - content: "Average U.S. Salary"
         - content: "<strong>$75K–$110K</strong>"
+          text_align: "center"
           html: true
         - content: "<strong>$85K–$130K</strong>"
+          text_align: "center"
           html: true
         - content: "<strong>$80K–$120K</strong>"
+          text_align: "center"
           html: true
 
     - cells:
         - content: "Bootcamp Schedule"
         - content: "<strong>Full-Time (12 weeks)</strong> or <strong>Part-Time (20 weeks)</strong>."
+          text_align: "center"
           html: true
         - content: "<strong>Part-Time (16 weeks)</strong>."
+          text_align: "center"
           html: true
         - content: "<strong>Part-Time (16 weeks)</strong>."
+          text_align: "center"
           html: true
 
     - cells:
         - content: "Course Delivery"
         - content: "Online or In-Person (select cities)."
+          text_align: "center"
           html: false
         - content: "Online."
+          text_align: "center"
           html: false
         - content: "Online."
+          text_align: "center"
           html: false
 
     - cells:

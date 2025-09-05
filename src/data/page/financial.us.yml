@@ -187,4 +187,129 @@ we_trust_section:
       title: "55%"
       text: Salary increase after graduation
 
-
+data_table:
+  title:
+    text: "FINANCING BENEFITS AND REQUIREMENTS AT A GLANCE"
+  sub_title: ""
+  table_styling:
+    header_style:
+      fontSize: "16px"
+      fontSize_tablet: "16px"
+      fontWeight: "700"
+      fontFamily: "var(--font-sans)"
+    cell_style:
+      fontSize: "16px"
+      fontSize_tablet: "16px"
+      fontWeight: "400"
+      fontFamily: "var(--font-sans)"
+      lineHeight: "1.5"
+    table_style:
+      borderRadius: "12px"
+      boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)"
+    # DataTable behavior props
+    table_props:
+      stickyHeaders: true
+      withBorder: true
+  columns:
+    - title: "Option"
+    - title: "Pay in Full"
+    - title: "Monthly Plans (TFC)"
+    - title: "Loans (Ascent/Climb)"
+    - title: "Income-Based (Edly)"
+  rows:
+    - cells:
+        - content: "Discount"
+        - content: "10% off"
+          icon: "check"
+          gap: "4px"
+          size: "16px"
+          icon_position: "left"
+          icon_color: "#28a745"
+          icon_style: {
+            position: "relative",
+            bottom: "-1px"
+          }
+          html: false
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+    - cells:
+        - content: "Credit Check"
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+        - content: "Low Barrier"
+          icon: "check"
+          gap: "4px"
+          size: "16px"
+          icon_position: "left"
+          icon_color: "#28a745"
+          icon_style: {
+            position: "relative",
+            bottom: "-1px"
+          }
+          html: false
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+        - content: "Required"
+          icon: "check"
+          gap: "4px"
+          size: "16px"
+          icon_position: "left"
+          icon_color: "#28a745"
+          icon_style: {
+            position: "relative",
+            bottom: "-1px"
+          }
+          html: false
+    - cells:
+        - content: "Defer Payments"
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+        - content: ""
+          icon: "check"
+          size: "22px"
+          icon_color: "#28a745"
+          html: false
+        - content: ""
+          icon: "check"
+          size: "22px"
+          icon_color: "#28a745"
+          html: false
+    - cells:
+        - content: "Pay Once Hired"
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+        - content: ""
+          icon: "check"
+          size: "22px"
+          icon_color: "#28a745"
+          html: false

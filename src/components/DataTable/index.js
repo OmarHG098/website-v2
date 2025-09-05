@@ -2,7 +2,107 @@ import React from "react";
 import { Link } from "gatsby";
 import { Div, Grid } from "../Sections";
 import { H2, H3, H4, Paragraph } from "../Heading";
-import { Button, Colors } from "../Styling";
+import { Colors } from "../Styling";
+import Icon from "../Icon";
+
+// Internal component to render cell content with optional icons
+const CellContent = ({ cell, cellStyle, isHeaderCell = false }) => {
+  const TextComponent = isHeaderCell ? H4 : Paragraph;
+  const textProps = isHeaderCell 
+    ? {
+        type: "h4",
+        fontWeight: "700",
+        fontSize: "15px",
+        fontSize_tablet: "16px",
+        color: Colors.darkGray,
+        textAlign: "left",
+        letterSpacing: "0.3px"
+      }
+    : {
+        fontWeight: "400",
+        color: Colors.black,
+        textAlign: cell?.text_align || "left",
+        lineHeight: "1.4"
+      };
+
+  // Determinar si hay contenido para mostrar
+  const cellContent = typeof cell === "string" ? cell : cell.content || "";
+  const hasContent = cellContent && cellContent.trim() !== "";
+  const hasIcon = cell.icon;
+
+  // Si no hay contenido ni icono, no renderizar nada
+  if (!hasContent && !hasIcon) {
+    return null;
+  }
+
+  if (!hasIcon) {
+    // Render without icon
+    return (
+      <TextComponent
+        fontSize={cellStyle?.fontSize || "13px"}
+        fontSize_tablet={cellStyle?.fontSize_tablet || "14px"}
+        margin="0"
+        {...textProps}
+        {...(cell.html
+          ? {
+              dangerouslySetInnerHTML: {
+                __html: cellContent,
+              },
+            }
+          : {
+              children: cellContent,
+            })}
+      />
+    );
+  }
+
+  // Render with icon
+  return (
+    <Div
+      display="flex"
+      alignItems="center"
+      justifyContent={(isHeaderCell || cell?.text_align !== "center") ? "flex-start" : "center"}
+      gap={cell.gap || "8px"}
+      flexDirection={cell.icon_position === "right" ? "row" : "row"}
+    >
+      {(!cell.icon_position || cell.icon_position === "left") && (
+        <Icon
+          style={{ flexShrink: 0, ...cell.icon_style }}
+          icon={cell.icon}
+          width={cell.size || "16px"}
+          height={cell.size || "16px"}
+          color={cell.icon_color || (isHeaderCell ? Colors.darkGray : Colors.black)}
+        />
+      )}
+      {hasContent && (
+        <TextComponent
+          fontSize={cellStyle?.fontSize || "13px"}
+          fontSize_tablet={cellStyle?.fontSize_tablet || "14px"}
+          margin="0"
+          {...textProps}
+          {...(cell.html
+            ? {
+                dangerouslySetInnerHTML: {
+                  __html: cellContent,
+                },
+              }
+            : {
+                children: cellContent,
+              })}
+        />
+      )}
+      {cell.icon_position === "right" && (
+        <Icon
+          icon={cell.icon}
+          style={{ flexShrink: 0, ...cell.icon_style }}
+          width={cell.size || "16px"}
+          height={cell.size || "16px"}
+          color={cell.icon_color || (isHeaderCell ? Colors.darkGray : Colors.black)}
+        />
+      )}
+    </Div>
+  );
+};
 
 /**
  * DataTable - Reusable component for displaying data tables
@@ -50,13 +150,16 @@ import { Button, Colors } from "../Styling";
  * />
  *
  * YAML Integration:
- * - Structure: comparison_table.title, comparison_table.sub_title, comparison_table.columns, comparison_table.rows
- * - GraphQL query: comparison_table { title { text } sub_title columns { text } rows }
+ * - Structure: data_table.title, data_table.sub_title, data_table.columns, data_table.rows
+ * - GraphQL query: data_table { title { text } sub_title columns { text } rows }
  * - Row structure with buttons:
  *   rows:
  *     - cells:
  *         - content: "Cell content here"
  *           html: false  # Set to true if content contains HTML
+ *           icon: "check"  # Optional icon name
+ *           icon_position: "left"  # 'left' or 'right' (default: 'left')
+ *           icon_color: "#000000"  # Optional icon color
  *         - content: "Another cell"
  *           html: true
  *         - content: "Ready to start?"
@@ -111,7 +214,7 @@ const DataTable = ({
       display="block"
       padding="40px 17px"
       padding_tablet="60px 40px"
-      padding_md="60px 80px"
+      padding_md={withBorder ? "60px 80px 90px 80px" : "60px 80px"}
       padding_lg="60px 0"
       maxWidth="1280px"
       margin="0 auto"
@@ -120,8 +223,10 @@ const DataTable = ({
       {title && (
         <H2
           type="h2"
+          maxWidth="800px"
           textAlign="center"
-          margin="0 0 20px 0"
+          margin="0 auto 20px auto"
+          textWrap="balance"
           fontSize="28px"
           fontSize_tablet="35px"
           fontWeight="700"
@@ -188,17 +293,17 @@ const DataTable = ({
           >
             <Div as="tr" display="contents">
               {columns.map((column, index) => {
-                // Determinar border-radius para esquinas del header
+                // Determine border-radius for header corners
                 const isFirstColumn = index === 0;
                 const isLastColumn = index === columns.length - 1;
                 let headerBorderRadius = "0px";
 
                 if (isFirstColumn) {
-                  // Esquina superior izquierda
+                  // Top left corner
                   const [topLeft] = childBorderRadius.split(" ");
                   headerBorderRadius = `${topLeft} 0px 0px 0px`;
                 } else if (isLastColumn) {
-                  // Esquina superior derecha
+                  // Top right corner
                   const borderValues = childBorderRadius.split(" ");
                   const topRight = borderValues[1] || borderValues[0];
                   headerBorderRadius = `0px ${topRight} 0px 0px`;
@@ -214,7 +319,6 @@ const DataTable = ({
                     display="flex"
                     alignItems="center"
                     justifyContent={index === 0 ? "flex-start" : "center"}
-                    // justifyContent={index === 0 ? "flex-start" : "center"}
                     borderBottom={`2px solid ${Colors.lightGray}`}
                     borderRight={
                       index < columns.length - 1
@@ -257,8 +361,6 @@ const DataTable = ({
             {rows.map((row, rowIndex) => (
               <Div as="tr" key={`row-${rowIndex}`} display="contents">
                 {row.cells?.map((cell, cellIndex) => {
-                  console.log("cell:::", cell);
-                  // Determinar border-radius para esquinas inferiores
                   const isLastRow = rowIndex === rows.length - 1;
                   const isFirstColumn = cellIndex === 0;
                   const isLastColumn = cellIndex === row.cells.length - 1;
@@ -288,7 +390,8 @@ const DataTable = ({
                       padding_tablet="20px"
                       display="flex"
                       flexDirection="column"
-                      alignItems={cellIndex === 0 ? "center" : "flex-start"}
+                      alignItems="center"
+                      // alignItems={cellIndex === 0 ? "center" : "flex-start"}
                       justifyContent="center"
                       // justifyContent={cellIndex === 0 ? "flex-start" : "center"}
                       borderBottom={
@@ -308,54 +411,20 @@ const DataTable = ({
                       whiteSpace="nowrap" // Prevent text wrapping on mobile
                       whiteSpace_tablet="normal" // Allow wrapping on tablets and up
                       scope={cellIndex === 0 ? "row" : undefined}
-                      {...cellStyle}
+                      // {...cellStyle}
                     >
                       {cellIndex === 0 ? (
-                        <H4
-                          type="h4"
-                          fontSize="13px"
-                          fontSize_tablet="14px"
-                          fontWeight="600"
-                          color={Colors.darkGray}
-                          margin="0"
-                          textAlign="left"
-                          textTransform="uppercase"
-                          letterSpacing="0.3px"
-                          {...(cell.html
-                            ? {
-                                dangerouslySetInnerHTML: {
-                                  __html: cell.content,
-                                },
-                              }
-                            : {
-                                children:
-                                  typeof cell === "string"
-                                    ? cell
-                                    : cell.content || "",
-                              })}
+                        <CellContent 
+                          cell={cell} 
+                          cellStyle={cellStyle} 
+                          isHeaderCell={true} 
                         />
                       ) : (
                         <>
-                          <Paragraph
-                            fontSize="13px"
-                            fontSize_tablet="14px"
-                            fontWeight="400"
-                            color={Colors.black}
-                            margin="0"
-                            textAlign="center"
-                            lineHeight="1.4"
-                            {...(cell.html
-                              ? {
-                                  dangerouslySetInnerHTML: {
-                                    __html: cell.content,
-                                  },
-                                }
-                              : {
-                                  children:
-                                    typeof cell === "string"
-                                      ? cell
-                                      : cell.content || "",
-                                })}
+                          <CellContent 
+                            cell={cell} 
+                            cellStyle={cellStyle} 
+                            isHeaderCell={false} 
                           />
                           {(cell.primary_action || cell.secondary_action) && (
                             <Div
@@ -368,10 +437,7 @@ const DataTable = ({
                               margin="10px 0"
                             >
                               {cell.primary_action &&
-                                cell.primary_action?.text &&
-                                (cell.primary_action.link_state &&
-                                Object.keys(cell.primary_action.link_state)
-                                  .length > 0 ? (
+                                cell.primary_action?.text && (
                                   <Link
                                     to={cell.primary_action.path}
                                     state={cell.primary_action.link_state}
@@ -379,7 +445,7 @@ const DataTable = ({
                                     style={{
                                       background: Colors.blue,
                                       color: Colors.white,
-                                      padding: "12px 24px",
+                                      padding: "14px",
                                       fontFamily: "Lato",
                                       fontWeight: "700",
                                       borderRadius: "4px",
@@ -394,30 +460,9 @@ const DataTable = ({
                                   >
                                     {cell.primary_action.text}
                                   </Link>
-                                ) : (
-                                  <Button
-                                    as="a"
-                                    href={cell.primary_action.path}
-                                    background={Colors.blue}
-                                    color={Colors.white}
-                                    className="primary-button-hover"
-                                    padding="8px 16px"
-                                    borderRadius="4px"
-                                    fontSize="14px"
-                                    textAlign="center"
-                                    width="100%"
-                                    marginRight="8px"
-                                    textDecoration="none"
-                                    display="inline-block"
-                                  >
-                                    {cell.primary_action.text}
-                                  </Button>
-                                ))}
+                                )}
                               {cell.secondary_action &&
-                                cell.secondary_action?.text &&
-                                (cell.secondary_action.link_state &&
-                                Object.keys(cell.secondary_action.link_state)
-                                  .length > 0 ? (
+                                cell.secondary_action?.text && (
                                   <Link
                                     to={cell.secondary_action.path}
                                     state={cell.secondary_action.link_state}
@@ -426,7 +471,7 @@ const DataTable = ({
                                       background: Colors.white,
                                       color: Colors.blue,
                                       border: `1px solid ${Colors.blue}`,
-                                      padding: "12px 24px",
+                                      padding: "14px",
                                       fontFamily: "Lato",
                                       fontWeight: "700",
                                       borderRadius: "4px",
@@ -439,25 +484,7 @@ const DataTable = ({
                                   >
                                     {cell.secondary_action.text}
                                   </Link>
-                                ) : (
-                                  <Button
-                                    as="a"
-                                    href={cell.secondary_action.path}
-                                    background={Colors.white}
-                                    color={Colors.blue}
-                                    border={`1px solid ${Colors.blue}`}
-                                    padding="8px 16px"
-                                    borderRadius="4px"
-                                    fontSize="14px"
-                                    textAlign="center"
-                                    width="100%"
-                                    textDecoration="none"
-                                    display="inline-block"
-                                    className="secondary-button-hover"
-                                  >
-                                    {cell.secondary_action.text}
-                                  </Button>
-                                ))}
+                                )}
                             </Div>
                           )}
                         </>

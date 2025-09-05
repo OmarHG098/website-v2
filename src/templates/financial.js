@@ -16,6 +16,7 @@ import PricesAndPayment from "../components/PricesAndPayment";
 import PaymentPlans from "../components/PaymentPlans";
 import Iconogram from "../components/Iconogram";
 import TwoColumn from "../components/TwoColumn";
+import DataTable from "../components/DataTable";
 
 const Financial = (props) => {
   const { session } = useContext(SessionContext);
@@ -46,8 +47,9 @@ const Financial = (props) => {
   }
 
   const ymlTwoColumn = yml?.two_column;
+  const ymlTableStyling = yml.data_table.table_styling;
   const defaultCourse = "full-stack";
-
+  
   return (
     <>
       <Div
@@ -114,6 +116,21 @@ const Financial = (props) => {
       </Div>
       <PaymentPlans lang={pageContext.lang} />
 
+      {yml.data_table && (
+        <DataTable
+          borderRadius={ymlTableStyling?.table_style?.borderRadius || "8px"}
+          withBorder={ymlTableStyling?.table_props?.withBorder || true}
+          stickyHeaders={ymlTableStyling?.table_props?.stickyHeaders || false}
+          title={yml.data_table.title}
+          sub_title={yml.data_table.sub_title}
+          columns={yml.data_table.columns}
+          rows={yml.data_table.rows}
+          headerStyle={ymlTableStyling?.header_style || {}}
+          cellStyle={ymlTableStyling?.cell_style || {}}
+          tableStyle={ymlTableStyling?.table_style || {}}
+        />
+      )}
+      
       <TwoColumn
         bg_full={true}
         left={{ image: ymlTwoColumn[0].image }}
@@ -319,6 +336,53 @@ export const query = graphql`
             }
             background
           }
+          data_table {
+          title {
+            text
+          }
+          sub_title
+          table_styling {
+            header_style {
+              fontSize
+              fontSize_tablet
+              fontWeight
+              fontFamily
+            }
+            cell_style {
+              fontSize
+              fontSize_tablet
+              fontWeight
+              fontFamily
+              lineHeight
+            }
+            table_style {
+              borderRadius
+              boxShadow
+            }
+            table_props {
+              stickyHeaders
+              withBorder
+            }
+          }
+          columns {
+            title
+          }
+          rows {
+            cells {
+              content
+              icon
+              gap
+              size
+              icon_position
+              icon_color
+              icon_style {
+                position
+                bottom
+              }
+              html
+            }
+          }
+        }
         }
       }
     }
