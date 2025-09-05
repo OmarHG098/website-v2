@@ -4,6 +4,9 @@ const fs = require("fs");
 const { execSync } = require("child_process");
 const path = require("path");
 
+// Get the next command from process arguments
+const nextCommand = process.argv.slice(2).join(' ') || 'the next command';
+
 // Console colors
 const colors = {
   red: "\x1b[31m",
@@ -115,4 +118,4 @@ if (!checkNodeVersion()) {
   process.exit(1);
 }
 
-log("\n🚀 Correct version detected. Proceeding with build...\n", "green");
+log(`\n🚀 We're good to go! proceeding with ${nextCommand}...\n`, "green");
