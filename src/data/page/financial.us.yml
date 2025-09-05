@@ -187,6 +187,24 @@ we_trust_section:
       title: "55%"
       text: Salary increase after graduation
 
+contact_form:
+  title: "Need Help with Financing?"
+  subtitle: "Our admissions team is here to help you find the best financing option for your situation."
+  submit_button_text: "Get Financing Help"
+  loading_text: "Sending..."
+  success_message: "Message sent successfully! We will contact you soon."
+  error_message: "Error sending message. Please try again."
+  validation_error: "Please correct the errors in the form"
+  placeholders:
+    firstName: "First Name"
+    lastName: "Last Name"
+    email: "Email Address"
+    message: "Tell us about your financing questions or concerns..."
+  status_messages:
+    loading: "Sending form, please wait"
+    success: "Form sent successfully"
+    error: "Error sending form"
+
 data_table:
   title:
     text: "FINANCING BENEFITS AND REQUIREMENTS AT A GLANCE"
