@@ -5,7 +5,7 @@ const { execSync } = require("child_process");
 const path = require("path");
 
 // Get the next command from process arguments
-const nextCommand = process.argv.slice(2).join(' ') || 'the next command';
+const nextCommand = process.argv.slice(2).join(" ") || "the next command";
 
 // Console colors
 const colors = {
