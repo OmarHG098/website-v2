@@ -1,114 +1,8 @@
 import React from "react";
-import { Link } from "gatsby";
-import { Div, Grid } from "../Sections";
-import { H2, H3, H4, Paragraph } from "../Heading";
+import { Div } from "../Sections";
+import { H2, Paragraph } from "../Heading";
 import { Colors } from "../Styling";
-import Icon from "../Icon";
-
-// Internal component to render cell content with optional icons
-const CellContent = ({ cell, cellStyle, isHeaderCell = false }) => {
-  const TextComponent = isHeaderCell ? H4 : Paragraph;
-  const textProps = isHeaderCell
-    ? {
-        type: "h4",
-        fontWeight: "700",
-        fontSize: "15px",
-        fontSize_tablet: "16px",
-        color: Colors.darkGray,
-        textAlign: "left",
-        letterSpacing: "0.3px",
-      }
-    : {
-        fontWeight: "400",
-        color: Colors.black,
-        textAlign: cell?.text_align || "left",
-        lineHeight: "1.4",
-      };
-
-  // Determinar si hay contenido para mostrar
-  const cellContent = typeof cell === "string" ? cell : cell.content || "";
-  const hasContent = cellContent && cellContent.trim() !== "";
-  const hasIcon = cell.icon;
-
-  // Si no hay contenido ni icono, no renderizar nada
-  if (!hasContent && !hasIcon) {
-    return null;
-  }
-
-  if (!hasIcon) {
-    // Render without icon
-    return (
-      <TextComponent
-        fontSize={cellStyle?.fontSize || "13px"}
-        fontSize_tablet={cellStyle?.fontSize_tablet || "14px"}
-        margin="0"
-        {...textProps}
-        {...(cell.html
-          ? {
-              dangerouslySetInnerHTML: {
-                __html: cellContent,
-              },
-            }
-          : {
-              children: cellContent,
-            })}
-      />
-    );
-  }
-
-  // Render with icon
-  return (
-    <Div
-      display="flex"
-      alignItems="center"
-      justifyContent={
-        isHeaderCell || cell?.text_align !== "center" ? "flex-start" : "center"
-      }
-      gap={cell.gap || "8px"}
-      flexDirection={cell.icon_position === "right" ? "row" : "row"}
-    >
-      {(!cell.icon_position || cell.icon_position === "left") && (
-        <Icon
-          style={{ flexShrink: 0, ...cell.icon_style }}
-          icon={cell.icon}
-          width={cell.size || "16px"}
-          height={cell.size || "16px"}
-          color={
-            cell.icon_color || (isHeaderCell ? Colors.darkGray : Colors.black)
-          }
-        />
-      )}
-      {hasContent && (
-        <TextComponent
-          fontSize={cellStyle?.fontSize || "13px"}
-          fontSize_tablet={cellStyle?.fontSize_tablet || "14px"}
-          margin="0"
-          {...textProps}
-          {...(cell.html
-            ? {
-                dangerouslySetInnerHTML: {
-                  __html: cellContent,
-                },
-              }
-            : {
-                children: cellContent,
-              })}
-        />
-      )}
-      {cell.icon_position === "right" && (
-        <Icon
-          icon={cell.icon}
-          style={{ flexShrink: 0, ...cell.icon_style }}
-          width={cell.size || "16px"}
-          height={cell.size || "16px"}
-          color={
-            cell.icon_color || (isHeaderCell ? Colors.darkGray : Colors.black)
-          }
-        />
-      )}
-    </Div>
-  );
-};
+import { TableHeader, TableRow } from "./table-components";
 
 /**
  * DataTable - Reusable component for displaying data tables
@@ -196,17 +90,6 @@ const DataTable = ({
     ? `repeat(${columnCount}, 1fr)`
     : gridColumns;
 
-  // Sticky header styles
-  const stickyHeaderStyles = stickyHeaders
-    ? {
-        position: "sticky",
-        top: "0",
-        zIndex: "10",
-        backgroundColor: Colors.white,
-        boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-      }
-    : {};
-
   const borderWidth = 3;
   const borderRadiusValue =
     typeof borderRadius === "number" ? borderRadius : parseFloat(borderRadius);
@@ -270,7 +153,6 @@ const DataTable = ({
             : `2.5px solid ${Colors.borderGray}`
         }
         boxShadow={withBorder ? "22px 26px 0px 0px rgba(0,0,0,1)" : undefined}
-        // Webkit scrollbar styling for better UX
         style={{
           WebkitOverflowScrolling: "touch",
           scrollbarWidth: "thin",
@@ -282,79 +164,19 @@ const DataTable = ({
           as="table"
           display="block"
           borderRadius={borderRadiusValuePx}
-          // background={Colors.lightGray}
-          minWidth="600px" // Minimum width to prevent compression
-          minWidth_tablet="auto" // Allow natural width on tablets and up
+          minWidth="600px"
+          minWidth_tablet="auto"
           {...tableStyle}
         >
-          {/* Table Header */}
-          <Div
-            as="thead"
-            display="grid"
-            borderRadius={borderRadiusValuePx}
-            gridTemplateColumns={gridColumns}
-            gridTemplateColumns_tablet={gridColumns_tablet}
-            gridGap="1px"
-            {...(stickyHeaders ? stickyHeaderStyles : {})}
-          >
-            <Div as="tr" display="contents">
-              {columns.map((column, index) => {
-                // Determine border-radius for header corners
-                const isFirstColumn = index === 0;
-                const isLastColumn = index === columns.length - 1;
-                let headerBorderRadius = "0px";
-
-                if (isFirstColumn) {
-                  // Top left corner
-                  const [topLeft] = childBorderRadius.split(" ");
-                  headerBorderRadius = `${topLeft} 0px 0px 0px`;
-                } else if (isLastColumn) {
-                  // Top right corner
-                  const borderValues = childBorderRadius.split(" ");
-                  const topRight = borderValues[1] || borderValues[0];
-                  headerBorderRadius = `0px ${topRight} 0px 0px`;
-                }
-
-                return (
-                  <Div
-                    as="th"
-                    key={`header-${index}`}
-                    background={index === 0 ? Colors.black : Colors.white}
-                    padding={stickyHeaders ? "8px 16px" : "15px"}
-                    padding_tablet="20px"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent={index === 0 ? "flex-start" : "center"}
-                    borderBottom={`2px solid ${Colors.lightGray}`}
-                    borderRight={
-                      index < columns.length - 1
-                        ? `1px solid ${Colors.borderGray}`
-                        : "none"
-                    }
-                    borderRadius={headerBorderRadius}
-                    minWidth="120px" // Prevent cell compression
-                    minWidth_tablet="auto" // Allow natural width on larger screens
-                    whiteSpace="nowrap" // Prevent text wrapping on mobile
-                    whiteSpace_tablet="normal" // Allow wrapping on tablets and up
-                    scope={index === 0 ? "row" : "col"}
-                    {...headerStyle}
-                  >
-                    <H3
-                      type="h3"
-                      fontSize={stickyHeaders ? "14px" : "16px"}
-                      fontSize_tablet="18px"
-                      fontWeight="600"
-                      color={index === 0 ? Colors.white : Colors.darkGray}
-                      margin="0"
-                      textAlign={index === 0 ? "left" : "center"}
-                    >
-                      {column.title || column}
-                    </H3>
-                  </Div>
-                );
-              })}
-            </Div>
-          </Div>
+          <TableHeader
+            columns={columns}
+            headerStyle={headerStyle}
+            stickyHeaders={stickyHeaders}
+            gridColumns={gridColumns}
+            gridColumns_tablet={gridColumns_tablet}
+            childBorderRadius={childBorderRadius}
+            borderRadiusValue={borderRadiusValue}
+          />
 
           {/* Table Body */}
           <Div
@@ -365,140 +187,15 @@ const DataTable = ({
             gridGap="1px"
           >
             {rows.map((row, rowIndex) => (
-              <Div as="tr" key={`row-${rowIndex}`} display="contents">
-                {row.cells?.map((cell, cellIndex) => {
-                  const isLastRow = rowIndex === rows.length - 1;
-                  const isFirstColumn = cellIndex === 0;
-                  const isLastColumn = cellIndex === row.cells.length - 1;
-                  let cellBorderRadius = "0px";
-
-                  if (isLastRow) {
-                    if (isFirstColumn) {
-                      // Esquina inferior izquierda
-                      const borderValues = childBorderRadius.split(" ");
-                      const bottomLeft =
-                        borderValues[3] || borderValues[2] || borderValues[0];
-                      cellBorderRadius = `0px 0px 0px ${bottomLeft}`;
-                    } else if (isLastColumn) {
-                      // Esquina inferior derecha
-                      const borderValues = childBorderRadius.split(" ");
-                      const bottomRight = borderValues[2] || borderValues[0];
-                      cellBorderRadius = `0px 0px ${bottomRight} 0px`;
-                    }
-                  }
-
-                  return (
-                    <Div
-                      as={cellIndex === 0 ? "th" : "td"}
-                      key={`cell-${rowIndex}-${cellIndex}`}
-                      background={(!cellStyle?.disableLinePattern && rowIndex % 2 === 1) 
-                        ? (cellStyle?.linePatternColor || Colors.veryLightBlue3) 
-                        : Colors.white}
-                      padding="15px"
-                      padding_tablet="20px"
-                      display="flex"
-                      flexDirection="column"
-                      alignItems="center"
-                      justifyContent="center"
-                      borderBottom={
-                        rowIndex < rows.length - 1
-                          ? `1px solid ${Colors.borderGray}`
-                          : "none"
-                      }
-                      borderRight={
-                        cellIndex < row.cells.length - 1
-                          ? `1px solid ${Colors.borderGray}`
-                          : "none"
-                      }
-                      borderRadius={cellBorderRadius}
-                      minHeight="80px"
-                      minWidth="120px" // Prevent cell compression
-                      minWidth_tablet="auto" // Allow natural width on larger screens
-                      whiteSpace="nowrap" // Prevent text wrapping on mobile
-                      whiteSpace_tablet="normal" // Allow wrapping on tablets and up
-                      scope={cellIndex === 0 ? "row" : undefined}
-                      // {...cellStyle}
-                    >
-                      {cellIndex === 0 ? (
-                        <CellContent
-                          cell={cell}
-                          cellStyle={cellStyle}
-                          isHeaderCell={true}
-                        />
-                      ) : (
-                        <>
-                          <CellContent
-                            cell={cell}
-                            cellStyle={cellStyle}
-                            isHeaderCell={false}
-                          />
-                          {(cell.primary_action || cell.secondary_action) && (
-                            <Div
-                              as="div"
-                              width="100%"
-                              display="flex"
-                              flexDirection="column"
-                              gap="10px"
-                              alignItems="center"
-                              margin="10px 0"
-                            >
-                              {cell.primary_action &&
-                                cell.primary_action?.text && (
-                                  <Link
-                                    to={cell.primary_action.path}
-                                    state={cell.primary_action.link_state}
-                                    className="primary-button-hover"
-                                    style={{
-                                      background: Colors.blue,
-                                      color: Colors.white,
-                                      padding: "14px",
-                                      fontFamily: "Lato",
-                                      fontWeight: "700",
-                                      borderRadius: "4px",
-                                      fontSize: "14px",
-                                      textAlign: "center",
-                                      width: "100%",
-                                      marginRight: "8px",
-                                      textDecoration: "none",
-                                      display: "inline-block",
-                                      transition: "background-color 0.3s ease",
-                                    }}
-                                  >
-                                    {cell.primary_action.text}
-                                  </Link>
-                                )}
-                              {cell.secondary_action &&
-                                cell.secondary_action?.text && (
-                                  <Link
-                                    to={cell.secondary_action.path}
-                                    state={cell.secondary_action.link_state}
-                                    className="secondary-button-hover"
-                                    style={{
-                                      background: Colors.white,
-                                      color: Colors.blue,
-                                      border: `1px solid ${Colors.blue}`,
-                                      padding: "14px",
-                                      fontFamily: "Lato",
-                                      fontWeight: "700",
-                                      borderRadius: "4px",
-                                      fontSize: "14px",
-                                      textAlign: "center",
-                                      width: "100%",
-                                      textDecoration: "none",
-                                      display: "inline-block",
-                                    }}
-                                  >
-                                    {cell.secondary_action.text}
-                                  </Link>
-                                )}
-                            </Div>
-                          )}
-                        </>
-                      )}
-                    </Div>
-                  );
-                })}
-              </Div>
+              <TableRow
+                key={`row-${rowIndex}`}
+                row={row}
+                rowIndex={rowIndex}
+                totalRows={rows.length}
+                totalColumns={columns.length}
+                cellStyle={cellStyle}
+                childBorderRadius={childBorderRadius}
+              />
             ))}
           </Div>
         </Div>
