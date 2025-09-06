@@ -391,15 +391,15 @@ const DataTable = ({
                     <Div
                       as={cellIndex === 0 ? "th" : "td"}
                       key={`cell-${rowIndex}-${cellIndex}`}
-                      background={Colors.white}
+                      background={(!cellStyle?.disableLinePattern && rowIndex % 2 === 1) 
+                        ? (cellStyle?.linePatternColor || Colors.veryLightBlue3) 
+                        : Colors.white}
                       padding="15px"
                       padding_tablet="20px"
                       display="flex"
                       flexDirection="column"
                       alignItems="center"
-                      // alignItems={cellIndex === 0 ? "center" : "flex-start"}
                       justifyContent="center"
-                      // justifyContent={cellIndex === 0 ? "flex-start" : "center"}
                       borderBottom={
                         rowIndex < rows.length - 1
                           ? `1px solid ${Colors.borderGray}`
