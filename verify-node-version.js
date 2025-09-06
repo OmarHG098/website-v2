@@ -90,11 +90,11 @@ function checkNodeVersion() {
     );
     log(`\n💡 ${colors.bold}Quick solutions:${colors.reset}`, "yellow");
     log(
-      `   1. Switch version: ${colors.blue}nvm use ${requiredMajor}${colors.reset}`,
+      `   1. Install if missing: ${colors.blue}nvm install ${requiredMajor}${colors.reset}`,
       "yellow"
     );
     log(
-      `   2. Install if missing: ${colors.blue}nvm install ${requiredMajor}${colors.reset}`,
+      `   2. Switch version: ${colors.blue}nvm use ${requiredMajor}${colors.reset}`,
       "yellow"
     );
     log(
