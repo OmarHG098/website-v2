@@ -14,6 +14,11 @@ header:
   sub_title: ""
   paragraph: "Elegir un bootcamp es una gran decisión, pero nosotros lo hacemos simple. En 4Geeks, cada programa está diseñado para lanzar carreras tecnológicas exitosas, ya sea que estés cambiando de rumbo o apenas comenzando. La diferencia radica en hacia dónde te lleva cada camino y las habilidades que necesitarás. Sigue leyendo para explorar las diferencias clave lado a lado."
 
+choose_program:
+  hide_empty_content: true
+  title: ''
+  paragraph: ''
+
 data_table:
   title:
     text: "¿Qué Camino Se Adapta Mejor a Ti?"

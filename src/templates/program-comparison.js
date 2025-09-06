@@ -9,18 +9,21 @@ import { Div } from "../components/Sections";
 import { Colors } from "../components/Styling";
 import { H2 } from "../components/Heading";
 import DataTable from "../components/DataTable";
+import ChooseYourProgram from "../components/ChooseYourProgram/index.js";
 
 const View = (props) => {
   const { data, pageContext, yml } = props;
   const { session } = React.useContext(SessionContext);
+  const chooseProgramRef = React.useRef(null);
 
   return (
     <>
       <Header
         margin="10px 0 0 0"
-        margin_md={
-          isCustomBarActive(session) ? "120px 0 40px 0" : "70px 0 40px 0"
-        }
+        margin_md={"70px 0 0px 0"}
+        padding_tablet="60px 40px 0 40px"
+        padding_md="60px 40px 0 40px"
+        padding_l="60px 0 0 0"
         fontFamily={"Archivo-Black"}
         seo_title={yml.seo_title}
         title={yml.header.title}
@@ -54,6 +57,21 @@ const View = (props) => {
           </>
         }
       />
+
+      {yml.choose_program && (
+        <ChooseYourProgram
+          hideEmptyContent={yml.choose_program.hide_empty_content}
+          chooseProgramRef={chooseProgramRef}
+          id="choose-program"
+          lang={pageContext.lang}
+          programs={data.allChooseYourProgramYaml.edges[0].node.programs}
+          title={yml.choose_program.title}
+          paragraph={yml.choose_program.paragraph}
+          containerStyles={{
+            padding: "4rem 40px 6rem",
+          }}
+        />
+      )}
 
       {/* Data Table */}
       {yml.data_table && (
@@ -107,6 +125,11 @@ export const query = graphql`
             sub_title
             paragraph
           }
+          choose_program {
+            title
+            paragraph
+            hide_empty_content
+          }
           data_table {
             title {
               text
@@ -139,6 +162,19 @@ export const query = graphql`
                 }
               }
             }
+          }
+        }
+      }
+    }
+    allChooseYourProgramYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          programs {
+            link
+            sub_title
+            title
+            icon
+            text_link
           }
         }
       }

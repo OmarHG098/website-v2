@@ -59,9 +59,14 @@ const ChooseYourProgram = ({
         maxWidth_tablet="1280px"
         margin_tablet="0 auto"
         margin_lg="0 auto"
-      >        
+      >
         {(!hideEmptyContent || title || paragraph) && (
-          <Div textAlign="center" flexDirection="column" width="100%" zIndex="1">
+          <Div
+            textAlign="center"
+            flexDirection="column"
+            width="100%"
+            zIndex="1"
+          >
             {(!hideEmptyContent || title) && (
               <H2 padding="0 0 32px 0">{title || info.title}</H2>
             )}
@@ -128,7 +133,9 @@ const ChooseYourProgram = ({
                         />
                       </Div>
                     </Div>
-                    {(!hideEmptyContent || program.description || program.description_mobile) && (
+                    {(!hideEmptyContent ||
+                      program.description ||
+                      program.description_mobile) && (
                       <Div
                         display="flex"
                         flexDirection="column"
