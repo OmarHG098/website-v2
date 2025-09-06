@@ -5,70 +5,51 @@ import { Colors } from "../Styling";
 import { TableHeader, TableRow } from "./table-components";
 
 /**
- * DataTable - Reusable component for displaying data tables
+ * @typedef {Object} DataAction
+ * @property {string} text
+ * @property {string} path
  *
- * Features:
- * - Fully reusable with any data structure
- * - Advanced responsive design with horizontal scroll on mobile
- * - Prevents text compression on small screens
- * - HTML content support in cells
- * - Sticky headers with mobile-optimized spacing
- * - Customizable styles for table, headers and cells
- * - Flexible CSS grid system (2-5 columns recommended)
- * - Touch-friendly scrolling with custom scrollbar styling
+ * @typedef {Object} DataCellObject
+ * @property {string} content
+ * @property {boolean} [html]
+ * @property {string} [icon]
+ * @property {'left'|'right'} [icon_position]
+ * @property {string} [icon_color]
+ * @property {DataAction} [primary_action]
+ * @property {DataAction} [secondary_action]
  *
- * Responsive Behavior:
- * - Mobile: Horizontal scroll with minimum cell width (120px)
- * - Tablet+: Natural grid layout with text wrapping
- * - Prevents content compression following shadcn/ui best practices
+ * @typedef {string|DataCellObject} DataCell
  *
- * @param {Object|string} title - Table title (object with properties or simple string)
- * @param {string} sub_title - Optional subtitle text displayed below the main title
- * @param {Array} columns - Array of objects with structure: [{text: string, style: object}]
- * @param {Array} rows - Array of arrays, each row contains cells: [[cell1, cell2, ...], ...]
- * @param {Object} headerStyle - Custom styles for headers
- * @param {Object} cellStyle - Custom styles for cells
- * @param {Object} tableStyle - Custom styles for table
- * @param {boolean} responsive - Enable responsive behavior (default: true)
- * @param {boolean} stickyHeaders - Enable sticky positioning for the column headers on scroll with optimized mobile spacing (default: false)
- * @param {boolean} withBorder - Whether to apply border and shadow styling (default: false)
- * @param {string|number} borderRadius - Border radius for all table corners. Can be a string (e.g., "8px") or number (e.g., 8) (default: "0px")
+ * @typedef {Object} DataColumn
+ * @property {string} text
+ * @property {Object} [style]
  *
- * Usage example:
+ * Responsive table component with optional sticky headers and HTML-capable cells.
+ *
+ * @param {Object} props
+ * @param {string|{text?: string}} [props.title] Table title. Accepts plain string or object with Heading props.
+ * @param {string} [props.sub_title]
+ * @param {DataColumn[]} [props.columns=[]]
+ * @param {DataCell[][]} [props.rows=[]]
+ * @param {Object} [props.headerStyle={}] Custom styles for header cells.
+ * @param {Object} [props.cellStyle={}] Custom styles for body cells.
+ * @param {Object} [props.tableStyle={}] Custom styles for the outer table wrapper.
+ * @param {boolean} [props.responsive=true] Enables horizontal scroll on small screens.
+ * @param {boolean} [props.stickyHeaders=false] Keeps column headers visible while scrolling.
+ * @param {boolean} [props.withBorder=false] Adds solid border and shadow styling.
+ * @param {string|number} [props.borderRadius="0px"] Radius applied to the table wrapper.
+ * @returns {JSX.Element}
+ *
+ * @example
  * <DataTable
- *   title="Program Comparison"
- *   borderRadius="8px"
- *   columns={[
- *     {text: "Category", style: {fontWeight: "bold"}},
- *     {text: "Program A"},
- *     {text: "Program B"}
- *   ]}
- *   rows={[
- *     ["Duration", "6 months", "9 months"],
- *     ["Price", "$5000", "$7000"]
- *   ]}
+ *   title="Comparison"
+ *   columns={[{ text: 'Feature' }, { text: 'A' }, { text: 'B' }]}
+ *   rows={[["Duration", "6m", "9m"]]}
  * />
  *
- * YAML Integration:
- * - Structure: data_table.title, data_table.sub_title, data_table.columns, data_table.rows
- * - GraphQL query: data_table { title { text } sub_title columns { text } rows }
- * - Row structure with buttons:
- *   rows:
- *     - cells:
- *         - content: "Cell content here"
- *           html: false  # Set to true if content contains HTML
- *           icon: "check"  # Optional icon name
- *           icon_position: "left"  # 'left' or 'right' (default: 'left')
- *           icon_color: "#000000"  # Optional icon color
- *         - content: "Another cell"
- *           html: true
- *         - content: "Ready to start?"
- *           primary_action:
- *             text: "Learn More"
- *             path: "/us/course/full-stack"
- *           secondary_action:
- *             text: "Apply Now"
- *             path: "/us/apply"
+ * @remarks
+ * Optimized for ~2–5 columns; wider tables remain horizontally scrollable on mobile.
+ * Can be sourced from YAML: data_table { title, sub_title, columns, rows }.
  */
 const DataTable = ({
   title,
