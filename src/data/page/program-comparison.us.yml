@@ -138,11 +138,11 @@ data_table:
 
     - cells:
         - content: "Job Guarantee"
-        - content: "Available for additional <strong>USD 2000</strong>, <strong>Included in the full time course option at no extra cost</strong>."
+        - content: "Available for additional <strong>$2,000</strong>, <strong>Included in the full time course option at no extra cost</strong>."
           html: true
-        - content: "Available for additional <strong>USD 2000</strong>"
+        - content: "Available for additional <strong>$2,000</strong>"
           html: true
-        - content: "Available for additional <strong>USD 2000</strong>"
+        - content: "Available for additional <strong>$2,000</strong>"
           html: true
 
     - cells:
