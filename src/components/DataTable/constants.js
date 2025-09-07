@@ -22,7 +22,7 @@ export const COLORS = {
   STRIPE_BG: "#f8f9fa", // Zebra-stripe background for alternating rows
   WHITE: Colors.white, // Default cell background
   BORDER: "#e0e0e0", // Divider & outline color
-  HOVER_BG: "#f9f9f9",    // Background on row hover (if implemented)
+  HOVER_BG: "#f9f9f9", // Background on row hover (if implemented)
 };
 
 // Padding presets to maintain consistent spacing

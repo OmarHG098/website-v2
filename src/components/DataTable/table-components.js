@@ -5,7 +5,13 @@ import { H3, H4, Paragraph } from "../Heading";
 import { Colors } from "../Styling";
 import Icon from "../Icon";
 
-import { PADDING, TYPOGRAPHY, BORDER_RADIUS, BORDER_STYLES, ACTION_BUTTONS } from "./constants";
+import {
+  PADDING,
+  TYPOGRAPHY,
+  BORDER_RADIUS,
+  BORDER_STYLES,
+  ACTION_BUTTONS,
+} from "./constants";
 
 const CellContent = React.memo(({ cell, cellStyle, isHeaderCell = false }) => {
   const TextComponent = isHeaderCell ? H4 : Paragraph;
@@ -107,7 +113,7 @@ const ActionButtons = React.memo(({ actions }) => {
     >
       {actions.primary && actions.primary.text && (
         <Link
-        className={primaryVariant ? `button-${primaryVariant}` : ''}
+          className={primaryVariant ? `button-${primaryVariant}` : ""}
           to={actions.primary.path}
           state={actions.primary.link_state}
           style={{
@@ -127,7 +133,7 @@ const ActionButtons = React.memo(({ actions }) => {
       )}
       {actions.secondary && actions.secondary.text && (
         <Link
-          className={secondaryVariant ? `button-${secondaryVariant}` : ''}
+          className={secondaryVariant ? `button-${secondaryVariant}` : ""}
           to={actions.secondary.path}
           state={actions.secondary.link_state}
           style={{
@@ -145,7 +151,7 @@ const ActionButtons = React.memo(({ actions }) => {
         </Link>
       )}
     </Div>
-  )
+  );
 });
 
 const TableHeader = React.memo(
