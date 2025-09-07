@@ -165,11 +165,13 @@ data_table:
           primary_action:
             text: "Apply Now"
             path: "/us/apply"
+            variant: "default"
             link_state:
             course: "full-stack"
           secondary_action:
             text: "Learn More"
             path: "/us/coding-bootcamps/full-time-full-stack-developer"
+            variant: "link"
             link_state:
             course: ""
 
@@ -178,21 +180,25 @@ data_table:
           primary_action:
             text: "Apply Now"
             path: "/us/apply"
+            variant: "default"
             link_state:
             course: "datascience-ml"
           secondary_action:
             text: "Learn More"
             path: "/us/coding-bootcamps/datascience-machine-learning"
+            variant: "link"
             link_state:
         - content: ""
           html: false
           primary_action:
             text: "Apply Now"
             path: "/us/apply"
+            variant: "default"
             link_state:
               course: "cybersecurity"
           secondary_action:
             text: "Learn More"
+            variant: "link"
             path: "/us/coding-bootcamps/cybersecurity"
             link_state:
 

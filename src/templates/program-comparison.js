@@ -149,6 +149,7 @@ export const query = graphql`
                 primary_action {
                   text
                   path
+                  variant
                   link_state {
                     course
                   }
@@ -156,6 +157,7 @@ export const query = graphql`
                 secondary_action {
                   text
                   path
+                  variant
                   link_state {
                     course
                   }

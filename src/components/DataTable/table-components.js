@@ -5,7 +5,7 @@ import { H3, H4, Paragraph } from "../Heading";
 import { Colors } from "../Styling";
 import Icon from "../Icon";
 
-import { PADDING, TYPOGRAPHY, BORDER_RADIUS, BORDER_STYLES } from "./constants";
+import { PADDING, TYPOGRAPHY, BORDER_RADIUS, BORDER_STYLES, ACTION_BUTTONS } from "./constants";
 
 const CellContent = React.memo(({ cell, cellStyle, isHeaderCell = false }) => {
   const TextComponent = isHeaderCell ? H4 : Paragraph;
@@ -92,61 +92,61 @@ const CellContent = React.memo(({ cell, cellStyle, isHeaderCell = false }) => {
   );
 });
 
-const ActionButtons = React.memo(({ actions }) => (
-  <Div
-    width="100%"
-    display="flex"
-    flexDirection="column"
-    gap="10px"
-    alignItems="center"
-    margin="10px 0"
-  >
-    {actions.primary && actions.primary.text && (
-      <Link
-        to={actions.primary.path}
-        state={actions.primary.link_state}
-        style={{
-          background: Colors.blue,
-          color: Colors.white,
-          padding: PADDING.MEDIUM,
-          fontFamily: TYPOGRAPHY.FONT_FAMILY,
-          fontWeight: "700",
-          borderRadius: BORDER_RADIUS.SMALL,
-          fontSize: TYPOGRAPHY.FONT_SIZES.SMALL,
-          textAlign: "center",
-          width: "100%",
-          marginRight: "8px",
-          textDecoration: "none",
-          display: "inline-block",
-        }}
-      >
-        {actions.primary.text}
-      </Link>
-    )}
-    {actions.secondary && actions.secondary.text && (
-      <Link
-        to={actions.secondary.path}
-        state={actions.secondary.link_state}
-        style={{
-          background: Colors.white,
-          color: Colors.blue,
-          border: BORDER_STYLES.BLUE_OUTLINE,
-          padding: PADDING.MEDIUM,
-          fontFamily: TYPOGRAPHY.FONT_FAMILY,
-          fontWeight: "700",
-          borderRadius: BORDER_RADIUS.SMALL,
-          fontSize: TYPOGRAPHY.FONT_SIZES.SMALL,
-          textAlign: "center",
-          width: "100%",
-          textDecoration: "none",
-          display: "inline-block",
-        }}
-      >
-        {actions.secondary.text}
-      </Link>
-    )}
-  </Div>
-));
+const ActionButtons = React.memo(({ actions }) => {
+  const primaryVariant = actions.primary?.variant?.toUpperCase();
+  const secondaryVariant = actions.secondary?.variant?.toUpperCase();
+
+  return (
+    <Div
+      width="100%"
+      display="flex"
+      flexDirection="column"
+      gap="10px"
+      alignItems="center"
+      margin="10px 0"
+    >
+      {actions.primary && actions.primary.text && (
+        <Link
+        className={primaryVariant ? `button-${primaryVariant}` : ''}
+          to={actions.primary.path}
+          state={actions.primary.link_state}
+          style={{
+            ...(ACTION_BUTTONS[primaryVariant] || ACTION_BUTTONS.DEFAULT),
+            padding: PADDING.MEDIUM,
+            borderRadius: BORDER_RADIUS.BUTTON,
+            fontFamily: TYPOGRAPHY.FONT_FAMILY,
+            fontSize: TYPOGRAPHY.FONT_SIZES.SMALL,
+            fontWeight: 700,
+            display: "inline-block",
+            textAlign: "center",
+            transition: "background-color 0.3s ease",
+          }}
+        >
+          {actions.primary.text}
+        </Link>
+      )}
+      {actions.secondary && actions.secondary.text && (
+        <Link
+          className={secondaryVariant ? `button-${secondaryVariant}` : ''}
+          to={actions.secondary.path}
+          state={actions.secondary.link_state}
+          style={{
+            ...(ACTION_BUTTONS[secondaryVariant] || ACTION_BUTTONS.OUTLINE),
+            padding: PADDING.MEDIUM,
+            borderRadius: BORDER_RADIUS.BUTTON,
+            fontFamily: TYPOGRAPHY.FONT_FAMILY,
+            fontWeight: 700,
+            display: "inline-block",
+            textAlign: "center",
+            transition: "background-color 0.3s ease",
+          }}
+        >
+          {actions.secondary.text}
+        </Link>
+      )}
+    </Div>
+  )
+});
 
 const TableHeader = React.memo(
   ({

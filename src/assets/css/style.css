@@ -592,12 +592,14 @@ button.active p {
 }
 
 /* Primary button hover effect for comparison table */
-.primary-button-hover:hover {
+.button-DEFAULT:hover {
   background-color: #339dff !important;
 }
-
-.secondary-button-hover:hover {
+.button-OUTLINE:hover {
   background-color: #e6f3ff !important;
+}
+.button-LINK:hover {
+  text-decoration: underline;
 }
 .star-rating div.off {
   background: #ffffff;
