@@ -238,7 +238,10 @@ export const apply = async (data, session) => {
     return true;
   } catch (error) {
     console.error("Error in apply:", error);
-    return { error: true, message: error.message || "Failed to submit application" };
+    return {
+      error: true,
+      message: error.message || "Failed to submit application",
+    };
   }
 };
 
@@ -275,7 +278,10 @@ export const requestSyllabus = async (data, session) => {
     return true;
   } catch (error) {
     console.error("Error in requestSyllabus:", error);
-    return { error: true, message: error.message || "Failed to request syllabus" };
+    return {
+      error: true,
+      message: error.message || "Failed to request syllabus",
+    };
   }
 };
 export const openGuidebook = (url) => {
@@ -332,7 +338,10 @@ export const contactUs = async (data, session) => {
     return true;
   } catch (error) {
     console.error("Error in contactUs:", error);
-    return { error: true, message: error.message || "Failed to send contact form" };
+    return {
+      error: true,
+      message: error.message || "Failed to send contact form",
+    };
   }
 };
 export const newsletterSignup = async (data, session) => {
@@ -360,7 +369,10 @@ export const newsletterSignup = async (data, session) => {
     return true;
   } catch (error) {
     console.error("Error in newsletterSignup:", error);
-    return { error: true, message: error.message || "Failed to signup for newsletter" };
+    return {
+      error: true,
+      message: error.message || "Failed to signup for newsletter",
+    };
   }
 };
 
@@ -389,7 +401,10 @@ export const outcomesReport = async (data, session) => {
     return true;
   } catch (error) {
     console.error("Error in outcomesReport:", error);
-    return { error: true, message: error.message || "Failed to request outcomes report" };
+    return {
+      error: true,
+      message: error.message || "Failed to request outcomes report",
+    };
   }
 };
 
@@ -464,6 +479,9 @@ export const processFormEntry = async (data, session) => {
     return true;
   } catch (error) {
     console.error("Error in processFormEntry:", error);
-    return { error: true, message: error.message || "Failed to process form entry" };
+    return {
+      error: true,
+      message: error.message || "Failed to process form entry",
+    };
   }
 };
