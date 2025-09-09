@@ -238,56 +238,58 @@ const Outcomes = ({ data, pageContext, yml }) => {
                         background: "#c4c4c4",
                       }}
                     />
-                    {section.paragraph && section.paragraph.split("\n").map((m, i) => (
-                      <Paragraph
-                        key={i}
-                        letterSpacing="0.05em"
-                        textAlign="left"
-                        margin="10px 0"
-                      >
-                        {m}
-                      </Paragraph>
-                    ))}
+                    {section.paragraph &&
+                      section.paragraph.split("\n").map((m, i) => (
+                        <Paragraph
+                          key={i}
+                          letterSpacing="0.05em"
+                          textAlign="left"
+                          margin="10px 0"
+                        >
+                          {m}
+                        </Paragraph>
+                      ))}
                     {/* Conditionally render stats only if they exist */}
-                    {Array.isArray(section.stats) && section.stats.length > 0 && (
-                      <GridContainer
-                        justifyContent="between"
-                        gridGap_tablet="30px"
-                        containerColumns_tablet="0fr repeat(12, 1fr) 1fr"
-                        columns_tablet={section.stats.length}
-                        margin="41px 0 0 0"
-                      >
-                        {section.stats.map((m, i) => {
-                          return (
-                            <Div
-                              key={i}
-                              gap="0"
-                              gridColumnGap="40px"
-                              flexDirection="column"
-                              margin="0 0 38px 0"
-                            >
-                              <H2
-                                type="h2"
-                                textAlign_tablet="left"
-                                color={Colors.blue}
-                                margin="0 0 10px 0"
-                                fontSize="27px"
-                                lineHeight="28px"
+                    {Array.isArray(section.stats) &&
+                      section.stats.length > 0 && (
+                        <GridContainer
+                          justifyContent="between"
+                          gridGap_tablet="30px"
+                          containerColumns_tablet="0fr repeat(12, 1fr) 1fr"
+                          columns_tablet={section.stats.length}
+                          margin="41px 0 0 0"
+                        >
+                          {section.stats.map((m, i) => {
+                            return (
+                              <Div
+                                key={i}
+                                gap="0"
+                                gridColumnGap="40px"
+                                flexDirection="column"
+                                margin="0 0 38px 0"
                               >
-                                {m.stat}
-                              </H2>
-                              <H3
-                                type="h3"
-                                textAlign_tablet="left"
-                                lineHeight="28px"
-                              >
-                                {m.content}
-                              </H3>
-                            </Div>
-                          );
-                        })}
-                      </GridContainer>
-                    )}
+                                <H2
+                                  type="h2"
+                                  textAlign_tablet="left"
+                                  color={Colors.blue}
+                                  margin="0 0 10px 0"
+                                  fontSize="27px"
+                                  lineHeight="28px"
+                                >
+                                  {m.stat}
+                                </H2>
+                                <H3
+                                  type="h3"
+                                  textAlign_tablet="left"
+                                  lineHeight="28px"
+                                >
+                                  {m.content}
+                                </H3>
+                              </Div>
+                            );
+                          })}
+                        </GridContainer>
+                      )}
                     {/* Conditionally render sub_sections only if they exist */}
                     {Array.isArray(section.sub_sections) &&
                       section.sub_sections
@@ -343,28 +345,36 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                       )}
 
                                       {/* Only render charts if chart flag is true and charts exist */}
-                                      {imageItem.chart && yml.charts && Array.isArray(yml.charts.chart_list) && (
-                                        <GridContainer
-                                          columns_tablet="3"
-                                          justifyContent="center"
-                                          justifyContent_tablet="center"
-                                          gridTemplateColumns_tablet="3"
-                                        >
-                                          {yml.charts.chart_list.map((c, k) => {
-                                            return (
-                                              <Div
-                                                flexDirection="column"
-                                                key={k}
-                                              >
-                                                <Charts dataArray={c.data} />
-                                                <H4 textTransform="uppercase">
-                                                  {c.title}
-                                                </H4>
-                                              </Div>
-                                            );
-                                          })}
-                                        </GridContainer>
-                                      )}
+                                      {imageItem.chart &&
+                                        yml.charts &&
+                                        Array.isArray(
+                                          yml.charts.chart_list
+                                        ) && (
+                                          <GridContainer
+                                            columns_tablet="3"
+                                            justifyContent="center"
+                                            justifyContent_tablet="center"
+                                            gridTemplateColumns_tablet="3"
+                                          >
+                                            {yml.charts.chart_list.map(
+                                              (c, k) => {
+                                                return (
+                                                  <Div
+                                                    flexDirection="column"
+                                                    key={k}
+                                                  >
+                                                    <Charts
+                                                      dataArray={c.data}
+                                                    />
+                                                    <H4 textTransform="uppercase">
+                                                      {c.title}
+                                                    </H4>
+                                                  </Div>
+                                                );
+                                              }
+                                            )}
+                                          </GridContainer>
+                                        )}
                                     </React.Fragment>
                                   );
                                 })}
