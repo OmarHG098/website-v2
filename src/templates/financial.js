@@ -17,7 +17,6 @@ import PaymentPlans from "../components/PaymentPlans";
 import Iconogram from "../components/Iconogram";
 import TwoColumn from "../components/TwoColumn";
 import DataTable from "../components/DataTable";
-import DynamicForm from "../components/DynamicForm";
 
 const Financial = (props) => {
   const { session } = useContext(SessionContext);
@@ -175,36 +174,6 @@ const Financial = (props) => {
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
-
-      <Div
-        maxWidth="1280px"
-        margin="80px auto"
-        padding="40px 80px"
-        padding_tablet="60px"
-        padding_xxs="20px"
-        justifyContent="center"
-      >
-        <DynamicForm
-          title={yml.contact_form?.title || "Need Help with Financing?"}
-          subtitle={yml.contact_form?.subtitle}
-          submitButtonText={
-            yml.contact_form?.submit_button_text || "Get Financing Help"
-          }
-          loadingText={yml.contact_form?.loading_text}
-          successMessage={yml.contact_form?.success_message}
-          errorMessage={yml.contact_form?.error_message}
-          validationError={yml.contact_form?.validation_error}
-          statusMessages={yml.contact_form?.status_messages}
-          placeholders={yml.contact_form?.placeholders}
-          onSuccess={(data) => {
-            console.log("Contact form submitted:", data);
-          }}
-          onError={(error) => {
-            console.error("Contact form error:", error);
-          }}
-          className="financial-contact-form"
-        />
-      </Div>
     </>
   );
 };
