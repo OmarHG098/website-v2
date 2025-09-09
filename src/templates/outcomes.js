@@ -239,16 +239,17 @@ const Outcomes = ({ data, pageContext, yml }) => {
                       }}
                     />
                     {section.paragraph &&
-                      section.paragraph.split("\n").map((m, i) => (
-                        <Paragraph
-                          key={i}
-                          letterSpacing="0.05em"
-                          textAlign="left"
-                          margin="10px 0"
-                        >
-                          {m}
-                        </Paragraph>
-                      ))}
+                      section.paragraph
+                        .split("\n")
+                        .map((m, i) => (
+                          <Paragraph
+                            key={i}
+                            letterSpacing="0.05em"
+                            textAlign="left"
+                            margin="10px 0"
+                            dangerouslySetInnerHTML={{ __html: m }}
+                          />
+                        ))}
                     {/* Conditionally render stats only if they exist */}
                     {Array.isArray(section.stats) &&
                       section.stats.length > 0 && (

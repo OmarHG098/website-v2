@@ -46,7 +46,7 @@ sections:
         image_section:
           - image: 
             image_paragraph: " "
-            chart: false
+            chart: true
 
   - title: "📊 Outcomes by the Numbers"
     ref: "outcomes_numbers"
@@ -63,19 +63,17 @@ sections:
       - stat: "3-6"
         content: "months average time to get hired in 2025 across all markets"
 
-
-
   - title: "🚀 Why Students Get Results Here"
     ref: "why_results"
     paragraph: "We don’t just teach skills — we make sure you can turn them into a career. Every 4Geeks student gets:"
-    stats: 
-      - stat: "GeekFORCE Career Support"
-        content: "Unlimited 1:1 career mentorship for life"
-      - stat: "GeekPAL Mentorship"
+    sub_sections:
+      - title: "GeekFORCE Career Support (for life):"
+        content: "Unlimited 1:1 career mentorship, interviews training, resume/portfolio coaching, and expert job search strategies."
+      - title: "GeekPAL Mentorship (for life):"
         content: "Unlimited coding help from real human mentors for life"
-      - stat: "AI-Powered Support"
+      - title: "AI-Powered Support:"
         content: "24/7 personalized coding feedback and career development tools"
-      - stat: "5,000+ Hiring Partners"
+      - title: "5,000+ Hiring Partners:"
         content: "A global network of companies that trust and hire 4Geeks graduates"
 
   - title: "🏆 Recognized, Rated, and Recommended"
@@ -88,26 +86,29 @@ sections:
         content: "On SwitchUp, Course Report, and Career Karma"
       - stat: "Licensed"
         content: "By the Florida Department of Education"
+      - stat: "Trusted"
+        content: "By students in 20+ countries"
     sub_sections:
       - title: "INDUSTRY VALIDATION"
         content: "Trusted by students in 20+ countries and recognized by leading industry publications for our results and methodology."
-        image_section:
-          - image: 
-            image_paragraph: "Our recognition comes from consistent results and student success across global markets."
+
 
   - title: "💡 Making Tech Careers Accessible"
     ref: "accessibility"
     paragraph: "Tech careers should be open to everyone. That's why we offer:"
     stats: 
-      - stat: "Most Affordable"
+      - stat: "Most Affordable Tuition"
         content: "Among top-rated bootcamps (Forbes recognition)"
-      - stat: "Starting at $299/month"
+      - stat: "Under $299/month"
         content: "Flexible financing options available"
-      - stat: "Income-based Plans"
+      - stat: "Income-based Payment Plans"
         content: "And scholarships to remove financial barriers"
     sub_sections:
       - title: "FINANCING OPTIONS"
-        content: "We believe financial barriers shouldn't prevent anyone from accessing quality tech education. Our flexible payment plans make career transformation possible for everyone."
+        content: |
+          <p>We believe financial barriers shouldn't prevent anyone from accessing quality tech education. Our flexible payment plans make career transformation possible for everyone.</p>
+          <br>
+          <p>👉 <a target='_blank' nofollow noreferrer noopener href='/us/financials'>See Financing Options</a></p>
       
 
   - title: "✅ Extra Confidence: The Job Guarantee"
@@ -125,6 +126,9 @@ sections:
           <br>
           <br>
           <p>Follow these simple steps, and if you don't land a job, you'll receive 100% of your tuition back. We're that confident in our program's effectiveness.</p>
+          <br>
+          <br>
+          <p>👉 <a target='_blank' nofollow noreferrer noopener href='/us/job-guarantee'>Learn more about the Job Guarantee</a></p>
         image_section:
           - image: 
             image_paragraph: ""
@@ -132,7 +136,9 @@ sections:
   - title: "🎯 The Bottom Line"
     ref: "bottom_line"
     paragraph: | 
-      Whether in the U.S., LATAM, or Europe, 4Geeks graduates consistently land jobs, raise salaries, and build lasting careers. We've proven that our students get hired and thrive in their careers. Ready to see your own success story? <a target='_blank' nofollow noreferrer noopener href='/us/apply'>Apply now</a>
+      Whether in the U.S., LATAM, or Europe, 4Geeks graduates consistently land jobs, raise salaries, and build lasting careers. <br>
+      We've proven that our students get hired and thrive in their careers. Ready to see your own success story? <br>
+      👉 <a target='_blank' nofollow noreferrer noopener href='/us/apply'>Apply now</a>
 
             
 charts:
