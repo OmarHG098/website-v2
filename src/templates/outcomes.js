@@ -238,7 +238,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
                         background: "#c4c4c4",
                       }}
                     />
-                    {section.paragraph.split("\n").map((m, i) => (
+                    {section.paragraph && section.paragraph.split("\n").map((m, i) => (
                       <Paragraph
                         key={i}
                         letterSpacing="0.05em"
@@ -248,48 +248,50 @@ const Outcomes = ({ data, pageContext, yml }) => {
                         {m}
                       </Paragraph>
                     ))}
-                    <GridContainer
-                      justifyContent="between"
-                      gridGap_tablet="30px"
-                      containerColumns_tablet="0fr repeat(12, 1fr) 1fr"
-                      columns_tablet={
-                        Array.isArray(section.stats) && section.stats.length
-                      }
-                      margin="41px 0 0 0"
-                    >
-                      {section.stats.map((m, i) => {
-                        return (
-                          <Div
-                            key={i}
-                            gap="0"
-                            gridColumnGap="40px"
-                            flexDirection="column"
-                            margin="0 0 38px 0"
-                          >
-                            <H2
-                              type="h2"
-                              textAlign_tablet="left"
-                              color={Colors.blue}
-                              margin="0 0 10px 0"
-                              fontSize="27px"
-                              lineHeight="28px"
+                    {/* Conditionally render stats only if they exist */}
+                    {Array.isArray(section.stats) && section.stats.length > 0 && (
+                      <GridContainer
+                        justifyContent="between"
+                        gridGap_tablet="30px"
+                        containerColumns_tablet="0fr repeat(12, 1fr) 1fr"
+                        columns_tablet={section.stats.length}
+                        margin="41px 0 0 0"
+                      >
+                        {section.stats.map((m, i) => {
+                          return (
+                            <Div
+                              key={i}
+                              gap="0"
+                              gridColumnGap="40px"
+                              flexDirection="column"
+                              margin="0 0 38px 0"
                             >
-                              {m.stat}
-                            </H2>
-                            <H3
-                              type="h3"
-                              textAlign_tablet="left"
-                              lineHeight="28px"
-                            >
-                              {m.content}
-                            </H3>
-                          </Div>
-                        );
-                      })}
-                    </GridContainer>
+                              <H2
+                                type="h2"
+                                textAlign_tablet="left"
+                                color={Colors.blue}
+                                margin="0 0 10px 0"
+                                fontSize="27px"
+                                lineHeight="28px"
+                              >
+                                {m.stat}
+                              </H2>
+                              <H3
+                                type="h3"
+                                textAlign_tablet="left"
+                                lineHeight="28px"
+                              >
+                                {m.content}
+                              </H3>
+                            </Div>
+                          );
+                        })}
+                      </GridContainer>
+                    )}
+                    {/* Conditionally render sub_sections only if they exist */}
                     {Array.isArray(section.sub_sections) &&
                       section.sub_sections
-                        .filter((section) => section.title !== "")
+                        .filter((subSection) => subSection.title !== "")
                         .map((m, i) => {
                           return (
                             <React.Fragment key={i}>
@@ -309,43 +311,50 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                 dangerouslySetInnerHTML={{ __html: m.content }}
                               />
                               {Array.isArray(m.image_section) &&
-                                m.image_section.map((m, i) => {
+                                m.image_section.map((imageItem, j) => {
                                   return (
-                                    <React.Fragment key={i}>
-                                      <StyledBackgroundSection
-                                        margin="30px 0"
-                                        minHeight="100px"
-                                        height="255px"
-                                        width="100%"
-                                        image={
-                                          m.image &&
-                                          m.image.childImageSharp
-                                            .gatsbyImageData
-                                        }
-                                        bgSize="contain"
-                                      />
+                                    <React.Fragment key={j}>
+                                      {/* Only render image if it exists */}
+                                      {imageItem.image && (
+                                        <StyledBackgroundSection
+                                          margin="30px 0"
+                                          minHeight="100px"
+                                          height="255px"
+                                          width="100%"
+                                          image={
+                                            imageItem.image.childImageSharp
+                                              .gatsbyImageData
+                                          }
+                                          bgSize="contain"
+                                        />
+                                      )}
 
-                                      <Paragraph
-                                        justifyContent="center"
-                                        padding="50px 0 0"
-                                        display="none"
-                                        display_tablet="flex"
-                                        textAlign="left"
-                                      >
-                                        {m.image_paragraph}
-                                      </Paragraph>
-                                      <GridContainer
-                                        columns_tablet="3"
-                                        justifyContent="center"
-                                        justifyContent_tablet="center"
-                                        gridTemplateColumns_tablet="3"
-                                      >
-                                        {m.chart &&
-                                          yml.charts.chart_list.map((c, i) => {
+                                      {/* Only render paragraph if it exists */}
+                                      {imageItem.image_paragraph && (
+                                        <Paragraph
+                                          justifyContent="center"
+                                          padding="50px 0 0"
+                                          display="none"
+                                          display_tablet="flex"
+                                          textAlign="left"
+                                        >
+                                          {imageItem.image_paragraph}
+                                        </Paragraph>
+                                      )}
+
+                                      {/* Only render charts if chart flag is true and charts exist */}
+                                      {imageItem.chart && yml.charts && Array.isArray(yml.charts.chart_list) && (
+                                        <GridContainer
+                                          columns_tablet="3"
+                                          justifyContent="center"
+                                          justifyContent_tablet="center"
+                                          gridTemplateColumns_tablet="3"
+                                        >
+                                          {yml.charts.chart_list.map((c, k) => {
                                             return (
                                               <Div
                                                 flexDirection="column"
-                                                key={i}
+                                                key={k}
                                               >
                                                 <Charts dataArray={c.data} />
                                                 <H4 textTransform="uppercase">
@@ -354,7 +363,8 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                               </Div>
                                             );
                                           })}
-                                      </GridContainer>
+                                        </GridContainer>
+                                      )}
                                     </React.Fragment>
                                   );
                                 })}
@@ -367,7 +377,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
           </Div>
           <Div
             gridArea="1/9/1/13"
-            gridColumn_tablet="1 ​/ span 1"
+            gridColumn_tablet="1 â€‹/ span 1"
             margin="54px 0 0 0"
             display="none"
             display_md="flex"
