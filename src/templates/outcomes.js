@@ -321,16 +321,15 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                     <React.Fragment key={j}>
                                       {/* Only render image if it exists */}
                                       {imageItem.image && (
-                                        <StyledBackgroundSection
+                                        <Div
                                           margin="30px 0"
                                           minHeight="100px"
                                           height="255px"
                                           width="100%"
-                                          image={
-                                            imageItem.image.childImageSharp
-                                              .gatsbyImageData
-                                          }
-                                          bgSize="contain"
+                                          backgroundImage={`url(${imageItem.image})`}
+                                          backgroundSize="contain"
+                                          backgroundRepeat="no-repeat"
+                                          backgroundPosition="center"
                                         />
                                       )}
 
@@ -516,16 +515,6 @@ export const query = graphql`
               title
               content
               image_section {
-                image {
-                  childImageSharp {
-                    gatsbyImageData(
-                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                      width: 500
-                      quality: 100
-                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    )
-                  }
-                }
                 image_paragraph
                 chart
               }
