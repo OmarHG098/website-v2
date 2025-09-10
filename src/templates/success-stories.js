@@ -8,6 +8,8 @@ import BaseRender from "./_baseLayout";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { isCustomBarActive } from "../actions";
 import { SessionContext } from "../session";
+import { H2, Paragraph } from "../components/Heading";
+import StarRating from "../components/StarRating";
 
 const SuccessStories = (props) => {
   const { data, pageContext, yml } = props;
@@ -21,6 +23,8 @@ const SuccessStories = (props) => {
           paragraphMargin="26px 20px"
           paragraphMargin_Tablet="26px 10%"
           paddingParagraph_tablet="0 40px"
+          padding_md="60px 80px 0rem 80px"
+          padding_tablet="60px 40px 0rem 40px"
           seo_title={yml.seo_title}
           title={yml.header.title}
           paragraph={yml.header.paragraph}
@@ -89,6 +93,80 @@ const SuccessStories = (props) => {
         </Header>
       )}
 
+      {yml.rating_reviews && (
+        <Div
+          // background={Colors.white}
+          padding="0 20px"
+          padding_tablet="0 40px"
+        >
+          <Div
+            padding="2rem 0 60px 0"
+            display="flex"
+            flexDirection="column"
+            margin="auto"
+            width="100%"
+            maxWidth="1280px"
+          >
+            {yml.rating_reviews.heading && (
+              <H2 type="h2" padding="10px 0 60px 0">
+                {yml.rating_reviews.heading}
+              </H2>
+            )}
+            <Div
+              display="flex"
+              flexDirection="column"
+              flexDirection_tablet="row "
+              justifyContent="center"
+              gap="45px"
+              gap_tablet="24px"
+            >
+              {yml.rating_reviews.rating_list.map((item) => {
+                return (
+                  <Div
+                    key={`rating-component-${item.alt}`}
+                    display="flex"
+                    alignItems="center"
+                    flexDirection="column"
+                    borderRadius="4px"
+                    background="white"
+                    width="100%"
+                    padding="10px"
+                  >
+                    <GatsbyImage
+                      style={{
+                        height: "50px",
+                        minWidth: "135px",
+                        width: "135px",
+                      }}
+                      imgStyle={{ objectFit: "contain" }}
+                      loading="eager"
+                      // draggable={false}
+                      // fadeIn={false}
+                      alt={item.alt}
+                      image={getImage(
+                        item.image.childImageSharp.gatsbyImageData
+                      )}
+                    />
+                    <StarRating rating={item.rating} />
+                    <Paragraph
+                      padding="6px 0"
+                      fontSize="9px"
+                      color={Colors.darkGray3}
+                      fontWeight="bold"
+                      textTransform="lowercase"
+                    >
+                      {`${item.rating} ${
+                        pageContext.lang === "us" ? "On Reviews" : "En reseñas"
+                      }`}
+                    </Paragraph>
+                  </Div>
+                );
+              })}
+            </Div>
+          </Div>
+        </Div>
+      )}
+
       <SuccessStoriesComponent
         lang={pageContext.lang}
         filterIndexes={yml.filter_indexes}
@@ -136,6 +214,25 @@ export const query = graphql`
           header {
             title
             paragraph
+          }
+          rating_reviews {
+            position
+            heading
+            background
+            rating_list {
+              alt
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 1200
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
+              rating
+              url
+            }
           }
           partners {
             title
