@@ -784,10 +784,24 @@ export const Header = ({
   fontFamily,
   zIndex,
   id,
+  textWrap,
+  colorVariant,
 }) => {
   const multilineTitle = title
     .split("\n")
     .map((l) => <span className="d-block">{l}</span>);
+
+  const colorConfig = {
+    white: {
+      text: Colors.white,
+      seo: Colors.verylightGray2
+    },
+    default: {
+      text: Colors.black,
+      seo: Colors.darkGray2    }
+  };
+  
+  const colors = colorConfig[colorVariant] || colorConfig.default;
   return (
     <Grid
       background={background}
@@ -823,7 +837,7 @@ export const Header = ({
             textAlign_tablet={textAlign_tablet}
             margin="0 0 11px 0"
             padding={paddingTitle || "0 20px"}
-            color={Colors.darkGray2}
+            color={colors.seo}
             fontSize={fontSize_seo}
             textWrap="balance"
           >
@@ -842,8 +856,10 @@ export const Header = ({
             lineHeight_tablet={lineHeight_tablet || "60px"}
             fontFamily={fontFamily_title}
             textTransform={uppercase && "uppercase"}
+            fontWeight={fontWeight_title}
             zindex={zIndex}
-            color={Colors.black}
+            color={colors.text}
+            textWrap={textWrap}
           >
             {multilineTitle}
           </H2>
@@ -861,7 +877,7 @@ export const Header = ({
               fontSize={fontSize_paragraph}
               fontWeight={fontWeight_paragraph}
               maxWidth="64rem"
-              color={Colors.black}
+              color={colors.text}
               {...(paragraph_html
                 ? { dangerouslySetInnerHTML: { __html: paragraph_html } }
                 : { children: paragraph })}
