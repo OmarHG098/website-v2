@@ -3,6 +3,9 @@ button_text: Ver experiencias
 button_link: "/es/testimonios"
 source_url_text: "Ver reseña"
 
+title: "Historias de éxito de nuestros graduados"
+paragraph: "Cómo 4Geeks cambió sus carreras"
+
 testimonials:
   - student_name: Peter Schwarck
     include_in_marquee: true
