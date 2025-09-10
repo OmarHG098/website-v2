@@ -58,14 +58,31 @@ const ApplicationProcess = (props) => {
         </Div>
       )}
 
-      <Div width="100%" maxWidth="64rem" margin="0 auto 4rem auto" justifyContent="center">
+      <Div
+        width="100%"
+        maxWidth="64rem"
+        margin="0 auto 4rem auto"
+        justifyContent="center"
+      >
         <Link to={apply_button.path}>
-          <Button display="block" color="#000" background={Colors.white} border="3px solid #000" borderRadius="8px" height="auto" padding="18px 2.46rem" letterSpacing="0.07em" padding_tablet="18px 2.46rem" fontSize="22px" textTransform="uppercase" boxShadow="10px 10px 0px 0px rgba(0,0,0,1)">
+          <Button
+            display="block"
+            color="#000"
+            background={Colors.white}
+            border="3px solid #000"
+            borderRadius="8px"
+            height="auto"
+            padding="18px 2.46rem"
+            letterSpacing="0.07em"
+            padding_tablet="18px 2.46rem"
+            fontSize="22px"
+            textTransform="uppercase"
+            boxShadow="10px 10px 0px 0px rgba(0,0,0,1)"
+          >
             {apply_button.text}
           </Button>
         </Link>
       </Div>
-
 
       <Iconogram yml={yml.iconogram} background={Colors.veryLightBlue3} />
     </>

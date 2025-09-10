@@ -542,7 +542,8 @@ export const Button = styled(SmartButton)`
   justify-self: ${(props) => props.justifySelf};
   justify-content: ${(props) => props.justifyContent};
   box-shadow: ${(props) => props.boxShadow};
-  transition: ${(props) => props.transition || "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"};
+  transition: ${(props) =>
+    props.transition || "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"};
 
   /* Apply variant styles */
   ${(props) => {
@@ -555,12 +556,17 @@ export const Button = styled(SmartButton)`
   }}
 
   &:hover {
-    transform: ${(props) => props.transform ? `${props.transform} translateY(-2px)` : "translateY(-2px)"};
+    transform: ${(props) =>
+      props.transform
+        ? `${props.transform} translateY(-2px)`
+        : "translateY(-2px)"};
     box-shadow: ${(props) => {
       if (props.boxShadow) {
         const currentShadow = props.boxShadow;
         // Detect if it's a solid shadow (format: Xpx Ypx 0px 0px color)
-        const solidShadowMatch = currentShadow.match(/(\d+)px\s+(\d+)px\s+0px\s+0px\s+(.+)/);
+        const solidShadowMatch = currentShadow.match(
+          /(\d+)px\s+(\d+)px\s+0px\s+0px\s+(.+)/
+        );
         if (solidShadowMatch) {
           const [, x, y, color] = solidShadowMatch;
           const newX = Math.min(parseInt(x) + 2, parseInt(x) * 1.2);
@@ -585,12 +591,17 @@ export const Button = styled(SmartButton)`
   }
 
   &:active {
-    transform: ${(props) => props.transform ? `${props.transform} translateY(1px)` : "translateY(1px)"};
+    transform: ${(props) =>
+      props.transform
+        ? `${props.transform} translateY(1px)`
+        : "translateY(1px)"};
     box-shadow: ${(props) => {
       if (props.boxShadow) {
         const currentShadow = props.boxShadow;
         // Detect if it's a solid shadow (format: Xpx Ypx 0px 0px color)
-        const solidShadowMatch = currentShadow.match(/(\d+)px\s+(\d+)px\s+0px\s+0px\s+(.+)/);
+        const solidShadowMatch = currentShadow.match(
+          /(\d+)px\s+(\d+)px\s+0px\s+0px\s+(.+)/
+        );
         if (solidShadowMatch) {
           const [, x, y, color] = solidShadowMatch;
           const newX = Math.max(parseInt(x) - 2, parseInt(x) * 0.8);
