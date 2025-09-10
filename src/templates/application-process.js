@@ -1,16 +1,17 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import BaseRender from "./_baseLayout";
 
 // components
 import Stepper from "../components/Stepper";
 import { Div } from "../components/Sections";
 import { Header } from "../components/Sections";
-import { Colors } from "../components/Styling";
+import { Button, Colors } from "../components/Styling";
+import Iconogram from "../components/Iconogram";
 
 const ApplicationProcess = (props) => {
   const { pageContext, yml } = props;
-  const { header, stepper } = yml;
+  const { header, stepper, apply_button } = yml;
 
   return (
     <>
@@ -53,11 +54,20 @@ const ApplicationProcess = (props) => {
           maxWidth="64rem"
           margin="0 auto"
         >
-          <div className="steps-container">
-            <Stepper lang={pageContext.lang} steps={stepper.steps} />
-          </div>
+          <Stepper lang={pageContext.lang} steps={stepper.steps} />
         </Div>
       )}
+
+      <Div width="100%" maxWidth="64rem" margin="0 auto 4rem auto" justifyContent="center">
+        <Link to={apply_button.path}>
+          <Button display="block" color="#000" background={Colors.white} border="3px solid #000" borderRadius="8px" height="auto" padding="18px 2.46rem" letterSpacing="0.07em" padding_tablet="18px 2.46rem" fontSize="22px" textTransform="uppercase" boxShadow="10px 10px 0px 0px rgba(0,0,0,1)">
+            {apply_button.text}
+          </Button>
+        </Link>
+      </Div>
+
+
+      <Iconogram yml={yml.iconogram} background={Colors.veryLightBlue3} />
     </>
   );
 };
@@ -91,6 +101,10 @@ export const query = graphql`
             }
             alt
           }
+          apply_button {
+            text
+            path
+          }
           stepper {
             title
             sub_title
@@ -98,6 +112,24 @@ export const query = graphql`
               title
               description
               sub_items
+            }
+          }
+          iconogram {
+            heading {
+              text
+              style
+            }
+            sub_heading {
+              text
+            }
+            swipable
+            background
+            icons {
+              icon
+              title
+              content
+              color
+              content_style
             }
           }
         }

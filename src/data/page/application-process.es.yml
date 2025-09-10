@@ -13,6 +13,10 @@ header:
   title: "Tu Camino para Unirte a 4Geeks e Impulsar Tu Nueva Carrera"
   paragraph: "Aplicar es simple — y te guiaremos en cada paso del camino. Así es como pasas de curioso a ser oficialmente parte de la comunidad 4Geeks:"
 
+apply_button:
+  text: "Inscríbete ahora"
+  path: "/es/aplica"
+
 stepper:
   title: "Tu Proceso de Aplicación"
   sub_title: "Sigue estos simples pasos para unirte a 4Geeks Academy e iniciar tu carrera tecnológica"
@@ -41,3 +45,27 @@ stepper:
       description: "Tendrás acceso a 4Geeks.com, nuestra comunidad de Slack y tu lista de verificación de trabajo previo."
     - title: "Comienza Tu Trabajo Previo"
       description: "Familiarízate con herramientas y conceptos fundamentales para que comiences fuerte desde el primer día."
+
+iconogram:
+  heading:
+    text: "¿Nuestros Bootcamps Entregan Resultados Comprobables?"
+    style: '{ "textAlign": "center" }'
+  sub_heading:
+    text: "Sí - y tenemos los números para respaldarlo."
+  swipable: false
+  background: veryLightBlue3
+  icons:
+    - icon: "graduation-2"
+      title: "Tasa de Contratación"
+      content: "84% de graduados fueron contratados"
+      color: "#0084FF"
+      content_style: '{ "fontSize": "20px" }'
+    - icon: "briefcase-new"
+      title: "Tiempo promedio para ser contratado"
+      content: "6 meses después de graduarse"
+      color: "#E12D39"
+      content_style: '{ "fontSize": "20px" }'
+    - icon: "handmoney-new"
+      title: "Aumento Salarial"
+      content: "55% de mejora salarial al egresar"
+      content_style: '{ "fontSize": "20px" }'

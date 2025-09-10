@@ -8,6 +8,10 @@ import { Colors } from "../Styling";
 const StepCard = ({ step, index, steps }) => {
   const [isHovered, setIsHovered] = React.useState(false);
   const scaleValue = isHovered ? 1.02 : 1;
+  const boxShadow = isHovered
+    ? "0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
+    : "none";
+
   return (
     <>
       <Div
@@ -17,11 +21,7 @@ const StepCard = ({ step, index, steps }) => {
         borderRadius="8px"
         padding="1.5rem"
         transform={`scale(${scaleValue})`}
-        boxShadow={
-          isHovered
-            ? "0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
-            : "none"
-        }
+        boxShadow={boxShadow}
         style={{ transition: "box-shadow 0.3s ease, transform 0.3s ease" }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}

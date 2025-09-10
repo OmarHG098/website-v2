@@ -542,7 +542,7 @@ export const Button = styled(SmartButton)`
   justify-self: ${(props) => props.justifySelf};
   justify-content: ${(props) => props.justifyContent};
   box-shadow: ${(props) => props.boxShadow};
-  transition: ${(props) => props.transition || "all 0.3s ease"};
+  transition: ${(props) => props.transition || "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"};
 
   /* Apply variant styles */
   ${(props) => {
@@ -555,6 +555,23 @@ export const Button = styled(SmartButton)`
   }}
 
   &:hover {
+    transform: ${(props) => props.transform ? `${props.transform} translateY(-2px)` : "translateY(-2px)"};
+    box-shadow: ${(props) => {
+      if (props.boxShadow) {
+        const currentShadow = props.boxShadow;
+        // Detect if it's a solid shadow (format: Xpx Ypx 0px 0px color)
+        const solidShadowMatch = currentShadow.match(/(\d+)px\s+(\d+)px\s+0px\s+0px\s+(.+)/);
+        if (solidShadowMatch) {
+          const [, x, y, color] = solidShadowMatch;
+          const newX = Math.min(parseInt(x) + 2, parseInt(x) * 1.2);
+          const newY = Math.min(parseInt(y) + 2, parseInt(y) * 1.2);
+          return `${newX}px ${newY}px 0px 0px ${color}`;
+        }
+        // For other shadows, add a soft additional shadow
+        return `${currentShadow}, 0 4px 12px rgba(0, 0, 0, 0.15)`;
+      }
+      return "0 4px 12px rgba(0, 0, 0, 0.15)";
+    }};
     ${(props) =>
       props.variant === "outline"
         ? css`
@@ -565,6 +582,38 @@ export const Button = styled(SmartButton)`
             ${props.colorHover ? `background-color: ${props.colorHover};` : ""}
             ${props.colorHoverText ? `color: ${props.colorHoverText};` : ""}
           `}
+  }
+
+  &:active {
+    transform: ${(props) => props.transform ? `${props.transform} translateY(1px)` : "translateY(1px)"};
+    box-shadow: ${(props) => {
+      if (props.boxShadow) {
+        const currentShadow = props.boxShadow;
+        // Detect if it's a solid shadow (format: Xpx Ypx 0px 0px color)
+        const solidShadowMatch = currentShadow.match(/(\d+)px\s+(\d+)px\s+0px\s+0px\s+(.+)/);
+        if (solidShadowMatch) {
+          const [, x, y, color] = solidShadowMatch;
+          const newX = Math.max(parseInt(x) - 2, parseInt(x) * 0.8);
+          const newY = Math.max(parseInt(y) - 2, parseInt(y) * 0.8);
+          return `${newX}px ${newY}px 0px 0px ${color}`;
+        }
+        // For other shadows, reduce the intensity
+        return "0 2px 4px rgba(0, 0, 0, 0.1)";
+      }
+      return "0 2px 4px rgba(0, 0, 0, 0.1)";
+    }};
+    transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: ${(props) => {
+      const focusShadow = "0 0 0 3px rgba(0, 132, 255, 0.3)";
+      if (props.boxShadow) {
+        return `${props.boxShadow}, ${focusShadow}`;
+      }
+      return focusShadow;
+    }};
   }
   @media ${Devices.xxs} {
     padding: ${(props) => props.padding_xxs};

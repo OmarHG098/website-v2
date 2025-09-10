@@ -13,6 +13,10 @@ header:
   title: "Your Path to Joining 4Geeks and Kickstarting Your New Career"
   paragraph: "Applying is simple — and we'll guide you every step of the way. Here's how you go from curious to officially part of the 4Geeks community:"
 
+apply_button:
+  text: "Apply Now"
+  path: "/us/apply"
+
 stepper:
   title: "Your Application Journey"
   sub_title: "Follow these simple steps to join 4Geeks Academy and start your tech career"
@@ -41,3 +45,28 @@ stepper:
       description: "You'll get access to 4Geeks.com, our Slack community, and your prework checklist."
     - title: "Start Your Prework"
       description: "Get familiar with fundamental tools and concepts so you start strong from day one."
+
+iconogram:
+  heading:
+    text: "Do Our Bootcamps Deliver Results You Can Count On?"
+    style: '{ "textAlign": "center" }'
+  sub_heading:
+    text: "Yes - and we've got the numbers to back it up."
+  swipable: false
+  background: veryLightBlue3
+  icons:
+    - icon: "graduation-2"
+      title: "Job Placement Rate"
+      content: "84% of graduates were hired"
+      color: "#0084FF"
+      content_style: '{ "fontSize": "20px" }'
+    - icon: "briefcase-new"
+      title: "Average time to get hired"
+      content: "6 months after graduation"
+      color: "#E12D39"
+      content_style: '{ "fontSize": "20px" }'
+    - icon: "handmoney-new"
+      title: "Salary Increase"
+      content: "55% higher at new job"
+      color: "#0084FF"
+      content_style: '{ "fontSize": "20px" }'
