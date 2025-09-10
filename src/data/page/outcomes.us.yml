@@ -10,11 +10,11 @@ meta_info:
   keywords: ""
   redirects: []
 
-seo_title: "Proven Outcomes That Launch Tech Careers"
+seo_title: "4Geeks Academy Outcomes Report"
 header:
   title: "Proven Outcomes That Launch Tech Careers"
   paragraph: "At 4Geeks, success isn’t a promise — it’s a track record. Our students launch successful tech careers across AI-powered coding, data science, and cybersecurity, and the numbers prove it. Read on to see the details: We keep our reporting transparent, regularly publishing verified placement and salary data across the U.S., Latin America, and Europe."
-  image: ""
+  image: " "
   image_alt: "4Geeks Academy Proven Outcomes Report"
 sections:
   - title: "🌎 The Global Picture"
@@ -43,10 +43,6 @@ sections:
           </ul>
       - title: "📌 Takeaway:"
         content: "Even when markets tighten, 4Geeks grads keep getting hired. And when conditions improve, they get hired faster and see higher salary lifts."
-        image_section:
-          - image: 
-            image_paragraph: " "
-            chart: true
 
   - title: "📊 Outcomes by the Numbers"
     ref: "outcomes_numbers"
@@ -60,12 +56,22 @@ sections:
         content: "average salary increase in LATAM"
       - stat: "85%"
         content: "placement rate in Spain"
-      - stat: "3-6"
-        content: "months average time to get hired in 2025 across all markets"
+      - stat: "3-6 months"
+        content: "average time to get hired in 2025 across all markets"
+    sub_sections:
+      - title: "Our Student Body at a Glance"
+        content: " "
+        image_section:
+          - image: 
+            image_paragraph: " "
+            chart: true
+
 
   - title: "🚀 Why Students Get Results with Us"
     ref: "why_results"
-    paragraph: "We don’t just teach skills — we make sure you can turn them into a career. Every 4Geeks student gets:"
+    paragraph: |
+      We don’t just teach skills — we make sure you can turn them into a career. <br>
+      Every 4Geeks student gets:
     sub_sections:
       - title: "GeekFORCE Career Support (for life):"
         content: "Unlimited 1:1 career mentorship, interviews training, resume/portfolio coaching, and expert job search strategies."
@@ -78,31 +84,25 @@ sections:
 
   - title: "🏆 Recognized, Rated, and Recommended"
     ref: "recognition"
-    paragraph: "Industry recognition and student satisfaction scores that validate our approach and outcomes."
-    stats: 
-      - stat: "Top 5 Coding Bootcamp"
-        content: "Named by Forbes"
-      - stat: "4.9/5 Rating"
-        content: "On SwitchUp, Course Report, and Career Karma"
-      - stat: "Licensed"
-        content: "By the Florida Department of Education"
-      - stat: "Trusted"
-        content: "By students in 20+ countries"
-    sub_sections:
-      - title: "INDUSTRY VALIDATION"
-        content: "Trusted by students in 20+ countries and recognized by leading industry publications for our results and methodology."
+    paragraph: |
+          <ul class='ul-outcomes'>
+            <li class='li-outcomes-link'>Named <strong style="font-weight: 800;">Top 5 Coding Bootcamp</strong> by Forbes</li>
+            <li class='li-outcomes-link'>Rated <strong style="font-weight: 800;">4.9/5</strong> on SwitchUp, Course Report, and Career Karma</li>
+            <li class='li-outcomes-link'>Licensed by the Florida Department of Education</li>
+            <li class='li-outcomes-link'>Trusted by students in 20+ countries</li>
+          </ul>
 
 
   - title: "💡 Making Tech Careers Accessible"
     ref: "accessibility"
     paragraph: "Tech careers should be open to everyone. That's why we offer:"
     stats: 
-      - stat: "Most Affordable Tuition"
-        content: "Among top-rated bootcamps (Forbes recognition)"
-      - stat: "Under $299/month"
-        content: "Flexible financing options available"
-      - stat: "Income-based Payment Plans"
-        content: "And scholarships to remove financial barriers"
+      - stat: "Affordable Tuition"
+        content: "Lowest among top-rated bootcamps (recognized by Forbes as Best Bootcamp for Students on a Budget)."
+      - stat: "Flexible Financing"
+        content: "Options starting below $299/month, plus affordable loans and income-based payment plans."
+      - stat: "Full and Partial Scholarships"
+        content: "Location-based options thanks to important institutional partnerships and government initiatives."
     sub_sections:
       - title: "FINANCING OPTIONS"
         content: |
@@ -113,7 +113,7 @@ sections:
 
   - title: "✅ Extra Confidence: The Job Guarantee"
     ref: "job_guarantee"
-    paragraph: "We know our bootcamps deliver results and we believe in your potential. That's why we offer an optional Job Guarantee: Get hired within 9 months of graduation, or we'll refund 100% of your tuition."
+    paragraph: "We know our bootcamps deliver results and we believe in your potential. That's why we offer an optional <strong style='font-weight: 800;'>Job Guarantee</strong>: Get hired within 9 months of graduation, or we'll refund 100% of your tuition."
     sub_sections:
       - title: "The requirements are simple:"
         content: |
@@ -145,9 +145,9 @@ charts:
   chart_list:
     ## EACH DONUTCHART NEEDS AN ARRAY OF ARRAYS WITH  LABEL AND VALUE
     ## THE VALUE NEED TO BE A STRING, NOT A NUMBER
-    - title: "ages"
+    - title: "age"
       data:
-        - [Task, Ages]
+        - [Task, Age]
         - [26-32, "44"] ## EACH ARRAY NEEDS LABEL AND VALUE
         - [22-25, "30"]
         - [33-42, "26"]

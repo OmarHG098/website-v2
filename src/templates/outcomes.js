@@ -247,6 +247,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
                             letterSpacing="0.05em"
                             textAlign="left"
                             margin="10px 0"
+                            fontSize="20px"
                             dangerouslySetInnerHTML={{ __html: m }}
                           />
                         ))}
@@ -311,6 +312,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                 letterSpacing="0.05em"
                                 textAlign="left"
                                 margin_md="10px 0"
+                                fontSize="18px"
                                 dangerouslySetInnerHTML={{ __html: m.content }}
                               />
                               {Array.isArray(m.image_section) &&
@@ -353,8 +355,8 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                         ) && (
                                           <GridContainer
                                             columns_tablet="3"
-                                            justifyContent="center"
-                                            justifyContent_tablet="center"
+                                            justifyContent="flex-start"
+                                            justifyContent_tablet="flex-start"
                                             gridTemplateColumns_tablet="3"
                                           >
                                             {yml.charts.chart_list.map(
