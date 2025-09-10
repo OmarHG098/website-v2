@@ -312,7 +312,7 @@ const DoubleActionCTA = ({ session, location, ctaData, lang = "us" }) => {
             />
           )}
 
-          {/* Newsletter Form - Manteniendo la funcionalidad existente */}
+          {/* Newsletter Form - Maintaining existing functionality */}
           {formStatus.status === "thank-you" ? (
             <Div alignItems="center" flexDirection="column">
               <H3
