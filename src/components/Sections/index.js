@@ -794,13 +794,14 @@ export const Header = ({
   const colorConfig = {
     white: {
       text: Colors.white,
-      seo: Colors.verylightGray2
+      seo: Colors.verylightGray2,
     },
     default: {
       text: Colors.black,
-      seo: Colors.darkGray2    }
+      seo: Colors.darkGray2,
+    },
   };
-  
+
   const colors = colorConfig[colorVariant] || colorConfig.default;
   return (
     <Grid
