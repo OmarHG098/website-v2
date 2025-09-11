@@ -257,19 +257,25 @@ const GeekForce = (props) => {
         )
         .map((name, index) => {
           const layout = components[name].layout || name;
-          return landingSections[layout]({
-            ...props,
-            yml: components[name],
-            session,
-            course: yml.meta_info?.utm_course,
-            location: components.meta_info?.utm_location,
-            index: index,
-          });
+          return (
+            <Div key={name} margin="20px 0" margin_md="40px 0">
+              {landingSections[layout]({
+                ...props,
+                yml: components[name],
+                session,
+                course: yml.meta_info?.utm_course,
+                location: components.meta_info?.utm_location,
+                index: index,
+              })}
+            </Div>
+          );
         })}
       {data.allScholarshipSuccessCasesYaml?.edges?.[0]?.node && (
-        <ScholarshipSuccessCases
-          content={data.allScholarshipSuccessCasesYaml.edges[0].node}
-        />
+        <Div margin="60px 0" margin_md="80px 0">
+          <ScholarshipSuccessCases
+            content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+          />
+        </Div>
       )}
       <HR
         background={Colors.verylightGray}

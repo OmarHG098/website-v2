@@ -262,14 +262,18 @@ const GeekPal = (props) => {
         )
         .map((name, index) => {
           const layout = components[name].layout || name;
-          return landingSections[layout]({
-            ...props,
-            yml: components[name],
-            session,
-            course: yml.meta_info?.utm_course,
-            location: components.meta_info?.utm_location,
-            index: index,
-          });
+          return (
+            <Div key={name} margin="20px 0" margin_md="40px 0">
+              {landingSections[layout]({
+                ...props,
+                yml: components[name],
+                session,
+                course: yml.meta_info?.utm_course,
+                location: components.meta_info?.utm_location,
+                index: index,
+              })}
+            </Div>
+          );
         })}
     </>
   );
