@@ -84,9 +84,14 @@ const SuccessStoriescomponent = ({ filterIndexes, lang, variant }) => {
   const [testimonials, setTestimonials] = useState([]);
 
   // Find featured testimonial and split the list
-  const featuredTestimonial = filteredData?.find(t => t.featured_on_section === true);
-  const regularTestimonials = filteredData?.filter(t => t.featured_on_section !== true && t.hidden == false) || [];
-  
+  const featuredTestimonial = filteredData?.find(
+    (t) => t.featured_on_section === true
+  );
+  const regularTestimonials =
+    filteredData?.filter(
+      (t) => t.featured_on_section !== true && t.hidden == false
+    ) || [];
+
   // Split regular testimonials in half for rendering around the featured section
   const midPoint = Math.ceil(regularTestimonials.length / 2);
   const firstHalf = regularTestimonials.slice(0, midPoint);
@@ -163,7 +168,7 @@ const SuccessStoriescomponent = ({ filterIndexes, lang, variant }) => {
         <H2 type="h2">{data_.title}</H2>
         <Paragraph fontSize="22px">{data_.paragraph}</Paragraph>
       </Div>
-      
+
       {/* First half of testimonials */}
       <Div
         display="column"

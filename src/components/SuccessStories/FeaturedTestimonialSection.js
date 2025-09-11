@@ -109,7 +109,11 @@ const FeaturedTestimonialSection = ({ testimonial, lang }) => {
           )}
 
           {testimonial.rating && (
-            <Div margin="0 0 20px 0" justifyContent="center" justifyContent_tablet="flex-start">
+            <Div
+              margin="0 0 20px 0"
+              justifyContent="center"
+              justifyContent_tablet="flex-start"
+            >
               <StarRating rating={testimonial.rating} />
             </Div>
           )}
