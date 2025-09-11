@@ -60,10 +60,10 @@ sections:
         content: "average time to get hired in 2025 across all markets"
     sub_sections:
       - title: "Our Student Body at a Glance"
-        content: " "
+        content: "Here's a breakdown of our diverse student body demographics:"
         image_section:
-          - image: 
-            image_paragraph: " "
+          - image: null
+            image_paragraph: "These charts show the distribution of our students across different age groups, genders, and nationalities. Our community is diverse and global, with students from various backgrounds and regions."
             chart: true
   
   
