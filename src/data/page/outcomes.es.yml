@@ -58,13 +58,11 @@ sections:
         content: "tasa de colocación en España"
       - stat: "3-6 meses"
         content: "tiempo promedio para ser contratado en 2025 en todos los mercados"
-    sub_sections:
-      - title: "Nuestro Alumnado de un Vistazo"
-        content: " "
-        image_section:
-          - image: 
-            image_paragraph: " "
-            chart: true
+
+  - title: "🎓 Nuestro Alumnado de un Vistazo"
+    ref: "student_body"
+    paragraph: "Estos gráficos muestran la distribución de nuestros estudiantes en diferentes grupos de edad, género y nacionalidades. Nuestra comunidad es diversa y global, con estudiantes de varios orígenes y regiones."
+    charts: true
 
   - title: "🚀 Por Qué los Estudiantes Obtienen Resultados con Nosotros"
     ref: "why_results"
@@ -90,13 +88,7 @@ sections:
             <li class='li-outcomes-link'>Licenciados por el Departamento de Educación de Florida</li>
             <li class='li-outcomes-link'>Con la confianza de estudiantes en más de 20 países</li>
           </ul>
-    sub_sections:
-      - title: "Nuestra excelencia está validada por líderes de la industria e instituciones educativas de todo el mundo."
-        content: " "
-        image_section:
-          - image: 
-            image_paragraph: ""
-            badges: true
+    badges: true
 
   - title: "💡 Haciendo las Carreras Tech Accesibles"
     ref: "accessibility"

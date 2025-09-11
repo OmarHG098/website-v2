@@ -300,6 +300,152 @@ const Outcomes = ({ data, pageContext, yml }) => {
                           })}
                         </GridContainer>
                       )}
+                    {/* Render charts as independent component if section.charts is true */}
+                    {section.charts &&
+                      yml.charts &&
+                      Array.isArray(yml.charts.chart_list) && (
+                        <GridContainer
+                          columns_tablet="3"
+                          justifyContent="center"
+                          justifyContent_tablet="center"
+                          gridTemplateColumns_tablet="3"
+                          gridGap="40px"
+                          gridGap_tablet="60px"
+                          margin="30px 0"
+                        >
+                          {yml.charts.chart_list.map((c, k) => {
+                            return (
+                              <Div flexDirection="column" key={k}>
+                                <Charts dataArray={c.data} />
+                                <H4 textTransform="uppercase">{c.title}</H4>
+                              </Div>
+                            );
+                          })}
+                        </GridContainer>
+                      )}
+
+                    {/* Render badges as independent component if section.badges is true */}
+                    {section.badges &&
+                      badgesData &&
+                      Array.isArray(badgesData.badges) && (
+                        <Div margin="30px 0">
+                          {/* Desktop Grid Layout - Only for large screens */}
+                          <Div
+                            width="100%"
+                            background={Colors.white}
+                            padding="20px 0"
+                            margin="0"
+                            display="none"
+                            display_tablet="block"
+                          >
+                            <Div
+                              width="100%"
+                              maxWidth="800px"
+                              margin="0 auto"
+                              padding="0"
+                            >
+                              <Div
+                                width="100%"
+                                style={{ overflowX: "auto" }}
+                              >
+                                <DraggableDiv gap="15px">
+                                  {badgesData.badges
+                                    .slice(0, 5)
+                                    .map((badge, index) => {
+                                      return (
+                                        <Div
+                                          key={badge.name}
+                                          width="140px"
+                                          height="100px"
+                                          background={Colors.white}
+                                          flexDirection="column"
+                                          justifyContent="center"
+                                          borderRadius="4px"
+                                          flexShrink="0"
+                                          border="1px solid #e5e5e5"
+                                        >
+                                          <GatsbyImage
+                                            style={{
+                                              height: "49px",
+                                              minWidth: "60px",
+                                              margin: "auto",
+                                              width: "100%",
+                                            }}
+                                            imgStyle={{
+                                              objectFit: "contain",
+                                            }}
+                                            loading="eager"
+                                            alt={badge.name}
+                                            draggable={false}
+                                            image={getImage(
+                                              badge.image.childImageSharp
+                                                .gatsbyImageData
+                                            )}
+                                          />
+                                        </Div>
+                                      );
+                                    })}
+                                </DraggableDiv>
+                              </Div>
+                            </Div>
+                          </Div>
+
+                          {/* Mobile Swipable Layout */}
+                          <Div
+                            width="100%"
+                            background={Colors.white}
+                            padding="20px 0"
+                            margin="0"
+                            display="block"
+                            display_tablet="none"
+                          >
+                            <Div
+                              width="100%"
+                              style={{ overflowX: "auto" }}
+                            >
+                              <DraggableDiv gap="15px">
+                                {badgesData.badges
+                                  .slice(0, 5)
+                                  .map((badge, index) => {
+                                    return (
+                                      <Div
+                                        key={badge.name}
+                                        width="140px"
+                                        height="90px"
+                                        background={Colors.white}
+                                        flexDirection="column"
+                                        justifyContent="center"
+                                        borderRadius="4px"
+                                        flexShrink="0"
+                                        border="1px solid #e5e5e5"
+                                      >
+                                        <GatsbyImage
+                                          style={{
+                                            height: "38px",
+                                            minWidth: "45px",
+                                            margin: "auto",
+                                            width: "100%",
+                                          }}
+                                          imgStyle={{
+                                            objectFit: "contain",
+                                          }}
+                                          loading="eager"
+                                          alt={badge.name}
+                                          draggable={false}
+                                          image={getImage(
+                                            badge.image.childImageSharp
+                                              .gatsbyImageData
+                                          )}
+                                        />
+                                      </Div>
+                                    );
+                                  })}
+                              </DraggableDiv>
+                            </Div>
+                          </Div>
+                        </Div>
+                      )}
+
                     {/* Conditionally render sub_sections only if they exist */}
                     {Array.isArray(section.sub_sections) &&
                       section.sub_sections
@@ -353,182 +499,6 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                           {imageItem.image_paragraph}
                                         </Paragraph>
                                       )}
-
-                                      {/* Only render charts if chart flag is true and charts exist */}
-                                      {console.log("Chart render conditions:", {
-                                        hasChartFlag: imageItem.chart,
-                                        hasCharts: yml.charts,
-                                        hasChartList: Array.isArray(
-                                          yml.charts?.chart_list
-                                        ),
-                                      })}
-                                      {imageItem.chart &&
-                                        yml.charts &&
-                                        Array.isArray(
-                                          yml.charts.chart_list
-                                        ) && (
-                                          <GridContainer
-                                            columns_tablet="3"
-                                            justifyContent="center"
-                                            justifyContent_tablet="center"
-                                            gridTemplateColumns_tablet="3"
-                                            gridGap="40px"
-                                            gridGap_tablet="60px"
-                                          >
-                                            {yml.charts.chart_list.map(
-                                              (c, k) => {
-                                                return (
-                                                  <Div
-                                                    flexDirection="column"
-                                                    key={k}
-                                                  >
-                                                    {console.log(
-                                                      "Chart data being passed:",
-                                                      c.data
-                                                    )}
-                                                    <Charts
-                                                      dataArray={c.data}
-                                                    />
-                                                    <H4 textTransform="uppercase">
-                                                      {c.title}
-                                                    </H4>
-                                                  </Div>
-                                                );
-                                              }
-                                            )}
-                                          </GridContainer>
-                                        )}
-
-                                      {/* Only render badges if badges flag is true and badges exist */}
-                                      {imageItem.badges &&
-                                        badgesData &&
-                                        Array.isArray(badgesData.badges) && (
-                                          <Div margin="30px 0">
-                                            {/* Desktop Grid Layout - Only for large screens */}
-                                            <Div
-                                              width="100%"
-                                              background={Colors.white}
-                                              padding="20px 0"
-                                              margin="0"
-                                              display="none"
-                                              display_tablet="block"
-                                            >
-                                              <Div
-                                                width="100%"
-                                                maxWidth="800px"
-                                                margin="0 auto"
-                                                padding="0"
-                                              >
-                                                <Div
-                                                  width="100%"
-                                                  style={{ overflowX: "auto" }}
-                                                >
-                                                  <DraggableDiv gap="15px">
-                                                    {badgesData.badges
-                                                      .slice(0, 5)
-                                                      .map((badge, index) => {
-                                                        return (
-                                                          <Div
-                                                            key={badge.name}
-                                                            width="140px"
-                                                            height="100px"
-                                                            background={
-                                                              Colors.white
-                                                            }
-                                                            flexDirection="column"
-                                                            justifyContent="center"
-                                                            borderRadius="4px"
-                                                            flexShrink="0"
-                                                            border="1px solid #e5e5e5"
-                                                          >
-                                                            <GatsbyImage
-                                                              style={{
-                                                                height: "49px",
-                                                                minWidth:
-                                                                  "60px",
-                                                                margin: "auto",
-                                                                width: "100%",
-                                                              }}
-                                                              imgStyle={{
-                                                                objectFit:
-                                                                  "contain",
-                                                              }}
-                                                              loading="eager"
-                                                              alt={badge.name}
-                                                              draggable={false}
-                                                              image={getImage(
-                                                                badge.image
-                                                                  .childImageSharp
-                                                                  .gatsbyImageData
-                                                              )}
-                                                            />
-                                                          </Div>
-                                                        );
-                                                      })}
-                                                  </DraggableDiv>
-                                                </Div>
-                                              </Div>
-                                            </Div>
-
-                                            {/* Mobile Swipable Layout */}
-                                            <Div
-                                              width="100%"
-                                              background={Colors.white}
-                                              padding="20px 0"
-                                              margin="0"
-                                              display="block"
-                                              display_tablet="none"
-                                            >
-                                              <Div
-                                                width="100%"
-                                                style={{ overflowX: "auto" }}
-                                              >
-                                                <DraggableDiv gap="15px">
-                                                  {badgesData.badges
-                                                    .slice(0, 5)
-                                                    .map((badge, index) => {
-                                                      return (
-                                                        <Div
-                                                          key={badge.name}
-                                                          width="140px"
-                                                          height="90px"
-                                                          background={
-                                                            Colors.white
-                                                          }
-                                                          flexDirection="column"
-                                                          justifyContent="center"
-                                                          borderRadius="4px"
-                                                          flexShrink="0"
-                                                          border="1px solid #e5e5e5"
-                                                        >
-                                                          <GatsbyImage
-                                                            style={{
-                                                              height: "38px",
-                                                              minWidth: "45px",
-                                                              margin: "auto",
-                                                              width: "100%",
-                                                            }}
-                                                            imgStyle={{
-                                                              objectFit:
-                                                                "contain",
-                                                            }}
-                                                            loading="eager"
-                                                            alt={badge.name}
-                                                            draggable={false}
-                                                            image={getImage(
-                                                              badge.image
-                                                                .childImageSharp
-                                                                .gatsbyImageData
-                                                            )}
-                                                          />
-                                                        </Div>
-                                                      );
-                                                    })}
-                                                </DraggableDiv>
-                                              </Div>
-                                            </Div>
-                                          </Div>
-                                        )}
                                     </React.Fragment>
                                   );
                                 })}
@@ -659,6 +629,8 @@ export const query = graphql`
             title
             ref
             paragraph
+            badges
+            charts
             stats {
               stat
               content
@@ -668,8 +640,6 @@ export const query = graphql`
               content
               image_section {
                 image_paragraph
-                chart
-                badges
               }
             }
           }

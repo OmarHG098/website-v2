@@ -58,16 +58,12 @@ sections:
         content: "placement rate in Spain"
       - stat: "3-6 months"
         content: "average time to get hired in 2025 across all markets"
-    sub_sections:
-      - title: "Our Student Body at a Glance"
-        content: "Here's a breakdown of our diverse student body demographics:"
-        image_section:
-          - image: null
-            image_paragraph: "These charts show the distribution of our students across different age groups, genders, and nationalities. Our community is diverse and global, with students from various backgrounds and regions."
-            chart: true
   
   
-
+  - title: "🎓 Our Student Body at a Glance"
+    ref: "student_body"
+    paragraph: "These charts show the distribution of our students across different age groups, gender, and nationalities. Our community is diverse and global, with students from various backgrounds and regions."
+    charts: true
 
   - title: "🚀 Why Students Get Results with Us"
     ref: "why_results"
@@ -93,13 +89,7 @@ sections:
             <li class='li-outcomes-link'>Licensed by the Florida Department of Education</li>
             <li class='li-outcomes-link'>Trusted by students in 20+ countries</li>
           </ul>
-    sub_sections:
-      - title: "Our excellence is validated by industry leaders and educational institutions worldwide."
-        content: ""
-        image_section:
-          - image: 
-            image_paragraph: ""
-            badges: true
+    badges: true
 
 
   - title: "💡 Making Tech Careers Accessible"
@@ -175,5 +165,5 @@ charts:
         
 download:
   button_text: "Download Report"
-  label: "Get result"
+  label: "Get Results"
   motivation: "In 2 min. You will receive the outcomes in your mailbox"
