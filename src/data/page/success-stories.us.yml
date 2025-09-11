@@ -53,4 +53,12 @@ images:
     image: "../../../static/images/partner/discord-gray.png"
 
 partners:
-  title: Top companies are hiring our students
+  title: Who is hiring our Graduates?
+  sub_heading: "From startups to Fortune 500s, our students are now thriving at companies across the tech world."
+
+cta:
+  title: "Ready to Write Your Own Story?"
+  paragraph: "The next testimonial could be yours. Join thousands of students who have transformed their lives with 4Geeks — you can too."
+  button:
+    text: "Apply Now"
+    path: "/us/apply"

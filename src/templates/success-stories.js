@@ -1,7 +1,7 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { Header, Div } from "../components/Sections";
-import { Colors, Img } from "../components/Styling";
+import { Button, Colors, Img } from "../components/Styling";
 import SuccessStoriesComponent from "../components/SuccessStories";
 import OurPartners from "../components/OurPartners";
 import BaseRender from "./_baseLayout";
@@ -15,6 +15,7 @@ const SuccessStories = (props) => {
   const { data, pageContext, yml } = props;
   const { session } = React.useContext(SessionContext);
   const partnersData = data.allPartnerYaml.edges[0].node;
+  const hiring = data.allPartnerYaml.edges[0].node;
 
   return (
     <>
@@ -188,11 +189,43 @@ const SuccessStories = (props) => {
           gridColumn="1/15"
           images={yml.images}
           title={yml.partners.title}
-          //paragraph={partnersData.partners.sub_heading}
+          paragraph={yml.partners.sub_heading}
           showFeatured={false}
           props={partnersData.partners}
           gray={true}
         />
+      </Div>
+      <Div
+        width="100%"
+        maxWidth="64rem"
+        margin="2rem auto 2rem auto"
+        justifyContent="center"
+        flexDirection="column"
+      >
+        <Div flexDirection="column" alignItems="center" gap="8px">
+          <H2 type="h2">{yml.cta.title}</H2>
+          <Paragraph fontSize="22px">{yml.cta.paragraph}</Paragraph>
+        </Div>
+
+        <Link to={yml.cta.button.path}>
+          <Button
+            display="block"
+            color="#000"
+            background={Colors.white}
+            border="3px solid #000"
+            borderRadius="8px"
+            height="auto"
+            padding="18px 2.46rem"
+            letterSpacing="0.07em"
+            padding_tablet="18px 2.46rem"
+            fontSize="22px"
+            textTransform="uppercase"
+            boxShadow="10px 10px 0px 0px rgba(0,0,0,1)"
+            margin="3rem auto 5rem auto"
+          >
+            {yml.cta.button.text}
+          </Button>
+        </Link>
       </Div>
     </>
   );
@@ -236,6 +269,14 @@ export const query = graphql`
           }
           partners {
             title
+          }
+          cta {
+            title
+            paragraph
+            button {
+              text
+              path
+            }
           }
           images {
             name

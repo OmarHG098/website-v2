@@ -53,4 +53,12 @@ images:
     image: "../../../static/images/partner/discord-gray.png"
 
 partners:
-  title: Las mejores empresas estan contratando a nuestros estudiantes
+  title: "¿Quiénes contratan a nuestros graduados?"
+  sub_heading: "Desde startups emergentes hasta empresas Fortune 500, nuestros alumnos hoy impulsan la innovación en compañías líderes del sector tecnológico."
+
+cta:
+  title: "¿Listo para Escribir tu Propia Historia?"
+  paragraph: "El próximo testimonio podría ser tuyo. Únete a miles de estudiantes que han transformado sus vidas con 4Geeks — tú también puedes."
+  button:
+    text: "Aplicar Ahora"
+    path: "/es/apply"

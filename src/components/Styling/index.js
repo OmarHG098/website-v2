@@ -37,10 +37,10 @@ const convertToBgImage = (imageData) => {
 
 export const Colors = {
   blue: "#0084FF",
+  blue2: "#00698F",
   lightBlue: "#BBEAFC",
   lightBlue2: "rgba(199, 243, 253, 0.5)",
   darkBlue: "#2E2E38",
-  blue2: "#0097CD",
   veryLightBlue: "#C7F3FD",
   veryLightBlue2: "#E3F9FE",
   veryLightBlue3: "#F4F9FF",
@@ -556,11 +556,16 @@ export const Button = styled(SmartButton)`
   }}
 
   &:hover {
-    transform: ${(props) =>
-      props.transform
-        ? `${props.transform} translateY(-2px)`
-        : "translateY(-2px)"};
-    box-shadow: ${(props) => {
+    ${(props) => {
+      if (props.boxShadow) {
+        const transform = props.transform
+          ? `${props.transform} translateY(-2px)`
+          : "translateY(-2px)";
+        return `transform: ${transform};`;
+      }
+      return props.transform ? `transform: ${props.transform};` : "";
+    }}
+    ${(props) => {
       if (props.boxShadow) {
         const currentShadow = props.boxShadow;
         // Detect if it's a solid shadow (format: Xpx Ypx 0px 0px color)
@@ -571,13 +576,13 @@ export const Button = styled(SmartButton)`
           const [, x, y, color] = solidShadowMatch;
           const newX = Math.min(parseInt(x) + 2, parseInt(x) * 1.2);
           const newY = Math.min(parseInt(y) + 2, parseInt(y) * 1.2);
-          return `${newX}px ${newY}px 0px 0px ${color}`;
+          return `box-shadow: ${newX}px ${newY}px 0px 0px ${color};`;
         }
         // For other shadows, add a soft additional shadow
-        return `${currentShadow}, 0 4px 12px rgba(0, 0, 0, 0.15)`;
+        return `box-shadow: ${currentShadow}, 0 4px 12px rgba(0, 0, 0, 0.15);`;
       }
-      return "0 4px 12px rgba(0, 0, 0, 0.15)";
-    }};
+      return "";
+    }}
     ${(props) =>
       props.variant === "outline"
         ? css`
@@ -591,11 +596,16 @@ export const Button = styled(SmartButton)`
   }
 
   &:active {
-    transform: ${(props) =>
-      props.transform
-        ? `${props.transform} translateY(1px)`
-        : "translateY(1px)"};
-    box-shadow: ${(props) => {
+    ${(props) => {
+      if (props.boxShadow) {
+        const transform = props.transform
+          ? `${props.transform} translateY(1px)`
+          : "translateY(1px)";
+        return `transform: ${transform};`;
+      }
+      return props.transform ? `transform: ${props.transform};` : "";
+    }}
+    ${(props) => {
       if (props.boxShadow) {
         const currentShadow = props.boxShadow;
         // Detect if it's a solid shadow (format: Xpx Ypx 0px 0px color)
@@ -606,13 +616,13 @@ export const Button = styled(SmartButton)`
           const [, x, y, color] = solidShadowMatch;
           const newX = Math.max(parseInt(x) - 2, parseInt(x) * 0.8);
           const newY = Math.max(parseInt(y) - 2, parseInt(y) * 0.8);
-          return `${newX}px ${newY}px 0px 0px ${color}`;
+          return `box-shadow: ${newX}px ${newY}px 0px 0px ${color};`;
         }
         // For other shadows, reduce the intensity
-        return "0 2px 4px rgba(0, 0, 0, 0.1)";
+        return "box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);";
       }
-      return "0 2px 4px rgba(0, 0, 0, 0.1)";
-    }};
+      return "";
+    }}
     transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
