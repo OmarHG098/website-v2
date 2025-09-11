@@ -120,6 +120,8 @@ const SuccessStoriescomponent = ({ filterIndexes, lang, variant }) => {
 
   const renderTestimonials = (testimonialsToRender) => {
     return testimonialsToRender.map((m, i) => {
+      const studentThumb = m.student_thumb && m.student_thumb;
+      const thumbnailVideo = m.thumbnail_video && m.thumbnail_video;
       i == 0
         ? (position = 0)
         : position == 2
@@ -130,7 +132,7 @@ const SuccessStoriescomponent = ({ filterIndexes, lang, variant }) => {
           <Card
             key={`${m.student_name}-${i}`}
             studentRating={m.rating}
-            image={m.thumbnail_video || m.student_thumb}
+            image={thumbnailVideo || studentThumb}
             //minHeight="400px"
             background={
               position == 0

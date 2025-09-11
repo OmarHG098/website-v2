@@ -152,7 +152,9 @@ const VariantCarousel = ({
 const Testimonials = (props) => {
   let testimonialsArray = props.lang[0].node;
   let testimonialsFiltered = testimonialsArray.testimonials.filter(
-    (item) => (item.hidden !== true || item.include_in_marquee === true) && item.student_thumb
+    (item) =>
+      (item.hidden !== true || item.include_in_marquee === true) &&
+      item.student_thumb
   );
 
   if (props.variant === "carousel")

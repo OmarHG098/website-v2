@@ -57,31 +57,6 @@ const FeaturedTestimonialSection = ({ testimonial, lang }) => {
         position="relative"
         zIndex="1"
       >
-        {/* Student Image */}
-        {/* {testimonial.student_thumb && (
-          <Div
-            minWidth="200px"
-            width="200px"
-            height="200px"
-            borderRadius="50%"
-            overflow="hidden"
-            border={`4px solid ${Colors.white}`}
-            boxShadow="0 10px 30px rgba(0,0,0,0.1)"
-          >
-            <GatsbyImage
-              image={getImage(testimonial.student_thumb)}
-              alt={testimonial.student_name || testimonial.full_name}
-              style={{
-                width: "100%",
-                height: "100%",
-              }}
-              imgStyle={{
-                objectFit: "cover",
-              }}
-            />
-          </Div>
-        )} */}
-
         {/* Content */}
         <Div flex="1" textAlign="center" flexDirection="column">
           <H2
