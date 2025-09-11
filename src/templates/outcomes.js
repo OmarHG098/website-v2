@@ -398,103 +398,65 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                               padding="20px 0"
                                               margin="0"
                                               display="none"
-                                              display_lg="block"
+                                              display_tablet="block"
                                             >
                                               <Div
                                                 width="100%"
-                                                maxWidth="1000px"
+                                                maxWidth="800px"
                                                 margin="0 auto"
-                                                padding="0 20px"
+                                                padding="0"
                                               >
-                                                <GridContainer
-                                                  containerColumns_lg="repeat(5, 1fr)"
-                                                  gridColumn_lg="1/ span 5"
-                                                  background={Colors.white}
-                                                  padding="0"
-                                                  margin="0"
-                                                  justifyContent="center"
-                                                  gridGap="15px"
-                                                  columns_lg="5"
+                                                <Div
+                                                  width="100%"
+                                                  style={{ overflowX: "auto" }}
                                                 >
-                                                {badgesData.badges.slice(0, 5).map((badge, index) => {
-                                                  return (
-                                                    <Div
-                                                      key={badge.name}
-                                                      width="100%"
-                                                      height="105px"
-                                                      background={Colors.white}
-                                                      flexDirection="column"
-                                                      justifyContent="center"
-                                                      borderRadius="4px"
-                                                      flexShrink="0"
-                                                      border="1px solid #e5e5e5"
-                                                      minWidth="150px"
-                                                      maxWidth="180px"
-                                                    >
-                                                      <GatsbyImage
-                                                        style={{
-                                                          height: "49px",
-                                                          minWidth: "60px",
-                                                          margin: "auto",
-                                                          width: "100%",
-                                                        }}
-                                                        imgStyle={{ objectFit: "contain" }}
-                                                        loading="eager"
-                                                        alt={badge.name}
-                                                        draggable={false}
-                                                        image={getImage(badge.image.childImageSharp.gatsbyImageData)}
-                                                      />
-                                                    </Div>
-                                                  );
-                                                })}
-                                                </GridContainer>
+                                                  <DraggableDiv gap="15px">
+                                                
+                                                  {badgesData.badges
+                                                    .slice(0, 5)
+                                                    .map((badge, index) => {
+                                                      return (
+                                                        <Div
+                                                          key={badge.name}
+                                                          width="140px"
+                                                          height="100px"
+                                                          background={
+                                                            Colors.white
+                                                          }
+                                                          flexDirection="column"
+                                                          justifyContent="center"
+                                                          borderRadius="4px"
+                                                          flexShrink="0"
+                                                          border="1px solid #e5e5e5"
+                                                        >
+                                                          <GatsbyImage
+                                                            style={{
+                                                              height: "49px",
+                                                              minWidth: "60px",
+                                                              margin: "auto",
+                                                              width: "100%",
+                                                            }}
+                                                            imgStyle={{
+                                                              objectFit:
+                                                                "contain",
+                                                            }}
+                                                            loading="eager"
+                                                            alt={badge.name}
+                                                            draggable={false}
+                                                            image={getImage(
+                                                              badge.image
+                                                                .childImageSharp
+                                                                .gatsbyImageData
+                                                            )}
+                                                          />
+                                                        </Div>
+                                                      );
+                                                    })}
+                                                  </DraggableDiv>
+                                                </Div>
                                               </Div>
                                             </Div>
 
-                                            {/* Tablet Swipable Layout */}
-                                            <Div
-                                              width="100%"
-                                              background={Colors.white}
-                                              padding="20px 0"
-                                              margin="0"
-                                              display="none"
-                                              display_tablet="block"
-                                              display_lg="none"
-                                            >
-                                              <Div width="100%" style={{ overflowX: "auto" }}>
-                                                <DraggableDiv gap="15px">
-                                                  {badgesData.badges.slice(0, 5).map((badge, index) => {
-                                                    return (
-                                                      <Div
-                                                        key={badge.name}
-                                                        width="160px"
-                                                        height="100px"
-                                                        background={Colors.white}
-                                                        flexDirection="column"
-                                                        justifyContent="center"
-                                                        borderRadius="4px"
-                                                        flexShrink="0"
-                                                        border="1px solid #e5e5e5"
-                                                      >
-                                                        <GatsbyImage
-                                                          style={{
-                                                            height: "45px",
-                                                            minWidth: "55px",
-                                                            margin: "auto",
-                                                            width: "100%",
-                                                          }}
-                                                          imgStyle={{ objectFit: "contain" }}
-                                                          loading="eager"
-                                                          alt={badge.name}
-                                                          draggable={false}
-                                                          image={getImage(badge.image.childImageSharp.gatsbyImageData)}
-                                                        />
-                                                      </Div>
-                                                    );
-                                                  })}
-                                                </DraggableDiv>
-                                              </Div>
-                                            </Div>
 
                                             {/* Mobile Swipable Layout */}
                                             <Div
@@ -505,37 +467,51 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                               display="block"
                                               display_tablet="none"
                                             >
-                                              <Div width="100%" style={{ overflowX: "auto" }}>
+                                              <Div
+                                                width="100%"
+                                                style={{ overflowX: "auto" }}
+                                              >
                                                 <DraggableDiv gap="15px">
-                                                  {badgesData.badges.slice(0, 5).map((badge, index) => {
-                                                    return (
-                                                      <Div
-                                                        key={badge.name}
-                                                        width="140px"
-                                                        height="90px"
-                                                        background={Colors.white}
-                                                        flexDirection="column"
-                                                        justifyContent="center"
-                                                        borderRadius="4px"
-                                                        flexShrink="0"
-                                                        border="1px solid #e5e5e5"
-                                                      >
-                                                        <GatsbyImage
-                                                          style={{
-                                                            height: "38px",
-                                                            minWidth: "45px",
-                                                            margin: "auto",
-                                                            width: "100%",
-                                                          }}
-                                                          imgStyle={{ objectFit: "contain" }}
-                                                          loading="eager"
-                                                          alt={badge.name}
-                                                          draggable={false}
-                                                          image={getImage(badge.image.childImageSharp.gatsbyImageData)}
-                                                        />
-                                                      </Div>
-                                                    );
-                                                  })}
+                                                  {badgesData.badges
+                                                    .slice(0, 5)
+                                                    .map((badge, index) => {
+                                                      return (
+                                                        <Div
+                                                          key={badge.name}
+                                                          width="140px"
+                                                          height="90px"
+                                                          background={
+                                                            Colors.white
+                                                          }
+                                                          flexDirection="column"
+                                                          justifyContent="center"
+                                                          borderRadius="4px"
+                                                          flexShrink="0"
+                                                          border="1px solid #e5e5e5"
+                                                        >
+                                                          <GatsbyImage
+                                                            style={{
+                                                              height: "38px",
+                                                              minWidth: "45px",
+                                                              margin: "auto",
+                                                              width: "100%",
+                                                            }}
+                                                            imgStyle={{
+                                                              objectFit:
+                                                                "contain",
+                                                            }}
+                                                            loading="eager"
+                                                            alt={badge.name}
+                                                            draggable={false}
+                                                            image={getImage(
+                                                              badge.image
+                                                                .childImageSharp
+                                                                .gatsbyImageData
+                                                            )}
+                                                          />
+                                                        </Div>
+                                                      );
+                                                    })}
                                                 </DraggableDiv>
                                               </Div>
                                             </Div>
