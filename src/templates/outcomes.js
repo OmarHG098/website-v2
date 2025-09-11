@@ -5,6 +5,8 @@ import { H2, H3, H4, Paragraph } from "../components/Heading";
 import { Colors, Button } from "../components/Styling";
 import { Charts } from "../components/Chart";
 import Badges from "../components/Badges";
+import DraggableDiv from "../components/DraggableDiv";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import BaseRender from "./_baseLayout";
 import { StyledBackgroundSection } from "../components/Styling";
 import Modal from "../components/Modal";
@@ -389,14 +391,154 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                         badgesData &&
                                         Array.isArray(badgesData.badges) && (
                                           <Div margin="30px 0">
-                                            <Badges
-                                              badges={badgesData}
-                                              lang={pageContext.lang}
-                                              variant="squares"
+                                            {/* Desktop Grid Layout - Only for large screens */}
+                                            <Div
+                                              width="100%"
                                               background={Colors.white}
                                               padding="20px 0"
                                               margin="0"
-                                            />
+                                              display="none"
+                                              display_lg="block"
+                                            >
+                                              <Div
+                                                width="100%"
+                                                maxWidth="1000px"
+                                                margin="0 auto"
+                                                padding="0 20px"
+                                              >
+                                                <GridContainer
+                                                  containerColumns_lg="repeat(5, 1fr)"
+                                                  gridColumn_lg="1/ span 5"
+                                                  background={Colors.white}
+                                                  padding="0"
+                                                  margin="0"
+                                                  justifyContent="center"
+                                                  gridGap="15px"
+                                                  columns_lg="5"
+                                                >
+                                                {badgesData.badges.slice(0, 5).map((badge, index) => {
+                                                  return (
+                                                    <Div
+                                                      key={badge.name}
+                                                      width="100%"
+                                                      height="105px"
+                                                      background={Colors.white}
+                                                      flexDirection="column"
+                                                      justifyContent="center"
+                                                      borderRadius="4px"
+                                                      flexShrink="0"
+                                                      border="1px solid #e5e5e5"
+                                                      minWidth="150px"
+                                                      maxWidth="180px"
+                                                    >
+                                                      <GatsbyImage
+                                                        style={{
+                                                          height: "49px",
+                                                          minWidth: "60px",
+                                                          margin: "auto",
+                                                          width: "100%",
+                                                        }}
+                                                        imgStyle={{ objectFit: "contain" }}
+                                                        loading="eager"
+                                                        alt={badge.name}
+                                                        draggable={false}
+                                                        image={getImage(badge.image.childImageSharp.gatsbyImageData)}
+                                                      />
+                                                    </Div>
+                                                  );
+                                                })}
+                                                </GridContainer>
+                                              </Div>
+                                            </Div>
+
+                                            {/* Tablet Swipable Layout */}
+                                            <Div
+                                              width="100%"
+                                              background={Colors.white}
+                                              padding="20px 0"
+                                              margin="0"
+                                              display="none"
+                                              display_tablet="block"
+                                              display_lg="none"
+                                            >
+                                              <Div width="100%" style={{ overflowX: "auto" }}>
+                                                <DraggableDiv gap="15px">
+                                                  {badgesData.badges.slice(0, 5).map((badge, index) => {
+                                                    return (
+                                                      <Div
+                                                        key={badge.name}
+                                                        width="160px"
+                                                        height="100px"
+                                                        background={Colors.white}
+                                                        flexDirection="column"
+                                                        justifyContent="center"
+                                                        borderRadius="4px"
+                                                        flexShrink="0"
+                                                        border="1px solid #e5e5e5"
+                                                      >
+                                                        <GatsbyImage
+                                                          style={{
+                                                            height: "45px",
+                                                            minWidth: "55px",
+                                                            margin: "auto",
+                                                            width: "100%",
+                                                          }}
+                                                          imgStyle={{ objectFit: "contain" }}
+                                                          loading="eager"
+                                                          alt={badge.name}
+                                                          draggable={false}
+                                                          image={getImage(badge.image.childImageSharp.gatsbyImageData)}
+                                                        />
+                                                      </Div>
+                                                    );
+                                                  })}
+                                                </DraggableDiv>
+                                              </Div>
+                                            </Div>
+
+                                            {/* Mobile Swipable Layout */}
+                                            <Div
+                                              width="100%"
+                                              background={Colors.white}
+                                              padding="20px 0"
+                                              margin="0"
+                                              display="block"
+                                              display_tablet="none"
+                                            >
+                                              <Div width="100%" style={{ overflowX: "auto" }}>
+                                                <DraggableDiv gap="15px">
+                                                  {badgesData.badges.slice(0, 5).map((badge, index) => {
+                                                    return (
+                                                      <Div
+                                                        key={badge.name}
+                                                        width="140px"
+                                                        height="90px"
+                                                        background={Colors.white}
+                                                        flexDirection="column"
+                                                        justifyContent="center"
+                                                        borderRadius="4px"
+                                                        flexShrink="0"
+                                                        border="1px solid #e5e5e5"
+                                                      >
+                                                        <GatsbyImage
+                                                          style={{
+                                                            height: "38px",
+                                                            minWidth: "45px",
+                                                            margin: "auto",
+                                                            width: "100%",
+                                                          }}
+                                                          imgStyle={{ objectFit: "contain" }}
+                                                          loading="eager"
+                                                          alt={badge.name}
+                                                          draggable={false}
+                                                          image={getImage(badge.image.childImageSharp.gatsbyImageData)}
+                                                        />
+                                                      </Div>
+                                                    );
+                                                  })}
+                                                </DraggableDiv>
+                                              </Div>
+                                            </Div>
                                           </Div>
                                         )}
                                     </React.Fragment>
@@ -557,9 +699,7 @@ export const query = graphql`
         }
       }
     }
-    allBadgesYaml(
-      filter: { fields: { lang: { eq: $lang } } }
-    ) {
+    allBadgesYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
           paragraph
