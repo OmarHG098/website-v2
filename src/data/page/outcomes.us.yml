@@ -65,6 +65,8 @@ sections:
           - image: 
             image_paragraph: " "
             chart: true
+  
+  
 
 
   - title: "🚀 Why Students Get Results with Us"
@@ -91,6 +93,13 @@ sections:
             <li class='li-outcomes-link'>Licensed by the Florida Department of Education</li>
             <li class='li-outcomes-link'>Trusted by students in 20+ countries</li>
           </ul>
+    sub_sections:
+      - title: "Our excellence is validated by industry leaders and educational institutions worldwide."
+        content: ""
+        image_section:
+          - image: 
+            image_paragraph: ""
+            badges: true
 
 
   - title: "💡 Making Tech Careers Accessible"

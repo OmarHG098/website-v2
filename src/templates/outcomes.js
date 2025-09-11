@@ -4,6 +4,7 @@ import { Div, Header, GridContainer, Grid } from "../components/Sections";
 import { H2, H3, H4, Paragraph } from "../components/Heading";
 import { Colors, Button } from "../components/Styling";
 import { Charts } from "../components/Chart";
+import Badges from "../components/Badges";
 import BaseRender from "./_baseLayout";
 import { StyledBackgroundSection } from "../components/Styling";
 import Modal from "../components/Modal";
@@ -125,6 +126,11 @@ const SVGImage = () => (
 const Outcomes = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const [open, setOpen] = useState(false);
+
+  // Get badges data from the separate query
+  const badgesData = data.allBadgesYaml.edges.find(
+    ({ node }) => node.fields.lang === pageContext.lang
+  )?.node;
 
   const handleOpen = () => {
     setOpen(true);
@@ -377,6 +383,22 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                             )}
                                           </GridContainer>
                                         )}
+
+                                      {/* Only render badges if badges flag is true and badges exist */}
+                                      {imageItem.badges &&
+                                        badgesData &&
+                                        Array.isArray(badgesData.badges) && (
+                                          <Div margin="30px 0">
+                                            <Badges
+                                              badges={badgesData}
+                                              lang={pageContext.lang}
+                                              variant="squares"
+                                              background={Colors.white}
+                                              padding="20px 0"
+                                              margin="0"
+                                            />
+                                          </Div>
+                                        )}
                                     </React.Fragment>
                                   );
                                 })}
@@ -517,6 +539,7 @@ export const query = graphql`
               image_section {
                 image_paragraph
                 chart
+                badges
               }
             }
           }
@@ -530,6 +553,35 @@ export const query = graphql`
             button_text
             label
             motivation
+          }
+        }
+      }
+    }
+    allBadgesYaml(
+      filter: { fields: { lang: { eq: $lang } } }
+    ) {
+      edges {
+        node {
+          paragraph
+          badges {
+            name
+            url
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  height: 150
+                  quality: 100
+                  placeholder: NONE
+                )
+              }
+            }
+          }
+          link_text
+          link_to
+          short_link_text
+          fields {
+            lang
           }
         }
       }

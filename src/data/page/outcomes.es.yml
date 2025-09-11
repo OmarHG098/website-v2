@@ -90,6 +90,13 @@ sections:
             <li class='li-outcomes-link'>Licenciados por el Departamento de Educación de Florida</li>
             <li class='li-outcomes-link'>Con la confianza de estudiantes en más de 20 países</li>
           </ul>
+    sub_sections:
+      - title: "Nuestra excelencia está validada por líderes de la industria e instituciones educativas de todo el mundo."
+        content: " "
+        image_section:
+          - image: 
+            image_paragraph: ""
+            badges: true
 
   - title: "💡 Haciendo las Carreras Tech Accesibles"
     ref: "accessibility"
