@@ -7,7 +7,7 @@ const ChartContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   @media (max-width: 768px) {
     padding: 10px;
   }
@@ -30,9 +30,9 @@ export const Charts = (props) => {
     };
 
     checkMobile();
-    window.addEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
 
-    return () => window.removeEventListener('resize', checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   useEffect(() => {
@@ -59,73 +59,38 @@ export const Charts = (props) => {
 
   // Configuración responsive
   const getChartOptions = () => {
-    if (isMobile) {
-      return {
-        legend: {
-          position: 'bottom',
-          textStyle: {
-            fontSize: 10,
-            color: '#000000'
-          },
-          maxLines: 5,
-          alignment: 'center'
+    return {
+      legend: {
+        position: "bottom",
+        textStyle: {
+          fontSize: isMobile ? 10 : 12,
+          color: "#000000",
         },
-        pieHole: 0.5,
-        is3D: false,
-        animation: {
-          startup: true,
-          easing: "linear",
-          duration: 1000,
-        },
-        backgroundColor: 'transparent',
-        colors: ['#FFB718', '#0084FF', '#CD0000', '#23C520'],
-        tooltip: {
-          trigger: 'none'
-        },
-        pieSliceText: 'none',
-        chartArea: {
-          left: '10%',
-          top: '5%',
-          width: '80%',
-          height: '70%'
-        },
-        width: '100%',
-        enableInteractivity: false
-      };
-    } else {
-      return {
-        legend: {
-          position: 'right',
-          textStyle: {
-            fontSize: 12,
-            color: '#000000'
-          },
-          maxLines: 10,
-          alignment: 'start' // Cambiado de 'center' a 'start'
-        },
-        pieHole: 0.5,
-        is3D: false,
-        animation: {
-          startup: true,
-          easing: "linear",
-          duration: 1000,
-        },
-        backgroundColor: 'transparent',
-        colors: ['#FFB718', '#0084FF', '#CD0000', '#23C520'],
-        tooltip: {
-          trigger: 'none'
-        },
-        pieSliceText: 'none',
-        chartArea: {
-          left: '5%',
-          top: '5%',
-          width: '65%', // Incrementado de 55% a 65%
-          height: '85%'
-        },
-        width: '100%',
-        enableInteractivity: false
-      };
-    }
+        maxLines: isMobile ? 5 : 10,
+        alignment: "center",
+      },
+      pieHole: 0.5,
+      is3D: false,
+      animation: {
+        startup: true,
+        easing: "linear",
+        duration: 1000,
+      },
+      backgroundColor: "transparent",
+      colors: ["#FFB718", "#0084FF", "#CD0000", "#23C520"],
+      tooltip: {
+        trigger: "none",
+      },
+      pieSliceText: "none",
+      chartArea: {
+        left: "10%",
+        top: "5%",
+        width: "80%",
+        height: isMobile ? "70%" : "75%",
+      },
+      width: "100%",
+      enableInteractivity: false,
+    };
   };
 
   return (
@@ -133,7 +98,7 @@ export const Charts = (props) => {
       <Chart
         chartType="PieChart"
         width="100%"
-        height={isMobile ? "400px" : "350px"}
+        height={isMobile ? "400px" : "450px"}
         data={data}
         options={getChartOptions()}
       />

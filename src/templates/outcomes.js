@@ -358,7 +358,9 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                       {console.log("Chart render conditions:", {
                                         hasChartFlag: imageItem.chart,
                                         hasCharts: yml.charts,
-                                        hasChartList: Array.isArray(yml.charts?.chart_list)
+                                        hasChartList: Array.isArray(
+                                          yml.charts?.chart_list
+                                        ),
                                       })}
                                       {imageItem.chart &&
                                         yml.charts &&
@@ -370,6 +372,8 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                             justifyContent="center"
                                             justifyContent_tablet="center"
                                             gridTemplateColumns_tablet="3"
+                                            gridGap="40px"
+                                            gridGap_tablet="60px"
                                           >
                                             {yml.charts.chart_list.map(
                                               (c, k) => {
@@ -378,7 +382,10 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                                     flexDirection="column"
                                                     key={k}
                                                   >
-                                                    {console.log("Chart data being passed:", c.data)}
+                                                    {console.log(
+                                                      "Chart data being passed:",
+                                                      c.data
+                                                    )}
                                                     <Charts
                                                       dataArray={c.data}
                                                     />
