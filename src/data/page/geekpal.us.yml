@@ -78,7 +78,8 @@ components:
       style: '{ "font-weight": "400" }'
     content:
       text: "Together, human mentorship and AI-powered tools accelerate your learning, keep you engaged, and empower you to tackle challenges with confidence."
-      font_size: ["16px"]
+      font_size: ["18px"]
+      style: '{ "font-weight": "400" }'
     bullets:
       item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
       items:
@@ -120,8 +121,8 @@ components:
       style: '{ "lineHeight": "30px" }'
     sub_heading:
       text: "4Geeks is more than a bootcamp — it’s a supportive network of tech pros, mentors, and fellow geeks to keep you moving forward in your career."
-      font_size: ["16px","16px","16px","16px","16px"]
-      style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300" }'
+      font_size: ["18px","18px","18px","18px","18px"]
+      style: '{ "margin":"15px 0", "font-weight":"300" }'
     bullets:
       item_style: '{ "padding": "5px 0", "font-weight": "100", "margin":"0" }'
       items:

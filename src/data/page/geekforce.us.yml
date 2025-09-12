@@ -126,7 +126,7 @@ components:
     proportions: [6, 6]
     image:
       style: '{"backgroundSize": "contain", "background-position": "center", "border-radius": "4px"}'
-      src: "/images/landing/Group-original.webp"
+      src: "/images/bg/community.png"
       shadow: false
     heading:
       text: "Accelerate Your Results with Hyperpersonalized Career Support"

@@ -379,6 +379,8 @@ export const query = graphql`
             }
             content {
               text
+              font_size
+              style
             }
             bullets {
               item_style
