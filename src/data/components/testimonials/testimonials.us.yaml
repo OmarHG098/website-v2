@@ -48,6 +48,7 @@ testimonials:
       name: United States of America
     featured: false
     highlighted: false
+    related_features: ['job-guarantee', 'price', 'scolarships'] # online-platform, mentors-and-teachers, price, carreer-support, content-and-syllabus, job-guarantee, full-stack, cibersecurity, data-science, applied-ai, outcomes, scolarships, rigobot, learnPack, certification
     testimonial_date: ""
     rating: 5
     source_link: ""
