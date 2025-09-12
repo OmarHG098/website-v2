@@ -86,11 +86,11 @@ components:
     heading: 
       text: "Consigue Trabajo con Nuestro Proceso de Desarrollo Profesional de 3 Pasos"
       font_size: ["33px", "33px", "33px", "33px", "33px"]
-      style: '{ "lineHeight": "35px", "textAlign": "center", "width": "50%" }'
+      style: '{ "lineHeight": "35px", "textAlign": "center", "width": "90%" }'
     sub_heading:
       text: "Una vez que hayas dominado las habilidades técnicas, nuestro proceso estructurado te ayuda a construir una carrera duradera en tech — llevándote del aprendizaje a conseguir el trabajo."
       font_size: ["20px", "20px", "16px", "16px", "16px"]
-      style: '{ "textAlign": "center", "width": "60%"}'
+      style: '{ "textAlign": "center", "width": "90%"}'
     icons:
         - icon: "capacity"
           title: "1. Optimización de Perfil"

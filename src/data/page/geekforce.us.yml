@@ -86,11 +86,11 @@ components:
     heading: 
       text: "Get Hired with Our 3-Step Career Development Process"
       font_size: ["33px", "33px", "33px", "33px", "33px"]
-      style: '{ "lineHeight": "35px", "textAlign": "center", "width": "50%" }'
+      style: '{ "lineHeight": "35px", "textAlign": "center", "width": "90%" }'
     sub_heading:
       text: "Once you’ve mastered the technical skills, our structured process helps you build a lasting career in tech — taking you from learning to landing the job."
       font_size: ["20px", "20px", "16px", "16px", "16px"]
-      style: '{ "textAlign": "center", "width": "60%"}'    
+      style: '{ "textAlign": "center", "width": "90%"}'    
     icons:
         - icon: "capacity"
           title: "1. Profile Optimization"

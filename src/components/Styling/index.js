@@ -778,6 +778,18 @@ export const PhoneTextDesktop = styled.p`
   }
 `;
 
+export const VerticalVideoHolder = styled.div`
+  border: 3px solid black;
+  box-shadow: 13px 13px 0px 1px rgba(0, 0, 0, 1);
+  z-index: 1;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+  background: white;
+  position: relative;
+`;
+
 export const OfferTag = styled.div`
   position: absolute;
   top: -12px;

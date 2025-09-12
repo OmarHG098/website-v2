@@ -6,13 +6,10 @@ import { SessionContext } from "../session";
 import { landingSections } from "../components/Landing";
 
 //new components
-import Icon from "../components/Icon";
-import { Colors } from "../components/Styling";
+import { Colors, VerticalVideoHolder } from "../components/Styling";
 import ReactPlayer from "../components/ReactPlayer";
-import OurPartners from "../components/OurPartners";
-import Overlaped from "../components/Overlaped";
 import { Div, Grid, HR } from "../components/Sections";
-import { H2, H3, Paragraph } from "../components/Heading";
+import { Paragraph } from "../components/Heading";
 import { Img } from "../components/Styling";
 import { StyledBackgroundSection } from "../components/Styling";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
@@ -57,11 +54,7 @@ const GeekForce = (props) => {
         padding_md="100px 80px 40px 80px"
         padding_lg="100px 0px 40px 0px"
         columns_tablet="18"
-        margin={
-          isCustomBarActive(session)
-            ? "120px auto 24px auto"
-            : "70px auto 24px auto"
-        }
+        margin={"70px auto 24px auto"}
         maxWidth="1280px"
         position="relative"
         gridTemplateColumns_tablet="repeat(21, 1fr)"
@@ -106,7 +99,7 @@ const GeekForce = (props) => {
             textAlign_xs="center"
             textAlign_tablet="left"
             color="black"
-            fontSize_xs="32px"
+            fontSize_xs="40px"
             lineHeight_xs="38px"
             fontSize_tablet="50px"
             lineHeight_tablet="54px"
@@ -200,37 +193,25 @@ const GeekForce = (props) => {
             bottom_lg="0%"
             display_xs="none"
           />
-          <Div
-            border="3px solid black"
-            boxShadow="13px 13px 0px 1px rgba(0,0,0,1)"
-            zIndex="1"
-            height="fit-content"
-            width="100%"
-            overflow="hidden"
-            borderRadius="24px"
-            background="white"
-            position="relative"
-          >
+          <VerticalVideoHolder>
             {yml.geekForce.map((item, i) => {
               return (
                 <React.Fragment key={i}>
                   {item.videoId === "" ? (
                     <StyledBackgroundSection
                       height="500px"
-                      height_xs="260px"
-                      height_tablet="450px"
-                      height_md="450px"
                       image={item.image.childImageSharp.gatsbyImageData}
                       bgSize="contain"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                      }}
                       alt="geekforce image"
                     />
                   ) : (
                     <Div
                       width="100%"
                       height="500px"
-                      height_xs="260px"
-                      height_tablet="450px"
-                      height_md="450px"
                       margin="0"
                       overflow="hidden"
                     >
@@ -253,7 +234,7 @@ const GeekForce = (props) => {
                 </React.Fragment>
               );
             })}
-          </Div>
+          </VerticalVideoHolder>
         </Div>
       </Grid>
 
