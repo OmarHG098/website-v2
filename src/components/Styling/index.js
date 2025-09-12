@@ -874,7 +874,7 @@ export const FloatingLabel = styled.div`
   @media ${Break.sm} {
     padding: 3px 6px;
     font-size: 10px;
-    
+
     /* Adjust position for mobile */
     ${(props) => {
       const x = 50 + 35 * Math.cos(props.angle);

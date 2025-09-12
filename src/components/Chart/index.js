@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Chart from "react-google-charts";
-import { Colors, ChartWrapper, ChartContainer, FloatingLabels, FloatingLabel } from "../Styling";
+import {
+  Colors,
+  ChartWrapper,
+  ChartContainer,
+  FloatingLabels,
+  FloatingLabel,
+} from "../Styling";
 import { Devices, Break } from "../Responsive";
 
 const StyledChart = styled(Chart)`
