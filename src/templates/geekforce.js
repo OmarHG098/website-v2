@@ -260,11 +260,9 @@ const GeekForce = (props) => {
           });
         })}
       {data.allScholarshipSuccessCasesYaml?.edges?.[0]?.node && (
-        <Div margin="60px 0" margin_md="80px 0">
-          <ScholarshipSuccessCases
-            content={data.allScholarshipSuccessCasesYaml.edges[0].node}
-          />
-        </Div>
+        <ScholarshipSuccessCases
+          content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+        />
       )}
       <HR
         background={Colors.verylightGray}
