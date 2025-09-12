@@ -57,7 +57,7 @@ cta:
     book_call: "Agendar llamada →"
     apply_link: "https://calendly.com/epilowsky-4geeksacademy/30min?month=2025-08"
   international:
-    book_call: "Aplicar ahora"
+    book_call: "Solicitar Syllabus"
     apply_link: "/es/apply"
   more_details: Más detalles
   more_details_link: /es/financiacion

@@ -17,6 +17,7 @@ import PaymentPlans from "../components/PaymentPlans";
 import Iconogram from "../components/Iconogram";
 import TwoColumn from "../components/TwoColumn";
 import DataTable from "../components/DataTable";
+import DoubleActionCTA from "../components/DoubleActionCTA";
 
 const Financial = (props) => {
   const { session } = useContext(SessionContext);
@@ -128,6 +129,7 @@ const Financial = (props) => {
           headerStyle={ymlTableStyling?.header_style || {}}
           cellStyle={ymlTableStyling?.cell_style || {}}
           tableStyle={ymlTableStyling?.table_style || {}}
+          margin="0 auto 4rem auto"
         />
       )}
 
@@ -174,6 +176,12 @@ const Financial = (props) => {
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
+      <DoubleActionCTA
+        disableRestriction
+        location={session?.location}
+        ctaData={yml.cta}
+        disableBullets
+      />
     </>
   );
 };
@@ -190,6 +198,7 @@ export const query = graphql`
             description
             image
             keywords
+            hideGlobalCTA
           }
           seo_title
           header {
@@ -319,7 +328,6 @@ export const query = graphql`
               }
             }
             content {
-              font_size
               text
             }
             button {
@@ -329,32 +337,7 @@ export const query = graphql`
               hover_color
               path
             }
-            boxes {
-              icon
-              title
-              text
-            }
             background
-          }
-          contact_form {
-            title
-            subtitle
-            submit_button_text
-            loading_text
-            success_message
-            error_message
-            validation_error
-            placeholders {
-              firstName
-              lastName
-              email
-              message
-            }
-            status_messages {
-              loading
-              success
-              error
-            }
           }
           data_table {
             title {
@@ -401,6 +384,54 @@ export const query = graphql`
                 }
                 html
               }
+            }
+          }
+          cta {
+            title
+            description
+            primary {
+              title
+              description
+              benefits
+              footer_text
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
+              action_text
+              action_url
+            }
+            secondary {
+              title
+              description
+              benefits
+              footer_text
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
+              action_text
+              action_url
+            }
+            newsletter_form {
+              placeholder_email
+              error_email
+              button_submit
+              button_loading
+              status_idle
+              status_error
+              status_correct_errors
+              success_message
             }
           }
         }

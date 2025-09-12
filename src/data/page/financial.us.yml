@@ -6,6 +6,7 @@ meta_info:
   image: "/images/og-preview/finantial.us.png"
   keywords: "Financing at 4Geeks Academy"
   redirects: ["/financials", "/pricing"]
+  hideGlobalCTA: true # Hides the global CTA because this page has its own DoubleActionCTA
 
 ## BANNER - HEADER
 seo_title: "Bootcamp Financing"
@@ -115,7 +116,6 @@ who_is_hiring:
     - '/images/partner/blackstone.png'
     - '/images/partner/cemex.png'
 
-
 two_column:
   - image:
       style: '{ "backgroundSize": "contain"}'
@@ -142,8 +142,6 @@ two_column:
       background: "black"
       hover_color: "white"
       path: "/us/job-guarantee"
-
-
 
 partners:
   paragraph: "Don't miss out on the awesome allies of 4Geeks Academy! Here are just a few of them."
@@ -186,24 +184,6 @@ we_trust_section:
     - icon: chart
       title: "55%"
       text: Salary increase after graduation
-
-contact_form:
-  title: "Need Help with Financing?"
-  subtitle: "Our admissions team is here to help you find the best financing option for your situation."
-  submit_button_text: "Get Financing Help"
-  loading_text: "Sending..."
-  success_message: "Message sent successfully! We will contact you soon."
-  error_message: "Error sending message. Please try again."
-  validation_error: "Please correct the errors in the form"
-  placeholders:
-    firstName: "First Name"
-    lastName: "Last Name"
-    email: "Email Address"
-    message: "Tell us about your financing questions or concerns..."
-  status_messages:
-    loading: "Sending form, please wait"
-    success: "Form sent successfully"
-    error: "Error sending form"
 
 data_table:
   title:
@@ -338,3 +318,38 @@ data_table:
           size: "22px"
           icon_color: "#28a745"
           html: false
+
+cta:
+  title: Take the Next Step in Your Tech Career
+  description: "Join thousands of students who have transformed their careers with 4Geeks Academy. Get personalized guidance and stay updated with the latest in tech."
+  primary:
+    title: "Book a Free 15 Minute Career Consultation"
+    description: "Get personalized guidance from our career experts. Discover the perfect tech path for your goals and learn about our programs."
+    image: "../../../static/images/Group-6617.webp"
+    action_text: "Schedule now!"
+    action_url: "https://calendly.com/epilowsky-4geeksacademy/30min"
+    benefits:
+      - "Personalized career roadmap"
+      - "Program recommendations"
+      - "Industry insights & salary expectations"
+    footer_text: "✨ Free 15-minute session • No commitment required"
+  secondary:
+    title: "Subscribe to our Newsletter"
+    description: "Get the latest tech industry insights, course updates, success stories, and exclusive content delivered to your inbox."
+    image: "../../../static/images/woman-glasses-laptop.png"
+    action_text: "Subscribe"
+    action_url: ""
+    benefits:
+      - "Industry trends & job market insights"
+      - "Student success stories"
+      - "Exclusive course discounts & early access"
+    footer_text: "📧 Weekly updates • Unsubscribe anytime • No spam"
+  newsletter_form:
+    placeholder_email: "Email *"
+    error_email: "Please enter a valid email"
+    button_submit: "Subscribe"
+    button_loading: "Loading..."
+    status_idle: "Request"
+    status_error: "There are errors in your form"
+    status_correct_errors: "Correct the errors"
+    success_message: "🎉 Thank you! You've been successfully subscribed to our newsletter."

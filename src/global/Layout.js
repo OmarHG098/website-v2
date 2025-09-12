@@ -16,7 +16,7 @@ import GlobalStyle from "./GlobalStyle";
 import SEO from "./SEO";
 import { Helmet } from "react-helmet";
 
-const Layout = ({ children, seo, context }) => {
+const Layout = ({ children, seo, context, metaInfo }) => {
   // const {slug, title, description, image, keywords} = seo;
   const [editMode, setEditMode] = React.useState();
   const [showUpcoming, setShowUpcoming] = React.useState(true);
@@ -272,7 +272,8 @@ const Layout = ({ children, seo, context }) => {
       )}
       <PageWrapper
         pageContext={context}
-        doubleActionCTA={myDoubleActionCTA?.node}
+        doubleActionCTA={myDoubleActionCTA?.node.cta}
+        hideGlobalCTA={metaInfo?.hideGlobalCTA || false}
       >
         {children}
       </PageWrapper>
