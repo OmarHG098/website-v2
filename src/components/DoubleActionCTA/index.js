@@ -17,7 +17,13 @@ const Form = styled.form`
   flex-direction: column;
 `;
 
-const DoubleActionCTA = ({ disableRestriction = false, disableBullets = false, location, ctaData, lang = "us" }) => {
+const DoubleActionCTA = ({
+  disableRestriction = false,
+  disableBullets = false,
+  location,
+  ctaData,
+  lang = "us",
+}) => {
   const { session: appSession } = useContext(SessionContext);
   const captcha = useRef(null);
 
@@ -42,8 +48,10 @@ const DoubleActionCTA = ({ disableRestriction = false, disableBullets = false, l
   }
 
   const content = ctaData;
-  const existsPrimaryBenefits = !disableBullets && content?.primary?.benefits.length > 0;
-  const existsSecondaryBenefits = !disableBullets && content?.secondary?.benefits.length > 0;
+  const existsPrimaryBenefits =
+    !disableBullets && content?.primary?.benefits.length > 0;
+  const existsSecondaryBenefits =
+    !disableBullets && content?.secondary?.benefits.length > 0;
 
   return (
     <Div
@@ -164,7 +172,7 @@ const DoubleActionCTA = ({ disableRestriction = false, disableBullets = false, l
                 width: "100%",
                 height: "220px",
                 borderRadius: "0.5rem",
-                margin: existsPrimaryBenefits ? "" : "2rem auto 0.5rem"
+                margin: existsPrimaryBenefits ? "" : "2rem auto 0.5rem",
               }}
               imgStyle={{ objectFit: "cover" }}
               loading="eager"
@@ -201,8 +209,7 @@ const DoubleActionCTA = ({ disableRestriction = false, disableBullets = false, l
                 stroke={Colors.white}
               />
               <span>
-                {content?.primary?.action_text ||
-                  "Schedule Free Consultation"}
+                {content?.primary?.action_text || "Schedule Free Consultation"}
               </span>
             </Button>
           </Link>
@@ -243,8 +250,7 @@ const DoubleActionCTA = ({ disableRestriction = false, disableBullets = false, l
               fontFamily="var(--font-sans)"
               letterSpacing="normal"
             >
-              {content?.secondary?.title ||
-                "Stay Updated with Our Newsletter"}
+              {content?.secondary?.title || "Stay Updated with Our Newsletter"}
             </H3>
             <Paragraph
               fontSize="1rem"
@@ -296,7 +302,7 @@ const DoubleActionCTA = ({ disableRestriction = false, disableBullets = false, l
                 width: "100%",
                 height: "220px",
                 borderRadius: "0.5rem",
-                margin: existsSecondaryBenefits ? "" : "2rem auto 0.5rem"
+                margin: existsSecondaryBenefits ? "" : "2rem auto 0.5rem",
               }}
               imgStyle={{ objectFit: "cover" }}
               loading="eager"
@@ -441,9 +447,7 @@ const DoubleActionCTA = ({ disableRestriction = false, disableBullets = false, l
                   ) : (
                     <>
                       <Icon icon="mail" width="18px" height="18px" />
-                      <span>
-                        {content?.newsletter_form?.button_submit}
-                      </span>
+                      <span>{content?.newsletter_form?.button_submit}</span>
                     </>
                   )}
                 </Button>

@@ -2,7 +2,12 @@ import React from "react";
 import { SessionContext } from "../session";
 import DoubleActionCTA from "../components/DoubleActionCTA";
 
-const PageWrapper = ({ children, pageContext, doubleActionCTA, hideGlobalCTA }) => {
+const PageWrapper = ({
+  children,
+  pageContext,
+  doubleActionCTA,
+  hideGlobalCTA,
+}) => {
   const { session } = React.useContext(SessionContext);
 
   const isLandingPage =
