@@ -8,6 +8,7 @@ import { Div } from "../components/Sections";
 import { Header } from "../components/Sections";
 import { Button, Colors } from "../components/Styling";
 import Iconogram from "../components/Iconogram";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const ApplicationProcess = (props) => {
   const { pageContext, yml } = props;
@@ -16,26 +17,24 @@ const ApplicationProcess = (props) => {
   return (
     <>
       <Header
-        margin="10px 0 0 0"
-        margin_md="70px 0 0px 0"
-        padding_tablet="60px 40px 60px 40px"
-        padding_md="60px 40px 60px 40px"
-        colorVariant="white"
+        margin="3rem 0 0 0"
+        padding_tablet="2rem 40px 60px 40px"
+        padding_md="2rem 40px 60px 40px"
         padding_l="60px 0 60px 0"
-        background={Colors.blue2}
         fontFamily="Archivo-Black"
         seo_title={yml.seo_title}
         title={header.title}
         fontWeight_title="700"
-        textWrap="balance"
+        textAlign_tablet="left"
         paragraphMargin="26px auto 0 auto"
+        containerStyle={{ alignItems: "center" }}
         paragraph={
           <>
             {header?.paragraph && (
               <span
                 style={{
                   fontFamily: "Roboto, sans-serif",
-                  color: "#fff",
+                  color: "#000",
                   lineHeight: "1.5",
                   fontSize: "22px",
                 }}
@@ -44,6 +43,18 @@ const ApplicationProcess = (props) => {
             )}
           </>
         }
+        svg_image={(
+          <GatsbyImage
+            image={getImage(
+              header.image && header.image.childImageSharp.gatsbyImageData
+            )}
+            style={{
+              height: "100%",
+              backgroundSize: `cover`,
+            }}
+            alt={header.alt}
+          />
+        )}
       />
 
       {stepper && (
@@ -110,7 +121,7 @@ export const query = graphql`
               childImageSharp {
                 gatsbyImageData(
                   layout: CONSTRAINED
-                  width: 1600
+                  width: 900
                   quality: 100
                   placeholder: NONE
                 )

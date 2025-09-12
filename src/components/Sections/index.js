@@ -786,6 +786,7 @@ export const Header = ({
   id,
   textWrap,
   colorVariant,
+  containerStyle,
 }) => {
   const multilineTitle = title
     .split("\n")
@@ -826,6 +827,7 @@ export const Header = ({
         gridArea_tablet="1/1/1/15"
         maxWidth="1280px"
         margin="auto"
+        style={containerStyle}
       >
         {/* hacer cambios aqui ... remover svg en mobile */}
         <Div
@@ -891,7 +893,7 @@ export const Header = ({
             width="100%"
             display={display_mobile || "none"}
             display_tablet="flex"
-            gridArea_tablet="1/8/1/17"
+            gridArea_tablet="1/7/1/13"
           >
             {svg_image}
           </Div>

@@ -12,6 +12,8 @@ seo_title: "Proceso de Aplicación - Únete a 4Geeks Academy"
 header:
   title: "Tu Camino para Unirte a 4Geeks e Impulsar Tu Nueva Carrera"
   paragraph: "Aplicar es simple — y te guiaremos en cada paso del camino. Así es como pasas de curioso a ser oficialmente parte de la comunidad 4Geeks:"
+  image: "../../../static/images/career_launch.png"
+  alt: "Career Launch"
 
 apply_button:
   text: "Inscríbete ahora"
