@@ -43,7 +43,7 @@ const ApplicationProcess = (props) => {
             )}
           </>
         }
-        svg_image={(
+        svg_image={
           <GatsbyImage
             image={getImage(
               header.image && header.image.childImageSharp.gatsbyImageData
@@ -54,7 +54,7 @@ const ApplicationProcess = (props) => {
             }}
             alt={header.alt}
           />
-        )}
+        }
       />
 
       {stepper && (
