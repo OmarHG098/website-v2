@@ -141,7 +141,7 @@ const With4Geeks = ({
                 >
                   {element.video && element.image && (
                     <ReactPlayer
-                      With_Modal={element.open_in_modal}
+                      withModal={element.open_in_modal}
                       margin_tablet="0px"
                       imageWidth="100%"
                       imageHeight={element.video_height || "auto"}
