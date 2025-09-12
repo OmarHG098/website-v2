@@ -93,9 +93,13 @@ const SuccessStoriescomponent = ({ filterIndexes, lang, variant }) => {
     ) || [];
 
   // Split regular testimonials in half for rendering around the featured section only if there's a featured testimonial
-  const midPoint = featuredTestimonial ? Math.ceil(regularTestimonials.length / 2) : regularTestimonials.length;
+  const midPoint = featuredTestimonial
+    ? Math.ceil(regularTestimonials.length / 2)
+    : regularTestimonials.length;
   const firstHalf = regularTestimonials.slice(0, midPoint);
-  const secondHalf = featuredTestimonial ? regularTestimonials.slice(midPoint) : [];
+  const secondHalf = featuredTestimonial
+    ? regularTestimonials.slice(midPoint)
+    : [];
 
   let position = 0;
 

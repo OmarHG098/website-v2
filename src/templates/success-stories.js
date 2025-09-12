@@ -207,26 +207,26 @@ const SuccessStories = (props) => {
           <Paragraph fontSize="22px">{yml.cta.paragraph}</Paragraph>
         </Div>
 
-      <Div margin="3rem auto 5rem auto" justifyContent="center">
-        <Link to={yml.cta.button.path} style={{ width: 'auto' }}>
-          <Button
-            display="block"
-            color="#000"
-            background={Colors.white}
-            border="3px solid #000"
-            borderRadius="8px"
-            height="auto"
-            padding="18px 2.46rem"
-            letterSpacing="0.07em"
-            padding_tablet="18px 2.46rem"
-            fontSize="22px"
-            textTransform="uppercase"
-            boxShadow="10px 10px 0px 0px rgba(0,0,0,1)"
-          >
-            {yml.cta.button.text}
-          </Button>
-        </Link>
-      </Div>
+        <Div margin="3rem auto 5rem auto" justifyContent="center">
+          <Link to={yml.cta.button.path} style={{ width: "auto" }}>
+            <Button
+              display="block"
+              color="#000"
+              background={Colors.white}
+              border="3px solid #000"
+              borderRadius="8px"
+              height="auto"
+              padding="18px 2.46rem"
+              letterSpacing="0.07em"
+              padding_tablet="18px 2.46rem"
+              fontSize="22px"
+              textTransform="uppercase"
+              boxShadow="10px 10px 0px 0px rgba(0,0,0,1)"
+            >
+              {yml.cta.button.text}
+            </Button>
+          </Link>
+        </Div>
       </Div>
     </>
   );
