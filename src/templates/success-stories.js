@@ -73,8 +73,8 @@ const SuccessStories = (props) => {
               zIndex: "-1",
               transform: "rotate(90deg)",
             }}
-            right_lg="11%"
-            right_tablet="21%"
+            right_lg="5%"
+            right_tablet="6%"
             bottom_tablet="-20%"
             bottom_md="-25%"
             display_xxs="none"
@@ -207,7 +207,8 @@ const SuccessStories = (props) => {
           <Paragraph fontSize="22px">{yml.cta.paragraph}</Paragraph>
         </Div>
 
-        <Link to={yml.cta.button.path}>
+      <Div margin="3rem auto 5rem auto" justifyContent="center">
+        <Link to={yml.cta.button.path} style={{ width: 'auto' }}>
           <Button
             display="block"
             color="#000"
@@ -221,11 +222,11 @@ const SuccessStories = (props) => {
             fontSize="22px"
             textTransform="uppercase"
             boxShadow="10px 10px 0px 0px rgba(0,0,0,1)"
-            margin="3rem auto 5rem auto"
           >
             {yml.cta.button.text}
           </Button>
         </Link>
+      </Div>
       </Div>
     </>
   );

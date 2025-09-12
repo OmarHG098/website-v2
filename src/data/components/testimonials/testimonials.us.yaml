@@ -52,6 +52,25 @@ testimonials:
     student_thumb: "../../../../static/images/testimonials/florencia-viera.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
 
+  - student_name: "James"
+    slug: "james"
+    country:
+      iso: us
+      name: United States of America
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    source_link: ""
+    student_thumb: "../../../../static/images/testimonials/james-testimonial.png"
+    student_video: "ImB1Xdv9XVs"
+    hidden: false
+    linkedin_url: ""
+    linkedin_text: ""
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    short_content: ""
+    content: "Thanks to 4Geeks Academy’s bootcamp and their job guarantee program, I was able to change careers and enter the tech industry without a college degree. The mentorship and ongoing support were key, and after graduating they helped me find my first job in tech."
   - student_name: "Jonathan Ferragut"
     slug: "jona-ferra"
     country:

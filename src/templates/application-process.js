@@ -6,7 +6,7 @@ import BaseRender from "./_baseLayout";
 import Stepper from "../components/Stepper";
 import { Div } from "../components/Sections";
 import { Header } from "../components/Sections";
-import { Button, Colors } from "../components/Styling";
+import { Button, Colors, Img } from "../components/Styling";
 import Iconogram from "../components/Iconogram";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
@@ -17,6 +17,7 @@ const ApplicationProcess = (props) => {
   return (
     <>
       <Header
+        position="relative"
         margin="3rem 0 0 0"
         padding_tablet="2rem 40px 60px 40px"
         padding_md="2rem 40px 60px 40px"
@@ -44,16 +45,68 @@ const ApplicationProcess = (props) => {
           </>
         }
         svg_image={
-          <GatsbyImage
-            image={getImage(
-              header.image && header.image.childImageSharp.gatsbyImageData
-            )}
-            style={{
-              height: "100%",
-              backgroundSize: `cover`,
-            }}
-            alt={header.alt}
-          />
+          <>
+            <GatsbyImage
+              image={getImage(
+                header.image && header.image.childImageSharp.gatsbyImageData
+              )}
+              style={{
+                height: "100%",
+                backgroundSize: `cover`,
+              }}
+              alt={header.alt}
+            />
+            <Img
+              src="/images/Vector-right-large.png"
+              width="66px"
+              height="91px"
+              style={{
+                position: "absolute",
+                left: "4.4%",
+                top: "4%",
+                zIndex: "1",
+              }}
+            />
+            <Img
+              src="/images/landing/vector-stroke.png"
+              width="62px"
+              height="91px"
+              style={{
+                position: "absolute",
+                left: "8%",
+                top: "4%",
+                zIndex: "1",
+              }}
+            />
+            <Img
+              src="/images/landing/vector-stroke2.png"
+              width="66px"
+              height="91px"
+              style={{
+                position: "absolute",
+                left: "11%",
+                top: "4%",
+                zIndex: "1",
+                transform: "rotate(180deg)",
+              }}
+            />
+            <Img
+              src="/images/Group-6594-e.png"
+              width="42px"
+              height="250px"
+              style={{
+                position: "absolute",
+                zIndex: "1",
+                transform: "rotate(90deg)",
+              }}
+              right_lg="12%"
+              right_tablet="12%"
+              bottom_tablet="-2%"
+              bottom_md="-2%"
+              display_xxs="none"
+              display_tablet="flex"
+            />
+          </>
         }
       />
 
