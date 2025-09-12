@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import styled from "styled-components";
 import Chart from "react-google-charts";
 import {
@@ -8,7 +8,7 @@ import {
   FloatingLabels,
   FloatingLabel,
 } from "../Styling";
-import { Devices, Break } from "../Responsive";
+import { Break } from "../Responsive";
 
 const StyledChart = styled(Chart)`
   height: 260px;
@@ -18,105 +18,135 @@ const StyledChart = styled(Chart)`
   }
 `;
 
-export const Charts = (props) => {
+// Constantes para evitar recrear objetos en cada render
+const CHART_CONFIG = {
+  PIE_HOLE: 0.5,
+  ANIMATION_DURATION: 1000,
+  START_ANGLE: -Math.PI / 2, // -90 degrees
+  CHART_AREA: { left: 0, top: 0, width: "100%", height: "100%" },
+};
+
+const CHART_COLORS = [Colors.yellow, Colors.blue, Colors.red, Colors.green];
+
+export const Charts = ({ dataArray }) => {
   const [data, setData] = useState([]);
   const [processedData, setProcessedData] = useState([]);
 
-  useEffect(() => {
-    const loadChartData = async () => {
-      if (!props.dataArray) return;
-
-      const dataArray = [...props.dataArray];
-      const processedLabels = [];
-      let totalValue = 0;
-
-      // Calculate total for percentages and angles
-      for (let i = 1; i < dataArray.length; i++) {
-        if (dataArray[i] && dataArray[i][1]) {
-          totalValue += parseInt(dataArray[i][1], 10);
-        }
-      }
-
-      let cumulativeAngle = -Math.PI / 2; // Start from top (-90 degrees)
-
-      // Process each data point
-      for (let i = 1; i < dataArray.length; i++) {
-        if (dataArray[i] && dataArray[i][1]) {
-          const value = parseInt(dataArray[i][1], 10);
-          const originalLabel = dataArray[i][0];
-
-          // Keep original label in chart data
-          dataArray[i][0] = originalLabel;
-          dataArray[i][1] = value;
-
-          // Calculate angle for this segment (center of the slice)
-          const segmentAngle = (value / totalValue) * 2 * Math.PI;
-          const centerAngle = cumulativeAngle + segmentAngle / 2;
-
-          processedLabels.push({
-            label: `${originalLabel}: ${value} (${value}%)`,
-            value: value,
-            originalLabel: originalLabel,
-            angle: centerAngle,
-          });
-
-          cumulativeAngle += segmentAngle;
-        }
-      }
-
-      setData(dataArray);
-      setProcessedData(processedLabels);
-    };
-
-    loadChartData();
-  }, [props.dataArray]);
-
-  // Configuración responsive
-  const getChartOptions = () => {
-    return {
-      legend: {
-        position: "none", // No legend - we use floating labels for both mobile and desktop
-      },
-      pieHole: 0.5,
+  // Memoizar las opciones del chart para evitar recrearlas en cada render
+  const chartOptions = useMemo(
+    () => ({
+      legend: { position: "none" },
+      pieHole: CHART_CONFIG.PIE_HOLE,
       is3D: false,
       animation: {
         startup: true,
         easing: "linear",
-        duration: 1000,
+        duration: CHART_CONFIG.ANIMATION_DURATION,
       },
       backgroundColor: "transparent",
-      colors: [Colors.yellow, Colors.blue, Colors.red, Colors.green],
-      tooltip: {
-        trigger: "none",
-      },
+      colors: CHART_COLORS,
+      tooltip: { trigger: "none" },
       pieSliceText: "none",
-      chartArea: { left: 0, top: 0, width: "100%", height: "100%" },
+      chartArea: CHART_CONFIG.CHART_AREA,
       width: "100%",
       enableInteractivity: false,
+    }),
+    []
+  );
+
+  // Función helper para procesar un item de datos
+  const processDataItem = (item, index, totalValue, cumulativeAngle) => {
+    const value = parseInt(item[1], 10);
+    const originalLabel = item[0];
+
+    // Calculate angle for this segment (center of the slice)
+    const segmentAngle = (value / totalValue) * 2 * Math.PI;
+    const centerAngle = cumulativeAngle + segmentAngle / 2;
+
+    return {
+      processedItem: [originalLabel, value],
+      labelData: {
+        label: `${originalLabel}: ${value} (${value}%)`,
+        value,
+        originalLabel,
+        angle: centerAngle,
+      },
+      newCumulativeAngle: cumulativeAngle + segmentAngle,
     };
   };
 
-  return (
-    <ChartWrapper>
-      <ChartContainer>
-        <StyledChart
-          chartType="PieChart"
-          width="100%"
-          data={data}
-          options={getChartOptions()}
-        />
+  // Función principal de procesamiento de datos
+  const processChartData = (inputArray) => {
+    if (!inputArray || inputArray.length < 2) return { data: [], labels: [] };
 
-        {/* Floating labels for both mobile and desktop */}
-        {processedData.length > 0 && (
+    const dataArray = [...inputArray];
+    const processedLabels = [];
+
+    // Calculate total value
+    const totalValue = dataArray.slice(1).reduce((sum, item) => {
+      return item?.[1] ? sum + parseInt(item[1], 10) : sum;
+    }, 0);
+
+    if (totalValue === 0) return { data: dataArray, labels: [] };
+
+    let cumulativeAngle = CHART_CONFIG.START_ANGLE;
+
+    // Process each data point
+    for (let i = 1; i < dataArray.length; i++) {
+      if (dataArray[i]?.[1]) {
+        const result = processDataItem(
+          dataArray[i],
+          i,
+          totalValue,
+          cumulativeAngle
+        );
+
+        dataArray[i] = result.processedItem;
+        processedLabels.push(result.labelData);
+        cumulativeAngle = result.newCumulativeAngle;
+      }
+    }
+
+    return { data: dataArray, labels: processedLabels };
+  };
+
+  useEffect(() => {
+    if (!dataArray) {
+      setData([]);
+      setProcessedData([]);
+      return;
+    }
+
+    const { data: processedChartData, labels } = processChartData(dataArray);
+    setData(processedChartData);
+    setProcessedData(labels);
+  }, [dataArray]);
+
+  // Render chart only if we have data
+  return (
+    data.length &&
+    processedData.length && (
+      <ChartWrapper>
+        <ChartContainer>
+          <StyledChart
+            chartType="PieChart"
+            width="100%"
+            data={data}
+            options={chartOptions}
+          />
+
           <FloatingLabels>
             {processedData.map((item, index) => (
-              <FloatingLabel key={index} angle={item.angle}>
+              <FloatingLabel
+                key={`${item.originalLabel}-${index}`}
+                angle={item.angle}
+              >
                 {item.label}
               </FloatingLabel>
             ))}
           </FloatingLabels>
-        )}
-      </ChartContainer>
-    </ChartWrapper>
+        </ChartContainer>
+      </ChartWrapper>
+    )
   );
 };
