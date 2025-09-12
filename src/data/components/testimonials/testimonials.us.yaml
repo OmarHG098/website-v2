@@ -52,8 +52,8 @@ testimonials:
     student_thumb: "../../../../static/images/testimonials/florencia-viera.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
 
-  - student_name: "James"
-    slug: "james"
+  - student_name: "James Dugard"
+    slug: "james-dugard"
     country:
       iso: us
       name: United States of America
