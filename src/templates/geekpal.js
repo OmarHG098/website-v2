@@ -86,6 +86,7 @@ const GeekPal = (props) => {
             right: "-150px",
             top: "-100px",
           }}
+          display_xs="none"
         />
         <Img
           src="/images/vector-stroke-light.png"
@@ -96,6 +97,7 @@ const GeekPal = (props) => {
             left: "48%",
             top: "20%",
           }}
+          display_xs="none"
         />
         <Div
           flexDirection="column"
@@ -112,6 +114,10 @@ const GeekPal = (props) => {
             textAlign_xs="center"
             textAlign_tablet="left"
             color="black"
+            fontSize_xs="32px"
+            lineHeight_xs="38px"
+            fontSize_tablet="50px"
+            lineHeight_tablet="54px"
             dangerouslySetInnerHTML={{ __html: yml.header.title }}
           />
           <Paragraph
@@ -123,6 +129,10 @@ const GeekPal = (props) => {
             textAlign_tablet="left"
             padding_md="30px 0px 10px 0"
             color="black"
+            fontSize_xs="18px"
+            lineHeight_xs="24px"
+            fontSize_tablet="24px"
+            lineHeight_tablet="29px"
             dangerouslySetInnerHTML={{ __html: yml.header.paragraph }}
           />
 
@@ -174,6 +184,7 @@ const GeekPal = (props) => {
           width="80%"
           width_tablet="80%"
           width_md="75%"
+          width_xs="100%"
           padding_xs="40px 0 0 0"
           padding_tablet="15% 0 0 0"
           padding_md="0% 16px 0 5%"
@@ -194,6 +205,7 @@ const GeekPal = (props) => {
             left_md="10%"
             bottom_md="10%"
             bottom_lg="0%"
+            display_xs="none"
           />
           <Div
             border="3px solid black"
@@ -212,6 +224,7 @@ const GeekPal = (props) => {
                   {item.videoId === "" ? (
                     <StyledBackgroundSection
                       height="500px"
+                      height_xs="260px"
                       height_tablet="450px"
                       height_md="450px"
                       image={item.image.childImageSharp.gatsbyImageData}
@@ -222,6 +235,7 @@ const GeekPal = (props) => {
                     <Div
                       width="100%"
                       height="500px"
+                      height_xs="260px"
                       height_tablet="450px"
                       height_md="450px"
                       margin="0"
@@ -262,18 +276,14 @@ const GeekPal = (props) => {
         )
         .map((name, index) => {
           const layout = components[name].layout || name;
-          return (
-            <Div key={name} margin="20px 0" margin_md="40px 0">
-              {landingSections[layout]({
-                ...props,
-                yml: components[name],
-                session,
-                course: yml.meta_info?.utm_course,
-                location: components.meta_info?.utm_location,
-                index: index,
-              })}
-            </Div>
-          );
+          return landingSections[layout]({
+            ...props,
+            yml: components[name],
+            session,
+            course: yml.meta_info?.utm_course,
+            location: components.meta_info?.utm_location,
+            index: index,
+          });
         })}
     </>
   );

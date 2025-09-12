@@ -246,7 +246,7 @@ const Landing = (props) => {
                 applySchollarship
                   ? applySchollarship?.image.childImageSharp.gatsbyImageData
                   : data.allLandingYaml.edges[0].node.list?.[0]?.image
-                    ?.childImageSharp?.gatsbyImageData
+                      ?.childImageSharp?.gatsbyImageData
               }
               bgSize="contain"
               alt="geekforce image"
