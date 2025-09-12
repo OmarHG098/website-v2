@@ -151,9 +151,9 @@ charts:
         - [Task, Género]
         - [Femenino, "24"]
         - [Masculino, "76"]
-    - title: "nacionalidad"
+    - title: "región"
       data:
-        - [Task, Nacionalidad]
+        - [Task, Región]
         - [Norteamérica, "60"]
         - [Asia, "1"]
         - [Europa, "25"]

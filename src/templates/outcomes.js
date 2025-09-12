@@ -316,8 +316,8 @@ const Outcomes = ({ data, pageContext, yml }) => {
                           {yml.charts.chart_list.map((c, k) => {
                             return (
                               <Div flexDirection="column" key={k}>
-                                <Charts dataArray={c.data} />
                                 <H4 textTransform="uppercase">{c.title}</H4>
+                                <Charts dataArray={c.data} />
                               </Div>
                             );
                           })}
@@ -344,10 +344,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
                               margin="0 auto"
                               padding="0"
                             >
-                              <Div
-                                width="100%"
-                                style={{ overflowX: "auto" }}
-                              >
+                              <Div width="100%" style={{ overflowX: "auto" }}>
                                 <DraggableDiv gap="15px">
                                   {badgesData.badges
                                     .slice(0, 5)
@@ -399,10 +396,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
                             display="block"
                             display_tablet="none"
                           >
-                            <Div
-                              width="100%"
-                              style={{ overflowX: "auto" }}
-                            >
+                            <Div width="100%" style={{ overflowX: "auto" }}>
                               <DraggableDiv gap="15px">
                                 {badgesData.badges
                                   .slice(0, 5)
