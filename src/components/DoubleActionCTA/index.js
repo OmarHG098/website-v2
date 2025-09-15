@@ -97,7 +97,6 @@ const DoubleActionCTA = ({
         margin="0 0 3rem 0"
         gridTemplateColumns_tablet="1fr 1fr"
       >
-        {/* Career Consultation Card */}
         <Div
           className="cta_card"
           position="relative"
@@ -120,7 +119,7 @@ const DoubleActionCTA = ({
               fontFamily="var(--font-sans)"
               letterSpacing="normal"
             >
-              {content?.primary?.title || "Book Your Career Consultation"}
+              {content?.primary?.title}
             </H3>
             <Paragraph
               fontSize="1rem"
@@ -131,8 +130,7 @@ const DoubleActionCTA = ({
               fontFamily="var(--font-sans)"
               letterSpacing="normal"
             >
-              {content?.primary?.description ||
-                "Get personalized guidance from our career experts. Discover the perfect tech path for your goals and learn about our programs."}
+              {content?.primary?.description}
             </Paragraph>
           </Div>
 
@@ -200,7 +198,7 @@ const DoubleActionCTA = ({
               alignItems="center"
               justifyContent="center"
               gap="0.5rem"
-              margin="1.5rem 0"
+              margin={content?.primary?.footer_text ? "1.5rem 0" : "1.5rem 0 0.5rem 0"}
             >
               <Icon
                 icon="calendar"
@@ -209,22 +207,23 @@ const DoubleActionCTA = ({
                 stroke={Colors.white}
               />
               <span>
-                {content?.primary?.action_text || "Schedule Free Consultation"}
+                {content?.primary?.action_text}
               </span>
             </Button>
           </Link>
 
-          <Paragraph
-            fontSize="0.75rem"
-            color={Colors.lightGray3}
-            textAlign="center"
-            margin="0"
-            fontFamily="var(--font-sans)"
-            letterSpacing="normal"
-          >
-            {content?.primary?.footer_text ||
-              "✨ Free 15-minute session • No commitment required"}
-          </Paragraph>
+          {content?.primary?.footer_text && (
+            <Paragraph
+              fontSize="0.75rem"
+              color={Colors.lightGray3}
+              textAlign="center"
+              margin="0"
+              fontFamily="var(--font-sans)"
+              letterSpacing="normal"
+            >
+              {content?.primary?.footer_text}
+            </Paragraph>
+          )}
         </Div>
 
         {/* Newsletter Subscription Card */}
@@ -250,7 +249,7 @@ const DoubleActionCTA = ({
               fontFamily="var(--font-sans)"
               letterSpacing="normal"
             >
-              {content?.secondary?.title || "Stay Updated with Our Newsletter"}
+              {content?.secondary?.title}
             </H3>
             <Paragraph
               fontSize="1rem"
@@ -261,8 +260,7 @@ const DoubleActionCTA = ({
               fontFamily="var(--font-sans)"
               letterSpacing="normal"
             >
-              {content?.secondary?.description ||
-                "Get the latest tech industry insights, course updates, success stories, and exclusive content delivered to your inbox."}
+              {content?.secondary?.description}
             </Paragraph>
           </Div>
 
@@ -314,158 +312,185 @@ const DoubleActionCTA = ({
             />
           )}
 
-          {/* Newsletter Form - Maintaining existing functionality */}
-          {formStatus.status === "thank-you" ? (
-            <Div alignItems="center" flexDirection="column">
-              <H3
-                fontSize="16px"
-                lineHeight="24px"
-                margin="25px 0 10px 10px"
-                textAlign="center"
-                fontFamily="var(--font-sans)"
-                letterSpacing="normal"
+          {content?.secondary?.action_url ? (
+            <Link to={content?.secondary?.action_url} target="_blank">
+              <Button
+                className="scale_hover"
+                width="100%"
+                padding="14px 24px"
+                padding_tablet="14px 24px"
+                borderRadius="8px"
+                height="auto"
+                fontSize="1rem"
+                fontWeight="600"
+                color="white"
+                background={Colors.blue}
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                gap="0.5rem"
+                margin={content?.secondary?.footer_text ? "1.5rem 0" : "1.5rem 0 0.5rem 0"}
               >
-                {content?.newsletter_form?.success_message}
-              </H3>
-            </Div>
+                {content?.secondary?.action_text}
+              </Button>
+            </Link>
           ) : (
-            <Div justifyContent="center" width="100%" margin="1.5rem 0">
-              <Form
-                margin="0"
-                onSubmit={async (e) => {
-                  e.preventDefault();
-                  if (formStatus.status === "error") {
-                    setFormStatus({
-                      status: "idle",
-                      msg: content?.newsletter_form?.status_idle,
-                    });
-                  }
-                  if (!formIsValid(formData)) {
-                    setFormStatus({
-                      status: "error",
-                      msg: content?.newsletter_form?.status_error,
-                    });
-                  } else {
-                    setFormStatus({
-                      status: "loading",
-                      msg: content?.newsletter_form?.button_loading,
-                    });
-                    const token = await captcha.current.executeAsync();
-                    newsletterSignup(
-                      {
-                        ...formData,
-                        token: { value: token, valid: true },
-                      },
-                      appSession
-                    )
-                      .then((data) => {
-                        const hasError = data.error && data.error !== false;
-                        if (hasError) {
-                          setFormStatus({
-                            status: "error",
-                            msg: content?.newsletter_form
-                              ?.status_correct_errors,
-                          });
-                        } else {
-                          setFormStatus({
-                            status: "thank-you",
-                            msg: "Thank you",
-                          });
-                        }
-                      })
-                      .catch((error) => {
-                        console.log("error", error);
+            <>
+              {/* Newsletter Form - Maintaining existing functionality */}
+              {formStatus.status === "thank-you" ? (
+                <Div alignItems="center" flexDirection="column">
+                  <H3
+                    fontSize="16px"
+                    lineHeight="24px"
+                    margin="25px 0 10px 10px"
+                    textAlign="center"
+                    fontFamily="var(--font-sans)"
+                    letterSpacing="normal"
+                  >
+                    {content?.newsletter_form?.success_message}
+                  </H3>
+                </Div>
+              ) : (
+                <Div justifyContent="center" width="100%" margin="1.5rem 0">
+                  <Form
+                    margin="0"
+                    onSubmit={async (e) => {
+                      e.preventDefault();
+                      if (formStatus.status === "error") {
+                        setFormStatus({
+                          status: "idle",
+                          msg: content?.newsletter_form?.status_idle,
+                        });
+                      }
+                      if (!formIsValid(formData)) {
                         setFormStatus({
                           status: "error",
-                          msg: error.message || error,
+                          msg: content?.newsletter_form?.status_error,
                         });
-                      });
-                  }
-                }}
-              >
-                <Input
-                  type="email"
-                  className="form-control"
-                  width="100%"
-                  height="46px"
-                  placeholder={content?.newsletter_form?.placeholder_email}
-                  borderRadius="8px"
-                  bgColor={Colors.white}
-                  border="1px solid #e5e7eb"
-                  padding="0.75rem"
-                  fontSize="1rem"
-                  margin="0 0 0.75rem 0"
-                  onChange={(value, valid) => {
-                    setVal({
-                      ...formData,
-                      email: { value, valid },
-                    });
-                    if (formStatus.status === "error") {
-                      setFormStatus({
-                        status: "idle",
-                        msg: content?.newsletter_form?.status_idle,
-                      });
-                    }
-                  }}
-                  value={formData.email.value}
-                  errorMsg={content?.newsletter_form?.error_email}
-                  required
-                />
-                <Div width="fit-content" margin="10px auto 0 auto">
-                  <SafeReCAPTCHA ref={captcha} size="invisible" />
+                      } else {
+                        setFormStatus({
+                          status: "loading",
+                          msg: content?.newsletter_form?.button_loading,
+                        });
+                        const token = await captcha.current.executeAsync();
+                        newsletterSignup(
+                          {
+                            ...formData,
+                            token: { value: token, valid: true },
+                          },
+                          appSession
+                        )
+                          .then((data) => {
+                            const hasError = data.error && data.error !== false;
+                            if (hasError) {
+                              setFormStatus({
+                                status: "error",
+                                msg: content?.newsletter_form
+                                  ?.status_correct_errors,
+                              });
+                            } else {
+                              setFormStatus({
+                                status: "thank-you",
+                                msg: "Thank you",
+                              });
+                            }
+                          })
+                          .catch((error) => {
+                            console.log("error", error);
+                            setFormStatus({
+                              status: "error",
+                              msg: error.message || error,
+                            });
+                          });
+                      }
+                    }}
+                  >
+                    <Input
+                      type="email"
+                      className="form-control"
+                      width="100%"
+                      height="46px"
+                      placeholder={content?.newsletter_form?.placeholder_email}
+                      borderRadius="8px"
+                      bgColor={Colors.white}
+                      border="1px solid #e5e7eb"
+                      padding="0.75rem"
+                      fontSize="1rem"
+                      margin="0 0 0.75rem 0"
+                      onChange={(value, valid) => {
+                        setVal({
+                          ...formData,
+                          email: { value, valid },
+                        });
+                        if (formStatus.status === "error") {
+                          setFormStatus({
+                            status: "idle",
+                            msg: content?.newsletter_form?.status_idle,
+                          });
+                        }
+                      }}
+                      value={formData.email.value}
+                      errorMsg={content?.newsletter_form?.error_email}
+                      required
+                    />
+                    <Div width="fit-content" margin="10px auto 0 auto">
+                      <SafeReCAPTCHA ref={captcha} size="invisible" />
+                    </Div>
+                    <Button
+                      className="scale_hover"
+                      width="100%"
+                      height="auto"
+                      padding="14px 24px"
+                      padding_tablet="14px 24px"
+                      background={
+                        formStatus.status === "loading"
+                          ? "oklch(.92 0 0)"
+                          : "oklch(.97 0 0)"
+                      }
+                      type="submit"
+                      borderRadius="8px"
+                      fontWeight="600"
+                      justifyContent="center"
+                      fontSize="1rem"
+                      variant="full"
+                      disabled={formStatus.status === "loading"}
+                      display="flex"
+                      alignItems="center"
+                      gap="0.5rem"
+                      style={{
+                        color:
+                          formStatus.status === "loading"
+                            ? Colors.black
+                            : Colors.black,
+                      }}
+                    >
+                      {formStatus.status === "loading" ? (
+                        content?.newsletter_form?.button_loading
+                      ) : (
+                        <>
+                          <Icon icon="mail" width="18px" height="18px" />
+                          <span>{content?.newsletter_form?.button_submit}</span>
+                        </>
+                      )}
+                    </Button>
+                  </Form>
                 </Div>
-                <Button
-                  className="scale_hover"
-                  width="100%"
-                  height="auto"
-                  padding="14px 24px"
-                  padding_tablet="14px 24px"
-                  background={
-                    formStatus.status === "loading"
-                      ? "oklch(.92 0 0)"
-                      : "oklch(.97 0 0)"
-                  }
-                  type="submit"
-                  borderRadius="8px"
-                  fontWeight="600"
-                  justifyContent="center"
-                  fontSize="1rem"
-                  variant="full"
-                  disabled={formStatus.status === "loading"}
-                  display="flex"
-                  alignItems="center"
-                  gap="0.5rem"
-                  style={{
-                    color:
-                      formStatus.status === "loading"
-                        ? Colors.black
-                        : Colors.black,
-                  }}
-                >
-                  {formStatus.status === "loading" ? (
-                    content?.newsletter_form?.button_loading
-                  ) : (
-                    <>
-                      <Icon icon="mail" width="18px" height="18px" />
-                      <span>{content?.newsletter_form?.button_submit}</span>
-                    </>
-                  )}
-                </Button>
-              </Form>
-            </Div>
+              )}
+            </>
           )}
 
-          <Paragraph
-            fontSize="0.75rem"
-            color={Colors.lightGray3}
-            textAlign="center"
-            margin="0"
-            fontFamily="var(--font-sans)"
-            letterSpacing="normal"
-          >
-            {content?.secondary?.footer_text ||
-              "📧 Weekly updates • Unsubscribe anytime • No spam, ever"}
-          </Paragraph>
+          {content?.secondary?.footer_text && (
+            <Paragraph
+              fontSize="0.75rem"
+              color={Colors.lightGray3}
+              textAlign="center"
+              margin="0"
+              fontFamily="var(--font-sans)"
+              letterSpacing="normal"
+            >
+              {content?.secondary?.footer_text}
+            </Paragraph>
+          )}
         </Div>
       </Div>
     </Div>

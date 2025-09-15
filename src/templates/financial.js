@@ -392,8 +392,6 @@ export const query = graphql`
             primary {
               title
               description
-              benefits
-              footer_text
               image {
                 childImageSharp {
                   gatsbyImageData(
@@ -409,8 +407,6 @@ export const query = graphql`
             secondary {
               title
               description
-              benefits
-              footer_text
               image {
                 childImageSharp {
                   gatsbyImageData(
@@ -422,16 +418,6 @@ export const query = graphql`
               }
               action_text
               action_url
-            }
-            newsletter_form {
-              placeholder_email
-              error_email
-              button_submit
-              button_loading
-              status_idle
-              status_error
-              status_correct_errors
-              success_message
             }
           }
         }
