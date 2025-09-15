@@ -198,7 +198,9 @@ const DoubleActionCTA = ({
               alignItems="center"
               justifyContent="center"
               gap="0.5rem"
-              margin={content?.primary?.footer_text ? "1.5rem 0" : "1.5rem 0 0.5rem 0"}
+              margin={
+                content?.primary?.footer_text ? "1.5rem 0" : "1.5rem 0 0.5rem 0"
+              }
             >
               <Icon
                 icon="calendar"
@@ -206,9 +208,7 @@ const DoubleActionCTA = ({
                 height="18px"
                 stroke={Colors.white}
               />
-              <span>
-                {content?.primary?.action_text}
-              </span>
+              <span>{content?.primary?.action_text}</span>
             </Button>
           </Link>
 
@@ -329,7 +329,11 @@ const DoubleActionCTA = ({
                 alignItems="center"
                 justifyContent="center"
                 gap="0.5rem"
-                margin={content?.secondary?.footer_text ? "1.5rem 0" : "1.5rem 0 0.5rem 0"}
+                margin={
+                  content?.secondary?.footer_text
+                    ? "1.5rem 0"
+                    : "1.5rem 0 0.5rem 0"
+                }
               >
                 {content?.secondary?.action_text}
               </Button>
