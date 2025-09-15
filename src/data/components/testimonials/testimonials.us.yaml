@@ -413,7 +413,7 @@ testimonials:
   #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to
   #     the Income Sharing Agreement, I could enroll right away and pay once I found a job.
 
-  - student_name: Hernan García
+  - student_name: Hernán García
     slug: "her-gar"
     country:
       iso: us
@@ -435,7 +435,7 @@ testimonials:
     #source_url_text: ""
     short_content: "Software Engineer at Microsoft"
     content: |
-      Before I decided to become a developer, I had several works, I did not enjoy those works so I tried to put as much effort into earning a significant amount of money. Thanks to that vision, I became a full-stack developer, and 4Geeks was part of that process. I’ll recommend 4Geeks Academy.
+      Before I decided to become a developer I was doing odd jobs, anything I could get my hands on… Did I like what I was doing? Absolutely not. I mean I was just trying to get by and do anything that I could do...Right now I’ve got a good job with a good, well-known company and recently I also keep receiving offers through email. Of course I would recommend 4Geeks!
 
   - student_name: "Charles Fabricius"
     slug: "cha-fabr"
