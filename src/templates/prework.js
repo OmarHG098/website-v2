@@ -1,13 +1,13 @@
-import React, {useState, useContext, useRef, useEffect} from 'react';
-import {graphql, Link} from 'gatsby';
-import {H1, H2, H3, H4, H5, Paragraph, Span} from '../components/Heading';
-import {Container, Row, Col, Divider, Div} from '../components/Sections'
-import {Button, Colors} from '../components/Styling'
-import BaseRender from './_baseLayout'
-import {SessionContext} from '../session'
-import {GatsbyImage, getImage} from "gatsby-plugin-image"
-import SimpleCards from '../components/SimpleCards'
-import Icon from '../components/Icon'
+import React, { useState, useContext, useRef, useEffect } from "react";
+import { graphql, Link } from "gatsby";
+import { H1, H2, H3, H4, H5, Paragraph, Span } from "../components/Heading";
+import { Container, Row, Col, Divider, Div } from "../components/Sections";
+import { Button, Colors } from "../components/Styling";
+import BaseRender from "./_baseLayout";
+import { SessionContext } from "../session";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import SimpleCards from "../components/SimpleCards";
+import Icon from "../components/Icon";
 
 const Prework = (props) => {
   const { session } = useContext(SessionContext);
@@ -32,11 +32,7 @@ const Prework = (props) => {
         position="relative"
         zIndex="2"
       >
-        <Div
-          flex="1"
-          flexDirection="column"
-          gap="2rem"
-        >
+        <Div flex="1" flexDirection="column" gap="2rem">
           <Div
             background="rgba(255,255,255,0.2)"
             backdropFilter="blur(10px)"
@@ -66,7 +62,6 @@ const Prework = (props) => {
             </H2>
           </Div>
 
-          
           <Paragraph
             fontSize="21px"
             lineHeight="1.35"
@@ -80,22 +75,10 @@ const Prework = (props) => {
             dangerouslySetInnerHTML={{ __html: yml.header.paragraph }}
           />
         </Div>
-        
-        <Div
-          display="none"
-          display_tablet="block"
-          position="relative"
-        >
-          <Div
-            position="relative"
-            overflow="hidden"
-            maxWidth="85rem"
-          >
-            <GatsbyImage
-              image={image}
-              alt={yml.header.alt}
-            />
-            
+
+        <Div display="none" display_tablet="block" position="relative">
+          <Div position="relative" overflow="hidden" maxWidth="85rem">
+            <GatsbyImage image={image} alt={yml.header.alt} />
           </Div>
         </Div>
       </Div>
@@ -131,7 +114,7 @@ const Prework = (props) => {
             background="rgba(16, 185, 129, 0.05)"
             zIndex="0"
           />
-          
+
           <Div
             padding="0 20px"
             flexDirection="column"
@@ -148,11 +131,7 @@ const Prework = (props) => {
               gap="60px"
             >
               {/* Content Column */}
-              <Div
-                flex="1"
-                width="100%"
-                flexDirection="column"
-              >
+              <Div flex="1" width="100%" flexDirection="column">
                 <H2
                   type="h2"
                   textAlign="left"
@@ -172,7 +151,9 @@ const Prework = (props) => {
                   fontSize="20px"
                   color={Colors.darkGray}
                   lineHeight="1.7"
-                  dangerouslySetInnerHTML={{ __html: yml.what_you_will_learn.paragraph }}
+                  dangerouslySetInnerHTML={{
+                    __html: yml.what_you_will_learn.paragraph,
+                  }}
                 />
                 <Div
                   display="grid"
@@ -181,10 +162,10 @@ const Prework = (props) => {
                   gap="25px"
                 >
                   {yml.what_you_will_learn.bullets?.map((bullet, index) => (
-                    <Div 
-                      key={index} 
-                      display="flex" 
-                      alignItems="flex-start" 
+                    <Div
+                      key={index}
+                      display="flex"
+                      alignItems="flex-start"
                       gap="20px"
                       background="white"
                       padding="25px"
@@ -194,7 +175,7 @@ const Prework = (props) => {
                       transition="all 0.3s ease"
                       hover={{
                         transform: "translateY(-2px)",
-                        boxShadow: "0 8px 30px rgba(0,0,0,0.12)"
+                        boxShadow: "0 8px 30px rgba(0,0,0,0.12)",
                       }}
                     >
                       <Icon
@@ -204,7 +185,7 @@ const Prework = (props) => {
                         fill={Colors.green2}
                         style={{
                           position: "relative",
-                          bottom: "-2px"
+                          bottom: "-2px",
                         }}
                       />
                       <Paragraph
@@ -234,7 +215,7 @@ const Prework = (props) => {
           margin="0 auto"
           padding="120px 20px"
           position="relative"
-        >          
+        >
           <Div
             width="100%"
             flexDirection="column"
@@ -251,11 +232,7 @@ const Prework = (props) => {
               margin="0 0 50px 0"
             >
               {/* Image Column */}
-              <Div
-                flex="1"
-                maxWidth="600px"
-                width="100%"
-              >
+              <Div flex="1" maxWidth="600px" width="100%">
                 {yml.how_it_works.image && (
                   <GatsbyImage
                     image={getImage(yml.how_it_works.image)}
@@ -263,12 +240,12 @@ const Prework = (props) => {
                     style={{
                       borderRadius: "15px",
                       width: "100%",
-                      height: "auto"
+                      height: "auto",
                     }}
                   />
                 )}
               </Div>
-              
+
               {/* Content Column */}
               <Div
                 flex="1"
@@ -303,10 +280,7 @@ const Prework = (props) => {
             </Div>
 
             {/* Content Column */}
-            <Div
-              flex="1"
-              flexDirection="column"
-            >
+            <Div flex="1" flexDirection="column">
               {yml.how_it_works.schedule && (
                 <Div
                   background="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
@@ -329,7 +303,7 @@ const Prework = (props) => {
                     borderRadius="50%"
                     background="rgba(255,255,255,0.1)"
                   />
-                  
+
                   <H3
                     type="h3"
                     fontSize="28px"
@@ -344,7 +318,7 @@ const Prework = (props) => {
                   >
                     {yml.how_it_works.schedule.title}
                   </H3>
-                  
+
                   <Div
                     display="grid"
                     gridTemplateColumns="1fr"
@@ -353,51 +327,53 @@ const Prework = (props) => {
                     position="relative"
                     zIndex="1"
                   >
-                    {yml.how_it_works.schedule.classes?.map((classItem, index) => (
-                      <Div 
-                        key={index} 
-                        background="rgba(255,255,255,0.15)"
-                        backdropFilter="blur(10px)"
-                        padding="25px"
-                        borderRadius="15px"
-                        border="1px solid rgba(255,255,255,0.2)"
-                        flexDirection="column"
-                        gap="10px"
-                        transition="all 0.3s ease"
-                        alignItems="center"
-                        hover={{
-                          background: "rgba(255,255,255,0.25)",
-                          transform: "translateY(-2px)"
-                        }}
-                      >
-                        <Icon
-                          icon={classItem.icon}
-                          width="100%"
-                          height="70px"
-                        />
-                        <H4
-                          type="h4"
-                          fontSize="20px"
-                          fontWeight="600"
-                          color={Colors.darkGray}
-                          margin="0"
+                    {yml.how_it_works.schedule.classes?.map(
+                      (classItem, index) => (
+                        <Div
+                          key={index}
+                          background="rgba(255,255,255,0.15)"
+                          backdropFilter="blur(10px)"
+                          padding="25px"
+                          borderRadius="15px"
+                          border="1px solid rgba(255,255,255,0.2)"
+                          flexDirection="column"
+                          gap="10px"
+                          transition="all 0.3s ease"
+                          alignItems="center"
+                          hover={{
+                            background: "rgba(255,255,255,0.25)",
+                            transform: "translateY(-2px)",
+                          }}
                         >
-                          {classItem.program}
-                        </H4>
-                        <Paragraph
-                          fontSize="16px"
-                          color={Colors.darkGray}
-                          margin="0"
-                          lineHeight="1.5"
-                        >
-                          {classItem.schedule}
-                        </Paragraph>
-                      </Div>
-                    ))}
+                          <Icon
+                            icon={classItem.icon}
+                            width="100%"
+                            height="70px"
+                          />
+                          <H4
+                            type="h4"
+                            fontSize="20px"
+                            fontWeight="600"
+                            color={Colors.darkGray}
+                            margin="0"
+                          >
+                            {classItem.program}
+                          </H4>
+                          <Paragraph
+                            fontSize="16px"
+                            color={Colors.darkGray}
+                            margin="0"
+                            lineHeight="1.5"
+                          >
+                            {classItem.schedule}
+                          </Paragraph>
+                        </Div>
+                      )
+                    )}
                   </Div>
                 </Div>
               )}
-              
+
               <Div
                 background={`linear-gradient(135deg, #fef3c7 0%, ${Colors.blue2} 100%)`}
                 padding="0.5rem 1.5rem"
@@ -471,16 +447,9 @@ const Prework = (props) => {
             background="linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%)"
             zIndex="0"
           />
-          
-          <Div
-            flexDirection="column"
-            position="relative"
-            zIndex="1"
-          >
-            <Div
-              textAlign="center"
-              margin="0 0 2rem 0"
-            >
+
+          <Div flexDirection="column" position="relative" zIndex="1">
+            <Div textAlign="center" margin="0 0 2rem 0">
               <H2
                 type="h2"
                 textAlign="center"
@@ -501,7 +470,7 @@ const Prework = (props) => {
                 borderRadius="2px"
               />
             </Div>
-            
+
             <Div
               display="grid"
               gridTemplateColumns="1fr"
@@ -526,14 +495,10 @@ const Prework = (props) => {
                     transition="all 0.3s ease"
                     hover={{
                       transform: "translateY(-8px)",
-                      boxShadow: `0 30px 60px ${bullet.style.shadow}`
+                      boxShadow: `0 30px 60px ${bullet.style.shadow}`,
                     }}
-                  > 
-                    <Div
-                      display="flex"
-                      alignItems="center"
-                      gap="20px"
-                    >
+                  >
+                    <Div display="flex" alignItems="center" gap="20px">
                       <Div
                         width="60px"
                         height="60px"
@@ -560,7 +525,7 @@ const Prework = (props) => {
                         dangerouslySetInnerHTML={{ __html: bullet.text }}
                       />
                     </Div>
-                    
+
                     {/* Bottom accent */}
                     <Div
                       position="absolute"
@@ -570,8 +535,11 @@ const Prework = (props) => {
                       height="80px"
                       borderRadius="50%"
                       style={{
-                        background: `${bullet.style.background.replace('100%)', '100%), rgba(255,255,255,0.8)')}`,
-                        opacity: "0.1"
+                        background: `${bullet.style.background.replace(
+                          "100%)",
+                          "100%), rgba(255,255,255,0.8)"
+                        )}`,
+                        opacity: "0.1",
                       }}
                     />
                   </Div>
@@ -588,7 +556,7 @@ const Prework = (props) => {
           padding="80px 20px"
           textAlign="center"
           style={{
-            background: `linear-gradient(135deg, ${Colors.blue} 0%, ${Colors.darkBlue} 100%)`
+            background: `linear-gradient(135deg, ${Colors.blue} 0%, ${Colors.darkBlue} 100%)`,
           }}
         >
           <Div
@@ -608,7 +576,7 @@ const Prework = (props) => {
             >
               {yml.cta.title}
             </H2>
-            
+
             <Paragraph
               fontSize="18px"
               lineHeight="1.6"
@@ -619,7 +587,7 @@ const Prework = (props) => {
             >
               {yml.cta.subtitle}
             </Paragraph>
-            
+
             <Div
               display="flex"
               flexDirection="column"
@@ -630,7 +598,10 @@ const Prework = (props) => {
               margin="20px 0 0 0"
             >
               {yml.cta.primary_button && (
-                <Link to={yml.cta.primary_button.link} style={{ width: '100%' }}>
+                <Link
+                  to={yml.cta.primary_button.link}
+                  style={{ width: "100%" }}
+                >
                   <Button
                     background="white"
                     color={Colors.blue}
@@ -649,9 +620,12 @@ const Prework = (props) => {
                   </Button>
                 </Link>
               )}
-              
+
               {yml.cta.secondary_button && (
-                <Link to={yml.cta.secondary_button.link} style={{ width: '100%' }}>
+                <Link
+                  to={yml.cta.secondary_button.link}
+                  style={{ width: "100%" }}
+                >
                   <Button
                     background="transparent"
                     color="white"
