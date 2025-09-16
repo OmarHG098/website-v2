@@ -521,7 +521,7 @@ const UpcomingDates = ({
                                       location ||
                                       cohort.academy.slug;
                                     return isAliasLocation(selectedSlug) ||
-                                      cohort.academy.city.name === "Remote"
+                                      cohort.academy.city.name === "Remote" || cohort.academy.city.name === "Miami"
                                       ? content.remote
                                       : `${cohort.academy.city.name} (${content.remote})`;
                                   })()}
