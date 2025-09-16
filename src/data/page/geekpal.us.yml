@@ -38,7 +38,7 @@ components:
       style: '{ "textAlign": "center", "width": "90%", "color": "black"}' 
     position: 1
     layout: iconogram
-    background: "#F4F9FF"
+    background: "lightYellow"
     icons:
       - icon: "capacity"
         title: "7:1 Student–Teacher Ratio"
@@ -64,7 +64,7 @@ components:
     layout: two_column_right
     image:
       style: '{"backgroundSize": "cover"}'
-      src: "/images/landing/Group-original.webp"
+      src: "/images/mujer-leyendo-cafeteria.webp"
       shadow: true
     heading:
       text: "Human + AI: The Perfect Support Duo "
