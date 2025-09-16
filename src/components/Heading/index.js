@@ -216,6 +216,7 @@ export const Paragraph = styled.p`
   margin: ${(props) => props.margin || "0"};
   font-size: ${(props) => paragraphSizes[props.fontSize] || props.fontSize};
   flex-direction: ${(props) => props.flexDirection};
+  gap: ${(props) => props.gap};
   flex-shrink: ${(props) => props.flexShrink};
   font-family: ${(props) => props.fontFamily};
   font-weight: ${(props) =>
