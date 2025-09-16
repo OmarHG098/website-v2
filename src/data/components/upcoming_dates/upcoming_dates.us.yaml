@@ -10,12 +10,12 @@ button:
 syllabus_alias:
   # EVERYTHING must be in lower case except for the name
   - default_course: full-stack
-    course_slug: full-stack
-    name: Full Stack Software Developer
+    course_slug: part-time-full-stack-developer
+    name: Full-Stack Developer - Part Time
 
   - default_course: machine-learning
-    course_slug: datascience-ml
-    name: Datascience
+    course_slug: datascience-machine-learning
+    name: Data Science
 
   - default_course: cyber-security
     course_slug: cybersecurity
@@ -23,7 +23,7 @@ syllabus_alias:
 
   - default_course: full-stack-ft
     course_slug: full-stack-ft
-    name: Full Stack Software Developer
+    name: Full-Stack Developer - Full Time
 
 email_form_content:
   heading: Send your email to notify you when there is a date available for this campus
@@ -38,9 +38,9 @@ info:
   location_label: location
   duration_label: duration
   action_label: action
-  duration_weeks: 18 weeks
-  duration_part_time: 18 weeks
-  duration_full_time: 9 weeks
+  duration_weeks: 10 weeks
+  duration_part_time: 10 weeks
+  duration_full_time: 12 weeks
   button_text: apply now
   button_link: "/us/apply"
 footer:

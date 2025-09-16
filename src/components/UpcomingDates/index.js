@@ -169,11 +169,26 @@ const UpcomingDates = ({
         session?.academyAliasDictionary?.[location] ||
         location ||
         session?.academyAliasDictionary?.[academy?.value];
+
+      console.log("Fetching cohorts with params:", {
+        academy: academySlug,
+        limit: 10,
+        syllabus_slug_like: defaultCourse || undefined,
+      });
+
       const response = await getCohorts({
         academy: academySlug,
         limit: 10,
         syllabus_slug_like: defaultCourse || undefined,
       });
+
+      console.log("Cohorts API response:", response);
+
+      if (!response || !response.results) {
+        console.error("Invalid response from cohorts API:", response);
+        setIsLoading(false);
+        return;
+      }
 
       const academyLocation = locations.find(
         ({ node }) =>
@@ -183,6 +198,25 @@ const UpcomingDates = ({
 
       const cohorts =
         response?.results.filter((elm) => {
+          // Filter out Build Profile / Geekforce related courses
+          if (
+            elm.syllabus_version?.name?.toLowerCase().includes("build") &&
+            elm.syllabus_version?.name?.toLowerCase().includes("profile")
+          ) {
+            console.log(`removing Build Profile course: ${elm.slug}`);
+            return false;
+          }
+
+          // Additional filtering for "Building Your Tech Profile" variations
+          if (
+            elm.syllabus_version?.name?.toLowerCase().includes("building") &&
+            elm.syllabus_version?.name?.toLowerCase().includes("tech")
+          ) {
+            console.log(`removing Building Tech Profile course: ${elm.slug}`);
+            return false;
+          }
+
+          // Existing location-based filtering
           if (
             Array.isArray(academyLocation?.node.meta_info.cohort_exclude_regex)
           ) {
@@ -199,12 +233,37 @@ const UpcomingDates = ({
         }) || [];
 
       cohorts.forEach((cohort) => {
+        // Validate cohort data
+        if (!cohort.kickoff_date || !cohort.ending_date) {
+          console.warn("Cohort missing date information:", cohort.slug, {
+            kickoff_date: cohort.kickoff_date,
+            ending_date: cohort.ending_date,
+          });
+        }
+
+        // Validate date format
+        if (cohort.kickoff_date && !dayjs(cohort.kickoff_date).isValid()) {
+          console.error(
+            "Invalid kickoff_date format for cohort:",
+            cohort.slug,
+            cohort.kickoff_date
+          );
+        }
+
+        if (cohort.ending_date && !dayjs(cohort.ending_date).isValid()) {
+          console.error(
+            "Invalid ending_date format for cohort:",
+            cohort.slug,
+            cohort.ending_date
+          );
+        }
+
         const syllabus =
           syllabusAlias.find((syll) => syll.default_course === defaultCourse) ||
           syllabusAlias.find((syll) =>
-            cohort.syllabus_version.slug
-              .toLowerCase()
-              .includes(syll.default_course)
+            cohort.syllabus_version?.slug
+              ?.toLowerCase()
+              ?.includes(syll.default_course)
           );
 
         if (syllabus) {
@@ -215,6 +274,12 @@ const UpcomingDates = ({
           const dynamicDuration = getCourseDuration(syllabus.course_slug);
           cohort.syllabus_version.duration =
             dynamicDuration || syllabus.duration;
+        } else {
+          console.warn(
+            "No syllabus alias found for cohort:",
+            cohort.slug,
+            cohort.syllabus_version?.slug
+          );
         }
       });
 
@@ -227,7 +292,14 @@ const UpcomingDates = ({
       }));
       setIsLoading(false);
     } catch (e) {
-      console.log(e);
+      console.error("Error fetching cohorts data:", e);
+      console.error("Error details:", {
+        message: e.message,
+        stack: e.stack,
+        academySlug: session?.academyAliasDictionary?.[location] || location,
+        defaultCourse,
+        timestamp: new Date().toISOString(),
+      });
       setIsLoading(false);
     }
   };
@@ -507,26 +579,72 @@ const UpcomingDates = ({
                             alignItems_tablet="flex-start"
                           >
                             <Div>
-                              <Link
-                                to={
-                                  loc
-                                    ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
-                                    : ""
+                              {(() => {
+                                const selectedSlug =
+                                  academy?.value ||
+                                  location ||
+                                  cohort.academy.slug;
+                                const isRemote =
+                                  isAliasLocation(selectedSlug) ||
+                                  cohort.academy.city.name === "Remote";
+                                const isInPersonMiamiOrDallas =
+                                  (cohort.academy.city.name === "Miami" ||
+                                    cohort.academy.city.name === "Dallas") &&
+                                  !isRemote;
+
+                                if (isRemote) {
+                                  // For remote programs, show only "Remote" and make it non-clickable
+                                  return (
+                                    <Paragraph
+                                      textAlign="left"
+                                      color={Colors.black}
+                                    >
+                                      {content.remote.replace(" available", "")}
+                                    </Paragraph>
+                                  );
+                                } else if (isInPersonMiamiOrDallas) {
+                                  // For in-person Miami/Dallas, show city name and make it clickable
+                                  return (
+                                    <Link
+                                      to={
+                                        loc
+                                          ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+                                          : ""
+                                      }
+                                    >
+                                      <Paragraph
+                                        textAlign="left"
+                                        color={Colors.blue}
+                                      >
+                                        {cohort.academy.city.name}
+                                      </Paragraph>
+                                    </Link>
+                                  );
+                                } else {
+                                  // For other locations, show city name with remote availability
+                                  return (
+                                    <Link
+                                      to={
+                                        loc
+                                          ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+                                          : ""
+                                      }
+                                    >
+                                      <Paragraph
+                                        textAlign="left"
+                                        color={Colors.blue}
+                                      >
+                                        {`${
+                                          cohort.academy.city.name
+                                        } (${content.remote.replace(
+                                          " available",
+                                          ""
+                                        )})`}
+                                      </Paragraph>
+                                    </Link>
+                                  );
                                 }
-                              >
-                                <Paragraph textAlign="left" color={Colors.blue}>
-                                  {(() => {
-                                    const selectedSlug =
-                                      academy?.value ||
-                                      location ||
-                                      cohort.academy.slug;
-                                    return isAliasLocation(selectedSlug) ||
-                                      cohort.academy.city.name === "Remote" || cohort.academy.city.name === "Miami"
-                                      ? content.remote
-                                      : `${cohort.academy.city.name} (${content.remote})`;
-                                  })()}
-                                </Paragraph>
-                              </Link>
+                              })()}
                             </Div>
                           </Div>
 
@@ -556,29 +674,75 @@ const UpcomingDates = ({
                                 {content.info.location_label}
                               </H4>
                               <Div>
-                                <Link
-                                  to={
-                                    loc
-                                      ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
-                                      : ""
+                                {(() => {
+                                  const selectedSlug =
+                                    academy?.value ||
+                                    location ||
+                                    cohort.academy.slug;
+                                  const isRemote =
+                                    isAliasLocation(selectedSlug) ||
+                                    cohort.academy.city.name === "Remote";
+                                  const isInPersonMiamiOrDallas =
+                                    (cohort.academy.city.name === "Miami" ||
+                                      cohort.academy.city.name === "Dallas") &&
+                                    !isRemote;
+
+                                  if (isRemote) {
+                                    // For remote programs, show only "Remote" and make it non-clickable
+                                    return (
+                                      <Paragraph
+                                        textAlign="left"
+                                        color={Colors.black}
+                                      >
+                                        {content.remote.replace(
+                                          " available",
+                                          ""
+                                        )}
+                                      </Paragraph>
+                                    );
+                                  } else if (isInPersonMiamiOrDallas) {
+                                    // For in-person Miami/Dallas, show city name and make it clickable
+                                    return (
+                                      <Link
+                                        to={
+                                          loc
+                                            ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+                                            : ""
+                                        }
+                                      >
+                                        <Paragraph
+                                          textAlign="left"
+                                          color={Colors.blue}
+                                        >
+                                          {cohort.academy.city.name}
+                                        </Paragraph>
+                                      </Link>
+                                    );
+                                  } else {
+                                    // For other locations, show city name with remote availability
+                                    return (
+                                      <Link
+                                        to={
+                                          loc
+                                            ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+                                            : ""
+                                        }
+                                      >
+                                        <Paragraph
+                                          textAlign="left"
+                                          color={Colors.blue}
+                                        >
+                                          {`${
+                                            cohort.academy.city.name
+                                          } (${content.remote.replace(
+                                            " available",
+                                            ""
+                                          )})`}
+                                        </Paragraph>
+                                      </Link>
+                                    );
                                   }
-                                >
-                                  <Paragraph
-                                    textAlign="left"
-                                    color={Colors.blue}
-                                  >
-                                    {(() => {
-                                      const selectedSlug =
-                                        academy?.value ||
-                                        location ||
-                                        cohort.academy.slug;
-                                      return isAliasLocation(selectedSlug) ||
-                                        cohort.academy.city.name === "Remote"
-                                        ? content.remote
-                                        : `${cohort.academy.city.name} (${content.remote})`;
-                                    })()}
-                                  </Paragraph>
-                                </Link>
+                                })()}
                               </Div>
                             </Div>
                             <Div flexDirection="column" width="50%">
