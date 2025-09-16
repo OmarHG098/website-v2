@@ -66,6 +66,8 @@ const UpcomingDates = ({
               location_label
               date
               action_label
+              in_person
+              remote
             }
             no_course_message
             footer {
@@ -117,7 +119,9 @@ const UpcomingDates = ({
 
   // Helper function to get duration from syllabus alias
   const getDurationFromSyllabus = (courseSlug) => {
-    const syllabus = syllabusAlias.find((syll) => syll.course_slug === courseSlug);
+    const syllabus = syllabusAlias.find(
+      (syll) => syll.course_slug === courseSlug
+    );
     return syllabus?.duration_weeks || null;
   };
 
@@ -542,64 +546,47 @@ const UpcomingDates = ({
                                   academy?.value ||
                                   location ||
                                   cohort.academy.slug;
-                                const isRemote =
-                                  isAliasLocation(selectedSlug) ||
-                                  cohort.academy.city.name === "Remote";
-                                const isInPersonMiamiOrDallas =
-                                  (cohort.academy.city.name === "Miami" ||
-                                    cohort.academy.city.name === "Dallas") &&
-                                  !isRemote;
 
-                                if (isRemote) {
-                                  // For remote programs, show only "Remote" and make it non-clickable
+                                // Check if this is a full-stack-ft course
+                                const isFullStackFt =
+                                  cohort.syllabus_version?.courseSlug ===
+                                  "full-stack-ft";
+                                const cityName =
+                                  cohort.academy.city.name?.toLowerCase();
+                                const isInPersonLocation =
+                                  isFullStackFt &&
+                                  (cityName === "miami" ||
+                                    cityName === "dallas" ||
+                                    cityName?.includes("dallas") ||
+                                    cityName?.includes("miami"));
+
+                                if (isInPersonLocation) {
+                                  // For full-stack-ft in Miami/Dallas, show "City - In-person"
+                                  return (
+                                    <Link
+                                      to={
+                                        loc
+                                          ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+                                          : ""
+                                      }
+                                    >
+                                      <Paragraph
+                                        textAlign="left"
+                                        color={Colors.blue}
+                                      >
+                                        {`${cohort.academy.city.name} - ${content.info.in_person}`}
+                                      </Paragraph>
+                                    </Link>
+                                  );
+                                } else {
+                                  // For all other courses or locations, show "Remote"
                                   return (
                                     <Paragraph
                                       textAlign="left"
                                       color={Colors.black}
                                     >
-                                      {content.remote.replace(" available", "")}
+                                      {content.info.remote}
                                     </Paragraph>
-                                  );
-                                } else if (isInPersonMiamiOrDallas) {
-                                  // For in-person Miami/Dallas, show city name and make it clickable
-                                  return (
-                                    <Link
-                                      to={
-                                        loc
-                                          ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
-                                          : ""
-                                      }
-                                    >
-                                      <Paragraph
-                                        textAlign="left"
-                                        color={Colors.blue}
-                                      >
-                                        {cohort.academy.city.name}
-                                      </Paragraph>
-                                    </Link>
-                                  );
-                                } else {
-                                  // For other locations, show city name with remote availability
-                                  return (
-                                    <Link
-                                      to={
-                                        loc
-                                          ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
-                                          : ""
-                                      }
-                                    >
-                                      <Paragraph
-                                        textAlign="left"
-                                        color={Colors.blue}
-                                      >
-                                        {`${
-                                          cohort.academy.city.name
-                                        } (${content.remote.replace(
-                                          " available",
-                                          ""
-                                        )})`}
-                                      </Paragraph>
-                                    </Link>
                                   );
                                 }
                               })()}
@@ -616,7 +603,9 @@ const UpcomingDates = ({
                           >
                             <Paragraph textAlign="left">
                               {cohort?.syllabus_version?.duration ||
-                                getDurationFromSyllabus(cohort?.syllabus_version?.courseSlug) ||
+                                getDurationFromSyllabus(
+                                  cohort?.syllabus_version?.courseSlug
+                                ) ||
                                 "Duration not available"}
                             </Paragraph>
                           </Div>
@@ -638,67 +627,47 @@ const UpcomingDates = ({
                                     academy?.value ||
                                     location ||
                                     cohort.academy.slug;
-                                  const isRemote =
-                                    isAliasLocation(selectedSlug) ||
-                                    cohort.academy.city.name === "Remote";
-                                  const isInPersonMiamiOrDallas =
-                                    (cohort.academy.city.name === "Miami" ||
-                                      cohort.academy.city.name === "Dallas") &&
-                                    !isRemote;
 
-                                  if (isRemote) {
-                                    // For remote programs, show only "Remote" and make it non-clickable
+                                  // Check if this is a full-stack-ft course
+                                  const isFullStackFt =
+                                    cohort.syllabus_version?.courseSlug ===
+                                    "full-stack-ft";
+                                  const cityName =
+                                    cohort.academy.city.name?.toLowerCase();
+                                  const isInPersonLocation =
+                                    isFullStackFt &&
+                                    (cityName === "miami" ||
+                                      cityName === "dallas" ||
+                                      cityName?.includes("dallas") ||
+                                      cityName?.includes("miami"));
+
+                                  if (isInPersonLocation) {
+                                    // For full-stack-ft in Miami/Dallas, show "City - In-person"
+                                    return (
+                                      <Link
+                                        to={
+                                          loc
+                                            ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+                                            : ""
+                                        }
+                                      >
+                                        <Paragraph
+                                          textAlign="left"
+                                          color={Colors.blue}
+                                        >
+                                          {`${cohort.academy.city.name} - In-person`}
+                                        </Paragraph>
+                                      </Link>
+                                    );
+                                  } else {
+                                    // For all other courses or locations, show "Remote"
                                     return (
                                       <Paragraph
                                         textAlign="left"
                                         color={Colors.black}
                                       >
-                                        {content.remote.replace(
-                                          " available",
-                                          ""
-                                        )}
+                                        {content.info.remote}
                                       </Paragraph>
-                                    );
-                                  } else if (isInPersonMiamiOrDallas) {
-                                    // For in-person Miami/Dallas, show city name and make it clickable
-                                    return (
-                                      <Link
-                                        to={
-                                          loc
-                                            ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
-                                            : ""
-                                        }
-                                      >
-                                        <Paragraph
-                                          textAlign="left"
-                                          color={Colors.blue}
-                                        >
-                                          {cohort.academy.city.name}
-                                        </Paragraph>
-                                      </Link>
-                                    );
-                                  } else {
-                                    // For other locations, show city name with remote availability
-                                    return (
-                                      <Link
-                                        to={
-                                          loc
-                                            ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
-                                            : ""
-                                        }
-                                      >
-                                        <Paragraph
-                                          textAlign="left"
-                                          color={Colors.blue}
-                                        >
-                                          {`${
-                                            cohort.academy.city.name
-                                          } (${content.remote.replace(
-                                            " available",
-                                            ""
-                                          )})`}
-                                        </Paragraph>
-                                      </Link>
                                     );
                                   }
                                 })()}
@@ -710,7 +679,9 @@ const UpcomingDates = ({
                               </H4>
                               <Paragraph textAlign="left">
                                 {cohort?.syllabus_version?.duration ||
-                                  getDurationFromSyllabus(cohort?.syllabus_version?.courseSlug) ||
+                                  getDurationFromSyllabus(
+                                    cohort?.syllabus_version?.courseSlug
+                                  ) ||
                                   "Duration not available"}
                               </Paragraph>
                             </Div>

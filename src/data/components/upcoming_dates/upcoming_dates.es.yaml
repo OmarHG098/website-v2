@@ -45,6 +45,8 @@ info:
   action_label: acción
   button_text: aplicar
   button_link: "/es/aplica"
+  in_person: Presencial
+  remote: Remoto
 footer:
   button_text: Ver más Fechas
   button_text_open: Ver más Fechas
