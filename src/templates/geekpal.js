@@ -43,7 +43,6 @@ const GeekPal = (props) => {
     setComponents({ ...yml, ..._components });
   }, [yml]);
 
-
   return (
     <>
       {/* Header Section with decorative elements */}
