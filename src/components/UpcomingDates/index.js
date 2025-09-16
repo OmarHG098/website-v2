@@ -50,6 +50,7 @@ const UpcomingDates = ({
               default_course
               course_slug
               name
+              duration_weeks
             }
             email_form_content {
               heading
@@ -62,9 +63,6 @@ const UpcomingDates = ({
               button_text
               program_label
               duration_label
-              duration_weeks
-              duration_part_time
-              duration_full_time
               location_label
               date
               action_label
@@ -78,21 +76,6 @@ const UpcomingDates = ({
             }
             fields {
               lang
-            }
-          }
-        }
-      }
-      allCourseYaml {
-        edges {
-          node {
-            fields {
-              file_name
-              lang
-            }
-            details {
-              weeks
-              week_unit
-              weeks_label
             }
           }
         }
@@ -132,31 +115,10 @@ const UpcomingDates = ({
   if (content) content = content.node;
   else return null;
 
-  // Get course data to map durations dynamically
-  const courseData = dataQuery.allCourseYaml.edges;
-
-  // Helper function to get course duration from course files
-  const getCourseDuration = (courseSlug) => {
-    const course = courseData.find(({ node }) => {
-      const fileName = node.fields.file_name;
-      const fileLang = node.fields.lang;
-
-      // Extract the base name from the filename (remove .us.yaml or .es.yaml)
-      const baseName = fileName.split(".")[0];
-
-      return baseName === courseSlug && fileLang === lang;
-    });
-
-    if (course && course.node.details && course.node.details.weeks) {
-      const weeks = course.node.details.weeks;
-      const weeksLabel =
-        course.node.details.weeks_label ||
-        course.node.details.week_unit ||
-        "weeks";
-      return `${weeks} ${weeksLabel}`;
-    }
-
-    return null;
+  // Helper function to get duration from syllabus alias
+  const getDurationFromSyllabus = (courseSlug) => {
+    const syllabus = syllabusAlias.find((syll) => syll.course_slug === courseSlug);
+    return syllabus?.duration_weeks || null;
   };
 
   const emailFormContent = content.email_form_content;
@@ -269,11 +231,7 @@ const UpcomingDates = ({
         if (syllabus) {
           cohort.syllabus_version.name = syllabus.name;
           cohort.syllabus_version.courseSlug = syllabus.course_slug;
-
-          // Get dynamic duration from course files
-          const dynamicDuration = getCourseDuration(syllabus.course_slug);
-          cohort.syllabus_version.duration =
-            dynamicDuration || syllabus.duration;
+          cohort.syllabus_version.duration = syllabus.duration_weeks;
         } else {
           console.warn(
             "No syllabus alias found for cohort:",
@@ -658,7 +616,8 @@ const UpcomingDates = ({
                           >
                             <Paragraph textAlign="left">
                               {cohort?.syllabus_version?.duration ||
-                                content.info.duration_weeks}
+                                getDurationFromSyllabus(cohort?.syllabus_version?.courseSlug) ||
+                                "Duration not available"}
                             </Paragraph>
                           </Div>
 
@@ -751,7 +710,8 @@ const UpcomingDates = ({
                               </H4>
                               <Paragraph textAlign="left">
                                 {cohort?.syllabus_version?.duration ||
-                                  content.info.duration_weeks}
+                                  getDurationFromSyllabus(cohort?.syllabus_version?.courseSlug) ||
+                                  "Duration not available"}
                               </Paragraph>
                             </Div>
                           </Div>
