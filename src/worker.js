@@ -2,7 +2,8 @@ import { defaultSession, locByLanguage } from "./actions";
 import countriesList from "./components/LeadForm/PhoneInput/countriesList";
 const dictionaryOf = require("./utils/dictionaries/pages.json");
 
-const GOOGLE_KEY = "AIzaSyB6NEbEyhDU_U1z_XoyRwEu0Rc1XXeZK6c";
+const IP_API_KEY = "XilqbqAQ3xZ8zOd";
+const IP_API_URL = "https://pro.ip-api.com/json";
 
 const getFirstBrowserLanguage = (navigator) => {
   var nav = JSON.parse(navigator),
@@ -124,9 +125,6 @@ const initSession = async (locationsArray, storedSession, path, seed = {}) => {
     ...dictionaryOf.yml[0],
     ...dictionaryOf.md[0],
   };
-  // session.pathDictionary[`${window.location?.pathname}`]
-  // langDestination = pathsDictionary
-  // const params = new URLSearchParams(window.location.pathname);
 
   let { location, language, navigator, ...utm } = seed;
   const browserLang = getFirstBrowserLanguage(navigator);
@@ -160,80 +158,57 @@ const initSession = async (locationsArray, storedSession, path, seed = {}) => {
   if (location === null && !path.includes("/landings")) {
     console.log("Calculating nearest location because it was null...");
     try {
-      const response = await fetch(
-        `https://www.googleapis.com/geolocation/v1/geolocate?key=${GOOGLE_KEY}`,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          method: "POST",
-        }
-      );
-
+      const response = await fetch(`${IP_API_URL}?key=${IP_API_KEY}`);
       let data = (await response.json()) || null;
-      if (data && data.location) {
-        const lang = {
-          us: "en",
-          es: "es",
-        };
+      
+      if (data && data.status === 'success') {
+        geoCode = {};
+        geoCode.city = data.city;
+        geoCode.country = data.country;
+        geoCode.countryShort = data.countryCode;
+        geoCode.region = data.regionName;
+        geoCode.timezone = data.timezone;
+        
+        latitude = data.lat;
+        longitude = data.lon;
+        
+        let filteredLocations = [];
 
-        const responseGC = await fetch(
-          `https://maps.googleapis.com/maps/api/geocode/json?latlng=${data.location.lat},${data.location.lng}&key=${GOOGLE_KEY}&language=${lang[languageToFilter]}`,
-          {
-            method: "POST",
-          }
+        const locsInCountry = locations.filter(
+          (location) =>
+            location.country_shortname === geoCode.countryShort.toLowerCase()
         );
 
-        let filteredLocations = [];
-        let dataGC = (await responseGC.json()) || null;
-
-        if (dataGC.results) {
-          geoCode = {};
-          // get country and city from geocoding
-          dataGC.results[0].address_components.map((comp) => {
-            if (comp.types.includes("locality")) geoCode.city = comp.long_name;
-            if (comp.types.includes("country")) {
-              geoCode.country = comp.long_name;
-              geoCode.countryShort = comp.short_name;
-            }
-          });
-
-          // Check if we have locations in user's country
-          const locsInCountry = locations.filter(
-            (location) =>
-              location.country_shortname === geoCode.countryShort.toLowerCase()
+        if (locsInCountry.length !== 0) {
+          const campus = locsInCountry.find(
+            (location) => location.city === geoCode.city
           );
 
-          if (locsInCountry.length !== 0) {
-            const campus = locsInCountry.find(
-              (location) => location.city === geoCode.city
+          if (campus) location = campus;
+          else filteredLocations = locsInCountry;
+        } else {
+          // If there are no locations in the user's country, we get the locations from its region
+          const regions = [
+            ...new Set(locations.map((item) => item.meta_info.region)),
+          ];
+          const region = getRegion(geoCode.countryShort, regions);
+          if (region)
+            filteredLocations = locations.filter(
+              (location) => location.meta_info.region === region
             );
-
-            if (campus) location = campus;
-            else filteredLocations = locsInCountry;
-          } else {
-            // If there are no locations in the user's country, we get the locations from its region
-            const regions = [
-              ...new Set(locations.map((item) => item.meta_info.region)),
-            ];
-            const region = getRegion(geoCode.countryShort, regions);
-            if (region)
-              filteredLocations = locations.filter(
-                (location) => location.meta_info.region === region
-              );
-          }
         }
+
         if (!location) {
-          latitude = data.location.lat;
-          longitude = data.location.lng;
           // Filtered locations are used to filter from the locations in the user's country or region
           location = getClosestLoc(
             filteredLocations.length !== 0 ? filteredLocations : locations,
-            data.location.lat,
-            data.location.lng
+            latitude,
+            longitude
           );
         }
-      } else throw Error("Error when connecting to Google Geolocation API");
+      } else {
+        throw Error("Error when connecting to IP-API");
+      }
     } catch (e) {
       console.log("Error retrieving IP information: ", e);
     }
