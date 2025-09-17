@@ -2,35 +2,50 @@ import React from "react";
 import { Link } from "gatsby";
 import { Div } from "../Sections";
 import { H3, H4, Paragraph } from "../Heading";
-import { Colors } from "../Styling";
+import { Button, Colors } from "../Styling";
 import Icon from "../Icon";
 
-import {
-  PADDING,
-  TYPOGRAPHY,
-  BORDER_RADIUS,
-  BORDER_STYLES,
-  ACTION_BUTTONS,
-} from "./constants";
+const BUTTON_BORDER_RADIUS = "3px";
+const BUTTON_PADDING = "14px";
+const SMALL_FONT_SIZE = "14px";
+
+const ACTION_BUTTON_PROPS = {
+  DEFAULT: {
+    background: Colors.blue,
+    color: Colors.white,
+  },
+  OUTLINE: {
+    background: Colors.white,
+    color: Colors.blue,
+  },
+  LINK: {
+    width: "auto",
+    background: "transparent",
+    color: Colors.blue,
+    padding: "0",
+    borderRadius: "0",
+    cursor: "pointer",
+  },
+};
 
 const CellContent = React.memo(({ cell, cellStyle, isHeaderCell = false }) => {
   const TextComponent = isHeaderCell ? H4 : Paragraph;
   const textProps = isHeaderCell
     ? {
-        type: "h4",
-        fontWeight: "700",
-        fontSize: "15px",
-        fontSize_tablet: "16px",
-        color: Colors.darkGray,
-        textAlign: "left",
-        letterSpacing: "0.3px",
-      }
+      type: "h4",
+      fontWeight: "700",
+      fontSize: "15px",
+      fontSize_tablet: "16px",
+      color: Colors.darkGray,
+      textAlign: "left",
+      letterSpacing: "0.3px",
+    }
     : {
-        fontWeight: "400",
-        color: Colors.black,
-        textAlign: cell?.text_align || "left",
-        lineHeight: "1.4",
-      };
+      fontWeight: "400",
+      color: Colors.black,
+      textAlign: cell?.text_align || "left",
+      lineHeight: "1.4",
+    };
 
   const cellContent = typeof cell === "string" ? cell : cell.content || "";
   const hasContent = cellContent && cellContent.trim() !== "";
@@ -41,7 +56,7 @@ const CellContent = React.memo(({ cell, cellStyle, isHeaderCell = false }) => {
   if (!hasIcon) {
     return (
       <TextComponent
-        fontSize={cellStyle?.fontSize || TYPOGRAPHY.FONT_SIZES.SMALL}
+        fontSize={cellStyle?.fontSize || SMALL_FONT_SIZE}
         fontSize_tablet={cellStyle?.fontSize_tablet || "14px"}
         margin="0"
         {...textProps}
@@ -74,7 +89,7 @@ const CellContent = React.memo(({ cell, cellStyle, isHeaderCell = false }) => {
       )}
       {hasContent && (
         <TextComponent
-          fontSize={cellStyle?.fontSize || TYPOGRAPHY.FONT_SIZES.SMALL}
+          fontSize={cellStyle?.fontSize || SMALL_FONT_SIZE}
           fontSize_tablet={cellStyle?.fontSize_tablet || "14px"}
           margin="0"
           {...textProps}
@@ -113,41 +128,46 @@ const ActionButtons = React.memo(({ actions }) => {
     >
       {actions.primary && actions.primary.text && (
         <Link
-          className={primaryVariant ? `button-${primaryVariant}` : ""}
           to={actions.primary.path}
           state={actions.primary.link_state}
-          style={{
-            ...(ACTION_BUTTONS[primaryVariant] || ACTION_BUTTONS.DEFAULT),
-            padding: PADDING.MEDIUM,
-            borderRadius: BORDER_RADIUS.BUTTON,
-            fontFamily: TYPOGRAPHY.FONT_FAMILY,
-            fontSize: TYPOGRAPHY.FONT_SIZES.SMALL,
-            fontWeight: 700,
-            display: "inline-block",
-            textAlign: "center",
-            transition: "background-color 0.3s ease",
-          }}
         >
-          {actions.primary.text}
+          <Button
+            className={primaryVariant ? `button-${primaryVariant}` : ""}
+            width="100%"
+            fontSize={SMALL_FONT_SIZE}
+            fontWeight="700"
+            padding={BUTTON_PADDING}
+            borderRadius={BUTTON_BORDER_RADIUS}
+            textDecoration="none"
+            display="inline-block"
+            textAlign="center"
+            transition="background-color 0.3s ease"
+            {...(ACTION_BUTTON_PROPS[primaryVariant] || ACTION_BUTTON_PROPS.DEFAULT)}
+          >
+            {actions.primary.text}
+          </Button>
         </Link>
       )}
       {actions.secondary && actions.secondary.text && (
         <Link
-          className={secondaryVariant ? `button-${secondaryVariant}` : ""}
           to={actions.secondary.path}
           state={actions.secondary.link_state}
-          style={{
-            ...(ACTION_BUTTONS[secondaryVariant] || ACTION_BUTTONS.OUTLINE),
-            padding: PADDING.MEDIUM,
-            borderRadius: BORDER_RADIUS.BUTTON,
-            fontFamily: TYPOGRAPHY.FONT_FAMILY,
-            fontWeight: 700,
-            display: "inline-block",
-            textAlign: "center",
-            transition: "background-color 0.3s ease",
-          }}
         >
-          {actions.secondary.text}
+          <Button
+            className={secondaryVariant ? `button-${secondaryVariant}` : ""}
+            width="100%"
+            fontSize={SMALL_FONT_SIZE}
+            fontWeight="700"
+            padding={BUTTON_PADDING}
+            borderRadius={BUTTON_BORDER_RADIUS}
+            textDecoration="none"
+            display="inline-block"
+            textAlign="center"
+            transition="background-color 0.3s ease"
+            {...(ACTION_BUTTON_PROPS[secondaryVariant] || ACTION_BUTTON_PROPS.OUTLINE)}
+          >
+            {actions.secondary.text}
+          </Button>
         </Link>
       )}
     </Div>
@@ -166,12 +186,12 @@ const TableHeader = React.memo(
   }) => {
     const stickyHeaderStyles = stickyHeaders
       ? {
-          position: "sticky",
-          top: "0",
-          zIndex: "10",
-          backgroundColor: Colors.white,
-          boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-        }
+        position: "sticky",
+        top: "0",
+        zIndex: "10",
+        backgroundColor: Colors.white,
+        boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+      }
       : {};
 
     const [topLeft, topRight] = childBorderRadius.split(" ");
