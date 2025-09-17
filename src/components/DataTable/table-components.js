@@ -32,20 +32,20 @@ const CellContent = React.memo(({ cell, cellStyle, isHeaderCell = false }) => {
   const TextComponent = isHeaderCell ? H4 : Paragraph;
   const textProps = isHeaderCell
     ? {
-      type: "h4",
-      fontWeight: "700",
-      fontSize: "15px",
-      fontSize_tablet: "16px",
-      color: Colors.darkGray,
-      textAlign: "left",
-      letterSpacing: "0.3px",
-    }
+        type: "h4",
+        fontWeight: "700",
+        fontSize: "15px",
+        fontSize_tablet: "16px",
+        color: Colors.darkGray,
+        textAlign: "left",
+        letterSpacing: "0.3px",
+      }
     : {
-      fontWeight: "400",
-      color: Colors.black,
-      textAlign: cell?.text_align || "left",
-      lineHeight: "1.4",
-    };
+        fontWeight: "400",
+        color: Colors.black,
+        textAlign: cell?.text_align || "left",
+        lineHeight: "1.4",
+      };
 
   const cellContent = typeof cell === "string" ? cell : cell.content || "";
   const hasContent = cellContent && cellContent.trim() !== "";
@@ -127,10 +127,7 @@ const ActionButtons = React.memo(({ actions }) => {
       margin="10px 0"
     >
       {actions.primary && actions.primary.text && (
-        <Link
-          to={actions.primary.path}
-          state={actions.primary.link_state}
-        >
+        <Link to={actions.primary.path} state={actions.primary.link_state}>
           <Button
             className={primaryVariant ? `button-${primaryVariant}` : ""}
             width="100%"
@@ -142,17 +139,15 @@ const ActionButtons = React.memo(({ actions }) => {
             display="inline-block"
             textAlign="center"
             transition="background-color 0.3s ease"
-            {...(ACTION_BUTTON_PROPS[primaryVariant] || ACTION_BUTTON_PROPS.DEFAULT)}
+            {...(ACTION_BUTTON_PROPS[primaryVariant] ||
+              ACTION_BUTTON_PROPS.DEFAULT)}
           >
             {actions.primary.text}
           </Button>
         </Link>
       )}
       {actions.secondary && actions.secondary.text && (
-        <Link
-          to={actions.secondary.path}
-          state={actions.secondary.link_state}
-        >
+        <Link to={actions.secondary.path} state={actions.secondary.link_state}>
           <Button
             className={secondaryVariant ? `button-${secondaryVariant}` : ""}
             width="100%"
@@ -164,7 +159,8 @@ const ActionButtons = React.memo(({ actions }) => {
             display="inline-block"
             textAlign="center"
             transition="background-color 0.3s ease"
-            {...(ACTION_BUTTON_PROPS[secondaryVariant] || ACTION_BUTTON_PROPS.OUTLINE)}
+            {...(ACTION_BUTTON_PROPS[secondaryVariant] ||
+              ACTION_BUTTON_PROPS.OUTLINE)}
           >
             {actions.secondary.text}
           </Button>
@@ -186,12 +182,12 @@ const TableHeader = React.memo(
   }) => {
     const stickyHeaderStyles = stickyHeaders
       ? {
-        position: "sticky",
-        top: "0",
-        zIndex: "10",
-        backgroundColor: Colors.white,
-        boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-      }
+          position: "sticky",
+          top: "0",
+          zIndex: "10",
+          backgroundColor: Colors.white,
+          boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+        }
       : {};
 
     const [topLeft, topRight] = childBorderRadius.split(" ");
