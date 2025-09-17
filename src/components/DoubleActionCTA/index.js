@@ -22,7 +22,6 @@ const DoubleActionCTA = ({
   disableBullets = false,
   location,
   ctaData,
-  lang = "us",
 }) => {
   const { session: appSession } = useContext(SessionContext);
   const captcha = useRef(null);
