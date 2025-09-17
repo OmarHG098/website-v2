@@ -363,7 +363,7 @@ job_guarantee_locations: [
 **DEBUG COMMANDS:**
 ```bash
 # Test GraphQL query compilation
-npm run develop
+npm run build
 
 # Check GraphQL schema
 # Visit http://localhost:8000/___graphql
@@ -450,9 +450,7 @@ useEffect(() => {
 ### 8.3 Testing Commands
 ```bash
 npm run test              # Full test suite
-npm run develop          # Development server
 npm run build            # Production build
-npm run serve            # Serve built site
 ```
 
 ---
