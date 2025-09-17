@@ -4,8 +4,8 @@ full_time:
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Pago completo"
-    description: "La matrícula regular es de $10,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
-    job_guarantee_description: "La matrícula regular es de $12,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
+    description: "La matrícula regular es de $10,999. O divídela sin intereses hasta en 6 meses."
+    job_guarantee_description: "La matrícula regular es de $12,999. O divídela sin intereses hasta en 6 meses."
     price: "$13,499"
     original_price: "$14,999"
     offer: "10% DE DESCUENTO"
@@ -208,8 +208,8 @@ part_time:
     recomended: "★ ¡Mejor precio!"
     academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada', 'austin-usa', 'tampa-usa', 'dallas-usa']
     scholarship: "Pago Completo"
-    description: "La matrícula regular es de $10,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
-    job_guarantee_description: "La matrícula regular es de $12,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
+    description: "La matrícula regular es de $10,999. O divídela sin intereses hasta en 6 meses."
+    job_guarantee_description: "La matrícula regular es de $12,999. O divídela sin intereses hasta en 6 meses."
     price: "$9,899"
     original_price: "$10,999"
     offer: "10% DE DESCUENTO"

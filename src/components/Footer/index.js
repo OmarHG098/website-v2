@@ -274,7 +274,7 @@ const Footer = ({ yml }) => {
                     )}
                   </Button>
                 </Form>
-                
+
                 {/* Privacy Policy Checkbox - Outside the form to avoid flex layout issues */}
                 <Div
                   flexDirection="row"

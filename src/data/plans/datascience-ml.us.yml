@@ -4,8 +4,8 @@ full_time:
     academies: ['downtown-miami', 'orlando']
     recomended: "★ Best Deal!"
     scholarship: "Full Payment"
-    description: "Regular tuition is $10,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
-    job_guarantee_description: "Regular tuition is $12,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
+    description: "Regular tuition is $10,999. Or spread interest-free over 6 months."
+    job_guarantee_description: "Regular tuition is $12,999. Or spread interest-free over 6 months."
     price: "$10,999"
     original_price: "$19,998"
     offer: "40% OFF"
@@ -53,8 +53,8 @@ part_time:
     recommended_color: "lightGreen"
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
     scholarship: "Pay upfront"
-    description: "Regular tuition is $11,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
-    job_guarantee_description: "Regular tuition is $12,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
+    description: "Regular tuition is $11,999. Or spread interest-free over 6 months."
+    job_guarantee_description: "Regular tuition is $12,999. Or spread interest-free over 6 months."
     price: "$11,999"
     original_price: "$19,998"
     offer: "10% OFF"

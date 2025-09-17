@@ -6,14 +6,14 @@ part_time:
     recommended_color: "lightGreen"
     academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     scholarship: "Pay upfront"
-    description: "Regular tuition is $8,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
-    job_guarantee_description: "Regular tuition is $11,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
-    price: "$8,999"
+    description: "Regular tuition is $9,999. Or spread interest-free over 6 months."
+    job_guarantee_description: "Regular tuition is $11,999. Or spread interest-free over 6 months."
+    price: "$9,999"
     original_price: "$9,999"
     offer: "10% OFF"
     bullets:
       - Pay upfront and save 10%
-      - Regular tuition is $8,999 and can be financed interest free-up to 6 months.
+      - Regular tuition is $9,999 and can be financed interest free-up to 6 months.
     icons:
       - "/images/edly.png"
       - "/images/ascent_logo.png"
