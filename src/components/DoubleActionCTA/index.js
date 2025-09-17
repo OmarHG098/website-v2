@@ -38,7 +38,8 @@ const DoubleActionCTA = (props) => {
                   childImageSharp {
                     gatsbyImageData(
                       layout: CONSTRAINED
-                      width: 400
+                      width: 900
+                      quality: 100
                       placeholder: NONE
                     )
                   }
@@ -55,7 +56,8 @@ const DoubleActionCTA = (props) => {
                   childImageSharp {
                     gatsbyImageData(
                       layout: CONSTRAINED
-                      width: 400
+                      width: 900
+                      quality: 100
                       placeholder: NONE
                     )
                   }
@@ -125,18 +127,24 @@ const DoubleActionCTA = (props) => {
     return false;
   };
 
-  // Prefer explicit prop.lang, then session.language; fallback to us for data selection only
-  const dataLang = (props.lang || appSession?.language || "us").replace(
-    "en",
-    "us"
-  );
-  let ctaComponent = data.allDoubleActionCtaYaml.edges.find(
-    ({ node }) => node.fields.lang === dataLang
-  );
-  if (ctaComponent) ctaComponent = ctaComponent.node;
-  else return null;
+  // Use props.ctaData if provided, otherwise fall back to centralized data
+  let content;
+  if (props.ctaData) {
+    content = props.ctaData;
+  } else {
+    // Prefer explicit prop.lang, then session.language; fallback to us for data selection only
+    const dataLang = (props.lang || appSession?.language || "us").replace(
+      "en",
+      "us"
+    );
+    let ctaComponent = data.allDoubleActionCtaYaml.edges.find(
+      ({ node }) => node.fields.lang === dataLang
+    );
+    if (ctaComponent) ctaComponent = ctaComponent.node;
+    else return null;
 
-  const content = ctaComponent.cta;
+    content = ctaComponent.cta;
+  }
 
   // Check location filtering unless explicitly disabled
   if (!props.disableRestriction) {
