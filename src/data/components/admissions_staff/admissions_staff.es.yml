@@ -4,7 +4,7 @@ staff:
   - name: "Eli"
     last_name: "Pilowsky"
     job_title: "Admissions Advisor"
-    locations: [""]
+    locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
     phone: "(786) 305-5288"
     email: "epilowsky@4geeksacademy.com"
     image: "../../../../static/images/staff/eli-pilowsky.webp"

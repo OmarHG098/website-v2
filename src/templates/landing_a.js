@@ -245,8 +245,11 @@ const Landing = (props) => {
               image={
                 applySchollarship
                   ? applySchollarship?.image.childImageSharp.gatsbyImageData
-                  : data.allPageYaml.edges[0].node.list[0].image.childImageSharp
-                      .gatsbyImageData
+                  : (
+                      data.allLandingYaml?.edges?.[0]?.node?.list?.[0]?.image ||
+                      data.allDownloadableYaml?.edges?.[0]?.node?.list?.[0]
+                        ?.image
+                    )?.childImageSharp?.gatsbyImageData
               }
               bgSize="contain"
               alt="geekforce image"
@@ -318,28 +321,6 @@ const Landing = (props) => {
 };
 export const query = graphql`
   query LandingAQuery($file_name: String!, $lang: String!) {
-    allPageYaml(
-      filter: {
-        fields: { file_name: { regex: "/geekpal/" }, lang: { eq: $lang } }
-      }
-    ) {
-      edges {
-        node {
-          list {
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED
-                  width: 800
-                  placeholder: NONE
-                  quality: 100
-                )
-              }
-            }
-          }
-        }
-      }
-    }
     allLandingYaml(
       filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang } } }
     ) {
@@ -499,7 +480,20 @@ export const query = graphql`
                 }
               }
             }
+            custom_logos {
+              name
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 150
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
+            }
           }
+
           why_python {
             position
             heading
@@ -813,7 +807,6 @@ export const query = graphql`
               }
             }
           }
-
           why_python {
             position
             heading

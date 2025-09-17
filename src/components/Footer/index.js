@@ -55,6 +55,7 @@ const Footer = ({ yml }) => {
   const [formData, setVal] = useState({
     email: { value: "", valid: false },
     consent: { value: true, valid: true },
+    privacyPolicy: { value: false, valid: false },
   });
 
   const captchaChange = () => {
@@ -79,7 +80,10 @@ const Footer = ({ yml }) => {
         margin="0 0 60px 0"
         childMargin="auto"
         childMaxWidth="1280px"
+        flexDirection="column"
+        flexDirection_tablet="row"
       >
+        {/* Academy Logo - Mobile: Full width, Tablet: Grid area */}
         <Div
           justifyContent="center"
           alignItems="center"
@@ -89,6 +93,8 @@ const Footer = ({ yml }) => {
           height_tablet="100%"
           borderRadius="3px"
           gridArea_tablet="1/1/2/3"
+          margin="0 0 20px 0"
+          margin_tablet="0"
         >
           <RoundImage
             url="/images/4geeksacademy-logo-old.png"
@@ -99,62 +105,22 @@ const Footer = ({ yml }) => {
             bsize="contain"
           />
         </Div>
-        <Div
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
-          height="43px"
-          width="100%"
-          width_tablet="100%"
-          height_tablet="100%"
-          borderRadius="3px"
-          gridArea_tablet="1/10/2/13"
-        >
-          <H4 margin="0 0 10px 0" display="none" display_md="block">
-            {yml.newsletter.heading}
-          </H4>
-          <Div id="icons-container" alignItems="center" gap="8px">
-            {(socials || yml.socials).map((ln, i) => {
-              if (!ln.icon) return null;
-              return (
-                <Anchor
-                  key={i}
-                  cursor="pointer"
-                  to={ln.link}
-                  // textAlign="left"
-                  margin="0"
-                  fontSize="13px"
-                  // lineHeight="22px"
-                  fontWeight="400"
-                  // textTransform="uppercase"
-                  color={Colors.black}
-                >
-                  <Icon
-                    icon={ln.icon}
-                    style={{ margin: "0" }}
-                    color={Colors.black}
-                    fill={Colors.black}
-                    height="32px"
-                    width="32px"
-                  />
-                </Anchor>
-              );
-            })}
-          </Div>
-        </Div>
 
+        {/* Newsletter Form - Mobile: Full width, Tablet: Grid area */}
         <Div
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
           padding="0 40px"
-          height="43px"
+          height="auto"
           width="100%"
           borderRadius="3px"
           width_tablet="100%"
           height_tablet="100%"
           gridArea_tablet="1/3/2/10"
           borderRight_tablet={`1px solid ${Colors.lightGray}`}
+          margin="0 0 20px 0"
+          margin_tablet="0"
         >
           {formStatus.status === "thank-you" ? (
             <Div alignItems="center">
@@ -173,12 +139,12 @@ const Footer = ({ yml }) => {
               <H4
                 margin="0 0 10px 0"
                 textAlign="left"
-                display="none"
+                display="block"
                 display_tablet="block"
               >
                 {yml.newsletter.heading}
               </H4>
-              <Div justifyContent="center" width="100%">
+              <Div justifyContent="center" width="100%" flexDirection="column">
                 <Form
                   onSubmit={async (e) => {
                     e.preventDefault();
@@ -188,7 +154,12 @@ const Footer = ({ yml }) => {
                     if (!formIsValid(formData)) {
                       setFormStatus({
                         status: "error",
-                        msg: "There are some errors in your form",
+                        msg: yml.newsletter.form_errors,
+                      });
+                    } else if (!formData.privacyPolicy.valid) {
+                      setFormStatus({
+                        status: "error",
+                        msg: yml.newsletter.privacy_required,
                       });
                     } else {
                       setFormStatus({ status: "loading", msg: "Loading..." });
@@ -241,7 +212,6 @@ const Footer = ({ yml }) => {
                     errorMsg="Please specify a valid email"
                     required
                   />
-                  {/* <button type="submit">{formStatus.status === "loading" ? "Loading..." : "text"}</button> */}
                   <Button
                     height="40px"
                     margin="0 0 0 10px"
@@ -269,6 +239,78 @@ const Footer = ({ yml }) => {
                     )}
                   </Button>
                 </Form>
+
+                {/* Privacy Policy Checkbox - Outside the form to avoid flex layout issues */}
+                <Div
+                  flexDirection="row"
+                  alignItems="center"
+                  margin="10px 0 0 0"
+                  width="100%"
+                >
+                  <input
+                    type="checkbox"
+                    id="privacy-policy"
+                    checked={formData.privacyPolicy.value}
+                    onChange={(e) => {
+                      const isChecked = e.target.checked;
+                      setVal({
+                        ...formData,
+                        privacyPolicy: { value: isChecked, valid: isChecked },
+                      });
+                      if (formStatus.status === "error") {
+                        setFormStatus({ status: "idle", msg: "Request" });
+                      }
+                    }}
+                    style={{
+                      marginRight: "8px",
+                      cursor: "pointer",
+                    }}
+                  />
+                  <label
+                    htmlFor="privacy-policy"
+                    style={{
+                      fontSize: "12px",
+                      color: Colors.darkGray,
+                      cursor: "pointer",
+                      lineHeight: "16px",
+                      margin: 0,
+                      display: "flex",
+                      alignItems: "center",
+                      fontWeight: "400",
+                    }}
+                  >
+                    <span>{yml.newsletter.privacy_checkbox_prefix} </span>
+                    <Link
+                      to={
+                        yml.fields?.lang === "es"
+                          ? "/es/privacidad"
+                          : "/us/privacy-policy"
+                      }
+                      style={{
+                        color: Colors.darkGray,
+                        textDecoration: "underline",
+                        marginLeft: "2px",
+                        fontWeight: "400",
+                      }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {yml.newsletter.privacy_checkbox_link}
+                    </Link>
+                  </label>
+                </Div>
+
+                {formData.privacyPolicy.valid === false &&
+                  formStatus.status === "error" && (
+                    <Div
+                      fontSize="12px"
+                      color="#e74c3c"
+                      margin="5px 0 0 0"
+                      textAlign="left"
+                    >
+                      {yml.newsletter.privacy_required}
+                    </Div>
+                  )}
               </Div>
               <Div width="fit-content" margin="10px auto 0 auto">
                 <ReCAPTCHA
@@ -279,6 +321,51 @@ const Footer = ({ yml }) => {
               </Div>
             </>
           )}
+        </Div>
+
+        {/* Social Icons - Mobile: Full width, Tablet: Grid area */}
+        <Div
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+          height="auto"
+          width="100%"
+          width_tablet="100%"
+          height_tablet="100%"
+          borderRadius="3px"
+          gridArea_tablet="1/10/2/13"
+        >
+          <H4 margin="0 0 10px 0" display="none" display_md="block">
+            {yml.newsletter.heading}
+          </H4>
+          <Div id="icons-container" alignItems="center" gap="8px">
+            {(socials || yml.socials).map((ln, i) => {
+              if (!ln.icon) return null;
+              return (
+                <Anchor
+                  key={i}
+                  cursor="pointer"
+                  to={ln.link}
+                  // textAlign="left"
+                  margin="0"
+                  fontSize="13px"
+                  // lineHeight="22px"
+                  fontWeight="400"
+                  // textTransform="uppercase"
+                  color={Colors.black}
+                >
+                  <Icon
+                    icon={ln.icon}
+                    style={{ margin: "0" }}
+                    color={Colors.black}
+                    fill={Colors.black}
+                    height="32px"
+                    width="32px"
+                  />
+                </Anchor>
+              );
+            })}
+          </Div>
         </Div>
         {yml.footer.map((item, i) => {
           return (
