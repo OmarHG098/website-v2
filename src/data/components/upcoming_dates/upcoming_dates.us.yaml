@@ -46,6 +46,9 @@ info:
   button_link: "/us/apply"
   in_person: In-person
   remote: Remote
+  remote_usa: Remote - USA
+  remote_latam: Remote - LATAM
+  remote_europe: Remote - Europe
 footer:
   button_text: See more dates
   button_text_open: See more dates

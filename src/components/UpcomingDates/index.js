@@ -68,6 +68,9 @@ const UpcomingDates = ({
               action_label
               in_person
               remote
+              remote_usa
+              remote_latam
+              remote_europe
             }
             no_course_message
             footer {
@@ -125,6 +128,38 @@ const UpcomingDates = ({
     return syllabus?.duration_weeks || null;
   };
 
+  // Helper function to get regional remote text based on cohort slug patterns
+  const getRegionalRemoteText = (cohortSlug) => {
+    if (!cohortSlug) return content.info.remote;
+    
+    const cohortSlugLower = cohortSlug.toLowerCase();
+    
+    // Regional mapping using lookup table pattern
+    const regionalMappings = [
+      {
+        patterns: ['miami', 'usa'],
+        text: content.info.remote_usa
+      },
+      {
+        patterns: ['spain', 'europe'],
+        text: content.info.remote_europe
+      },
+      {
+        patterns: ['latam'],
+        text: content.info.remote_latam
+      }
+    ];
+    
+    // Find matching region using array methods
+    const matchingRegion = regionalMappings.find(region =>
+      region.patterns.some(pattern =>
+        cohortSlugLower.startsWith(pattern) || cohortSlugLower.includes(pattern)
+      )
+    );
+    
+    return matchingRegion?.text || content.info.remote;
+  };
+
   const emailFormContent = content.email_form_content;
   const syllabusAlias = content.syllabus_alias;
 
@@ -136,11 +171,6 @@ const UpcomingDates = ({
         location ||
         session?.academyAliasDictionary?.[academy?.value];
 
-      console.log("Fetching cohorts with params:", {
-        academy: academySlug,
-        limit: 10,
-        syllabus_slug_like: defaultCourse || undefined,
-      });
 
       const response = await getCohorts({
         academy: academySlug,
@@ -148,7 +178,6 @@ const UpcomingDates = ({
         syllabus_slug_like: defaultCourse || undefined,
       });
 
-      console.log("Cohorts API response:", response);
 
       if (!response || !response.results) {
         console.error("Invalid response from cohorts API:", response);
@@ -169,7 +198,6 @@ const UpcomingDates = ({
             elm.syllabus_version?.name?.toLowerCase().includes("build") &&
             elm.syllabus_version?.name?.toLowerCase().includes("profile")
           ) {
-            console.log(`removing Build Profile course: ${elm.slug}`);
             return false;
           }
 
@@ -178,7 +206,6 @@ const UpcomingDates = ({
             elm.syllabus_version?.name?.toLowerCase().includes("building") &&
             elm.syllabus_version?.name?.toLowerCase().includes("tech")
           ) {
-            console.log(`removing Building Tech Profile course: ${elm.slug}`);
             return false;
           }
 
@@ -191,7 +218,6 @@ const UpcomingDates = ({
                 RegExp(regx).test(elm.slug)
               )
             ) {
-              console.log(`removing ${elm.slug}`);
               return false;
             }
           }
@@ -561,31 +587,24 @@ const UpcomingDates = ({
                                     cityName?.includes("miami"));
 
                                 if (isInPersonLocation) {
-                                  // For full-stack-ft in Miami/Dallas, show "City - In-person"
-                                  return (
-                                    <Link
-                                      to={
-                                        loc
-                                          ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
-                                          : ""
-                                      }
-                                    >
-                                      <Paragraph
-                                        textAlign="left"
-                                        color={Colors.blue}
-                                      >
-                                        {`${cohort.academy.city.name} - ${content.info.in_person}`}
-                                      </Paragraph>
-                                    </Link>
-                                  );
-                                } else {
-                                  // For all other courses or locations, show "Remote"
+                                  // For full-stack-ft in Miami/Dallas, show "City - In-person" (non-clickable)
                                   return (
                                     <Paragraph
                                       textAlign="left"
                                       color={Colors.black}
                                     >
-                                      {content.info.remote}
+                                      {`${cohort.academy.city.name} - ${content.info.in_person}`}
+                                    </Paragraph>
+                                  );
+                                } else {
+                                  // For all other courses or locations, show regional remote
+                                  const regionalRemoteText = getRegionalRemoteText(cohort.slug);
+                                  return (
+                                    <Paragraph
+                                      textAlign="left"
+                                      color={Colors.black}
+                                    >
+                                      {regionalRemoteText}
                                     </Paragraph>
                                   );
                                 }
@@ -642,31 +661,24 @@ const UpcomingDates = ({
                                       cityName?.includes("miami"));
 
                                   if (isInPersonLocation) {
-                                    // For full-stack-ft in Miami/Dallas, show "City - In-person"
-                                    return (
-                                      <Link
-                                        to={
-                                          loc
-                                            ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
-                                            : ""
-                                        }
-                                      >
-                                        <Paragraph
-                                          textAlign="left"
-                                          color={Colors.blue}
-                                        >
-                                          {`${cohort.academy.city.name} - In-person`}
-                                        </Paragraph>
-                                      </Link>
-                                    );
-                                  } else {
-                                    // For all other courses or locations, show "Remote"
+                                    // For full-stack-ft in Miami/Dallas, show "City - In-person" (non-clickable)
                                     return (
                                       <Paragraph
                                         textAlign="left"
                                         color={Colors.black}
                                       >
-                                        {content.info.remote}
+                                        {`${cohort.academy.city.name} - ${content.info.in_person}`}
+                                      </Paragraph>
+                                    );
+                                  } else {
+                                    // For all other courses or locations, show regional remote
+                                    const regionalRemoteText = getRegionalRemoteText(cohort.slug);
+                                    return (
+                                      <Paragraph
+                                        textAlign="left"
+                                        color={Colors.black}
+                                      >
+                                        {regionalRemoteText}
                                       </Paragraph>
                                     );
                                   }
@@ -811,7 +823,6 @@ const UpcomingDates = ({
                                     }
                                   })
                                   .catch((error) => {
-                                    console.log("error", error);
                                     setFormStatus({
                                       status: "error",
                                       msg: error.message || error,

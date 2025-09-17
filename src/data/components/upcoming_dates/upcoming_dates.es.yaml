@@ -47,6 +47,9 @@ info:
   button_link: "/es/aplica"
   in_person: Presencial
   remote: Remoto
+  remote_usa: Remoto - USA
+  remote_latam: Remoto - LATAM
+  remote_europe: Remoto - Europa
 footer:
   button_text: Ver más Fechas
   button_text_open: Ver más Fechas
