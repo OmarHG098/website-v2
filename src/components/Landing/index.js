@@ -882,9 +882,14 @@ export const landingSections = {
   ),
   who_is_hiring: ({ session, data, pageContext, yml, location, index }) => {
     let dataYml =
+      data.allLandingYaml &&
       data.allLandingYaml.edges.length !== 0 &&
       data.allLandingYaml.edges[0].node?.who_is_hiring !== null
         ? data.allLandingYaml.edges
+        : data.allPageYaml &&
+          data.allPageYaml.edges.length !== 0 &&
+          data.allPageYaml.edges[0].node?.who_is_hiring !== null
+        ? data.allPageYaml.edges
         : data.allDownloadableYaml.edges;
 
     const hiring = data.allPartnerYaml.edges[0].node;
