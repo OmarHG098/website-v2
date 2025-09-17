@@ -131,32 +131,34 @@ const UpcomingDates = ({
   // Helper function to get regional remote text based on cohort slug patterns
   const getRegionalRemoteText = (cohortSlug) => {
     if (!cohortSlug) return content.info.remote;
-    
+
     const cohortSlugLower = cohortSlug.toLowerCase();
-    
+
     // Regional mapping using lookup table pattern
     const regionalMappings = [
       {
-        patterns: ['miami', 'usa'],
-        text: content.info.remote_usa
+        patterns: ["miami", "usa"],
+        text: content.info.remote_usa,
       },
       {
-        patterns: ['spain', 'europe'],
-        text: content.info.remote_europe
+        patterns: ["spain", "europe"],
+        text: content.info.remote_europe,
       },
       {
-        patterns: ['latam'],
-        text: content.info.remote_latam
-      }
+        patterns: ["latam"],
+        text: content.info.remote_latam,
+      },
     ];
-    
+
     // Find matching region using array methods
-    const matchingRegion = regionalMappings.find(region =>
-      region.patterns.some(pattern =>
-        cohortSlugLower.startsWith(pattern) || cohortSlugLower.includes(pattern)
+    const matchingRegion = regionalMappings.find((region) =>
+      region.patterns.some(
+        (pattern) =>
+          cohortSlugLower.startsWith(pattern) ||
+          cohortSlugLower.includes(pattern)
       )
     );
-    
+
     return matchingRegion?.text || content.info.remote;
   };
 
@@ -171,13 +173,11 @@ const UpcomingDates = ({
         location ||
         session?.academyAliasDictionary?.[academy?.value];
 
-
       const response = await getCohorts({
         academy: academySlug,
         limit: 10,
         syllabus_slug_like: defaultCourse || undefined,
       });
-
 
       if (!response || !response.results) {
         console.error("Invalid response from cohorts API:", response);
@@ -598,7 +598,8 @@ const UpcomingDates = ({
                                   );
                                 } else {
                                   // For all other courses or locations, show regional remote
-                                  const regionalRemoteText = getRegionalRemoteText(cohort.slug);
+                                  const regionalRemoteText =
+                                    getRegionalRemoteText(cohort.slug);
                                   return (
                                     <Paragraph
                                       textAlign="left"
@@ -672,7 +673,8 @@ const UpcomingDates = ({
                                     );
                                   } else {
                                     // For all other courses or locations, show regional remote
-                                    const regionalRemoteText = getRegionalRemoteText(cohort.slug);
+                                    const regionalRemoteText =
+                                      getRegionalRemoteText(cohort.slug);
                                     return (
                                       <Paragraph
                                         textAlign="left"
