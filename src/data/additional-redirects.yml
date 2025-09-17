@@ -189,4 +189,3 @@ redirects:
   - fromPath: "/us/landing/dallas-scholarship"
     toPath: "/us/landing/texas-scholarship"
     isPermanent: true
-    
