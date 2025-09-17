@@ -49,11 +49,11 @@ components:
   - name: "unlimited_support"
     position: 3
     layout: "two_column_left"
-    background: "#F0F8FF"
-    proportions: [6, 6]
+    background: "lightYellow"
+    proportions: [5, 7]
     image:
-      style: '{"backgroundSize": "cover", "background-position": "center", "border-radius": "4px"}'
-      src: "/images/Group-6617.webp"
+      style: '{"backgroundSize": "contain"}'
+      src: "/images/Group-6663.png"
       shadow: false
     heading:
       text: "Unlimited Career Support – Always Ahead of Job Market Trends"
@@ -92,8 +92,8 @@ components:
       font_size: ["20px", "20px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "90%"}'    
     icons:
-        - icon: "capacity"
-          title: "1. Profile Optimization"
+        - icon: "stairswflag"
+          title: "Profile Optimization"
           content: |
             <ul>
               <li style="margin-top: 8px;">• Polish LinkedIn, GitHub, and portfolio to attract recruiters and pass AI-based filters.</li>
@@ -101,7 +101,7 @@ components:
               <li style="margin-top: 8px;">• Showcase your skills with a recruiter-ready portfolio.</li>
             </ul>
           color: '#0084FF'
-        - icon: "talk"
+        - icon: "contract-2"
           title: "2. Interview Preparation"
           content: |
             <ul>
@@ -109,8 +109,8 @@ components:
               <li style="margin-top: 8px;">• Practice coding and problem-solving with auto-graded exercises.</li>
               <li style="margin-top: 8px;">• Develop tailored strategies for upcoming interviews.</li>
             </ul>
-          color: '#FF9500'
-        - icon: "ratio"
+          color: '#0084FF'
+        - icon: "briefcase-2"
           title: "3. Strategic Job Search"
           content: |
             <ul>
@@ -125,7 +125,7 @@ components:
     layout: "two_column_left"
     proportions: [6, 6]
     image:
-      style: '{"backgroundSize": "contain", "background-position": "center", "border-radius": "4px"}'
+      style: '{"backgroundSize": "contain"}'
       src: "/images/bg/community.png"
       shadow: false
     heading:
@@ -165,7 +165,7 @@ components:
         content: "84% of graduates were hired"
       - icon: "briefcase-2"
         color: "#FF0000"
-        title: "Avergage time to get hired"
+        title: "Average time to get hired"
         content: "3-6 months after graduation"
       - icon: "stairswflag"
         color: "#BE8BFF"

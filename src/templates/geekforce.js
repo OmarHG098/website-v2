@@ -6,6 +6,7 @@ import { SessionContext } from "../session";
 import { landingSections } from "../components/Landing";
 
 //new components
+import Icon from "../components/Icon";
 import { Colors, VerticalVideoHolder } from "../components/Styling";
 import ReactPlayer from "../components/ReactPlayer";
 import { Div, Grid, HR } from "../components/Sections";
@@ -54,7 +55,7 @@ const GeekForce = (props) => {
         padding_md="100px 80px 40px 80px"
         padding_lg="100px 0px 40px 0px"
         columns_tablet="18"
-        margin={"70px auto 24px auto"}
+        margin={"70px auto 24px auto"        }
         maxWidth="1280px"
         position="relative"
         gridTemplateColumns_tablet="repeat(21, 1fr)"
@@ -70,7 +71,8 @@ const GeekForce = (props) => {
             right: "-150px",
             top: "-100px",
           }}
-          display_xs="none"
+          // display_xs="none"
+          // display_tablet="flex"
         />
         <Img
           src="/images/vector-stroke-light.png"
@@ -81,7 +83,6 @@ const GeekForce = (props) => {
             left: "48%",
             top: "20%",
           }}
-          display_xs="none"
         />
         <Div
           flexDirection="column"
@@ -107,22 +108,18 @@ const GeekForce = (props) => {
           />
           <Paragraph
             fontSize="24px"
-            fontFamily="Lato"
+            fontFamily="Lato-Bold"
             lineHeight="29px"
-            fontWeight="400"
+            fontWeight="500"
             padding_xs="10px 0px"
             textAlign_xs="center"
             textAlign_tablet="left"
             padding_md="30px 0px 10px 0"
             color="black"
-            fontSize_xs="18px"
-            lineHeight_xs="24px"
-            fontSize_tablet="24px"
-            lineHeight_tablet="29px"
             dangerouslySetInnerHTML={{ __html: yml.header.paragraph }}
           />
 
-          {/*  {Array.isArray(yml.header.bullets) &&
+          {Array.isArray(yml.header.bullets) &&
             yml.header.bullets.map((bullet, index) => (
               <Paragraph
                 zIndex="2"
@@ -163,7 +160,7 @@ const GeekForce = (props) => {
               bottom: "21px",
               zIndex: "-1",
             }}
-          />*/}
+          />
         </Div>
         <Div
           height="auto"
@@ -185,13 +182,13 @@ const GeekForce = (props) => {
             height="10px"
             style={{
               position: "absolute",
+              // bottom: "0px",
             }}
             left_xs="0"
-            bottom_tablet="10%"
+            bottom_tablet="20%"
             left_md="10%"
             bottom_md="10%"
             bottom_lg="0%"
-            display_xs="none"
           />
           <VerticalVideoHolder>
             {yml.geekForce.map((item, i) => {

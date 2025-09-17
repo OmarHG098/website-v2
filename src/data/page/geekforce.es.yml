@@ -49,11 +49,11 @@ components:
   - name: "unlimited_support"
     position: 3
     layout: "two_column_left"
-    background: "#F0F8FF"
-    proportions: [6, 6]
+    background: "lightYellow"
+    proportions: [5, 7]
     image:
-      style: '{"backgroundSize": "cover", "background-position": "center", "border-radius": "4px"}'
-      src: "/images/Group-6617.webp"
+      style: '{"backgroundSize": "contain"}'
+      src: "/images/Group-6663.png"
       shadow: false
     heading:
       text: "Apoyo Profesional Ilimitado – Siempre Adelante de las Tendencias del Mercado Laboral"
@@ -92,8 +92,8 @@ components:
       font_size: ["20px", "20px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "90%"}'
     icons:
-        - icon: "capacity"
-          title: "1. Optimización de Perfil"
+        - icon: "stairswflag"
+          title: "Optimización de Perfil"
           content: |
             <ul>
               <li style="margin-top: 8px;">• Pule LinkedIn, GitHub y portafolio para atraer reclutadores y pasar filtros basados en IA.</li>
@@ -101,7 +101,7 @@ components:
               <li style="margin-top: 8px;">• Muestra tus habilidades con un portafolio listo para reclutadores.</li>
             </ul>
           color: '#0084FF'
-        - icon: "talk"
+        - icon: "contract-2"
           title: "2. Preparación para Entrevistas"
           content: |
             <ul>
@@ -109,8 +109,8 @@ components:
               <li style="margin-top: 8px;">• Practica programación y resolución de problemas con ejercicios autocalificados.</li>
               <li style="margin-top: 8px;">• Desarrolla estrategias personalizadas para próximas entrevistas.</li>
             </ul>
-          color: '#FF9500'
-        - icon: "ratio"
+          color: '#0084FF'
+        - icon: "briefcase-2"
           title: "3. Búsqueda Estratégica de Trabajo"
           content: |
             <ul>
@@ -125,8 +125,8 @@ components:
     layout: "two_column_left"
     proportions: [6, 6]
     image:
-      style: '{"backgroundSize": "contain", "background-position": "center", "border-radius": "4px"}'
-      src: "/images/landing/Group-original.webp"
+      style: '{"backgroundSize": "contain"}'
+      src: "/images/bg/community.png"
       shadow: false
     heading:
       text: "Acelera Tus Resultados con Apoyo Profesional Hiperpersonalizado"

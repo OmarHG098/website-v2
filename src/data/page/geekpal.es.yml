@@ -140,6 +140,7 @@ components:
     layout: two_column_right
     image:
       src: "/images/staff/joao.png"
+      style: '{"backgroundSize": "contain"}'
       shadow: true
     video: "https://www.youtube.com/watch?v=MBXqEnhodx0"
     heading:
