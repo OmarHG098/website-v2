@@ -9,11 +9,11 @@ import { Header } from "../components/Sections";
 import { Button, Colors, Img } from "../components/Styling";
 import Iconogram from "../components/Iconogram";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import DoubleActionCTA from "../components/DoubleActionCTA";
 
-const ApplicationProcess = (props) => {
-  const { pageContext, yml } = props;
+const ApplicationProcess = ({ data, pageContext, yml }) => {
   const { header, stepper, apply_button } = yml;
-
+  const doubleActionCTA = data.allDoubleActionCtaYaml.edges[0].node.cta;
   return (
     <>
       <Header
@@ -149,6 +149,8 @@ const ApplicationProcess = (props) => {
       </Div>
 
       <Iconogram yml={yml.iconogram} background={Colors.veryLightBlue3} />
+
+      <DoubleActionCTA disableRestriction ctaData={doubleActionCTA} />
     </>
   );
 };
@@ -165,6 +167,7 @@ export const query = graphql`
             description
             image
             keywords
+            hideGlobalCTA
           }
           seo_title
           header {
@@ -211,6 +214,62 @@ export const query = graphql`
               content
               color
               content_style
+            }
+          }
+        }
+      }
+    }
+    allDoubleActionCtaYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          cta {
+            title
+            description
+            primary {
+              title
+              description
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 900
+                    quality: 100
+                    placeholder: NONE
+                  )
+                }
+              }
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            secondary {
+              title
+              description
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 900
+                    quality: 100
+                    placeholder: NONE
+                  )
+                }
+              }
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            newsletter_form {
+              placeholder_email
+              error_email
+              button_submit
+              button_loading
+              status_idle
+              status_error
+              status_correct_errors
+              success_message
             }
           }
         }

@@ -7,6 +7,7 @@ meta_info:
   visibility: "visible"
   template: "application-process"
   redirects: []
+  hideGlobalCTA: true # Hides the global CTA because this page has its own DoubleActionCTA
 
 seo_title: "Proceso de Aplicación - Únete a 4Geeks Academy"
 header:
