@@ -553,98 +553,143 @@ const Prework = (props) => {
       {/* CTA Section */}
       {yml.cta && (
         <Div
-          padding="80px 20px"
+          padding="100px 20px"
           textAlign="center"
+          position="relative"
+          overflow="hidden"
           style={{
-            background: `linear-gradient(135deg, ${Colors.blue} 0%, ${Colors.darkBlue} 100%)`,
+            background: `linear-gradient(135deg, ${Colors.lightYellow2} 0%, ${Colors.lightYellow} 100%)`,
           }}
         >
+          {/* Decorative background elements */}
           <Div
-            maxWidth="800px"
+            position="absolute"
+            top="-100px"
+            right="-100px"
+            width="300px"
+            height="300px"
+            borderRadius="50%"
+            background="rgba(255, 183, 24, 0.1)"
+            zIndex="0"
+          />
+          <Div
+            position="absolute"
+            bottom="-80px"
+            left="-80px"
+            width="250px"
+            height="250px"
+            borderRadius="50%"
+            background="rgba(255, 183, 24, 0.15)"
+            zIndex="0"
+          />
+
+          <Div
+            maxWidth="900px"
             margin="0 auto"
             flexDirection="column"
-            gap="30px"
+            gap="40px"
+            position="relative"
+            zIndex="1"
           >
-            <H2
-              type="h2"
-              fontSize="36px"
-              fontSize_tablet="42px"
-              fontWeight="700"
-              color="white"
-              margin="0"
-              lineHeight="1.2"
-            >
-              {yml.cta.title}
-            </H2>
-
-            <Paragraph
-              fontSize="18px"
-              lineHeight="1.6"
-              color="white"
-              margin="0"
-              maxWidth="600px"
-              alignSelf="center"
-            >
-              {yml.cta.subtitle}
-            </Paragraph>
-
             <Div
-              display="flex"
+              background="rgba(255, 255, 255, 0.9)"
+              backdropFilter="blur(10px)"
+              padding="40px 30px"
+              borderRadius="20px"
+              border="1px solid rgba(255, 183, 24, 0.3)"
+              boxShadow="0 20px 40px rgba(255, 183, 24, 0.2)"
               flexDirection="column"
-              flexDirection_tablet="row"
-              gap="15px"
-              justifyContent="center"
-              alignItems="center"
-              margin="20px 0 0 0"
+              gap="25px"
             >
-              {yml.cta.primary_button && (
-                <Link
-                  to={yml.cta.primary_button.link}
-                  style={{ width: "100%" }}
-                >
-                  <Button
-                    background="white"
-                    color={Colors.blue}
-                    padding="15px 24px"
-                    padding_xs="15px 16px"
-                    padding_tablet="15px 24px"
-                    fontSize="16px"
-                    fontWeight="600"
-                    justifyContent="center"
-                    borderRadius="8px"
-                    height="auto"
-                    width="100%"
-                    boxShadow="0 4px 12px rgba(0, 0, 0, 0.1)"
-                  >
-                    {yml.cta.primary_button.text}
-                  </Button>
-                </Link>
-              )}
+              <H2
+                type="h2"
+                fontSize="38px"
+                fontSize_tablet="46px"
+                fontWeight="800"
+                color={Colors.black}
+                margin="0"
+                lineHeight="1.2"
+                textAlign="center"
+              >
+                {yml.cta.title}
+              </H2>
 
-              {yml.cta.secondary_button && (
-                <Link
-                  to={yml.cta.secondary_button.link}
-                  style={{ width: "100%" }}
-                >
-                  <Button
-                    background="transparent"
-                    color="white"
-                    border="2px solid white"
-                    padding="15px 24px"
-                    padding_xs="15px 16px"
-                    padding_tablet="15px 24px"
-                    fontSize="16px"
-                    fontWeight="600"
-                    height="auto"
-                    width="100%"
-                    justifyContent="center"
-                    borderRadius="8px"
-                    boxShadow="0 4px 12px rgba(0, 0, 0, 0.1)"
+              <Paragraph
+                fontSize="20px"
+                lineHeight="1.6"
+                color={Colors.darkGray}
+                margin="0"
+                maxWidth="36rem"
+                alignSelf="center"
+                textAlign="center"
+                fontWeight="500"
+              >
+                {yml.cta.subtitle}
+              </Paragraph>
+
+              <Div
+                display="flex"
+                flexDirection="column"
+                flexDirection_tablet="row"
+                gap="20px"
+                justifyContent="center"
+                alignItems="center"
+                margin="30px 0 0 0"
+                maxWidth="600px"
+                alignSelf="center"
+                width="100%"
+              >
+                {yml.cta.primary_button && (
+                  <Link
+                    to={yml.cta.primary_button.link}
+                    style={{ width: "100%", maxWidth: "280px" }}
                   >
-                    {yml.cta.secondary_button.text}
-                  </Button>
-                </Link>
-              )}
+                    <Button
+                      background={Colors.black}
+                      color="white"
+                      padding="18px 32px"
+                      padding_xs="0 24px"
+                      padding_tablet="0 32px"
+                      fontSize="17px"
+                      fontWeight="700"
+                      justifyContent="center"
+                      borderRadius="12px"
+                      height="57px"
+                      width="100%"
+                      boxShadow="0 8px 25px rgba(0, 0, 0, 0.15)"
+                      transition="all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+                    >
+                      {yml.cta.primary_button.text}
+                    </Button>
+                  </Link>
+                )}
+
+                {yml.cta.secondary_button && (
+                  <Link
+                    to={yml.cta.secondary_button.link}
+                    style={{ width: "100%", maxWidth: "280px" }}
+                  >
+                    <Button
+                      background="transparent"
+                      color={Colors.black}
+                      border={`2px solid ${Colors.black}`}
+                      padding="18px 32px"
+                      padding_xs="0 24px"
+                      padding_tablet="0 32px"
+                      fontSize="17px"
+                      fontWeight="700"
+                      height="57px"
+                      width="100%"
+                      justifyContent="center"
+                      borderRadius="12px"
+                      boxShadow="0 4px 15px rgba(0, 0, 0, 0.1)"
+                      transition="all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+                    >
+                      {yml.cta.secondary_button.text}
+                    </Button>
+                  </Link>
+                )}
+              </Div>
             </Div>
           </Div>
         </Div>
