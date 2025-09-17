@@ -316,7 +316,11 @@ const Footer = ({ yml }) => {
                   >
                     <span>{yml.newsletter.privacy_checkbox_prefix} </span>
                     <Link
-                      to={yml.fields?.lang === "es" ? "/es/privacidad" : "/us/privacy-policy"}
+                      to={
+                        yml.fields?.lang === "es"
+                          ? "/es/privacidad"
+                          : "/us/privacy-policy"
+                      }
                       style={{
                         color: Colors.darkGray,
                         textDecoration: "underline",
@@ -330,17 +334,17 @@ const Footer = ({ yml }) => {
                     </Link>
                   </label>
                 </Div>
-                
-                {formData.privacyPolicy.valid === false && formStatus.status === "error" && (
-                  <Div
-                    fontSize="12px"
-                    color="#e74c3c"
-                    margin="5px 0 0 0"
-                    textAlign="left"
-                  >
-                    {yml.newsletter.privacy_required}
-                  </Div>
-                )}
+                {formData.privacyPolicy.valid === false &&
+                  formStatus.status === "error" && (
+                    <Div
+                      fontSize="12px"
+                      color="#e74c3c"
+                      margin="5px 0 0 0"
+                      textAlign="left"
+                    >
+                      {yml.newsletter.privacy_required}
+                    </Div>
+                  )}
               </Div>
               <Div width="fit-content" margin="10px auto 0 auto">
                 <ReCAPTCHA
