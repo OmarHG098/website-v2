@@ -13,7 +13,6 @@ import DoubleActionCTA from "../components/DoubleActionCTA";
 
 const ApplicationProcess = ({ data, pageContext, yml }) => {
   const { header, stepper, apply_button } = yml;
-  const doubleActionCTA = data.allDoubleActionCtaYaml.edges[0].node.cta;
   return (
     <>
       <Header
@@ -150,7 +149,7 @@ const ApplicationProcess = ({ data, pageContext, yml }) => {
 
       <Iconogram yml={yml.iconogram} background={Colors.veryLightBlue3} />
 
-      <DoubleActionCTA disableRestriction ctaData={doubleActionCTA} />
+      <DoubleActionCTA disableRestriction />
     </>
   );
 };
@@ -214,62 +213,6 @@ export const query = graphql`
               content
               color
               content_style
-            }
-          }
-        }
-      }
-    }
-    allDoubleActionCtaYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          cta {
-            title
-            description
-            primary {
-              title
-              description
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED
-                    width: 900
-                    quality: 100
-                    placeholder: NONE
-                  )
-                }
-              }
-              action_text
-              action_url
-              benefits
-              footer_text
-            }
-            secondary {
-              title
-              description
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED
-                    width: 900
-                    quality: 100
-                    placeholder: NONE
-                  )
-                }
-              }
-              action_text
-              action_url
-              benefits
-              footer_text
-            }
-            newsletter_form {
-              placeholder_email
-              error_email
-              button_submit
-              button_loading
-              status_idle
-              status_error
-              status_correct_errors
-              success_message
             }
           }
         }
