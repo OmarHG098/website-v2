@@ -55,7 +55,7 @@ const GeekForce = (props) => {
         padding_md="100px 80px 40px 80px"
         padding_lg="100px 0px 40px 0px"
         columns_tablet="18"
-        margin={"70px auto 24px auto"        }
+        margin={"70px auto 24px auto"}
         maxWidth="1280px"
         position="relative"
         gridTemplateColumns_tablet="repeat(21, 1fr)"
