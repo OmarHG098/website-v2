@@ -309,7 +309,7 @@ const Awards = ({ data, pageContext, yml }) => {
           seo_title={yml.seo_title}
           title={yml.header.title}
           containerStyle={{
-            zIndex: 1
+            zIndex: 1,
           }}
           textWrap="balance"
           paragraph={
