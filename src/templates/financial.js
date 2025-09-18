@@ -176,12 +176,7 @@ const Financial = (props) => {
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
-      <DoubleActionCTA
-        disableRestriction
-        location={session?.location}
-        ctaData={yml.cta}
-        disableBullets
-      />
+      <DoubleActionCTA disableRestriction disableBullets ctaData={yml.cta} />
     </>
   );
 };

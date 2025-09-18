@@ -1,4 +1,5 @@
 import React, { useState, useContext, useRef } from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Div } from "../Sections";
 import { H2, H3, Paragraph } from "../Heading";
@@ -17,12 +18,72 @@ const Form = styled.form`
   flex-direction: column;
 `;
 
-const DoubleActionCTA = ({
-  disableRestriction = false,
-  disableBullets = false,
-  location,
-  ctaData,
-}) => {
+const DoubleActionCTA = (props) => {
+  const data = useStaticQuery(graphql`
+    query DoubleActionCtaQuery {
+      allDoubleActionCtaYaml {
+        edges {
+          node {
+            fields {
+              lang
+            }
+            cta {
+              title
+              description
+              locations
+              primary {
+                title
+                description
+                image {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: CONSTRAINED
+                      width: 900
+                      quality: 100
+                      placeholder: NONE
+                    )
+                  }
+                }
+                action_text
+                action_url
+                benefits
+                footer_text
+              }
+              secondary {
+                title
+                description
+                image {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: CONSTRAINED
+                      width: 900
+                      quality: 100
+                      placeholder: NONE
+                    )
+                  }
+                }
+                action_text
+                action_url
+                benefits
+                footer_text
+              }
+              newsletter_form {
+                placeholder_email
+                error_email
+                button_submit
+                button_loading
+                status_idle
+                status_error
+                status_correct_errors
+                success_message
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
   const { session: appSession } = useContext(SessionContext);
   const captcha = useRef(null);
 
@@ -42,15 +103,76 @@ const DoubleActionCTA = ({
     }
     return true;
   };
-  if (!disableRestriction && location?.country !== "USA") {
-    return null;
+
+  const filterByLocation = (ctaData) => {
+    const locations = Array.isArray(ctaData?.locations)
+      ? ctaData.locations
+          .filter((s) => typeof s === "string" && s.trim() !== "")
+          .map((s) => s.trim())
+      : [];
+
+    const candidates = [
+      appSession?.location?.breathecode_location_slug,
+      appSession?.location?.meta_info?.slug,
+      appSession?.location?.active_campaign_location_slug,
+    ].filter((s) => typeof s === "string" && s.length > 0);
+
+    // If the location is not resolved yet, render only if CTA targets at least one location
+    if (candidates.length === 0) return locations.length > 0;
+
+    // Match any candidate or "all"
+    for (const id of candidates) {
+      if (locations.includes(id) || locations.includes("all")) return true;
+    }
+    return false;
+  };
+
+  // Use props.ctaData if provided, otherwise fall back to centralized data
+  let content;
+  if (props.ctaData) {
+    content = props.ctaData;
+  } else {
+    // Prefer explicit prop.lang, then session.language; fallback to us for data selection only
+    const dataLang = (props.lang || appSession?.language || "us").replace(
+      "en",
+      "us"
+    );
+    let ctaComponent = data.allDoubleActionCtaYaml.edges.find(
+      ({ node }) => node.fields.lang === dataLang
+    );
+    if (ctaComponent) ctaComponent = ctaComponent.node;
+    else return null;
+
+    content = ctaComponent.cta;
   }
 
-  const content = ctaData;
+  // Check location filtering unless explicitly disabled
+  if (!props.disableRestriction) {
+    if (!filterByLocation(content)) {
+      return null;
+    }
+  }
+
+  // Avoid flicker: if session exists but no candidates yet, do not render until location resolves
+  const candidates = [
+    appSession?.location?.breathecode_location_slug,
+    appSession?.location?.meta_info?.slug,
+    appSession?.location?.active_campaign_location_slug,
+  ].filter((s) => typeof s === "string" && s.length > 0);
+  if (appSession && candidates.length === 0 && !props.disableRestriction)
+    return null;
+
+  // Add defensive validation for content structure
+  if (!content || typeof content !== "object") return null;
+
   const existsPrimaryBenefits =
-    !disableBullets && content?.primary?.benefits.length > 0;
+    !props.disableBullets &&
+    Array.isArray(content?.primary?.benefits) &&
+    content.primary.benefits.length > 0;
   const existsSecondaryBenefits =
-    !disableBullets && content?.secondary?.benefits.length > 0;
+    !props.disableBullets &&
+    Array.isArray(content?.secondary?.benefits) &&
+    content.secondary.benefits.length > 0;
 
   return (
     <Div
@@ -71,7 +193,7 @@ const DoubleActionCTA = ({
           fontFamily="var(--font-sans)"
           letterSpacing="normal"
         >
-          {content.title}
+          {content?.title || ""}
         </H2>
         <Paragraph
           className="dual-cta-subtitle"
@@ -84,7 +206,7 @@ const DoubleActionCTA = ({
           fontFamily="var(--font-sans)"
           letterSpacing="normal"
         >
-          {content.description}
+          {content?.description || ""}
         </Paragraph>
       </Div>
 
@@ -136,7 +258,7 @@ const DoubleActionCTA = ({
           {/* Benefits List */}
           {existsPrimaryBenefits && (
             <Div margin="1rem 0" display="flex" flexDirection="column">
-              {content?.primary?.benefits.map((benefit, index) => (
+              {(content?.primary?.benefits || []).map((benefit, index) => (
                 <Div
                   key={index}
                   display="flex"
@@ -162,7 +284,7 @@ const DoubleActionCTA = ({
             </Div>
           )}
 
-          {content?.primary?.image?.childImageSharp && (
+          {content?.primary?.image?.childImageSharp?.gatsbyImageData && (
             <GatsbyImage
               style={{
                 height: "auto",
@@ -173,7 +295,7 @@ const DoubleActionCTA = ({
               }}
               imgStyle={{ objectFit: "cover" }}
               loading="eager"
-              alt="Book a Career Consultation"
+              alt={content?.primary?.title || "Career Consultation"}
               draggable={false}
               image={getImage(
                 content.primary.image.childImageSharp.gatsbyImageData
@@ -266,7 +388,7 @@ const DoubleActionCTA = ({
           {/* Benefits List */}
           {existsSecondaryBenefits && (
             <Div margin="1rem 0" display="flex" flexDirection="column">
-              {content?.secondary?.benefits.map((benefit, index) => (
+              {(content?.secondary?.benefits || []).map((benefit, index) => (
                 <Div
                   key={index}
                   display="flex"
@@ -292,7 +414,7 @@ const DoubleActionCTA = ({
             </Div>
           )}
 
-          {content?.secondary?.image?.childImageSharp && (
+          {content?.secondary?.image?.childImageSharp?.gatsbyImageData && (
             <GatsbyImage
               style={{
                 height: "auto",
@@ -303,7 +425,7 @@ const DoubleActionCTA = ({
               }}
               imgStyle={{ objectFit: "cover" }}
               loading="eager"
-              alt="Newsletter"
+              alt={content?.secondary?.title || "Newsletter"}
               draggable={false}
               image={getImage(
                 content.secondary.image.childImageSharp.gatsbyImageData
