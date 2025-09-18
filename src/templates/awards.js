@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Div } from "../components/Sections";
+import { Div, Header } from "../components/Sections";
 import { H1, H2, Paragraph, SubTitle } from "../components/Heading";
 import TestimonialCard from "../components/TestimonialCard";
 import { Colors, Img } from "../components/Styling";
@@ -257,9 +257,9 @@ const Awards = ({ data, pageContext, yml }) => {
   return (
     <>
       <Div
-        padding_xxs="0 20px"
-        padding_tablet="0 40px"
-        padding_md="0 80px"
+        padding_xxs="0"
+        padding_tablet="0"
+        padding_md="0"
         padding_lg="0"
         margin="120px auto 0 auto"
         maxWidth="1280px"
@@ -273,19 +273,6 @@ const Awards = ({ data, pageContext, yml }) => {
             position: "absolute",
             right: "4%",
             bottom: "0%",
-            zIndex: "0",
-          }}
-          display_xxs="none"
-          display_tablet="flex"
-        />
-        <Img
-          src="/images/slash-light.png"
-          width="44px"
-          height="121px"
-          style={{
-            position: "absolute",
-            right: "14%",
-            top: "10%",
             zIndex: "0",
           }}
           display_xxs="none"
@@ -308,50 +295,53 @@ const Awards = ({ data, pageContext, yml }) => {
           height="222px"
           style={{
             position: "absolute",
-            left: "4%",
+            left: "2%",
             top: "0%",
             zIndex: "0",
           }}
         />
 
-        <Div
-          flexDirection="column"
-          //justifyContent_tablet="start"
-          padding_tablet="60px 0"
-          zIndex="1"
-          margin="0 auto"
-          padding_xxs="60px 0px"
-        >
-          <H1
-            type="h1"
-            textAlign="center"
-            margin="0 0 11px 0"
-            color={Colors.darkGray2}
-          >
-            {yml.seo_title}
-          </H1>
-          <H2
-            type="h2"
-            fontFamily="Archivo-Black"
-            fontSize="34px"
-            fontSize_tablet="50px"
-            textAlign="center"
-            lineHeight_tablet="60px"
-            lineHeight="52px"
-            padding_xxs="0 20px"
-            color={Colors.black}
-          >
-            {"< " + yml.header.title + " >"}
-          </H2>
-          <SubTitle
-            textAlign="center"
-            padding_xxs="0 20px"
-            padding_tablet="0 10%"
-            margin="26px 0"
-          >
-            {yml.header.paragraph}
-          </SubTitle>
-        </Div>
+        <Header
+          margin="1rem 0"
+          padding_md="2rem 0 1rem 0"
+          padding_l="0"
+          fontFamily={"Archivo-Black"}
+          seo_title={yml.seo_title}
+          title={yml.header.title}
+          containerStyle={{
+            zIndex: 1
+          }}
+          textWrap="balance"
+          paragraph={
+            <>
+              {yml.header?.sub_title && (
+                <span
+                  style={{
+                    display: "block",
+                    fontFamily: "Lato, sans-serif",
+                    fontWeight: "300",
+                    color: "#606060",
+                    marginBottom: "16px",
+                    fontSize: "26px",
+                  }}
+                >
+                  {yml.header.sub_title}
+                </span>
+              )}
+              {yml.header?.paragraph && (
+                <span
+                  style={{
+                    fontFamily: "Roboto, sans-serif",
+                    color: "#424242",
+                    lineHeight: "1.5",
+                    fontSize: "22px",
+                  }}
+                  dangerouslySetInnerHTML={{ __html: yml.header.paragraph }}
+                />
+              )}
+            </>
+          }
+        />
       </Div>
       <Div
         padding_xxs="0 20px"

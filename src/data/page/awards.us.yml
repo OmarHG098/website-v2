@@ -7,10 +7,10 @@ meta_info:
   keywords: "4Geeks Academy Awards, 4Geeks Academy Recognition"
   redirects: []
 
-seo_title: "Awards and Recognition"
+seo_title: "Awards & Recognitions"
 header:
-  title: "AWARDS AND RECOGNITIONS"
-  paragraph: "It's fantastic to be recognized for years of effort in creating one of the best coding communities and learning ecosystems worldwide."
+  title: "Top Coding Bootcamp — Trusted by Students, Recognized by Experts"
+  paragraph: "4Geeks Academy is recognized by some of the world’s most trusted education and tech industry platforms. From Forbes to Course Report, we’re consistently ranked among the top coding schools worldwide and recognized for the quality and impact of our programs."
   image: "../../../static/images/awards/awards.png"
 
 awards_list:
@@ -19,6 +19,12 @@ awards_list:
   #   paragraph: "The United States of America ensures education quality thru federal deparments of education, being certified means we have to anually commit and comply with federal and national regulations to ensure academy success and renewed license."
   #   text_link: "See article"
   #   link: "/"
+
+  - image: "../../../static/images/badges/forbes-logo-award.png"
+    title: "Best Overall Data Science and Machine Learning Bootcamp 2025"
+    paragraph: "Our bootcamp was chosen as the top option for its hands- on beginner friendly format, verified outcomes and job guarantee."
+    link: "https://www.forbes.com/advisor/education/bootcamps/best-data-science-bootcamps/#4geeks_academy_data_science_and_machine_learning_course_section"
+    text_link: "See article"
 
   - image: "../../../static/images/badges/switchup-2025-top.webp"
     title: "Top 5 Coding Bootcamps on Switchup 2025"
@@ -44,10 +50,16 @@ awards_list:
     link: "https://www.forbes.com/advisor/education/bootcamps/best-full-stack-developer-bootcamp/#4geeks_academy_full_stack_developer_bootcamp_section"
     text_link: See article
 
-  - image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-    title: "Best Bootcamp for Course Report 2024"
+  - image: "../../../static/images/badges/course-report-best-coding-bootcamps-badge-2025.png"
+    title: "Best Bootcamp for Course Report 2025"
     paragraph: "We have been selected as one of the Top Coding Bootcamps globally for 3 years in a row"
     link: "https://www.coursereport.com/best-coding-bootcamps"
+    text_link: See article
+
+  - image: "../../../static/images/badges/south-florida-tech-hub.jpeg"
+    title: "Education Champion Award 2024"
+    paragraph: "Recognized by the South Florida Tech Hub for advancing tech education and career growth across the region."
+    link: "https://techhubsouthflorida.org/tech-hub-announces-the-2nd-annual-golden-palm-gala-award-2024-honorees/"
     text_link: See article
 
   - image: "../../../static/images/badges/ebootcamp-top.png"
@@ -71,7 +83,7 @@ awards_list:
   - image: "../../../static/images/badges/newsweek.png"
     title: "Top Coding School according to Newsweek"
     paragraph: "4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek."
-    link: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"
+    link: "https://starthubcenters.com/4geeks-academy-named-top-coding-school-2017/"
     text_link: See article
 
   - image: "../../../static/images/badges/exelencia-educativa-es.png"
@@ -127,9 +139,3 @@ awards_list:
     paragraph: "4.9 in all Course Report, Switchup and Google reviews."
     link: "https://www.switchup.org/bootcamps/4geeks-academy"
     text_link: See article
-
-  - image: "../../../static/images/badges/syllabus.png"
-    title: "Award Winning Syllabus"
-    paragraph: "Award winning syllabus."
-    link: ""
-    text_link: 

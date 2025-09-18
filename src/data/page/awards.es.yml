@@ -7,10 +7,10 @@ meta_info:
   keywords: "Premios 4Geeks Academy, Reconocimientos a 4Geeks Academy"
   redirects: []
 
-seo_title: "Premios y Reconocimientos entregados a 4Geeks Academy"
+seo_title: "Premios y Reconocimientos"
 header:
-  title: "PREMIOS Y RECONOCIMIENTOS"
-  paragraph: "Es fanstástico ser reconocido por tus logros educativos y tecnológicos después de tantos años de trabajo y esfuerzo para lograr ser uno de los mejores bootcamps del mundo."
+  title: "Mejor Bootcamp de Programación — Confiado por Estudiantes, Reconocido por Expertos"
+  paragraph: "4Geeks Academy es reconocida por algunas de las plataformas más confiables de la industria educativa y tecnológica del mundo. Desde Forbes hasta Course Report, estamos constantemente clasificados entre las mejores escuelas de programación a nivel mundial y reconocidos por la calidad e impacto de nuestros programas."
   image: "../../../static/images/awards/awards.png"
 badges:
   paragraph: "Este es el lugar para impulsar tu carrera aprendiendo a programar. Estamos muy orgullosos de nuestros programas y metodología para capacitar a los desarrolladores en solo unos meses y ayudarlos a impulsar sus carreras profesionales."
@@ -18,6 +18,12 @@ awards_list:
   # - image: "../../../static/images/badges/licensed.png"
   #   title: "Departamento de Education de EEUU"
   #   paragraph: "Los Estados Unidos de America se aseguran de la calidad de la educación a través de los departamentos de educación a nivel federal. Contar con la certificación significa que estamos comprometidos a cumplir con todas las regulaciones nacionales y estatales y a ser supervisados y auditados anualmente para asegurar el éxito de la academia."
+
+  - image: "../../../static/images/badges/forbes-logo-award.png"
+    title: "Mejor Bootcamp de Ciencia de Datos y Machine Learning 2025"
+    paragraph: "Nuestro bootcamp fue elegido como la mejor opción por su formato práctico y amigable para principiantes, resultados verificados y garantía de empleo."
+    link: "https://www.forbes.com/advisor/education/bootcamps/best-data-science-bootcamps/#4geeks_academy_data_science_and_machine_learning_course_section"
+    text_link: "Ver artículo"
 
   - image: "../../../static/images/badges/switchup-2025-top.webp"
     title: "Reconocido entre los Mejores Bootcamps de Programación por SwitchUp 2025"
@@ -47,6 +53,12 @@ awards_list:
     title: "Mejor bootcamp de programación para Course Report 2024"
     paragraph: "Tenemos 3 años consecutivos siendo reconocidos por Course Report como uno de los mejores bootcamp de programación del mundo."
     link: "https://www.coursereport.com/best-coding-bootcamps"
+    text_link: Ver artículo
+
+  - image: "../../../static/images/badges/south-florida-tech-hub.jpeg"
+    title: "Premio Champion Award 2024"
+    paragraph: "Reconocido por el South Florida Tech Hub por promover la educación tecnológica y el crecimiento profesional en toda la región."
+    link: "https://techhubsouthflorida.org/tech-hub-announces-the-2nd-annual-golden-palm-gala-award-2024-honorees/"
     text_link: Ver artículo
 
   - image: "../../../static/images/badges/ebootcamp-top.png"
@@ -126,9 +138,3 @@ awards_list:
     paragraph: "Contamos con una puntuación de 4.9 en todos los reviews de las plataformas de CourseReport y SwitchUp."
     link: "https://www.switchup.org/bootcamps/4geeks-academy"
     text_link: Ver articulo
-
-  - image: "../../../static/images/badges/syllabus.png"
-    title: "Award Winning Syllabus"
-    paragraph: "Obtuvimos un premio por la calidad de nuestro syllabus"
-    link: "/"
-    
