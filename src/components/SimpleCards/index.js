@@ -4,9 +4,21 @@ import { H2, H3, Paragraph } from "../Heading";
 import { Colors } from "../Styling";
 import Icon from "../Icon";
 
-const SimpleCards = ({ heading, cardStyle, sub_heading, containerStyle, cardContainerStyle, cards, background, defaultIcon }) => {
+const SimpleCards = ({
+  heading,
+  cardStyle,
+  sub_heading,
+  containerStyle,
+  cardContainerStyle,
+  cards,
+  background,
+  defaultIcon,
+}) => {
   return (
-    <Div background={Colors[background] || background} width={containerStyle?.width || ''}>
+    <Div
+      background={Colors[background] || background}
+      width={containerStyle?.width || ""}
+    >
       <Div
         display="flex"
         flexDirection="column"
@@ -86,24 +98,33 @@ const SimpleCards = ({ heading, cardStyle, sub_heading, containerStyle, cardCont
                   height="240px"
                   {...cardStyle}
                 >
-                    {defaultIcon && (
-                      <Icon icon={defaultIcon} width="30px" height="30px" />
-                    )}
-                    {item?.icon && (
-                      <Icon icon={item.icon} width={item.iconWidth || "30px"} height="auto" />
-                    )}
-                    {item?.content && (
-                      <H3 textAlign={cardStyle?.textAlign} dangerouslySetInnerHTML={{ __html: item.content }} />
-                    )}
-                    {item?.heading?.text && (
-                      <H3 textAlign={cardStyle?.textAlign}>{item?.heading?.text}</H3>
-                    )}
-                    {item?.text && (
-                      <Paragraph
-                        textAlign={cardStyle?.textAlign}
-                        dangerouslySetInnerHTML={{ __html: item.text }}
-                      />
-                    )}
+                  {defaultIcon && (
+                    <Icon icon={defaultIcon} width="30px" height="30px" />
+                  )}
+                  {item?.icon && (
+                    <Icon
+                      icon={item.icon}
+                      width={item.iconWidth || "30px"}
+                      height="auto"
+                    />
+                  )}
+                  {item?.content && (
+                    <H3
+                      textAlign={cardStyle?.textAlign}
+                      dangerouslySetInnerHTML={{ __html: item.content }}
+                    />
+                  )}
+                  {item?.heading?.text && (
+                    <H3 textAlign={cardStyle?.textAlign}>
+                      {item?.heading?.text}
+                    </H3>
+                  )}
+                  {item?.text && (
+                    <Paragraph
+                      textAlign={cardStyle?.textAlign}
+                      dangerouslySetInnerHTML={{ __html: item.text }}
+                    />
+                  )}
                 </Div>
               );
             })}

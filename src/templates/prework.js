@@ -79,7 +79,13 @@ const Prework = (props) => {
 
           {yml.cta.primary_button && (
             <Link to={yml.cta.primary_button.link}>
-              <Button color={Colors.white} background={Colors.black} height="42px" fontSize="20px" borderRadius="3px" >
+              <Button
+                color={Colors.white}
+                background={Colors.black}
+                height="42px"
+                fontSize="20px"
+                borderRadius="3px"
+              >
                 {yml.cta.primary_button.text}
               </Button>
             </Link>
@@ -101,17 +107,25 @@ const Prework = (props) => {
           flexDirection="column"
           alignItems="center"
         >
-          <Div width="100%" maxWidth="1280px" flexDirection="column" margin="0 auto">
+          <Div
+            width="100%"
+            maxWidth="1280px"
+            flexDirection="column"
+            margin="0 auto"
+          >
             <SimpleCards
               heading={{
                 text: yml.what_you_will_learn.title,
                 as: "h2",
-                style: { fontSize: "40px", width: "100%", margin: "0 auto 30px auto" },
-             
+                style: {
+                  fontSize: "40px",
+                  width: "100%",
+                  margin: "0 auto 30px auto",
+                },
               }}
               sub_heading={{
                 text: yml.what_you_will_learn.paragraph,
-                style: { textAlign: "center", fontSize: "25px" }
+                style: { textAlign: "center", fontSize: "25px" },
               }}
               cards={yml.what_you_will_learn.bullets.map((bullet, index) => ({
                 content: bullet.text,
@@ -125,14 +139,14 @@ const Prework = (props) => {
                 height: "auto",
                 flexDirection: "row",
                 gap: "10px",
-                textAlign: "left"
+                textAlign: "left",
               }}
               cardContainerStyle={{
                 flexWrap: "wrap",
                 justifyContent: "center",
               }}
               containerStyle={{
-                flexDirection_tablet: "column"
+                flexDirection_tablet: "column",
               }}
             />
           </Div>
@@ -149,15 +163,22 @@ const Prework = (props) => {
           <TwoColumn
             width="100%"
             maxWidth="1280px"
-            containerStyle={{ padding_tablet: "40px 0px", padding_md: "40px 0px" }}
+            containerStyle={{
+              padding_tablet: "40px 0px",
+              padding_md: "40px 0px",
+            }}
             left={{
               image: yml.how_it_works.image,
               alt: "How it works",
               gap: "1.5rem",
-              gap_tablet: "2rem"
+              gap_tablet: "2rem",
             }}
             right={{
-              heading: { text: yml.how_it_works.title, as: "h2", style: { fontSize: "40px" } },
+              heading: {
+                text: yml.how_it_works.title,
+                as: "h2",
+                style: { fontSize: "40px" },
+              },
               content: {
                 text: yml.how_it_works.content,
                 style: {
@@ -165,34 +186,47 @@ const Prework = (props) => {
                   margin_tablet: "0 0 0 30px",
                   display: "flex",
                   flexDirection: "column",
-                  gap: "20px"
-                }
+                  gap: "20px",
+                },
               },
             }}
           />
           {yml.how_it_works.schedule && (
-            <Div margin="3rem 0 0 0" width="100%" maxWidth="1280px" justifyContent="center">
+            <Div
+              margin="3rem 0 0 0"
+              width="100%"
+              maxWidth="1280px"
+              justifyContent="center"
+            >
               <SimpleCards
                 containerStyle={{
                   flexDirection_tablet: "column",
                   width: "100%",
                   padding_md: "40px 0",
-                  padding_tablet: "40px 0"
+                  padding_tablet: "40px 0",
                 }}
                 heading={{
                   text: yml.how_it_works.schedule.title,
                   as: "h2",
-                  style: { fontSize: "40px", width: "100%", margin: "0 auto 30px auto" },
+                  style: {
+                    fontSize: "40px",
+                    width: "100%",
+                    margin: "0 auto 30px auto",
+                  },
                 }}
                 cards={yml.how_it_works.schedule.classes.map((classItem) => ({
                   icon: classItem.icon,
                   content: classItem.program,
                   text: classItem.schedule,
-                  iconWidth: "80px"
+                  iconWidth: "80px",
                 }))}
                 background={Colors.white}
                 headingProps={{ color: Colors.white }}
-                cardContainerStyle={{ gap: "2rem", padding_tablet: "0 10px 20px 0", width: "100%" }}
+                cardContainerStyle={{
+                  gap: "2rem",
+                  padding_tablet: "0 10px 20px 0",
+                  width: "100%",
+                }}
                 cardStyle={{
                   alignItems: "center",
                   width: "100%",
@@ -231,7 +265,7 @@ const Prework = (props) => {
         <WeTrust
           boxTitleProps={{
             fontSize: "25px",
-            fontSize_tablet: "35px"
+            fontSize_tablet: "35px",
           }}
           we_trust={yml.why_prework_matters}
           background={Colors.lightGray}
@@ -273,7 +307,13 @@ const Prework = (props) => {
             >
               {yml.cta.primary_button && (
                 <Link to={yml.cta.primary_button.link}>
-                  <Button color={Colors.white} background={Colors.black} height="42px" fontSize="20px" borderRadius="3px" >
+                  <Button
+                    color={Colors.white}
+                    background={Colors.black}
+                    height="42px"
+                    fontSize="20px"
+                    borderRadius="3px"
+                  >
                     {yml.cta.primary_button.text}
                   </Button>
                 </Link>

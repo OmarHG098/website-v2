@@ -452,7 +452,7 @@ const TwoColumn = ({
   alignment,
   background,
   bg_full,
-  containerStyle
+  containerStyle,
 }) => {
   const [left_size, right_size] = proportions ? proportions : [];
   return (
