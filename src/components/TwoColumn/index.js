@@ -9,6 +9,16 @@ import { navigate } from "gatsby";
 import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
 import BackgroundWrapper from "../BackgroundWrapper";
 
+const getStyleContent = (style) => {
+  if (!style) return null;
+  try {
+    return typeof style === "string" ? JSON.parse(style) : style;
+  } catch (error) {
+    console.warn("Error parsing style:", error);
+    return null;
+  }
+};
+
 const Side = ({
   video,
   videoHeight,
@@ -49,7 +59,7 @@ const Side = ({
       />
     );
   if (image) {
-    const imgStyles = image.style ? JSON.parse(image.style) : null;
+    const imgStyles = getStyleContent(image?.style);
     const [img_h_lg, img_h_md, img_h_tablet, img_h_sm, img_h_xs] =
       imgStyles && imgStyles.height
         ? Array.isArray(imgStyles.height)
@@ -147,7 +157,7 @@ const Side = ({
             fontSize_tablet={h_lg}
             fontSize_lg={h_xl}
             margin="30px 0 20px 0"
-            style={heading.style ? JSON.parse(heading.style) : null}
+            style={getStyleContent(heading?.style)}
           >
             {heading.text.includes("\n")
               ? heading.text.split("\n").map((line, idx, arr) =>
@@ -176,8 +186,8 @@ const Side = ({
             fontSize_xs={sh_xs}
             fontSize_sm={sh_sm}
             fontSize_tablet={sh_md}
-            fonSize_md={sh_lg}
-            style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
+            fontSize_lg={sh_lg}
+            style={getStyleContent(sub_heading?.style)}
             dangerouslySetInnerHTML={{ __html: sub_heading.text }}
           />
         ) : (
@@ -191,8 +201,8 @@ const Side = ({
             fontSize_xs={sh_xs}
             fontSize_sm={sh_sm}
             fontSize_tablet={sh_md}
-            fonSize_md={sh_lg}
-            style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
+            fontSize_lg={sh_lg}
+            style={getStyleContent(sub_heading?.style)}
           >
             {sub_heading.text && sub_heading.text.includes("\n")
               ? sub_heading.text.split("\n").map((line, idx, arr) =>
@@ -225,9 +235,7 @@ const Side = ({
                 display="flex"
                 flexDirection="row"
                 gap="8px"
-                style={
-                  bullets.item_style ? JSON.parse(bullets.item_style) : null
-                }
+                style={getStyleContent(bullets?.item_style)}
               >
                 {/* Icon always on the left */}
                 {bullet.icon && (
@@ -281,7 +289,7 @@ const Side = ({
           fontSize_tablet={c_md}
           fontSize_md={c_lg}
           fontSize_lg={c_xl}
-          style={content.style ? JSON.parse(content.style) : null}
+          style={getStyleContent(content?.style)}
           onClick={(e) => {
             if (e.target.tagName === "A" && content.path)
               smartRedirecting(e, content.path);
@@ -304,7 +312,7 @@ const Side = ({
             fontSize_tablet={c_md}
             fontSize_md={c_lg}
             fontSize_lg={c_xl}
-            style={content.style ? JSON.parse(content.style) : null}
+            style={getStyleContent(content?.style)}
             onClick={(e) => {
               if (e.target.tagName === "A" && content.path)
                 smartRedirecting(e, content.path);
@@ -321,7 +329,7 @@ const Side = ({
           textAlign_tablet="left"
           margin="10px 0"
           fontSize="13px"
-          style={disclosure.style ? JSON.parse(disclosure.style) : null}
+          style={getStyleContent(disclosure?.style)}
           {...(isClient
             ? { dangerouslySetInnerHTML: { __html: disclosure.text } }
             : { children: disclosure.text })}
@@ -339,7 +347,7 @@ const Side = ({
             textAlign_tablet="left"
             margin="10px 0"
             fontSize="13px"
-            style={disclosure.style ? JSON.parse(disclosure.style) : null}
+            style={getStyleContent(disclosure?.style)}
             onClick={(e) => {
               if (e.target.tagName === "A" && disclosure.path)
                 smartRedirecting(e, disclosure.path);
@@ -444,6 +452,7 @@ const TwoColumn = ({
   alignment,
   background,
   bg_full,
+  containerStyle
 }) => {
   const [left_size, right_size] = proportions ? proportions : [];
   return (
@@ -465,6 +474,7 @@ const TwoColumn = ({
       width_tablet="100%"
       maxWidth_md="1280px"
       background={Colors[background] || background}
+      {...containerStyle}
     >
       <Div
         justifyContent={

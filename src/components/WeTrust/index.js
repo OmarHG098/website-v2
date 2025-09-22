@@ -4,7 +4,7 @@ import Icon from "../Icon";
 import { Div } from "../Sections";
 import { Colors } from "../Styling";
 
-const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
+const WeTrust = ({ we_trust, background, titleProps, boxTitleProps, paragraphProps }) => {
   const backgroundColor = background || Colors.lightBlue;
   const isBgFull = !!we_trust?.bg_full;
 
@@ -94,6 +94,7 @@ const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
                     alignItems: "baseline",
                     lineHeight: "1.2",
                   }}
+                  {...boxTitleProps}
                 >
                   <span>{box.title}</span>
                   {box?.label && (
