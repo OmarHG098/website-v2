@@ -620,12 +620,21 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
             </Div>
           </Grid>
           {menu[status.itemIndex].id === "programs" && (
-            <Div width="100%" justifyContent="center" margin="20px 0 0 0" padding="15.5px 0 0 0" borderTop={`1px solid ${Colors.lightGray}`}>
+            <Div
+              width="100%"
+              justifyContent="center"
+              margin="20px 0 0 0"
+              padding="15.5px 0 0 0"
+              borderTop={`1px solid ${Colors.lightGray}`}
+            >
               <Paragraph
                 margin="0"
                 textAlign="center"
                 width="auto"
-                dangerouslySetInnerHTML={{ __html: menu[status.itemIndex].sub_menu.program_comparison_cta.text }}
+                dangerouslySetInnerHTML={{
+                  __html:
+                    menu[status.itemIndex].sub_menu.program_comparison_cta.text,
+                }}
               />
             </Div>
           )}

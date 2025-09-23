@@ -866,7 +866,7 @@ export const Header = ({
             textWrap={textWrap}
             {...(htmlTitle
               ? { dangerouslySetInnerHTML: { __html: htmlTitle } }
-              : {children: multilineTitle})}
+              : { children: multilineTitle })}
           />
           {(paragraph || paragraph_html) && (
             <SubTitle
