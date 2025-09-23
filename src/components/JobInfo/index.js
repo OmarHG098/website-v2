@@ -37,7 +37,7 @@ const JobInfo = ({ lang }) => {
       columns="2"
       columns_tablet="3"
       gridGap="10px"
-      margin_tablet="0 0 70px 0"
+      margin_tablet="30px 0 70px 0"
     >
       {jobsInLang
         ? jobsInLang.map((item, index) => {
