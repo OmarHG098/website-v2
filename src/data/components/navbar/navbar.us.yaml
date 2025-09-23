@@ -1,11 +1,15 @@
 navbar:
   - name: "Programs"
+    id: "programs"
     link: "/us/coding-bootcamps/part-time-full-stack-developer"
     sub_menu:
       icon: ""
       title: "Programs"
       paragraph: "Make the career change you've always wanted. From zero to coding in weeks and specialized in the most wanted technologies int he market."
       width: "950px"
+      program_comparison_cta:
+        text: "Unsure which program fits you best? See our program comparison <a class='link' href='/us/program-comparison'>here.</a>"
+        link: "/us/program-comparison"
       links:
         - title: "Full Stack with AI"
           level: " "

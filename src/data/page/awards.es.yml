@@ -10,6 +10,7 @@ meta_info:
 seo_title: "Premios y Reconocimientos"
 header:
   title: "Mejor Bootcamp de Programación — Confiado por Estudiantes, Reconocido por Expertos"
+  htmlTitle: "Mejor Bootcamp de Programación<br/><span style='font-size: 25px;'>Confiado por Estudiantes, Reconocido por Expertos</span>"
   paragraph: "4Geeks Academy es reconocida por algunas de las plataformas más confiables de la industria educativa y tecnológica del mundo. Desde Forbes hasta Course Report, estamos constantemente clasificados entre las mejores escuelas de programación a nivel mundial y reconocidos por la calidad e impacto de nuestros programas."
   image: "../../../static/images/awards/awards.png"
 badges:

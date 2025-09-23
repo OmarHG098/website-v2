@@ -264,6 +264,7 @@ const Awards = ({ data, pageContext, yml }) => {
         margin="120px auto 0 auto"
         maxWidth="1280px"
         position="relative"
+        justifyContent="center"
       >
         <Img
           src="/images/Group-6594.png"
@@ -308,8 +309,10 @@ const Awards = ({ data, pageContext, yml }) => {
           fontFamily={"Archivo-Black"}
           seo_title={yml.seo_title}
           title={yml.header.title}
+          htmlTitle={yml.header.htmlTitle}
           containerStyle={{
             zIndex: 1,
+            width: "100%"
           }}
           textWrap="balance"
           paragraph={
@@ -414,6 +417,7 @@ export const query = graphql`
           seo_title
           header {
             title
+            htmlTitle
             paragraph
           }
           badges {

@@ -10,6 +10,7 @@ meta_info:
 seo_title: "Awards & Recognitions"
 header:
   title: "Top Coding Bootcamp — Trusted by Students, Recognized by Experts"
+  htmlTitle: "Top Coding Bootcamp<br/><span style='font-size: 25px;'>Trusted by Students, Recognized by Experts</span>"
   paragraph: "4Geeks Academy is recognized by some of the world’s most trusted education and tech industry platforms. From Forbes to Course Report, we’re consistently ranked among the top coding schools worldwide and recognized for the quality and impact of our programs."
   image: "../../../static/images/awards/awards.png"
 

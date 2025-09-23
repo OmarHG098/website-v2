@@ -745,6 +745,7 @@ export const Header = ({
   svg_image,
   seo_title,
   title,
+  htmlTitle,
   paragraph,
   paragraph_html,
   paragraphMargin,
@@ -863,9 +864,10 @@ export const Header = ({
             zindex={zIndex}
             color={colors.text}
             textWrap={textWrap}
-          >
-            {multilineTitle}
-          </H2>
+            {...(htmlTitle
+              ? { dangerouslySetInnerHTML: { __html: htmlTitle } }
+              : {children: multilineTitle})}
+          />
           {(paragraph || paragraph_html) && (
             <SubTitle
               width="auto"
