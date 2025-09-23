@@ -197,22 +197,22 @@ const Partners = (props) => {
         props={partnersData.partners}
       /> */}
 
-        <TwoColumn
-          left={{ image: partnersData.partnership_in_action.image }}
-          right={{
-            heading: {
-              text: partnersData.partnership_in_action.tagline
-            },
-            content: {
-              text: partnersData.partnership_in_action.sub_heading
-            },
-            button: partnersData.partnership_in_action.button,
-            padding_tablet: "20px",
-            gap_tablet: "40px",
-          }}
-          // proportions={ymlTwoColumn.proportions}
-          // session={session}
-        />
+      <TwoColumn
+        left={{ image: partnersData.partnership_in_action.image }}
+        right={{
+          heading: {
+            text: partnersData.partnership_in_action.tagline,
+          },
+          content: {
+            text: partnersData.partnership_in_action.sub_heading,
+          },
+          button: partnersData.partnership_in_action.button,
+          padding_tablet: "20px",
+          gap_tablet: "40px",
+        }}
+        // proportions={ymlTwoColumn.proportions}
+        // session={session}
+      />
 
       <Div flexDirection="column">
         <Div
@@ -391,7 +391,7 @@ export const query = graphql`
                   quality: 100
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-              } 
+              }
             }
             button {
               text
