@@ -11,6 +11,7 @@ import LeadForm from "../components/LeadForm/index.js";
 import PartnersCarousel from "../components/PartnersCarousel";
 import BenefitsAndCharts from "../components/BenefitsAndCharts";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import TwoColumn from "../components/TwoColumn/index.js";
 
 const Partners = (props) => {
   const { data, pageContext, yml } = props;
@@ -95,7 +96,6 @@ const Partners = (props) => {
           />
         </Div>
       </GridContainer>
-      <PartnersCarousel data={partnersData.partners_carousel} />
       <GridContainer
         background={Colors.verylightGray}
         containerColumns_tablet="1fr repeat(12,1fr) 1fr"
@@ -103,6 +103,7 @@ const Partners = (props) => {
         padding_tablet="70px 0"
         childMaxWidth="1280px"
         childMargin="auto"
+        gridGap="0"
         gridColumn_tablet="1 / span 14"
         childWidth="100%"
       >
@@ -111,57 +112,23 @@ const Partners = (props) => {
           fontSize="30px"
           width="auto"
           fontWeight="bold"
-          margin="10px 0 30px 10px"
+          margin="10px 0 20px 10px"
           textAlign="center"
         >
           {partnersData.work_together.title}
         </H2>
-        <Div
-          display="flex"
-          flexFlow="wrap!important"
-          gap="40px"
-          flexDirection="row"
-          justifyContent="center"
-        >
-          {partnersData.work_together.image_list.map((l, i) => (
-            <React.Fragment key={i}>
-              <GatsbyImage
-                style={{
-                  height: "90px",
-                  width: "90px",
-                  margin: "0 20px",
-                }}
-                imgStyle={{
-                  objectFit: "cover",
-                  width: "90px",
-                  borderRadius: "50px",
-                }}
-                alt={l.alt}
-                image={getImage(l.image.childImageSharp.gatsbyImageData)}
-              />
-            </React.Fragment>
-          ))}
-        </Div>
         <Paragraph
           fontSize="15px"
           color="#3A3A3A"
-          padding="35px 10px 0"
-          padding_tablet="35px 20% 0"
+          padding="0 10px 0"
+          padding_tablet="0 20% 0"
+          margin="0 0 4rem 0"
           letterSpacing="0.05em"
           textAlign="center"
         >
           {partnersData.work_together.description}
         </Paragraph>
 
-        <GridContainer
-          padding_tablet="0"
-          containerColumns_tablet="1fr repeat(12, 1fr) 1fr"
-          gridColumn_tablet="1 / span 14"
-          margin_tablet="3% 0 4% 0"
-          margin="10% 0"
-        >
-          <Div height="2px" background="#ACACAC" style={{ opacity: "0.5" }} />
-        </GridContainer>
         <Grid
           gridTemplateColumns_tablet="repeat(auto-fill, minmax(40%, 1fr))"
           columnCount_tablet="2"
@@ -216,10 +183,11 @@ const Partners = (props) => {
           ))}
         </Grid>
       </GridContainer>
+      <PartnersCarousel data={partnersData.partners_carousel} />
 
       <BenefitsAndCharts data={partnersData} goToForm={goToForm} />
 
-      <OurPartners
+      {/* <OurPartners
         marquee
         padding="30px 0 75px 0px"
         images={partnersData.partners.images}
@@ -227,7 +195,24 @@ const Partners = (props) => {
         paragraph={partnersData.partners.sub_heading}
         showFeatured
         props={partnersData.partners}
-      />
+      /> */}
+
+        <TwoColumn
+          left={{ image: partnersData.partnership_in_action.image }}
+          right={{
+            heading: {
+              text: partnersData.partnership_in_action.tagline
+            },
+            content: {
+              text: partnersData.partnership_in_action.sub_heading
+            },
+            button: partnersData.partnership_in_action.button,
+            padding_tablet: "20px",
+            gap_tablet: "40px",
+          }}
+          // proportions={ymlTwoColumn.proportions}
+          // session={session}
+        />
 
       <Div flexDirection="column">
         <Div
@@ -273,90 +258,6 @@ const Partners = (props) => {
         />
       </Div>
 
-      <Div background={Colors.lightYellow} margin="10px auto 60px auto">
-        <Div
-          display="flex"
-          margin="0 auto 0 auto"
-          flexDirection="column"
-          maxWidth="1280px"
-          gap="50px"
-          padding="52px 0"
-          flexDirection_tablet="row"
-        >
-          <Div
-            display="flex"
-            flexDirection="column"
-            width="100%"
-            width_tablet="50%"
-            alignItems="center"
-            padding="0 10px"
-            // padding_tablet="0 0 0 12em"
-            alignSelf="center"
-          >
-            <H2
-              type="h2"
-              textAlign="left"
-              letterSpacing="0.05em"
-              color={Colors.darkGray}
-              width="100%"
-              margin="0 0 15px 0"
-              textTransform="uppercase"
-              style={{ fontStyle: "normal" }}
-            >
-              {partnersData.partners_in_education.title}
-            </H2>
-
-            {partnersData.partners_in_education.description
-              .split("\n")
-              .map((m, i) => (
-                <Paragraph
-                  key={i}
-                  dangerouslySetInnerHTML={{ __html: m }}
-                  margin="22px 0 0 0"
-                  padding="0 10px"
-                  padding_tablet="0"
-                  color={Colors.darkGray}
-                  textAlign="left"
-                />
-              ))}
-          </Div>
-          <Grid
-            display="grid"
-            width="100%"
-            justifyItems="center"
-            width_tablet="50%"
-            gap="50px"
-            gridTemplateColumns_tablet="repeat(auto-fill, minmax(40%, 1fr))"
-            justifyContent="center"
-          >
-            {partnersData.partners_in_education.image_list.map((l, index) => (
-              <Div
-                key={index}
-                width="235px"
-                height="175px"
-                background={Colors.white}
-                padding="25px"
-              >
-                <GatsbyImage
-                  style={{
-                    height: "auto",
-                    minWidth: "150px",
-                    width: "150px",
-                    margin: "0 20px",
-                  }}
-                  imgStyle={{
-                    objectFit: "contain",
-                    WebkitUserDrag: "none",
-                  }}
-                  alt={l.alt}
-                  image={getImage(l.image.childImageSharp.gatsbyImageData)}
-                />
-              </Div>
-            ))}
-          </Grid>
-        </Div>
-      </Div>
-
       <OurPartners
         margin="0 auto 80px auto"
         borderBottom={`5px solid ${Colors.verylightGray}`}
@@ -364,6 +265,7 @@ const Partners = (props) => {
         maxWidth="1280px"
         images={partnersData.financials.images}
         title={partnersData.financials.tagline}
+        paragraph={partnersData.financials.sub_heading}
         props={partnersData.financials}
       />
 
@@ -374,6 +276,7 @@ const Partners = (props) => {
         margin_tablet="0 auto 81px auto"
         gridColumn_tablet="1 / span 14"
         maxWidth="1280px"
+        id="partner-form"
       >
         <Div
           ref={joinPartnersRef}
@@ -423,6 +326,7 @@ export const query = graphql`
           seo_title
           header {
             title
+            htmlTitle
             paragraph
             image_alt
             button
@@ -476,6 +380,26 @@ export const query = graphql`
     allPartnerYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
+          partnership_in_action {
+            tagline
+            sub_heading
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 1600
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+              } 
+            }
+            button {
+              text
+              path
+              background
+              color
+            }
+          }
           partners {
             images {
               name
