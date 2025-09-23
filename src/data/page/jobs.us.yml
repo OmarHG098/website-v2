@@ -35,3 +35,11 @@ work_together:
     #- title: "Career Development"
     #  icon: "notes-2"
     # description: "Grow your career with opportunities for professional development, leadership roles, and skill advancement."
+
+form:
+  title: "Apply for a Position"
+  paragraph: "Ready to join our team? Fill out the form below and we'll get back to you soon.\nWe're always looking for talented individuals who share our passion for education and technology."
+
+button_section:
+  button_text: "Apply Now"
+  button_link: "#form"

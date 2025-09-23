@@ -1,12 +1,15 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { GridContainer, Header, Div } from "../components/Sections";
+import { GridContainer, Header, Div, Grid } from "../components/Sections";
 import BaseRender from "./_baseLayout";
 import JobInfo from "../components/JobInfo";
 import WorkTogether from "../components/WorkTogether";
-import { isCustomBarActive } from "../actions";
+import { isCustomBarActive, applyJob } from "../actions";
 import { SessionContext } from "../session";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import LeadForm from "../components/LeadForm";
+import { H2, Paragraph } from "../components/Heading";
+import { Colors } from "../components/Styling";
 
 const Jobs = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -65,6 +68,39 @@ const Jobs = ({ data, pageContext, yml }) => {
         />
       )}
       <JobInfo lang={lang} />
+
+      <GridContainer
+        columns_tablet="12"
+        padding="0 17px 40px 17px"
+        padding_tablet="0"
+        margin_tablet="0 auto 81px auto"
+        gridColumn_tablet="1 / span 14"
+        maxWidth="1280px"
+      >
+        <Div gridColumn_tablet="1 / 7" flexDirection="column">
+          <H2 textAlign_md="left" margin="0 0 30px 0">
+            {yml.form.title}
+          </H2>
+          {yml.form.paragraph.split("\n").map((m, i) => (
+            <Paragraph
+              key={i}
+              margin="7px 0"
+              textAlign_md="left"
+              dangerouslySetInnerHTML={{ __html: m }}
+            />
+          ))}
+        </Div>
+        <Div flexDirection="column" gridColumn_tablet="7 / 13">
+          <LeadForm
+            formHandler={applyJob}
+            handleClose={() => {}}
+            enableAreaCodes={false}
+            lang={pageContext.lang}
+            inputBgColor={Colors.white}
+            fields={["full_name", "email", "phone", "client_comments"]}
+          />
+        </Div>
+      </GridContainer>
     </>
   );
 };
@@ -106,6 +142,14 @@ export const query = graphql`
               icon
               description
             }
+          }
+          form {
+            title
+            paragraph
+          }
+          button_section {
+            button_text
+            button_link
           }
         }
       }
