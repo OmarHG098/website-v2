@@ -5,7 +5,7 @@ navbar:
     sub_menu:
       icon: ""
       title: "Programs"
-      paragraph: "Make the career change you've always wanted. From zero to coding in weeks and specialized in the most wanted technologies int he market."
+      paragraph: "From beginner to job-ready in record time. Train in today’s most in-demand tech fields and launch a lasting career."
       width: "950px"
       program_comparison_cta:
         text: "Unsure which program fits you best? See our program comparison <a class='link' href='/us/program-comparison'>here.</a>"
@@ -43,7 +43,7 @@ navbar:
     sub_menu:
       icon: "awards"
       title: "Why 4Geeks Academy"
-      paragraph: "This is the place to boost your career by learning to code. Think differently, become more self-confident, bring your ideas to life and make more money."
+      paragraph: "Launch your tech career with the unlimited support of expert mentors, AI-powered tools, and personalized career guidance. With strong outcomes and global recognition, we’ve helped thousands thrive in tech."
       link: "/us/why-4geeks"
       width: "950px"
       links:
@@ -92,7 +92,7 @@ navbar:
     sub_menu:
       icon: "hat"
       title: "The Academy"
-      paragraph: "We are constantly strengthening our ecosystem to learn and evolve together, using technology, using code."
+      paragraph: "Join a global learning community where tech, community, and innovation come together to accelerate careers."
       width: "500px"
       links:
         - title: ""
@@ -115,7 +115,7 @@ navbar:
     sub_menu:
       icon: "campus"
       title: "Our Campus"
-      paragraph: "Learn in-person or choose a fully-remote program. Enroll and become part of a global coding community."
+      paragraph: "Study in-person at one of our global campuses, or join remotely and access the same world-class training and community."
       width: "550px"
       links:
         - title: "US & CANADA"

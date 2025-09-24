@@ -10,6 +10,7 @@ import { beHiringPartner } from "../actions";
 import LeadForm from "../components/LeadForm/index.js";
 import PartnersCarousel from "../components/PartnersCarousel";
 import BenefitsAndCharts from "../components/BenefitsAndCharts";
+import WorkTogether from "../components/WorkTogether";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import TwoColumn from "../components/TwoColumn/index.js";
 import ScholarshipProjects from "../components/ScholarshipProjects/index.js";
@@ -97,94 +98,15 @@ const Partners = (props) => {
           />
         </Div>
       </GridContainer>
-      <GridContainer
-        background={Colors.verylightGray}
-        containerColumns_tablet="1fr repeat(12,1fr) 1fr"
-        padding="70px 0"
-        padding_tablet="70px 0"
-        childMaxWidth="1280px"
-        childMargin="auto"
-        gridGap="0"
-        gridColumn_tablet="1 / span 14"
-        childWidth="100%"
-      >
-        <H2
-          type="h2"
-          fontSize="30px"
-          width="auto"
-          fontWeight="bold"
-          margin="10px 0 20px 10px"
-          textAlign="center"
-        >
-          {partnersData.work_together.title}
-        </H2>
-        <Paragraph
-          fontSize="15px"
-          color="#3A3A3A"
-          padding="0 10px 0"
-          padding_tablet="0 20% 0"
-          margin="0 0 4rem 0"
-          letterSpacing="0.05em"
-          textAlign="center"
-        >
-          {partnersData.work_together.description}
-        </Paragraph>
-
-        <Grid
-          gridTemplateColumns_tablet="repeat(auto-fill, minmax(40%, 1fr))"
-          columnCount_tablet="2"
-          columnCount="0"
-          justifyContent="center"
-          padding="0 6%"
-          padding_tablet="0 40px"
-          padding_md="0 80px"
-          padding_lg="0"
-          width="100%"
-        >
-          {partnersData.work_together.features.map((item, i) => (
-            <Div
-              key={`${i}-${item.title}`}
-              item={item.title}
-              display="flex"
-              flexDirection="row"
-              style={{ position: "relative" }}
-              gap="12px"
-              width="100%"
-              width_tablet="100%"
-            >
-              <Div height="100%">
-                <Icon icon={item.icon} width="70px" height="54px" />
-              </Div>
-              <Div height="100%" display="flex" flexDirection="column">
-                <H4
-                  type="h4"
-                  textAlign="left"
-                  fontSize="14px"
-                  align="left"
-                  align_sm="left"
-                  color={Colors.black}
-                  textTransform="uppercase"
-                  fontWeight="700"
-                >
-                  {item.title}
-                </H4>
-                <Paragraph
-                  textAlign="left"
-                  letterSpacing="0.05em"
-                  lineHeight="22px"
-                  fontWeight="normal"
-                  margin="20px 0"
-                  align_sm="left"
-                  fontFamily="Lato, sans-serif"
-                >
-                  {item.description}
-                </Paragraph>
-              </Div>
-            </Div>
-          ))}
-        </Grid>
-      </GridContainer>
       <PartnersCarousel data={partnersData.partners_carousel} />
+      <WorkTogether
+        title={partnersData.work_together.title}
+        description={partnersData.work_together.description}
+        imageList={partnersData.work_together.image_list}
+        features={partnersData.work_together.features}
+        showImages={true}
+        showDescription={true}
+      />
 
       <BenefitsAndCharts data={partnersData} goToForm={goToForm} />
 
