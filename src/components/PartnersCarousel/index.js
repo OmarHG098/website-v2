@@ -128,6 +128,7 @@ const PartnersCarousel = ({ data }) => {
         fontSize="30px"
         width="auto"
         fontWeight="bold"
+        textTransform="capitalize"
         margin="10px 0 30px 10px"
         textAlign="center"
       >

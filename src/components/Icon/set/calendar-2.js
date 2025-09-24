@@ -8,6 +8,13 @@ export default (props) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
+    <rect
+      x="4"
+      y="6"
+      width="22"
+      height="18"
+      fill={props?.color2 || "#FFCF18"}
+    />
     <path
       d="M4.5 2.5H0.5V23.5H23.5V2.5H19.5"
       stroke={props.color || "#A4A4A4"}

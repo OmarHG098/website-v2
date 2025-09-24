@@ -98,15 +98,15 @@ const Partners = (props) => {
           />
         </Div>
       </GridContainer>
-      <PartnersCarousel data={partnersData.partners_carousel} />
       <WorkTogether
         title={partnersData.work_together.title}
         description={partnersData.work_together.description}
         imageList={partnersData.work_together.image_list}
         features={partnersData.work_together.features}
-        showImages={true}
+        showImages={false}
         showDescription={true}
       />
+      <PartnersCarousel data={partnersData.partners_carousel} />
 
       <BenefitsAndCharts data={partnersData} goToForm={goToForm} />
 
@@ -141,7 +141,7 @@ const Partners = (props) => {
         >
           <H3
             type="h3"
-            fontSize="16px"
+            fontSize="20px"
             lineHeight="19px"
             letterSpacing="0.05em"
             width="100%"
