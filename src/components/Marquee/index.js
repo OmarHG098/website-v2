@@ -1,141 +1,72 @@
-import React, { useEffect } from "react";
-import { window } from "browser-monads";
+import React from "react";
 import styled, { keyframes } from "styled-components";
-import { Break, Devices } from "../Responsive";
-import { Colors } from "../Styling";
-import { Div } from "../Sections";
-import DragScrollProvider from "../DragScrollProvider";
-
-let datos = {};
-
-//Conversion px-vw
-const pxTOvw = (valuePx) => {
-  var result = (100 / window.innerWidth) * valuePx;
-  return result;
-};
-
-//Conversion px-vh
-const pxTOvh = (valuePx) => {
-  var result = (100 * valuePx) / window.innerHeight;
-  return result;
-};
 
 const Marquee = (props) => {
-  //Images to display
-  let images = props.config.images;
+  const { images, duration = 50, gap = "2rem" } = props.config;
 
-  //transition duration in seconds
-  let duration = props.config.duration.toString() + "s";
-
-  /*Keyframes
-    ** goes ok **
-    let scrolling = keyframes`
-      0% { transform: translateX(40%); }
-      100%{ transform: translateX( -100%); }
+  const track = keyframes`
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
     `;
-    */
-  let scrolling = keyframes`
-     0% { transform: translateX(5%); }
-    100%{ transform: translateX( -95%); }
-  `;
 
-  let M = styled(Div)`
-    overflow: hidden;
+  const Container = styled.div`
     width: 100vw;
     height: 12vh;
-    background: transparent;
+    overflow: hidden;
     position: relative;
-    margin: "0 0 0 0";
   `;
 
-  let MC = styled(Div)`
-    list-style: none;
-    height: 100%;
-    width: auto;
+  const UL = styled.ul`
     display: flex;
-    background-color: transparent;
-    padding: 0 0 0 0;
-    animation: ${scrolling} ${props.config.duration}s linear infinite;
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    height: 100%;
+    align-items: center;
+
+    animation: ${track} var(--duration, ${duration}s) linear infinite;
+
     &:hover {
       animation-play-state: paused;
     }
   `;
 
-  let UL = styled.ul`
-    list-style: none;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
+  const LI = styled.li`
+    height: 80%;
+    aspect-ratio: 4 / 3;
+    display: grid;
+    place-items: center;
+    margin: 0 var(--gap, ${gap});
 
-    @media ${Devices.xxs} {
-    }
-    @media ${Devices.xs} {
-    }
-    @media ${Devices.sm} {
-    }
-    @media ${Devices.tablet} {
-      margin: ${(props) => props.margin_tablet};
-      width: ${(props) => props.width_tablet};
-      height: ${(props) => props.height_tablet};
-    }
-    @media ${Devices.md} {
-      width: ${(props) => props.width_md};
-      height: ${(props) => props.height_md};
-      margin: ${(props) => props.margin_md};
-    }
-    @media ${Devices.lg} {
-    }
-    @media ${Devices.xl} {
-    }
-  `;
-
-  let LI = styled.li`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    width: datos.pxTOvw(150);
-    margin-right: 3.5rem;
-    max-height: 100%;
-    font-size: 0rem;
-    white-space: nowrap;
-
-    border: 0px solid green;
-    color: black;
-
-    @media ${Break.md} {
-      font-size: ${(props) => props.fontSize || "10px"};
-    }
-    @media ${Break.sm} {
-      font-size: 16px;
-    }
-    @media ${Break.xs} {
-      font-size: 16px;
+    img,
+    svg {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
     }
   `;
 
   return (
-    <>
-      {/* margin o margin_tablet */}
-      <M>
-        {/* <DragScrollProvider className="testimonial-slider"> */}
-
-        <MC>
-          <UL>
-            {
-              //add images to display to ul.
-              images.map((image, i) => {
-                return <LI key={i}>{image}</LI>;
-              })
-            }
-          </UL>
-        </MC>
-        {/* </DragScrollProvider> */}
-      </M>
-    </>
+    <Container
+      style={{
+        "--duration": `${duration}s`,
+        "--gap": gap,
+      }}
+    >
+      <UL>
+        {images.map((image, i) => (
+          <LI key={`a-${i}`}>{image}</LI>
+        ))}
+        {images.map((image, i) => (
+          <LI key={`b-${i}`}>{image}</LI>
+        ))}
+      </UL>
+    </Container>
   );
 };
 

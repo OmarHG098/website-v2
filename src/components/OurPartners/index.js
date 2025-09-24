@@ -126,7 +126,9 @@ const Images_With_Marquee = (props) => {
     );
   });
 
-  return <Marquee config={{ duration: 40, images: imgs }} />;
+  return (
+    <Marquee config={{ duration: props?.duration || 180, images: imgs }} />
+  );
 };
 
 //Funcion que muestra las imagenes en columna y centradas
@@ -197,24 +199,22 @@ const Images_Featured = (props) => {
         }
         padding_tablet={props.paddingFeatured || "0"}
       >
-        {featuredImagesData.map(
-          (m, i) => {
-            return (
-              <GatsbyImage
-                key={i}
-                style={{
-                  height: "55px",
-                  minWidth: "100px",
-                  width: "200px",
-                  margin: "23px 15px",
-                }}
-                imgStyle={{ objectFit: "contain" }}
-                alt={m.name}
-                image={getImage(m.image.childImageSharp.gatsbyImageData)}
-              />
-            );
-          }
-        )}
+        {featuredImagesData.map((m, i) => {
+          return (
+            <GatsbyImage
+              key={i}
+              style={{
+                height: "55px",
+                minWidth: "100px",
+                width: "200px",
+                margin: "23px 15px",
+              }}
+              imgStyle={{ objectFit: "contain" }}
+              alt={m.name}
+              image={getImage(m.image.childImageSharp.gatsbyImageData)}
+            />
+          );
+        })}
         {/* </Div> */}
       </GridContainer>
       {!props.withoutLine && (
@@ -398,6 +398,7 @@ const OurPartners = ({
   maxWidth,
   gray,
   variant,
+  duration,
   ...rest
 }) => {
   let FragmentStyle = {
@@ -444,7 +445,7 @@ const OurPartners = ({
       {slider ? (
         <Images_With_Slider images={images} />
       ) : marquee ? (
-        <Images_With_Marquee images={images} />
+        <Images_With_Marquee images={images} duration={duration} />
       ) : (
         <Images_Centered images={images} gray={gray} />
       )}

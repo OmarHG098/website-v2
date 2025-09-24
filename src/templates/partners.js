@@ -243,6 +243,7 @@ const Partners = (props) => {
         </Div>
         <OurPartners
           marquee
+          duration="45"
           padding="0 0 75px 0"
           margin="0"
           images={partnersData.coding.images}
@@ -256,8 +257,12 @@ const Partners = (props) => {
         borderBottom={`5px solid ${Colors.verylightGray}`}
         padding="0"
         maxWidth="1280px"
-        images={partnersData.financials.images.filter((i) => i.featured === false)}
-        featuredImages={partnersData.financials.images.filter((i) => i.featured)}
+        images={partnersData.financials.images.filter(
+          (i) => i.featured === false
+        )}
+        featuredImages={partnersData.financials.images.filter(
+          (i) => i.featured
+        )}
         withoutLine
         title={partnersData.financials.tagline}
         paragraph={partnersData.financials.sub_heading}

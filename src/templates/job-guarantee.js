@@ -458,7 +458,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           maxWidth="1280px"
           we_trust={yml.we_trust_section}
           titleProps={{
-            textAlign: "center"
+            textAlign: "center",
           }}
         />
       </div>
