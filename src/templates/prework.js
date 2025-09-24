@@ -125,8 +125,8 @@ const Prework = (props) => {
       {/* What You'll Learn Section */}
       {yml.what_you_will_learn && (
         <Div
-          background={Colors.lightGray}
-          padding="clamp(3rem, 10vw, 6rem) 20px"
+          background={Colors.verylightGray}
+          padding="clamp(3rem, 10vw, 4rem) 20px"
           flexDirection="column"
           alignItems="center"
         >
@@ -160,9 +160,11 @@ const Prework = (props) => {
                 width: "100%",
                 width_tablet: "20rem",
                 height: "auto",
+                border: `1px solid ${Colors.borderGray}`,
                 flexDirection: "row",
                 gap: "10px",
                 textAlign: "left",
+                alignItems: "center",
               }}
               cardContainerStyle={{
                 flexWrap: "wrap",
@@ -178,17 +180,13 @@ const Prework = (props) => {
 
       {/* How It Works Section */}
       {yml.how_it_works && (
-        <Div
-          padding="clamp(3rem, 10vw, 6rem) 20px"
-          flexDirection="column"
-          alignItems="center"
-        >
+        <Div padding="5rem 20px" flexDirection="column" alignItems="center">
           <TwoColumn
             width="100%"
             maxWidth="1280px"
             containerStyle={{
-              padding_tablet: "40px 0px",
-              padding_md: "40px 0px",
+              padding_tablet: "20px 0 0",
+              padding_md: "20px 0 0",
             }}
             left={{
               image: yml.how_it_works.image,
@@ -206,6 +204,8 @@ const Prework = (props) => {
                 text: yml.how_it_works.content,
                 style: {
                   margin: "0 auto",
+                  fontSize: "21px",
+                  letterSpacing: "0.05em",
                   margin_tablet: "0 0 0 30px",
                   display: "flex",
                   flexDirection: "column",
@@ -216,7 +216,7 @@ const Prework = (props) => {
           />
           {scheduleYml && filterByLocation(scheduleYml) && (
             <Div
-              margin="3rem 0 0 0"
+              margin="0rem 0 0 0"
               width="100%"
               maxWidth="1280px"
               justifyContent="center"
@@ -270,17 +270,20 @@ const Prework = (props) => {
             fontSize: "25px",
             fontSize_tablet: "35px",
           }}
-          we_trust={yml.why_prework_matters}
-          background={Colors.lightGray}
+          we_trust={{
+            ...yml.why_prework_matters,
+            bg_full: true,
+          }}
+          background={Colors.veryLightBlue3}
         />
       )}
 
       {/* CTA Section */}
       {yml.cta && (
         <Div
-          background={Colors.lightBlue2}
-          margin="5rem 0 0 0"
-          padding="clamp(3rem, 10vw, 6rem) 20px"
+          background={Colors.white}
+          margin="0"
+          padding="clamp(3rem,10vw,8rem) 20px"
           flexDirection="column"
           alignItems="center"
         >
