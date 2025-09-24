@@ -15,7 +15,7 @@ const Title_Paragraph = (props) => {
     <>
       <Grid
         maxWidth="1280px"
-        margin="0 auto 20px auto"
+        margin={props?.margin || "0 auto 20px auto"}
         background={props.background}
         gridTemplateColumns_tablet="1fr repeat(12, 1fr) 1fr"
       >
@@ -126,7 +126,7 @@ const Images_With_Marquee = (props) => {
     );
   });
 
-  return <Marquee config={{ duration: 180, images: imgs }} />;
+  return <Marquee config={{ duration: 40, images: imgs }} />;
 };
 
 //Funcion que muestra las imagenes en columna y centradas
@@ -179,6 +179,7 @@ const Images_Centered = (props) => {
 //Imagenes con propiedad featured==true
 const Images_Featured = (props) => {
   const imagesFiltered = props.images.filter((f) => f.featured === true);
+  const featuredImagesData = props.featuredImages || imagesFiltered;
   return (
     <>
       <GridContainer
@@ -192,11 +193,11 @@ const Images_Featured = (props) => {
         maxWidth="1280px"
         margin="0 auto"
         columns_tablet={
-          imagesFiltered.length <= 4 ? imagesFiltered.length : "3"
+          featuredImagesData.length <= 4 ? featuredImagesData.length : "3"
         }
         padding_tablet={props.paddingFeatured || "0"}
       >
-        {(props.featuredImages ? props.featuredImages : imagesFiltered).map(
+        {featuredImagesData.map(
           (m, i) => {
             return (
               <GatsbyImage
@@ -429,6 +430,7 @@ const OurPartners = ({
           title={title}
           paragraph={paragraph}
           background={background}
+          margin="2rem auto 3rem auto"
         />
       )}
       {showFeatured && (

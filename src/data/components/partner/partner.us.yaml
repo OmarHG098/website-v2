@@ -8,12 +8,7 @@ partnership_in_action:
     Our collaborations go beyond formal agreements; they transform careers and communities.
     At 4Geeks Academy we are committed to closing the gap between job opportunities and tech talent by providing high-quality, careeer oriented coding education backed by unlimited support.
     Through partnerships with leading educational institutions, nonprofits, and government initiatives, we’ve already supported hundreds of students worldwide — and we’re just getting started.
-  image: "../../../../static/images/landing/Group-6626-with-border.webp"
-  button:
-    text: "Join Our Partnership Network"
-    path: "/us/partners#partner-form"
-    background: "#0084FF"
-    color: "white"
+
 partners:
   tagline: "WHO’S HIRING OUR GRADUATES?"
   sub_heading: |
@@ -140,11 +135,11 @@ coding:
   images:
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
-      featured: true
+      featured: false
       #locations: ["miami-downtown"]
     - name: "Facebook Developer Circle"
       image: "../../../../static/images/coding/developer-circles-2.png"
-      featured: true
+      featured: false
       #locations: ["miami-downtown"]
     - name: "Bloktech"
       image: "../../../../static/images/coding/blockchain-center.png"
@@ -160,7 +155,7 @@ coding:
       #locations: ["miami-downtown"]
     - name: "Women Who Code"
       image: "../../../../static/images/coding/woman-who-code.jpeg"
-      featured: true
+      featured: false
       #locations: ["miami-downtown"]
     - name: "Worldcamp"
       image: "../../../../static/images/coding/worldcamp.png"
@@ -229,23 +224,26 @@ financials:
   images:
     - name: "ASOTTTECH"
       image: "../../../../static/images/partner/assotech.png"
-      featured: false
+      featured: true
       locations: ["madrid-spain", "barcelona-spain", "malaga-spain", "valencia-spain"]
     - name: "Quotanda"
       image: "../../../../static/images/quotanda-logo.png"
-      featured: false
+      featured: true
       #locations: ["miami-downtown"]
     - name: "Leif"
       image: "../../../../static/images/leif_main.png"
-      featured: false
+      featured: true
     - name: "Flevo"
       image: "../../../../static/images/flevo-new.png"
-      featured: false
+      featured: true
     - name: "Climb"
       image: "../../../../static/images/climb-logo.png"
       featured: false
     - name: "Ascent"
       image: "../../../../static/images/ascent_logo.png"
+      featured: false
+    - name: "Edly"
+      image: "../../../../static/images/edly.png"
       featured: false
 
 work_together:

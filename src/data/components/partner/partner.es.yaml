@@ -7,12 +7,7 @@ partnership_in_action:
     Nuestras colaboraciones van más allá de acuerdos formales; transforman carreras y comunidades.
     En 4Geeks Academy estamos comprometidos a cerrar la brecha entre las oportunidades laborales y el talento tecnológico proporcionando educación en programación de alta calidad orientada a la carrera profesional y respaldada por apoyo ilimitado.
     A través de alianzas con instituciones educativas líderes, organizaciones sin fines de lucro e iniciativas gubernamentales, ya hemos apoyado a cientos de estudiantes en todo el mundo — y esto es solo el comienzo.
-  image: "../../../../static/images/landing/Group-6626-with-border.webp"
-  button:
-    text: "Únete a Nuestra Red de Aliados"
-    path: "/us/partners#partner-form"
-    background: "#0084FF"
-    color: "white"
+
 partners:
   tagline: "¿Quién contrata a nuestros estudiantes?"
   sub_heading: |
@@ -195,21 +190,28 @@ financials:
   tagline: "Haciendo Posible la Educación"
   sub_heading: "Estas organizaciones proporcionan las soluciones financieras que abren las puertas a la educación tecnológica. Al reducir las barreras de entrada, ayudan a más estudiantes a acceder a una formación de alta calidad y lanzar carreras significativas."
   images:
+    - name: "ASOTTTECH"
+      image: "../../../../static/images/partner/assotech.png"
+      featured: true
+      locations: ["madrid-spain", "barcelona-spain", "malaga-spain", "valencia-spain"]
     - name: "Quotanda"
       image: "../../../../static/images/quotanda-logo.png"
-      featured: false
+      featured: true
       #locations: ["miami-downtown"]
     - name: "Leif"
       image: "../../../../static/images/leif_main.png"
-      featured: false
+      featured: true
     - name: "Flevo"
       image: "../../../../static/images/flevo-new.png"
-      featured: false
+      featured: true
     - name: "Climb"
       image: "../../../../static/images/climb-logo.png"
       featured: false
     - name: "Ascent"
       image: "../../../../static/images/ascent_logo.png"
+      featured: false
+    - name: "Edly"
+      image: "../../../../static/images/edly.png"
       featured: false
 
 work_together:

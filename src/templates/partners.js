@@ -12,6 +12,7 @@ import PartnersCarousel from "../components/PartnersCarousel";
 import BenefitsAndCharts from "../components/BenefitsAndCharts";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import TwoColumn from "../components/TwoColumn/index.js";
+import ScholarshipProjects from "../components/ScholarshipProjects/index.js";
 
 const Partners = (props) => {
   const { data, pageContext, yml } = props;
@@ -197,21 +198,13 @@ const Partners = (props) => {
         props={partnersData.partners}
       /> */}
 
-      <TwoColumn
-        left={{ image: partnersData.partnership_in_action.image }}
-        right={{
-          heading: {
-            text: partnersData.partnership_in_action.tagline,
-          },
-          content: {
-            text: partnersData.partnership_in_action.sub_heading,
-          },
-          button: partnersData.partnership_in_action.button,
-          padding_tablet: "20px",
-          gap_tablet: "40px",
+      <ScholarshipProjects
+        content={{
+          ...data.allScholarshipProjectsYaml.edges[0].node,
+          title: partnersData.partnership_in_action.tagline,
+          description: partnersData.partnership_in_action.sub_heading,
         }}
-        // proportions={ymlTwoColumn.proportions}
-        // session={session}
+        lang={pageContext.lang}
       />
 
       <Div flexDirection="column">
@@ -253,7 +246,7 @@ const Partners = (props) => {
           padding="0 0 75px 0"
           margin="0"
           images={partnersData.coding.images}
-          showFeatured
+          // showFeatured
           props={partnersData.coding}
         />
       </Div>
@@ -263,10 +256,13 @@ const Partners = (props) => {
         borderBottom={`5px solid ${Colors.verylightGray}`}
         padding="0"
         maxWidth="1280px"
-        images={partnersData.financials.images}
+        images={partnersData.financials.images.filter((i) => i.featured === false)}
+        featuredImages={partnersData.financials.images.filter((i) => i.featured)}
+        withoutLine
         title={partnersData.financials.tagline}
         paragraph={partnersData.financials.sub_heading}
         props={partnersData.financials}
+        showFeatured
       />
 
       <GridContainer
@@ -383,22 +379,6 @@ export const query = graphql`
           partnership_in_action {
             tagline
             sub_heading
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 1600
-                  quality: 100
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            button {
-              text
-              path
-              background
-              color
-            }
           }
           partners {
             images {
@@ -551,6 +531,65 @@ export const query = graphql`
               linkedin
               pdf
             }
+          }
+        }
+      }
+    }
+    allScholarshipProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          title
+          description
+          project_name
+          project_details
+          total_cost
+          geeks_benefited
+          institutions
+          press
+          see_project
+          projects {
+            name
+            image {
+              alt
+              src {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 700
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    breakpoints: [200, 340, 520, 890]
+                  )
+                }
+              }
+            }
+            description
+            details {
+              cost
+              geeks_benefited
+            }
+            institutions {
+              name
+              logo {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 700
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    breakpoints: [200, 340, 520, 890]
+                  )
+                }
+              }
+            }
+            press {
+              name
+              link
+            }
+            pdf
+          }
+          fields {
+            lang
           }
         }
       }
