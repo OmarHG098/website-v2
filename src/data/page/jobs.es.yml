@@ -39,7 +39,3 @@ work_together:
 form:
   title: "Aplicar para una Posición"
   paragraph: "¿Listo para unirte a nuestro equipo? Completa el formulario a continuación y te contactaremos pronto.\nSiempre estamos buscando personas talentosas que compartan nuestra pasión por la educación y la tecnología."
-
-button_section:
-  button_text: "Aplicar Ahora"
-  button_link: "#form"

@@ -12,7 +12,7 @@ meta_info:
 
 seo_title: Job Opportunities
 header:
-  title: "OPEN JOBS AT 4GEEKS ACADEMY"
+  title: "Careers at 4Geeks Academy"
   paragraph: "Join a global coding academy recognized for quality, impact, and innovation. At 4Geeks, you won't just work — you'll help thousands of students worldwide launch tech careers in coding, data, AI, and cybersecurity."
   image: "../../../static/images/landing/comunity-support.png"
   image_alt: "4Geeks Academy Jobs Header"
@@ -37,9 +37,6 @@ work_together:
     # description: "Grow your career with opportunities for professional development, leadership roles, and skill advancement."
 
 form:
-  title: "Apply for a Position"
-  paragraph: "Ready to join our team? Fill out the form below and we'll get back to you soon.\nWe're always looking for talented individuals who share our passion for education and technology."
+  title: "Didn’t find the right fit?"
+  paragraph: "We’re always looking for passionate educators, mentors, and innovators to join our network. Reach out and send your CV."
 
-button_section:
-  button_text: "Apply Now"
-  button_link: "#form"

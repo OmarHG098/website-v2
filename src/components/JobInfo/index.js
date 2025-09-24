@@ -34,17 +34,29 @@ const JobInfo = ({ lang }) => {
   return (
     // <Fragment github="/job">
     <GridContainer
-      columns="2"
+      columns="1"
+      columns_sm="2"
       columns_tablet="3"
-      gridGap="10px"
+      gridGap="20px"
+      margin="50px 0"
       margin_tablet="30px 0 70px 0"
+      overflowX="auto"
+      className="hideScrollbar"
+      style={{
+        scrollSnapType: "x mandatory",
+        WebkitOverflowScrolling: "touch",
+        scrollBehavior: "smooth",
+      }}
     >
       {jobsInLang
         ? jobsInLang.map((item, index) => {
             return (
               <Div
                 key={index}
-                style={{ position: "relative" }}
+                style={{
+                  position: "relative",
+                  scrollSnapAlign: "start",
+                }}
                 border="1px solid black"
                 borderLeft="6px solid black"
                 borderTop="1px solid black"
@@ -53,9 +65,11 @@ const JobInfo = ({ lang }) => {
                 display="flex"
                 flexDirection="column"
                 justifyContent="between"
-                height="207px"
+                minHeight="207px"
+                height="100%"
                 padding="24px"
                 background={Colors.white}
+                margin="0 0 10px 0"
               >
                 <H3 textAlign="left">
                   {item.node.banner_heading}
@@ -63,17 +77,29 @@ const JobInfo = ({ lang }) => {
                     _
                   </Span>
                 </H3>
-                <Div display="flex" flexWrap="wrap">
+                <Div
+                  display="flex"
+                  flexWrap="wrap"
+                  maxHeight="80px"
+                  overflowY="auto"
+                  margin="10px 0"
+                  className="hideScrollbar"
+                >
                   {item.node.cities.map((city, index) => {
                     return (
                       <Paragraph
                         key={index}
                         width="auto"
-                        padding="3px"
-                        margin="3px"
+                        padding="3px 8px"
+                        margin="2px"
                         background={Colors.verylightGray}
                         textAlign="left"
                         color={Colors.darkGray}
+                        fontSize="14px"
+                        style={{
+                          whiteSpace: "nowrap",
+                          borderRadius: "4px",
+                        }}
                       >
                         {city}
                       </Paragraph>

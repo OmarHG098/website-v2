@@ -21,11 +21,12 @@ const Jobs = ({ data, pageContext, yml }) => {
         margin="20px auto 0 auto"
         margin_tablet="auto"
         padding_tablet="0"
-        padding_md="10rem 0 4rem"
+        padding_md="6rem 0 4rem"
         containerColumns_tablet="1fr repeat(12,1fr) 1fr"
         columns_tablet="2"
         maxWidth="1280px"
         gridColumn_tablet="1 / span 14"
+        alignItems="center"
       >
         <Header
           hideArrowKey
@@ -34,18 +35,19 @@ const Jobs = ({ data, pageContext, yml }) => {
           title={yml.header.title}
           paragraph={yml.header.paragraph}
           fontSize_paragraph="21px"
-          padding_tablet="20px"
+          padding_md="0px 40px 40px 40px"
+          padding_lg="0px 40px 40px 40px"
           padding="0 10px"
-          margin="30px 0 0 0"
+          margin="0"
           paddingTitle="0"
           paddingParagraph="0"
           position="relative"
         />
 
-        <Div width="100%" height="100%">
+        <Div width="100%" height="80%" margin="20px 0" margin_tablet="0">
           <GatsbyImage
             style={{
-              height: "390px",
+              height: "300px",
               minWidth: "150px",
               width: "auto",
               margin: "0 20px",
@@ -73,6 +75,7 @@ const Jobs = ({ data, pageContext, yml }) => {
         columns_tablet="12"
         padding="0 17px 40px 17px"
         padding_tablet="0"
+        margin="50px auto"
         margin_tablet="0 auto 81px auto"
         gridColumn_tablet="1 / span 14"
         maxWidth="1280px"
@@ -146,10 +149,6 @@ export const query = graphql`
           form {
             title
             paragraph
-          }
-          button_section {
-            button_text
-            button_link
           }
         }
       }
