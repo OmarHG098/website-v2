@@ -686,7 +686,10 @@ export const landingSections = {
         m_sm="0"
         p_xs="0"
       >
-        <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
+        <TestimonialsCarrousel
+          lang={data.allTestimonialsYaml.edges}
+          categories={yml.categories}
+        />
       </Div>
     );
   },
@@ -859,16 +862,16 @@ export const landingSections = {
         config: {
           imagesToShow: customLogos,
           showFeaturedLogos: false,
-          featuredImagesToShow: []
-        }
+          featuredImagesToShow: [],
+        },
       },
       {
         condition: () => featuredLogos && featuredLogos.length > 0,
         config: {
           imagesToShow: hiring.partners.images,
           showFeaturedLogos: true,
-          featuredImagesToShow: featuredLogos
-        }
+          featuredImagesToShow: featuredLogos,
+        },
       },
       {
         condition: () => true, // Default fallback
@@ -877,19 +880,18 @@ export const landingSections = {
           showFeaturedLogos: true,
           featuredImagesToShow: hiring.partners.images.filter(
             (img) => img.featured === true
-          )
-        }
-      }
+          ),
+        },
+      },
     ];
 
     // Find the first configuration that matches the condition
-    const selectedConfig = logoConfigurations.find(config => config.condition())?.config;
-    
-    const {
-      imagesToShow,
-      showFeaturedLogos,
-      featuredImagesToShow
-    } = selectedConfig;
+    const selectedConfig = logoConfigurations.find((config) =>
+      config.condition()
+    )?.config;
+
+    const { imagesToShow, showFeaturedLogos, featuredImagesToShow } =
+      selectedConfig;
 
     return (
       <Div
