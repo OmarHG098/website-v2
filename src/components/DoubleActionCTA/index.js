@@ -84,6 +84,10 @@ const DoubleActionCTA = (props) => {
     }
   `);
 
+  //TODO: We are hidding this component for now, I want to approve the PR but this component cannot show as is
+  // Lets wait for the refactoring to remove this return null;
+  return null;
+
   const { session: appSession } = useContext(SessionContext);
   const captcha = useRef(null);
 
