@@ -44,18 +44,18 @@ how_it_works:
     <li>Asistir a las Clases de Prework en Vivo (salas de estudio) es obligatorio. Trabajarás en ejercicios, compartirás tu pantalla y obtendrás ayuda en tiempo real de un mentor.</li>
   image: "../../../static/images/Group-6617.webp"
   schedule:
-    title: "Horario de Clases de Prework (EST)"
+    locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
+    title: "Horario de Clases de Prework"
     classes:
       - program: "Desarrollo Full Stack"
-        schedule: "Lun, Mié, Vie – 6:00 a 9:00 PM"
+        schedule: "Lun, Mié, Vie – 6:00 a 9:00 PM (EST)"
         icon: fullstack_2
       - program: "Ciencia de Datos y Machine Learning"
-        schedule: "Lun, Mié – 6:00 a 9:00 PM"
+        schedule: "Lun, Mié – 6:00 a 9:00 PM (EST)"
         icon: machine_2
       - program: "Ciberseguridad"
-        schedule: "Mié – 6:00 a 9:00 PM"
+        schedule: "Mié – 6:00 a 9:00 PM (EST)"
         icon: cyber-security
-  note: "Unirse temprano es opcional pero muy recomendado — es la mejor manera de adelantarte, hacer preguntas en tiempo real y adaptarte al programa."
 
 ## WHY PREWORK MATTERS SECTION
 why_prework_matters:
@@ -64,20 +64,20 @@ why_prework_matters:
   boxes:
     - title: "Confianza"
       text: "Construye tu confianza antes de que comiencen las clases"
-      icon: "rocket"
-      color: "#0084FF"
+      icon: "star-2"
+      color: "#FFC718"
     - title: "Dominio"
       text: "Te ayuda a dominar los conceptos básicos para que puedas enfocarte en habilidades avanzadas durante el bootcamp"
-      icon: "users"
-      color: "#20630d"
+      icon: "graduation-2"
+      color: "#0084FF"
     - title: "Familiaridad"
       text: "Te familiariza con las herramientas, sistemas de soporte y estilo de aprendizaje de 4Geeks"
-      icon: "chart"
-      color: "#FFC718"
+      icon: "book-2"
+      color: "#10b981"
     - title: "Transición"
       text: "Hace tu transición a la tecnología más suave y menos abrumadora"
-      icon: "trophy"
-      color: "#0084FF"
+      icon: "rocket-2"
+      color: "#FFECBF"
 
 ## CTA SECTION
 cta:

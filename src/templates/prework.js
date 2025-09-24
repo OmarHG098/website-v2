@@ -18,6 +18,29 @@ const Prework = (props) => {
     yml.header?.image && yml.header?.image?.childImageSharp?.gatsbyImageData
   );
 
+  const scheduleYml = yml.how_it_works.schedule;
+
+  const filterByLocation = (dataYml) => {
+    const locations = Array.isArray(dataYml?.locations)
+      ? dataYml.locations
+          .filter((s) => typeof s === "string" && s.trim() !== "")
+          .map((s) => s.trim())
+      : [];
+
+    const candidates = [
+      session?.location?.breathecode_location_slug,
+      session?.location?.meta_info?.slug,
+      session?.location?.active_campaign_location_slug,
+    ].filter((s) => typeof s === "string" && s.length > 0);
+
+    if (candidates.length === 0) return locations.length > 0;
+
+    for (const id of candidates) {
+      if (locations.includes(id) || locations.includes("all")) return true;
+    }
+    return false;
+  };
+
   return (
     <>
       {/* Hero Section */}
@@ -191,7 +214,7 @@ const Prework = (props) => {
               },
             }}
           />
-          {yml.how_it_works.schedule && (
+          {scheduleYml && filterByLocation(scheduleYml) && (
             <Div
               margin="3rem 0 0 0"
               width="100%"
@@ -206,7 +229,7 @@ const Prework = (props) => {
                   padding_tablet: "40px 0",
                 }}
                 heading={{
-                  text: yml.how_it_works.schedule.title,
+                  text: scheduleYml.title,
                   as: "h2",
                   style: {
                     fontSize: "40px",
@@ -214,7 +237,7 @@ const Prework = (props) => {
                     margin: "0 auto 30px auto",
                   },
                 }}
-                cards={yml.how_it_works.schedule.classes.map((classItem) => ({
+                cards={scheduleYml.classes.map((classItem) => ({
                   icon: classItem.icon,
                   content: classItem.program,
                   text: classItem.schedule,
@@ -237,26 +260,6 @@ const Prework = (props) => {
               />
             </Div>
           )}
-          <Div
-            background={Colors.lightBlue2}
-            padding="1.5rem"
-            borderRadius="3px"
-            display="flex"
-            alignItems="center"
-            gap="20px"
-            margin="1rem 0 0 0"
-            width="100%"
-            maxWidth="1280px"
-          >
-            <Icon icon="mail" width="24px" color={Colors.darkGray} />
-            <Paragraph
-              fontSize="16px"
-              color={Colors.darkGray}
-              textAlign="left"
-              margin="0"
-              dangerouslySetInnerHTML={{ __html: yml.how_it_works.note }}
-            />
-          </Div>
         </Div>
       )}
 
@@ -275,7 +278,7 @@ const Prework = (props) => {
       {/* CTA Section */}
       {yml.cta && (
         <Div
-          background={Colors.yellow}
+          background={Colors.lightBlue2}
           margin="5rem 0 0 0"
           padding="clamp(3rem, 10vw, 6rem) 20px"
           flexDirection="column"
@@ -396,13 +399,13 @@ export const query = graphql`
             }
             schedule {
               title
+              locations
               classes {
                 program
                 schedule
                 icon
               }
             }
-            note
           }
           why_prework_matters {
             title

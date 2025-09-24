@@ -44,18 +44,18 @@ how_it_works:
     <li>Attending Live Prework Classes (study halls) is mandatory. You'll work through exercises, share your screen, and get real-time help from a mentor.</li>
   image: "../../../static/images/Group-6617.webp"
   schedule:
-    title: "Prework Class Schedule (EST)"
+    locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
+    title: "Prework Class Schedule"
     classes:
       - program: "Full Stack Development"
-        schedule: "Mon, Wed, Fri – 6:00 to 9:00 PM"
+        schedule: "Mon, Wed, Fri – 6:00 to 9:00 PM (EST)"
         icon: fullstack_2
       - program: "Data Science & Machine Learning"
-        schedule: "Mon, Wed – 6:00 to 9:00 PM"
+        schedule: "Mon, Wed – 6:00 to 9:00 PM (EST)"
         icon: machine_2
       - program: "Cybersecurity"
-        schedule: "Wed – 6:00 to 9:00 PM"
+        schedule: "Wed – 6:00 to 9:00 PM (EST)"
         icon: cyber-security
-  note: "Joining early is optional but strongly encouraged — it's the best way to get ahead, ask questions in real time, and ease into the program."
 
 ## WHY PREWORK MATTERS SECTION
 why_prework_matters:
@@ -64,20 +64,20 @@ why_prework_matters:
   boxes:
     - title: "Confidence"
       text: "Builds your confidence before class begins"
-      icon: "rocket"
-      color: "#0084FF"
+      icon: "star-2"
+      color: "#FFC718"
     - title: "Mastery"
       text: "Helps you master the basics so you can focus on advanced skills during the bootcamp"
-      icon: "users"
-      color: "#20630d"
+      icon: "graduation-2"
+      color: "#0084FF"
     - title: "Familiarity"
       text: "Gets you familiar with the tools, support systems, and learning style at 4Geeks"
-      icon: "chart"
-      color: "#FFC718"
+      icon: "book-2"
+      color: "#10b981"
     - title: "Transition"
       text: "Makes your transition into tech smoother and less overwhelming"
-      icon: "trophy"
-      color: "#0084FF"
+      icon: "rocket-2"
+      color: "#FFECBF"
 
 ## CTA SECTION
 cta:
