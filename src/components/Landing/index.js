@@ -944,6 +944,8 @@ export const landingSections = {
     const { imagesToShow, showFeaturedLogos, featuredImagesToShow } =
       selectedConfig;
 
+    let landingHiriging = dataYml[0].node?.who_is_hiring;
+
     return (
       <Div
         id="who_is_hiring"
