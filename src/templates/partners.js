@@ -129,16 +129,15 @@ const Partners = (props) => {
         lang={pageContext.lang}
       />
 
-      <Div flexDirection="column">
+      <Div flexDirection="column" background={Colors.verylightGray}>
         <Div
           display="flex"
           flexDirection="column"
           alignItems="center"
           padding_tablet="4em"
           padding="4em 2em"
-          margin_tablet="0 0 40px 0"
-          margin="0 0 40px 0"
-          background={Colors.verylightGray}
+          margin_tablet="0 0 0 0"
+          margin="0 0 0 0"
         >
           <H3
             type="h3"
@@ -166,7 +165,7 @@ const Partners = (props) => {
         <OurPartners
           marquee
           duration="45"
-          padding="0 0 75px 0"
+          padding="0 0 4em 0"
           margin="0"
           images={partnersData.coding.images}
           // showFeatured
@@ -175,7 +174,7 @@ const Partners = (props) => {
       </Div>
 
       <OurPartners
-        margin="0 auto 80px auto"
+        margin="4.5rem auto 80px auto"
         borderBottom={`5px solid ${Colors.verylightGray}`}
         padding="0"
         maxWidth="1280px"
