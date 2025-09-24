@@ -719,23 +719,6 @@ export const Anchor = styled(StyledLink)`
   @media ${Devices.xxl} {
   }
 `;
-//   @media ${Break.lg}{
-//     text-align: ${props => props.align_lg};
-//     font-size: ${props => props.fs_lg};
-//   }
-//   @media ${Break.md}{
-//     text-align: ${props => props.align};
-//     font-size: ${props => props.fs_md};
-//   }
-//   @media ${Break.sm}{
-//     display: ${props => props.display_sm};
-//     font-size: ${props => props.fs_sm};
-//     text-align: ${props => props.align_sm || 'center'};
-//   }
-//   @media ${Break.xs}{
-//     font-size: ${props => props.fs_xs};
-//     text-align: ${props => props.align_xs};
-//   }
 
 export const Spinner = styled.div`
   border: ${(props) => `16px solid ${props.color || Colors.blue}`};
@@ -778,6 +761,18 @@ export const PhoneTextDesktop = styled.p`
   }
 `;
 
+export const VerticalVideoHolder = styled.div`
+  border: 3px solid black;
+  box-shadow: 13px 13px 0px 1px rgba(0, 0, 0, 1);
+  z-index: 1;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+  background: white;
+  position: relative;
+`;
+
 export const OfferTag = styled.div`
   position: absolute;
   top: -12px;
@@ -814,5 +809,75 @@ export const OfferTag = styled.div`
     padding: 3px 10px;
     top: -10px;
     right: 45px;
+  }
+`;
+
+// Chart Components
+export const ChartWrapper = styled.div`
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+
+  @media ${Break.sm} {
+    padding: 0;
+  }
+`;
+
+export const ChartContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+`;
+
+export const FloatingLabels = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+`;
+
+export const FloatingLabel = styled.div`
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid ${Colors.lightGray};
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: ${Colors.grayBrown};
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+
+  /* Position based on angle calculation */
+  ${(props) => {
+    const x = 50 + 30 * Math.cos(props.angle);
+    const y = 50 + 30 * Math.sin(props.angle);
+    return css`
+      left: ${x}%;
+      top: ${y}%;
+    `;
+  }}
+
+  @media ${Break.sm} {
+    padding: 3px 6px;
+    font-size: 10px;
+
+    /* Adjust position for mobile */
+    ${(props) => {
+      const x = 50 + 35 * Math.cos(props.angle);
+      const y = 50 + 35 * Math.sin(props.angle);
+      return css`
+        left: ${x}%;
+        top: ${y}%;
+      `;
+    }}
   }
 `;
