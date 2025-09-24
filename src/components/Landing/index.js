@@ -686,7 +686,10 @@ export const landingSections = {
         m_sm="0"
         p_xs="0"
       >
-        <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
+        <TestimonialsCarrousel
+          lang={data.allTestimonialsYaml.edges}
+          categories={yml.categories}
+        />
       </Div>
     );
   },
