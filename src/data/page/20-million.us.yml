@@ -7,13 +7,13 @@ meta_info:
   keywords: Programs at 4Geeks Academy
   redirects: ["/20million", "/20-millions", "/20millions", "/scholarships"]
 
-seo_title: Coding Bootcamp Scholarships
+seo_title: Fund your education
 header:
   title: Launch Your Tech Career With a Scholarship
   paragraph: At 4Geeks Academy, we understand that starting a tech career can feel financially out of reach. That’s why we’ve partnered with leading organizations worldwide to provide over $20 million in scholarships, helping hundreds of students launch rewarding careers in coding, data science, and cybersecurity. Contact us to learn about funding opportunities that work for you.
 
 button:
-  btn_label: I want to Contribute
+  apply_button_text: "LEARN MORE"
   apply_button_link: "/us/apply"
 
 two_column_right:
@@ -21,8 +21,8 @@ two_column_right:
     - 6
     - 6
   image:
-    style: '{ "backgroundSize": "contain" }'
-    src: "/images/landing/scholarship-impact.jpg"
+    style: '{ "backgroundSize": "contain", "backgroundPosition": "center center" }'
+    src: "/images/luisa-barrios.png"
   heading:
     text: Why Scholarships Matter
     font_size:
@@ -32,7 +32,7 @@ two_column_right:
       - 40px
       - 40px
   sub_heading:
-    text: Breaking down barriers to tech education and creating opportunities for everyone
+    text: The tech industry needs skilled professionals, while thousands of people dream of launching a tech career but believe it’s out of reach.
     font_size:
       - 18px
       - 18px
@@ -41,22 +41,28 @@ two_column_right:
       - 16px
   content:
     text: |
-      Scholarships aren't just about financial support—they're about leveling the playing field and ensuring that talent, not economic background, determines who can access quality tech education. Our scholarship programs have helped students from diverse backgrounds launch successful careers in technology, proving that with the right support, anyone can thrive in the digital economy.
+      At 4Geeks Academy, we offer both: hands-on bootcamps designed to prepare you for the tech workforce and scholarships and financing options that remove financial barriers. Together, they open the door to a successful tech career no matter where you are starting from—so you can focus on learning, growing, and changing your life.
+      <br><br>
+      <strong style='text-decoration: none; color: #000000; font-weight: 600;'> Take the first step toward funding your career.</strong>
     font_size:
       - 16px
   bullets:
     items:
-      - text: "• Remove financial barriers to quality tech education"
-      - text: "• Create diverse and inclusive tech workforce"
-      - text: "• Support underrepresented communities in tech"
-      - text: "• Enable career transitions for working professionals"
-  
+      - text: "<strong style='text-decoration: none; color: #000000; font-weight: 600;'>• Bootcamps:</strong> Make the path into tech fast, practical, and focused on job-ready skills."
+      - text: "<strong style='text-decoration: none; color: #000000; font-weight: 600;'>• Scholarships:</strong> Remove financial barriers and open the door to high-quality tech education for anyone motivated to learn."
+  button:
+    text: Get in touch
+    color: white
+    background: blue
+    hover_color: white
+    path: "#leadform_bottom"
+
 two_column_left:
   proportions:
     - 6
     - 6
   image:
-    style: '{ "backgroundSize": "contain" }'
+    style: '{ "backgroundSize": "contain", "backgroundPosition": "center center" }'
     src: "/images/landing/20-millions-image.webp"
   heading:
     text: Hundreds of Lives Changed Through Scholarships. You Could Be Next. 
@@ -74,22 +80,25 @@ two_column_left:
       - 18px
       - 18px
       - 16px
-  content: 
-    text: |
-        - Miami Tech Coalition (MTC): 45 scholarships for South Florida residents, helping underemployed talent launch careers in coding and AI — backed by a $10M U.S. Good Jobs Challenge grant.
-        - Texas Workforce Development: 20 scholarships empowering Texans to upskill and step into high-demand tech jobs.
-        - Clark University TechBoost: Nearly 200 scholarships awarded to unemployed or underemployed U.S. residents, building bridges into the tech workforce.
-        - United Way Miami: A multi-million-dollar initiative funded by MacKenzie Scott, training local residents for sustainable tech careers.
-        - Uruguay (UTEC + IDB): The first AI and Full-Stack bootcamps in Latin America, with scholarships reaching underserved communities.
-        - Costa Rica (FORTE + CRUSA): 35+ scholarships for women in high-unemployment regions, training them in digital technologies for better career opportunities.
+  bullets:
+    items:
+      - text: "• Miami Tech Coalition (MTC): 45 scholarships for South Florida residents, helping underemployed talent launch careers in coding and AI — backed by a $10M U.S. Good Jobs Challenge grant."
+      - text: "• Texas Workforce Development: 20 scholarships empowering Texans to upskill and step into high-demand tech jobs."
+      - text: "• Clark University TechBoost: Nearly 200 scholarships awarded to unemployed or underemployed U.S. residents, building bridges into the tech workforce."
+      - text: "• United Way Miami: A multi-million-dollar initiative funded by MacKenzie Scott, training local residents for sustainable tech careers."
+      - text: "• Uruguay (UTEC + IDB): The first AI and Full-Stack bootcamps in Latin America, with scholarships reaching underserved communities."
+      - text: "• Costa Rica (FORTE + CRUSA): 35+ scholarships for women in high-unemployment regions, training them in digital technologies for better career opportunities."
+  content:
+    text: "<strong style='text-decoration: none; color: #000000; font-weight: 600;'>Learn about current scholarship opportunities.</strong>"
     font_size:
       - 16px
   button:
-    text: JOIN THE NETWORK
+    text: Contact us
     color: white
     background: blue
     hover_color: white
     path: "#leadform_bottom"
+    
 form:
   title: "Take the First Step Toward Funding Your Tech Career"
   paragraph: |

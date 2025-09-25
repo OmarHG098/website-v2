@@ -1,10 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
-import { isCustomBarActive } from "../actions";
 import BaseRender from "./_baseLayout";
 import { Div, HR, GridContainer } from "../components/Sections";
-import { H2, Paragraph, SubTitle } from "../components/Heading";
+import { H1, H2, Paragraph, SubTitle } from "../components/Heading";
 import { Button, Colors } from "../components/Styling";
 import { beHiringPartner } from "../actions";
 import { SessionContext } from "../session";
@@ -12,51 +11,20 @@ import LeadForm from "../components/LeadForm";
 import { Circle } from "../components/BackgroundDrawing";
 import Testimonials from "../components/Testimonials";
 import OurPartners from "../components/OurPartners";
-import ScholarshipProjects from "../components/ScholarshipProjects";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
-import BenefitsAndCharts from "../components/BenefitsAndCharts";
 import TwoColumn from "../components/TwoColumn/index.js";
 
 const TwentyMillion = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const partnersData = data.allPartnerYaml.edges[0].node;
 
-  const [applyButtonText, setApplyButtonText] = useState("");
   const joinPartnersRef = useRef(null);
-  const goToForm = (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: joinPartnersRef.current?.offsetTop - 200,
-      behavior: "smooth",
-    });
-  };
-
-  let city = session && session.location ? session.location.city : [];
-  let currentLocation = data.allLocationYaml.edges.find(
-    (loc) => loc.node?.city === city
-  );
-
-  useEffect(() => {
-    if (currentLocation !== undefined) {
-      setApplyButtonText(currentLocation.node.button.apply_button_text);
-    }
-  }, [currentLocation]);
-
-  const ymlTwoColumn = yml?.two_column_left;
 
   return (
     <>
       <Div
-        margin={
-          isCustomBarActive(session)
-            ? "138px auto 30px auto"
-            : "72px auto 30px auto"
-        }
-        margin_md={
-          isCustomBarActive(session)
-            ? "120px auto 30px auto"
-            : "72px auto 30px auto"
-        }
+        margin="0px auto 30px auto"
+        margin_md="0px auto 30px auto"
         padding="90px 20px 42px 20px"
         padding_tablet="72px 130px 72px 130px"
         position="relative"
@@ -243,6 +211,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           display_tablet="none"
         />
         <Div display="block">
+          <H1 color={Colors.gray}>{yml.seo_title}</H1>
           <H2
             type="h2"
             color={Colors.black}
@@ -252,13 +221,14 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
             fontSize_tablet="50px"
             lineHeight="38px"
             lineHeight_tablet="60px"
-            margin_tablet="40px 0 40px 0"
+            margin_tablet="20px 0 40px 0"
+            margin="20px 0 40px 0"
           >
             {yml.header.title}
           </H2>
           <SubTitle
             color={Colors.black}
-            margin="20px 0"
+            margin="20px"
             padding="0"
             width="auto"
             letterSpacing="0.05em"
@@ -286,30 +256,14 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
                   margin_tablet="10px 24px 10px 0"
                   textColor="white"
                 >
-                  {applyButtonText}
-                </Button>
-              </Link>
-            </Div>
-            <Div width="100%" width_tablet="fit-content">
-              <Link to="#fake_bottom" style={{ width: "100%" }}>
-                <Button
-                  display="block"
-                  width="100%"
-                  width_tablet="fit-content"
-                  variant="outline"
-                  color={Colors.black}
-                  margin="10px 0 50px 0"
-                  margin_tablet="0"
-                  textColor={Colors.black}
-                  textAlign="center"
-                >
-                  {yml.button.btn_label}
+                  {yml.button.apply_button_text}
                 </Button>
               </Link>
             </Div>
           </Div>
         </Div>
       </Div>
+
       <OurPartners margin="0" images={partnersData.partners.images} marquee />
 
       <Div
@@ -325,6 +279,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
             sub_heading: yml?.two_column_right?.sub_heading,
             bullets: yml?.two_column_right?.bullets,
             content: yml?.two_column_right?.content,
+            button: yml?.two_column_right?.button,
             padding_tablet: "20px",
             gap_tablet: "40px",
           }}
@@ -340,17 +295,20 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         maxWidth="1280px"
       >
         <TwoColumn
-          left={{ image: ymlTwoColumn.image }}
+          left={{
+            image: yml?.two_column_left?.image,
+            justify: "center",
+          }}
           right={{
-            heading: ymlTwoColumn.heading,
-            sub_heading: ymlTwoColumn.sub_heading,
-            bullets: ymlTwoColumn.bullets,
-            content: ymlTwoColumn.content,
-            button: ymlTwoColumn.button,
+            heading: yml?.two_column_left?.heading,
+            sub_heading: yml?.two_column_left?.sub_heading,
+            bullets: yml?.two_column_left?.bullets,
+            content: yml?.two_column_left?.content,
+            button: yml?.two_column_left?.button,
             padding_tablet: "20px",
             gap_tablet: "40px",
           }}
-          proportions={ymlTwoColumn.proportions}
+          proportions={yml?.two_column_left?.proportions}
           session={session}
         />
       </Div>
@@ -427,7 +385,7 @@ export const query = graphql`
             paragraph
           }
           button {
-            btn_label
+            apply_button_text
             apply_button_link
           }
           two_column_right {
@@ -453,6 +411,13 @@ export const query = graphql`
                 text
               }
             }
+            button {
+              text
+              color
+              background
+              hover_color
+              path
+            }
           }
           two_column_left {
             proportions
@@ -467,6 +432,11 @@ export const query = graphql`
             sub_heading {
               text
               font_size
+            }
+            bullets {
+              items {
+                text
+              }
             }
             content {
               text

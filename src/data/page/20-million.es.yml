@@ -13,7 +13,7 @@ header:
   paragraph: Impulsando el Futuro de la Educación Tecnológica, Haciendo la Programación Accesible para Todos
 
 button:
-  btn_label: "Quiero contribuir"
+  apply_button_text: "SABER MÁS"
   apply_button_link: "/es/aplica"
 
 two_column_right:
@@ -21,7 +21,7 @@ two_column_right:
     - 6
     - 6
   image:
-    style: '{ "backgroundSize": "contain" }'
+    style: '{ "backgroundSize": "contain", "backgroundPosition": "center center" }'
     src: "/images/landing/scholarship-impact.jpg"
   heading:
     text: Por qué las becas importan
@@ -56,7 +56,7 @@ two_column_left:
     - 6
     - 6
   image:
-    style: '{ "backgroundSize": "contain" }'
+    style: '{ "backgroundSize": "contain", "backgroundPosition": "center center" }'
     src: /images/landing/20-millions-image.webp
   heading:
     text: Nuestra misión es hacer que la educación de programación de alta calidad sea asequible.
