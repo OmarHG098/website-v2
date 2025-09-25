@@ -16,6 +16,41 @@ button:
   btn_label: "Quiero contribuir"
   apply_button_link: "/es/aplica"
 
+two_column_right:
+  proportions:
+    - 6
+    - 6
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/landing/scholarship-impact.jpg"
+  heading:
+    text: Por qué las becas importan
+    font_size:
+      - 40px
+      - 40px
+      - 40px
+      - 40px
+      - 40px
+  sub_heading:
+    text: Rompiendo barreras en la educación tecnológica y creando oportunidades para todos
+    font_size:
+      - 18px
+      - 18px
+      - 18px
+      - 18px
+      - 16px
+  content:
+    text: |
+      Las becas no son solo sobre apoyo financiero—se trata de nivelar el campo de juego y asegurar que el talento, no el trasfondo económico, determine quién puede acceder a una educación tecnológica de calidad. Nuestros programas de becas han ayudado a estudiantes de diversos orígenes a lanzar carreras exitosas en tecnología, demostrando que con el apoyo adecuado, cualquiera puede prosperar en la economía digital.
+    font_size:
+      - 16px
+  bullets:
+    items:
+      - text: "• Eliminar barreras financieras a la educación tecnológica de calidad"
+      - text: "• Crear una fuerza laboral tecnológica diversa e inclusiva"
+      - text: "• Apoyar a comunidades subrepresentadas en tecnología"
+      - text: "• Permitir transiciones profesionales para trabajadores actuales"
+
 two_column_left:
   proportions:
     - 6

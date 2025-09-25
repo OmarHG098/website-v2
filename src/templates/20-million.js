@@ -311,14 +311,27 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         </Div>
       </Div>
       <OurPartners margin="0" images={partnersData.partners.images} marquee />
-      <ScholarshipProjects
-        content={data.allScholarshipProjectsYaml.edges[0].node}
-        lang={pageContext.lang}
-      />
-      <ScholarshipSuccessCases
-        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
-      />
-      <BenefitsAndCharts data={partnersData} goToForm={goToForm} />
+
+      <Div
+        id="two_column_right"
+        flexDirection="column"
+        margin="0 auto"
+        maxWidth="1280px"
+      >
+        <TwoColumn
+          right={{ image: yml?.two_column_right?.image }}
+          left={{
+            heading: yml?.two_column_right?.heading,
+            sub_heading: yml?.two_column_right?.sub_heading,
+            bullets: yml?.two_column_right?.bullets,
+            content: yml?.two_column_right?.content,
+            padding_tablet: "20px",
+            gap_tablet: "40px",
+          }}
+          proportions={yml?.two_column_right?.proportions}
+          session={session}
+        />
+      </Div>
 
       <Div
         id="two_column_left"
@@ -355,7 +368,9 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         margin="40px 0"
         id="fake_bottom"
       />
-
+      <ScholarshipSuccessCases
+        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+      />
       <GridContainer
         columns_tablet="12"
         containerColumns_tablet="none"
@@ -414,6 +429,30 @@ export const query = graphql`
           button {
             btn_label
             apply_button_link
+          }
+          two_column_right {
+            proportions
+            image {
+              style
+              src
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            content {
+              text
+              font_size
+            }
+            bullets {
+              items {
+                text
+              }
+            }
           }
           two_column_left {
             proportions

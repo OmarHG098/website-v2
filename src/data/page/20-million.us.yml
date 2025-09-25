@@ -9,12 +9,48 @@ meta_info:
 
 seo_title: Coding Bootcamp Scholarships
 header:
-  title: $20+ Million in Scholarships
-  paragraph: Fueling the Future of Tech Education, Making Coding Accessible to All.
+  title: Launch Your Tech Career With a Scholarship
+  paragraph: At 4Geeks Academy, we understand that starting a tech career can feel financially out of reach. That’s why we’ve partnered with leading organizations worldwide to provide over $20 million in scholarships, helping hundreds of students launch rewarding careers in coding, data science, and cybersecurity. Contact us to learn about funding opportunities that work for you.
 
 button:
   btn_label: I want to Contribute
   apply_button_link: "/us/apply"
+
+two_column_right:
+  proportions:
+    - 6
+    - 6
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/landing/scholarship-impact.jpg"
+  heading:
+    text: Why Scholarships Matter
+    font_size:
+      - 40px
+      - 40px
+      - 40px
+      - 40px
+      - 40px
+  sub_heading:
+    text: Breaking down barriers to tech education and creating opportunities for everyone
+    font_size:
+      - 18px
+      - 18px
+      - 18px
+      - 18px
+      - 16px
+  content:
+    text: |
+      Scholarships aren't just about financial support—they're about leveling the playing field and ensuring that talent, not economic background, determines who can access quality tech education. Our scholarship programs have helped students from diverse backgrounds launch successful careers in technology, proving that with the right support, anyone can thrive in the digital economy.
+    font_size:
+      - 16px
+  bullets:
+    items:
+      - text: "• Remove financial barriers to quality tech education"
+      - text: "• Create diverse and inclusive tech workforce"
+      - text: "• Support underrepresented communities in tech"
+      - text: "• Enable career transitions for working professionals"
+  
 two_column_left:
   proportions:
     - 6
@@ -23,7 +59,7 @@ two_column_left:
     style: '{ "backgroundSize": "contain" }'
     src: "/images/landing/20-millions-image.webp"
   heading:
-    text: Our mission is to make high-quality coding education affordable.
+    text: Hundreds of Lives Changed Through Scholarships. You Could Be Next. 
     font_size:
       - 40px
       - 40px
@@ -31,21 +67,23 @@ two_column_left:
       - 40px
       - 40px
   sub_heading:
-    text: In the past, 68% of the people applying to 4Geeks Academy could not enroll due to financial reasons. We concentrated our efforts on lowering the financial barriers by finding partners and sponsors who shared our vision. Today, thanks to our joint efforts, 80% of our students receive some form of financial support, making top-quality coding education accessible to a wider audience.
+    text: With the support of workforce development initiatives,universities, and global organizations, we’ve been able to open the door to tech careers for hundreds of students worldwide. Similar opportunities could be availabel for you.
     font_size:
+      - 18px
+      - 18px
+      - 18px
+      - 18px
       - 16px
-      - 16px
-      - 16px
-      - 16px
-      - 16px
-  content:
-    font_size:
-      - 16px
+  content: 
     text: |
-      Since our foundation in 2015,  these goals have been fundamental to our mission:
-        - To be a premier school for coding education, enriching the futures of our students.
-        - To secure job placement for our graduates immediately after program completion.
-        - To make high-quality education accessible to anyone eager to embark on a coding career.
+        - Miami Tech Coalition (MTC): 45 scholarships for South Florida residents, helping underemployed talent launch careers in coding and AI — backed by a $10M U.S. Good Jobs Challenge grant.
+        - Texas Workforce Development: 20 scholarships empowering Texans to upskill and step into high-demand tech jobs.
+        - Clark University TechBoost: Nearly 200 scholarships awarded to unemployed or underemployed U.S. residents, building bridges into the tech workforce.
+        - United Way Miami: A multi-million-dollar initiative funded by MacKenzie Scott, training local residents for sustainable tech careers.
+        - Uruguay (UTEC + IDB): The first AI and Full-Stack bootcamps in Latin America, with scholarships reaching underserved communities.
+        - Costa Rica (FORTE + CRUSA): 35+ scholarships for women in high-unemployment regions, training them in digital technologies for better career opportunities.
+    font_size:
+      - 16px
   button:
     text: JOIN THE NETWORK
     color: white
@@ -53,6 +91,6 @@ two_column_left:
     hover_color: white
     path: "#leadform_bottom"
 form:
-  title: "Become a Catalyst for Change: Join Our Network of Partners"
+  title: "Take the First Step Toward Funding Your Tech Career"
   paragraph: |
-    Thanks to our dedicated partners, we are turning our goals into reality. As a community, hiring, or funding partner, you too can help shape the future of tech and tech education . Connect with us to explore how we can mutually leverage our capacities and  make a lasting impact.
+    Tell us a bit about yourself, and we’ll contact you with updates on available scholarships in your region and personalized guidance on other funding options like income-share agreements, affordable loans, and flexible financing plans—so you have the support you need to plan your tech career.
