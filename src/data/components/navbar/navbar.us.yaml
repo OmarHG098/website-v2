@@ -130,7 +130,7 @@ navbar:
             - title: "Houston, USA"
               link_to: "/us/coding-campus/coding-bootcamp-houston"
             - title: "Los Angeles, USA"
-              link_to: "/us/coding-campus/coding-bootcamp-losangeles"
+              link_to: "/us/coding-campus/coding-bootcamp-los-angeles"
             - title: "New York, USA"
               link_to: "/us/coding-campus/coding-bootcamp-nyc"
             - title: "Toronto, Canada"
