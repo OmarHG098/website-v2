@@ -463,7 +463,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         />
       </div>
       {/* Video: 2. See How one graduate turned our JG into a real career */}
-      <Container
+      {/* <Container
         id="two_column_right"
         flexDirection="column"
         margin="0"
@@ -489,7 +489,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           proportions={yml.two_columns_video?.proportions}
           session={session}
         />
-      </Container>
+      </Container> */}
+
       {/* Eligibility: 3. Who's Eligible? */}
       <TwoColumn
         padding="30px 20px"
