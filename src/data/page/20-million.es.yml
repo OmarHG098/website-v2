@@ -1,16 +1,16 @@
 meta_info:
   slug: 20-millones
-  title: "Courses and programs taught at 4Geeks Academy"
-  description: "Descubre becas de programación por más de $20M en 4Geeks Academy."
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  image: "/images/programs-heading.png"
-  keywords: "Programs at 4Geeks Academy"
-  redirects: ["/20-millones", "/20millones", "/becas"]
+  title: Programas de Coding ofrecidos por 4Geeks Academy
+  description: "Aplica para una beca de bootcamp en 4Geeks Academy. Obtén apoyo financiero para lanzar tu carrera tech con nuestros programas prácticos de coding."
+  visibility: visible
+  image: /images/programs-heading.png
+  keywords: Programas en 4Geeks Academy
+  redirects: ["/20millones", "/20-millones", "/20millones", "/becas"]
 
-seo_title: "level up as a developer"
+seo_title: Financia tu educación
 header:
-  title: $20+ Millones en becas
-  paragraph: Impulsando el Futuro de la Educación Tecnológica, Haciendo la Programación Accesible para Todos
+  title: Lanza tu Carrera Tech con una Beca
+  paragraph: En 4Geeks Academy, entendemos que comenzar una carrera tecnológica puede sentirse financieramente fuera de alcance. Por eso nos hemos asociado con organizaciones líderes en todo el mundo para proporcionar más de $20 millones en becas, ayudando a cientos de estudiantes a lanzar carreras gratificantes en programación, ciencia de datos y ciberseguridad. Contáctanos para conocer las oportunidades de financiamiento que funcionan para ti.
 
 button:
   apply_button_text: "SABER MÁS"
@@ -22,7 +22,7 @@ two_column_right:
     - 6
   image:
     style: '{ "backgroundSize": "contain", "backgroundPosition": "center center" }'
-    src: "/images/landing/scholarship-impact.jpg"
+    src: "/images/luisa-barrios.png"
   heading:
     text: Por qué las becas importan
     font_size:
@@ -32,7 +32,7 @@ two_column_right:
       - 40px
       - 40px
   sub_heading:
-    text: Rompiendo barreras en la educación tecnológica y creando oportunidades para todos
+    text: La industria tech necesita profesionales calificados, mientras miles de personas sueñan con lanzar una carrera tecnológica pero creen que está fuera de su alcance.
     font_size:
       - 18px
       - 18px
@@ -41,15 +41,21 @@ two_column_right:
       - 16px
   content:
     text: |
-      Las becas no son solo sobre apoyo financiero—se trata de nivelar el campo de juego y asegurar que el talento, no el trasfondo económico, determine quién puede acceder a una educación tecnológica de calidad. Nuestros programas de becas han ayudado a estudiantes de diversos orígenes a lanzar carreras exitosas en tecnología, demostrando que con el apoyo adecuado, cualquiera puede prosperar en la economía digital.
+      En 4Geeks Academy, ofrecemos ambas cosas: bootcamps prácticos diseñados para prepararte para la fuerza laboral tecnológica y becas y opciones de financiamiento que eliminan las barreras financieras. Juntos, abren la puerta a una carrera tecnológica exitosa sin importar desde dónde estés comenzando—para que puedas enfocarte en aprender, crecer y cambiar tu vida.
+      <br><br>
+      <strong style='text-decoration: none; color: #000000; font-weight: 600;'> Da el primer paso hacia financiar tu carrera.</strong>
     font_size:
       - 16px
   bullets:
     items:
-      - text: "• Eliminar barreras financieras a la educación tecnológica de calidad"
-      - text: "• Crear una fuerza laboral tecnológica diversa e inclusiva"
-      - text: "• Apoyar a comunidades subrepresentadas en tecnología"
-      - text: "• Permitir transiciones profesionales para trabajadores actuales"
+      - text: "<strong style='text-decoration: none; color: #000000; font-weight: 600;'>• Bootcamps:</strong> Hacen el camino hacia la tecnología rápido, práctico y enfocado en habilidades listas para el trabajo."
+      - text: "<strong style='text-decoration: none; color: #000000; font-weight: 600;'>• Becas:</strong> Eliminan las barreras financieras y abren la puerta a una educación tecnológica de alta calidad para cualquiera motivado a aprender."
+  button:
+    text: Ponte en contacto
+    color: white
+    background: blue
+    hover_color: white
+    path: "#leadform_bottom"
 
 two_column_left:
   proportions:
@@ -57,9 +63,9 @@ two_column_left:
     - 6
   image:
     style: '{ "backgroundSize": "contain", "backgroundPosition": "center center" }'
-    src: /images/landing/20-millions-image.webp
+    src: "/images/landing/20-millions-image.webp"
   heading:
-    text: Nuestra misión es hacer que la educación de programación de alta calidad sea asequible.
+    text: Cientos de Vidas Cambiadas a Través de Becas. Tú Podrías Ser el Siguiente.
     font_size:
       - 40px
       - 40px
@@ -67,31 +73,32 @@ two_column_left:
       - 40px
       - 40px
   sub_heading:
-    text: En el pasado, el 68% de las personas que se inscribían en 4Geeks Academy no podían inscribirse por razones financieras. Concentramos nuestros esfuerzos en bajar las barreras financieras, encontramos socios y patrocinadores que compartían nuestra visión. Hoy, gracias a nuestros esfuerzos conjuntos, el 80% de nuestros estudiantes reciben algún tipo de apoyo financiero, lo que hace que la educación de codificación de alta calidad sea accesible a más personas.
+    text: Con el apoyo de iniciativas de desarrollo laboral, universidades y organizaciones globales, hemos podido abrir la puerta a carreras tecnológicas para cientos de estudiantes en todo el mundo. Oportunidades similares podrían estar disponibles para ti.
     font_size:
+      - 18px
+      - 18px
+      - 18px
+      - 18px
       - 16px
-      - 16px
-      - 16px
-      - 16px
-      - 16px
+  bullets:
+    items:
+      - text: "• Coalición Tech Miami (MTC): 45 becas para residentes del sur de Florida, ayudando a talento subempleado a lanzar carreras en programación e IA — respaldado por una subvención de $10M del U.S. Good Jobs Challenge."
+      - text: "• Desarrollo Laboral de Texas: 20 becas empoderando a texanos a mejorar sus habilidades y dar el salto a trabajos tecnológicos de alta demanda."
+      - text: "• TechBoost de Clark University: Casi 200 becas otorgadas a residentes estadounidenses desempleados o subempleados, construyendo puentes hacia la fuerza laboral tecnológica."
+      - text: "• United Way Miami: Una iniciativa multimillonaria financiada por MacKenzie Scott, entrenando a residentes locales para carreras tecnológicas sostenibles."
+      - text: "• Uruguay (UTEC + IDB): Los primeros bootcamps de IA y Full-Stack en América Latina, con becas llegando a comunidades desatendidas."
+      - text: "• Costa Rica (FORTE + CRUSA): 35+ becas para mujeres en regiones de alto desempleo, entrenándolas en tecnologías digitales para mejores oportunidades laborales."
   content:
+    text: "<strong style='text-decoration: none; color: #000000; font-weight: 600;'>Aprende sobre oportunidades de becas actuales.</strong>"
     font_size:
       - 16px
-    text: |
-      Cuando lanzamos 4Geeks en 2015, teníamos tres objetivos fundamentales
-        - Ser una escuela de alta calidad donde las personas puedan aprender habilidades de codificación y mejorar sus perspectivas futuras.
-        - Ayudar a los graduados a obtener oportunidades de trabajo justo después de completar el programa.
-        - Hacer que nuestra educación de codificación de alta calidad sea accesible a tantas personas como sea posible.
-
   button:
-    text: ÚNETE COMO PARTNER
+    text: Contáctanos
     color: white
     background: blue
     hover_color: white
     path: "#leadform_bottom"
 form:
-  title: Conviertete en un 4Geeks Partner
+  title: "Da el Primer Paso Hacia Financiar tu Carrera Tech"
   paragraph: |
-    Gracias a nuestros socios dedicados, estamos convirtiendo nuestros objetivos en realidad. Conviértase en parte de nuestra red y ayude a dar forma al futuro de la educación tecnológica.
-    - Nuestros graduados son talentosos, comprometidos y han pasado por muchas etapas de nuestra metodología: no solo habilidades duras, técnicas o blandas, sino también entrevistas, evaluaciones tecnológicas, trabajo en proyectos y muchas más características que les permiten estar listos para una nueva oportunidad en nuestra compañía.
-    - Nuestros programas preparan a los estudiantes para trabajar y prosperar en cualquier organización tecnológica y de mentalidad prospectiva.
+    Cuéntanos un poco sobre ti, y te contactaremos con actualizaciones sobre becas disponibles en tu región y orientación personalizada sobre otras opciones de financiamiento como acuerdos de participación en ingresos, préstamos asequibles y planes de financiamiento flexibles—para que tengas el apoyo que necesitas para planificar tu carrera tecnológica.

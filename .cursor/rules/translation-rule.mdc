@@ -28,7 +28,7 @@ This rule ensures consistency and completeness in translations between English (
 ### Meta Information
 - **Character Limits:**
   - Title: Max 60 characters
-  - Description: Max 160 characters
+  - Description: Max 160 characters: Spanish Character Considerations: Be careful when translating the description because Spanish tends to have longer words, so it needs adaptations. The description must not exceed 160 characters. Consider using shorter words, abbreviations, or rephrasing to fit within the limit.
   - Keywords: Max 200 characters
 - **URLs:** Keep slugs language-specific (e.g., "inicio" for Spanish, "index" for English)
 - **Redirects:** Include all necessary language-specific redirects
