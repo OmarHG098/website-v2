@@ -73,7 +73,7 @@ two_column_left:
       - 40px
       - 40px
   sub_heading:
-    text: With the support of workforce development initiatives,universities, and global organizations, we’ve been able to open the door to tech careers for hundreds of students worldwide. Similar opportunities could be availabel for you.
+    text: With the support of workforce development initiatives, universities, and global organizations, we've been able to open the door to tech careers for hundreds of students worldwide. Similar opportunities could be available for you.
     font_size:
       - 18px
       - 18px
@@ -102,4 +102,29 @@ two_column_left:
 form:
   title: "Take the First Step Toward Funding Your Tech Career"
   paragraph: |
-    Tell us a bit about yourself, and we’ll contact you with updates on available scholarships in your region and personalized guidance on other funding options like income-share agreements, affordable loans, and flexible financing plans—so you have the support you need to plan your tech career.
+    Tell us a bit about yourself, and we'll contact you with updates on available scholarships in your region and personalized guidance on other funding options like income-share agreements, affordable loans, and flexible financing plans—so you have the support you need to plan your tech career.
+
+featured_partners:
+  heading: "Funding Partners"
+  sub_heading: |
+    Top companies hire 4Geeks graduates, with 84% landing jobs within 6 months of graduation thanks to their skills and our personalized career support. Our grads don't just get hired—they launch successful careers and consistently earn recognition for their technical expertise and professionalism:
+  images:
+    - name: "Forte + CRUSA"
+      image: "/images/allies/crusa.png"
+      featured: true
+    - name: "United Way Miami"
+      image: "/images/partner/united_way_mini.PNG"
+      featured: true
+    - name: "Clark University"
+      image: "/images/allies/clark-uni-rounded-logo.png"
+      featured: true
+    - name: "UTEC"
+      image: "/images/allies/utec.png"
+      featured: true
+    - name: "Miami Tech Works"
+      image: "/images/allies/miamitech-works-logo.png"
+      featured: true
+    - name: "Texas Workforce Development"
+      image: "/images/allies/texas-workforce-comission.png"
+      featured: true
+    

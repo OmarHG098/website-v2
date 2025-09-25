@@ -8,6 +8,7 @@ import Fragment from "../Fragment";
 import Marquee from "../Marquee";
 import CarouselV2 from "../CarouselV2/index.js";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import DraggableDiv from "../DraggableDiv";
 
 // Display centered TITLE + PARAGRAPH
 const Title_Paragraph = (props) => {
@@ -179,25 +180,99 @@ const Images_Centered = (props) => {
 //Imagenes con propiedad featured==true
 const Images_Featured = (props) => {
   const imagesFiltered = props.images.filter((f) => f.featured === true);
+  const featured = props.featuredImages ? props.featuredImages : imagesFiltered;
+  const cols = featured.length > 0 ? featured.length : 1; // single row with all featured
   return (
     <>
+      {/* Mobile swipable row */}
+      <Div
+        width="100%"
+        background={Colors.white}
+        padding="10px 0"
+        margin="0 0 10px 0"
+        display="block"
+        display_tablet="none"
+      >
+        <Div width="100%" style={{ overflowX: "auto" }}>
+          <DraggableDiv gap="8px">
+            {featured.map((m, i) => {
+              const hasGatsbyImage = m.image?.childImageSharp?.gatsbyImageData;
+              return (
+                <Div
+                  key={i}
+                  width="140px"
+                  height="70px"
+                  background={Colors.white}
+                  flexDirection="column"
+                  justifyContent="center"
+                  borderRadius="4px"
+                  flexShrink="0"
+                >
+                  {hasGatsbyImage ? (
+                    <GatsbyImage
+                      style={{
+                        height: "50px",
+                        minWidth: "60px",
+                        margin: "auto",
+                        width: "100%",
+                      }}
+                      imgStyle={{ objectFit: "contain" }}
+                      alt={m.name}
+                      draggable={false}
+                      image={getImage(m.image.childImageSharp.gatsbyImageData)}
+                    />
+                  ) : (
+                    <img
+                      style={{
+                        height: "50px",
+                        minWidth: "60px",
+                        margin: "auto",
+                        width: "100%",
+                        objectFit: "contain",
+                      }}
+                      alt={m.name}
+                      src={m.image}
+                      draggable={false}
+                    />
+                  )}
+                </Div>
+              );
+            })}
+          </DraggableDiv>
+        </Div>
+        {/* bullets */}
+        <Div justifyContent="center" gap="6px" margin="8px 0 0 0">
+          {featured.map((_, idx) => (
+            <Div
+              key={`dot-${idx}`}
+              width="6px"
+              height="6px"
+              borderRadius="50%"
+              background={idx === 0 ? Colors.black : Colors.lightGray}
+            />
+          ))}
+        </Div>
+      </Div>
+
       <GridContainer
         justifyItemsChild="center"
         display_xxs="none"
         display_xs="none"
-        displayChild_xs="none"
         display_sm="none"
-        //display_tablet="block"
+        // visible on mobile as grid
         justifyContentChild="center"
         maxWidth="1280px"
         margin="0 auto"
-        columns_tablet={
-          imagesFiltered.length <= 4 ? imagesFiltered.length : "3"
-        }
+        columns_tablet={cols}
+        gridGap="8px"
+        gridGap_tablet="8px"
         padding_tablet={props.paddingFeatured || "0"}
       >
-        {(props.featuredImages ? props.featuredImages : imagesFiltered).map(
-          (m, i) => {
+        {featured.map((m, i) => {
+          // Handle both Gatsby images and static image paths
+          const hasGatsbyImage = m.image?.childImageSharp?.gatsbyImageData;
+
+          if (hasGatsbyImage) {
             return (
               <GatsbyImage
                 key={i}
@@ -205,15 +280,31 @@ const Images_Featured = (props) => {
                   height: "55px",
                   minWidth: "100px",
                   width: "200px",
-                  margin: "23px 15px",
+                  margin: "23px 8px",
                 }}
                 imgStyle={{ objectFit: "contain" }}
                 alt={m.name}
                 image={getImage(m.image.childImageSharp.gatsbyImageData)}
               />
             );
+          } else {
+            // Handle static image paths
+            return (
+              <img
+                key={i}
+                style={{
+                  height: "55px",
+                  minWidth: "100px",
+                  width: "200px",
+                  margin: "23px 8px",
+                  objectFit: "contain",
+                }}
+                alt={m.name}
+                src={m.image}
+              />
+            );
           }
-        )}
+        })}
         {/* </Div> */}
       </GridContainer>
       {!props.withoutLine && (
@@ -390,6 +481,7 @@ const OurPartners = ({
   withoutLine,
   slider,
   marquee,
+  onlyFeatured,
   fontSize,
   width,
   gridColumn,
@@ -438,13 +530,14 @@ const OurPartners = ({
           paddingFeatured={paddingFeatured}
         />
       )}
-      {slider ? (
-        <Images_With_Slider images={images} />
-      ) : marquee ? (
-        <Images_With_Marquee images={images} />
-      ) : (
-        <Images_Centered images={images} gray={gray} />
-      )}
+      {!onlyFeatured &&
+        (slider ? (
+          <Images_With_Slider images={images} />
+        ) : marquee ? (
+          <Images_With_Marquee images={images} />
+        ) : (
+          <Images_Centered images={images} gray={gray} />
+        ))}
       {link && (
         <Div gridArea_md="2/3/2/11" justifyContent="center" margin="50px 0 0 0">
           <Link to={rest.props.footer_link}>

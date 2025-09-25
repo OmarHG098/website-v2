@@ -217,8 +217,8 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
             color={Colors.black}
             textAlign="center"
             textAlign_tablet="center"
-            fontSize="40px"
-            fontSize_tablet="50px"
+            fontSize="48px"
+            fontSize_tablet="60px"
             lineHeight="38px"
             lineHeight_tablet="60px"
             margin_tablet="20px 0 40px 0"
@@ -264,7 +264,17 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         </Div>
       </Div>
 
-      <OurPartners margin="0" images={partnersData.partners.images} marquee />
+      <OurPartners
+        margin="0"
+        title={yml.featured_partners?.heading}
+        images={partnersData.partners.images}
+        marquee
+        showFeatured={!!yml.featured_partners}
+        featuredImages={yml.featured_partners?.images}
+        withoutLine
+        paddingFeatured="0 0 50px 0"
+        onlyFeatured
+      />
 
       <Div
         id="two_column_right"
@@ -453,6 +463,16 @@ export const query = graphql`
           form {
             title
             paragraph
+          }
+          featured_partners {
+            heading
+            sub_heading
+            images {
+              name
+              image
+              featured
+              link
+            }
           }
         }
       }
