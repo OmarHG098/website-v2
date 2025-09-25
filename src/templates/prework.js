@@ -126,7 +126,7 @@ const Prework = (props) => {
       {yml.what_you_will_learn && (
         <Div
           background={Colors.verylightGray}
-          padding="clamp(3rem, 10vw, 4rem) 20px"
+          padding="clamp(3rem, 10vw, 4rem) 0"
           flexDirection="column"
           alignItems="center"
         >
@@ -225,8 +225,8 @@ const Prework = (props) => {
                 containerStyle={{
                   flexDirection_tablet: "column",
                   width: "100%",
-                  padding_md: "40px 0",
-                  padding_tablet: "40px 0",
+                  padding_md: "3.5rem 0 0 0",
+                  padding_tablet: "3.5rem 0 0 0",
                 }}
                 heading={{
                   text: scheduleYml.title,
@@ -234,7 +234,7 @@ const Prework = (props) => {
                   style: {
                     fontSize: "40px",
                     width: "100%",
-                    margin: "0 auto 30px auto",
+                    margin: "0 auto 1.5rem auto",
                   },
                 }}
                 cards={scheduleYml.classes.map((classItem) => ({
@@ -319,6 +319,8 @@ const Prework = (props) => {
                     height="42px"
                     fontSize="20px"
                     borderRadius="3px"
+                    justifyContent="center"
+                    width="100%"
                   >
                     {yml.cta.primary_button.text}
                   </Button>
