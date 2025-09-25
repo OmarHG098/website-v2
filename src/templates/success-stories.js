@@ -192,7 +192,7 @@ const SuccessStories = (props) => {
           paragraph={yml.partners.sub_heading}
           showFeatured={false}
           props={partnersData.partners}
-          gray={true}
+          // gray={true}
         />
       </Div>
       <Div

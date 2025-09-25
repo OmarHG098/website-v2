@@ -325,7 +325,7 @@ testimonials:
     source_url: ""
     source_url_text: "Linkedin Perfil"
     short_content: "FrontEnd Developer en Staff & Go"
-    content: "vengo del sector UX UI y ahora soy Fullstack Developer os animo a  os apuntéis a la academia. "
+    content: "Vengo del sector UX UI y ahora soy Fullstack Developer os animo a  os apuntéis a la academia. "
 
   - student_name: "Olson Dimache"
     slug: "ols-di"
@@ -348,7 +348,7 @@ testimonials:
     source_url: ""
     ##source_url_text: ""
     short_content: "Senior Software Engineer II en Domino Data Labs"
-    content: "Esto es como cuando vas al océano  la parte más importante es mojarse los pies, yo lo recomendaría  !salta¡ ve a por ello y después de este bootcamp me siento preparado para saltar al medio del océano."
+    content: "Esto es como cuando vas al océano  la parte más importante es mojarse los pies, yo lo recomendaría ¡salta! ve a por ello y después de este bootcamp me siento preparado para saltar al medio del océano."
     
   - student_name: "Ana Romero"
     slug: "ana-ro"
@@ -370,7 +370,7 @@ testimonials:
     source_url: ""
     source_url_text: ""
     short_content: "Full Stack Developer"
-    content: "aproveche el tiempo para justo despues de terminar la preparatoria, me inscribí en 4Geeks academi y me parece que ha sido excelente, me parece que tienen una comunidad muy unida que están allí siempre para darte la mano."
+    content: "Aproveché el tiempo para justo después de terminar la preparatoria, me inscribí en 4Geeks Academy y me parece que ha sido excelente, me parece que tienen una comunidad muy unida que están allí siempre para darte la mano."
 
   - student_name: "Charles Fabricius"
     slug: "cha-fabr"
@@ -419,7 +419,7 @@ testimonials:
     source_url: ""
     # source_url_text: ""
     short_content: "QA Engineer en Deutsche Bank"
-    content: "Fernando Villanueva técnico de calidad de software, es importante conocer cómo están construidas las web actualmente, el bootcamp de 4Geeks academy me ha dado las herramientas para evaluar de forma precisa las páginas, mejorando así en mi trabajo."
+    content: "Fernando Villanueva técnico de calidad de software, es importante conocer cómo están construidas las web actualmente, el bootcamp de 4Geeks Academy me ha dado las herramientas para evaluar de forma precisa las páginas, mejorando así en mi trabajo."
  
   - student_name: "Fernando Funez"
     featured: false
@@ -466,7 +466,7 @@ testimonials:
     source_url: ""
     # source_url_text: ""
     short_content: "Web Developer en Everwell Parts, Inc."
-    content: "Solo intentalo vas a aprender porque el sistema de 4Geeks te empuja en esa dirección, 4geeks es la mejor opcion para cambiar de carrera y aprender a programar"
+    content: "Solo inténtalo vas a aprender porque el sistema de 4Geeks te empuja en esa dirección, 4Geeks es la mejor opcion para cambiar de carrera y aprender a programar"
 
   - student_name: "Salvador Desravines"
     featured: false
@@ -664,7 +664,7 @@ testimonials:
     #source_url_text: ""
     short_content: "De Músico a Liderazgo en Programación"
     content: |
-      Viene de ser músico profesional, fue uno de los mejores alumnos de su cohorte y ocupó puesto de liderazgo en su proyecto final
+      Viene de ser músico profesional, fue uno de los mejores alumnos de su cohorte y ocupó puesto de liderazgo en su proyecto final.
 
   - student_name: "Nicolas Carcamo"
     featured: false
@@ -682,7 +682,7 @@ testimonials:
     #source_url_text: ""
     short_content: "De las Artes al Desarrollo de Software"
     content: |
-      Nicolas es desarrollador de software y músico. Por muchos años se dedicó al mundo de las artes escénicas, y luego por medio de amistades despertó su curiosidad por la programación. Se graduó de 4geeks este 2023 y está actualmente trabajando como desarrollador en una gran empresa chilena. 
+      Nicolas es desarrollador de software y músico. Por muchos años se dedicó al mundo de las artes escénicas, y luego por medio de amistades despertó su curiosidad por la programación. Se graduó de 4Geeks este 2023 y está actualmente trabajando como desarrollador en una gran empresa chilena. 
 
   - student_name: "Cristian Rivera"
     featured: false
@@ -740,7 +740,7 @@ testimonials:
     #source_url_text: ""
     short_content: "Desarrolladora Front-End en Enerlink"
     content: |
-      Apasionada de lo que hace, de aprender y de los constantes cambios, busca hacer un trabajo que genere cambios. una vez acabado el bootcamp fue ayudante de muchas cohortes de 4geeks y actualmente es desarrolladora front end.  
+      Apasionada de lo que hace, de aprender y de los constantes cambios, busca hacer un trabajo que genere cambios. una vez acabado el bootcamp fue ayudante de muchas cohortes de 4Geeks y actualmente es desarrolladora front end.  
 
   - student_name: "Gabriela Rodriguez"  # Usar nombre y apellido consistentemente
     featured: false
