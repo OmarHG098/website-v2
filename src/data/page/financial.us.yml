@@ -6,8 +6,7 @@ meta_info:
   image: "/images/og-preview/finantial.us.png"
   keywords: "Financing at 4Geeks Academy"
   redirects: ["/financials", "/pricing"]
-  hideGlobalCTA: true # Hides the global CTA because this page has its own DoubleActionCTA
-
+ 
 ## BANNER - HEADER
 seo_title: "Bootcamp Financing"
 header:
