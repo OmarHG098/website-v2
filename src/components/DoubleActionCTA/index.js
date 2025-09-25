@@ -30,7 +30,6 @@ const DoubleActionCTA = (props) => {
             cta {
               title
               description
-              locations
               primary {
                 title
                 description
@@ -81,12 +80,26 @@ const DoubleActionCTA = (props) => {
           }
         }
       }
+      allAdmissionsStaffYaml {
+        edges {
+          node {
+            fields {
+              lang
+            }
+            assignment_algo
+            staff {
+              locations
+              calendly_link
+              priority
+            }
+          }
+        }
+      }
     }
   `);
 
   //TODO: We are hidding this component for now, I want to approve the PR but this component cannot show as is
   // Lets wait for the refactoring to remove this return null;
-  return null;
 
   const { session: appSession } = useContext(SessionContext);
   const captcha = useRef(null);
@@ -108,62 +121,92 @@ const DoubleActionCTA = (props) => {
     return true;
   };
 
-  const filterByLocation = (ctaData) => {
-    const locations = Array.isArray(ctaData?.locations)
-      ? ctaData.locations
-          .filter((s) => typeof s === "string" && s.trim() !== "")
-          .map((s) => s.trim())
-      : [];
+  // (Deprecated) filterByLocation removed in favor of staff availability checks
 
-    const candidates = [
+  // Step 3: Admissions staff assignment logic
+  const getLocationCandidates = () => {
+    return [
       appSession?.location?.breathecode_location_slug,
       appSession?.location?.meta_info?.slug,
       appSession?.location?.active_campaign_location_slug,
     ].filter((s) => typeof s === "string" && s.length > 0);
+  };
 
-    // If the location is not resolved yet, render only if CTA targets at least one location
-    if (candidates.length === 0) return locations.length > 0;
+  const filterStaffByLocation = (staffMember) => {
+    const locations = Array.isArray(staffMember?.locations)
+      ? staffMember.locations
+          .filter((s) => typeof s === "string" && s.trim() !== "")
+          .map((s) => s.trim())
+      : [];
 
-    // Match any candidate or "all"
-    for (const id of candidates) {
+    const candidates = getLocationCandidates();
+    if (candidates.length === 0) return locations.length > 0; // render only if staff targets at least one location
+    for (const id of candidates)
       if (locations.includes(id) || locations.includes("all")) return true;
-    }
     return false;
   };
 
-  // Use props.ctaData if provided, otherwise fall back to centralized data
+  const selectAdmissionsStaff = (staffArray, algo) => {
+    if (!Array.isArray(staffArray) || staffArray.length === 0) return null;
+    const normalizedAlgo = (algo || "ROUND_ROBIN").toUpperCase();
+
+    if (normalizedAlgo === "FIRST") {
+      const withPriority = staffArray.filter(
+        (s) => typeof s?.priority === "number"
+      );
+      if (withPriority.length > 0)
+        return withPriority.sort((a, b) => a.priority - b.priority)[0];
+      return staffArray[0];
+    }
+    // Default: random selection (equal probability)
+    const idx = Math.floor(Math.random() * staffArray.length);
+    return staffArray[idx];
+  };
+
+  // Prefer flattened props when provided; fallback to centralized YAML by language
+  const hasDirectProps =
+    props &&
+    (props.title !== undefined ||
+      props.description !== undefined ||
+      props.primary !== undefined ||
+      props.secondary !== undefined ||
+      props.newsletter_form !== undefined);
+
   let content;
-  if (props.ctaData) {
-    content = props.ctaData;
+  let dataLang = (props.lang || appSession?.language || "us").replace(
+    "en",
+    "us"
+  );
+  if (hasDirectProps) {
+    content = {
+      title: props.title,
+      description: props.description,
+      primary: props.primary,
+      secondary: props.secondary,
+      newsletter_form: props.newsletter_form,
+    };
   } else {
-    // Prefer explicit prop.lang, then session.language; fallback to us for data selection only
-    const dataLang = (props.lang || appSession?.language || "us").replace(
-      "en",
-      "us"
-    );
     let ctaComponent = data.allDoubleActionCtaYaml.edges.find(
       ({ node }) => node.fields.lang === dataLang
     );
     if (ctaComponent) ctaComponent = ctaComponent.node;
     else return null;
-
     content = ctaComponent.cta;
   }
 
-  // Check location filtering unless explicitly disabled
-  if (!props.disableRestriction) {
-    if (!filterByLocation(content)) {
-      return null;
-    }
-  }
-
-  // Avoid flicker: if session exists but no candidates yet, do not render until location resolves
-  const candidates = [
+  // Staff-availability gate: do not render if no admissions staff matches location
+  const locationCandidates = [
     appSession?.location?.breathecode_location_slug,
     appSession?.location?.meta_info?.slug,
     appSession?.location?.active_campaign_location_slug,
   ].filter((s) => typeof s === "string" && s.length > 0);
-  if (appSession && candidates.length === 0 && !props.disableRestriction)
+
+  // Avoid flicker: if session exists but no candidates yet, do not render until location resolves
+  if (
+    appSession &&
+    locationCandidates.length === 0 &&
+    !props.disableRestriction
+  )
     return null;
 
   // Add defensive validation for content structure
@@ -177,6 +220,31 @@ const DoubleActionCTA = (props) => {
     !props.disableBullets &&
     Array.isArray(content?.secondary?.benefits) &&
     content.secondary.benefits.length > 0;
+
+  // Compute selected admissions staff for later use (Step 5 will use it)
+  let admissionsStaffNode = data.allAdmissionsStaffYaml.edges.find(
+    ({ node }) => node.fields.lang === dataLang
+  )?.node;
+  const availableStaff = Array.isArray(admissionsStaffNode?.staff)
+    ? admissionsStaffNode.staff.filter(filterStaffByLocation)
+    : [];
+  if (!props.disableRestriction && availableStaff.length === 0) return null;
+  const selectedStaff = selectAdmissionsStaff(
+    availableStaff,
+    (
+      admissionsStaffNode?.assignment_algo ||
+      props.assignmentAlgo ||
+      "ROUND_ROBIN"
+    ).toUpperCase()
+  );
+
+  // Resolve primary action URL: prefer selected staff Calendly, fallback to YAML action_url
+  const primaryActionUrl =
+    (selectedStaff &&
+    typeof selectedStaff.calendly_link === "string" &&
+    selectedStaff.calendly_link.trim().length > 0
+      ? selectedStaff.calendly_link
+      : null) || content?.primary?.action_url;
 
   return (
     <Div
@@ -307,7 +375,7 @@ const DoubleActionCTA = (props) => {
             />
           )}
 
-          <Link to={content?.primary?.action_url} target="_blank">
+          <Link to={primaryActionUrl} target="_blank">
             <Button
               className="scale_hover"
               width="100%"
