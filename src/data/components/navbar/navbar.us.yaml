@@ -68,7 +68,7 @@ navbar:
             - title: "Financing"
               link_to: "/us/financials"
             - title: "Scholarships"
-              link_to: "/us/20-million"
+              link_to: "/us/scholarships"
             - title: "Job Guarantee"
               link_to: "/us/job-guarantee"
             # - title: "Scholarships"

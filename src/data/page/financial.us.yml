@@ -142,7 +142,7 @@ two_column:
       color: white
       background: black
       hover_color: white
-      path: "/us/20-million"
+      path: "/us/scholarships"
     boxes:
       - icon: rocket-2
         title: "14"
@@ -153,7 +153,7 @@ two_column:
 
   - image:
       style: '{ "backgroundSize": "contain"}'
-      src: /images/landing/20-million-column-4geeks.png
+      src: /images/landing/scholarships-column-4geeks.png
     heading:
       text: Learn Now, Pay Smarter
       font_size:

@@ -1,11 +1,11 @@
 meta_info:
-  slug: 20-million
+  slug: scholarships
   title: Coding Programs offered by 4Geeks Academy
   description: "Apply for a coding bootcamp scholarship at 4Geeks Academy. Get financial support to help launch your career in tech with our hands-on coding programs."
   visibility: visible
   image: /images/programs-heading.png
   keywords: Programs at 4Geeks Academy
-  redirects: ["/20million", "/20-millions", "/20millions", "/scholarships"]
+  redirects: ["/20million", "/20-million", "/20millions", "/scholarships"]
 
 seo_title: Fund your education
 header:
@@ -63,7 +63,7 @@ two_column_left:
     - 6
   image:
     style: '{ "backgroundSize": "contain", "backgroundPosition": "center center" }'
-    src: "/images/landing/20-millions-image.webp"
+    src: "/images/landing/scholarshipss-image.webp"
   heading:
     text: Hundreds of Lives Changed Through Scholarships. You Could Be Next. 
     font_size:
@@ -82,8 +82,8 @@ two_column_left:
       - 16px
   bullets:
     items:
-      - text: "• Miami Tech Coalition (MTC): 45 scholarships for South Florida residents, helping underemployed talent launch careers in coding and AI — backed by a $10M U.S. Good Jobs Challenge grant."
-      - text: "• Texas Workforce Development: 20 scholarships empowering Texans to upskill and step into high-demand tech jobs."
+      - text: "• Miami Tech Coalition (MTC): 75 scholarships for South Florida residents, helping underemployed talent launch careers in coding and AI — backed by a $10M U.S. Good Jobs Challenge grant."
+      - text: "• Texas Workforce Development: 23 scholarships empowering Texans to upskill and step into high-demand tech jobs."
       - text: "• Clark University TechBoost: Nearly 200 scholarships awarded to unemployed or underemployed U.S. residents, building bridges into the tech workforce."
       - text: "• United Way Miami: A multi-million-dollar initiative funded by MacKenzie Scott, training local residents for sustainable tech careers."
       - text: "• Uruguay (UTEC + IDB): The first AI and Full-Stack bootcamps in Latin America, with scholarships reaching underserved communities."

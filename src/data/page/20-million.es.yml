@@ -1,5 +1,5 @@
 meta_info:
-  slug: 20-millones
+  slug: becas
   title: Programas de Coding ofrecidos por 4Geeks Academy
   description: "Aplica para una beca de bootcamp en 4Geeks Academy. Obtén apoyo financiero para lanzar tu carrera tech con nuestros programas prácticos de coding."
   visibility: visible
@@ -63,7 +63,7 @@ two_column_left:
     - 6
   image:
     style: '{ "backgroundSize": "contain", "backgroundPosition": "center center" }'
-    src: "/images/landing/20-millions-image.webp"
+    src: "/images/landing/scholarshipss-image.webp"
   heading:
     text: Cientos de Vidas Cambiadas a Través de Becas. Tú Podrías Ser el Siguiente.
     font_size:

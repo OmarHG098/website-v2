@@ -141,7 +141,7 @@ two_column:
       color: white
       background: black
       hover_color: white
-      path: "/es/20-millones"
+      path: "/es/becas"
     boxes:
     - icon: rocket-2
       title: "14"
@@ -152,7 +152,7 @@ two_column:
 
   - image:
       style: '{ "backgroundSize": "contain" }'
-      src: /images/landing/20-million-column-4geeks.png
+      src: /images/landing/scholarships-column-4geeks.png
     heading:
       text: El 62% de los solicitantes de bootcamps son rechazados por razones financieras.
       font_size:

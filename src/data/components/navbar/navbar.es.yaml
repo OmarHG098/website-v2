@@ -65,7 +65,7 @@ navbar:
             - title: "Financiaciones"
               link_to: "/es/financiacion"
             - title: "Recibe una beca"
-              link_to: "/es/20-millones"
+              link_to: "/es/becas"
         - title: "Nuestros Alumnos"
           sub_links:
             - title: "Alumnos y Proyectos"
