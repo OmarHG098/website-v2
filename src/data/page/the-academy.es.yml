@@ -10,7 +10,7 @@ meta_info:
 seo_title: "Sobre 4Geeks Academy"
 header:
   title: "Impulsando el Talento para la Era de la IA"
-  paragraph: "4Geeks Academy es una academia tecnológica global con 7 campus en EE. UU., América Latina y Europa, formando a la próxima generación de profesionales tecnológicos en Desarrollo Full-Stack potenciado por IA, Ciencia de Datos y ML, y Ciberseguridad. Desde 2015, hemos ayudado a más de 6,000+ estudiantes a lanzar exitosas carreras tecnológicas a través de programas prácticos, mentoría humana ilimitada y herramientas impulsadas por IA como Rigobot"
+  paragraph: "4Geeks Academy es una academia tecnológica global con 8 sedes en EE. UU., América Latina y Europa, formando a la próxima generación de profesionales en Desarrollo Full-Stack con IA, Ciencia de Datos y ML, y Ciberseguridad. Hemos ayudado a más de 7.000+ estudiantes a lanzar exitosas carreras tecnológicas a través de programas prácticos, mentoría humana ilimitada y herramientas impulsadas por IA como Rigobot."
   image: "../../../static/images/the-academy/the-academy-header.png"
   image_alt: "Sobre 4Geeks Academy"
 
@@ -82,16 +82,19 @@ cornerstones:
   cornerstones_list:
     - title: Programas Orientados a la Carrera
       content: Formación práctica, intensiva y centrada en el mundo real, diseñada para lanzar carreras tecnológicas.
-      icon: laptop_new
+      icon: briefcase-2
+      color: "#E3F9FE"
     - title: Aprendizaje Hiperpersonalizado
       content: Rigobot ofrece retroalimentación instantánea 24/7 mientras aprendes, mientras que las clases pequeñas y la mentoría 1:1 garantizan que recibas exactamente la orientación que necesitas.
-      icon: teacher_new
+      icon: graduation-2
+      color: "#0084FF"
     - title: Mentoría Humana Ilimitada
       content: Mentores y coaches de carrera brindan apoyo personalizado cuando lo necesites—durante el programa y para siempre.
-      icon: chat
+      icon: handshake
     - title: Habilidades para el Futuro
       content: Un plan de estudios actualizado continuamente asegura que los estudiantes aprendan las herramientas y tecnologías más recientes que impulsan la industria tech.
-      icon: notes
+      icon: rocket-2
+      color: "#FFECBF"
 
 two_column:
   - image:
@@ -107,8 +110,6 @@ two_column:
       text: |
         En 4Geeks Academy creemos que la colaboración genera un impacto real. Trabajamos con universidades, organizaciones sin fines de lucro, iniciativas de desarrollo laboral, organismos globales y comunidades tecnológicas locales para ampliar el acceso a la mejor educación en tecnología y fortalecer las vías de desarrollo profesional. Juntos, formamos y colocamos talento diverso, cerramos la brecha de habilidades digitales y construimos la fuerza laboral tecnológica del futuro.
         También estamos activos en la comunidad, colaborando en hackatones, retos tecnológicos y eventos de la industria que conectan el talento con oportunidades y muestran las habilidades de nuestros estudiantes y graduados.
-
-        Nuestros socios incluyen:
       font_size: ["20px", "20px", "20px", "18px", "16px"]
     content:
       text: " "  

@@ -29,6 +29,7 @@ const Why = (props) => {
         title={yml.header.title}
         paragraph={yml.header.paragraph}
         image={yml.header.image.childImageSharp.fluid}
+        fontFamily_title="Archivo-black"
         padding="70px 0 70px 0"
         padding_tablet="70px 0 70px 0"
         margin_md={isCustomBarActive(session) ? "130px 0 0 0" : "70px 0 0 0"}
@@ -175,7 +176,12 @@ const Why = (props) => {
           cornerstones.cornerstones_list.map((m, i) => (
             <Div key={i} margin="0 0 40px 0">
               <Div>
-                <Icon icon={m.icon} width="43px" height="34px" />
+                <Icon
+                  icon={m.icon}
+                  color={m?.color}
+                  width="43px"
+                  height="43px"
+                />
               </Div>
               <Div flexDirection="column" margin="0 0 0 15px">
                 <H3 textAlign="left" margin="0 0 20px 0">
@@ -364,6 +370,7 @@ export const query = graphql`
               content
               icon
               title
+              color
             }
           }
           two_column {
