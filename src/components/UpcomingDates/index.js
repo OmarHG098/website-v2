@@ -71,6 +71,9 @@ const UpcomingDates = ({
               remote_usa
               remote_latam
               remote_europe
+              region_usa
+              region_latam
+              region_europe
             }
             no_course_message
             footer {
@@ -97,6 +100,7 @@ const UpcomingDates = ({
   const [showForm, setShowForm] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [academy, setAcademy] = useState(null);
+  const [selectedRegion, setSelectedRegion] = useState(null);
 
   const [formStatus, setFormStatus] = useState({
     status: "idle",
@@ -168,14 +172,17 @@ const UpcomingDates = ({
   const getData = async () => {
     try {
       setIsLoading(true);
-      const academySlug =
-        session?.academyAliasDictionary?.[location] ||
-        location ||
-        session?.academyAliasDictionary?.[academy?.value];
+      // For region-based filtering, we need to fetch all cohorts, not filter by academy
+      const academySlug = selectedRegion?.value 
+        ? undefined  // Don't filter by academy when using regions
+        : session?.academyAliasDictionary?.[location] ||
+          location ||
+          session?.academyAliasDictionary?.[academy?.value];
+
 
       const response = await getCohorts({
         academy: academySlug,
-        limit: 10,
+        limit: selectedRegion?.value ? 50 : 10,  // Get more cohorts for regional filtering
         syllabus_slug_like: defaultCourse || undefined,
       });
 
@@ -221,6 +228,31 @@ const UpcomingDates = ({
               return false;
             }
           }
+          
+          // Region filter using selectedRegion
+          if (selectedRegion?.value) {
+            const slug = String(elm.slug || "").toLowerCase();
+            
+            // Determine which region this cohort belongs to
+            const isUSA = slug.startsWith("miami") || slug.includes("usa");
+            const isEurope = slug.startsWith("spain") || slug.includes("europe");
+            const isLATAM = slug.startsWith("latam");
+            
+            // Only show cohorts that match the selected region
+            if (selectedRegion.value === "usa") {
+              return isUSA;
+            }
+            if (selectedRegion.value === "europe") {
+              return isEurope;
+            }
+            if (selectedRegion.value === "latam") {
+              return isLATAM;
+            }
+            
+            // If no pattern matches, don't show the cohort
+            return false;
+          }
+          
           return true;
         }) || [];
 
@@ -294,7 +326,7 @@ const UpcomingDates = ({
 
   useEffect(() => {
     if (session?.academyAliasDictionary) getData();
-  }, [session, academy]);
+  }, [session, selectedRegion]);
 
   const formIsValid = (formData = null) => {
     if (!formData) return null;
@@ -304,23 +336,36 @@ const UpcomingDates = ({
     return true;
   };
 
+  // Build region-only dropdown options from YAML labels
   useEffect(() => {
-    if (session && Array.isArray(session.locations)) {
-      const _data = {
-        ...data,
-        cohorts: {
-          ...data.cohorts,
-          catalog: [{ label: "All Locations", value: null }].concat(
-            session.locations.map((l) => ({
-              label: l.city,
-              value: l.breathecode_location_slug,
-            }))
-          ),
-        },
-      };
-      setData(_data);
-    }
-  }, [session]);
+    if (!content?.info) return;
+    const regionOptions = [
+      { label: content.info.region_usa, value: "usa" },
+      { label: content.info.region_latam, value: "latam" },
+      { label: content.info.region_europe, value: "europe" },
+    ];
+    setData((prev) => ({
+      cohorts: {
+        ...prev.cohorts,
+        catalog: regionOptions,
+      },
+    }));
+  }, [content?.info]);
+
+  // Auto-select region based on session.location.meta_info.region
+  useEffect(() => {
+    const region = session?.location?.meta_info?.region;
+    if (!region) return;
+    const normalized = String(region).toLowerCase();
+    const option =
+      normalized.includes("usa")
+        ? { label: content.info.region_usa, value: "usa" }
+        : normalized.includes("europe")
+        ? { label: content.info.region_europe, value: "europe" }
+        : { label: content.info.region_latam, value: "latam" };
+    setSelectedRegion(option);
+  }, [session?.location?.meta_info?.region, content?.info]);
+
   const buttonText = session?.location?.button.apply_button_text;
 
   const isAliasLocation = (slug) => {
@@ -399,11 +444,10 @@ const UpcomingDates = ({
                   },
                 }}
                 options={data?.cohorts?.catalog}
-                placeholder={
-                  academy ? `Campus: ${academy.label}` : content.placeholder
-                }
+                placeholder={selectedRegion?.label || content.placeholder}
+                value={selectedRegion}
                 onChange={(opt) => {
-                  setAcademy(opt);
+                  setSelectedRegion(opt);
                 }}
               />
             </Div>

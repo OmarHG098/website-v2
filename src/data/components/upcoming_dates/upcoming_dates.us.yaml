@@ -49,6 +49,9 @@ info:
   remote_usa: Remote - USA
   remote_latam: Remote - LATAM
   remote_europe: Remote - Europe
+  region_usa: USA
+  region_latam: LATAM
+  region_europe: Europe
 footer:
   button_text: See more dates
   button_text_open: See more dates
