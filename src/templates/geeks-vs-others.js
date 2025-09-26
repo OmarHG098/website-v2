@@ -39,18 +39,6 @@ const View = (props) => {
           <>
             <span
               style={{
-                display: "block",
-                fontFamily: "Lato, sans-serif",
-                fontWeight: "300",
-                color: "#606060",
-                marginBottom: "16px",
-                fontSize: "26px",
-              }}
-            >
-              {yml.header.sub_title}
-            </span>
-            <span
-              style={{
                 fontFamily: "Roboto, sans-serif",
                 color: "#424242",
                 lineHeight: "1.5",
