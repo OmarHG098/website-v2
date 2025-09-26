@@ -471,7 +471,6 @@ export const query = graphql`
               name
               image
               featured
-              link
             }
           }
         }
