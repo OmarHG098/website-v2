@@ -493,7 +493,14 @@ const Home = (props) => {
         allLocationYaml={data.allLocationYaml}
         hideHeading
       />
-      <DoubleActionCTA ctaData={yml.double_action_cta} />
+      <DoubleActionCTA
+        lang={pageContext.lang}
+        title={yml.double_action_cta?.title}
+        description={yml.double_action_cta?.description}
+        primary={yml.double_action_cta?.primary}
+        secondary={yml.double_action_cta?.secondary}
+        newsletter_form={yml.double_action_cta?.newsletter_form}
+      />
     </>
   );
 };

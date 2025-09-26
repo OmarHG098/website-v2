@@ -176,7 +176,17 @@ const Financial = (props) => {
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
-      <DoubleActionCTA disableRestriction disableBullets ctaData={yml.cta} />
+      <DoubleActionCTA
+        disableBullets
+        lang={pageContext.lang}
+        title={yml.cta?.title || yml.double_action_cta?.title}
+        description={yml.cta?.description || yml.double_action_cta?.description}
+        primary={yml.cta?.primary || yml.double_action_cta?.primary}
+        secondary={yml.cta?.secondary || yml.double_action_cta?.secondary}
+        newsletter_form={
+          yml.cta?.newsletter_form || yml.double_action_cta?.newsletter_form
+        }
+      />
     </>
   );
 };
@@ -193,7 +203,6 @@ export const query = graphql`
             description
             image
             keywords
-            hideGlobalCTA
           }
           seo_title
           header {
