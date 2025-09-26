@@ -62,8 +62,8 @@ staff:
     coding_skills:
       - 
     location: ["all"]
-  - name: "Victor"
-    last_name: "Gómez"
+  - name: "Victor Manuel"
+    last_name: "Gómez Pérez"
     nick_name: ""
     slug: ""
     job_title: "Regional Manager Europa"
@@ -116,7 +116,7 @@ staff:
       - Javascript and Python
     location: ["all"]
   - name: "Laura"
-    last_name: ""
+    last_name: "Magallanes"
     nick_name: ""
     slug: 
     job_title: "Program Manager USA"
@@ -169,16 +169,16 @@ staff:
       - 
     location: ["all"]
   - name: "Valentina"
-    last_name: "V"
+    last_name: "Botana"
     nick_name: ""
     slug: 
     job_title: "Career Support Coordinator USA & LATAM"
     github: ""
     bio: ""
-    linkdin: "https://www.linkedin.com/in/{laura}/"
+    linkdin: "https://www.linkedin.com/in/valentina-botana/"
     twitter: ""
     website: ""
-    image: "../../../../static/images/staff/laura.jpg"
+    image: "../../../../static/images/staff/valentina-botana.jpg"
     age: 
     interests:
       - 

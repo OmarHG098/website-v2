@@ -12,6 +12,7 @@ import BaseRender from "./_baseLayout";
 import Staff from "../components/Staff";
 import Icon from "../components/Icon";
 import { Circle } from "../components/BackgroundDrawing";
+import TwoColumn from "../components/TwoColumn";
 
 const Why = (props) => {
   const { data, pageContext, yml } = props;
@@ -19,6 +20,11 @@ const Why = (props) => {
   const cornerstones = yml.cornerstones;
   const hiring = data.allPartnerYaml.edges[0].node;
   const partnersData = data.allPartnerYaml.edges[0].node;
+
+  const twoColumn = yml.two_column[0];
+
+  console.log('yml.partner_images:::', yml.partner_images);
+
   return (
     <>
       <Header
@@ -94,13 +100,19 @@ const Why = (props) => {
         padding="58px 17px"
         padding_tablet="70px 0"
         paddingText="0 0 0.5em 0"
-        paddingText_tablet="0 0 1.6em 0"
+        paddingText_tablet="0 4% 1.6em 4%"
+        paragraphStyles={{
+          lineHeight: "normal",
+          textWrap: "balance",
+          margin: "0px",
+        }}
       />
 
       <GridContainer
         height="auto"
         columns_tablet="2"
         padding="0"
+        margin="0 0 50px 0"
         margin_tablet="0 0 88px 0"
         childMaxWidth="1280px"
         childMargin="auto"
@@ -110,13 +122,20 @@ const Why = (props) => {
           justifyContent_tablet="start"
           padding="41px 17px 0 17px"
           padding_tablet="56px 0 0 0"
+          alignSelf="center"
         >
-          <H2 textAlign="left" margin="0 0 15px 0">
+          <H2 fontSize="42px" textAlign="left" margin="0 0 20px 0">
             {yml.what_is_4geeks.title}
           </H2>
 
           {yml.what_is_4geeks.paragraph.split("\n").map((paragraph, index) => (
-            <Paragraph key={index} textAlign="left" margin="0 0 15px 0">
+            <Paragraph
+              fontSize="20px"
+              key={index}
+              letterSpacing="0.05em"
+              textAlign="left"
+              margin="0 0 15px 0"
+            >
               {paragraph}
             </Paragraph>
           ))}
@@ -138,7 +157,6 @@ const Why = (props) => {
           />
         </Div>
       </GridContainer>
-      <Credentials lang={data.allCredentialsYaml.edges} />
       <GridContainer
         margin="0 0 40px 0"
         padding="0"
@@ -175,9 +193,40 @@ const Why = (props) => {
             </Div>
           ))}
       </GridContainer>
-      <GridContainer margin_tablet="0 0 76px 0" margin="0 0 65px 0">
-        <Div height="5px" background={Colors.verylightGray}></Div>
-      </GridContainer>
+
+      <Credentials lang={data.allCredentialsYaml.edges} />
+
+      <TwoColumn
+        // bg_full={true}
+        containerStyle={{
+          padding: "5rem 20px 40px 20px",
+          padding_tablet: "5rem 40px 40px 40px",
+          padding_md: "5rem 80px 40px 80px",
+          padding_lg: "5rem 0 40px 0",
+        }}
+        left={{ image: twoColumn.image, style: twoColumn.image.style }}
+        right={{
+          heading: twoColumn.heading,
+          sub_heading: twoColumn.sub_heading,
+          bullets: twoColumn.bullets,
+          content: twoColumn.content,
+          // button: twoColumn.button,
+          boxes: twoColumn.boxes,
+          gap_tablet: "40px",
+        }}
+        background={twoColumn.background}
+        // proportions={ymlTwoColumn.proportions}
+        session={session}
+      />
+      <OurPartners
+        marquee
+        duration="45"
+        padding="0 0 4em 0"
+        margin="0"
+        images={yml.partner_images}
+        // showFeatured
+        props={{}}
+      />
 
       <OurPartners
         images={partnersData.partners.images}
@@ -186,6 +235,8 @@ const Why = (props) => {
         showFeatured={true}
         props={partnersData.partners}
         marquee
+        margin="0"
+        padding="calc((100vw - 320px) * (75 / (1920 - 320))) 0px 75px 0px"
       />
       <Staff lang={pageContext.lang} />
     </>
@@ -316,6 +367,41 @@ export const query = graphql`
               content
               icon
               title
+            }
+          }
+          two_column {
+            image {
+              style
+              src
+            }
+            heading {
+              style
+              text
+              font_size
+            }
+            sub_heading {
+              style
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              hover_color
+              path
+            }
+          }
+          partner_images {
+            name
+            image  {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+              }
             }
           }
           staff {

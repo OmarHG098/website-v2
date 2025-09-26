@@ -116,6 +116,7 @@ const Badges = ({
   bottom_paragraph,
   imageBackground,
   imageBorder,
+  paragraphStyles,
   variant,
 }) => {
   const data = useStaticQuery(graphql`
@@ -211,6 +212,7 @@ const Badges = ({
                 color={Colors.darkGray}
                 dangerouslySetInnerHTML={{ __html: paragraph }}
                 margin="15px 0 0 0"
+                {...paragraphStyles}
               />
             </Div>
           )}
