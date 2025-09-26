@@ -11,7 +11,7 @@ meta_info:
 ## BANNER - HEADER
 seo_title: "¿Qué es el Prework?"
 header:
-  title: "Prework en 4Geeks: Tu Ventaja Inicial en Tecnología"
+  title: "Prework en 4Geeks:\nTu Ventaja Inicial en Tecnología"
   paragraph: |
     <span>El Prework es el primer paso de cada bootcamp. Combina estudio a tu propio ritmo con apoyo de mentores en vivo, así que nunca estarás solo. Cubrirás conceptos esenciales, practicarás con nuestras plataformas y desarrollarás los hábitos que te acompañarán durante todo el programa.</span>
 
@@ -87,6 +87,6 @@ cta:
     text: "Inscríbete Ahora"
     link: "/es/apply"
   secondary_button:
-    text: "Conoce Más Sobre Programas"
+    text: "Explora Nuestros Programas"
     link: "/es/programs"
   

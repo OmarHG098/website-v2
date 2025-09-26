@@ -11,7 +11,7 @@ meta_info:
 ## BANNER - HEADER
 seo_title: "What is Prework"
 header:
-  title: "Prework at 4Geeks: Your Head Start into Tech"
+  title: "Prework at 4Geeks:\nYour Head Start into Tech"
   paragraph: |
     <span>Prework is the first step of every bootcamp. It combines self-paced study with live mentor support, so you're never on your own. You'll cover essential concepts, practice with our platforms, and build the habits that carry you through the program.</span>
 
@@ -24,7 +24,7 @@ header:
 
 ## WHAT YOU'LL LEARN SECTION
 what_you_will_learn:
-  title: "🔍 What You'll Learn & Do"
+  title: "What You'll Learn & Do"
   paragraph: |
     Prework isn't just about content — it's about learning how to learn in a coding environment. You'll:
   bullets:
@@ -87,5 +87,5 @@ cta:
     text: "Apply Now"
     link: "/us/apply"
   secondary_button:
-    text: "Learn More About Programs"
+    text: "Explore Our Programs"
     link: "/us/programs"

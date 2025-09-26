@@ -57,7 +57,7 @@ const Prework = (props) => {
         position="relative"
         zIndex="2"
       >
-        <Div flex="1" flexDirection="column" gap="2rem">
+        <Div flex_tablet="1" flexDirection="column" gap="2rem">
           <Div
             background="rgba(255,255,255,0.2)"
             backdropFilter="blur(10px)"
@@ -72,19 +72,25 @@ const Prework = (props) => {
             <H1 type="h1" textAlign="left">
               {yml.seo_title}
             </H1>
-            <H2
-              margin="0"
-              type="h2"
-              fontFamily="Archivo-Black"
-              color={Colors.black}
-              textAlign="left"
-              fontSize="46px"
-              fontSize_tablet="50px"
-              lineHeight="54px"
-              textWrap="balance"
-            >
-              {yml.header.title}
-            </H2>
+            {yml?.header?.title && (
+              <H2
+                margin="0"
+                type="h2"
+                fontFamily="Archivo-Black"
+                color={Colors.black}
+                textAlign="left"
+                fontSize="46px"
+                fontSize_tablet="50px"
+                lineHeight="54px"
+                textWrap="balance"
+                display="flex"
+                flexDirection="column"
+              >
+                {yml.header.title.split("\n").map((s, i) => (
+                  <span key={i}>{s}</span>
+                ))}
+              </H2>
+            )}
           </Div>
 
           <Paragraph
@@ -115,7 +121,7 @@ const Prework = (props) => {
           )}
         </Div>
 
-        <Div display="none" display_tablet="block" position="relative">
+        <Div flex_tablet="1" display="none" display_tablet="block" position="relative">
           <Div position="relative" overflow="hidden" maxWidth="85rem">
             <GatsbyImage image={image} alt={yml.header.alt} />
           </Div>
@@ -142,6 +148,7 @@ const Prework = (props) => {
                 as: "h2",
                 style: {
                   fontSize: "40px",
+                  fontFamily: "Lato",
                   width: "100%",
                   margin: "0 auto 30px auto",
                 },
