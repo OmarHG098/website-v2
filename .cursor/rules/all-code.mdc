@@ -16,6 +16,57 @@ const applyLink = "/us/apply";
 {getRegionalCTA(session, info)?.apply_link}
 ```
 
+### 2.1.1 YAML + GraphQL Workflow (CRITICAL)
+**MANDATORY PROCESS:** Every time you add a new field to YAML files, you MUST update the corresponding GraphQL query.
+
+**STEP-BY-STEP PROCESS:**
+1. **📋 Plan:** Identify what YAML fields need to be added
+2. **🏗️ YAML First:** Update both `.us.yml` and `.es.yml` files
+3. **🔍 GraphQL:** **MANDATORY** - Update GraphQL query to include new fields
+4. **⚛️ Component:** Update React component to use new fields
+5. **🧪 Test:** Run `npm run test` after each step
+
+**EXAMPLE WORKFLOW:**
+```javascript
+// 1. YAML files updated
+// prices_and_payment.us.yml
+other_payment_options: "Other payment options"
+
+// prices_and_payment.es.yml  
+other_payment_options: "Otras opciones de pago"
+
+// 2. GraphQL query updated (MANDATORY)
+const data = useStaticQuery(graphql`
+  query PricesAndPayment {
+    content: allPricesAndPaymentYaml {
+      edges {
+        node {
+          fields { lang }
+          we_accept
+          other_payment_options  // ✅ NEW FIELD ADDED
+          top_label
+        }
+      }
+    }
+  }
+`);
+
+// 3. Component uses field
+{info.other_payment_options} // ✅ WORKS
+```
+
+**COMMON GRAPHQL QUERY LOCATIONS:**
+```bash
+# Search for GraphQL queries
+grep -r "useStaticQuery\|graphql\`" src/components/
+
+# Common patterns:
+# - useStaticQuery(graphql`query ComponentName`)
+# - allPricesAndPaymentYaml
+# - allPlansYaml
+# - allLocationsYaml
+```
+
 ### 2.2 Commit Message Standards
 **FORMAT:** `PREFIX: Description (max 50 chars)`
 
@@ -287,12 +338,13 @@ job_guarantee_locations: [
 
 ### 6.2 Code Review Checklist
 - [ ] Both `.us.yml` and `.es.yml` files updated
-- [ ] GraphQL queries include all new YAML fields
+- [ ] **GraphQL queries include all new YAML fields** ⚠️ CRITICAL
 - [ ] Component logic handles undefined/null values gracefully
 - [ ] Regional filtering uses selected academy, not visitor origin
 - [ ] All tests pass (`npm run test`)
 - [ ] Commit messages follow project standards
 - [ ] Mobile and desktop rendering tested
+- [ ] **GraphQL query compilation successful** ⚠️ NEW
 
 ### 6.3 Debugging Guide
 **COMMON DEBUG POINTS:**
@@ -300,6 +352,33 @@ job_guarantee_locations: [
 2. **Regional logic broken:** Verify academy-based filtering
 3. **Spanish page errors:** Check both language files have matching keys
 4. **Toggle not working:** Ensure state variables are passed to child components
+
+### 6.4 GraphQL Debugging 
+**COMMON GRAPHQL PROBLEMS:**
+1. **Field undefined:** Check GraphQL query includes the field
+2. **Type mismatch:** Ensure YAML structure matches GraphQL expectations
+3. **Query compilation fails:** Check field name spelling and syntax
+4. **Data not loading:** Verify both .us.yml and .es.yml have the field
+
+**DEBUG COMMANDS:**
+```bash
+# Test GraphQL query compilation
+npm run build
+
+# Check GraphQL schema
+# Visit http://localhost:8000/___graphql
+
+# Test specific query
+query {
+  allPricesAndPaymentYaml {
+    edges {
+      node {
+        other_payment_options  # Test if field exists
+      }
+    }
+  }
+}
+```
 
 ---
 
@@ -371,9 +450,7 @@ useEffect(() => {
 ### 8.3 Testing Commands
 ```bash
 npm run test              # Full test suite
-npm run develop          # Development server
 npm run build            # Production build
-npm run serve            # Serve built site
 ```
 
 ---
