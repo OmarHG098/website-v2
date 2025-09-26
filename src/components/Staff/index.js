@@ -146,8 +146,8 @@ const Staff = (props) => {
             }}
           >
             {staffFilteredByLocation?.map((item, index) => {
-              const firstName = item.name?.split(' ')[0] || '';
-              const lastName = item.last_name?.split(' ')[0] || '';
+              const firstName = item.name?.split(" ")[0] || "";
+              const lastName = item.last_name?.split(" ")[0] || "";
               return (
                 <Div
                   key={index}

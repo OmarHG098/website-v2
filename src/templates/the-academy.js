@@ -20,10 +20,7 @@ const Why = (props) => {
   const cornerstones = yml.cornerstones;
   const hiring = data.allPartnerYaml.edges[0].node;
   const partnersData = data.allPartnerYaml.edges[0].node;
-
   const twoColumn = yml.two_column[0];
-
-  console.log('yml.partner_images:::', yml.partner_images);
 
   return (
     <>
@@ -394,7 +391,7 @@ export const query = graphql`
           }
           partner_images {
             name
-            image  {
+            image {
               childImageSharp {
                 gatsbyImageData(
                   layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
