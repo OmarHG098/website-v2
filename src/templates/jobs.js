@@ -44,7 +44,12 @@ const Jobs = ({ data, pageContext, yml }) => {
           />
         </Div>
 
-        <Div gridColumn_tablet="8 / 13" flexDirection="column" alignItems="center" justifyContent="center">
+        <Div
+          gridColumn_tablet="8 / 13"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+        >
           <GatsbyImage
             style={{
               height: "300px",
