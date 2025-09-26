@@ -84,8 +84,8 @@ cta:
   subtitle: "Inscríbete hoy y obtén acceso instantáneo al Prework — tu primer paso hacia una nueva carrera en tecnología."
   primary_button:
     text: "Inscríbete Ahora"
-    link: "/es/apply"
+    link: "/es/aplica"
   secondary_button:
     text: "Explora Nuestros Programas"
-    link: "/es/programs"
+    link: "/es/programas"
   
