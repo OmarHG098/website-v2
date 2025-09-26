@@ -978,6 +978,7 @@ export const query = graphql`
         node {
           testimonials {
             student_name
+            related_features
             testimonial_date
             hidden
             include_in_marquee

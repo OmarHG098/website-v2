@@ -1043,6 +1043,7 @@ export const query = graphql`
         node {
           testimonials {
             student_name
+            related_features
             slug
             testimonial_date
             hidden

@@ -299,7 +299,6 @@ const Footer = ({ yml }) => {
                     </Link>
                   </label>
                 </Div>
-
                 {formData.privacyPolicy.valid === false &&
                   formStatus.status === "error" && (
                     <Div
