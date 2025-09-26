@@ -324,6 +324,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
       </Div>
 
       <Testimonials
+        categories={["scolarships", "price", "outcomes"]}
         lang={data.allTestimonialsYaml.edges}
         margin_tablet="75px 0 0 0"
         margin="45px 0 0 0"
@@ -576,6 +577,7 @@ export const query = graphql`
           button_link
           testimonials {
             student_name
+            related_features
             testimonial_date
             include_in_marquee
             hidden
