@@ -71,25 +71,6 @@ staff:
     coding_skills:
       - 
     location: ["all"]
-  - name: "Macarena"
-    last_name: "Rebolledo"
-    nick_name: "Macarena"
-    slug: "macarena-rebolledo"
-    job_title: "Lead Mentor"
-    bio: ""
-    github: "https://github.com/mojonapower"
-    linkdin: "https://www.linkedin.com/in/mrebolledovaldivia/"
-    twitter: ""
-    website: ""
-    image: "../../../../static/images/staff/macarenarebolledo.jpg"
-    age: 42
-    interests:
-      - Board Games
-      - Soccer
-      - Music
-    coding_skills:
-      - Javascript and Python
-    location: ["all"]    
   - name: "Pablo"
     last_name: "Bullor"
     nick_name: "Pablo"
