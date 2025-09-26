@@ -121,7 +121,12 @@ const Prework = (props) => {
           )}
         </Div>
 
-        <Div flex_tablet="1" display="none" display_tablet="block" position="relative">
+        <Div
+          flex_tablet="1"
+          display="none"
+          display_tablet="block"
+          position="relative"
+        >
           <Div position="relative" overflow="hidden" maxWidth="85rem">
             <GatsbyImage image={image} alt={yml.header.alt} />
           </Div>
