@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import { Div, GridContainer } from "../Sections";
+import { Div, GridContainer, Grid } from "../Sections";
 import { H3, Span, Paragraph } from "../Heading";
 import { Colors } from "../Styling";
 // import Link from "gatsby-link";
@@ -34,27 +34,36 @@ const JobInfo = ({ lang }) => {
   return (
     // <Fragment github="/job">
     <GridContainer
-      columns="1"
-      columns_tablet="3"
-      gridGap="20px"
-      margin="50px 0"
-      margin_tablet="30px 0 70px 0"
-      overflowX="auto"
-      className="hideScrollbar"
-      style={{
-        scrollSnapType: "x mandatory",
-        WebkitOverflowScrolling: "touch",
-        scrollBehavior: "smooth",
-      }}
+      background={Colors.white}
+      containerColumns_tablet="1fr repeat(12,1fr) 1fr"
+      padding="40px 17px"
+      padding_tablet="40px 0"
+      childMaxWidth="1280px"
+      childMargin="auto"
+      gridColumn_tablet="1 / span 14"
+      childWidth="100%"
+      overflow="hidden"
     >
-      {jobsInLang
+      <Grid
+        gridTemplateColumns="1fr"
+        gridTemplateColumns_sm="repeat(2, 1fr)"
+        gridTemplateColumns_tablet="repeat(3, 1fr)"
+        gridGap="20px"
+        padding="0"
+        padding_tablet="0 40px 40px 0"
+        padding_md="0 80px 80px 0"
+        padding_lg="0 40px 40px 0"
+        width="100%"
+        maxWidth="100%"
+        overflow="hidden"
+      >
+        {jobsInLang
         ? jobsInLang.map((item, index) => {
             return (
               <Div
                 key={index}
                 style={{
-                  position: "relative",
-                  scrollSnapAlign: "start",
+                  position: "relative"
                 }}
                 border="1px solid black"
                 borderLeft="6px solid black"
@@ -68,7 +77,9 @@ const JobInfo = ({ lang }) => {
                 height="100%"
                 padding="24px"
                 background={Colors.white}
-                margin="0 0 10px 0"
+                width="100%"
+                maxWidth="100%"
+                boxSizing="border-box"
               >
                 <H3 textAlign="left">
                   {item.node.banner_heading}
@@ -121,6 +132,7 @@ const JobInfo = ({ lang }) => {
             );
           })
         : "Loading"}
+      </Grid>
     </GridContainer>
   );
 };
