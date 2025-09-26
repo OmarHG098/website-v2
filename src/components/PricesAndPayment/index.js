@@ -441,11 +441,19 @@ const FinancialOptionsDesktop = ({
           {availablePlans?.some((p) => p.price) &&
             shouldShowJobGuarantee(currentLocation, info) &&
             schedule !== "full_time" && (
-              <Div margin="16px 0 0 0" display="block">
-                <Div alignItems="center">
+              <Div
+                margin="16px 0 0 0"
+                display="block"
+                background="#f8f9fa"
+                padding="16px"
+                borderRadius="8px"
+                border="1px solid #e9ecef"
+              >
+                <Div alignItems="left" display="flex">
                   <Toggle
                     width="42px"
                     height="22px"
+                    margin="0 0 0 12px"
                     b_radius="9999px"
                     bg={jobGuarantee ? Colors.blue : Colors.lightGray}
                     onClick={() =>
@@ -468,7 +476,8 @@ const FinancialOptionsDesktop = ({
                   <H4
                     fontSize_tablet="18px"
                     fontSize_xs="16px"
-                    margin="0 0 0 10px"
+                    margin="0"
+                    padding="0"
                   >
                     {getJobGuaranteeConfig(currentLocation, info)?.title}
                   </H4>
@@ -524,7 +533,7 @@ const FinancialOptionsDesktop = ({
             margin="0 0 12px 0"
             textAlign="left"
           >
-            {"Other payment options"}
+            {info.other_payment_options}
           </H3>
           {(paymentOptions || []).map((option) => {
             return (
@@ -532,9 +541,8 @@ const FinancialOptionsDesktop = ({
                 key={option.id}
                 border="none"
                 background={Colors.verylightGray3}
-                padding="16px"
+                padding="8px"
                 borderRadius="8px"
-                margin="0 0 12px 0"
                 cursor="default"
               >
                 <Div display="block" width="100%">
@@ -935,6 +943,7 @@ const PricesAndPayment = (props) => {
             contact_carrer_advisor
             contact_link
             we_accept
+            other_payment_options
             top_label
             top_label_2
             plans_title
