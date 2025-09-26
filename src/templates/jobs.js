@@ -20,37 +20,35 @@ const Jobs = ({ data, pageContext, yml }) => {
       <GridContainer
         margin="20px auto 0 auto"
         margin_tablet="auto"
+        padding="0 17px"
         padding_tablet="0"
         padding_md="6rem 0 4rem"
-        containerColumns_tablet="1fr repeat(12,1fr) 1fr"
-        columns_tablet="2"
+        columns_tablet="12"
         maxWidth="1280px"
         gridColumn_tablet="1 / span 14"
-        alignItems="center"
       >
-        <Header
-          hideArrowKey
-          textAlign_tablet="left"
-          seo_title={yml.seo_title}
-          title={yml.header.title}
-          paragraph={yml.header.paragraph}
-          fontSize_paragraph="21px"
-          padding_md="0px 40px 40px 40px"
-          padding_lg="0px 40px 40px 40px"
-          padding="0 10px"
-          margin="0"
-          paddingTitle="0"
-          paddingParagraph="0"
-          position="relative"
-        />
+        <Div gridColumn_tablet="1 / 8" flexDirection="column">
+          <Header
+            hideArrowKey
+            textAlign_tablet="left"
+            seo_title={yml.seo_title}
+            title={yml.header.title}
+            paragraph={yml.header.paragraph}
+            fontSize_paragraph="21px"
+            padding="0"
+            margin="0"
+            paddingTitle="0"
+            paddingParagraph="0"
+            position="relative"
+            gridTemplateColumns_tablet="1fr"
+          />
+        </Div>
 
-        <Div width="100%" height="80%" margin="20px 0" margin_tablet="0">
+        <Div gridColumn_tablet="8 / 13" flexDirection="column" alignItems="center" justifyContent="center">
           <GatsbyImage
             style={{
               height: "300px",
-              minWidth: "150px",
-              width: "auto",
-              margin: "0 20px",
+              width: "100%",
             }}
             imgStyle={{
               objectFit: "contain",
@@ -73,14 +71,14 @@ const Jobs = ({ data, pageContext, yml }) => {
 
       <GridContainer
         columns_tablet="12"
-        padding="0 17px 40px 17px"
+        padding="0 17px"
         padding_tablet="0"
         margin="50px auto"
         margin_tablet="0 auto 81px auto"
         gridColumn_tablet="1 / span 14"
         maxWidth="1280px"
       >
-        <Div gridColumn_tablet="1 / 7" flexDirection="column">
+        <Div gridColumn_tablet="1 / 8" flexDirection="column">
           <H2 textAlign_md="left" margin="0 0 30px 0">
             {yml.form.title}
           </H2>
@@ -89,11 +87,12 @@ const Jobs = ({ data, pageContext, yml }) => {
               key={i}
               margin="7px 0"
               textAlign_md="left"
+              fontSize="18px"
               dangerouslySetInnerHTML={{ __html: m }}
             />
           ))}
         </Div>
-        <Div flexDirection="column" gridColumn_tablet="7 / 13">
+        <Div flexDirection="column" gridColumn_tablet="8 / 13">
           <LeadForm
             formHandler={applyJob}
             handleClose={() => {}}

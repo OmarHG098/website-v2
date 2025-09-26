@@ -35,7 +35,6 @@ const JobInfo = ({ lang }) => {
     // <Fragment github="/job">
     <GridContainer
       columns="1"
-      columns_sm="2"
       columns_tablet="3"
       gridGap="20px"
       margin="50px 0"
