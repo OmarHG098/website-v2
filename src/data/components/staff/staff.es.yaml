@@ -122,10 +122,10 @@ staff:
     job_title: "Program Manager USA"
     github: ""
     bio: ""
-    linkdin: "https://www.linkedin.com/in/{laura}/"
+    linkdin: "https://www.linkedin.com/in/laura-magallanes-dev/"
     twitter: ""
     website: ""
-    image: "../../../../static/images/staff/laura.jpg"
+    image: "../../../../static/images/staff/laura.webp"
     age: 
     interests:
       - 
@@ -159,7 +159,7 @@ staff:
     linkdin: "https://www.linkedin.com/in/valentina-botana/"
     twitter: ""
     website: ""
-    image: "../../../../static/images/staff/valentina-botana.jpg"
+    image: "../../../../static/images/staff/valentina-botana.webp"
     age: 
     interests:
       - 
