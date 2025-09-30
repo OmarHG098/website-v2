@@ -278,14 +278,27 @@ const UpcomingDates = ({
           fallbackMatch: syllabusSlug?.includes(normalizedDefaultCourse || ""),
         });
 
+        // More precise matching using actual syllabus patterns
         const courseMatchers = {
-          "full-stack": () =>
-            syllabusSlug?.includes("part-time") || syllabusSlug?.includes("pt"),
-          "full-stack-ft": () =>
-            (syllabusSlug?.includes("full-time") ||
-              syllabusSlug?.includes("ft")) &&
-            !syllabusSlug?.includes("part-time") &&
-            !syllabusSlug?.includes("pt"),
+          "full-stack": () => {
+            // Part-time full-stack: should contain "pt" but not be exactly "full-stack-ft"
+            return (
+              syllabusSlug?.includes("full-stack") &&
+              (syllabusSlug?.includes("pt") ||
+                syllabusSlug?.includes("part-time")) &&
+              syllabusSlug !== "full-stack-ft"
+            );
+          },
+          "full-stack-ft": () => {
+            // Full-time full-stack: exact match or contains "ft" without "pt"
+            return (
+              syllabusSlug === "full-stack-ft" ||
+              (syllabusSlug?.includes("full-stack") &&
+                syllabusSlug?.includes("ft") &&
+                !syllabusSlug?.includes("pt") &&
+                !syllabusSlug?.includes("part-time"))
+            );
+          },
           "machine-learning": () => syllabusSlug?.includes("machine-learning"),
           cybersecurity: () =>
             syllabusSlug?.includes("cybersecurity") ||
