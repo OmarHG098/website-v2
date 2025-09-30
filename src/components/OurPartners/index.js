@@ -200,8 +200,8 @@ const Images_Featured = (props) => {
               return (
                 <Div
                   key={i}
-                  width="140px"
-                  height="70px"
+                  width="186px"
+                  height="93px"
                   background={Colors.white}
                   flexDirection="column"
                   justifyContent="center"
@@ -211,8 +211,8 @@ const Images_Featured = (props) => {
                   {hasGatsbyImage ? (
                     <GatsbyImage
                       style={{
-                        height: "50px",
-                        minWidth: "60px",
+                        height: "67px",
+                        minWidth: "80px",
                         margin: "auto",
                         width: "100%",
                       }}
@@ -224,8 +224,8 @@ const Images_Featured = (props) => {
                   ) : (
                     <img
                       style={{
-                        height: "50px",
-                        minWidth: "60px",
+                        height: "67px",
+                        minWidth: "80px",
                         margin: "auto",
                         width: "100%",
                         objectFit: "contain",
@@ -277,9 +277,9 @@ const Images_Featured = (props) => {
               <GatsbyImage
                 key={i}
                 style={{
-                  height: "55px",
-                  minWidth: "100px",
-                  width: "200px",
+                  height: "73px",
+                  minWidth: "133px",
+                  width: "180px",
                   margin: "23px 8px",
                 }}
                 imgStyle={{ objectFit: "contain" }}
@@ -293,9 +293,9 @@ const Images_Featured = (props) => {
               <img
                 key={i}
                 style={{
-                  height: "55px",
-                  minWidth: "100px",
-                  width: "200px",
+                  height: "73px",
+                  minWidth: "133px",
+                  width: "180px",
                   margin: "23px 8px",
                   objectFit: "contain",
                 }}

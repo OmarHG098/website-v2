@@ -63,7 +63,7 @@ two_column_left:
     - 6
   image:
     style: '{ "backgroundSize": "contain", "backgroundPosition": "center center" }'
-    src: "/images/landing/scholarshipss-image.webp"
+    src: "/images/landing/20-millions-image.webp"
   heading:
     text: Cientos de Vidas Cambiadas a Través de Becas. Tú Podrías Ser el Siguiente.
     font_size:
