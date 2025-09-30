@@ -848,17 +848,24 @@ export const landingSections = {
     const featuredLogos = landingHiring?.featured;
 
     // Determinar qué imágenes mostrar
-    const imagesToShow =
-      featuredLogos?.length > 0 ? featuredLogos : hiring.partners.images;
+    let imagesToShow;
+    let featuredImagesToShow;
 
-    // Si hay featured en el YAML, NO filtrar por showFeatured
-    // Si NO hay featured, usar el comportamiento por defecto (filtrar por featured=true del partner.yaml)
-    const showFeaturedLogos = featuredLogos?.length > 0 ? false : true;
-
-    const featuredImagesToShow =
-      featuredLogos?.length > 0
-        ? featuredLogos
-        : hiring.partners.images.filter((img) => img.featured === true);
+    if (featuredLogos?.length > 0) {
+      // Si hay featured en el YAML, mostrar primero los featured y luego el resto
+      const featuredNames = featuredLogos.map((logo) => logo.name);
+      const remainingLogos = hiring.partners.images.filter(
+        (img) => !featuredNames.includes(img.name)
+      );
+      imagesToShow = [...featuredLogos, ...remainingLogos];
+      featuredImagesToShow = featuredLogos;
+    } else {
+      // Si NO hay featured, usar comportamiento por defecto
+      imagesToShow = hiring.partners.images;
+      featuredImagesToShow = hiring.partners.images.filter(
+        (img) => img.featured === true
+      );
+    }
 
     return (
       <Div
@@ -879,7 +886,7 @@ export const landingSections = {
           marquee
           paddingFeatured="0 0 70px 0"
           featuredImages={featuredImagesToShow}
-          showFeatured={showFeaturedLogos}
+          showFeatured={true}
           withoutLine
           title={
             landingHiring ? landingHiring.heading : hiring.partners.tagline
