@@ -13,7 +13,7 @@ header:
   image: "../../../static/images/outcomes/outcomes.png"
 
 content:
-  heading: "Press Highlight"
+  heading: "Press Highlights"
   limit: 9
   news:
     - name: "Global Miami"
