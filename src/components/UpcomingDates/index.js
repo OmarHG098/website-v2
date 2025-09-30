@@ -132,38 +132,38 @@ const UpcomingDates = ({
     return syllabus?.duration_weeks || null;
   };
 
-  // Helper function to get regional remote text based on cohort slug patterns
-  const getRegionalRemoteText = (cohortSlug) => {
-    if (!cohortSlug) return content.info.remote;
-
-    const cohortSlugLower = cohortSlug.toLowerCase();
-
-    // Regional mapping using lookup table pattern
-    const regionalMappings = [
-      {
-        patterns: ["miami", "usa"],
-        text: content.info.remote_usa,
+  // Helper function to get regional remote text based on academy slug
+  const getRegionalRemoteText = (academySlug) => {
+    const regionMappings = {
+      europe: () =>
+        academySlug?.includes("spain") || academySlug === "madrid-spain",
+      latam: () => academySlug === "online",
+      usa: () => {
+        const usaAcademies = [
+          "downtown-miami",
+          "atlanta-usa",
+          "chicago-usa",
+          "houston-usa",
+        ];
+        return (
+          academySlug?.includes("miami") ||
+          academySlug?.includes("usa") ||
+          usaAcademies.includes(academySlug)
+        );
       },
-      {
-        patterns: ["spain", "europe"],
-        text: content.info.remote_europe,
-      },
-      {
-        patterns: ["latam"],
-        text: content.info.remote_latam,
-      },
-    ];
+    };
 
-    // Find matching region using array methods
-    const matchingRegion = regionalMappings.find((region) =>
-      region.patterns.some(
-        (pattern) =>
-          cohortSlugLower.startsWith(pattern) ||
-          cohortSlugLower.includes(pattern)
-      )
+    const matchedRegion = Object.keys(regionMappings).find((region) =>
+      regionMappings[region]()
     );
 
-    return matchingRegion?.text || content.info.remote;
+    const remoteTextMap = {
+      europe: content.info.remote_europe,
+      latam: content.info.remote_latam,
+      usa: content.info.remote_usa,
+    };
+
+    return remoteTextMap[matchedRegion] || content.info.remote;
   };
 
   const emailFormContent = content.email_form_content;
@@ -172,17 +172,15 @@ const UpcomingDates = ({
   const getData = async () => {
     try {
       setIsLoading(true);
-      // For region-based filtering, we need to fetch all cohorts, not filter by academy
-      const academySlug = selectedRegion?.value 
-        ? undefined  // Don't filter by academy when using regions
-        : session?.academyAliasDictionary?.[location] ||
-          location ||
-          session?.academyAliasDictionary?.[academy?.value];
 
+      const academySlug =
+        session?.academyAliasDictionary?.[location] ||
+        location ||
+        session?.academyAliasDictionary?.[academy?.value];
 
       const response = await getCohorts({
         academy: academySlug,
-        limit: selectedRegion?.value ? 50 : 10,  // Get more cohorts for regional filtering
+        limit: 10,
         syllabus_slug_like: defaultCourse || undefined,
       });
 
@@ -198,25 +196,36 @@ const UpcomingDates = ({
           node.breathecode_location_slug === academy?.value
       );
 
+      // Helper function to determine region from academy slug
+      const getRegionFromAcademy = (academySlug) => {
+        const regionDetectors = {
+          europe: () =>
+            academySlug?.includes("spain") || academySlug === "madrid-spain",
+          latam: () => academySlug === "online",
+          usa: () => {
+            const usaAcademies = [
+              "downtown-miami",
+              "atlanta-usa",
+              "chicago-usa",
+              "houston-usa",
+            ];
+            return (
+              academySlug?.includes("miami") ||
+              academySlug?.includes("usa") ||
+              usaAcademies.includes(academySlug)
+            );
+          },
+        };
+
+        return (
+          Object.keys(regionDetectors).find((region) =>
+            regionDetectors[region]()
+          ) || null
+        );
+      };
+
       const cohorts =
         response?.results.filter((elm) => {
-          // Filter out Build Profile / Geekforce related courses
-          if (
-            elm.syllabus_version?.name?.toLowerCase().includes("build") &&
-            elm.syllabus_version?.name?.toLowerCase().includes("profile")
-          ) {
-            return false;
-          }
-
-          // Additional filtering for "Building Your Tech Profile" variations
-          if (
-            elm.syllabus_version?.name?.toLowerCase().includes("building") &&
-            elm.syllabus_version?.name?.toLowerCase().includes("tech")
-          ) {
-            return false;
-          }
-
-          // Existing location-based filtering
           if (
             Array.isArray(academyLocation?.node.meta_info.cohort_exclude_regex)
           ) {
@@ -228,60 +237,41 @@ const UpcomingDates = ({
               return false;
             }
           }
-          
-          // Region filter using selectedRegion
+
           if (selectedRegion?.value) {
-            const slug = String(elm.slug || "").toLowerCase();
-            
-            // Determine which region this cohort belongs to
-            const isUSA = slug.startsWith("miami") || slug.includes("usa");
-            const isEurope = slug.startsWith("spain") || slug.includes("europe");
-            const isLATAM = slug.startsWith("latam");
-            
-            // Only show cohorts that match the selected region
-            if (selectedRegion.value === "usa") {
-              return isUSA;
-            }
-            if (selectedRegion.value === "europe") {
-              return isEurope;
-            }
-            if (selectedRegion.value === "latam") {
-              return isLATAM;
-            }
-            
-            // If no pattern matches, don't show the cohort
-            return false;
+            const cohortRegion = getRegionFromAcademy(elm.academy?.slug);
+            return cohortRegion === selectedRegion.value;
           }
-          
+
           return true;
         }) || [];
 
-      cohorts.forEach((cohort) => {
-        // Validate cohort data
-        if (!cohort.kickoff_date || !cohort.ending_date) {
-          console.warn("Cohort missing date information:", cohort.slug, {
-            kickoff_date: cohort.kickoff_date,
-            ending_date: cohort.ending_date,
-          });
-        }
+      const courseFilteredCohorts = cohorts.filter((cohort) => {
+        const syllabusSlug = cohort.syllabus_version?.slug?.toLowerCase();
 
-        // Validate date format
-        if (cohort.kickoff_date && !dayjs(cohort.kickoff_date).isValid()) {
-          console.error(
-            "Invalid kickoff_date format for cohort:",
-            cohort.slug,
-            cohort.kickoff_date
-          );
-        }
+        const courseMatchers = {
+          "full-stack": () =>
+            syllabusSlug?.includes("part-time") || syllabusSlug?.includes("pt"),
+          "full-stack-ft": () =>
+            (syllabusSlug?.includes("full-time") ||
+              syllabusSlug?.includes("ft")) &&
+            !syllabusSlug?.includes("part-time") &&
+            !syllabusSlug?.includes("pt"),
+          "datascience-machine-learning": () =>
+            syllabusSlug?.includes("data-science") ||
+            syllabusSlug?.includes("datascience"),
+          cybersecurity: () => syllabusSlug?.includes("cybersecurity"),
+        };
 
-        if (cohort.ending_date && !dayjs(cohort.ending_date).isValid()) {
-          console.error(
-            "Invalid ending_date format for cohort:",
-            cohort.slug,
-            cohort.ending_date
-          );
-        }
+        return (
+          !defaultCourse ||
+          !syllabusSlug ||
+          (courseMatchers[defaultCourse]?.() ??
+            syllabusSlug.includes(defaultCourse))
+        );
+      });
 
+      courseFilteredCohorts.forEach((cohort) => {
         const syllabus =
           syllabusAlias.find((syll) => syll.default_course === defaultCourse) ||
           syllabusAlias.find((syll) =>
@@ -294,39 +284,27 @@ const UpcomingDates = ({
           cohort.syllabus_version.name = syllabus.name;
           cohort.syllabus_version.courseSlug = syllabus.course_slug;
           cohort.syllabus_version.duration = syllabus.duration_weeks;
-        } else {
-          console.warn(
-            "No syllabus alias found for cohort:",
-            cohort.slug,
-            cohort.syllabus_version?.slug
-          );
         }
       });
 
       setData((oldData) => ({
         cohorts: {
           catalog: oldData.cohorts.catalog,
-          all: cohorts,
-          filtered: cohorts,
+          all: courseFilteredCohorts,
+          filtered: courseFilteredCohorts,
         },
       }));
+
       setIsLoading(false);
     } catch (e) {
       console.error("Error fetching cohorts data:", e);
-      console.error("Error details:", {
-        message: e.message,
-        stack: e.stack,
-        academySlug: session?.academyAliasDictionary?.[location] || location,
-        defaultCourse,
-        timestamp: new Date().toISOString(),
-      });
       setIsLoading(false);
     }
   };
 
   useEffect(() => {
     if (session?.academyAliasDictionary) getData();
-  }, [session, selectedRegion]);
+  }, [session, academy, selectedRegion]);
 
   const formIsValid = (formData = null) => {
     if (!formData) return null;
@@ -355,14 +333,25 @@ const UpcomingDates = ({
   // Auto-select region based on session.location.meta_info.region
   useEffect(() => {
     const region = session?.location?.meta_info?.region;
-    if (!region) return;
-    const normalized = String(region).toLowerCase();
-    const option =
-      normalized.includes("usa")
-        ? { label: content.info.region_usa, value: "usa" }
-        : normalized.includes("europe")
-        ? { label: content.info.region_europe, value: "europe" }
-        : { label: content.info.region_latam, value: "latam" };
+    const normalized = String(region || "").toLowerCase();
+
+    const regionOptions = {
+      usa: () => normalized.includes("usa"),
+      europe: () => normalized.includes("europe"),
+      latam: () => true, // default fallback
+    };
+
+    const matchedRegion = Object.keys(regionOptions).find((key) =>
+      regionOptions[key]()
+    );
+
+    const regionLabels = {
+      usa: { label: content?.info?.region_usa, value: "usa" },
+      europe: { label: content?.info?.region_europe, value: "europe" },
+      latam: { label: content?.info?.region_latam, value: "latam" },
+    };
+
+    const option = region ? regionLabels[matchedRegion] : null;
     setSelectedRegion(option);
   }, [session?.location?.meta_info?.region, content?.info]);
 
@@ -371,6 +360,23 @@ const UpcomingDates = ({
   const isAliasLocation = (slug) => {
     const mapped = session?.academyAliasDictionary?.[slug];
     return Boolean(mapped && mapped !== slug);
+  };
+
+  // Helper function to determine location display text
+  const getLocationDisplayText = (cohort) => {
+    const isFullStackFt =
+      cohort.syllabus_version?.courseSlug === "full-stack-ft";
+    const cityName = cohort.academy.city.name?.toLowerCase();
+    const inPersonCities = ["miami", "dallas"];
+    const isInPersonLocation =
+      isFullStackFt &&
+      inPersonCities.some(
+        (city) => cityName === city || cityName?.includes(city)
+      );
+
+    return isInPersonLocation
+      ? `${cohort.academy.city.name} - ${content.info.in_person}`
+      : getRegionalRemoteText(cohort.academy?.slug);
   };
 
   return (
@@ -611,49 +617,9 @@ const UpcomingDates = ({
                             alignItems_tablet="flex-start"
                           >
                             <Div>
-                              {(() => {
-                                const selectedSlug =
-                                  academy?.value ||
-                                  location ||
-                                  cohort.academy.slug;
-
-                                // Check if this is a full-stack-ft course
-                                const isFullStackFt =
-                                  cohort.syllabus_version?.courseSlug ===
-                                  "full-stack-ft";
-                                const cityName =
-                                  cohort.academy.city.name?.toLowerCase();
-                                const isInPersonLocation =
-                                  isFullStackFt &&
-                                  (cityName === "miami" ||
-                                    cityName === "dallas" ||
-                                    cityName?.includes("dallas") ||
-                                    cityName?.includes("miami"));
-
-                                if (isInPersonLocation) {
-                                  // For full-stack-ft in Miami/Dallas, show "City - In-person" (non-clickable)
-                                  return (
-                                    <Paragraph
-                                      textAlign="left"
-                                      color={Colors.black}
-                                    >
-                                      {`${cohort.academy.city.name} - ${content.info.in_person}`}
-                                    </Paragraph>
-                                  );
-                                } else {
-                                  // For all other courses or locations, show regional remote
-                                  const regionalRemoteText =
-                                    getRegionalRemoteText(cohort.slug);
-                                  return (
-                                    <Paragraph
-                                      textAlign="left"
-                                      color={Colors.black}
-                                    >
-                                      {regionalRemoteText}
-                                    </Paragraph>
-                                  );
-                                }
-                              })()}
+                              <Paragraph textAlign="left" color={Colors.black}>
+                                {getLocationDisplayText(cohort)}
+                              </Paragraph>
                             </Div>
                           </Div>
 
@@ -686,49 +652,12 @@ const UpcomingDates = ({
                                 {content.info.location_label}
                               </H4>
                               <Div>
-                                {(() => {
-                                  const selectedSlug =
-                                    academy?.value ||
-                                    location ||
-                                    cohort.academy.slug;
-
-                                  // Check if this is a full-stack-ft course
-                                  const isFullStackFt =
-                                    cohort.syllabus_version?.courseSlug ===
-                                    "full-stack-ft";
-                                  const cityName =
-                                    cohort.academy.city.name?.toLowerCase();
-                                  const isInPersonLocation =
-                                    isFullStackFt &&
-                                    (cityName === "miami" ||
-                                      cityName === "dallas" ||
-                                      cityName?.includes("dallas") ||
-                                      cityName?.includes("miami"));
-
-                                  if (isInPersonLocation) {
-                                    // For full-stack-ft in Miami/Dallas, show "City - In-person" (non-clickable)
-                                    return (
-                                      <Paragraph
-                                        textAlign="left"
-                                        color={Colors.black}
-                                      >
-                                        {`${cohort.academy.city.name} - ${content.info.in_person}`}
-                                      </Paragraph>
-                                    );
-                                  } else {
-                                    // For all other courses or locations, show regional remote
-                                    const regionalRemoteText =
-                                      getRegionalRemoteText(cohort.slug);
-                                    return (
-                                      <Paragraph
-                                        textAlign="left"
-                                        color={Colors.black}
-                                      >
-                                        {regionalRemoteText}
-                                      </Paragraph>
-                                    );
-                                  }
-                                })()}
+                                <Paragraph
+                                  textAlign="left"
+                                  color={Colors.black}
+                                >
+                                  {getLocationDisplayText(cohort)}
+                                </Paragraph>
                               </Div>
                             </Div>
                             <Div flexDirection="column" width="50%">
