@@ -109,7 +109,7 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
         });
       }
 
-      const slug = node.frontmatter.slug?.replace(/\.[a-z]{2,2}/, "");
+      const slug = node.frontmatter.slug.replace(/\.[a-z]{2,2}/, "");
       url = `/data/blog/${slug}.${node.frontmatter.lang || "us"}/`;
     } else url = createFilePath({ node, getNode });
 
