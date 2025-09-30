@@ -49,17 +49,17 @@ components:
           text: |
            Get as much personal guidance as you need, for life. From debugging code to preparing for a senior role years down the line, our mentors are always just a message away.
           icon: "check"
-          icon_color: '#25BF6C'
+          icon_color: '#F4F9FF'
         - heading: "AI-Powered Progress Tracking & Feedback"
           text: |
             Rigobot + LearnPack adapt to your learning style, giving instant feedback, helping you debug faster, and tracking your skill growth over time. You're never left wondering where you stand.
           icon: "check"
-          icon_color: '#25BF6C'
+          icon_color: '#F4F9FF'
         - heading: "Career Support That Grows With You "
           text: |
             GeekFORCE isn't just for your first job. It's personalized, ongoing career coaching you can tap into again and again, whether you're changing roles, freelancing, or leveling up into leadership.
           icon: "check"
-          icon_color: '#25BF6C'
+          icon_color: '#F4F9FF'
 
   - name: learning_tools
     position: 5
@@ -83,7 +83,7 @@ components:
       style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600" }'
     content:
       style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
-      text: "When you choose 4Geeks, you’re joining one of the most respected coding schools in the world."
+      text: "When you choose 4Geeks, you’re joining one of the most respected coding schools worldwide."
     bullets:
       item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
       items:

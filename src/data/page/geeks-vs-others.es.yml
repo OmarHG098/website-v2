@@ -49,17 +49,17 @@ components:
           text: |
            Obtén toda la orientación personal que necesites, de por vida. Desde depurar código hasta prepararte para un rol senior años después, nuestros mentores siempre están a solo un mensaje de distancia.
           icon: "check"
-          icon_color: "#25BF6C"
+          icon_color: "#F4F9FF"
         - heading: "Seguimiento de Progreso y Retroalimentación con IA"
           text: |
             Rigobot + LearnPack se adaptan a tu estilo de aprendizaje, dando retroalimentación instantánea, ayudándote a depurar más rápido y rastreando tu crecimiento de habilidades a lo largo del tiempo. Nunca te quedarás preguntándote dónde te encuentras.
           icon: "check"
-          icon_color: "#25BF6C"
+          icon_color: "#F4F9FF"
         - heading: "Apoyo de Carrera que Crece Contigo"
           text: |
             GeekFORCE no es solo para tu primer trabajo. Es coaching de carrera personalizado y continuo al que puedes recurrir una y otra vez, ya sea que estés cambiando de roles, trabajando como freelancer o ascendiendo a liderazgo.
           icon: "check"
-          icon_color: "#25BF6C"
+          icon_color: "#F4F9FF"
 
   - name: learning_tools
     position: 5
