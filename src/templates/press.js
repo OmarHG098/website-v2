@@ -16,7 +16,13 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const ImageItem = ({ item, style }) => (
   <GatsbyImage
     key={item.title}
-    style={{ minWidth: "120px", maxWidth: "150px", maxHeight: "170px", border: 0, ...style }}
+    style={{
+      minWidth: "120px",
+      maxWidth: "150px",
+      maxHeight: "170px",
+      border: 0,
+      ...style,
+    }}
     height="80px"
     objectFit="contain"
     alt={item.title}
@@ -29,7 +35,6 @@ const Press = (props) => {
   const { session } = React.useContext(SessionContext);
   let content = data.allPageYaml.edges[0].node.content;
   const awardsList = data.awardsData.edges[0].node.awards_list;
-  console.log('data:::', data);
   const ctaData = yml.cta;
   let position = 0;
   // getting half images of awards list for double carousel
@@ -202,7 +207,14 @@ const Press = (props) => {
 
       <TwoColumn
         left={{
-          heading: { style: { "font-family": "Archivo-Black", "line-height": "normal", margin: "0 0 20px 0" }, ...ctaData.heading},
+          heading: {
+            style: {
+              "font-family": "Archivo-Black",
+              "line-height": "normal",
+              margin: "0 0 20px 0",
+            },
+            ...ctaData.heading,
+          },
           footerText: ctaData.footerText,
           sub_heading: ctaData.sub_heading,
           bullets: ctaData.bullets,
@@ -234,18 +246,27 @@ const Press = (props) => {
               <Marquee
                 config={{
                   duration: 30,
-                  images: halfAwardsList.map((item) => <ImageItem item={item} style={{ width: "150px", height: item.height || "140px", maxWidth: "170px" }} />),
+                  images: halfAwardsList.map((item) => (
+                    <ImageItem
+                      item={item}
+                      style={{
+                        width: "150px",
+                        height: item.height || "140px",
+                        maxWidth: "170px",
+                      }}
+                    />
+                  )),
                   variant: "vertical",
                   width: "auto",
                   height: "75vh",
                   gap: "1rem",
                   containerStyle: {
                     top: "-3rem",
-                    left: "0rem"
+                    left: "0rem",
                   },
                   itemStyle: {
-                    aspectRatio: "8 / 3"
-                  }
+                    aspectRatio: "8 / 3",
+                  },
                 }}
               />
               <Marquee
@@ -253,7 +274,14 @@ const Press = (props) => {
                   reverse: true,
                   duration: 30,
                   images: secondHalfAwardsList.map((item) => (
-                    <ImageItem item={item} style={{ width: "200px", maxWidth: "200px", height: item.height || "140px" }} />
+                    <ImageItem
+                      item={item}
+                      style={{
+                        width: "200px",
+                        maxWidth: "200px",
+                        height: item.height || "140px",
+                      }}
+                    />
                   )),
                   variant: "vertical",
                   width: "auto",
@@ -261,15 +289,15 @@ const Press = (props) => {
                   gap: "1rem",
                   containerStyle: {
                     top: "-5.5rem",
-                    left: "0rem"
+                    left: "0rem",
                   },
                   itemStyle: {
-                    aspectRatio: "6 / 3"
-                  }
+                    aspectRatio: "6 / 3",
+                  },
                 }}
               />
             </Div>
-          )
+          ),
         }}
         alignment={ctaData.alignment}
         proportions={ctaData.proportions}
@@ -366,7 +394,11 @@ export const query = graphql`
         }
       }
     }
-    awardsData: allPageYaml(filter: {fields: {file_name: {regex: "/^awards/"}, lang: {eq: $lang}}}) {
+    awardsData: allPageYaml(
+      filter: {
+        fields: { file_name: { regex: "/^awards/" }, lang: { eq: $lang } }
+      }
+    ) {
       edges {
         node {
           awards_list {

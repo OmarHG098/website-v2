@@ -391,16 +391,16 @@ const Side = ({
           </Button>
         ))}
 
-        {footerText && (
-          <Paragraph
-            textAlign="left"
-            margin="10px 0"
-            fontSize="16px"
-            fontWeight="400"
-            lineHeight="16px"
-            dangerouslySetInnerHTML={{ __html: footerText }}
-          />
-        )}
+      {footerText && (
+        <Paragraph
+          textAlign="left"
+          margin="10px 0"
+          fontSize="16px"
+          fontWeight="400"
+          lineHeight="16px"
+          dangerouslySetInnerHTML={{ __html: footerText }}
+        />
+      )}
 
       {boxes && (
         <Div

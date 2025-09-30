@@ -2,7 +2,18 @@ import React from "react";
 import styled, { keyframes, css } from "styled-components";
 
 const Marquee = (props) => {
-  const { images, duration = 50, gap = "2rem", variant = "horizontal", reverse = false, pauseOnHover = true, width, height, containerStyle, itemStyle } = props.config;
+  const {
+    images,
+    duration = 50,
+    gap = "2rem",
+    variant = "horizontal",
+    reverse = false,
+    pauseOnHover = true,
+    width,
+    height,
+    containerStyle,
+    itemStyle,
+  } = props.config;
 
   const trackHorizontal = keyframes`
     from {
@@ -23,9 +34,9 @@ const Marquee = (props) => {
   `;
 
   const Container = styled.div`
-    width: ${width || '100vw'};
-    flex: ${width ? 'none' : '1 1 45%'};   
-    height: ${height || '12vh'};
+    width: ${width || "100vw"};
+    flex: ${width ? "none" : "1 1 45%"};
+    height: ${height || "12vh"};
     overflow: hidden;
     position: relative;
     ${variant === "vertical" &&
@@ -35,7 +46,7 @@ const Marquee = (props) => {
         rotateZ(-20deg)
         skewX(20deg);
     `}
-    ${props => props.containerStyle && css(props.containerStyle)}
+    ${(props) => props.containerStyle && css(props.containerStyle)}
   `;
 
   const UL = styled.ul`
@@ -47,11 +58,11 @@ const Marquee = (props) => {
     height: 100%;
     align-items: center;
 
-    animation-name: ${variant === 'vertical' ? trackVertical : trackHorizontal};
+    animation-name: ${variant === "vertical" ? trackVertical : trackHorizontal};
     animation-duration: var(--duration, ${duration}s);
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    animation-direction: ${reverse ? 'reverse' : 'normal'};
+    animation-direction: ${reverse ? "reverse" : "normal"};
 
     ${variant === "vertical" &&
     `
@@ -60,7 +71,8 @@ const Marquee = (props) => {
       height: fit-content;
     `}
 
-    ${pauseOnHover && css`
+    ${pauseOnHover &&
+    css`
       &:hover {
         animation-play-state: paused;
       }
