@@ -844,51 +844,21 @@ export const landingSections = {
     const hiring = data.allPartnerYaml.edges[0].node;
     let landingHiring = dataYml[0].node?.who_is_hiring;
 
-    // Lógica de priorización:
-    // 1. Si hay custom_logos, usar solo esos (ignora todo lo demás)
-    // 2. Si hay featured, usar esos con showFeatured
-    // 3. Si no hay ninguno, usar los globales del partner.yaml
-
-    const customLogos = landingHiring?.custom_logos;
+    // Obtener featured del YAML específico
     const featuredLogos = landingHiring?.featured;
 
-    // Configuration-based approach to replace if-else logic
-    const logoConfigurations = [
-      {
-        condition: () => customLogos && customLogos.length > 0,
-        config: {
-          imagesToShow: customLogos,
-          showFeaturedLogos: false,
-          featuredImagesToShow: [],
-        },
-      },
-      {
-        condition: () => featuredLogos && featuredLogos.length > 0,
-        config: {
-          imagesToShow: hiring.partners.images,
-          showFeaturedLogos: true,
-          featuredImagesToShow: featuredLogos,
-        },
-      },
-      {
-        condition: () => true, // Default fallback
-        config: {
-          imagesToShow: hiring.partners.images,
-          showFeaturedLogos: true,
-          featuredImagesToShow: hiring.partners.images.filter(
-            (img) => img.featured === true
-          ),
-        },
-      },
-    ];
+    // Determinar qué imágenes mostrar
+    const imagesToShow =
+      featuredLogos?.length > 0 ? featuredLogos : hiring.partners.images;
 
-    // Find the first configuration that matches the condition
-    const selectedConfig = logoConfigurations.find((config) =>
-      config.condition()
-    )?.config;
+    // Si hay featured en el YAML, NO filtrar por showFeatured
+    // Si NO hay featured, usar el comportamiento por defecto (filtrar por featured=true del partner.yaml)
+    const showFeaturedLogos = featuredLogos?.length > 0 ? false : true;
 
-    const { imagesToShow, showFeaturedLogos, featuredImagesToShow } =
-      selectedConfig;
+    const featuredImagesToShow =
+      featuredLogos?.length > 0
+        ? featuredLogos
+        : hiring.partners.images.filter((img) => img.featured === true);
 
     return (
       <Div
@@ -905,7 +875,7 @@ export const landingSections = {
           variant="carousel"
           images={imagesToShow}
           margin="0"
-          padding="0 ​0 75px 0"
+          padding="0 0 75px 0"
           marquee
           paddingFeatured="0 0 70px 0"
           featuredImages={featuredImagesToShow}
