@@ -29,8 +29,8 @@ const View = (props) => {
   return (
     <>
       <Header
-        margin="10px auto 30px auto"
-        margin_md="72px auto 30px auto"
+        margin="10px auto 60px auto"
+        margin_md="72px auto 80px auto"
         padding="90px 20px 42px 20px"
         padding_tablet="72px 130px 72px 130px"
         position="relative"
@@ -237,7 +237,7 @@ const View = (props) => {
       </Header>
 
       {/* Section Title */}
-      <Div display="block">
+      <Div display="block" margin="25px auto">
         <H2 type="h2" textAlign_tablet="center">
           {yml.section_heading?.text}
         </H2>
@@ -245,7 +245,7 @@ const View = (props) => {
         <Div
           style={{
             maxWidth: "1280px",
-            margin: "0 auto",
+            margin: "25px auto",
             padding: "0 20px",
           }}
         >

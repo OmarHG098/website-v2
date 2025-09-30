@@ -130,7 +130,7 @@ components:
           text: 'Entre las <strong style="font-weight: 800;">matrículas más asequibles</strong> de cualquier bootcamp de primer nivel (reconocido por Forbes).'
           icon: "check"
         - heading: " "
-          text: '<strong style="font-weight: 800;">Opciones de financiamiento desde $299/mes</strong>, para que puedas aprender sin estrés financiero.'
+          text: '<strong style="font-weight: 800;">Opciones de financiamiento de hasta $299/mes</strong>, para que puedas aprender sin estrés financiero.'
           icon: "check"
         - heading: " "
           text: '<strong style="font-weight: 800;">Opciones de pago basadas en ingresos</strong>, donde solo pagas una vez que estés ganando.'
@@ -163,7 +163,7 @@ components:
       style: '{ "margin": "15px 0", "font-weight": "600" }'
     content:
       style: '{ "font-size": "16px", "margin": "15px 0", "font-weight": "400"}'
-      text: "Sigue el programa, apóyate en tus mentores, y si aún no consigues trabajo, te respaldamos — financieramente."
+      text: "Sigue el programa, apóyate en tus mentores, y si aún no consigues trabajo, asumimos toda la responsabilidad— ese es el nivel de confianza que tenemos en la efectividad de nuestro bootcamp."
     bullets:
       item_style: '{ "padding": "0", "font-weight": "100", "margin": "0" }'
       items:
