@@ -55,7 +55,7 @@ two_column_right:
     color: white
     background: blue
     hover_color: white
-    path: "#leadform_bottom"
+    path: "#bottom"
 
 two_column_left:
   proportions:
@@ -97,7 +97,7 @@ two_column_left:
     color: white
     background: blue
     hover_color: white
-    path: "#leadform_bottom"
+    path: "#bottom"
 form:
   title: "Da el Primer Paso Hacia Financiar tu Carrera Tech"
   paragraph: |

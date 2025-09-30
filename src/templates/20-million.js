@@ -264,18 +264,6 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         </Div>
       </Div>
 
-      <OurPartners
-        margin="0"
-        title={yml.featured_partners?.heading}
-        images={partnersData.partners.images}
-        marquee
-        showFeatured={!!yml.featured_partners}
-        featuredImages={yml.featured_partners?.images}
-        withoutLine
-        paddingFeatured="0 0 50px 0"
-        onlyFeatured
-      />
-
       <Div
         id="two_column_right"
         flexDirection="column"
@@ -329,16 +317,27 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         margin_tablet="75px 0 0 0"
         margin="45px 0 0 0"
       />
-
+      <OurPartners
+        margin="0"
+        title={yml.featured_partners?.heading}
+        images={partnersData.partners.images}
+        padding="0"
+        marquee
+        showFeatured={!!yml.featured_partners}
+        featuredImages={yml.featured_partners?.images}
+        withoutLine
+        paddingFeatured="0 0 50px 0"
+        onlyFeatured
+      />
+      <ScholarshipSuccessCases
+        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+      />
       <HR
         background={Colors.verylightGray}
         width="100%"
         height="5px"
         margin="40px 0"
         id="fake_bottom"
-      />
-      <ScholarshipSuccessCases
-        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
       <GridContainer
         columns_tablet="12"

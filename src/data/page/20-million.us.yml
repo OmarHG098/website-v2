@@ -14,7 +14,7 @@ header:
 
 button:
   apply_button_text: "LEARN MORE"
-  apply_button_link: "/us/apply"
+  apply_button_link: "#bottom"
 
 two_column_right:
   proportions:
@@ -55,7 +55,7 @@ two_column_right:
     color: white
     background: blue
     hover_color: white
-    path: "#leadform_bottom"
+    path: "#bottom"
 
 two_column_left:
   proportions:
@@ -97,7 +97,7 @@ two_column_left:
     color: white
     background: blue
     hover_color: white
-    path: "#leadform_bottom"
+    path: "#bottom"
     
 form:
   title: "Take the First Step Toward Funding Your Tech Career"
