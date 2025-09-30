@@ -127,7 +127,7 @@ const Images_With_Marquee = (props) => {
   });
 
   return (
-    <Marquee config={{ duration: props?.duration || 180, images: imgs }} />
+    <Marquee config={{ duration: props?.duration || 180, images: imgs, ...props.config }} />
   );
 };
 
@@ -399,6 +399,7 @@ const OurPartners = ({
   gray,
   variant,
   duration,
+  marqueeConfig,
   ...rest
 }) => {
   let FragmentStyle = {
@@ -445,7 +446,7 @@ const OurPartners = ({
       {slider ? (
         <Images_With_Slider images={images} />
       ) : marquee ? (
-        <Images_With_Marquee images={images} duration={duration} />
+        <Images_With_Marquee images={images} duration={duration} config={marqueeConfig} />
       ) : (
         <Images_Centered images={images} gray={gray} />
       )}

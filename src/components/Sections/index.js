@@ -321,6 +321,7 @@ export const HR = styled.hr`
 `;
 
 export const Div = styled.div`
+  mask: ${(props) => props.mask};
   flex: ${(props) =>
     props.flex || props.size ? `0 0 ${(props.size / 12) * 100}%` : null};
   max-width: ${(props) =>

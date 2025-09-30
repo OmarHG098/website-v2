@@ -35,12 +35,16 @@ const Side = ({
   session,
   padding_tablet,
   side,
+  footerText,
+  children,
 }) => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
   }, []);
+
+  if (children) return children;
 
   const utm = session && session.utm;
   if (video)
@@ -358,30 +362,45 @@ const Side = ({
         ))
       )}
 
-      {button && (
-        <Button
-          outline
-          colorHoverText={button.hover_color || ""}
-          background={Colors[button.background] || button.background}
-          lineHeight="26px"
-          textColor={Colors.black}
-          textTransform="none"
-          color={Colors[button.color] || button.color}
-          fontSize="21px"
-          height="auto"
-          textAlign="left"
-          margin="1rem 0"
-          padding="10px 20px"
-          borderRadius="4px"
-          onClick={() => {
-            if (button.path && button.path.indexOf("http") > -1)
-              window.open(transferQuerystrings(button.path, utm));
-            else navigate(button.path);
-          }}
-        >
-          {button.text}
-        </Button>
-      )}
+      {/* Support both single button (object) and multiple buttons (array) */}
+      {button &&
+        (Array.isArray(button) ? button : [button]).map((btn, idx) => (
+          <Button
+            key={idx}
+            outline
+            colorHoverText={btn.hover_color || ""}
+            background={Colors[btn.background] || btn.background}
+            lineHeight="26px"
+            textColor={Colors.black}
+            textTransform="none"
+            color={Colors[btn.color] || btn.color}
+            fontSize="21px"
+            height="auto"
+            textAlign="left"
+            margin="1rem 0"
+            padding={btn?.background === "transparent" ? "0" : "10px 20px"}
+            padding_tablet={btn?.background === "transparent" ? "0" : ""}
+            borderRadius="4px"
+            onClick={() => {
+              if (btn.path && btn.path.indexOf("http") > -1)
+                window.open(transferQuerystrings(btn.path, utm));
+              else navigate(btn.path);
+            }}
+          >
+            {btn.text}
+          </Button>
+        ))}
+
+        {footerText && (
+          <Paragraph
+            textAlign="left"
+            margin="10px 0"
+            fontSize="16px"
+            fontWeight="400"
+            lineHeight="16px"
+            dangerouslySetInnerHTML={{ __html: footerText }}
+          />
+        )}
 
       {boxes && (
         <Div
