@@ -210,13 +210,13 @@ details:
 
     list:
       - label: "Duración"
-        content: "18 semanas"
+        content: "20 semanas"
         icon: "duration-icon"
       - label: "Clases"
         content: "3 clases semanales"
         icon: "book-2"
       - label: "Tamaño de la clase"
-        content: "Ratio de 1 profesor por cada 7 estudiantes"
+        content: "Ratio de 1 profesor por cada 9 estudiantes"
         icon: "people"
       - label: "Certificado"
         content: "Nuestros certificados son reconocidos por múltiples instituciones."

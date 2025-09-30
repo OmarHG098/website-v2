@@ -122,7 +122,10 @@ const LandingHeader = (props) => {
                   ) : (
                     <GatsbyImage
                       loading="eager"
-                      imgStyle={{ objectFit: "contain", objectPosition: "left" }}
+                      imgStyle={{
+                        objectFit: "contain",
+                        objectPosition: "left",
+                      }}
                       image={getImage(
                         yml.header_data.partner_logo_url.childImageSharp
                           .gatsbyImageData
@@ -156,9 +159,9 @@ const LandingHeader = (props) => {
               padding="0 10px 20px 0px"
               padding_xxs="0 5px 10px 0"
               color={taglineColor()}
-              fontSize="32px"
+              fontSize="40px"
               fontSize_tablet="60px"
-              fontSize_xxs="26px"
+              fontSize_xxs="40px"
               fontWeight="900"
               textAlign="left"
               dangerouslySetInnerHTML={{
@@ -293,12 +296,14 @@ const LandingHeader = (props) => {
                           minWidth: "100px",
                           maxWidth: "150px",
                         }}
-                        imgStyle={{ 
+                        imgStyle={{
                           objectFit: "contain",
-                          objectPosition: "center"
+                          objectPosition: "center",
                         }}
                         alt={l.alt}
-                        image={getImage(l.image?.childImageSharp?.gatsbyImageData)}
+                        image={getImage(
+                          l.image?.childImageSharp?.gatsbyImageData
+                        )}
                       />
                     ))
                   )}
