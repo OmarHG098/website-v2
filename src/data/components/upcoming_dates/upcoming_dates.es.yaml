@@ -20,7 +20,7 @@ syllabus_alias:
     name: Data Science
     duration_weeks: 16 semanas
     
-  - default_course: cyber-security
+  - default_course: cybersecurity
     course_slug: curso-ciberseguridad
     name: Ciberseguridad
     duration_weeks: 16 semanas

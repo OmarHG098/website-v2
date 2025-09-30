@@ -138,19 +138,7 @@ const UpcomingDates = ({
       europe: () =>
         academySlug?.includes("spain") || academySlug === "madrid-spain",
       latam: () => academySlug === "online",
-      usa: () => {
-        const usaAcademies = [
-          "downtown-miami",
-          "atlanta-usa",
-          "chicago-usa",
-          "houston-usa",
-        ];
-        return (
-          academySlug?.includes("miami") ||
-          academySlug?.includes("usa") ||
-          usaAcademies.includes(academySlug)
-        );
-      },
+      usa: () => academySlug?.includes("miami") || academySlug?.includes("usa"),
     };
 
     const matchedRegion = Object.keys(regionMappings).find((region) =>
@@ -178,16 +166,60 @@ const UpcomingDates = ({
         location ||
         session?.academyAliasDictionary?.[academy?.value];
 
+      // Normalize course slugs for API and matching consistency
+      const normalizedDefaultCourse = (() => {
+        const raw = (defaultCourse || "").toLowerCase();
+        // Map known aliases to canonical slugs
+        const aliasMap = {
+          cybersecurity: "cyber-security",
+        };
+        return aliasMap[raw] || raw;
+      })();
+
+      console.log("🔍 API Debug - Request Parameters:", {
+        defaultCourse,
+        academySlug,
+        apiUrl: "getCohorts",
+        requestParams: {
+          academy: academySlug,
+          limit: 10,
+          syllabus_slug_like: normalizedDefaultCourse || undefined,
+        },
+      });
+
       const response = await getCohorts({
         academy: academySlug,
         limit: 10,
-        syllabus_slug_like: defaultCourse || undefined,
+        syllabus_slug_like: normalizedDefaultCourse || undefined,
+      });
+
+      console.log("📡 API Debug - Raw Response:", {
+        response,
+        resultsCount: response?.results?.length || 0,
+        hasResults: !!response?.results,
       });
 
       if (!response || !response.results) {
         console.error("Invalid response from cohorts API:", response);
         setIsLoading(false);
         return;
+      }
+
+      // Add detailed cohort analysis
+      if (response?.results) {
+        console.log("📊 API Debug - Detailed Cohort Analysis:", {
+          defaultCourse,
+          totalCohorts: response.results.length,
+          cohortDetails: response.results.map((cohort) => ({
+            slug: cohort.slug,
+            academy: cohort.academy?.slug,
+            syllabusVersionSlug: cohort.syllabus_version?.slug,
+            syllabusVersionName: cohort.syllabus_version?.name,
+            matchesDefaultCourse: cohort.syllabus_version?.slug
+              ?.toLowerCase()
+              ?.includes(defaultCourse?.toLowerCase() || ""),
+          })),
+        });
       }
 
       const academyLocation = locations.find(
@@ -202,19 +234,8 @@ const UpcomingDates = ({
           europe: () =>
             academySlug?.includes("spain") || academySlug === "madrid-spain",
           latam: () => academySlug === "online",
-          usa: () => {
-            const usaAcademies = [
-              "downtown-miami",
-              "atlanta-usa",
-              "chicago-usa",
-              "houston-usa",
-            ];
-            return (
-              academySlug?.includes("miami") ||
-              academySlug?.includes("usa") ||
-              usaAcademies.includes(academySlug)
-            );
-          },
+          usa: () =>
+            academySlug?.includes("miami") || academySlug?.includes("usa"),
         };
 
         return (
@@ -249,6 +270,14 @@ const UpcomingDates = ({
       const courseFilteredCohorts = cohorts.filter((cohort) => {
         const syllabusSlug = cohort.syllabus_version?.slug?.toLowerCase();
 
+        console.log("🎯 Course Filter Debug:", {
+          cohortSlug: cohort.slug,
+          defaultCourse,
+          syllabusSlug,
+          syllabusName: cohort.syllabus_version?.name,
+          fallbackMatch: syllabusSlug?.includes(normalizedDefaultCourse || ""),
+        });
+
         const courseMatchers = {
           "full-stack": () =>
             syllabusSlug?.includes("part-time") || syllabusSlug?.includes("pt"),
@@ -257,18 +286,31 @@ const UpcomingDates = ({
               syllabusSlug?.includes("ft")) &&
             !syllabusSlug?.includes("part-time") &&
             !syllabusSlug?.includes("pt"),
-          "datascience-machine-learning": () =>
-            syllabusSlug?.includes("data-science") ||
-            syllabusSlug?.includes("datascience"),
-          cybersecurity: () => syllabusSlug?.includes("cybersecurity"),
+          "machine-learning": () => syllabusSlug?.includes("machine-learning"),
+          cybersecurity: () =>
+            syllabusSlug?.includes("cybersecurity") ||
+            syllabusSlug?.includes("cyber-security"),
         };
 
-        return (
-          !defaultCourse ||
-          !syllabusSlug ||
-          (courseMatchers[defaultCourse]?.() ??
-            syllabusSlug.includes(defaultCourse))
+        const matcherResult = courseMatchers[normalizedDefaultCourse]?.();
+        const fallbackResult = syllabusSlug?.includes(
+          normalizedDefaultCourse || ""
         );
+        const finalResult =
+          !normalizedDefaultCourse ||
+          !syllabusSlug ||
+          (matcherResult ?? fallbackResult);
+
+        console.log("🔍 Course Matcher Results:", {
+          cohortSlug: cohort.slug,
+          defaultCourse,
+          matcherExists: !!courseMatchers[defaultCourse],
+          matcherResult,
+          fallbackResult,
+          finalResult,
+        });
+
+        return finalResult;
       });
 
       courseFilteredCohorts.forEach((cohort) => {
