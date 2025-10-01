@@ -26,7 +26,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         margin="0px auto 30px auto"
         margin_md="0px auto 30px auto"
         padding="90px 20px 42px 20px"
-        padding_tablet="72px 130px 72px 130px"
+        padding_tablet="72px 230px 22px 230px"
         position="relative"
         background={Colors.veryLightBlue2}
         display="block"
@@ -319,12 +319,12 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
       />
       <OurPartners
         margin="0"
-        title={yml.featured_partners?.heading}
+        title={yml.featured?.heading}
         images={partnersData.partners.images}
         padding="0"
         marquee
-        showFeatured={!!yml.featured_partners}
-        featuredImages={yml.featured_partners?.images}
+        showFeatured={!!yml.featured}
+        featuredImages={yml.featured?.images}
         withoutLine
         paddingFeatured="0 0 50px 0"
         onlyFeatured
@@ -464,7 +464,7 @@ export const query = graphql`
             title
             paragraph
           }
-          featured_partners {
+          featured {
             heading
             sub_heading
             images {

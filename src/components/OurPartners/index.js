@@ -193,7 +193,7 @@ const Images_Featured = (props) => {
         display="block"
         display_tablet="none"
       >
-        <Div width="100%" style={{ overflowX: "auto" }}>
+        <Div width="100%" style={{ overflowX: "auto", padding: "0 20px" }}>
           <DraggableDiv gap="8px">
             {featured.map((m, i) => {
               const hasGatsbyImage = m.image?.childImageSharp?.gatsbyImageData;
@@ -207,6 +207,7 @@ const Images_Featured = (props) => {
                   justifyContent="center"
                   borderRadius="4px"
                   flexShrink="0"
+                  border="1px solid #e5e5e5"
                 >
                   {hasGatsbyImage ? (
                     <GatsbyImage
@@ -239,18 +240,6 @@ const Images_Featured = (props) => {
               );
             })}
           </DraggableDiv>
-        </Div>
-        {/* bullets */}
-        <Div justifyContent="center" gap="6px" margin="8px 0 0 0">
-          {featured.map((_, idx) => (
-            <Div
-              key={`dot-${idx}`}
-              width="6px"
-              height="6px"
-              borderRadius="50%"
-              background={idx === 0 ? Colors.black : Colors.lightGray}
-            />
-          ))}
         </Div>
       </Div>
 
