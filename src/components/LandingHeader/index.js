@@ -267,7 +267,7 @@ const LandingHeader = (props) => {
             )}
             {yml.short_badges && (
               <Marquee_v2
-                speed={0.5}
+                speed={0.3}
                 reversed={false}
                 containerstyle={{
                   height: "160px",

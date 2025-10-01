@@ -172,7 +172,7 @@ components:
     swipable: False
     background: "#fbfbfb"
     image:
-      style: '{"backgroundSize": "contain;"}'
+      style: '{"backgroundSize": "contain;", "align-self": "stretch", "margin": "0 auto", "background-position": "center center" }'
       src: "/images/landing/hombre-joven-con-laptop-senalando.webp"
       shadow: false
     section_heading: 
@@ -182,6 +182,7 @@ components:
       text: "¿Qué es 4Geeks Academy?"
     sub_heading:
       text: "4Geeks Academy es una plataforma educativa que ofrece bootcamps intensivos en programación y tecnología. Nuestro enfoque está en preparar a los estudiantes para el mundo laboral, enseñando no solo a programar, sino a convertirse en profesionales competentes y adaptables para una industria que está en constante crecimiento. Nuestros estudiantes están listos para enfrentar los desafíos del futuro. ¡Únete a nosotros y comienza tu viaje hacia una carrera exitosa en tecnología!"
+      font_size: ["18px", "16px", "16px", "14px", "12px"]
     content: 
       text: "¡Estamos aquí para apoyarte en tu camino hacia el éxito!"
       font_size: ["16px"]
@@ -214,7 +215,7 @@ components:
     sub_heading:
       text: 'Programas para convertirte en un experto en programación y complementar tu perfil profesional'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
-      style: '{ "textAlign": "center", "width": "60%" }'
+      style: '{ "textAlign": "center", "width": "90%" }'
     icons:
       - icon: "fullstack" 
         title: "Full-Stack Dev"
@@ -276,7 +277,7 @@ components:
         title: "Aprendizaje práctico y orientado a la realidad"
         content: "Nos enfocamos en las herramientas y tecnologías más demandadas por las empresas líderes del sector, lo que te permitirá estar preparado para cualquier trabajo una vez que te gradues."
       - icon: "timer"
-        title: "Horarios y métodos de pago Flexibles"
+        title: "Horarios y métodos de pago flexibles"
         content: "Ofrecemos un modelo de formación a medio tiempo, para que puedas conciliar tus estudios con otras actividades. Además, también contamos con múltiples formas de financiación para hacer más accesibles los costos de un curso de esta calidad."
       - icon: "community"
         title: "Una comunidad apasionada por la tecnología"
