@@ -9,7 +9,6 @@ import { beHiringPartner } from "../actions";
 import { SessionContext } from "../session";
 import LeadForm from "../components/LeadForm";
 import { Circle } from "../components/BackgroundDrawing";
-import Testimonials from "../components/Testimonials";
 import OurPartners from "../components/OurPartners";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
 import TwoColumn from "../components/TwoColumn/index.js";
@@ -310,13 +309,6 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           session={session}
         />
       </Div>
-
-      <Testimonials
-        categories={["scolarships", "price", "outcomes"]}
-        lang={data.allTestimonialsYaml.edges}
-        margin_tablet="75px 0 0 0"
-        margin="45px 0 0 0"
-      />
       <OurPartners
         margin="0"
         title={yml.featured?.heading}
@@ -563,46 +555,6 @@ export const query = graphql`
             contributor
             description
             achievement
-          }
-        }
-      }
-    }
-    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          heading
-          button_text
-          button_link
-          testimonials {
-            student_name
-            related_features
-            testimonial_date
-            include_in_marquee
-            hidden
-            linkedin_url
-            linkedin_text
-            linkedin_image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  height: 14
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            student_thumb {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 200
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            short_content
-            content
-            source_url
-            source_url_text
           }
         }
       }
