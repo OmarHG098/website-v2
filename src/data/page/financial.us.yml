@@ -153,7 +153,7 @@ two_column:
 
   - image:
       style: '{ "backgroundSize": "contain"}'
-      src: /images/landing/scholarships-column-4geeks.png
+      src: /images/landing/20-million-column-4geeks.png
     heading:
       text: Learn Now, Pay Smarter
       font_size:
