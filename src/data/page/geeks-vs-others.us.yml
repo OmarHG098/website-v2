@@ -43,7 +43,7 @@ components:
       style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
       text: "👉 The result: a truly hyperpersonalized learning experience that combines human mentorship with AI intelligence and that’s yours for life — something no other bootcamp offers."
     bullets:
-      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+      item_style: '{ "padding": "10px 0", "font-weight": "100", "margin":"0" }'
       items:
         - heading: "Unlimited 1:1 Mentorship with Real Humans"
           text: |

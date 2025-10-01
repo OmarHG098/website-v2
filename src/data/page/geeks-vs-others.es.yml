@@ -43,7 +43,7 @@ components:
       style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
       text: "👉 El resultado: una experiencia verdaderamente hiperpersonalizada que combina mentoría humana con inteligencia de IA — algo que ningún otro bootcamp ofrece."
     bullets:
-      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+      item_style: '{ "padding": "10px 0", "font-weight": "100", "margin":"0" }'
       items:
         - heading: "Mentoría 1:1 Ilimitada con Humanos Reales"
           text: |
