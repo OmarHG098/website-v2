@@ -144,8 +144,8 @@ two_columns_rigo:
           <br />
           • Obtén atención personal inigualable con nuestro <strong style="text-decoration: none; color: #000000; font-weight: 700;">ratio de 7:1 estudiante-profesor</strong>, más <strong style="text-decoration: none; color: #000000; font-weight: 700;">acceso ilimitado a sesiones 1:1</strong> con nuestros mentores expertos y coaches de carrera.
           <br />
-     
-    
+        icon: ""
+        icon_color: ""
 
 two_columns_info:
   proportions: [6, 6]
