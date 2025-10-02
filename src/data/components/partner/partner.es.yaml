@@ -3,14 +3,14 @@
 ## THIS COMPONENT IS USED IN "/partners" and "/pricing"
 
 partners:
-  tagline: "¿Quién contrata a nuestros estudiantes?"
+  tagline: "¿QUIÉN CONTRATA A NUESTROS GRADUADOS?"
   sub_heading: |
-    Gracias a nuestra creciente lista de aliados, tenemos ofertas de trabajo locales e internacionales para nuestros estudiantes a diario.
-
-    Junto con nuestro servicio GeekFORCE (Career Support), nos complace tener ~ 86% de nuestros estudiantes contratados dentro de los 100 días o menos desde el día de graduación.
+    Las mejores empresas contratan graduados de 4Geeks, con 84% consiguiendo trabajo en 6 meses después de graduarse gracias a sus habilidades y nuestro apoyo profesional personalizado. Nuestros graduados no solo consiguen trabajo—lanzan carreras exitosas y consistentemente ganan reconocimiento por su experiencia técnica y profesionalismo:   
+    <br/>
+     "Continuamente estoy impresionado por la profundidad del conocimiento que poseen los estudiantes de 4Geeks. Una de mis contrataciones terminó convirtiéndose en líder de equipo." - CodeNinjas.
   
-  footer_tagline: 438 EMPRESAS
-  footer_button: Revisa nuestra lista de aliados
+  footer_tagline: "438 EMPRESAS"
+  footer_button: "Revisa nuestras últimas contrataciones"
   footer_link: "/es/aliados"
   images:
     - name: "Facebook"

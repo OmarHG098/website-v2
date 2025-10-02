@@ -121,7 +121,7 @@ two_columns_rigo:
     style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
     src: "/images/landing/ai-mentor-esp.jpg"
     shadow: true
-  video: "6m1Jyya7eCc"
+  video: "cOFm_deKj6Q"
   heading: 
     text: "Aprende Desarrollo Full Stack Impulsado por IA Más Rápido — Con Apoyo Hiper-Personalizado Que Se Adapta a Ti"
     font_size: ["33px", "33px", "33px", "33px", "33px"]
@@ -200,7 +200,7 @@ details:
       sub_title: "Domina las tecnologías más demandadas y aprende a crear aplicaciones modernas usando IA. Aprende algoritmos de programación y crea apps increíbles usando librerías front-end. Utiliza APIs para consumir datos y potenciar la funcionalidad de tu app. Desarrolla y presenta tu propio proyecto, ganando experiencia práctica que cambia el juego. Aprende a programar junto a la IA para desbloquear una forma más rápida y creativa de construir apps reales desde el día uno. Colabora con herramientas como <strong style=\"text-decoration: none; color: #000000; font-weight: 600;\">Cursor, Copilot y Windsurf</strong>, y aprovecha el poder de <strong style=\"text-decoration: none; color: #000000; font-weight: 600;\">LLMs como GPT-4, Claude 3 y Gemini</strong> para generar, depurar, iterar y lanzar con velocidad y precisión. Cambia tu mentalidad y abraza las habilidades de programación, lógica e investigación para triunfar en la industria tecnológica de hoy."
       list:
         - label: "Duración"
-          content: "20 Semanas de clases en vivo + 2-4 semanas de pre-trabajo autodirigido"
+          content: "20 Semanas de clases en vivo + 2-4 semanas de pre-work a tu propio ritmo"
           icon: "duration-icon"
         - label: "Clases"
           content: "3 clases semanales"
