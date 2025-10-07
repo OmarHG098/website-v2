@@ -104,6 +104,20 @@ const DoubleActionCTA = (props) => {
   const { session: appSession } = useContext(SessionContext);
   const captcha = useRef(null);
 
+  // Safe captcha execution with defensive checks
+  const executeRecaptcha = async () => {
+    if (captcha.current && typeof captcha.current.executeAsync === "function") {
+      try {
+        return await captcha.current.executeAsync();
+      } catch (error) {
+        console.warn("ReCAPTCHA execution failed:", error);
+        return null;
+      }
+    }
+    console.warn("ReCAPTCHA not available, proceeding without token");
+    return null;
+  };
+
   const [formStatus, setFormStatus] = useState({
     status: "idle",
     msg: "Resquest",
@@ -569,11 +583,11 @@ const DoubleActionCTA = (props) => {
                           status: "loading",
                           msg: content?.newsletter_form?.button_loading,
                         });
-                        const token = await captcha.current.executeAsync();
+                        const token = await executeRecaptcha();
                         newsletterSignup(
                           {
                             ...formData,
-                            token: { value: token, valid: true },
+                            token: { value: token || "", valid: !!token },
                           },
                           appSession
                         )
