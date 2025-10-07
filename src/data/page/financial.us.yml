@@ -10,7 +10,7 @@ meta_info:
 ## BANNER - HEADER
 seo_title: "Bootcamp Financing"
 header:
-  title: Finance Your Future in Tech — Your Way
+  title: Finance Your Future in Tech, Your Way
   paragraph: |
       We offer several ways to fund your education, so you can focus on building your career without worrying about the cost. There’s an option to fit every need:
       <br/>
@@ -219,7 +219,7 @@ data_table:
     - title: "Option"
     - title: "Pay in Full"
     - title: "Monthly Plans (TFC)"
-    - title: "Loans (Ascent/Climb)"
+    - title: "Loans (Ascent/ Climb)"
     - title: "Income-Based (Edly)"
   rows:
     - cells:

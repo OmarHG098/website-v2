@@ -10,7 +10,7 @@ meta_info:
 ## BANNER - HEADER
 seo_title: "Financiación y formas de pago en 4Geeks Academy"
 header:
-  title: Financia tu futuro
+  title: Financia Tu Futuro en Tech, A Tu Manera
   paragraph: |
       Ofrecemos varias formas de financiar tu educación, para que puedas concentrarte en construir tu carrera sin preocuparte por el costo. Hay una opción para cada necesidad:
       <br/>
@@ -221,7 +221,7 @@ data_table:
     - title: "Modalidad"
     - title: "Pago Total"
     - title: "Cuotas Flexibles (TFC)"
-    - title: "Financiamiento (Ascent/Climb)"
+    - title: "Financiamiento (Ascent/ Climb)"
     - title: "Paga Cuando Ganes (Edly)"
   rows:
     - cells:
