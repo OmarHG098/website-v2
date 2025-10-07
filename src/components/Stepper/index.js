@@ -2,7 +2,7 @@ import React from "react";
 // import "./Stepper.css";
 import { Div } from "../Sections";
 import { H2, H3, Paragraph } from "../Heading";
-import { Icon } from "../Icon";
+import Icon from "../Icon";
 import { Colors } from "../Styling";
 
 const StepCard = ({ step, index, steps }) => {

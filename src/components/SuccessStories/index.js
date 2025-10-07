@@ -87,9 +87,10 @@ const SuccessStoriescomponent = ({ filterIndexes, lang, variant }) => {
   const featuredTestimonial = testimonials?.find(
     (t) => t.featured_on_section === true
   );
-  const regularTestimonials = testimonials?.filter(
-    (t) => t.featured_on_section !== true && t.hidden == false
-  ) || [];
+  const regularTestimonials =
+    testimonials?.filter(
+      (t) => t.featured_on_section !== true && t.hidden == false
+    ) || [];
 
   // Split regular testimonials in half for rendering around the featured section only if there's a featured testimonial
   const midPoint = featuredTestimonial

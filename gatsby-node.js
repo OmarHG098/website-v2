@@ -861,6 +861,14 @@ exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
         if (splitChunks.cacheGroups.styles) {
           delete splitChunks.cacheGroups.styles.name;
         }
+
+        // Disable CSS chunking to prevent conflicts
+        splitChunks.cacheGroups.styles = {
+          name: false,
+          test: /\.(css|scss|sass)$/,
+          chunks: "all",
+          enforce: false,
+        };
       }
     }
 
