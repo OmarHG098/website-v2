@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Div } from "../Sections";
 import { H2, Paragraph } from "../Heading";
 import { Colors } from "../Styling";
+import Icon from "../Icon";
 import { TableHeader, TableRow } from "./table-components";
 
 /**
@@ -65,6 +66,7 @@ const DataTable = ({
   borderRadius = "0px",
   ...props
 }) => {
+  const [selected, setSelected] = useState({ index: null, manual: false });
   const columnCount = columns.length;
   const gridColumns = `1fr repeat(${columnCount - 1}, 1fr)`;
   const gridColumns_tablet = responsive
@@ -123,7 +125,8 @@ const DataTable = ({
       {/* Responsive table wrapper with horizontal scroll */}
       <Div
         as="div"
-        display="block"
+        display_xxs="none"
+        display_md="block"
         overflowX="auto"
         overflowY={stickyHeaders ? "auto" : "visible"}
         maxHeight={stickyHeaders ? "620px" : "none"}
@@ -180,6 +183,185 @@ const DataTable = ({
             ))}
           </Div>
         </Div>
+      </Div>
+
+      {/* MOBILE VERSION - Dropdown/Accordion */}
+      <Div
+        flexWrap="wrap"
+        justifyContent="center"
+        padding_xs="0 0 40px 0"
+        margin_tablet="20px 35px"
+        margin_xxs="10px 15px"
+        gridGap="10px"
+        display_md="none"
+        border={
+          withBorder
+            ? `${borderWidth}px solid #000`
+            : `2.5px solid ${Colors.borderGray}`
+        }
+        borderRadius={borderRadiusValuePx}
+        boxShadow={withBorder ? "22px 26px 0px 0px rgba(0,0,0,1)" : undefined}
+        background={Colors.white}
+      >
+        {title && (
+          <H2
+            fontSize="18px"
+            fontWeight="900"
+            lineHeight="19px"
+            textAlign="center"
+            color={Colors.darkGray}
+            padding="30px 0 10px 0"
+          >
+            {title.text || title}
+          </H2>
+        )}
+
+        {rows.map((row, index) => {
+          const firstCell = row.cells?.[0] || row?.[0];
+          const firstCellContent = typeof firstCell === "string" ? firstCell : firstCell?.content || "";
+          
+          return (
+            <React.Fragment key={index}>
+              <Div
+                key={index}
+                width="90%"
+                height={selected.index === index ? "auto" : "50px"}
+                margin_xs="0 15px"
+                display_md="none"
+                cursor="pointer"
+                onClick={() => {
+                  selected.index === index
+                    ? setSelected({ index: null, manual: true })
+                    : setSelected({ index: index, manual: true });
+                }}
+                justifyContent="between"
+                flexDirection={selected.index === index && "column"}
+                position="relative"
+                alignItems="center"
+                borderBottom="none"
+                borderBottom_tablet="1px solid #a4a4a47a"
+                borderBottom_xs="1px solid #a4a4a47a"
+              >
+                <H2
+                  textAlign="left"
+                  fontSize="14px"
+                  fontWeight="700"
+                  lineHeight="22px"
+                  textTransform="uppercase"
+                  color={Colors.darkGray}
+                  padding={selected.index === index ? "14px 0 0 0" : "0px"}
+                >
+                  {firstCellContent}
+                </H2>
+                <Div
+                  style={{ position: "absolute", right: "0px", top: "15px" }}
+                  transform={
+                    selected.index === index ? "rotate(90deg)" : "rotate(0deg)"
+                  }
+                >
+                  <Icon icon="arrow-right" width="32px" height="16px" />
+                </Div>
+                {selected.index === index && (
+                  <Div flexDirection="row" margin="10px 0" width="100%">
+                    {columns.slice(1).map((column, colIndex) => {
+                      const cell = row.cells?.[colIndex + 1] || row?.[colIndex + 1];
+                      const cellContent = typeof cell === "string" ? cell : cell?.content || "";
+                      const hasIcon = typeof cell === "object" && cell?.icon;
+                      const hasActions = typeof cell === "object" && (cell?.primary_action || cell?.secondary_action);
+                      
+                      return (
+                        <Div
+                          key={colIndex}
+                          flexDirection="column"
+                          width={`${100 / (columns.length - 1)}%`}
+                          background={colIndex % 2 === 0 ? "#e3f2ff" : Colors.white}
+                          padding="8px"
+                          borderRadius="6px"
+                          justifyContent="center"
+                          margin="0 2px"
+                        >
+                          <Paragraph
+                            textAlign="center"
+                            fontSize="14px"
+                            fontWeight="700"
+                            lineHeight="20px"
+                            color={Colors.darkGray}
+                          >
+                            {column.title || column}
+                          </Paragraph>
+                          <Div
+                            display="flex"
+                            alignItems="center"
+                            justifyContent="center"
+                            gap="4px"
+                          >
+                            {hasIcon && (
+                              <Icon
+                                icon={cell.icon}
+                                width={cell.size || "16px"}
+                                height={cell.size || "16px"}
+                                color={cell.icon_color || Colors.darkGray}
+                              />
+                            )}
+                            <Paragraph
+                              textAlign="center"
+                              fontSize="12px"
+                              fontWeight="300"
+                              lineHeight="20px"
+                              color={Colors.darkGray}
+                              {...(cell?.html
+                                ? { dangerouslySetInnerHTML: { __html: cellContent } }
+                                : { children: cellContent })}
+                            />
+                          </Div>
+                          {hasActions && (
+                            <Div margin="8px 0 0 0">
+                              {cell.primary_action && (
+                                <Div
+                                  as="a"
+                                  href={cell.primary_action.path}
+                                  fontSize="10px"
+                                  fontWeight="600"
+                                  padding="4px 8px"
+                                  borderRadius="3px"
+                                  background={Colors.blue}
+                                  color={Colors.white}
+                                  textDecoration="none"
+                                  display="inline-block"
+                                  margin="2px"
+                                >
+                                  {cell.primary_action.text}
+                                </Div>
+                              )}
+                              {cell.secondary_action && (
+                                <Div
+                                  as="a"
+                                  href={cell.secondary_action.path}
+                                  fontSize="10px"
+                                  fontWeight="600"
+                                  padding="4px 8px"
+                                  borderRadius="3px"
+                                  background="transparent"
+                                  color={Colors.blue}
+                                  border={`1px solid ${Colors.blue}`}
+                                  textDecoration="none"
+                                  display="inline-block"
+                                  margin="2px"
+                                >
+                                  {cell.secondary_action.text}
+                                </Div>
+                              )}
+                            </Div>
+                          )}
+                        </Div>
+                      );
+                    })}
+                  </Div>
+                )}
+              </Div>
+            </React.Fragment>
+          );
+        })}
       </Div>
     </Div>
   );
