@@ -83,9 +83,12 @@ const Financial = (props) => {
           >
             {header.title}
           </H2>
-          <Paragraph color={Colors.black} textAlign="left" fontSize="21px">
-            {header.paragraph}
-          </Paragraph>
+          <Paragraph
+            color={Colors.black}
+            textAlign="left"
+            fontSize="21px"
+            dangerouslySetInnerHTML={{ __html: header.paragraph }}
+          />
           <Button
             background={Colors.blue}
             lineHeight="26px"

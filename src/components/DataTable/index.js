@@ -218,8 +218,11 @@ const DataTable = ({
 
         {rows.map((row, index) => {
           const firstCell = row.cells?.[0] || row?.[0];
-          const firstCellContent = typeof firstCell === "string" ? firstCell : firstCell?.content || "";
-          
+          const firstCellContent =
+            typeof firstCell === "string"
+              ? firstCell
+              : firstCell?.content || "";
+
           return (
             <React.Fragment key={index}>
               <Div
@@ -264,17 +267,23 @@ const DataTable = ({
                 {selected.index === index && (
                   <Div flexDirection="row" margin="10px 0" width="100%">
                     {columns.slice(1).map((column, colIndex) => {
-                      const cell = row.cells?.[colIndex + 1] || row?.[colIndex + 1];
-                      const cellContent = typeof cell === "string" ? cell : cell?.content || "";
+                      const cell =
+                        row.cells?.[colIndex + 1] || row?.[colIndex + 1];
+                      const cellContent =
+                        typeof cell === "string" ? cell : cell?.content || "";
                       const hasIcon = typeof cell === "object" && cell?.icon;
-                      const hasActions = typeof cell === "object" && (cell?.primary_action || cell?.secondary_action);
-                      
+                      const hasActions =
+                        typeof cell === "object" &&
+                        (cell?.primary_action || cell?.secondary_action);
+
                       return (
                         <Div
                           key={colIndex}
                           flexDirection="column"
                           width={`${100 / (columns.length - 1)}%`}
-                          background={colIndex % 2 === 0 ? "#e3f2ff" : Colors.white}
+                          background={
+                            colIndex % 2 === 0 ? "#e3f2ff" : Colors.white
+                          }
                           padding="8px"
                           borderRadius="6px"
                           justifyContent="center"
@@ -310,7 +319,11 @@ const DataTable = ({
                               lineHeight="20px"
                               color={Colors.darkGray}
                               {...(cell?.html
-                                ? { dangerouslySetInnerHTML: { __html: cellContent } }
+                                ? {
+                                    dangerouslySetInnerHTML: {
+                                      __html: cellContent,
+                                    },
+                                  }
                                 : { children: cellContent })}
                             />
                           </Div>
