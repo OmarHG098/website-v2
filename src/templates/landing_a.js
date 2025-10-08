@@ -468,19 +468,11 @@ export const query = graphql`
             position
             heading
             sub_heading
+            margin
+            padding
+            padding_tablet
+            background
             featured {
-              name
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 150
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-            }
-            custom_logos {
               name
               image {
                 childImageSharp {
@@ -662,6 +654,23 @@ export const query = graphql`
             paragraph
 
             total_rows
+          }
+          we_trust_section {
+            position
+            title
+            bg_full
+            text
+            boxes {
+              icon
+              title
+              label
+              text
+            }
+          }
+          choose_program {
+            title
+            paragraph
+            position
           }
         }
       }
@@ -999,6 +1008,7 @@ export const query = graphql`
             bc_slug
             visibility
             show_in_apply
+            job_guarantee
           }
           apply_form {
             label
@@ -1145,6 +1155,21 @@ export const query = graphql`
               }
               featured
             }
+          }
+        }
+      }
+    }
+    allChooseYourProgramYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          programs {
+            link
+            sub_title
+            title
+            description
+            description_mobile
+            icon
+            text_link
           }
         }
       }
