@@ -5,8 +5,8 @@ part_time:
     recommended_color: "lightGreen"
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
     scholarship: "Pay upfront"
-    description: "Regular tuition is $10,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
-    price: "$10,999"
+    description: "Pay only $2,999 when you pay in full."
+    price: "$2,999"
     original_price: "$10,999"
     offer: "10% OFF"
     bullets:
@@ -23,7 +23,7 @@ part_time:
     recomended: "Low monthly payments"
     recommended_color: "blue"
     scholarship: "Payment Plans & Loans"
-    description: "Finance your tuition through Climb or Ascent (credit-based), or TFC Tuition (flexible entry). Repayment terms range from 3 to 5+ years, with some plans offering the option to defer payments until after graduation."
+    description: "  Finance your tuition with TFC  Tuition and pay in 6 easy weekly installments."
     price: "$200 - $299/mo"
     bullets: 
       - "Choose among short or long term financing plans."
@@ -38,78 +38,119 @@ part_time:
   - slug: 'spain-upfront-ai-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: "★ Best Deal!"
+    recommended_color: "lightGreen"
     scholarship: "Pay upfront"
-    description: "And get a discount"
-    price: "€3000*"
-    original_price: "€3500"
-    offer: "500$ OFF"
+    description: "Pay only €3,000 when you pay in full."
+    price: "€3,000"
+    original_price: "€3,500"
+    offer: "€500 OFF"
     bullets:
-      - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
-      - "*Discount up to €500. From €3500 to €3000"     
+      - "Pay upfront and save €500"
+      - "Regular tuition is €3,500 and can be financed in installments."
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"    
+
+  - slug: 'spain-financed-ai-pt'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: "Low monthly payments"
+    recommended_color: "blue"
+    scholarship: "Payment Plans"
+    description: "Finance your tuition and pay in flexible installments."
+    price: "From €150/mo"
+    bullets:
+      - "Choose among short or long term financing plans."
+      - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
+    icons: 
+      - "/images/visa-mastercard.png"    
 
   - slug: 'europe-upfront-ai-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany', 'lisbon-portugal','milan-italy','rome-italy']
     recomended: "★ Best Deal!"
+    recommended_color: "lightGreen"
     scholarship: "Pay upfront"
-    description: "And get a discount"
-    price: "€3000*"
-    original_price: "€3500"
-    offer: "500$ OFF"
+    description: "Pay only €3,000 when you pay in full."
+    price: "€3,000"
+    original_price: "€3,500"
+    offer: "€500 OFF"
     bullets:
-      - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
-      - "*Discount up to €500. From €3500 instead of €3000"     
+      - "Pay upfront and save €500"
+      - "Regular tuition is €3,500 and can be financed in installments."
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"    
 
-## Chile
+  - slug: 'europe-financed-ai-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany', 'lisbon-portugal','milan-italy','rome-italy']
+    recomended: "Low monthly payments"
+    recommended_color: "blue"
+    scholarship: "Payment Plans"
+    description: "Finance your tuition and pay in flexible installments."
+    price: "From €150/mo"
+    bullets:
+      - "Choose among short or long term financing plans."
+      - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
+    icons: 
+      - "/images/visa-mastercard.png"    
 
+## Chile
   - slug: 'chile-ai-upfront'
     academies: ['santiago-chile']
     recomended: "★ Best Deal!"
+    recommended_color: "lightGreen"
     scholarship: "Pay Upfront"
-    description: "And get a discount"
-    price: "700.000 CLP*"
-    original_price: "1.000.000 CLP"
+    description: "Pay only 700,000 CLP when you pay in full."
+    price: "700,000 CLP"
+    original_price: "1,000,000 CLP"
     offer: "30% OFF"
     bullets:
-      - "Pay with bank transfer, credit or debit card"    
-      - "*Discount of 300.000 CLP OFF"
+      - "Pay upfront and save 300,000 CLP"
+      - "Regular tuition is 1,000,000 CLP and can be financed in installments."
     icons: 
       - "/images/visa-mastercard.png"   
 
   - slug: 'chile-financed-ai'
     academies: ['santiago-chile']
-    recomended: "Accessible payment plan"
-    recommended_color: "yellow"
-    scholarship: "Financed"
-    description: "12 months payment"
-    price: Starting from 58.000 CLP"
-    warning_message: "Limited seats!"
+    recomended: "Low monthly payments"
+    recommended_color: "blue"
+    scholarship: "Payment Plans"
+    description: "Finance your tuition and pay in 6-12 monthly installments."
+    price: "From 58,000 CLP/mo"
     bullets:
       - "Tailor-made financing from 6 to 12 months"  
       - "An advance payment corresponding to 20% of the value of the program must be paid" 
       - "If you don't find anything that works for you here, please contact us so we can try to find other ways to help you."  
     icons: 
       - "/images/visa-mastercard.png"  
-      - "/images//flevo-new.png"
+      - "/images/flevo-new.png"
 
 ## LATAM 
   - slug: 'latam-upfront-ai'
     academies: ['montevideo-uruguay','bogota-colombia','caracas-venezuela',  'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: "★ Best Deal!"
-    scholarship: "Pay upfront and "
-    description: "save $500"
-    price: "USD $1.399"
-    original_price: "USD $2.500"
+    recommended_color: "lightGreen"
+    scholarship: "Pay upfront"
+    description: "Pay only USD $2,999 when you pay in full."
+    price: "USD $2,999"
+    original_price: "USD $10,999"
     offer: "44% OFF"
     bullets:
-      - "save $500. From $2.500 to $1.399."
+      - "Pay upfront and save $500"
+      - "Regular tuition is USD $2,500 and can be financed in installments."
+    icons: 
+      - "/images/visa-mastercard.png"
+
+  - slug: 'latam-financed-ai'
+    academies: ['montevideo-uruguay','bogota-colombia','caracas-venezuela',  'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    recomended: "Low monthly payments"
+    recommended_color: "blue"
+    scholarship: "Payment Plans"
+    description: "Finance your tuition and pay in flexible installments."
+    price: "From USD $100/mo"
+    bullets:
+      - "Choose among short or long term financing plans."
       - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"
     icons: 
       - "/images/visa-mastercard.png"  
