@@ -20,6 +20,7 @@ import OnlyFor from "../components/OnlyFor";
 import Overlaped from "../components/Overlaped";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 import Loc from "../components/Loc";
+import DoubleActionCTA from "../components/DoubleActionCTA";
 
 const Cybersecurity = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -285,6 +286,7 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
       />
 
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
+      <DoubleActionCTA />
     </>
   );
 };
@@ -891,6 +893,62 @@ export const query = graphql`
             cohort_more_details_text
             syllabus_button_text
             syllabus_submit_text
+          }
+        }
+      }
+    }
+    allDoubleActionCtaYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          cta {
+            title
+            description
+            primary {
+              title
+              description
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 900
+                    quality: 100
+                    placeholder: NONE
+                  )
+                }
+              }
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            secondary {
+              title
+              description
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 900
+                    quality: 100
+                    placeholder: NONE
+                  )
+                }
+              }
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            newsletter_form {
+              placeholder_email
+              error_email
+              button_submit
+              button_loading
+              status_idle
+              status_error
+              status_correct_errors
+              success_message
+            }
           }
         }
       }
