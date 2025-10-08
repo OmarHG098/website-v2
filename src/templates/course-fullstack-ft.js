@@ -30,7 +30,7 @@ const Program = ({ data, pageContext, yml }) => {
   const hiring = data.allPartnerYaml.edges[0].node;
   const landingHiring = yml.partners;
 
-  const defaultCourse = "full-stack";
+  const defaultCourse = "full-stack-ft";
   const program_schedule = yml.meta_info.slug.includes("full-time")
     ? "full_time"
     : "part_time";
@@ -262,6 +262,7 @@ const Program = ({ data, pageContext, yml }) => {
         message={courseDetails.upcoming.no_dates_message}
         actionMessage={courseDetails.upcoming.actionMessage}
         locations={data.allLocationYaml.edges}
+        defaultCourse={defaultCourse}
         showMoreRedirect
       />
       <PricesAndPayment
