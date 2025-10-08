@@ -34,35 +34,6 @@ part_time:
       - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
 
-  - slug: 'plan-3'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
-    recomended: "Full and partial funding"
-    recommended_color: "pink"
-    scholarship: "Scholarships"
-    description: "Partial and full scholarships available through partners across the U.S. Eligibility and amount vary by location. Contact us to explore your options."
-    price: "$12,999"
-    original_price: ""
-    bullets: 
-      - "Enroll, agreeing to terms and conditions."
-      - "Fulfill required coursework and attendance."
-      - "Get hired within 9 months of graduation or we'll refund 100% of your tuition."
-    icons: 
-
-  - slug: 'plan-5'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
-    recomended: "Learn now, pay later"
-    recommended_color: "#FF9800"
-    scholarship: "Income-Based Payments (IBR)"
-    description: "Offered through EDLY. Start paying only once you earn $35K/year. Payments scale with income, and total repayment is capped"
-    price: "IBR"
-    bullets:
-      - "Edly is proud to help 4Geeks Academy provide affordable, income-based repayment (IBR) loans to its students"
-      - "Only make payments once you land a job and earn the minimum income."
-      - "Flexible payments adjust based on your income"
-      - "Tuition paid directly to your school"
-    icons:
-      - "/images/edly.png"
-
 ## Spain & Europe
   - slug: 'spain-upfront-ai-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']

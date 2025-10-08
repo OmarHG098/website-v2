@@ -35,35 +35,6 @@ part_time:
       - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
 
-  - slug: 'plan-3'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
-    recomended: "Financiamiento total y parcial"
-    recommended_color: "pink"
-    scholarship: "Becas"
-    description: "Becas parciales y totales disponibles a través de socios en EE. UU. La elegibilidad y el monto varían según la ubicación. Contáctanos para explorar tus opciones."
-    price: "$12,999"
-    original_price: ""
-    bullets: 
-      - "Inscríbete aceptando los términos y condiciones."
-      - "Cumple con la carga académica y asistencia requeridas."
-      - "Consigue empleo en los 9 meses posteriores a la graduación o te reembolsamos el 100% de la matrícula."
-    icons: 
-
-  - slug: 'plan-5'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
-    recomended: "Aprende ahora, paga después"
-    recommended_color: "#FF9800"
-    scholarship: "Préstamo de Pago Basado en Ingresos (IBR)"
-    description: "Ofrecido a través de EDLY. Comienza a pagar solo cuando ganes $35K/año. Los pagos se ajustan según tus ingresos, y el reembolso total está limitado"
-    price: "IBR"
-    bullets:
-      - "Edly se enorgullece de ayudar a 4Geeks Academy a ofrecer préstamos asequibles con pagos basados en ingresos (IBR) a sus estudiantes."
-      - "Solo comienzas a pagar una vez que consigas un trabajo y alcances el ingreso mínimo."
-      - "Pagos flexibles que se ajustan según tus ingresos."
-      - "La matrícula se paga directamente a la academia."
-    icons:
-      - "/images/edly.png"
-
 ## Spain 
 
   - slug: 'spain-upfront-ai-pt'
