@@ -291,6 +291,7 @@ const Program = ({ data, pageContext, yml }) => {
         message={courseDetails.upcoming.no_dates_message}
         actionMessage={courseDetails.upcoming.actionMessage}
         locations={data.allLocationYaml.edges}
+        defaultCourse={defaultCourse}
         showMoreRedirect
       />
 

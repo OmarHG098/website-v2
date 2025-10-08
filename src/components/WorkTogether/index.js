@@ -43,6 +43,7 @@ const WorkTogether = ({
           display="flex"
           flexFlow="wrap!important"
           gap="40px"
+          margin="10px 0 0 0"
           flexDirection="row"
           justifyContent="center"
         >

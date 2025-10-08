@@ -898,51 +898,28 @@ export const landingSections = {
     const hiring = data.allPartnerYaml.edges[0].node;
     let landingHiring = dataYml[0].node?.who_is_hiring;
 
-    // Lógica de priorización:
-    // 1. Si hay custom_logos, usar solo esos (ignora todo lo demás)
-    // 2. Si hay featured, usar esos con showFeatured
-    // 3. Si no hay ninguno, usar los globales del partner.yaml
-
-    const customLogos = landingHiring?.custom_logos;
+    // Obtener featured del YAML específico
     const featuredLogos = landingHiring?.featured;
 
-    // Configuration-based approach to replace if-else logic
-    const logoConfigurations = [
-      {
-        condition: () => customLogos && customLogos.length > 0,
-        config: {
-          imagesToShow: customLogos,
-          showFeaturedLogos: false,
-          featuredImagesToShow: [],
-        },
-      },
-      {
-        condition: () => featuredLogos && featuredLogos.length > 0,
-        config: {
-          imagesToShow: hiring.partners.images,
-          showFeaturedLogos: true,
-          featuredImagesToShow: featuredLogos,
-        },
-      },
-      {
-        condition: () => true, // Default fallback
-        config: {
-          imagesToShow: hiring.partners.images,
-          showFeaturedLogos: true,
-          featuredImagesToShow: hiring.partners.images.filter(
-            (img) => img.featured === true
-          ),
-        },
-      },
-    ];
+    // Determinar qué imágenes mostrar
+    let imagesToShow;
+    let featuredImagesToShow;
 
-    // Find the first configuration that matches the condition
-    const selectedConfig = logoConfigurations.find((config) =>
-      config.condition()
-    )?.config;
-
-    const { imagesToShow, showFeaturedLogos, featuredImagesToShow } =
-      selectedConfig;
+    if (featuredLogos?.length > 0) {
+      // Si hay featured en el YAML, mostrar primero los featured y luego el resto
+      const featuredNames = featuredLogos.map((logo) => logo.name);
+      const remainingLogos = hiring.partners.images.filter(
+        (img) => !featuredNames.includes(img.name)
+      );
+      imagesToShow = [...featuredLogos, ...remainingLogos];
+      featuredImagesToShow = featuredLogos;
+    } else {
+      // Si NO hay featured, usar comportamiento por defecto
+      imagesToShow = hiring.partners.images;
+      featuredImagesToShow = hiring.partners.images.filter(
+        (img) => img.featured === true
+      );
+    }
 
     let landingHiriging = dataYml[0].node?.who_is_hiring;
 
@@ -969,7 +946,7 @@ export const landingSections = {
           marquee
           paddingFeatured="0 0 70px 0"
           featuredImages={featuredImagesToShow}
-          showFeatured={showFeaturedLogos}
+          showFeatured={true}
           withoutLine
           title={
             landingHiring ? landingHiring.heading : hiring.partners.tagline

@@ -1077,9 +1077,19 @@ const PricesAndPayment = (props) => {
 
   const getCurrentPlans = () => {
     // If we're on a specific course page, use defaultCourse directly
-    const courseToUse = props.financial
+    const rawCourse = props.financial
       ? course?.value || props.defaultCourse
       : props.defaultCourse;
+
+    // Normalize course slug to match plan filenames
+    const courseToUse = (() => {
+      const lower = (rawCourse || "").toLowerCase();
+      const aliasMap = {
+        "full-stack-ft": "full-stack", // full-time uses same plans as part-time
+        "cyber-security": "cybersecurity",
+      };
+      return aliasMap[lower] || lower;
+    })();
 
     let _plans = data.allPlansYaml.edges
       .filter(({ node }) => node.fields.lang === props.lang)
