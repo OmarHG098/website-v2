@@ -2,45 +2,66 @@ full_time: []
 part_time:
   - slug: 'plan-4'
     recomended: "★ Best Deal!"
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
-    scholarship: "Full Payment"
-    description: "Pay today"
-    price: "$3000"
-    original_price: "$3500"
-    offer: "500$ OFF"
-    bullets: 
-      - "When you pay upfront you save interests and get a special $500 discount"
-      - "Get ready to maximize your productivity with AI"
+    recommended_color: "lightGreen"
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
+    scholarship: "Pay upfront"
+    description: "Regular tuition is $10,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
+    price: "$10,999"
+    original_price: "$10,999"
+    offer: "10% OFF"
+    bullets:
+      - Pay upfront and save 10%
+      - Regular tuition is $ 10,999 and can be financed interest free-up to 6 months.
+    icons:
+      - "/images/edly.png"
+      - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
+      - "/images/climb-logo.png"
 
   - slug: 'plan-2'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'toronto-canada', 'dallas-usa']
     recomended: "Low monthly payments"
-    recommended_color: "veryLightBlue"
-    scholarship: "Financed"
-    description: "Pay in 12 months"
-    price: "~$266 p/m"
+    recommended_color: "blue"
+    scholarship: "Payment Plans & Loans"
+    description: "Finance your tuition through Climb or Ascent (credit-based), or TFC Tuition (flexible entry). Repayment terms range from 3 to 5+ years, with some plans offering the option to defer payments until after graduation."
+    price: "$200 - $299/mo"
     bullets: 
-      - "There is always a payment plan available to help you join 4Geeks Academy."
-      - "If you don't find anything that works for you here, please contact us so we can try to find other ways to help you."
+      - "Choose among short or long term financing plans."
+      - "Affordable long term loans based on credit score."
+      - "Loan terms displayed are effective as of 3/11/2025. To see full repayment examples, visit <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">our 4Geeks and Ascent page</a>."
     icons: 
       - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
 
   - slug: 'plan-3'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
-    recomended: "Low monthly payments"
-    recommended_color: "veryLightBlue"
-    scholarship: "Financed"
-    description: "Pay in 24 months"
-    price: "~$145 p/m"
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
+    recomended: "Full and partial funding"
+    recommended_color: "pink"
+    scholarship: "Scholarships"
+    description: "Partial and full scholarships available through partners across the U.S. Eligibility and amount vary by location. Contact us to explore your options."
+    price: "$12,999"
+    original_price: ""
     bullets: 
-      - "There is always a payment plan available to help you join 4Geeks Academy."
-      - "If you don't find anything that works for you here, please contact us so we can try to find other ways to help you."
+      - "Enroll, agreeing to terms and conditions."
+      - "Fulfill required coursework and attendance."
+      - "Get hired within 9 months of graduation or we'll refund 100% of your tuition."
     icons: 
-      - "/images/ascent_logo.png"
-      - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
+
+  - slug: 'plan-5'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
+    recomended: "Learn now, pay later"
+    recommended_color: "#FF9800"
+    scholarship: "Income-Based Payments (IBR)"
+    description: "Offered through EDLY. Start paying only once you earn $35K/year. Payments scale with income, and total repayment is capped"
+    price: "IBR"
+    bullets:
+      - "Edly is proud to help 4Geeks Academy provide affordable, income-based repayment (IBR) loans to its students"
+      - "Only make payments once you land a job and earn the minimum income."
+      - "Flexible payments adjust based on your income"
+      - "Tuition paid directly to your school"
+    icons:
+      - "/images/edly.png"
 
 ## Spain & Europe
   - slug: 'spain-upfront-ai-pt'
