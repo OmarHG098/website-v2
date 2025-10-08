@@ -31,7 +31,7 @@ const WorkTogether = ({
         fontSize="30px"
         width="auto"
         fontWeight="bold"
-        margin="10px 0 30px 10px"
+        margin="10px 0 0 10px"
         textAlign="center"
       >
         {title}
@@ -43,6 +43,7 @@ const WorkTogether = ({
           display="flex"
           flexFlow="wrap!important"
           gap="40px"
+          margin="10px 0 0 0"
           flexDirection="row"
           justifyContent="center"
         >
