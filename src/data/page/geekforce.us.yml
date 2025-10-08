@@ -14,7 +14,7 @@ header:
     <strong style = 'color:rgba(255, 183, 24, 1); font-family: Archivo-Black;'>FORCE</strong>:<br>
     <strong style='font-family: Archivo;'>Career Development <br>for the AI Era</strong>
   image: "../../../static/images/bg/companies-bg.jpg"
-  image_alt: "GeekForce - Coding bootcamp with unlimited carreer support."
+  image_alt: "GeekForce - Coding bootcamp with unlimited career support."
   paragraph: |
     Get unlimited 1:1 career support designed for your unique profile and goals—for life. From resume and portfolio building to interviews and AI-driven hiring platforms, we’ll give you the personalized mentorship you need to land your first job and keep thriving in today’s tech.
   image_logo: "/images/geekforce.png"
