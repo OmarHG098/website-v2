@@ -1,5 +1,6 @@
 # Location-based job guarantee configuration
 job_guarantee_locations: ["atlanta-usa", "austin-usa", "chicago-usa", "dallas-usa", "houston-usa", "losangeles-usa", "newyork-usa", "toronto-canada", "online", "online-spanish-usa", "buenosaires-argentina", "bogota-colombia", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador"]
+job_guarantee_courses: ["full-stack", "cybersecurity", "datascience-ml", "machine-learning"]
 
 pricing_error: En este momento no estan disponibles los precios para
 pricing_error_contact: Para más información por favor contáctanos a info@4geeksacademy.com.

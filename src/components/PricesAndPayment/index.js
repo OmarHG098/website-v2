@@ -31,17 +31,26 @@ const FALLBACK_VALUES = {
   financialsLink: "/us/financials",
 };
 
-// Helper function to check if job guarantee should be shown for selected location
-const shouldShowJobGuarantee = (selectedLocation, info) => {
+// Helper function to check if job guarantee should be shown for selected location and course
+const shouldShowJobGuarantee = (selectedLocation, currentCourse, info) => {
   if (!selectedLocation || !info?.job_guarantee_locations) return false;
 
+  // Check if course is eligible for job guarantee
+  if (info?.job_guarantee_courses && currentCourse) {
+    // Convert underscore format to hyphen format for comparison
+    const courseSlug = currentCourse.replaceAll("_", "-");
+    if (!info.job_guarantee_courses.includes(courseSlug)) {
+      return false;
+    }
+  }
+
+  // Check if location is eligible
   const candidates = [
     selectedLocation?.breathecode_location_slug,
     selectedLocation?.meta_info?.slug,
     selectedLocation?.active_campaign_location_slug,
   ].filter((s) => typeof s === "string" && s.length > 0);
 
-  // Check if any candidate location is in the job_guarantee_locations array
   for (const locationSlug of candidates) {
     if (info.job_guarantee_locations.includes(locationSlug)) {
       return true;
@@ -306,6 +315,8 @@ const FinancialOptionsDesktop = ({
   currentLocation,
   financial,
   schedule,
+  course,
+  defaultCourse,
 }) => {
   // Build options list from available plans (YAML-driven)
   const paymentOptions = useMemo(
@@ -439,7 +450,11 @@ const FinancialOptionsDesktop = ({
             )}
           </Div>
           {availablePlans?.some((p) => p.price) &&
-            shouldShowJobGuarantee(currentLocation, info) &&
+            shouldShowJobGuarantee(
+              currentLocation,
+              course?.value || defaultCourse,
+              info
+            ) &&
             schedule !== "full_time" && (
               <Div margin="16px 0 0 0" display="block">
                 <Div alignItems="center">
@@ -662,6 +677,8 @@ const FinancialOptionsCard = ({
   currentLocation,
   financial,
   schedule,
+  course,
+  defaultCourse,
 }) => {
   // Build options list from available plans (YAML-driven)
   const paymentOptions = useMemo(
@@ -763,7 +780,11 @@ const FinancialOptionsCard = ({
           </Div>
 
           {availablePlans?.some((p) => p.price) &&
-            shouldShowJobGuarantee(currentLocation, info) &&
+            shouldShowJobGuarantee(
+              currentLocation,
+              course?.value || defaultCourse,
+              info
+            ) &&
             schedule !== "full_time" && (
               <Div
                 margin="8px 0 0 0"
@@ -931,6 +952,7 @@ const PricesAndPayment = (props) => {
               lang
             }
             job_guarantee_locations
+            job_guarantee_courses
             get_notified
             contact_carrer_advisor
             contact_link
@@ -1345,6 +1367,8 @@ const PricesAndPayment = (props) => {
             currentLocation={currentLocation}
             financial={props.financial}
             schedule={schedule}
+            course={course}
+            defaultCourse={props.defaultCourse}
           />
           {/* Financial explainer card (mobile) */}
           <Div
@@ -1368,6 +1392,8 @@ const PricesAndPayment = (props) => {
               currentLocation={currentLocation}
               financial={props.financial}
               schedule={schedule}
+              course={course}
+              defaultCourse={props.defaultCourse}
             />
           </Div>
         </>
