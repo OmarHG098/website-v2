@@ -135,11 +135,11 @@ part_time:
     scholarship: "Pago completo"
     description: "Paga solo USD $2,999 cuando pagas en su totalidad."
     price: "USD $2,999"
-    original_price: "USD $2,500"
-    offer: "44% DE DESCUENTO"
+    original_price: "USD $2,999"
+    offer: "0% DE DESCUENTO"
     bullets:
-      - "Paga por adelantado y ahorra $500"
-      - "La matrícula regular es de USD $2,500 y se puede financiar en cuotas."
+      - "Paga por adelantado y ahorra $0"
+      - "La matrícula regular es de USD $2,999 y se puede financiar en cuotas."
     icons: 
       - "/images/visa-mastercard.png"
 

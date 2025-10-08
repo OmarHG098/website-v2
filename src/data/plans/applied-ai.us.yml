@@ -7,11 +7,11 @@ part_time:
     scholarship: "Pay upfront"
     description: "Pay only $2,999 when you pay in full."
     price: "$2,999"
-    original_price: "$10,999"
-    offer: "10% OFF"
+    original_price: "$2,999"
+    offer: "0% OFF"
     bullets:
-      - Pay upfront and save 10%
-      - Regular tuition is $ 10,999 and can be financed interest free-up to 6 months.
+      - Pay upfront and save 0%
+      - Regular tuition is $ 2,999 and can be financed interest free-up to 6 months.
     icons:
       - "/images/edly.png"
       - "/images/ascent_logo.png"
