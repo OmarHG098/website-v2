@@ -777,6 +777,52 @@ exports.createSchemaCustomization = ({ actions }) => {
       academies: [String]
       slug: String
     }
+    type LandingYamlHeader_data {
+      background: String
+      tagline: String
+      tagline_color: String
+      sub_heading: String
+      image_filter: String
+      partner_logo_url: File @fileByRelativePath
+      background_image: File @fileByRelativePath
+      badge: File @fileByRelativePath
+      form_styles: LandingYamlHeaderFormStyles
+    }
+    type LandingYamlHeaderFormStyles {
+      background: String
+      color: String
+      button: LandingYamlHeaderFormStylesButton
+    }
+    type LandingYamlHeaderFormStylesButton {
+      background: String
+    }
+    
+    type LandingYaml implements Node {
+      header_data: LandingYamlHeader_data
+    }
+    type DownloadableYamlHeader_data {
+      background: String
+      tagline: String
+      tagline_color: String
+      sub_heading: String
+      image_filter: String
+      partner_logo_url: File @fileByRelativePath
+      background_image: File @fileByRelativePath
+      badge: File @fileByRelativePath
+      form_styles: DownloadableYamlHeaderFormStyles
+    }
+    type DownloadableYamlHeaderFormStyles {
+      background: String
+      color: String
+      button: DownloadableYamlHeaderFormStylesButton
+    }
+    type DownloadableYamlHeaderFormStylesButton {
+      background: String
+    }
+    
+    type DownloadableYaml implements Node {
+      header_data: DownloadableYamlHeader_data
+    }
   `;
   createTypes(typeDefs);
 };
