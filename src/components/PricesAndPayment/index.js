@@ -31,17 +31,26 @@ const FALLBACK_VALUES = {
   financialsLink: "/us/financials",
 };
 
-// Helper function to check if job guarantee should be shown for selected location
-const shouldShowJobGuarantee = (selectedLocation, info) => {
+// Helper function to check if job guarantee should be shown for selected location and course
+const shouldShowJobGuarantee = (selectedLocation, currentCourse, info) => {
   if (!selectedLocation || !info?.job_guarantee_locations) return false;
 
+  // Check if course is eligible for job guarantee
+  if (info?.job_guarantee_courses && currentCourse) {
+    // Convert underscore format to hyphen format for comparison
+    const courseSlug = currentCourse.replaceAll("_", "-");
+    if (!info.job_guarantee_courses.includes(courseSlug)) {
+      return false;
+    }
+  }
+
+  // Check if location is eligible
   const candidates = [
     selectedLocation?.breathecode_location_slug,
     selectedLocation?.meta_info?.slug,
     selectedLocation?.active_campaign_location_slug,
   ].filter((s) => typeof s === "string" && s.length > 0);
 
-  // Check if any candidate location is in the job_guarantee_locations array
   for (const locationSlug of candidates) {
     if (info.job_guarantee_locations.includes(locationSlug)) {
       return true;
@@ -79,7 +88,7 @@ const shouldShowMoreDetails = (financial) => {
 };
 
 // Helper function to get job guarantee configuration for selected location
-const getJobGuaranteeConfig = (selectedLocation, info) => {
+const getJobGuaranteeConfig = (selectedLocation, currentCourse, info) => {
   if (!selectedLocation || !info?.job_guarantee) return null;
 
   const candidates = [
@@ -88,11 +97,22 @@ const getJobGuaranteeConfig = (selectedLocation, info) => {
     selectedLocation?.active_campaign_location_slug,
   ].filter((s) => typeof s === "string" && s.length > 0);
 
+  // Normalize course slug
+  const courseSlug = currentCourse?.replaceAll("_", "-");
+
   // Find matching job guarantee configuration
   for (const locationSlug of candidates) {
-    const matchingConfig = info.job_guarantee.find(
-      (config) => config.academies && config.academies.includes(locationSlug)
-    );
+    const matchingConfig = info.job_guarantee.find((config) => {
+      const locationMatch =
+        config.academies &&
+        (config.academies.includes(locationSlug) ||
+          config.academies.includes("all"));
+      const courseMatch =
+        !config.courses ||
+        config.courses.length === 0 ||
+        (courseSlug && config.courses.includes(courseSlug));
+      return locationMatch && courseMatch;
+    });
     if (matchingConfig) return matchingConfig;
   }
 
@@ -101,7 +121,7 @@ const getJobGuaranteeConfig = (selectedLocation, info) => {
 };
 
 // Helper function to get no job guarantee configuration for selected location
-const getNoJobGuaranteeConfig = (selectedLocation, info) => {
+const getNoJobGuaranteeConfig = (selectedLocation, currentCourse, info) => {
   if (!selectedLocation || !info?.no_job_guarantee) return null;
 
   const candidates = [
@@ -110,11 +130,22 @@ const getNoJobGuaranteeConfig = (selectedLocation, info) => {
     selectedLocation?.active_campaign_location_slug,
   ].filter((s) => typeof s === "string" && s.length > 0);
 
+  // Normalize course slug
+  const courseSlug = currentCourse?.replaceAll("_", "-");
+
   // Find matching no job guarantee configuration
   for (const locationSlug of candidates) {
-    const matchingConfig = info.no_job_guarantee.find(
-      (config) => config.academies && config.academies.includes(locationSlug)
-    );
+    const matchingConfig = info.no_job_guarantee.find((config) => {
+      const locationMatch =
+        config.academies &&
+        (config.academies.includes(locationSlug) ||
+          config.academies.includes("all"));
+      const courseMatch =
+        !config.courses ||
+        config.courses.length === 0 ||
+        (courseSlug && config.courses.includes(courseSlug));
+      return locationMatch && courseMatch;
+    });
     if (matchingConfig) return matchingConfig;
   }
 
@@ -306,6 +337,8 @@ const FinancialOptionsDesktop = ({
   currentLocation,
   financial,
   schedule,
+  course,
+  defaultCourse,
 }) => {
   // Build options list from available plans (YAML-driven)
   const paymentOptions = useMemo(
@@ -367,7 +400,11 @@ const FinancialOptionsDesktop = ({
           </H3>
           <Div display="block" margin="0 0 12px 0">
             {jobGuarantee &&
-            getJobGuaranteeConfig(currentLocation, info)?.monthly_label ? (
+            getJobGuaranteeConfig(
+              currentLocation,
+              course?.value || defaultCourse,
+              info
+            )?.monthly_label ? (
               <H2
                 fontSize="36px"
                 lineHeight="42px"
@@ -376,10 +413,19 @@ const FinancialOptionsDesktop = ({
                 margin="0 0 6px 0"
                 textAlign="left"
               >
-                {getJobGuaranteeConfig(currentLocation, info).monthly_label}
+                {
+                  getJobGuaranteeConfig(
+                    currentLocation,
+                    course?.value || defaultCourse,
+                    info
+                  ).monthly_label
+                }
               </H2>
-            ) : getNoJobGuaranteeConfig(currentLocation, info)
-                ?.monthly_label ? (
+            ) : getNoJobGuaranteeConfig(
+                currentLocation,
+                course?.value || defaultCourse,
+                info
+              )?.monthly_label ? (
               <H2
                 fontSize="36px"
                 lineHeight="42px"
@@ -388,7 +434,13 @@ const FinancialOptionsDesktop = ({
                 margin="0 0 6px 0"
                 textAlign="left"
               >
-                {getNoJobGuaranteeConfig(currentLocation, info).monthly_label}
+                {
+                  getNoJobGuaranteeConfig(
+                    currentLocation,
+                    course?.value || defaultCourse,
+                    info
+                  ).monthly_label
+                }
               </H2>
             ) : monthlyPriceText ? (
               <H2
@@ -411,9 +463,17 @@ const FinancialOptionsDesktop = ({
               textAlign="left"
             >
               {jobGuarantee &&
-              getJobGuaranteeConfig(currentLocation, info)?.monthly_label
+              getJobGuaranteeConfig(
+                currentLocation,
+                course?.value || defaultCourse,
+                info
+              )?.monthly_label
                 ? ""
-                : getNoJobGuaranteeConfig(currentLocation, info)?.monthly_label
+                : getNoJobGuaranteeConfig(
+                    currentLocation,
+                    course?.value || defaultCourse,
+                    info
+                  )?.monthly_label
                 ? ""
                 : monthlyPriceText
                 ? ""
@@ -439,7 +499,11 @@ const FinancialOptionsDesktop = ({
             )}
           </Div>
           {availablePlans?.some((p) => p.price) &&
-            shouldShowJobGuarantee(currentLocation, info) &&
+            shouldShowJobGuarantee(
+              currentLocation,
+              course?.value || defaultCourse,
+              info
+            ) &&
             schedule !== "full_time" && (
               <Div
                 margin="16px 0 0 0"
@@ -479,7 +543,13 @@ const FinancialOptionsDesktop = ({
                     margin="0"
                     padding="0"
                   >
-                    {getJobGuaranteeConfig(currentLocation, info)?.title}
+                    {
+                      getJobGuaranteeConfig(
+                        currentLocation,
+                        course?.value || defaultCourse,
+                        info
+                      )?.title
+                    }
                   </H4>
                 </Div>
                 <Paragraph
@@ -487,7 +557,13 @@ const FinancialOptionsDesktop = ({
                   color={Colors.black}
                   margin="8px 0 0 0"
                 >
-                  {getJobGuaranteeConfig(currentLocation, info)?.description}
+                  {
+                    getJobGuaranteeConfig(
+                      currentLocation,
+                      course?.value || defaultCourse,
+                      info
+                    )?.description
+                  }
                 </Paragraph>
               </Div>
             )}
@@ -670,6 +746,8 @@ const FinancialOptionsCard = ({
   currentLocation,
   financial,
   schedule,
+  course,
+  defaultCourse,
 }) => {
   // Build options list from available plans (YAML-driven)
   const paymentOptions = useMemo(
@@ -731,24 +809,43 @@ const FinancialOptionsCard = ({
             display="block"
           >
             {jobGuarantee &&
-            getJobGuaranteeConfig(currentLocation, info)?.monthly_label ? (
+            getJobGuaranteeConfig(
+              currentLocation,
+              course?.value || defaultCourse,
+              info
+            )?.monthly_label ? (
               <H2
                 fontSize="32px"
                 fontWeight="700"
                 color={Colors.black}
                 margin="0 8px 0 0"
               >
-                {getJobGuaranteeConfig(currentLocation, info).monthly_label}
+                {
+                  getJobGuaranteeConfig(
+                    currentLocation,
+                    course?.value || defaultCourse,
+                    info
+                  ).monthly_label
+                }
               </H2>
-            ) : getNoJobGuaranteeConfig(currentLocation, info)
-                ?.monthly_label ? (
+            ) : getNoJobGuaranteeConfig(
+                currentLocation,
+                course?.value || defaultCourse,
+                info
+              )?.monthly_label ? (
               <H2
                 fontSize="32px"
                 fontWeight="700"
                 color={Colors.black}
                 margin="0 8px 0 0"
               >
-                {getNoJobGuaranteeConfig(currentLocation, info).monthly_label}
+                {
+                  getNoJobGuaranteeConfig(
+                    currentLocation,
+                    course?.value || defaultCourse,
+                    info
+                  ).monthly_label
+                }
               </H2>
             ) : (
               <H2
@@ -771,7 +868,11 @@ const FinancialOptionsCard = ({
           </Div>
 
           {availablePlans?.some((p) => p.price) &&
-            shouldShowJobGuarantee(currentLocation, info) &&
+            shouldShowJobGuarantee(
+              currentLocation,
+              course?.value || defaultCourse,
+              info
+            ) &&
             schedule !== "full_time" && (
               <Div
                 margin="8px 0 0 0"
@@ -807,7 +908,13 @@ const FinancialOptionsCard = ({
                     fontSize_xs="16px"
                     margin="0 0 0 10px"
                   >
-                    {getJobGuaranteeConfig(currentLocation, info)?.title}
+                    {
+                      getJobGuaranteeConfig(
+                        currentLocation,
+                        course?.value || defaultCourse,
+                        info
+                      )?.title
+                    }
                   </H4>
                 </Div>
                 <Paragraph
@@ -815,7 +922,13 @@ const FinancialOptionsCard = ({
                   color={Colors.black}
                   margin="8px 0 0 0"
                 >
-                  {getJobGuaranteeConfig(currentLocation, info)?.description}
+                  {
+                    getJobGuaranteeConfig(
+                      currentLocation,
+                      course?.value || defaultCourse,
+                      info
+                    )?.description
+                  }
                 </Paragraph>
               </Div>
             )}
@@ -939,6 +1052,7 @@ const PricesAndPayment = (props) => {
               lang
             }
             job_guarantee_locations
+            job_guarantee_courses
             get_notified
             contact_carrer_advisor
             contact_link
@@ -954,6 +1068,7 @@ const PricesAndPayment = (props) => {
             job_guarantee {
               slug
               academies
+              courses
               title
               description
               monthly_label
@@ -961,6 +1076,7 @@ const PricesAndPayment = (props) => {
             no_job_guarantee {
               slug
               academies
+              courses
               monthly_label
             }
             not_available
@@ -1107,8 +1223,11 @@ const PricesAndPayment = (props) => {
 
     if (currentPlans && currentLocation) {
       return currentPlans
-        .filter((plan) =>
-          plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
+        .filter(
+          (plan) =>
+            plan.academies.includes(
+              currentLocation.fields.file_name.slice(0, -3)
+            ) || plan.academies.includes("all")
         )
         .filter((plan) => {
           if (jobGuarantee) {
@@ -1202,8 +1321,11 @@ const PricesAndPayment = (props) => {
 
         currentPlans = currentPlans?.node[schedule];
 
-        const availablePlans = currentPlans?.filter((plan) =>
-          plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
+        const availablePlans = currentPlans?.filter(
+          (plan) =>
+            plan.academies.includes(
+              currentLocation.fields.file_name.slice(0, -3)
+            ) || plan.academies.includes("all")
         );
 
         if (availablePlans && availablePlans.length > 0) {
@@ -1364,6 +1486,8 @@ const PricesAndPayment = (props) => {
             currentLocation={currentLocation}
             financial={props.financial}
             schedule={schedule}
+            course={course}
+            defaultCourse={props.defaultCourse}
           />
           {/* Financial explainer card (mobile) */}
           <Div
@@ -1387,6 +1511,8 @@ const PricesAndPayment = (props) => {
               currentLocation={currentLocation}
               financial={props.financial}
               schedule={schedule}
+              course={course}
+              defaultCourse={props.defaultCourse}
             />
           </Div>
         </>

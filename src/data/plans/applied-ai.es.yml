@@ -1,124 +1,157 @@
 full_time: []
 part_time:
+## USA
   - slug: 'plan-4'
     recomended: "★ ¡Mejor precio!"
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    recommended_color: "lightGreen"
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
     scholarship: "Pago completo"
-    description: "Paga hoy"
-    price: "$3000"
-    original_price: "$3500"
-    offer: "$500 DE DESCUENTO"
-    bullets: 
-      - "Al pagar por adelantado, ahorras intereses y obtienes un descuento especial de $500"
-      - "Prepárate para maximizar tu productividad con IA"
+    description: "Paga solo $2,999 cuando pagas en su totalidad."
+    price: "$2,999"
+    original_price: "$10,999"
+    offer: "10% DE DESCUENTO"
+    bullets:
+      - "Paga por adelantado y ahorra un 10%"
+      - "La matrícula regular es de $10,999 y se puede financiar sin intereses hasta en 6 meses."
+    icons:
+      - "/images/edly.png"
+      - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
+      - "/images/climb-logo.png"
 
   - slug: 'plan-2'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'toronto-canada', 'dallas-usa']
     recomended: "Pagos mensuales bajos"
-    recommended_color: "veryLightBlue"
-    scholarship: "Financiado"
-    description: "Paga en 12 meses"
-    price: "~$266 al mes"
+    recommended_color: "blue"
+    scholarship: "Planes de Pago y Préstamos"
+    description: "Financia tu matrícula con TFC Tuition y paga en 6 cómodas cuotas semanales."
+    price: "$200 - $299/mes"
     bullets: 
-      - "Siempre hay un plan de pago disponible para ayudarte a unirte a 4Geeks Academy."
-      - "Si no encuentras algo que te funcione aquí, por favor contáctanos para que podamos intentar encontrar otras formas de ayudarte."
+      - "Elige entre planes de financiamiento a corto o largo plazo."
+      - "Préstamos asequibles a largo plazo basados en tu puntaje de crédito."
+      - "Los términos de préstamo mostrados están vigentes al 03/11/2025. Para ver ejemplos completos de reembolso, visita <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">nuestra página de 4Geeks y Ascent</a>."
     icons: 
       - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
 
-  - slug: 'plan-3'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
-    recomended: "Pagos mensuales bajos"
-    recommended_color: "veryLightBlue"
-    scholarship: "Financiado"
-    description: "Paga en 24 meses"
-    price: "~$145 al mes"
-    bullets: 
-      - "Siempre hay un plan de pago disponible para ayudarte a unirte a 4Geeks Academy."
-      - "Si no encuentras algo que te funcione aquí, por favor contáctanos para que podamos intentar encontrar otras formas de ayudarte."
-    icons: 
-      - "/images/ascent_logo.png"
-      - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
-
-## Spain 
-
+## Spain & Europe
   - slug: 'spain-upfront-ai-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: "★ ¡Mejor precio!"
+    recommended_color: "lightGreen"
     scholarship: "Pago completo"
-    description: "Paga hoy"
-    price: "€3000*"
-    original_price: "€3500"
+    description: "Paga solo €3,000 cuando pagas en su totalidad."
+    price: "€3,000"
+    original_price: "€3,500"
     offer: "€500 DE DESCUENTO"
     bullets:
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta €500. De €3500 a €3000"     
+      - "Paga por adelantado y ahorra €500"
+      - "La matrícula regular es de €3,500 y se puede financiar en cuotas."
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"    
+
+  - slug: 'spain-financed-ai-pt'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: "Pagos mensuales bajos"
+    recommended_color: "blue"
+    scholarship: "Planes de Pago"
+    description: "Financia tu matrícula y paga en cuotas flexibles."
+    price: "Desde €150/mes"
+    bullets:
+      - "Elige entre planes de financiamiento a corto o largo plazo."
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+    icons: 
+      - "/images/visa-mastercard.png"    
 
   - slug: 'europe-upfront-ai-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany', 'lisbon-portugal','milan-italy','rome-italy']
     recomended: "★ ¡Mejor precio!"
+    recommended_color: "lightGreen"
     scholarship: "Pago completo"
-    description: "Paga hoy"
-    price: "€3000*"
-    original_price: "€3500"
+    description: "Paga solo €3,000 cuando pagas en su totalidad."
+    price: "€3,000"
+    original_price: "€3,500"
     offer: "€500 DE DESCUENTO"
     bullets:
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta €500. De €3500 a €3000"     
+      - "Paga por adelantado y ahorra €500"
+      - "La matrícula regular es de €3,500 y se puede financiar en cuotas."
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"    
 
+  - slug: 'europe-financed-ai-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany', 'lisbon-portugal','milan-italy','rome-italy']
+    recomended: "Pagos mensuales bajos"
+    recommended_color: "blue"
+    scholarship: "Planes de Pago"
+    description: "Financia tu matrícula y paga en cuotas flexibles."
+    price: "Desde €150/mes"
+    bullets:
+      - "Elige entre planes de financiamiento a corto o largo plazo."
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+    icons: 
+      - "/images/visa-mastercard.png"    
+
 ## Chile
-                       
   - slug: 'chile-ai-upfront'
     academies: ['santiago-chile']
     recomended: "★ ¡Mejor precio!"
-    scholarship: "Paga por Adelantado"
-    description: "Y obtén un descuento"
-    price: "700.000 CLP*"
+    recommended_color: "lightGreen"
+    scholarship: "Pago completo"
+    description: "Paga solo 700.000 CLP cuando pagas en su totalidad."
+    price: "700.000 CLP"
     original_price: "1.000.000 CLP"
-    offer: "30% de descuento"
+    offer: "30% DE DESCUENTO"
     bullets:
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
-      - "*Descuento de 300.000 CLP al pagar por adelantado"
+      - "Paga por adelantado y ahorra 300.000 CLP"
+      - "La matrícula regular es de 1.000.000 CLP y se puede financiar en cuotas."
     icons: 
       - "/images/visa-mastercard.png"   
 
   - slug: 'chile-financed-ai'
     academies: ['santiago-chile']
-    recomended: "Plan de pago accesible"
-    recommended_color: "yellow"
-    scholarship: "Financiado"
-    description: "Pago en 12 meses"
-    price: "Desde 58.000 CLP"
-    warning_message: "¡Plazas limitadas!"
+    recomended: "Pagos mensuales bajos"
+    recommended_color: "blue"
+    scholarship: "Planes de Pago"
+    description: "Financia tu matrícula y paga en 6-12 cuotas mensuales."
+    price: "Desde 58.000 CLP/mes"
     bullets:
       - "Financiamiento a medida de 6 a 12 meses"  
       - "Se debe pagar un pago inicial correspondiente al 20% del valor del programa" 
       - "Si no encuentras aquí algo que te funcione, contáctanos para que podamos intentar encontrar otras formas de ayudarte."  
     icons: 
-      - "/images/visa-mastercard.png"  
+      - "/images/visa-mastercard.png"
+      - "/images/flevo-new.png"  
 
 ## LATAM
-
   - slug: 'latam-upfront-ai'
     academies: ['montevideo-uruguay','bogota-colombia','caracas-venezuela',  'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: "★ ¡Mejor precio!"
-    scholarship: "Paga por Adelantado y "
-    description: "ahorra $500"
-    price: "USD $1.399"
-    original_price: "USD $2.500"
-    offer: "44% de descuento"
+    recommended_color: "lightGreen"
+    scholarship: "Pago completo"
+    description: "Paga solo USD $2,999 cuando pagas en su totalidad."
+    price: "USD $2,999"
+    original_price: "USD $2,500"
+    offer: "44% DE DESCUENTO"
     bullets:
-      - "Ahorra $500. De $2.500 a $1.399."
+      - "Paga por adelantado y ahorra $500"
+      - "La matrícula regular es de USD $2,500 y se puede financiar en cuotas."
+    icons: 
+      - "/images/visa-mastercard.png"
+
+  - slug: 'latam-financed-ai'
+    academies: ['montevideo-uruguay','bogota-colombia','caracas-venezuela',  'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    recomended: "Pagos mensuales bajos"
+    recommended_color: "blue"
+    scholarship: "Planes de Pago"
+    description: "Financia tu matrícula y paga en cuotas flexibles."
+    price: "Desde USD $100/mes"
+    bullets:
+      - "Elige entre planes de financiamiento a corto o largo plazo."
       - "Si no encuentras aquí lo que esperas, contáctanos y trataremos de encontrar nuevas formas de ayudarte."
     icons: 
       - "/images/visa-mastercard.png"  
