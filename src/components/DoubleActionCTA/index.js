@@ -8,6 +8,8 @@ import { newsletterSignup } from "../../actions";
 import SafeReCAPTCHA from "../SafeReCAPTCHA";
 import styled from "styled-components";
 import Icon from "../Icon";
+import { useStaticQuery, graphql } from "gatsby";
+
 
 const Form = styled.form`
   margin: 0;
@@ -31,16 +33,6 @@ const DoubleActionCTA = (props) => {
               primary {
                 title
                 description
-                image {
-                  childImageSharp {
-                    gatsbyImageData(
-                      layout: CONSTRAINED
-                      width: 900
-                      quality: 100
-                      placeholder: NONE
-                    )
-                  }
-                }
                 action_text
                 action_url
                 benefits
@@ -49,16 +41,6 @@ const DoubleActionCTA = (props) => {
               secondary {
                 title
                 description
-                image {
-                  childImageSharp {
-                    gatsbyImageData(
-                      layout: CONSTRAINED
-                      width: 900
-                      quality: 100
-                      placeholder: NONE
-                    )
-                  }
-                }
                 action_text
                 action_url
                 benefits
