@@ -20,11 +20,13 @@ import OnlyFor from "../components/OnlyFor";
 import Overlaped from "../components/Overlaped";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 import Loc from "../components/Loc";
+import DoubleActionCTA from "../components/DoubleActionCTA";
 
 const Cybersecurity = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const courseDetails = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
+  const doubleActionCTA = data.allDoubleActionCtaYaml.edges[0].node.cta;
 
   const defaultCourse = "cybersecurity";
   const program_type = yml.meta_info.slug.includes("full-time")
@@ -301,6 +303,11 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
             ? landingHiring.sub_heading
             : hiring.partners.sub_heading
         }
+      />
+
+      <DoubleActionCTA 
+        location={session?.location}
+        ctaData={doubleActionCTA}
       />
 
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
@@ -944,6 +951,42 @@ export const query = graphql`
             cohort_more_details_text
             syllabus_button_text
             syllabus_submit_text
+          }
+        }
+      }
+    }
+    allDoubleActionCtaYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          cta {
+            title
+            description
+            primary {
+              title
+              description
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            secondary {
+              title
+              description
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            newsletter_form {
+              placeholder_email
+              error_email
+              button_submit
+              button_loading
+              status_idle
+              status_error
+              status_correct_errors
+              success_message
+            }
           }
         }
       }

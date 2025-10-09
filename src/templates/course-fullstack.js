@@ -21,6 +21,7 @@ import Overlaped from "../components/Overlaped/index.js";
 import Loc from "../components/Loc/index.js";
 import ScholarshipProjects from "../components/ScholarshipProjects/index.js";
 import TwoColumn from "../components/TwoColumn/index.js";
+import DoubleActionCTA from "../components/DoubleActionCTA";
 
 const Program = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -28,6 +29,7 @@ const Program = ({ data, pageContext, yml }) => {
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
   const landingHiring = yml.partners;
+  const doubleActionCTA = data.allDoubleActionCtaYaml.edges[0].node.cta;
 
   const defaultCourse = "full-stack";
   const program_schedule = yml.meta_info.slug.includes("full-time")
@@ -328,6 +330,11 @@ const Program = ({ data, pageContext, yml }) => {
             ? landingHiring.sub_heading
             : hiring.partners.sub_heading
         }
+      />
+
+      <DoubleActionCTA 
+        location={session?.location}
+        ctaData={doubleActionCTA}
       />
 
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
@@ -921,6 +928,42 @@ export const query = graphql`
             cohort_more_details_text
             syllabus_button_text
             syllabus_submit_text
+          }
+        }
+      }
+    }
+    allDoubleActionCtaYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          cta {
+            title
+            description
+            primary {
+              title
+              description
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            secondary {
+              title
+              description
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            newsletter_form {
+              placeholder_email
+              error_email
+              button_submit
+              button_loading
+              status_idle
+              status_error
+              status_correct_errors
+              success_message
+            }
           }
         }
       }
