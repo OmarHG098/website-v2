@@ -198,7 +198,6 @@ export const query = graphql`
             description
             image
             keywords
-            hideGlobalCTA
           }
           seo_title
           header {
@@ -394,26 +393,12 @@ export const query = graphql`
               description
               action_text
               action_url
-              benefits
-              footer_text
             }
             secondary {
               title
               description
               action_text
               action_url
-              benefits
-              footer_text
-            }
-            newsletter_form {
-              placeholder_email
-              error_email
-              button_submit
-              button_loading
-              status_idle
-              status_error
-              status_correct_errors
-              success_message
             }
           }
         }

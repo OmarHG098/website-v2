@@ -709,7 +709,6 @@ export const query = graphql`
             description
             image
             keywords
-            hideGlobalCTA
           }
           seo_title
           header {
