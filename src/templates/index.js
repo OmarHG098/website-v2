@@ -488,18 +488,13 @@ const Home = (props) => {
             : hiring.partners.sub_heading
         }
       />
-      
-      <DoubleActionCTA 
-        location={session?.location}
-        ctaData={doubleActionCTA}
-      />
-
       <Loc
         background={Colors.veryLightBlue3}
         lang={pageContext.lang}
         allLocationYaml={data.allLocationYaml}
         hideHeading
       />
+      <DoubleActionCTA location={session?.location} ctaData={doubleActionCTA} />
     </>
   );
 };
