@@ -4,7 +4,6 @@ cta:
   primary:
     title: "Agenda una Consulta gratuita de 15 Minutos"
     description: "Obtén orientación personalizada de nuestros expertos en carreras. Descubre el camino tecnológico perfecto para tus objetivos y conoce nuestros programas."
-    image: "../../../../static/images/Group-6617.webp"
     action_text: "¡Agendar ahora!"
     action_url: "https://calendly.com/epilowsky-4geeksacademy/30min"
     benefits:
@@ -15,7 +14,6 @@ cta:
   secondary:
     title: "Suscríbete a nuestro Boletín"
     description: "Recibe las últimas perspectivas de la industria tecnológica, actualizaciones de cursos, historias de éxito y contenido exclusivo en tu bandeja de entrada."
-    image: "../../../../static/images/woman-glasses-laptop.png"
     action_text: "Suscribirse"
     action_url: ""
     benefits:

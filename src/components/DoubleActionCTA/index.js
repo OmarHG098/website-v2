@@ -1,5 +1,4 @@
 import React, { useState, useContext, useRef } from "react";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Div } from "../Sections";
 import { H2, H3, Paragraph } from "../Heading";
 import { Button, Colors, Link } from "../Styling";
@@ -162,25 +161,6 @@ const DoubleActionCTA = ({
             </Div>
           )}
 
-          {content?.primary?.image?.childImageSharp && (
-            <GatsbyImage
-              style={{
-                height: "auto",
-                width: "100%",
-                height: "220px",
-                borderRadius: "0.5rem",
-                margin: existsPrimaryBenefits ? "" : "2rem auto 0.5rem",
-              }}
-              imgStyle={{ objectFit: "cover" }}
-              loading="eager"
-              alt="Book a Career Consultation"
-              draggable={false}
-              image={getImage(
-                content.primary.image.childImageSharp.gatsbyImageData
-              )}
-            />
-          )}
-
           <Link to={content?.primary?.action_url} target="_blank">
             <Button
               className="scale_hover"
@@ -290,25 +270,6 @@ const DoubleActionCTA = ({
                 </Div>
               ))}
             </Div>
-          )}
-
-          {content?.secondary?.image?.childImageSharp && (
-            <GatsbyImage
-              style={{
-                height: "auto",
-                width: "100%",
-                height: "220px",
-                borderRadius: "0.5rem",
-                margin: existsSecondaryBenefits ? "" : "2rem auto 0.5rem",
-              }}
-              imgStyle={{ objectFit: "cover" }}
-              loading="eager"
-              alt="Newsletter"
-              draggable={false}
-              image={getImage(
-                content.secondary.image.childImageSharp.gatsbyImageData
-              )}
-            />
           )}
 
           {content?.secondary?.action_url ? (
