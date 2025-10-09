@@ -97,6 +97,7 @@ const Layout = ({ children, seo, context, metaInfo }) => {
           node {
             navbar {
               name
+              id
               link
               sub_menu {
                 icon
@@ -104,6 +105,10 @@ const Layout = ({ children, seo, context, metaInfo }) => {
                 link
                 paragraph
                 width
+                program_comparison_cta {
+                  text
+                  link
+                }
                 links {
                   title
                   level

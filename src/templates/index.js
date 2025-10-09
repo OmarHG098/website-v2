@@ -651,6 +651,57 @@ export const query = graphql`
             title
             sub_title
           }
+          double_action_cta {
+            title
+            description
+            locations
+            primary {
+              title
+              description
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 900
+                    quality: 100
+                    placeholder: NONE
+                  )
+                }
+              }
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            secondary {
+              title
+              description
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 900
+                    quality: 100
+                    placeholder: NONE
+                  )
+                }
+              }
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            newsletter_form {
+              placeholder_email
+              error_email
+              button_submit
+              button_loading
+              status_idle
+              status_error
+              status_correct_errors
+              success_message
+            }
+          }
         }
       }
     }

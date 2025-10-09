@@ -308,6 +308,7 @@ const DataScience = ({ data, pageContext, yml }) => {
       <DoubleActionCTA location={session?.location} ctaData={doubleActionCTA} />
 
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
+      <DoubleActionCTA />
 
       {/* <RelatedPosts
         lang={pageContext.lang}

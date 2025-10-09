@@ -188,26 +188,6 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
         />
       </Header>
 
-      {/* TWO COLUMN CREAR EN EL YML*/}
-      <OnlyFor locations={yml.two_columns_first?.available_locations}>
-        <TwoColumn
-          left={{
-            image: yml.two_columns_first?.image,
-            video: yml.two_columns_first?.video,
-          }}
-          right={{
-            heading: yml.two_columns_first?.heading,
-            sub_heading: yml.two_columns_first?.sub_heading,
-            bullets: yml.two_columns_first?.bullets,
-            content: yml.two_columns_first?.content,
-            disclosure: yml.two_columns_first?.disclosure,
-            button: yml.two_columns_first?.button,
-          }}
-          proportions={yml.two_columns_first?.proportions}
-          session={session}
-        />
-      </OnlyFor>
-
       <JobGuaranteeSmall
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
       />
@@ -277,6 +257,7 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
         message={courseDetails.upcoming?.no_dates_message}
         actionMessage={courseDetails.upcoming?.actionMessage}
         locations={data.allLocationYaml.edges}
+        defaultCourse={defaultCourse}
       />
 
       <PricesAndPayment
@@ -308,6 +289,7 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
       <DoubleActionCTA location={session?.location} ctaData={doubleActionCTA} />
 
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
+      <DoubleActionCTA />
     </>
   );
 };
@@ -564,40 +546,6 @@ export const query = graphql`
               color
               background
               path
-            }
-          }
-          two_columns_first {
-            proportions
-            available_locations
-            video
-            image {
-              style
-              src
-              shadow
-              link
-            }
-            heading {
-              text
-              font_size
-            }
-            sub_heading {
-              text
-              font_size
-            }
-            disclosure {
-              text
-              style
-            }
-            button {
-              text
-              color
-              background
-              path
-            }
-            bullets {
-              items {
-                text
-              }
             }
           }
           two_columns {

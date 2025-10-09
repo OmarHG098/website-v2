@@ -18,6 +18,7 @@ import OurPartners from "../components/OurPartners/index.js";
 import Icon from "../components/Icon/index.js";
 import Overlaped from "../components/Overlaped/index.js";
 import Loc from "../components/Loc/index.js";
+import DoubleActionCTA from "../components/DoubleActionCTA";
 import ScholarshipProjects from "../components/ScholarshipProjects/index.js";
 import TwoColumn from "../components/TwoColumn/index.js";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
@@ -32,7 +33,7 @@ const Program = ({ data, pageContext, yml }) => {
   const landingHiring = yml.partners;
   const doubleActionCTA = data.allDoubleActionCtaYaml.edges[0].node.cta;
 
-  const defaultCourse = "full-stack";
+  const defaultCourse = "full-stack-ft";
   const program_schedule = yml.meta_info.slug.includes("full-time")
     ? "full_time"
     : "part_time";
@@ -264,6 +265,7 @@ const Program = ({ data, pageContext, yml }) => {
         message={courseDetails.upcoming.no_dates_message}
         actionMessage={courseDetails.upcoming.actionMessage}
         locations={data.allLocationYaml.edges}
+        defaultCourse={defaultCourse}
         showMoreRedirect
       />
       <PricesAndPayment
@@ -303,6 +305,7 @@ const Program = ({ data, pageContext, yml }) => {
       <DoubleActionCTA location={session?.location} ctaData={doubleActionCTA} />
 
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
+      <DoubleActionCTA />
     </>
   );
 };
