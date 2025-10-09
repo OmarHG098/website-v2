@@ -399,30 +399,12 @@ export const query = graphql`
             primary {
               title
               description
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 800
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
               action_text
               action_url
             }
             secondary {
               title
               description
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 800
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
               action_text
               action_url
             }

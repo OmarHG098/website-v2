@@ -30,6 +30,7 @@ const Program = ({ data, pageContext, yml }) => {
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
   const landingHiring = yml.partners;
+  const doubleActionCTA = data.allDoubleActionCtaYaml.edges[0].node.cta;
 
   const defaultCourse = "full-stack-ft";
   const program_schedule = yml.meta_info.slug.includes("full-time")
@@ -299,7 +300,6 @@ const Program = ({ data, pageContext, yml }) => {
             : hiring.partners.sub_heading
         }
       />
-
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
       <DoubleActionCTA />
     </>
@@ -979,16 +979,6 @@ export const query = graphql`
             primary {
               title
               description
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED
-                    width: 900
-                    quality: 100
-                    placeholder: NONE
-                  )
-                }
-              }
               action_text
               action_url
               benefits
@@ -997,16 +987,6 @@ export const query = graphql`
             secondary {
               title
               description
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED
-                    width: 900
-                    quality: 100
-                    placeholder: NONE
-                  )
-                }
-              }
               action_text
               action_url
               benefits

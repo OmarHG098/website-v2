@@ -6,7 +6,7 @@ meta_info:
   image: "/images/og-preview/finantial.es.png"
   keywords: "Financiacion 4Geeks Academy, Financiamiento 4Geeks Academy"
   redirects: ["/financiacion"]
- 
+
 ## BANNER - HEADER
 seo_title: "Financiación y formas de pago en 4Geeks Academy"
 header:
@@ -333,15 +333,13 @@ cta:
   description: "Únete a miles de estudiantes que han transformado sus carreras con 4Geeks Academy. Obtén orientación personalizada y mantente actualizado con lo último en tecnología."
   primary:
     title: "Agenda una Consulta Gratuita de 15 Minutos"
-    description: "Obtén orientación personalizada de nuestro equipo de admisiones. Descubre el programa tech que se ajusta a tus objetivos y explora opciones flexibles de financiamiento."
-    image: "../../../static/images/Group-6617.webp"
+    description: "Obtén orientación personalizada de nuestro equipo de admisiones. Descubre el programa tecnológico que se ajusta a tus objetivos y explora opciones flexibles de financiamiento."
     action_text: "¡Agendar ahora!"
     action_url: "https://calendly.com/epilowsky-4geeksacademy/30min"
     footer_text: "✨ Sesión gratuita de 15 minutos • Sin compromiso requerido"
   secondary:
     title: "Comienza tu viaje hoy"
-    description: "Da el siguiente paso hacia tu carrera tech. Completa el formulario para obtener todos los detalles del programa y conectar con nuestro equipo de admisiones."
-    image: "../../../static/images/woman-glasses-laptop.png"
+    description: "Da el siguiente paso hacia tu carrera tecnológica. Completa el formulario para obtener todos los detalles del programa y conectar con nuestro equipo de admisiones."
     action_text: "Aplicar ahora"
     action_url: "/es/aplica"
 

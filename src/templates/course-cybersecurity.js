@@ -26,6 +26,7 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const courseDetails = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
+  const doubleActionCTA = data.allDoubleActionCtaYaml.edges[0].node.cta;
 
   const defaultCourse = "cybersecurity";
   const program_type = yml.meta_info.slug.includes("full-time")
@@ -284,7 +285,6 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
             : hiring.partners.sub_heading
         }
       />
-
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
       <DoubleActionCTA />
     </>
@@ -906,16 +906,6 @@ export const query = graphql`
             primary {
               title
               description
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED
-                    width: 900
-                    quality: 100
-                    placeholder: NONE
-                  )
-                }
-              }
               action_text
               action_url
               benefits
@@ -924,16 +914,6 @@ export const query = graphql`
             secondary {
               title
               description
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED
-                    width: 900
-                    quality: 100
-                    placeholder: NONE
-                  )
-                }
-              }
               action_text
               action_url
               benefits
