@@ -6,7 +6,6 @@ meta_info:
   image: "/images/og-preview/finantial.es.png"
   keywords: "Financiacion 4Geeks Academy, Financiamiento 4Geeks Academy"
   redirects: ["/financiacion"]
-  hideGlobalCTA: true # Hides the global CTA because this page has its own DoubleActionCTA
 
 ## BANNER - HEADER
 seo_title: "Financiación y formas de pago en 4Geeks Academy"
