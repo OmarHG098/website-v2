@@ -228,16 +228,6 @@ export const query = graphql`
             primary {
               title
               description
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED
-                    width: 900
-                    quality: 100
-                    placeholder: NONE
-                  )
-                }
-              }
               action_text
               action_url
               benefits
@@ -246,16 +236,6 @@ export const query = graphql`
             secondary {
               title
               description
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED
-                    width: 900
-                    quality: 100
-                    placeholder: NONE
-                  )
-                }
-              }
               action_text
               action_url
               benefits
