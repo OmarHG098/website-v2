@@ -304,9 +304,6 @@ const DataScience = ({ data, pageContext, yml }) => {
             : hiring.partners.sub_heading
         }
       />
-
-      <DoubleActionCTA location={session?.location} ctaData={doubleActionCTA} />
-
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
       <DoubleActionCTA />
 

@@ -21,7 +21,6 @@ import Overlaped from "../components/Overlaped/index.js";
 import Loc from "../components/Loc/index.js";
 import DoubleActionCTA from "../components/DoubleActionCTA/index.js";
 import TwoColumn from "../components/TwoColumn/index.js";
-import DoubleActionCTA from "../components/DoubleActionCTA";
 
 const Program = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -323,9 +322,6 @@ const Program = ({ data, pageContext, yml }) => {
             : hiring.partners.sub_heading
         }
       />
-
-      <DoubleActionCTA location={session?.location} ctaData={doubleActionCTA} />
-
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
       <DoubleActionCTA />
     </>
