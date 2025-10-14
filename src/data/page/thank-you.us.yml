@@ -93,7 +93,7 @@ components:
     heading:
       text: "🚀 Check Out Our Job Guarantee"
     content:
-      text: "See how this optional add-on gives you extra confidence while building your tech career ()"
+      text: "See how this optional add-on gives you extra confidence while building your tech career."
     button:
       text: "👉 Learn More"
       path: "https://4geeksacademy.com/us/job-guarantee"

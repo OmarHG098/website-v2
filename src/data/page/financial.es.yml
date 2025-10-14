@@ -195,7 +195,7 @@ two_column:
         - 21px
     sub_heading:
       style: '{ "color": "#4D4D5C", "fontWeight": 400 }'
-      text: "Estamos desafiando el modelo educativo tradicional. No se trata sólo de enseñar las habilidades relevantes; se trata de las oportunidades que crearemos para su carrera. *No aplica para todos los mercados, países o estados donde opera 4Geeks"
+      text: "Estamos desafiando el modelo educativo tradicional. No se trata sólo de enseñar las habilidades relevantes; se trata de las oportunidades que crearemos para tu carrera. *No aplica para todos los mercados, países o estados donde opera 4Geeks"
       font_size:
         - 16px
         - 16px
