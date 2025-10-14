@@ -50,7 +50,7 @@ two_column_left:
         </details>
         <details>
           <summary><span style="color: #0097CD;">✓ Confianza total</span></summary>
-          <p>Nuestro método de enseñanza funciona, y estamos tan seguros que te ofrecemos una garantía de empleo.</p>
+          <p>Nuestro método de enseñanza funciona, y estamos tan seguros que te ofrecemos una garantía de empleo. *No aplica para todos los mercados, países o estados donde opera 4Geeks. Condiciones aplican.</p>
         </details>
         <details>
           <summary><span style="color: #0097CD;">✓ Creemos en tu potencial</span></summary>
@@ -103,7 +103,7 @@ we_trust_section:
 
 how_it_works:
   title: ¿Cómo funciona?
-  text: "Así funciona nuestra garantía de empleo: Cumple estos sencillos requisitos, y si no encuentras trabajo en 9 meses, te reembolsamos el 100% de tu matrícula."
+  text: "Así funciona nuestra garantía de empleo: Cumple estos sencillos requisitos, y si no encuentras trabajo en 9 meses, te reembolsamos el 100% de tu matrícula. *No aplica para todos los mercados, países o estados donde opera 4Geeks. Condiciones aplican."
   steps:
     - icon: rocket-2
       title: Comienza el programa
@@ -120,7 +120,7 @@ how_it_works:
       title: ¡Consigue tu empleo soñado en tecnología en 9 meses!
   link:
     url: "https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf"
-    label: "Condiciones y requisitos aplicables."
+    label: "Condiciones y requisitos aplicables"
 
 successful_stories:
   title: "Historias de éxito"

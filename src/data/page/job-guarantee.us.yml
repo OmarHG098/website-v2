@@ -99,7 +99,7 @@ how_it_works:
       title: Receive the full refund within 30 days.
   link:
     url: https://storage.googleapis.com/media-breathecode/0bf8e5c086144c894b750844d12a0bd327e823ba85f89a4def3c298d5cd6e4f0
-    label: Conditions Apply.
+    label: "Conditions Apply."
 
 two_column_right:
   proportions: [6, 6]
