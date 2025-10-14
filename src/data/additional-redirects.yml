@@ -190,10 +190,10 @@ redirects:
     toPath: "/us/landing/texas-scholarship"
     isPermanent: true
 
-  - fromPath: "us/20-million"
-    toPath: "us/scholarships"
+  - fromPath: "/us/20-million"
+    toPath: "/us/scholarships"
     isPermanent: true
 
-  - fromPath: "es/20-millones"
-    toPath: "es/becas"
+  - fromPath: "/es/20-millones"
+    toPath: "/es/becas"
     isPermanent: true
