@@ -2,9 +2,11 @@ import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { H2, H4, H3, Paragraph, SubTitle } from "../Heading";
 import { Div } from "../Sections";
-import { RoundImage, Colors } from "../Styling";
+import { RoundImage, Colors, Button } from "../Styling";
 import ReactPlayer from "../ReactPlayer";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import CarouselV2 from "../CarouselV2";
+import Icon from "../Icon";
 
 const With4Geeks = ({
   lang,
@@ -16,6 +18,7 @@ const With4Geeks = ({
   background,
   headerProps,
 }) => {
+  const [currentSlide, setCurrentSlide] = React.useState(0);
   const data = useStaticQuery(graphql`
     query With4Geeks {
       allWith4GeeksYaml {
@@ -78,8 +81,15 @@ const With4Geeks = ({
     );
   else locationFiltered = stories || info.with;
 
+
   return (
-    <Div display="block" background={background} padding="40px 0">
+    <Div 
+      display="block" 
+      background={background} 
+      padding="40px 0"
+      paddingBottom="80px"
+      paddingBottom_tablet="40px"
+    >
       {(info?.header || title) && (
         <Div
           maxWidth="1280px"
@@ -114,31 +124,107 @@ const With4Geeks = ({
         </Div>
       )}
       {locationFiltered && (
-        <Div
-          padding="0 20px"
-          padding_tablet="0 40px"
-          padding_lg="0"
+        <CarouselV2
           margin_tablet="0 auto"
           maxWidth="1280px"
           width="100%"
-          className="badge-slider hideOverflowX__"
-          gap="0px 20px"
-          gap_tablet="0px 20px"
+          padding="0 20px"
+          padding_tablet="0 40px"
+          padding_lg="0"
+          settings={{
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            dots: true,
+            infinite: false,
+            dotsClass: "slick-dots-staff",
+            beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                  infinite: false,
+                  dots: true,
+                },
+              },
+              {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2,
+                  infinite: false,
+                  dots: true,
+                },
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  infinite: false,
+                  dots: false,
+                },
+              },
+            ],
+          }}
+          nextArrow={({ onClick }) => (
+            <Button
+              padding="0"
+              position="absolute"
+              zIndex="9"
+              bottom="-40px"
+              bottom_tablet="auto"
+              left="calc(50% + 10px)"
+              left_tablet="auto"
+              right_tablet="0"
+              top_tablet="50%"
+              width="20px"
+              height="25px"
+              onClick={onClick}
+            >
+              <Icon width="100%" height="100%" icon="arrow-right" />
+            </Button>
+          )}
+          previousArrow={({ onClick }) => (
+            <Button
+              padding="0"
+              position="absolute"
+              zIndex="9"
+              bottom="-40px"
+              bottom_tablet="auto"
+              right="calc(50% + 10px)"
+              right_tablet="auto"
+              left_tablet="0"
+              top_tablet="50%"
+              width="20px"
+              height="25px"
+              transform="rotate(180deg)"
+              onClick={onClick}
+            >
+              <Icon
+                width="100%"
+                height="100%"
+                icon="arrow-right"
+                color={currentSlide === 0 ? Colors.lightGray : Colors.black}
+              />
+            </Button>
+          )}
         >
           {locationFiltered.slice(0, 3).map((element, index) => {
             return (
-              <Div
-                key={`${element.name}_${index}`}
-                display="flex"
-                flexDirection="column"
-                flexDirection_tablet="column"
-                justifyContent="start"
-                borderRadius="4px"
-                minWidth="250px"
-                width="100%"
-                border={!background && "1px solid #C4C4C4"}
-                background={Colors.white}
-              >
+              <Div key={`${element.name}_${index}`} padding="0 10px">
+                <Div
+                  display="flex"
+                  flexDirection="column"
+                  flexDirection_tablet="column"
+                  justifyContent="start"
+                  borderRadius="4px"
+                  minWidth="250px"
+                  width="100%"
+                  border={!background && "1px solid #C4C4C4"}
+                  background={Colors.white}
+                >
                 <Div
                   padding_xs="0 0 0 0px"
                   //padding="20px 0"
@@ -249,9 +335,10 @@ const With4Geeks = ({
                   )}
                 </Div>
               </Div>
+              </Div>
             );
           })}
-        </Div>
+        </CarouselV2>
       )}
     </Div>
   );
