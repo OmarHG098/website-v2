@@ -16,7 +16,7 @@ const Title_Paragraph = (props) => {
     <>
       <Grid
         maxWidth="1280px"
-        margin="0 auto 20px auto"
+        margin={props?.margin || "0 auto 20px auto"}
         background={props.background}
         gridTemplateColumns_tablet="1fr repeat(12, 1fr) 1fr"
       >
@@ -127,7 +127,15 @@ const Images_With_Marquee = (props) => {
     );
   });
 
-  return <Marquee config={{ duration: 180, images: imgs }} />;
+  return (
+    <Marquee
+      config={{
+        duration: props?.duration || 180,
+        images: imgs,
+        ...props.config,
+      }}
+    />
+  );
 };
 
 //Funcion que muestra las imagenes en columna y centradas
@@ -379,6 +387,7 @@ const VariantCarousel = ({
     <CarouselV2
       background={background || "#FBFCFC"}
       padding="40px 0"
+      padding_tablet="30px 0 80px 0"
       heading={title}
       content={paragraph}
       settings={{
@@ -477,6 +486,8 @@ const OurPartners = ({
   maxWidth,
   gray,
   variant,
+  duration,
+  marqueeConfig,
   ...rest
 }) => {
   let FragmentStyle = {
@@ -509,6 +520,7 @@ const OurPartners = ({
           title={title}
           paragraph={paragraph}
           background={background}
+          margin="2rem auto 3rem auto"
         />
       )}
       {showFeatured && (

@@ -1,11 +1,15 @@
 navbar:
   - name: "Programas"
+    id: "programs"
     link: "/es/coding-bootcamps/desarrollador-full-stack"
     sub_menu:
       icon: ""
       title: "Programas"
       paragraph: "Desde principiante a listo para el trabajo en tiempo récord. Entrena en los campos tecnológicos más demandados hoy en día y lanza una carrera duradera."
       width: "950px"
+      program_comparison_cta:
+        text: "¿No estás seguro qué programa se adapta mejor a ti? Mira nuestra comparación de programas <a class='link' href='/es/comparar-programas'>aquí.</a>"
+        link: "/es/comparar-programas"
       links:
 
         - title: "Desarrollador Full Stack con IA"
@@ -125,10 +129,6 @@ navbar:
               link_to: "/es/coding-campus/bootcamp-programacion-losangeles"
             - title: "New York, USA"
               link_to: "/es/coding-campus/bootcamp-programacion-nyc"
-            - title: "Orlando, USA"
-              link_to: "/es/coding-campus/bootcamp-programacion-orlando"
-            - title: "Tampa, USA"
-              link_to: "/es/coding-campus/bootcamp-programacion-tampa"
             - title: "Toronto, Canada"
               link_to: "/es/coding-campus/bootcamp-programacion-toronto-canada"
             - title: "Remoto, USA"

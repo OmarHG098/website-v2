@@ -31,7 +31,7 @@ const WorkTogether = ({
         fontSize="30px"
         width="auto"
         fontWeight="bold"
-        margin="10px 0 30px 10px"
+        margin={`10px 0 ${showImages ? "35px" : "0"} 10px`}
         textAlign="center"
       >
         {title}
@@ -43,6 +43,7 @@ const WorkTogether = ({
           display="flex"
           flexFlow="wrap!important"
           gap="40px"
+          margin="10px 0 0 0"
           flexDirection="row"
           justifyContent="center"
         >
@@ -72,8 +73,8 @@ const WorkTogether = ({
         <Paragraph
           fontSize="15px"
           color="#3A3A3A"
-          padding="35px 10px 0"
-          padding_tablet="35px 20% 0"
+          padding={`${showImages ? "35px" : "0"} 10px 0`}
+          padding_tablet={`${showImages ? "35px" : "0"} 20% 0`}
           letterSpacing="0.05em"
           textAlign="center"
         >
@@ -81,15 +82,17 @@ const WorkTogether = ({
         </Paragraph>
       )}
 
-      <GridContainer
-        padding_tablet="0"
-        containerColumns_tablet="1fr repeat(12, 1fr) 1fr"
-        gridColumn_tablet="1 / span 14"
-        margin_tablet="3% 0 4% 0"
-        margin="10% 0"
-      >
-        <Div height="2px" background="#ACACAC" style={{ opacity: "0.5" }} />
-      </GridContainer>
+      {showImages && (
+        <GridContainer
+          padding_tablet="0"
+          containerColumns_tablet="1fr repeat(12, 1fr) 1fr"
+          gridColumn_tablet="1 / span 14"
+          margin_tablet="3% 0 4% 0"
+          margin="10% 0"
+        >
+          <Div height="2px" background="#ACACAC" style={{ opacity: "0.5" }} />
+        </GridContainer>
+      )}
 
       {/* Features Section */}
       <Grid
@@ -100,6 +103,7 @@ const WorkTogether = ({
         padding="0 6%"
         padding_tablet="0 40px"
         padding_md="0 80px"
+        margin={!showImages ? "3rem 0 0 0" : ""}
         padding_lg="0"
         width="100%"
       >
@@ -115,7 +119,13 @@ const WorkTogether = ({
             width_tablet="100%"
           >
             <Div height="100%">
-              <Icon icon={item.icon} width="70px" height="54px" />
+              <Icon
+                icon={item.icon}
+                color={Colors.black}
+                color2="#FFCF18"
+                width="70px"
+                height="54px"
+              />
             </Div>
             <Div height="100%" display="flex" flexDirection="column">
               <H4

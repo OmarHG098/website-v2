@@ -5,7 +5,7 @@ This document contains the complete list of valid `related_features` for the tes
 ## Valid Related Features List
 
 ```
-['online-platform', 'mentors-and-teachers', 'price', 'carreer-support', 'content-and-syllabus', 'job-guarantee', 'full-stack', 'cibersecurity', 'data-science', 'applied-ai', 'outcomes', 'scolarships', 'rigobot', 'learnPack', 'certification']
+['online-platform', 'mentors-and-teachers', 'price', 'career-support', 'content-and-syllabus', 'job-guarantee', 'full-stack', 'cibersecurity', 'data-science', 'applied-ai', 'outcomes', 'scolarships', 'rigobot', 'learnPack', 'certification']
 ```
 
 ## Feature Descriptions and Usage Guidelines
@@ -25,7 +25,7 @@ This document contains the complete list of valid `related_features` for the tes
 - **Use for**: Students who mention affordability, good value, or cost benefits
 - **Example testimonials**: Students who highlight how affordable the bootcamp was compared to other options
 
-### **carreer-support**
+### **career-support**
 - **Description**: Career transition assistance, job placement help, career guidance and support
 - **Use for**: Career changers, students who received job placement assistance
 - **Example testimonials**: Students who got help with career transitions, job search support, or career guidance
@@ -88,7 +88,7 @@ This document contains the complete list of valid `related_features` for the tes
 ## Assignment Guidelines by Student Profile
 
 ### Students at Major Tech Companies
-**Recommended features**: `['job-guarantee', 'outcomes', 'carreer-support']`
+**Recommended features**: `['job-guarantee', 'outcomes', 'career-support']`
 - Prioritize job guarantee and outcomes for placement success
 - Include career support for transition assistance
 
@@ -98,7 +98,7 @@ This document contains the complete list of valid `related_features` for the tes
 - Include curriculum quality for comprehensive training
 
 ### Career Changers
-**Recommended features**: `['job-guarantee', 'carreer-support', 'price']`
+**Recommended features**: `['job-guarantee', 'career-support', 'price']`
 - Emphasize career transition support
 - Include job guarantee for employment security
 - Mention price for value proposition
