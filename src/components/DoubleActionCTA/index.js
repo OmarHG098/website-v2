@@ -1,6 +1,4 @@
 import React, { useState, useContext, useRef } from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Div } from "../Sections";
 import { H2, H3, Paragraph } from "../Heading";
 import { Button, Colors, Link } from "../Styling";
@@ -10,6 +8,7 @@ import { newsletterSignup } from "../../actions";
 import SafeReCAPTCHA from "../SafeReCAPTCHA";
 import styled from "styled-components";
 import Icon from "../Icon";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Form = styled.form`
   margin: 0;
@@ -33,16 +32,6 @@ const DoubleActionCTA = (props) => {
               primary {
                 title
                 description
-                image {
-                  childImageSharp {
-                    gatsbyImageData(
-                      layout: CONSTRAINED
-                      width: 900
-                      quality: 100
-                      placeholder: NONE
-                    )
-                  }
-                }
                 action_text
                 action_url
                 benefits
@@ -51,16 +40,6 @@ const DoubleActionCTA = (props) => {
               secondary {
                 title
                 description
-                image {
-                  childImageSharp {
-                    gatsbyImageData(
-                      layout: CONSTRAINED
-                      width: 900
-                      quality: 100
-                      placeholder: NONE
-                    )
-                  }
-                }
                 action_text
                 action_url
                 benefits
@@ -370,26 +349,7 @@ const DoubleActionCTA = (props) => {
             </Div>
           )}
 
-          {content?.primary?.image?.childImageSharp?.gatsbyImageData && (
-            <GatsbyImage
-              style={{
-                height: "auto",
-                width: "100%",
-                height: "220px",
-                borderRadius: "0.5rem",
-                margin: existsPrimaryBenefits ? "" : "2rem auto 0.5rem",
-              }}
-              imgStyle={{ objectFit: "cover" }}
-              loading="eager"
-              alt={content?.primary?.title || "Career Consultation"}
-              draggable={false}
-              image={getImage(
-                content.primary.image.childImageSharp.gatsbyImageData
-              )}
-            />
-          )}
-
-          <Link to={primaryActionUrl} target="_blank">
+          <Link to={content?.primary?.action_url} target="_blank">
             <Button
               className="scale_hover"
               width="100%"
@@ -498,25 +458,6 @@ const DoubleActionCTA = (props) => {
                 </Div>
               ))}
             </Div>
-          )}
-
-          {content?.secondary?.image?.childImageSharp?.gatsbyImageData && (
-            <GatsbyImage
-              style={{
-                height: "auto",
-                width: "100%",
-                height: "220px",
-                borderRadius: "0.5rem",
-                margin: existsSecondaryBenefits ? "" : "2rem auto 0.5rem",
-              }}
-              imgStyle={{ objectFit: "cover" }}
-              loading="eager"
-              alt={content?.secondary?.title || "Newsletter"}
-              draggable={false}
-              image={getImage(
-                content.secondary.image.childImageSharp.gatsbyImageData
-              )}
-            />
           )}
 
           {content?.secondary?.action_url ? (
