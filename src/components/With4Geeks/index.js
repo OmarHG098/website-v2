@@ -81,11 +81,10 @@ const With4Geeks = ({
     );
   else locationFiltered = stories || info.with;
 
-
   return (
-    <Div 
-      display="block" 
-      background={background} 
+    <Div
+      display="block"
+      background={background}
       padding="40px 0"
       paddingBottom="80px"
       paddingBottom_tablet="40px"
@@ -225,116 +224,116 @@ const With4Geeks = ({
                   border={!background && "1px solid #C4C4C4"}
                   background={Colors.white}
                 >
-                <Div
-                  padding_xs="0 0 0 0px"
-                  //padding="20px 0"
-                  width_tablet="100%"
-                  height_tablet={element.video_height || "173px"}
-                  height={element.video_height || "173px"}
-                  alignSelf="baseline"
-                  style={{ borderRadius: `0px` }}
-                >
-                  {element.video && element.image && (
-                    <ReactPlayer
-                      withModal={element.open_in_modal}
-                      margin_tablet="0px"
-                      imageWidth="100%"
-                      imageHeight={element.video_height || "auto"}
-                      //height="100%"
-                      className="react-player-with4geeks"
-                      thumb={element.image}
-                      id={element.video}
-                      width="100%"
-                      width_tablet="100%"
-                      videoHeight={element.video_height}
-                      style={{ borderRadius: "0px" }}
-                    />
-                  )}
-                  {!element.video && element.image && (
-                    <GatsbyImage
-                      //className={className}
-                      height="173px"
-                      image={getImage(
-                        element?.image?.childImageSharp?.gatsbyImageData
-                      )}
-                      alt="Image"
-                    />
-                  )}
-                </Div>
-                <Div
-                  //marginTop="20px"
-                  style={{ padding: "20px 32px" }}
-                  padding_tablet="20px 32px"
-                  padding_xxs="20px 16px"
-                  display="flex"
-                  //height="100%"
-                  height={stories ? "fit-content" : "100%"}
-                  flexDirection="column"
-                  gap="16px 0px"
-                >
-                  {element.footer.image_link && (
-                    <Link to={element.footer.image_link}>
-                      <RoundImage
-                        url={element.footer.image}
-                        bsize="contain"
-                        height="20px"
-                        position="left"
+                  <Div
+                    padding_xs="0 0 0 0px"
+                    //padding="20px 0"
+                    width_tablet="100%"
+                    height_tablet={element.video_height || "173px"}
+                    height={element.video_height || "173px"}
+                    alignSelf="baseline"
+                    style={{ borderRadius: `0px` }}
+                  >
+                    {element.video && element.image && (
+                      <ReactPlayer
+                        withModal={element.open_in_modal}
+                        margin_tablet="0px"
+                        imageWidth="100%"
+                        imageHeight={element.video_height || "auto"}
+                        //height="100%"
+                        className="react-player-with4geeks"
+                        thumb={element.image}
+                        id={element.video}
+                        width="100%"
+                        width_tablet="100%"
+                        videoHeight={element.video_height}
+                        style={{ borderRadius: "0px" }}
                       />
-                    </Link>
-                  )}
+                    )}
+                    {!element.video && element.image && (
+                      <GatsbyImage
+                        //className={className}
+                        height="173px"
+                        image={getImage(
+                          element?.image?.childImageSharp?.gatsbyImageData
+                        )}
+                        alt="Image"
+                      />
+                    )}
+                  </Div>
+                  <Div
+                    //marginTop="20px"
+                    style={{ padding: "20px 32px" }}
+                    padding_tablet="20px 32px"
+                    padding_xxs="20px 16px"
+                    display="flex"
+                    //height="100%"
+                    height={stories ? "fit-content" : "100%"}
+                    flexDirection="column"
+                    gap="16px 0px"
+                  >
+                    {element.footer.image_link && (
+                      <Link to={element.footer.image_link}>
+                        <RoundImage
+                          url={element.footer.image}
+                          bsize="contain"
+                          height="20px"
+                          position="left"
+                        />
+                      </Link>
+                    )}
 
-                  {element.name && (
-                    <H4
-                      textAlign="left"
-                      width="100%"
-                      margin="0 0 10px 0"
-                      uppercase
-                      fontSize="15px"
-                      fontWeight="900"
-                      lineHeight="19px"
-                      color={Colors.darkGray}
-                    >
-                      {element.name}
-                    </H4>
-                  )}
-                  {element.title && (
-                    <H3
-                      textAlign="left"
-                      width="100%"
-                      fontWeight="400"
-                      fontFamily="Archivo"
-                      margin="0"
-                    >
-                      {`"${element.title}"`}
-                    </H3>
-                  )}
-                  {element.description && (
-                    <Paragraph
-                      color={Colors.darkGray}
-                      textAlign="left"
-                      margin="10px 0 10px 0"
-                      fontWeight="400"
-                      fontSize="14px"
-                      lineHeight="15px"
-                    >
-                      {element.description}
-                    </Paragraph>
-                  )}
-
-                  {element.footer.text_link != "" && (
-                    <Link to={element.footer.text_link}>
+                    {element.name && (
                       <H4
-                        display="flex"
-                        fontWeigth="700"
-                        color={Colors.blue}
-                        // textDecoration="underline"
+                        textAlign="left"
+                        width="100%"
+                        margin="0 0 10px 0"
+                        uppercase
+                        fontSize="15px"
+                        fontWeight="900"
+                        lineHeight="19px"
+                        color={Colors.darkGray}
                       >
-                        {element.footer.text}
+                        {element.name}
                       </H4>
-                    </Link>
-                  )}
+                    )}
+                    {element.title && (
+                      <H3
+                        textAlign="left"
+                        width="100%"
+                        fontWeight="400"
+                        fontFamily="Archivo"
+                        margin="0"
+                      >
+                        {`"${element.title}"`}
+                      </H3>
+                    )}
+                    {element.description && (
+                      <Paragraph
+                        color={Colors.darkGray}
+                        textAlign="left"
+                        margin="10px 0 10px 0"
+                        fontWeight="400"
+                        fontSize="14px"
+                        lineHeight="15px"
+                      >
+                        {element.description}
+                      </Paragraph>
+                    )}
+
+                    {element.footer.text_link != "" && (
+                      <Link to={element.footer.text_link}>
+                        <H4
+                          display="flex"
+                          fontWeigth="700"
+                          color={Colors.blue}
+                          // textDecoration="underline"
+                        >
+                          {element.footer.text}
+                        </H4>
+                      </Link>
+                    )}
+                  </Div>
                 </Div>
-              </Div>
               </Div>
             );
           })}
