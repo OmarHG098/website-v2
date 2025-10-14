@@ -56,7 +56,7 @@ awards_list:
     height: "80px"
     text_link: See article
 
-  - image: "../../../static/images/badges/course-report-best-coding-bootcamps-badge-2025.png"
+  - image: "../../../static/images/badges/Course-Report-Badge-2025.png"
     title: "Best Bootcamp for Course Report 2025"
     paragraph: "We have been selected as one of the Top Coding Bootcamps globally for 3 years in a row"
     link: "https://www.coursereport.com/best-coding-bootcamps"
