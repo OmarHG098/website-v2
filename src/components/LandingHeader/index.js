@@ -265,7 +265,7 @@ const LandingHeader = (props) => {
                 {yml.features.button.text}
               </a>
             )}
-            {yml.short_badges && (
+            {Array.isArray(yml.short_badges) && (
               <Marquee_v2
                 speed={0.3}
                 reversed={false}
