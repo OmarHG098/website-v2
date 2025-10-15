@@ -15,7 +15,7 @@ import GlobalStyle from "./GlobalStyle";
 import SEO from "./SEO";
 import { Helmet } from "react-helmet";
 
-const Layout = ({ children, seo, context }) => {
+const Layout = ({ children, seo, context, metaInfo }) => {
   // const {slug, title, description, image, keywords} = seo;
   const [editMode, setEditMode] = React.useState();
   const [showUpcoming, setShowUpcoming] = React.useState(true);
@@ -97,6 +97,7 @@ const Layout = ({ children, seo, context }) => {
           node {
             navbar {
               name
+              id
               link
               sub_menu {
                 icon
@@ -104,6 +105,10 @@ const Layout = ({ children, seo, context }) => {
                 link
                 paragraph
                 width
+                program_comparison_cta {
+                  text
+                  link
+                }
                 links {
                   title
                   level
@@ -155,6 +160,7 @@ const Layout = ({ children, seo, context }) => {
   let myLocations = data.allLocationYaml.edges.filter(
     (item) => item.node.fields.lang === context.lang
   );
+
   return (
     <>
       {editMode && (
@@ -208,7 +214,7 @@ const Layout = ({ children, seo, context }) => {
           />
         </Helmet>
       )}
-      <>{children}</>
+      {children}
       <Footer yml={myFooter.node} />
     </>
   );
