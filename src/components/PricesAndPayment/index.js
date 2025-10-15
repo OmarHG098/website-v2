@@ -214,7 +214,7 @@ const PaymentOptionCard = ({
       border="1px solid #E5E5E5"
       borderRadius="8px"
       margin="0 0 12px 0"
-      background={Colors.veryLightBlue3}
+      background={Colors.white}
       display="block"
       display_xs="block"
       display_xxs="block"
@@ -276,7 +276,7 @@ const PaymentOptionCard = ({
         <Div
           borderTop="1px solid #E5E5E5"
           padding="16px 20px"
-          // background="#FAFAFA"
+          background="#FAFAFA"
           display="block"
           display_xs="block"
           display_xxs="block"
@@ -360,8 +360,6 @@ const FinancialOptionsDesktop = ({
     [availablePlans]
   );
 
-  const jobGuaranteeInfo = getJobGuaranteeConfig(currentLocation, info);
-
   const currentPlan = useMemo(
     () =>
       (availablePlans || []).find((p) => p.slug === selectedPlan) ||
@@ -379,7 +377,7 @@ const FinancialOptionsDesktop = ({
         border="4px solid black"
         boxShadow="0 8px 32px rgba(0,0,0,0.25)"
         borderRadius="12px"
-        gap="0"
+        gap="16px"
         margin="24px 0"
         position="relative"
       >
@@ -779,8 +777,6 @@ const FinancialOptionsCard = ({
     [paymentOptions, selectedPlan]
   );
 
-  const jobGuaranteeInfo = getJobGuaranteeConfig(currentLocation, info);
-
   return (
     <>
       <Div
@@ -790,7 +786,6 @@ const FinancialOptionsCard = ({
         padding="24px"
         maxWidth="600px"
         width="100%"
-        margin="0 auto"
         display="block"
         boxShadow="0 8px 32px rgba(0,0,0,0.25)"
         position="relative"
@@ -886,13 +881,11 @@ const FinancialOptionsCard = ({
                 justifyContent="center"
               >
                 <Div alignItems="center" justifyContent="center">
-                  <label
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      cursor: "pointer",
-                      userSelect: "none",
-                    }}
+                  <Toggle
+                    width="42px"
+                    height="22px"
+                    b_radius="9999px"
+                    bg={jobGuarantee ? Colors.blue : Colors.lightGray}
                     onClick={() =>
                       setJobGuarantee && setJobGuarantee(!jobGuarantee)
                     }
@@ -1372,94 +1365,106 @@ const PricesAndPayment = (props) => {
       padding_tablet="70px 40px"
       padding_md="70px 80px"
       padding_lg="70px 0px"
+      maxWidth_md="1280px"
       margin="0 auto"
     >
-      <Div flexDirection="column" maxWidth_md="1280px" margin="0 auto">
-        <H2
-          fontSize="21px"
-          fontSize_md="35px"
-          fontWeight="400"
-          lineHeight="46px"
-          textAlign="center"
-          width="100%"
-          margin="0 0 20px 0"
+      <H2
+        fontSize="21px"
+        fontSize_md="35px"
+        fontWeight="400"
+        lineHeight="46px"
+        textAlign="center"
+        width="100%"
+        margin="0 0 20px 0"
+      >
+        {info?.plans_title}
+      </H2>
+      <Grid
+        gridTemplateColumns_lg={
+          props.financial ? "repeat(26,1fr)" : "repeat(23,1fr)"
+        }
+        gridTemplateColumns_md="1fr repeat(14,1fr) 1fr"
+        gridTemplateColumns_tablet={
+          props.financial ? "1fr repeat(14,1fr) 1fr" : "1fr repeat(13,1fr) 1fr"
+        }
+        gridGap="8px"
+        margin_tablet="20px 0 0 0"
+      >
+        <Div
+          gridColumn_md="1/9"
+          gridColumn_lg={props.financial ? "2/14" : "1/16"}
+          gridColumn_tablet={props.financial ? "1/9" : "1/10"}
+          alignItems="center"
         >
-          {info?.plans_title}
-        </H2>
-        <Grid gridGap="8px" margin_tablet="20px 0 0 0">
-          <Div gridColumn="1" gridColumn_tablet="1/ 15" alignItems="center">
-            <H3
-              fontSize="16px"
-              fontSize_md="24px"
-              lineHeight="26px"
-              fontWeight="400"
-              textAlign="center"
-              textWrap="balance"
-              // textAlign_tablet="start"
-              // textAlign_xs="center"
-              opacity="1"
-              color={Colors.black}
-              margin="0 0 2.5rem 0"
-            >
-              {props.financial ? info.select_2 : info.select}
-            </H3>
-          </Div>
-          {/* SELECT COUNTRY */}
+          <H3
+            fontSize="16px"
+            fontSize_md="24px"
+            lineHeight="26px"
+            fontWeight="400"
+            textAlign_tablet="start"
+            textAlign_xs="center"
+            opacity="1"
+            color={Colors.black}
+            padding="0 0 16px 0"
+          >
+            {props.financial ? info.select_2 : info.select}
+          </H3>
+        </Div>
+        {/* SELECT COUNTRY */}
+        <Div
+          gridColumn_lg={props.financial ? "14/26" : "16/25"}
+          gridColumn_md={props.financial ? "9/16" : "10/16"}
+          gridColumn_tablet={props.financial ? "9/16" : "10/15"}
+          justifyContent_xxs="center"
+          justifyContent_tablet="start"
+        >
           <Div
-            gridColumn="1"
-            gridColumn_tablet="2/ 14"
-            gridColumn_md="4/12"
-            justifyContent_xxs="center"
-            justifyContent_tablet="start"
+            flexDirection_tablet="row"
+            flexDirection="column"
+            alignItems="center"
+            width="100%"
           >
             <Div
               flexDirection_tablet="row"
               flexDirection="column"
-              alignItems="center"
-              width="100%"
+              width_tablet="100%"
+              gap="20px"
+              // width_md="320px"
+              width_xs="320px"
+              width_xxs="280px"
             >
-              <Div
-                flexDirection_tablet="row"
-                flexDirection="column"
-                width_tablet="100%"
-                gap="20px"
-                // width_md="320px"
-                width_xs="320px"
-                width_xxs="280px"
-              >
+              <SelectRaw
+                placeholderFloat
+                bgColor={Colors.white}
+                single={props.financial ? false : true}
+                options={locations.map((l) => ({
+                  label: l.node.name,
+                  value: l.node.active_campaign_location_slug,
+                }))}
+                placeholder={info.top_label}
+                value={{
+                  label: currentLocation?.name,
+                  value: currentLocation?.active_campaign_location_slug,
+                }}
+                onChange={handleLocationChange}
+                onMenuOpen={() => setIsLocationDropdownOpen(true)}
+                onMenuClose={() => setIsLocationDropdownOpen(false)}
+                style={selectStyles}
+              />
+              {props.financial && (
                 <SelectRaw
                   placeholderFloat
                   bgColor={Colors.white}
-                  single={props.financial ? false : true}
-                  options={locations.map((l) => ({
-                    label: l.node.name,
-                    value: l.node.active_campaign_location_slug,
-                  }))}
-                  placeholder={info.top_label}
-                  value={{
-                    label: currentLocation?.name,
-                    value: currentLocation?.active_campaign_location_slug,
-                  }}
-                  onChange={handleLocationChange}
-                  onMenuOpen={() => setIsLocationDropdownOpen(true)}
-                  onMenuClose={() => setIsLocationDropdownOpen(false)}
+                  single={true}
+                  options={currentLocation && courseArrayFiltered}
+                  placeholder={info.top_label_2}
+                  value={course}
+                  onChange={handleProgramChange}
+                  onMenuOpen={() => setIsProgramDropdownOpen(true)}
+                  onMenuClose={() => setIsProgramDropdownOpen(false)}
                   style={selectStyles}
                 />
-                {props.financial && (
-                  <SelectRaw
-                    placeholderFloat
-                    bgColor={Colors.white}
-                    single={true}
-                    options={currentLocation && courseArrayFiltered}
-                    placeholder={info.top_label_2}
-                    value={course}
-                    onChange={handleProgramChange}
-                    onMenuOpen={() => setIsProgramDropdownOpen(true)}
-                    onMenuClose={() => setIsProgramDropdownOpen(false)}
-                    style={selectStyles}
-                  />
-                )}
-              </Div>
+              )}
             </Div>
           </Div>
         </Div>
@@ -1496,110 +1501,87 @@ const PricesAndPayment = (props) => {
               info={info}
               selectedPlan={selectedPlan}
               setSelectedPlan={setSelectedPlan}
-              jobGuarantee={jobGuarantee}
-              setJobGuarantee={setJobGuarantee}
               session={session}
               setSession={setSession}
               availablePlans={availablePlans}
               isLocationDropdownOpen={isLocationDropdownOpen}
               isProgramDropdownOpen={isProgramDropdownOpen}
+              jobGuarantee={jobGuarantee}
+              setJobGuarantee={setJobGuarantee}
               currentLocation={currentLocation}
               financial={props.financial}
               schedule={schedule}
               course={course}
               defaultCourse={props.defaultCourse}
             />
-            {/* Financial explainer card (mobile) */}
-            <Div
-              display_tablet="none"
-              width="100%"
-              display="flex"
-              flexDirection="column"
-            >
-              <FinancialOptionsCard
-                info={info}
-                selectedPlan={selectedPlan}
-                setSelectedPlan={setSelectedPlan}
-                session={session}
-                setSession={setSession}
-                availablePlans={availablePlans}
-                isLocationDropdownOpen={isLocationDropdownOpen}
-                isProgramDropdownOpen={isProgramDropdownOpen}
-                jobGuarantee={jobGuarantee}
-                setJobGuarantee={setJobGuarantee}
-                currentLocation={currentLocation}
-                financial={props.financial}
-                schedule={schedule}
-              />
-            </Div>
-          </>
-        ) : (
-          availablePlans &&
-          availablePlans.length === 0 && (
-            <Div
-              margin_xs="20px 15px"
-              margin_tablet="30px 60px"
-              margin_lg="60px 0"
-              fontSize="25px"
-              display="block"
-              textAlign="center"
-              dangerouslySetInnerHTML={{
-                __html: jobGuarantee
-                  ? info.not_available_job_guarantee
-                  : info.not_available,
-              }}
-            />
-          )
-        )}
-
-        <GridContainer
-          columns_tablet="12"
-          gridGap="0"
-          margin_tablet="55px 0 37px 0"
-        >
-          <Div
-            gridArea_tablet="1/5/1/9"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <H4
-              fontSize="13px"
-              lineHeight="22px"
-              width="fit-content"
-              color={Colors.darkGray}
-            >
-              {info.we_accept}{" "}
-            </H4>
-            <RoundImage
-              url="/images/bitcoin.png"
-              height="10px"
-              width="65px"
-              bsize="contain"
-              margin="0 15px"
-            />
-            <RoundImage
-              url="/images/ethereum.png"
-              height="20px"
-              width="65px"
-              bsize="contain"
-            />
           </Div>
-        </GridContainer>
-        <Paragraph margin_xxs="15px 0" margin_tablet="0 0 0 0">
-          {info.get_notified + " "}
-          <Link
-            to={
-              session && session?.location && session?.location.phone
-                ? `https://wa.me/${phoneNumberClean(session?.location?.phone)}`
-                : session?.email
-                ? `mailto:${session?.email}`
-                : `${info?.contact_link}`
-            }
+        </>
+      ) : (
+        availablePlans &&
+        availablePlans.length === 0 && (
+          <Div
+            margin_xs="20px 15px"
+            margin_tablet="30px 60px"
+            margin_lg="60px 0"
+            fontSize="25px"
+            display="block"
+            textAlign="center"
+            dangerouslySetInnerHTML={{
+              __html: jobGuarantee
+                ? info.not_available_job_guarantee
+                : info.not_available,
+            }}
+          />
+        )
+      )}
+
+      <GridContainer
+        columns_tablet="12"
+        gridGap="0"
+        margin_tablet="55px 0 37px 0"
+      >
+        <Div
+          gridArea_tablet="1/5/1/9"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <H4
+            fontSize="13px"
+            lineHeight="22px"
+            width="fit-content"
+            color={Colors.darkGray}
           >
-            {info.contact_carrer_advisor}
-          </Link>
-        </Paragraph>
-      </Div>
+            {info.we_accept}{" "}
+          </H4>
+          <RoundImage
+            url="/images/bitcoin.png"
+            height="10px"
+            width="65px"
+            bsize="contain"
+            margin="0 15px"
+          />
+          <RoundImage
+            url="/images/ethereum.png"
+            height="20px"
+            width="65px"
+            bsize="contain"
+          />
+        </Div>
+      </GridContainer>
+      <Paragraph margin_xxs="15px 0" margin_tablet="0 0 0 0">
+        {info.get_notified + " "}
+        <Link
+          to={
+            session && session?.location && session?.location.phone
+              ? `https://wa.me/${phoneNumberClean(session?.location?.phone)}`
+              : session?.email
+              ? `mailto:${session?.email}`
+              : `${info?.contact_link}`
+          }
+        >
+          {info.contact_carrer_advisor}
+        </Link>
+      </Paragraph>
     </Div>
   );
 };
