@@ -57,7 +57,7 @@ two_column_left:
       <br><br>
       <span style="color: #0097CD; ">✓</span> Follow our career team's guidance
       <br><br>
-      <span style="color: #0097CD; ">✓</span> Conditions apply depending on your country or U.S. state
+      <span style="color: #000000; ">*Conditions apply depending on your country or U.S. state</span>
     font_size: ["20px", "20px", "18px", "16px", "14px"]
     style: '{ "text-align": "left", "color": "#444", "line-height": "1.2", "padding": "10px"}'
   button:
