@@ -1,11 +1,15 @@
 navbar:
   - name: "Programs"
+    id: "programs"
     link: "/us/coding-bootcamps/part-time-full-stack-developer"
     sub_menu:
       icon: ""
       title: "Programs"
       paragraph: "From beginner to job-ready in record time. Train in today’s most in-demand tech fields and launch a lasting career."
       width: "950px"
+      program_comparison_cta:
+        text: "Unsure which program fits you best? See our program comparison <a class='link' href='/us/program-comparison'>here.</a>"
+        link: "/us/program-comparison"
       links:
         - title: "Full Stack with AI"
           level: " "
@@ -17,7 +21,7 @@ navbar:
             - text: "Full-time"
               link: "/us/coding-bootcamps/full-time-full-stack-developer"
 
-        - title: "Data Science and ML with AI"
+        - title: "Data Science and Machine Learning with AI"
           level: " "
           icon: "machine_2"
           paragraph: "Master AI-powered data analysis with Python. Build intelligent models using cutting-edge Machine Learning and AI techniques to solve real-world problems."
@@ -95,7 +99,7 @@ navbar:
           sub_links:
             - title: "Hire our alumni"
               link_to: "https://www.notion.so/4geeksacademy/Talent-Pipeline-4Geeks-Academy-ef91aba17f9c4964bf7972396d190bdf"
-            - title: "Partners with 4Geeks"
+            - title: "Partner with 4Geeks"
               link_to: "/us/partners"
             - title: "Work with us"
               link_to: "/us/jobs"

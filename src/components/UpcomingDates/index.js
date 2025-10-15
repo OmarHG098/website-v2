@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext, useRef } from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import ReCAPTCHA from "react-google-recaptcha";
 import { GridContainer, Div } from "../Sections";
 import { H2, H3, H4, Paragraph } from "../Heading";
 import { Colors, Button, Spinner } from "../Styling";
@@ -12,6 +11,7 @@ import styled from "styled-components";
 import { Input } from "../Form";
 import { getCohorts, newsletterSignup } from "../../actions";
 import { SessionContext } from "../../session";
+import SafeReCAPTCHA from "../SafeReCAPTCHA";
 
 const Form = styled.form`
   margin: 0 11px 0 0;
@@ -93,6 +93,20 @@ const UpcomingDates = ({
 
   const { session } = useContext(SessionContext);
   const captcha = useRef(null);
+
+  // Safe captcha execution with defensive checks
+  const executeRecaptcha = async () => {
+    if (captcha.current && typeof captcha.current.executeAsync === "function") {
+      try {
+        return await captcha.current.executeAsync();
+      } catch (error) {
+        console.warn("ReCAPTCHA execution failed:", error);
+        return null;
+      }
+    }
+    console.warn("ReCAPTCHA not available, proceeding without token");
+    return null;
+  };
 
   const [data, setData] = useState({
     cohorts: { catalog: [], all: [], filtered: [] },
@@ -827,12 +841,14 @@ const UpcomingDates = ({
                                   status: "loading",
                                   msg: "Loading...",
                                 });
-                                const token =
-                                  await captcha.current.executeAsync();
+                                const token = await executeRecaptcha();
                                 newsletterSignup(
                                   {
                                     ...formData,
-                                    token: { value: token, valid: true },
+                                    token: {
+                                      value: token || "",
+                                      valid: !!token,
+                                    },
                                   },
                                   session
                                 )
@@ -886,11 +902,7 @@ const UpcomingDates = ({
                               required
                             />
                             <Div width="fit-content" margin="10px auto 0 auto">
-                              <ReCAPTCHA
-                                ref={captcha}
-                                sitekey={process.env.GATSBY_CAPTCHA_KEY}
-                                size="invisible"
-                              />
+                              <SafeReCAPTCHA ref={captcha} size="invisible" />
                             </Div>
                             <Button
                               height="40px"
