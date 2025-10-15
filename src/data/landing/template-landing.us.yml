@@ -272,7 +272,7 @@ components:
       background: "black"
       path: "https://www.youtube.com/watch?v=plwPwyrxX84"
     content: 
-      text: "We're all about making our high-quality education affordable to everyone. That's why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it's an ISA, scholarship, payment plan or Job Guarantee we're here to guide you every step of the way."
+      text: "We're all about making our high-quality education affordable to everyone. That's why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it's an ISA, scholarship, payment plan or Job Guarantee we're here to guide you every step of the way. *Does not apply to all locations."
       font_size: ["16px"]
       path: ""
     bullets:
