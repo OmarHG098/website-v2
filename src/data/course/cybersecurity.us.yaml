@@ -74,7 +74,7 @@ two_columns_second:
     text: "APPLY NOW"
     color: "white"
     background: "black"
-    path: "#prices_and_payment"
+    path: "/us/apply"
 
 
 
@@ -145,7 +145,7 @@ two_columns:
     text: "Apply now"
     color: "white"
     background: "black"
-    path: "#prices_and_payment"
+    path: "/us/apply"
   bullets:
     items:
       - text: ""

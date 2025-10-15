@@ -142,7 +142,7 @@ two_columns:
     text: "Aplica ahora"
     color: "white"
     background: "black"
-    path: "#prices_and_payment"
+    path: "/es/aplica"
   bullets:
     items:
       - text: ""
