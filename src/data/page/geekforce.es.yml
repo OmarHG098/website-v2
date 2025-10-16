@@ -16,10 +16,13 @@ header:
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: "GeekForce - Bootcamp de programación con apoyo profesional ilimitado."
   paragraph: |
-    Obtén apoyo profesional ilimitado 1:1 diseñado para tu perfil único y objetivos—de por vida. Desde la construcción de tu CV y portafolio hasta entrevistas y plataformas de contratación impulsadas por IA, te daremos la mentoría personalizada que necesitas para conseguir tu primer trabajo y seguir prosperando en el tech de hoy.
+    Obtén apoyo profesional de por vida 1:1 adaptado a tus objetivos y perfil. Consigue tu primer trabajo tech y sigue creciendo con:
   image_logo: "/images/geekforce.png"
   bullets:
-    - " "
+    - Optimización de CV, portafolio y LinkedIn
+    - Preparación personalizada para entrevistas humanas y evaluaciones impulsadas por IA
+    - Estrategias expertas de búsqueda de empleo para destacar en sistemas de contratación automatizados
+    - Acceso a más de 5,000 socios de contratación globales y oportunidades exclusivas
   
 # Introduction Video here
 geekForce:
@@ -125,7 +128,7 @@ components:
     layout: "two_column_left"
     proportions: [6, 6]
     image:
-      style: '{"backgroundSize": "contain"}'
+      style: '{"backgroundSize": "cover", "background-position": "center", "border" : "3px solid black", "border-radius": "4px"}'
       src: "/images/bg/community.png"
       shadow: false
     heading:

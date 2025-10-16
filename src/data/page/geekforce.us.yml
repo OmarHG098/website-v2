@@ -16,10 +16,13 @@ header:
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: "GeekForce - Coding bootcamp with unlimited career support."
   paragraph: |
-    Get unlimited 1:1 career support designed for your unique profile and goals—for life. From resume and portfolio building to interviews and AI-driven hiring platforms, we’ll give you the personalized mentorship you need to land your first job and keep thriving in today’s tech.
+    Gain lifelong 1:1 career support tailored to your goals and profile. Land your first tech role and continue growing with: 
   image_logo: "/images/geekforce.png"
   bullets:
-    - " "
+    - Resume, portfolio, and LinkedIn optimization
+    - Personalized interview prep for human and AI-driven evaluations
+    - Expert job-search strategies to stand out in automated hiring systems
+    - Access to 5,000+ global hiring partners and exclusive opportunities
   
 # Introduction Video here
 geekForce:
@@ -125,7 +128,7 @@ components:
     layout: "two_column_left"
     proportions: [6, 6]
     image:
-      style: '{"backgroundSize": "contain"}'
+      style: '{"backgroundSize": "cover", "background-position": "center", "border" : "3px solid black", "border-radius": "4px"}'
       src: "/images/bg/community.png"
       shadow: false
     heading:
