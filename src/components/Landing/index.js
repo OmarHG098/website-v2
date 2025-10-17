@@ -752,7 +752,8 @@ export const landingSections = {
   job_guarantee_small: ({ data, yml, index }) => {
     const { heading } = yml;
 
-    const { icons, link, title } = data.allJobGuaranteeSmallYaml.edges[0].node;
+    const { icons, link, title, text } =
+      data.allJobGuaranteeSmallYaml.edges[0].node;
     const formatedIcons = icons.map(({ title, icon }) => ({
       icon,
       content: title,
@@ -763,6 +764,7 @@ export const landingSections = {
         content={{
           title: heading?.text || title,
           link,
+          text,
           icons: formatedIcons,
         }}
       />

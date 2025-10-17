@@ -37,7 +37,7 @@ header:
   title: "FULL STACK DEVELOPMENT\nWITH AI"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "how-to-become-a-full-stack-developer-"
-  paragraph: "Start a future-proof career with average starting salaries of $65K+. Train on an AI-powered full-stack curriculum, backed by unlimited mentorship, an 84% hire rate within 6 months, and our job guarantee. *Does not apply to all locations."
+  paragraph: 'Start a future-proof career with average starting salaries of $65K+. Train on an AI-powered full-stack curriculum, backed by unlimited mentorship, an 84% hire rate within 6 months, and our job guarantee. <a href="https://storage.googleapis.com/media-breathecode/0bf8e5c086144c894b750844d12a0bd327e823ba85f89a4def3c298d5cd6e4f0" target="_blank" rel="noopener noreferrer">Conditions apply</a>.'
 
 button:
   syllabus_heading: "Download Syllabus"
