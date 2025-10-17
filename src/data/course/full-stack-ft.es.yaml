@@ -31,7 +31,7 @@ header:
   title: "Full Stack Development \ncon IA"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "FullStack"
-  paragraph: "Conviértete en Desarrollador Full Stack con IA en solo 12 semanas—con entrenamiento full-time que acelera tu progreso. Vive la experiencia práctica, un currículo integrado con IA, mentoría personalizada ilimitada y una garantía de empleo que lo respalda."
+  paragraph: "Conviértete en Desarrollador Full Stack con IA en solo 12 semanas—con entrenamiento full-time que acelera tu progreso. Vive la experiencia práctica, un currículo integrado con IA, mentoría personalizada ilimitada y una garantía de empleo que lo respalda. No aplica para todos los mercados, países o estados donde opera 4Geeks. Condiciones aplican."
 
 button:
   syllabus_heading: "Descarga el Syllabus"
@@ -173,7 +173,7 @@ why_4geeks_job_guarantee:
   sub_heading:
     font_size: ["16px", "16px", "16px", "14px", "14px"]
     style: '{ "font-weight": "100" }'
-    text: "Nuestro objetivo es más que enseñarte habilidades — queremos lanzar carreras tech exitosas. Con un currículo cutting-edge alineado con lo último en IA, metodología práctica y apoyo profesional personalizado, nuestro programa tiene un historial probado de preparar estudiantes para el mercado tech."
+    text: "Nuestro objetivo es más que enseñarte habilidades — queremos lanzar carreras tech exitosas. Con un currículo cutting-edge alineado con lo último en IA, metodología práctica y apoyo profesional personalizado, nuestro programa tiene un historial probado de preparar estudiantes para el mercado tech. *No aplica para todos los mercados, países o estados donde opera 4Geeks. Condiciones aplican."
   content:
     text: "Súmate a un líder global en educación tech con IA. Con 7+ campus y 4,000+ alumni, te damos aprendizaje con IA y apoyo profesional de por vida."
   bullets:

@@ -99,7 +99,7 @@ two_columns:
     text: "Potenciando Carreras en LA"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Abriendo Puertas con Garantía de Empleo y Apoyo Profesional de por Vida en Los Ángeles"
+    text: "Abriendo Puertas con Garantía de Empleo (*No aplica para todos los mercados, países o estados donde opera 4Geeks. Condiciones aplican.) y Apoyo Profesional de por Vida en Los Ángeles"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "¡Únete ahora!"

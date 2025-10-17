@@ -156,7 +156,7 @@ components:
       style: '{ "lineHeight": "30px"}'
     sub_heading:
       text: |
-        ¿La prueba más fuerte de que creemos en nuestro modelo? Lo respaldamos con una Garantía de Empleo.
+        ¿La prueba más fuerte de que creemos en nuestro modelo? Lo respaldamos con una Garantía de Empleo. *No aplica para todos los mercados, países o estados donde opera 4Geeks. Condiciones aplican.
         La mayoría de escuelas prometen "apoyo de carrera." En 4Geeks, prometemos resultados: consigue trabajo en 9 meses, o te reembolsamos tu matrícula en su totalidad.
         Podemos hacer esto porque:
       font_size: ["16px", "16px", "16px", "16px", "16px"]
