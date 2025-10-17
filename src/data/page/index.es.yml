@@ -94,7 +94,6 @@ two_columns:
       <br/>
       <p>¿Necesitas otra razón? En 2024, <strong style="text-decoration: none; color: #000000; font-weight: 700;">Forbes</strong> nos nombró el <a href="https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition" style="text-decoration: none; color: #000000; font-weight: 700;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">mejor bootcamp para estudiantes con presupuesto limitado<span style="font-size: 0.8em;">↗</span></a>—reconociendo nuestro compromiso con la educación tech accesible.</p>
       <p><strong style="text-decoration: none; color: #000000; font-weight: 700;">¿Tienes dudas?</strong> Nuestro equipo de admisiones te ayuda a encontrar el plan ideal para ti.</p>
-    path: "/es/apply"
   button:
     text: "CONTÁCTANOS"
     color: "white"

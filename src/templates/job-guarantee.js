@@ -627,7 +627,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           padding_tablet="42px 0"
         >
           <H2 margin="0 0 15px 0">{yml.how_it_works.title}</H2>
-          <SubTitle dangerouslySetInnerHTML={{ __html: yml.how_it_works.text }} />
+          <SubTitle
+            dangerouslySetInnerHTML={{ __html: yml.how_it_works.text }}
+          />
         </Div>
         <Div
           margin="auto"

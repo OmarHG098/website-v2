@@ -98,7 +98,6 @@ two_columns:
       <br/>
       <p>And if you need one more reason to feel confident: In 2024, <strong style="text-decoration: none; color: #000000; font-weight: 700;">Forbes</strong> named us the <a href="https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition" style="text-decoration: none; color: #000000; font-weight: 700;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">best bootcamp for students on a budget<span style="font-size: 0.8em;">↗</span></a>—recognizing our commitment to keeping tech education accessible.</p>
       <p><strong style="text-decoration: none; color: #000000; font-weight: 700;">Have questions?</strong> Our admissions team will help you find your best-fit financing plan.</p>
-    path: "/us/apply"
   button:
     text: "GET IN TOUCH"
     color: "white"
