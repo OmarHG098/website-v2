@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-rome-italy"
   title: "Coding Bootcamp in Rome, Italy"
   position: 101
-  description: "Start your journey with 4Geeks Academy’s Rome Coding Bootcamp. Get a Job Guarantee, coding skills, and mentorship to land your first tech role."
+  description: "Start your journey with 4Geeks Academy’s Rome Coding Bootcamp. Get coding skills, and mentorship to land your first tech role."
   image: "/images/og-preview/rome-italy.us.png"
   keywords: "null"
   redirects: []
@@ -16,7 +16,7 @@ meta_info:
   cohort_exclude_regex: []
   home_video: ""
 
-seo_title: "Coding Bootcamp in Rome, Italy with Job Guarantee"
+seo_title: "Coding Bootcamp in Rome, Italy"
 header:
   tagline: "Learn To Code in Rome, Italy"
   sub_header: "All programs are taught "

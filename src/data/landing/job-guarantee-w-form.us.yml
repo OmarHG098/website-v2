@@ -178,7 +178,7 @@ components:
     sub_heading:
       text:
         "Our bootcamps go beyond teaching relevant skills; they are designed to launch rewarding tech careers.
-        From our industry-aligned syllabus to our comprehensive, personalized career support service, every one of our features has been tried and tested to optimize your learning journey."
+        From our industry-aligned syllabus to our comprehensive, personalized career support service, every one of our features has been tried and tested to optimize your learning journey. *Does not apply to all locations."
     content:
       text: "Let’s shape your future together!"
       font_size: ["16px"]
@@ -264,7 +264,7 @@ components:
         text: "4Geeks Academy provides continuous guidance, even after graduation."
         icon: "circle"
       - heading: "Job Guarantee for Career Security"
-        text: "If students don't secure a job within two years, tuition is refunded."
+        text: "If students don't secure a job within 9 months, tuition is refunded. *Does not apply to all locations."
         icon: "circle"
       - heading: "Success Through Hands-On Learning"
         text: "James landed a tech job thanks to 4Geeks' structured training."

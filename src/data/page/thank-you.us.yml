@@ -91,7 +91,7 @@ components:
       src: "/images/programs-heading.webp"
       shadow: false
     heading:
-      text: "🚀 Check Out Our Job Guarantee"
+      text: "🚀 Check Out Our Job Guarantee. *Does not apply to all locations"
     content:
       text: "See how this optional add-on gives you extra confidence while building your tech career."
     button:
