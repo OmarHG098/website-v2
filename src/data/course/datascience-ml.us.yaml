@@ -19,7 +19,7 @@ apply_form:
 seo_title: "Data Science and Machine Learning Bootcamp"
 header:
   title: "DATA SCIENCE AND MACHINE LEARNING WITH AI"
-  paragraph: "Break into one of tech’s fastest-growing, highest-paying fields. Learn to analyze data, build predictive models, and use AI tools to solve real-world problems—backed by expert mentorship, hands-on learning, and the option of a job guarantee. *Does not apply to all locations."
+  paragraph: 'Break into one of tech’s fastest-growing, highest-paying fields. Learn to analyze data, build predictive models, and use AI tools to solve real-world problems—backed by expert mentorship, hands-on learning, and the option of a job guarantee. <a href="https://storage.googleapis.com/media-breathecode/0bf8e5c086144c894b750844d12a0bd327e823ba85f89a4def3c298d5cd6e4f0" target="_blank" rel="noopener noreferrer">Conditions apply</a>.'
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "circles"
 

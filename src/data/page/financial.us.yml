@@ -199,7 +199,7 @@ two_column:
       style: '{ "color": "#4D4D5C", "fontWeight": 400, "textAlign": "justify" }'
       text: "Our bootcamps go beyond teaching relevant skills; they are designed to launch rewarding tech careers.
             From our  industry-aligned syllabus to our comprehensive, personalized career support service, every one of our features has been tried and tested to optimize your learning journey.
-            *Does not apply to all locations."
+            <a href='https://storage.googleapis.com/media-breathecode/0bf8e5c086144c894b750844d12a0bd327e823ba85f89a4def3c298d5cd6e4f0' target='_blank' rel='noopener noreferrer'>Conditions apply</a>."
       font_size:
         - 16px
         - 16px

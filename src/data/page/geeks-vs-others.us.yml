@@ -157,7 +157,7 @@ components:
     sub_heading:
       text: |
         The strongest proof that we believe in our model? We back it with a Job Guarantee.
-        Most schools promise "career support." At 4Geeks, we promise results: get hired within 9 months, or we refund your tuition in full. *Does not apply to all locations.
+        Most schools promise "career support." At 4Geeks, we promise results: get hired within 9 months, or we refund your tuition in full. <a href="https://storage.googleapis.com/media-breathecode/0bf8e5c086144c894b750844d12a0bd327e823ba85f89a4def3c298d5cd6e4f0" target="_blank" rel="noopener noreferrer">Conditions apply</a>.
         We can do this because:
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "margin": "15px 0", "font-weight": "600" }'

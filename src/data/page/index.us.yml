@@ -93,12 +93,11 @@ two_columns:
       <ul>
         <li>✓ Among the most affordable tuitions for a top bootcamp</li>
         <li>✓ Payment plans starting under $299/month</li>
-        <li>✓ Job Guarantee available. *Does not apply to all locations.</li>
+        <li>✓ Job Guarantee available. <a href="https://storage.googleapis.com/media-breathecode/0bf8e5c086144c894b750844d12a0bd327e823ba85f89a4def3c298d5cd6e4f0" target="_blank" rel="noopener noreferrer">Conditions apply</a>.</li>
       </ul>
       <br/>
       <p>And if you need one more reason to feel confident: In 2024, <strong style="text-decoration: none; color: #000000; font-weight: 700;">Forbes</strong> named us the <a href="https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition" style="text-decoration: none; color: #000000; font-weight: 700;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">best bootcamp for students on a budget<span style="font-size: 0.8em;">↗</span></a>—recognizing our commitment to keeping tech education accessible.</p>
       <p><strong style="text-decoration: none; color: #000000; font-weight: 700;">Have questions?</strong> Our admissions team will help you find your best-fit financing plan.</p>
-    path: "/us/apply"
   button:
     text: "GET IN TOUCH"
     color: "white"

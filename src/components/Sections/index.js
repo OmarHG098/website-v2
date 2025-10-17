@@ -855,9 +855,8 @@ export const Header = ({
             fontSize={fontSize_paragraph}
             fontWeight={fontWeight_paragraph}
             color={Colors.black}
-          >
-            {paragraph}
-          </SubTitle>
+            dangerouslySetInnerHTML={{ __html: paragraph }}
+          />
           {children}
         </Div>
         {svg_image ? (
