@@ -15,7 +15,6 @@ header_data:
     - Experiencia de aprendizaje hiperpersonalizada
     - Soporte profesional ilimitado  impulsado por IA
     - Adquiere las habilidades y mentalidad que buscan los reclutadores
-    - '<strong style="text-decoration: none; color: #000000; font-weight: 700;">Garantía de Empleo</strong>: Consigue trabajo en 9 meses tras graduarte — o te devolvemos tu dinero. *No aplica para todos los mercados, países o estados donde opera 4Geeks'
   join_button_text: ELIGE UN PROGRAMA
   join_button_path: "#choose-program"
   free_button_text: PRUÉBALO GRATIS
@@ -79,7 +78,7 @@ two_columns:
   section_heading:
     text: "Financia tu futuro"
   heading:
-    text: "Invierte en tu carrera con planes flexibles y Garantía de Empleo. *No aplica para todos los mercados, países o estados donde opera 4Geeeks. Condiciones aplican."
+    text: "Invierte en tu carrera con planes flexibles y Garantía de Empleo."
     style: '{ "fontWeight": 200, "marginBottom": "24px", "marginTop": "0px", "fontSize": "22px" }'
   content:
     text: |
@@ -90,7 +89,7 @@ two_columns:
       <ul>
         <li>✓ Una de las matrículas más accesibles entre los bootcamps top</li>
         <li>✓ Planes de pago desde menos de $299/mes</li>
-        <li>✓ Garantía de Empleo disponible. *No aplica para todos los mercados, países o estados donde opera 4Geeeks. Condiciones aplican.</li>
+        <li>✓ Garantía de Empleo disponible. *No aplica para todos los mercados, países o estados donde opera 4Geeks. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf" target="_blank" rel="noopener noreferrer">Condiciones aplican</a>.</li>
       </ul>
       <br/>
       <p>¿Necesitas otra razón? En 2024, <strong style="text-decoration: none; color: #000000; font-weight: 700;">Forbes</strong> nos nombró el <a href="https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition" style="text-decoration: none; color: #000000; font-weight: 700;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">mejor bootcamp para estudiantes con presupuesto limitado<span style="font-size: 0.8em;">↗</span></a>—reconociendo nuestro compromiso con la educación tech accesible.</p>
