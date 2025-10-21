@@ -312,9 +312,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             lineHeight_tablet="28px"
             lineHeight_sm="26px"
             lineHeight_xs="24px"
-          >
-            {yml.header.sub_title}
-          </SubTitle>
+            dangerouslySetInnerHTML={{ __html: yml.header.sub_title }}
+          />
 
           <Paragraph
             color={Colors.black}
@@ -628,7 +627,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           padding_tablet="42px 0"
         >
           <H2 margin="0 0 15px 0">{yml.how_it_works.title}</H2>
-          <SubTitle>{yml.how_it_works.text}</SubTitle>
+          <SubTitle
+            dangerouslySetInnerHTML={{ __html: yml.how_it_works.text }}
+          />
         </Div>
         <Div
           margin="auto"
