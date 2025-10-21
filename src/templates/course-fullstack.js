@@ -19,7 +19,7 @@ import OurPartners from "../components/OurPartners/index.js";
 import Icon from "../components/Icon/index.js";
 import Overlaped from "../components/Overlaped/index.js";
 import Loc from "../components/Loc/index.js";
-import ScholarshipProjects from "../components/ScholarshipProjects/index.js";
+import DoubleActionCTA from "../components/DoubleActionCTA/index.js";
 import TwoColumn from "../components/TwoColumn/index.js";
 
 const Program = ({ data, pageContext, yml }) => {
@@ -28,6 +28,7 @@ const Program = ({ data, pageContext, yml }) => {
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
   const landingHiring = yml.partners;
+  const doubleActionCTA = data.allDoubleActionCtaYaml.edges[0].node.cta;
 
   const defaultCourse = "full-stack";
   const program_schedule = yml.meta_info.slug.includes("full-time")
@@ -305,15 +306,6 @@ const Program = ({ data, pageContext, yml }) => {
         paragraph={yml.prices.sub_heading}
       />
 
-      {pageContext.lang === "es" && (
-        <ScholarshipProjects
-          content={data.allScholarshipProjectsYaml.edges[0].node}
-          lang={pageContext.lang}
-        />
-      )}
-
-      {/*<OurPartners images={hiring.partners.images} marquee/>*/}
-
       <OurPartners
         images={hiring.partners.images}
         margin="0"
@@ -330,8 +322,8 @@ const Program = ({ data, pageContext, yml }) => {
             : hiring.partners.sub_heading
         }
       />
-
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
+      <DoubleActionCTA />
     </>
   );
 };
@@ -583,12 +575,9 @@ export const query = graphql`
               items {
                 heading
                 text
-                icon
-                icon_color
               }
             }
           }
-
           two_columns_info {
             proportions
             image {
@@ -653,65 +642,6 @@ export const query = graphql`
             geeks_vs_other
             pricing
             alumni
-          }
-        }
-      }
-    }
-    allScholarshipProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          title
-          description
-          project_name
-          project_details
-          total_cost
-          geeks_benefited
-          institutions
-          press
-          see_project
-          projects {
-            name
-            image {
-              alt
-              src {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 700
-                    quality: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    breakpoints: [200, 340, 520, 890]
-                  )
-                }
-              }
-            }
-            description
-            details {
-              cost
-              geeks_benefited
-            }
-            institutions {
-              name
-              logo {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 700
-                    quality: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    breakpoints: [200, 340, 520, 890]
-                  )
-                }
-              }
-            }
-            press {
-              name
-              link
-            }
-            pdf
-          }
-          fields {
-            lang
           }
         }
       }
@@ -926,7 +856,42 @@ export const query = graphql`
         }
       }
     }
+    allDoubleActionCtaYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          cta {
+            title
+            description
+            primary {
+              title
+              description
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            secondary {
+              title
+              description
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            newsletter_form {
+              placeholder_email
+              error_email
+              button_submit
+              button_loading
+              status_idle
+              status_error
+              status_correct_errors
+              success_message
+            }
+          }
+        }
+      }
+    }
   }
 `;
-
 export default BaseRender(Program);

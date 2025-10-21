@@ -23,11 +23,13 @@ import Overlaped from "../components/Overlaped";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 import Loc from "../components/Loc";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
+import DoubleActionCTA from "../components/DoubleActionCTA";
 
 const DataScience = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const courseDetails = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
+  const doubleActionCTA = data.allDoubleActionCtaYaml.edges[0].node.cta;
 
   const defaultCourse = "machine-learning";
   const program_type = yml.meta_info.slug.includes("full-time")
@@ -302,8 +304,8 @@ const DataScience = ({ data, pageContext, yml }) => {
             : hiring.partners.sub_heading
         }
       />
-
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
+      <DoubleActionCTA />
 
       {/* <RelatedPosts
         lang={pageContext.lang}
@@ -966,6 +968,42 @@ export const query = graphql`
             cohort_more_details_text
             syllabus_button_text
             syllabus_submit_text
+          }
+        }
+      }
+    }
+    allDoubleActionCtaYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          cta {
+            title
+            description
+            primary {
+              title
+              description
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            secondary {
+              title
+              description
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            newsletter_form {
+              placeholder_email
+              error_email
+              button_submit
+              button_loading
+              status_idle
+              status_error
+              status_correct_errors
+              success_message
+            }
           }
         }
       }

@@ -122,7 +122,10 @@ const LandingHeader = (props) => {
                   ) : (
                     <GatsbyImage
                       loading="eager"
-                      imgStyle={{ objectFit: "contain", objectPosition: "left" }}
+                      imgStyle={{
+                        objectFit: "contain",
+                        objectPosition: "left",
+                      }}
                       image={getImage(
                         yml.header_data.partner_logo_url.childImageSharp
                           .gatsbyImageData
@@ -156,9 +159,9 @@ const LandingHeader = (props) => {
               padding="0 10px 20px 0px"
               padding_xxs="0 5px 10px 0"
               color={taglineColor()}
-              fontSize="32px"
+              fontSize="40px"
               fontSize_tablet="60px"
-              fontSize_xxs="26px"
+              fontSize_xxs="40px"
               fontWeight="900"
               textAlign="left"
               dangerouslySetInnerHTML={{
@@ -262,9 +265,9 @@ const LandingHeader = (props) => {
                 {yml.features.button.text}
               </a>
             )}
-            {yml.short_badges && (
+            {Array.isArray(yml.short_badges) && (
               <Marquee_v2
-                speed={1.5}
+                speed={0.3}
                 reversed={false}
                 containerstyle={{
                   height: "160px",
@@ -273,29 +276,38 @@ const LandingHeader = (props) => {
               >
                 <Div
                   className="badge-slider"
-                  justifyContent="center"
+                  justifyContent="flex-start"
                   padding="44px 0"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "30px",
+                  }}
                 >
-                  {Array.isArray(yml.short_badges) &&
-                    yml.short_badges.map((l, i) => {
-                      return (
-                        <GatsbyImage
-                          key={i}
-                          draggable={false}
-                          style={{
-                            height: "65px",
-                            minWidth: "165px",
-                            width: "165px",
-                          }}
-                          imgStyle={{ objectFit: "contain" }}
-                          alt={l.alt}
-                          image={getImage(
-                            l.image != null &&
-                              l.image.childImageSharp.gatsbyImageData
-                          )}
-                        />
-                      );
-                    })}
+                  {/* Render badges multiple times for seamless loop */}
+                  
+                  {[...Array(3)].map((_, repeatIndex) =>
+                    yml.short_badges.map((l, i) => (
+                      <GatsbyImage
+                        key={`${repeatIndex}-${i}`}
+                        draggable={false}
+                        style={{
+                          height: "65px",
+                          width: "auto",
+                          minWidth: "100px",
+                          maxWidth: "150px",
+                        }}
+                        imgStyle={{
+                          objectFit: "contain",
+                          objectPosition: "center",
+                        }}
+                        alt={l.alt}
+                        image={getImage(
+                          l.image?.childImageSharp?.gatsbyImageData
+                        )}
+                      />
+                    ))
+                  )}
                 </Div>
               </Marquee_v2>
             )}

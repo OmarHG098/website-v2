@@ -41,7 +41,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: Descubre el Mejor Bootcamp en España! Full-Stack Developer en Solo 18 Semanas.
+  tagline: Descubre el Mejor Bootcamp en España! Full-Stack Developer en Sólo 20 Semanas
   sub_heading: "El 86% de nuestros alumnos ya han empezado su carrera en el sector tech con un salario medio de 22.000€ al año."
   tagline_color: "#1c1c1c"
   form_styles:
@@ -49,7 +49,7 @@ header_data:
     color: "white"
     button:
       background: "black"
-  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  badge: "../../../static/images/badges/Course-Report-Badge-2025.png"
   image_filter: brightness(0.3)
 
 features:
@@ -60,7 +60,7 @@ features:
   bullets:
    - Aprende las Tecnologías Más Demandadas en la Industria Tech. 
    - Adquiere Habilidades Altamente Solicitadas por Empresas Líderes.
-   - Clases en Grupos Reducidos y Soporte de Por Vida
+   - Clases en Grupos Reducidos y Soporte de Por Vida.
   
 short_badges:
   - name: "Premios Excelencia Educativa"
@@ -73,7 +73,7 @@ short_badges:
     alt: "Premio Nacional de Tecnología 2023"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    image: "../../../static/images/badges/Course-Report-Badge-2025.png"
     alt: "Best cooding bootcamp Course Report 2023"   
   - name: "European Excellence Education"
     url: ""
@@ -96,7 +96,7 @@ follow_bar:
     path: "#leadform_header"
   phone:
     text: ""
-    number: ""
+    number: " "
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
@@ -225,13 +225,13 @@ components:
     layout: two_column_left
     proportions: [4, 8]
     image:
-      style: '{"min-height": "200px","max-height": "200px", "align-self": "center", "backgroundSize": "contain" }'
-      src: "/images/badges/Course-Report-Badge-2024.webp"
+      style: '{"min-height": "200px","max-height": "200px", "align-self": "stretch", "margin": "0 auto", "background-position": "center center"}'
+      src: "/images/badges/Course-Report-Badge-2025.png"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text: "Hemos sido seleccionados entre los mejores Coding Bootcamps del mundo por 5 años consecutivos"
         #xl      lg     md     sm    xs
-      font_size: ["28px", "28px", "28px", "28px", "28px"]
+      font_size: ["36px", "34px", "32px", "30px", "30px"]
 
   - name: seguridad_europa
     position: 9
@@ -239,12 +239,12 @@ components:
     layout: two_column_right
     proportions: [8, 4]
     image:
-      style: '{"min-height": "200px","max-height": "200px", "align-self": "center", "backgroundSize": "contain" }'
+      style: '{"min-height": "200px","max-height": "200px", "align-self": "stretch", "margin": "0 auto", "background-position": "center center"}'
       src: "/images/badges/european_excellence_education_black.png"
       link:
     heading:
       text:
         "Nombrados como el TOP 1 Bootcamp de España y somos reconocidos en Europa"
         #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+      font_size: ["36px", "34px", "32px", "30px", "30px"]
      
