@@ -130,7 +130,7 @@ upcoming:
 ## PROGRAM DETAILS
 details:
   about:
-      title: "Sobre Nuestro Curso de Data Science y Machine Learning"
+      title: "Sobre Nuestro Curso de Data Science y Machine Learning con IA"
       sub_title: |
         Aprende Python, SQL, Looker (Google Data Studio), Streamlit y Estadísticas y conviértete en un Analista de Datos profesional, listo para contribuir a cualquier equipo basado en datos en cualquier empresa.
         Crea modelos predictivos usando Python, Pandas, Numpy y otras bibliotecas poderosas. Explora algoritmos como Vecinos Cercanos, Árboles de Decisión y más. Trabaja con modelos de aprendizaje supervisado y no supervisado.
@@ -145,7 +145,7 @@ details:
           content: "3 clases semanales."
           icon: "book-2"
         - label: "Tamaño de la clase"
-          content: "Máx. 12 estudiantes."
+          content: "Máx. 18 estudiantes."
           icon: "people"
         - label: "Certificado"
           content: "Reconocido por la industria.\n"
