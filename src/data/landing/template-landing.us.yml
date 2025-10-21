@@ -272,7 +272,7 @@ components:
       background: "black"
       path: "https://www.youtube.com/watch?v=plwPwyrxX84"
     content: 
-      text: 'We’re all about making our high-quality education affordable to everyone. That’s why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it’s an ISA, scholarship, payment plan or Job Guarantee we’re here to guide you every step of the way. <a href="https://storage.googleapis.com/media-breathecode/0bf8e5c086144c894b750844d12a0bd327e823ba85f89a4def3c298d5cd6e4f0" target="_blank" rel="noopener noreferrer">Conditions apply</a>.'
+      text: 'We’re all about making our high-quality education affordable to everyone. That’s why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it’s an ISA, scholarship, payment plan or Job Guarantee we’re here to guide you every step of the way. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf" target="_blank" rel="noopener noreferrer">Conditions apply</a>.'
       font_size: ["16px"]
       path: ""
     bullets:

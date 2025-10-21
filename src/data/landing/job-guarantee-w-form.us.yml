@@ -264,7 +264,7 @@ components:
         text: "4Geeks Academy provides continuous guidance, even after graduation."
         icon: "circle"
       - heading: "Job Guarantee for Career Security"
-        text: "If students don't secure a job within 9 months, tuition is refunded. <a href='https://storage.googleapis.com/media-breathecode/0bf8e5c086144c894b750844d12a0bd327e823ba85f89a4def3c298d5cd6e4f0' target='_blank' rel='noopener noreferrer'>Conditions apply</a>."
+        text: "If students don't secure a job within 9 months, tuition is refunded. <a href='https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf' target='_blank' rel='noopener noreferrer'>Conditions apply</a>."
         icon: "circle"
       - heading: "Success Through Hands-On Learning"
         text: "James landed a tech job thanks to 4Geeks' structured training."
