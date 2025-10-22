@@ -188,7 +188,7 @@ components:
       font_size: ["38px", "34px", "34px", "34px", "34px"]
       style: '{ "font-weight": "600", "text-align": "left", "color": "#000", "padding": "10px" }'
     sub_heading:
-      text: "You don't need a tech background. We'll give you everything you need to start and grow your career in tech, even with no experience:"
+      text: "You don’t need to have a tech background. We’ll give you the tools and guidance to start and grow your career in tech, even with no experience."
       font_size: ["26px", "26px", "24px", "24px", "22px"]
       style: '{ "font-weight": "600", "text-align": "justify", "color": "#000", "padding": "10px"}'
     bullets:
