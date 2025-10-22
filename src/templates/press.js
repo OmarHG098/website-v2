@@ -404,7 +404,7 @@ export const query = graphql`
           awards_list {
             image {
               childImageSharp {
-                gatsbyImageData(layout: FULL_WIDTH, width: 700, quality: 100)
+                gatsbyImageData(layout: FULL_WIDTH, quality: 100)
               }
             }
             title
