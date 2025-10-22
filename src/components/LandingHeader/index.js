@@ -285,7 +285,7 @@ const LandingHeader = (props) => {
                   }}
                 >
                   {/* Render badges multiple times for seamless loop */}
-                  
+
                   {[...Array(3)].map((_, repeatIndex) =>
                     yml.short_badges.map((l, i) => (
                       <GatsbyImage
