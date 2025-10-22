@@ -12,7 +12,7 @@
   padding-left: 64px;
   margin-left: 0;
   background: #ffffff;
-  border: 1px solid #A4A4A4;
+  border: 1px solid #a4a4a4;
   border-radius: 3px;
   line-height: 22px;
   height: 40px;
@@ -25,7 +25,7 @@
 }
 .react-tel-input .form-control:focus {
   opacity: 1;
-  border: 1px solid #A4A4A4;
+  border: 1px solid #a4a4a4;
 }
 
 .react-tel-input .form-control.invalid {
@@ -50,7 +50,7 @@
   margin: 1px 0px 1px 1px;
   background-color: #f5f5f5;
   /* border: 1px solid #CACACA; */
-  border-right: 1px solid #A4A4A4;
+  border-right: 1px solid #a4a4a4;
   border-radius: 3px 0 0 3px;
   opacity: 1;
 }
