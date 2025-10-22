@@ -1,11 +1,15 @@
 navbar:
   - name: "Programas"
+    id: "programs"
     link: "/es/coding-bootcamps/desarrollador-full-stack"
     sub_menu:
       icon: ""
       title: "Programas"
       paragraph: "Desde principiante a listo para el trabajo en tiempo récord. Entrena en los campos tecnológicos más demandados hoy en día y lanza una carrera duradera."
       width: "950px"
+      program_comparison_cta:
+        text: "¿No estás seguro qué programa se adapta mejor a ti? Mira nuestra comparación de programas <a class='link' href='/es/comparar-programas'>aquí.</a>"
+        link: "/es/comparar-programas"
       links:
 
         - title: "Desarrollador Full Stack con IA"

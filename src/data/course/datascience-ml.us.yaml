@@ -135,6 +135,8 @@ details:
         Master the skills to turn data into powerful insights and AI-driven solutions. Build predictive models for real-world applications like fraud detection, natural language processing, and data-driven decision-making.
         Use industry-leading tools and libraries such as Python, TensorFlow, SQL, and Scikit-learn, and work with supervised and unsupervised learning models.  Explore key algorithms like K-Nearest Neighbors and Decision Trees.
         By the end of the program, you’ll have designed and deployed your own AI projects—covering the full lifecycle from development to maintenance—while ensuring privacy, security, and real-world applicability.
+        <br>
+        <a href='/us/application-process' target='_blank' rel='noopener noreferrer'>How to apply.</a>
       list:
         - label: "Duration"
           content:  "16 Weeks"
@@ -187,7 +189,7 @@ details:
     - module_name: "Python"
       title: "Introduction to Python"
       description: >
-        Starting from a Prework (2 weeks before), get introduced into the world of coding and learn Python and Algorithms' basics; This module will help you prepare to code and develop the different A.I. and Machine Learning model training and evaluations for the next step.
+        Starting from a <a class='link' href='/us/prework'>Prework</a> (2 weeks before), get introduced into the world of coding and learn Python and Algorithms' basics; This module will help you prepare to code and develop the different A.I. and Machine Learning model training and evaluations for the next step.
       projects: "Collect, store and mesassure with Numpy, Pandas, Mstplotlib, etc."
       slug: "python-intro"
       duration: "2 wks"

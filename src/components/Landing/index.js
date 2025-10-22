@@ -34,6 +34,7 @@ import TwoColumn from "../TwoColumn/index.js";
 import { SingleColumn } from "../TwoColumn/index.js";
 import Iconogram from "../Iconogram/index.js";
 import { background } from "@storybook/theming";
+import WeTrust from "../WeTrust";
 
 const Title = ({ id, title, paragraph }) => {
   return (
@@ -269,6 +270,54 @@ Columns.defaultProps = {
 };
 
 export const landingSections = {
+  we_trust_section: ({ data, yml }) => {
+    let dataYml =
+      data.allLandingYaml.edges[0] || data.allDownloadableYaml.edges[0];
+    let we_trust_data = dataYml.node.we_trust_section;
+
+    return (
+      <WeTrust
+        id="we-trust-section"
+        margin="0"
+        padding="0"
+        padding_md="0"
+        padding_lg="0"
+        padding_tablet="0 !important"
+        width="100%"
+        width_md="100%"
+        width_tablet="100%"
+        maxWidth="1280px"
+        we_trust={we_trust_data}
+      />
+    );
+  },
+  choose_program: ({ data, pageContext, yml, course, location, index }) => {
+    let dataYml =
+      data.allLandingYaml.edges[0] || data.allDownloadableYaml.edges[0];
+    let choose_program_data = dataYml.node.choose_program;
+
+    // Build list of course slugs that have job guarantee enabled
+    const jobGuaranteeSlugs = data.allCourseYaml.edges
+      .filter(({ node }) => node.meta_info?.job_guarantee)
+      .map(({ node }) => node.meta_info.slug);
+
+    const programs =
+      data.allChooseYourProgramYaml.edges[0].node.programs.filter((p) => {
+        const linkSlug = p.link?.split("/").filter(Boolean).pop();
+        return jobGuaranteeSlugs.includes(linkSlug);
+      });
+
+    return (
+      <ChooseYourProgram
+        lang={pageContext.lang}
+        title={choose_program_data.title}
+        paragraph={choose_program_data.paragraph}
+        background={Colors.veryLightBlue3}
+        programs={programs}
+        padding="0"
+      />
+    );
+  },
   in_the_news: ({ session, pageContext, yml, course, location, index }) => (
     <GridContainer
       id="in_the_news"
@@ -372,9 +421,11 @@ export const landingSections = {
           width="100%"
           maxWidth="1280px"
         >
-          <H2 type="h2" padding="10px 0 60px 0">
-            {ratingReviews.heading}
-          </H2>
+          {ratingReviews.heading && (
+            <H2 type="h2" padding="10px 0 60px 0">
+              {ratingReviews.heading}
+            </H2>
+          )}
           <Div
             display="flex"
             flexDirection="column"
@@ -872,19 +923,25 @@ export const landingSections = {
       );
     }
 
+    let landingHiriging = dataYml[0].node?.who_is_hiring;
+
     return (
       <Div
         id="who_is_hiring"
         key={index}
         flexDirection="column"
-        margin_tablet="60px auto 60px auto"
+        padding={landingHiriging?.padding || "0"}
+        padding_tablet={landingHiriging?.padding_tablet || "0"}
+        margin_tablet={landingHiriging?.margin || "60px auto 60px auto"}
         m_sm="0"
         p_xs="0"
         margin_xs="60px 0 40px 0"
+        background={landingHiriging?.background || ""}
       >
         <OurPartners
           multiLine
           variant="carousel"
+          background={landingHiriging?.background || ""}
           images={imagesToShow}
           margin="0"
           padding="0 0 75px 0"
