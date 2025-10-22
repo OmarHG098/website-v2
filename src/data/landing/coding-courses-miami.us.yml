@@ -277,7 +277,7 @@ components:
     icons:
       - icon: "mortar-board-icon"
         title: ""
-        content: "Get a job within 9 months after graduation or get your money back."
+        content: 'Get a job within 9 months after graduation or get your money back. <a href="https://storage.googleapis.com/media-breathecode/0bf8e5c086144c894b750844d12a0bd327e823ba85f89a4def3c298d5cd6e4f0" target="_blank" rel="noopener noreferrer">Conditions apply</a>.'
 
       - icon: "stage-dots-icon"
         title: ""
