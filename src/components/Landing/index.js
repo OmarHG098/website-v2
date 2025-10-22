@@ -814,7 +814,6 @@ export const landingSections = {
         key={`job-guarantee-small-${index}`}
         content={{
           title: heading?.text || title,
-          link,
           text,
           icons: formatedIcons,
         }}

@@ -93,7 +93,7 @@ components:
     heading:
       text: "🚀 Conoce Nuestra Garantía de Empleo"
     content:
-      text: 'Ve cómo esta opción adicional te da confianza extra mientras construyes tu carrera tech. *No aplica para todos los mercados, países o estados donde opera 4Geeks. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf" target="_blank" rel="noopener noreferrer">Condiciones aplican</a>.'
+      text: 'Ve cómo esta opción adicional te da confianza extra mientras construyes tu carrera tech. *No aplica para todos los mercados, países o estados donde opera 4Geeks. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guaranteee-es.pdf" target="_blank" rel="noopener noreferrer">Condiciones aplican</a>.'
     button:
       text: "👉 Aprende Más"
       path: "https://4geeksacademy.com/es/job-guarantee"
