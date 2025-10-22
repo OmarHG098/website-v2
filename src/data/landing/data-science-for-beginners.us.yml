@@ -1,9 +1,9 @@
 meta_info:
-  slug: data-science-machine-learning # <--- URL 4geeksacademy.com/us/landing/data-science-machine-learning
+  slug: data-science-for-beginners # <--- URL 4geeksacademy.com/us/landing/data-science-for-beginners
 
   # This will show on social media when shared
-  title: "Data Science and Machine Learning Bootcamp | 4Geeks Academy"
-  description: "Launch your career in data science with our comprehensive bootcamp. Master AI, machine learning, and data analysis skills."
+  title: "Data Science Bootcamp for Beginners | 4Geeks Academy"
+  description: "Start your data science career from zero. No experience needed."
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/bg/the-academy-bg.jpg"
   keywords: ""
@@ -28,9 +28,9 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Get Started" 
-  motivation: "Fill out the form to receive the full program information and get in touch with one of our advisors."
-  button_label: "START MY JOURNEY"
+  heading: "Ready to start your journey?" 
+  motivation: "Fill out the form to get the complete program info and talk with an advisor about your goals."
+  button_label: "GET STARTED"
   redirect: null #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -40,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: "Break into Data Science with our Bootcamp: <br> High Salaries. Huge Demand. Just 16 Weeks."
+  tagline: "Become a Data Scientist, even with zero experience."
   sub_heading: " "
   tagline_color: "#1c1c1c"
   form_styles:
@@ -48,16 +48,16 @@ header_data:
     color: "white"
     button:
       background: "black"
-  badge: "../../../static/images/badges/Course-Report-Badge-2025.png"
+  badge: "../../../static/images/badges/course-report-best-coding-bootcamps-badge-2025.png"
   image_filter: brightness(0.9)
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
   styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
   bullets:
-    - "High earning potential: Train for one of the highest-paying roles in tech ($120K+ avg. salary)."
-    - "Future-proof demand: 36% job growth by 2033—companies everywhere are racing to hire data talent."
-    - "Job-ready in 16 weeks: Learn Python, machine learning, and data storytelling through real-world projects. With unlimited mentorship."
+    - "Get job-ready in 16 weeks: go from complete beginner to data scientist with real-world projects and unlimited mentorship."
+    - "Get hired fast. 35% job growth expected by 2035, companies everywhere need data experts!"
+    - "Access $120K+ average salaries. Data science is one of tech's best-paying careers, even as a beginner."
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"
@@ -103,14 +103,19 @@ follow_bar:
 #
 
 program_details:
-  position: 2
+  position: 3
   background: "#faf2e1"
   heading: "Data Science and Machine Learning: What You'll Learn"
-  sub_heading: "Master the technologies and skills that are transforming every industry through data-driven insights and AI-powered solutions."
+  sub_heading: "We'll teach you everything you need to know, from your first line of code to building AI-powered models."
+
+geeks_vs_others:
+  position: 7
+  heading: "Compare our Data Science bootcamp to the competition"
+  total_rows: 5
 
 rating_reviews:
   background: "#FBFBFB"
-  position: 7
+  position: 9
   heading: "Named Best Data Science Bootcamp for Students on a Budget 2024 by Forbes, and Consistently Top-Ranked."
   rating_list:
     - alt: "Career Karma"
@@ -130,33 +135,20 @@ rating_reviews:
       rating: 5
       url: ""
 
-geeks_vs_others:
-  position: 5
-  heading: "Compare our Data Science bootcamp to the competition"
-  total_rows: 5
-
 why_4geeks:
   position: 11
   heading: "Student Stories: How 4Geeks Helped Launch Their Tech Careers"
   sub_heading: ""
 
 who_is_hiring:
-  position: 17
+  position: 19
   limit: 4
   heading: "Who is hiring our Data Science graduates?"
   sub_heading: "Top companies in tech and beyond are hiring 4Geeks Data Science graduates—because they're job-ready, AI-fluent, and trained in the skills that matter."
 
-# Add additional components here as needed:
-# - program_details: for course curriculum details
-# - why_4geeks: for student success stories
-# - who_is_hiring: for companies hiring graduates
-# - badges: for awards and recognitions
-# - alumni_projects: for showcasing student projects
-# - components: for custom layout sections
-
 components:
   - name: how-it-works
-    position: 1
+    position: 5
     background: "#0084FF"
     layout: iconogram
     swipable: true
@@ -183,7 +175,7 @@ components:
         content: "88% increase compared to previous job."
 
   - name: why-choose-4geeks
-    position: 3
+    position: 1
     layout: two_column_right
     proportions: [6, 6]
     background: "#FFFFFF"
@@ -192,13 +184,11 @@ components:
       style: '{ "backgroundSize": "contain", "background-position": "center", "margin": "10px" }'
       src: "/images/landing/blonde-girl-laptop.png"
     heading:
-      text: |-
-        What Sets 4Geeks Apart: 
-        AI-Forward Skills, Unlimited Mentorship and Career Support
+      text: "Why 4Geeks:"
       font_size: ["38px", "34px", "34px", "34px", "34px"]
-      style: '{ "font-weight": "600", "text-align": "center", "color": "#000", "padding": "10px" }'
+      style: '{ "font-weight": "600", "text-align": "left", "color": "#000", "padding": "10px" }'
     sub_heading:
-      text: "Everything You Need to Launch and Grow a Career in Tech"
+      text: "You don't need a tech background. We'll give you everything you need to start and grow your career in tech, even with no experience:"
       font_size: ["26px", "26px", "24px", "24px", "22px"]
       style: '{ "font-weight": "600", "text-align": "justify", "color": "#000", "padding": "10px"}'
     bullets:
@@ -224,7 +214,7 @@ components:
       path: "#leadform_header"
 
   - name: two_columns_rigo
-    position: 9
+    position: 13
     layout: two_column_right
     proportions: [7, 5]
     justify: "center" #start,end,center
@@ -279,13 +269,13 @@ components:
              <br />
 
   - name: job_guarantee_small
-    position: 13
+    position: 15
     layout: job_guarantee_small
     heading:
       text: "Enroll with a Job Guarantee"
 
   - name: financing_options
-    position: 15
+    position: 17
     layout: two_column_left
     proportions: [6, 6]
     justify: "center"
@@ -296,7 +286,7 @@ components:
     section_heading:
      text: "Finance your future"
     heading:
-     text: "Invest in your Data Science Career with Flexible Payment Plans and a Job Guarantee"
+     text: "Your future in data science should be accessible, no matter your background or financial situation."
      style: '{ "fontWeight": 200, "marginBottom": "24px", "marginTop": "0px", "fontSize": "22px" }'
     content:
      text: |
@@ -307,7 +297,7 @@ components:
        <ul>
          <li>✓ Among the most affordable tuitions for a top data science bootcamp</li>
          <li>✓ Payment plans starting under $299/month</li>
-         <li>✓ Job Guarantee available. <a href="https://storage.googleapis.com/media-breathecode/0bf8e5c086144c894b750844d12a0bd327e823ba85f89a4def3c298d5cd6e4f0" target="_blank" rel="noopener noreferrer">Conditions apply</a>.</li>
+         <li>✓ Job Guarantee available (with qualifying terms)</li>
        </ul>
        <br/>
        <p>And if you need one more reason to feel confident: In 2024, <strong style="text-decoration: none; color: #000000; font-weight: 700;">Forbes</strong> named us the <a href="https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition" style="text-decoration: none; color: #000000; font-weight: 700;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">best bootcamp for students on a budget<span style="font-size: 0.8em;">↗</span></a>—recognizing our commitment to keeping tech education accessible.</p>
@@ -317,3 +307,4 @@ components:
      color: "white"
      background: "blue"
      path: "#leadform_bottom"
+

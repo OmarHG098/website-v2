@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-hamburg-germany"
   title: "Coding Bootcamp in Hamburg, Germany"
   position: 101
-  description: "Join 4Geeks Academy's Hamburg Coding Bootcamp with a Job Guarantee. Master coding skills and secure your first tech job in Germany."
+  description: "Join 4Geeks Academy's Hamburg Coding Bootcamp. Master coding skills and secure your first tech job in Germany."
   image: "/images/og-preview/hamburg-germany.us.png"
   keywords: "null"
   redirects:
@@ -21,7 +21,7 @@ meta_info:
   cohort_exclude_regex: []
   home_video: ""
 
-seo_title: "Coding Bootcamp in Hamburg, Germany with Job Guarantee"
+seo_title: "Coding Bootcamp in Hamburg, Germany"
 header:
   tagline: "Learn To Code in Hamburg, Germany"
   sub_header: "All programs are taught "
