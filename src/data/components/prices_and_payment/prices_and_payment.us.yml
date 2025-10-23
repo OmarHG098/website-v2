@@ -1,5 +1,6 @@
 # Location-based job guarantee configuration
 job_guarantee_locations: ["atlanta-usa", "austin-usa", "chicago-usa", "dallas-usa", "houston-usa", "losangeles-usa", "newyork-usa", "toronto-canada", "online", "online-spanish-usa", "buenosaires-argentina", "bogota-colombia", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador"]
+job_guarantee_courses: ["full-stack", "cybersecurity", "datascience-ml", "machine-learning"]
 
 pricing_error: Prices are currently not available for
 pricing_error_contact: For more information please contact us at info@4geeksacademy.com
@@ -12,38 +13,57 @@ top_label: Location
 top_label_2: Program
 plans_title: Payment plans
 plan_details: "Pick your flexible payment plan."
-financing_message: "We work with trusted partners to offer flexible and affordable financing—so you can focus on your future, not your fees."
+financing_message: "We work with trusted partners to offer flexible and affordable financing, so you can focus on your future, not your fees."
 select: Select the location and payment option that suits you best.
 select_2: Select your program and location
 job_guarantee:   
   - slug: usa_academies
     academies: ['atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada', 'austin-usa', 'dallas-usa']
+    courses: ['full-stack', 'cybersecurity', 'datascience-ml', 'machine-learning']
     title: "Enroll with Job Guarantee"   
     description: "Get hired within 9 months of graduation or your money back."   
     monthly_label: "$349 a month or less"
   - slug: latam_academies
     academies: ['buenosaires-argentina', 'bogota-colombia', 'caracas-venezuela', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    courses: ['full-stack', 'cybersecurity', 'datascience-ml', 'machine-learning']
     title: "Enroll with Job Guarantee"   
     description: "Get hired within 9 months of graduation or your money back."   
     monthly_label: "From $349 USD per month"
   - slug: europe_academies
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain', 'berlin-germany', 'hamburg-germany', 'munich-germany', 'dublin-ireland', 'milan-italy', 'rome-italy', 'lisbon-portugal']
+    courses: ['full-stack', 'cybersecurity', 'datascience-ml', 'machine-learning']
+    title: "Enroll with Job Guarantee"   
+    description: "Get hired within 9 months of graduation or your money back."   
     monthly_label: "From €200 per month"
+  - slug: all_academies_applied_ai
+    academies: ['all']
+    courses: ['applied-ai']
+    title: "Enroll with Job Guarantee"   
+    description: "Get hired within 9 months of graduation or your money back."   
+    monthly_label: "$550 a week, for 6 weeks"
 
 
 no_job_guarantee:
   - slug: usa_no_guarantee
     academies: ['atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada', 'austin-usa', 'dallas-usa']
+    courses: ['full-stack', 'cybersecurity', 'datascience-ml', 'machine-learning']
     monthly_label: "$299 a month or less"
   - slug: latam_no_guarantee  
     academies: ['buenosaires-argentina', 'bogota-colombia', 'caracas-venezuela', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
-    monthly_label: "From $299 USD per month"
+    courses: ['full-stack', 'cybersecurity', 'datascience-ml', 'machine-learning']
+    monthly_label: "$299 USD per month or less"
   - slug: europe_no_guarantee
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain', 'berlin-germany', 'hamburg-germany', 'munich-germany', 'dublin-ireland', 'milan-italy', 'rome-italy', 'lisbon-portugal']
+    courses: ['full-stack', 'cybersecurity', 'datascience-ml', 'machine-learning']
     monthly_label: "From €200 per month"
   - slug: chile_no_guarantee
     academies: ['santiago-chile']
+    courses: ['full-stack', 'cybersecurity', 'datascience-ml', 'machine-learning']
     monthly_label: "From $168.000 CLP per month"
+  - slug: all_academies_applied_ai_no_guarantee
+    academies: ['all']
+    courses: ['applied-ai']
+    monthly_label: "$550 a week, for 6 weeks"
 
 not_available: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>No payment information has been found for this location and program.</p> <p>Please apply for more information or <a class="faq-link" href="/us/contact" rel="noopener noreferrer nofollow">send us a message.</a></p>'
 not_available_job_guarantee: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>We have no plans available with the modality Job Guarantee on this program at this location.</p> <p>Please apply for more information or <a class="faq-link" href="/us/contact" rel="noopener noreferrer nofollow">send us a message.</a></p>'

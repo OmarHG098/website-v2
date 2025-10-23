@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-barcelona-spain"
   title: "Coding Bootcamp Barcelona, Spain of 4GeeksAcademy"
   position: 20
-  description: "Join 4Geeks Academy’s Barcelona Coding Bootcamp with a Job Guarantee. Learn coding, gain hands-on experience, and secure a tech job in Spain."
+  description: "Join 4Geeks Academy’s Barcelona Coding Bootcamp. Learn coding, gain hands-on experience, and secure a tech job in Spain."
   image: "/images/og-preview/barcelona-spain.us.png"
   keywords: "Coding Bootcamp, Barcelona"
   redirects: []
@@ -16,7 +16,7 @@ meta_info:
   cohort_exclude_regex: []
   home_video: ""
 
-seo_title: "Coding Bootcamp Barcelona, Spain with Job Guarantee"
+seo_title: "Coding Bootcamp Barcelona, Spain"
 header:
   tagline: "4Geeks Academy in Barcelona"
   sub_header: "All programs are taught "

@@ -81,9 +81,8 @@ const JobGuaranteeSmall = ({ content, customTitle }) => {
           fontSize="14px"
           color={Colors.black}
           style={{ textAlign: "center", fontStyle: "italic" }}
-        >
-          {content.text}
-        </Paragraph>
+          dangerouslySetInnerHTML={{ __html: content.text }}
+        />
       )}
     </Div>
   );
