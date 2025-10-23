@@ -356,8 +356,6 @@ const FinancialOptionsDesktop = ({
         icons: plan.icons,
         recomended: plan.recomended,
         recommended_color: plan.recommended_color,
-
-        offer: plan.offer,
       })),
     [availablePlans]
   );
@@ -406,7 +404,7 @@ const FinancialOptionsDesktop = ({
               currentLocation,
               course?.value || defaultCourse,
               info
-            )?.monthly_label ? (
+            )?.price_label ? (
               <H2
                 fontSize="36px"
                 lineHeight="42px"
@@ -420,14 +418,14 @@ const FinancialOptionsDesktop = ({
                     currentLocation,
                     course?.value || defaultCourse,
                     info
-                  ).monthly_label
+                  ).price_label
                 }
               </H2>
             ) : getNoJobGuaranteeConfig(
                 currentLocation,
                 course?.value || defaultCourse,
                 info
-              )?.monthly_label ? (
+              )?.price_label ? (
               <H2
                 fontSize="36px"
                 lineHeight="42px"
@@ -441,7 +439,7 @@ const FinancialOptionsDesktop = ({
                     currentLocation,
                     course?.value || defaultCourse,
                     info
-                  ).monthly_label
+                  ).price_label
                 }
               </H2>
             ) : monthlyPriceText ? (
@@ -469,13 +467,13 @@ const FinancialOptionsDesktop = ({
                 currentLocation,
                 course?.value || defaultCourse,
                 info
-              )?.monthly_label
+              )?.price_label
                 ? ""
                 : getNoJobGuaranteeConfig(
                     currentLocation,
                     course?.value || defaultCourse,
                     info
-                  )?.monthly_label
+                  )?.price_label
                 ? ""
                 : monthlyPriceText
                 ? ""
@@ -766,8 +764,6 @@ const FinancialOptionsCard = ({
         icons: plan.icons,
         recomended: plan.recomended,
         recommended_color: plan.recommended_color,
-
-        offer: plan.offer,
       })),
     [availablePlans]
   );
@@ -816,7 +812,7 @@ const FinancialOptionsCard = ({
               currentLocation,
               course?.value || defaultCourse,
               info
-            )?.monthly_label ? (
+            )?.price_label ? (
               <H2
                 fontSize="32px"
                 fontWeight="700"
@@ -828,14 +824,14 @@ const FinancialOptionsCard = ({
                     currentLocation,
                     course?.value || defaultCourse,
                     info
-                  ).monthly_label
+                  ).price_label
                 }
               </H2>
             ) : getNoJobGuaranteeConfig(
                 currentLocation,
                 course?.value || defaultCourse,
                 info
-              )?.monthly_label ? (
+              )?.price_label ? (
               <H2
                 fontSize="32px"
                 fontWeight="700"
@@ -847,7 +843,7 @@ const FinancialOptionsCard = ({
                     currentLocation,
                     course?.value || defaultCourse,
                     info
-                  ).monthly_label
+                  ).price_label
                 }
               </H2>
             ) : (
@@ -1073,13 +1069,13 @@ const PricesAndPayment = (props) => {
               courses
               title
               description
-              monthly_label
+              price_label
             }
             no_job_guarantee {
               slug
               academies
               courses
-              monthly_label
+              price_label
             }
             not_available
             not_available_job_guarantee
@@ -1113,7 +1109,6 @@ const PricesAndPayment = (props) => {
               price
 
               warning_message
-              offer
 
               icons
             }
@@ -1128,7 +1123,6 @@ const PricesAndPayment = (props) => {
               price
 
               warning_message
-              offer
 
               icons
             }

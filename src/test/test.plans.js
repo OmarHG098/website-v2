@@ -31,15 +31,7 @@ const mustHaveAcademies = (val) => {
 };
 const validateEmptyPlan = (val) => {
   if (val.slug == undefined) throw Error("Pricing plan missing slug");
-
-  if (!Array.isArray(val.bullets))
-    throw Error(
-      `bullets property should exist and be array and its ${typeof val.bullets}`
-    );
-  else if (val.bullets.length == 0)
-    throw Error(
-      "Pricing plan bullets are missing, please add at least one bullet"
-    );
+  // bullets property removed - no longer required
 };
 
 let duplicateDescriptions = {};

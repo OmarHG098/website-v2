@@ -5,9 +5,6 @@ full_time:
     scholarship: "Scholarship"
     description: "Pay today"
     price: "$4999"
-    bullets: 
-      - "You're saving $4000 USD "
-      - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
   - slug: 'plan-2'
@@ -17,9 +14,6 @@ full_time:
     scholarship: "Financed"
     description: "24 months payment"
     price: "$310"
-    bullets: 
-      - "With $400 p/ week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/ascent_logo.png"
       - "/images/climb-logo.png"
@@ -32,8 +26,6 @@ full_time:
     scholarship: "Full Payment"
     description: "Pay today"
     price: "$8099"
-    bullets: 
-      - "You're saving $1000 USD"
 
 part_time:
   - slug: 'plan-1'
@@ -42,9 +34,6 @@ part_time:
     scholarship: "Scolarship"
     description: "Pay today"
     price: "$4999"
-    bullets: 
-      - "You're saving $4000 USD "
-      - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
   - slug: 'plan-2'
@@ -54,9 +43,6 @@ part_time:
     scholarship: "Financed"
     description: "24 months payment"
     price: "$310"
-    bullets: 
-      - "With $400 p/ week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/ascent_logo.png"
       - "/images/climb-logo.png"
@@ -69,5 +55,3 @@ part_time:
     scholarship: "Full Payment"
     description: "Pay today"
     price: "$8099"
-    bullets: 
-      - "You're saving $1000 USD"

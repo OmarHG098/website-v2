@@ -8,11 +8,6 @@ part_time:
     scholarship: "Pago completo"
     description: "Paga solo $2,999 cuando pagas en su totalidad."
     price: "$2,999"
-    original_price: "$10,999"
-    offer: "10% DE DESCUENTO"
-    bullets:
-      - "Paga por adelantado y ahorra un 10%"
-      - "La matrícula regular es de $10,999 y se puede financiar sin intereses hasta en 6 meses."
     icons:
       - "/images/edly.png"
       - "/images/ascent_logo.png"
@@ -26,10 +21,6 @@ part_time:
     scholarship: "Planes de Pago y Préstamos"
     description: "Financia tu matrícula con TFC Tuition y paga en 6 cómodas cuotas semanales."
     price: "$200 - $299/mes"
-    bullets: 
-      - "Elige entre planes de financiamiento a corto o largo plazo."
-      - "Préstamos asequibles a largo plazo basados en tu puntaje de crédito."
-      - "Los términos de préstamo mostrados están vigentes al 03/11/2025. Para ver ejemplos completos de reembolso, visita <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">nuestra página de 4Geeks y Ascent</a>."
     icons: 
       - "/images/ascent_logo.png"
       - "/images/tfc-logo.png"
@@ -43,11 +34,6 @@ part_time:
     scholarship: "Pago completo"
     description: "Paga solo €3,000 cuando pagas en su totalidad."
     price: "€3,000"
-    original_price: "€3,500"
-    offer: "€500 DE DESCUENTO"
-    bullets:
-      - "Paga por adelantado y ahorra €500"
-      - "La matrícula regular es de €3,500 y se puede financiar en cuotas."
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -60,9 +46,6 @@ part_time:
     scholarship: "Planes de Pago"
     description: "Financia tu matrícula y paga en cuotas flexibles."
     price: "Desde €150/mes"
-    bullets:
-      - "Elige entre planes de financiamiento a corto o largo plazo."
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
     icons: 
       - "/images/visa-mastercard.png"    
 
@@ -73,11 +56,6 @@ part_time:
     scholarship: "Pago completo"
     description: "Paga solo €3,000 cuando pagas en su totalidad."
     price: "€3,000"
-    original_price: "€3,500"
-    offer: "€500 DE DESCUENTO"
-    bullets:
-      - "Paga por adelantado y ahorra €500"
-      - "La matrícula regular es de €3,500 y se puede financiar en cuotas."
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -90,9 +68,6 @@ part_time:
     scholarship: "Planes de Pago"
     description: "Financia tu matrícula y paga en cuotas flexibles."
     price: "Desde €150/mes"
-    bullets:
-      - "Elige entre planes de financiamiento a corto o largo plazo."
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
     icons: 
       - "/images/visa-mastercard.png"    
 
@@ -104,11 +79,6 @@ part_time:
     scholarship: "Pago completo"
     description: "Paga solo 700.000 CLP cuando pagas en su totalidad."
     price: "700.000 CLP"
-    original_price: "1.000.000 CLP"
-    offer: "30% DE DESCUENTO"
-    bullets:
-      - "Paga por adelantado y ahorra 300.000 CLP"
-      - "La matrícula regular es de 1.000.000 CLP y se puede financiar en cuotas."
     icons: 
       - "/images/visa-mastercard.png"   
 
@@ -119,10 +89,6 @@ part_time:
     scholarship: "Planes de Pago"
     description: "Financia tu matrícula y paga en 6-12 cuotas mensuales."
     price: "Desde 58.000 CLP/mes"
-    bullets:
-      - "Financiamiento a medida de 6 a 12 meses"  
-      - "Se debe pagar un pago inicial correspondiente al 20% del valor del programa" 
-      - "Si no encuentras aquí algo que te funcione, contáctanos para que podamos intentar encontrar otras formas de ayudarte."  
     icons: 
       - "/images/visa-mastercard.png"
       - "/images/flevo-new.png"  
@@ -135,11 +101,6 @@ part_time:
     scholarship: "Pago completo"
     description: "Paga solo USD $2,999 cuando pagas en su totalidad."
     price: "USD $2,999"
-    original_price: "USD $2,999"
-    offer: "0% DE DESCUENTO"
-    bullets:
-      - "Paga por adelantado y ahorra $0"
-      - "La matrícula regular es de USD $2,999 y se puede financiar en cuotas."
     icons: 
       - "/images/visa-mastercard.png"
 
@@ -150,8 +111,5 @@ part_time:
     scholarship: "Planes de Pago"
     description: "Financia tu matrícula y paga en cuotas flexibles."
     price: "Desde USD $100/mes"
-    bullets:
-      - "Elige entre planes de financiamiento a corto o largo plazo."
-      - "Si no encuentras aquí lo que esperas, contáctanos y trataremos de encontrar nuevas formas de ayudarte."
     icons: 
       - "/images/visa-mastercard.png"  
