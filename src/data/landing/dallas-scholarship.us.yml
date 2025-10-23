@@ -51,7 +51,7 @@ header_data:
     color: "white"
     button:
       background: "black"
-  badge: "../../../static/images/badges/course-report-best-coding-bootcamps-badge-2025.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2025.png"
   image_filter: brightness(0.3)
 
 features:
@@ -267,7 +267,7 @@ components:
     bullets:
       items:
         - heading: "Duration"
-          text: "20 Weeks of live classes + 2-4 weeks of self-paced pre-work"
+          text: "20 Weeks of live classes + 2-4 weeks of <a class='link' href='/us/prework'>self-paced pre-work</a>"
           icon: "check"
         - heading: "Classes"
           text: "3 classes a week"

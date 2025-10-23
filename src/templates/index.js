@@ -24,6 +24,7 @@ import ChooseYourProgram from "../components/ChooseYourProgram";
 import Testimonials from "../components/Testimonials";
 import TwoColumn from "../components/TwoColumn/index.js";
 import Badges from "../components/Badges";
+import DoubleActionCTA from "../components/DoubleActionCTA";
 
 const Home = (props) => {
   const { data, pageContext, yml } = props;
@@ -32,6 +33,7 @@ const Home = (props) => {
   const landingHiring = yml.partners;
   const { session } = useContext(SessionContext);
   const [city, setCity] = useState("");
+  const doubleActionCTA = data.allDoubleActionCtaYaml.edges[0].node.cta;
 
   const applyButton = session?.location?.button?.apply_button_text;
 
@@ -179,11 +181,15 @@ const Home = (props) => {
                   </Div>
                 ))}
               </Div>
-              <Div width="100%" justifyContent="start">
+              <Div
+                width="100%"
+                justifyContent_tablet="start"
+                justifyContent="center"
+              >
                 <Button
                   variant="full"
                   justifyContent="center"
-                  width="140px"
+                  width="100%"
                   width_tablet="fit-content"
                   color={Colors.blue}
                   margin="0 10px 0 0"
@@ -488,6 +494,7 @@ const Home = (props) => {
         allLocationYaml={data.allLocationYaml}
         hideHeading
       />
+      <DoubleActionCTA location={session?.location} ctaData={doubleActionCTA} />
     </>
   );
 };
@@ -643,6 +650,37 @@ export const query = graphql`
             title
             sub_title
           }
+          double_action_cta {
+            title
+            description
+            locations
+            primary {
+              title
+              description
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            secondary {
+              title
+              description
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            newsletter_form {
+              placeholder_email
+              error_email
+              button_submit
+              button_loading
+              status_idle
+              status_error
+              status_correct_errors
+              success_message
+            }
+          }
         }
       }
     }
@@ -751,6 +789,42 @@ export const query = graphql`
             description_mobile
             icon
             text_link
+          }
+        }
+      }
+    }
+    allDoubleActionCtaYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          cta {
+            title
+            description
+            primary {
+              title
+              description
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            secondary {
+              title
+              description
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            newsletter_form {
+              placeholder_email
+              error_email
+              button_submit
+              button_loading
+              status_idle
+              status_error
+              status_correct_errors
+              success_message
+            }
           }
         }
       }
