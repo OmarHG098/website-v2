@@ -29,13 +29,13 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Solicita tu plaza"
-  motivation: "Una vez completado el formulario alguien de nuestro equipo se podrá en contacto contigo, está atento a tu bandeja de correo."
+  motivation: "Una vez completado el formulario alguien de nuestro equipo se podrá en contacto contigo, estate atento a tu bandeja de correo."
   button_label: Enviar
   redirect: null #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: '¡Aprende <br>a Programar <br>en <span style="">18 Semanas!'
+  tagline: '¡Aprende <br>a Programar <br>en <span style="">20 Semanas!'
   sub_heading: ""
   tagline_color: "#1c1c1c"
   form_styles:
@@ -43,7 +43,7 @@ header_data:
     color: "white"
     button:
       background: "black"
-  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  badge: "../../../static/images/badges/Course-Report-Badge-2025.png"
   # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.2)
 
@@ -55,13 +55,13 @@ features:
   bullets:
     - No necesitas experiencia previa para comenzar.
     - El 86% de nuestros estudiantes encuentran trabajo en menos de 180 días.
-    - Un Fullstack Promedio Gana unos 36000 € al año como desarrollador en España.
+    - Un Full-Stack Developer promedio gana unos 36,000 € al año como desarrollador en España.
   text: 
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Solicita tu plaza con Planes de pago\n de hasta 24 meses."
+    text: "Solicita tu plaza con Planes de pago\n de hasta 24 meses"
     text_mobile: "Solicita tu plaza con Planes de pago\n de hasta 24 meses"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
@@ -70,7 +70,7 @@ follow_bar:
     path: "#leadform_header"
   phone:
     text: ""
-    number: ""
+    number: " "
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"
@@ -178,7 +178,7 @@ components:
     background: "#f1f1f1"
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/Course-Report-Badge-2024.webp"
+      src: "/images/badges/Course-Report-Badge-2025.png"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:
@@ -203,7 +203,7 @@ components:
       background: "black"
       hover: "lightBlue"
     content:
-      text: "'Mi experiencia con 4Geeks ha sido magnífica, me ha encantado. Tengo unos profesores maravillosos y tengo unos compañeros geniales. He aprendido bastante sobre HTML, CSS, JavaScript, React y Python. Mis profesores siempre estuvieron atentos a lo que necesitaba. También contamos con una plataforma donde podemos hablar todos los estudiantes de 4Geeks y nos ayudamos entre todos.... ¡Ha sido genial tomar esta decisión!' Beatriz Hernández"
+      text: "'Mi experiencia con 4Geeks ha sido magnífica, me ha encantado. Tengo unos profesores maravillosos y tengo unos compañeros geniales. He aprendido bastante sobre HTML, CSS, JavaScript, React y Python. Mis profesores siempre estuvieron atentos a lo que necesitaba. También contamos con una plataforma donde podemos hablar todos los estudiantes de 4Geeks y nos ayudamos entre todos.... ¡Ha sido genial tomar esta decisión!' Beatriz Hernández."
       font_size: ["16px"]
   
   - name: divider_one
