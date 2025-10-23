@@ -21,25 +21,25 @@ job_guarantee:
     academies: ['atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada', 'austin-usa', 'dallas-usa']
     courses: ['full-stack', 'cybersecurity', 'datascience-ml', 'machine-learning']
     title: "Enroll with Job Guarantee"   
-    description: "Get hired within 9 months of graduation or your money back."   
+    description: 'Get hired within 9 months of graduation or your money back. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf" target="_blank" rel="noopener noreferrer">Conditions apply</a>'   
     monthly_label: "$349 a month or less"
   - slug: latam_academies
     academies: ['buenosaires-argentina', 'bogota-colombia', 'caracas-venezuela', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
     courses: ['full-stack', 'cybersecurity', 'datascience-ml', 'machine-learning']
     title: "Enroll with Job Guarantee"   
-    description: "Get hired within 9 months of graduation or your money back."   
+    description: 'Get hired within 9 months of graduation or your money back. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf" target="_blank" rel="noopener noreferrer">Conditions apply</a>'   
     monthly_label: "From $349 USD per month"
   - slug: europe_academies
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain', 'berlin-germany', 'hamburg-germany', 'munich-germany', 'dublin-ireland', 'milan-italy', 'rome-italy', 'lisbon-portugal']
     courses: ['full-stack', 'cybersecurity', 'datascience-ml', 'machine-learning']
     title: "Enroll with Job Guarantee"   
-    description: "Get hired within 9 months of graduation or your money back."   
+    description: 'Get hired within 9 months of graduation or your money back. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf" target="_blank" rel="noopener noreferrer">Conditions apply</a>'   
     monthly_label: "From €200 per month"
   - slug: all_academies_applied_ai
     academies: ['all']
     courses: ['applied-ai']
     title: "Enroll with Job Guarantee"   
-    description: "Get hired within 9 months of graduation or your money back."   
+    description: 'Get hired within 9 months of graduation or your money back. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf" target="_blank" rel="noopener noreferrer">Conditions apply</a>'  
     monthly_label: "$550 a week, for 6 weeks"
 
 

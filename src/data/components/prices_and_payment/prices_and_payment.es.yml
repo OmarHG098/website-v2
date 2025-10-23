@@ -22,25 +22,25 @@ job_guarantee:
     academies: ['atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada', 'austin-usa', 'dallas-usa']
     courses: ['full-stack', 'cybersecurity', 'datascience-ml', 'machine-learning']
     title: "Inscríbete con Garantía de Empleo"   
-    description: "Obtén un empleo dentro de 9 meses de graduarte o te devolvemos tu dinero."   
+    description: 'Obtén un empleo dentro de 9 meses de graduarte o te devolvemos tu dinero. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guaranteee-es.pdf" target="_blank" rel="noopener noreferrer">Condiciones aplican</a>'   
     monthly_label: "$349 al mes o menos"
   - slug: latam_academies
     academies: ['buenosaires-argentina', 'bogota-colombia', 'caracas-venezuela', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
     courses: ['full-stack', 'cybersecurity', 'datascience-ml', 'machine-learning']
     title: "Inscríbete con Garantía de Empleo"   
-    description: "Obtén un empleo dentro de 9 meses de graduarte o te devolvemos tu dinero."   
+    description: 'Obtén un empleo dentro de 9 meses de graduarte o te devolvemos tu dinero. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guaranteee-es.pdf" target="_blank" rel="noopener noreferrer">Condiciones aplican</a>'   
     monthly_label: "Desde $349 USD al mes"
   - slug: europe_academies
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain', 'berlin-germany', 'hamburg-germany', 'munich-germany', 'dublin-ireland', 'milan-italy', 'rome-italy', 'lisbon-portugal']
     courses: ['full-stack', 'cybersecurity', 'datascience-ml', 'machine-learning']
     title: "Inscríbete con Garantía de Empleo"   
-    description: "Obtén un empleo dentro de 9 meses de graduarte o te devolvemos tu dinero."   
+    description: 'Obtén un empleo dentro de 9 meses de graduarte o te devolvemos tu dinero. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guaranteee-es.pdf" target="_blank" rel="noopener noreferrer">Condiciones aplican</a>'   
     monthly_label: "Desde €200 al mes"
   - slug: all_academies_applied_ai
     academies: ['all']
     courses: ['applied-ai']
     title: "Inscríbete con Garantía de Empleo"   
-    description: "Obtén un empleo dentro de 9 meses de graduarte o te devolvemos tu dinero."   
+    description: 'Obtén un empleo dentro de 9 meses de graduarte o te devolvemos tu dinero. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guaranteee-es.pdf" target="_blank" rel="noopener noreferrer">Condiciones aplican</a>'   
     monthly_label: "$550 a la semana, durante 6 semanas"
 
 no_job_guarantee:

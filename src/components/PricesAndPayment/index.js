@@ -286,11 +286,12 @@ const PaymentOptionCard = ({
             color="#666666"
             margin="0 0 16px 0"
             textAlign="left"
-          >
-            {jobGuarantee && option.job_guarantee_description
-              ? option.job_guarantee_description
-              : option.description}
-          </Paragraph>
+            dangerouslySetInnerHTML={{
+              __html: jobGuarantee && option.job_guarantee_description
+                ? option.job_guarantee_description
+                : option.description
+            }}
+          />
           {option.icons && option.icons.length > 0 && (
             <Div
               className="icons"
@@ -556,15 +557,14 @@ const FinancialOptionsDesktop = ({
                   textAlign="left"
                   color={Colors.black}
                   margin="8px 0 0 0"
-                >
-                  {
-                    getJobGuaranteeConfig(
+                  dangerouslySetInnerHTML={{
+                    __html: getJobGuaranteeConfig(
                       currentLocation,
                       course?.value || defaultCourse,
                       info
                     )?.description
-                  }
-                </Paragraph>
+                  }}
+                />
               </Div>
             )}
           {/* Bullets from selected plan removed on desktop per revamp */}
@@ -650,11 +650,12 @@ const FinancialOptionsDesktop = ({
                     color={Colors.darkGray}
                     fontSize="14px"
                     textAlign="left"
-                  >
-                    {jobGuarantee && option.job_guarantee_description
-                      ? option.job_guarantee_description
-                      : option.description}
-                  </Paragraph>
+                    dangerouslySetInnerHTML={{
+                      __html: jobGuarantee && option.job_guarantee_description
+                        ? option.job_guarantee_description
+                        : option.description
+                    }}
+                  />
                 </Div>
               </Div>
             );
@@ -921,15 +922,14 @@ const FinancialOptionsCard = ({
                   textAlign="center"
                   color={Colors.black}
                   margin="8px 0 0 0"
-                >
-                  {
-                    getJobGuaranteeConfig(
+                  dangerouslySetInnerHTML={{
+                    __html: getJobGuaranteeConfig(
                       currentLocation,
                       course?.value || defaultCourse,
                       info
                     )?.description
-                  }
-                </Paragraph>
+                  }}
+                />
               </Div>
             )}
 
