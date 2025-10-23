@@ -59,7 +59,7 @@ header_data:
     button:
       background: "black"
   # background_image: "../../../static/images/bg/pricing-bg.jpg"
-  badge: "../../../static/images/badges/course-report-best-coding-bootcamps-badge-2025.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2025.png"
   image_filter: brightness(0.1)
 
 features:
