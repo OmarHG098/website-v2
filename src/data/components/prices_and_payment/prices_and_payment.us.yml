@@ -28,7 +28,7 @@ job_guarantee:
     courses: ['full-stack', 'cybersecurity', 'datascience-ml', 'machine-learning']
     title: "Enroll with Job Guarantee"   
     description: 'Get hired within 9 months of graduation or your money back. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf" target="_blank" rel="noopener noreferrer">Conditions apply</a>'   
-    monthly_label: "From $349 USD per month"
+    monthly_label: "$349 USD a month or less"
   - slug: europe_academies
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain', 'berlin-germany', 'hamburg-germany', 'munich-germany', 'dublin-ireland', 'milan-italy', 'rome-italy', 'lisbon-portugal']
     courses: ['full-stack', 'cybersecurity', 'datascience-ml', 'machine-learning']

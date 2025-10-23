@@ -287,9 +287,10 @@ const PaymentOptionCard = ({
             margin="0 0 16px 0"
             textAlign="left"
             dangerouslySetInnerHTML={{
-              __html: jobGuarantee && option.job_guarantee_description
-                ? option.job_guarantee_description
-                : option.description
+              __html:
+                jobGuarantee && option.job_guarantee_description
+                  ? option.job_guarantee_description
+                  : option.description,
             }}
           />
           {option.icons && option.icons.length > 0 && (
@@ -562,7 +563,7 @@ const FinancialOptionsDesktop = ({
                       currentLocation,
                       course?.value || defaultCourse,
                       info
-                    )?.description
+                    )?.description,
                   }}
                 />
               </Div>
@@ -651,9 +652,10 @@ const FinancialOptionsDesktop = ({
                     fontSize="14px"
                     textAlign="left"
                     dangerouslySetInnerHTML={{
-                      __html: jobGuarantee && option.job_guarantee_description
-                        ? option.job_guarantee_description
-                        : option.description
+                      __html:
+                        jobGuarantee && option.job_guarantee_description
+                          ? option.job_guarantee_description
+                          : option.description,
                     }}
                   />
                 </Div>
@@ -927,7 +929,7 @@ const FinancialOptionsCard = ({
                       currentLocation,
                       course?.value || defaultCourse,
                       info
-                    )?.description
+                    )?.description,
                   }}
                 />
               </Div>
