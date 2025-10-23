@@ -748,7 +748,6 @@ export const Header = ({
   title,
   htmlTitle,
   paragraph,
-  paragraph_html,
   paragraphMargin,
   paragraphMargin_Tablet,
   height,
@@ -869,7 +868,7 @@ export const Header = ({
               ? { dangerouslySetInnerHTML: { __html: htmlTitle } }
               : { children: multilineTitle })}
           />
-          {(paragraph || paragraph_html) && (
+          {paragraph && (
             <SubTitle
               width="auto"
               letterSpacing="0.05em"
@@ -884,9 +883,7 @@ export const Header = ({
               fontWeight={fontWeight_paragraph}
               maxWidth="64rem"
               color={colors.text}
-              {...(paragraph_html
-                ? { dangerouslySetInnerHTML: { __html: paragraph_html } }
-                : { children: paragraph })}
+              dangerouslySetInnerHTML={{ __html: paragraph }}
             />
           )}
           {children}
