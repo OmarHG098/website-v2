@@ -172,7 +172,6 @@ const ThankYou = (props) => {
         background={Colors.lightYellow}
         padding="68px 0"
         height="auto"
-        margin={isCustomBarActive(session) ? "140px 0 0 0" : "80px 0 0 0"}
       >
         <H1
           type="h1"

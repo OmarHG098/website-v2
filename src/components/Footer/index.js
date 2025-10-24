@@ -102,6 +102,7 @@ const Footer = ({ yml }) => {
           justifyContent="center"
           alignItems="center"
           height="43px"
+          minHeight="43px"
           width="100%"
           width_tablet="143px"
           height_tablet="100%"
@@ -117,6 +118,7 @@ const Footer = ({ yml }) => {
             backgroundColor="transparent"
             position="center"
             bsize="contain"
+            loading="eager"
           />
         </Div>
 
@@ -151,7 +153,7 @@ const Footer = ({ yml }) => {
           ) : (
             <>
               <H4
-                margin="0 0 10px 0"
+                margin="20px 0 10px 0"
                 textAlign="left"
                 display="block"
                 display_tablet="block"
