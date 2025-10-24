@@ -3,7 +3,7 @@ meta_info:
 
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
-  title: "Curso de programación en remoto y presencial, aprende a programar e impulsa tu carrera profesional"
+  title: "Curso de programación en remoto, aprende a programar e impulsa tu carrera profesional"
   description: "La programación es el nuevo lenguaje universal, únete a nuestro programa y aprende lo que las empresas necesitan."
   image: "/images/bg/main-bg.jpg"
   keywords: "Curso de programación, Bootcamp, Clases de programación, Aprende a programar, 4Geeks Academy"
@@ -41,7 +41,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: Curso de programación en remoto y presencial, aprende a programar e impulsa tu carrera profesional
+  tagline: Curso de programación en remoto, aprende a programar e impulsa tu carrera profesional
   sub_heading: "El 86% de nuestros alumnos ya han empezado su carrera en el sector tech con un salario medio de 22.000€ al año. Desarrolla proyectos reales y recibe mentorías de programadores senior."
   tagline_color: "#1c1c1c"
   form_styles:
@@ -49,7 +49,7 @@ header_data:
     color: "white"
     button:
       background: "black"
-  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  badge: "../../../static/images/badges/Course-Report-Badge-2025.png"
   image_filter: brightness(0.3)
 
 features:
@@ -92,7 +92,7 @@ follow_bar:
     path: "#leadform_header"
   phone:
     text: ""
-    number: ""
+    number: " "
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
@@ -186,7 +186,7 @@ components:
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "En tan solo 18 semanas, podrías convertirte en un Full-Stack Developer con nuestro exclusivo programa. Un impresionante 86% de nuestros alumnos ya están impulsando sus carreras en el sector tech con un salario promedio de 22.000€ al año. Aquí, no solo aprenderás las tecnologías más demandadas por las empresas, sino que también trabajarás en proyectos reales y recibirás valiosas mentorías de programadores senior. ¿Interesado? ¡Únete a nuestras clases reducidas, ya sea presenciales o en remoto, y disfruta de un apoyo continuo de por vida. No necesitas experiencia previa para comenzar este emocionante viaje hacia el éxito en la programación"
+      text: "En tan sólo 20 semanas, podrías convertirte en un Full-Stack Developer con nuestro exclusivo programa. Un impresionante 86% de nuestros alumnos ya están impulsando sus carreras en el sector tech con un salario promedio de 22.000€ al año. Aquí, no solo aprenderás las tecnologías más demandadas por las empresas, sino que también trabajarás en proyectos reales y recibirás valiosas mentorías de programadores senior. ¿Interesado? ¡Únete a nuestras clases reducidas, ya sea presenciales o en remoto, y disfruta de un apoyo continuo de por vida. No necesitas experiencia previa para comenzar este emocionante viaje hacia el éxito en la programación"
       font_size: ["16px"]
     button:
       text: "¡Solicita tu Beca!"
@@ -201,13 +201,13 @@ components:
 
 
   - name: top_coding_bootcamp
-    position: 4
+    position: 5
     background: "#F1f1f1"
     layout: two_column_left
     proportions: [4, 8]
     image:
-      style: '{"min-height": "200px","max-height": "200px", "align-self": "center", "margin": "0"}'
-      src: "/images/badges/Course-Report-Badge-2024.webp"
+      style: '{"min-height": "200px","max-height": "200px", "align-self": "stretch", "margin": "0 auto", "background-position": "center center"}'
+      src: "/images/badges/Course-Report-Badge-2025.png"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:
@@ -221,7 +221,7 @@ components:
     layout: two_column_right
     proportions: [8, 4]
     image:
-      style: '{"min-height": "200px","max-height": "200px", "align-self": "center", "margin": "0", "background-position": "left"}'
+      style: '{"min-height": "200px","max-height": "200px", "align-self": "stretch", "margin": "0 auto", "background-position": "center center"}'
       src: "/images/badges/european_excellence_education_black.png"
       link:
     heading:
