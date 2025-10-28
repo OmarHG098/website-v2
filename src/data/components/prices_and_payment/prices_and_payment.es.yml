@@ -31,6 +31,9 @@ job_guarantee:
     monthly_label: "Desde $349 USD al mes"
   - slug: europe_academies
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain', 'berlin-germany', 'hamburg-germany', 'munich-germany', 'dublin-ireland', 'milan-italy', 'rome-italy', 'lisbon-portugal']
+    courses: ['full-stack', 'cybersecurity', 'datascience-ml', 'machine-learning']
+    title: "Inscríbete con Garantía de Empleo"   
+    description: "Obtén un empleo dentro de 9 meses de graduarte o te devolvemos tu dinero."   
     monthly_label: "Desde €200 al mes"
   - slug: all_academies_applied_ai
     academies: ['all']
