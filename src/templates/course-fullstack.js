@@ -326,7 +326,11 @@ const Program = ({ data, pageContext, yml }) => {
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
       <Testimonials
         id="testimonials"
-        categories={["full-stack", "content-and-syllabus", "mentors-and-teachers"]}
+        categories={[
+          "full-stack",
+          "content-and-syllabus",
+          "mentors-and-teachers",
+        ]}
         lang={data.allTestimonialsYaml.edges}
         background={Colors.white}
       />

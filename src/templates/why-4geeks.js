@@ -254,7 +254,11 @@ const Why4Geeks = (props) => {
       <Staff lang={pageContext.lang} />
       <Testimonials
         id="testimonials"
-        categories={["mentors-and-teachers", "content-and-syllabus", "career-support"]}
+        categories={[
+          "mentors-and-teachers",
+          "content-and-syllabus",
+          "career-support",
+        ]}
         lang={data.allTestimonialsYaml.edges}
         background={Colors.white}
       />

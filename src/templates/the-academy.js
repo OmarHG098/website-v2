@@ -246,7 +246,11 @@ const Why = (props) => {
       <Staff lang={pageContext.lang} />
       <Testimonials
         id="testimonials"
-        categories={["mentors-and-teachers", "online-platform", "content-and-syllabus"]}
+        categories={[
+          "mentors-and-teachers",
+          "online-platform",
+          "content-and-syllabus",
+        ]}
         lang={data.allTestimonialsYaml.edges}
         background={Colors.white}
       />
