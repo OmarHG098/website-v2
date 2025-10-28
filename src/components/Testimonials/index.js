@@ -99,20 +99,41 @@ const VariantCarousel = ({
                   />
                 </Div>
 
-                <GatsbyImage
-                  image={getImage(
-                    item.student_thumb.childImageSharp.gatsbyImageData
-                  )}
-                  alt={item.student_name}
-                  style={{
-                    height: "59px",
-                    minWidth: "59px",
-                    width: "59px",
-                    borderRadius: "100%",
-                    backgroundSize: "cover",
-                    margin: "auto",
-                  }}
-                />
+                {item.student_thumb?.childImageSharp?.gatsbyImageData ? (
+                  <GatsbyImage
+                    image={getImage(
+                      item.student_thumb.childImageSharp.gatsbyImageData
+                    )}
+                    alt={item.student_name}
+                    style={{
+                      height: "59px",
+                      minWidth: "59px",
+                      width: "59px",
+                      borderRadius: "100%",
+                      backgroundSize: "cover",
+                      margin: "auto",
+                    }}
+                  />
+                ) : (
+                  <Div
+                    style={{
+                      height: "59px",
+                      minWidth: "59px",
+                      width: "59px",
+                      borderRadius: "100%",
+                      backgroundColor: "#E0E0E0",
+                      margin: "auto",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: "24px",
+                      color: "#757575",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {item.student_name?.charAt(0)?.toUpperCase() || "?"}
+                  </Div>
+                )}
               </Div>
               <Div
                 display="flex"
@@ -288,19 +309,39 @@ const Testimonials = (props) => {
                   border="1px solid #EBEBEB"
                   alignItems="flex-start"
                 >
-                  <GatsbyImage
-                    // fluid={item.student_thumb.childImageSharp.fluid}
-                    image={getImage(
-                      item.student_thumb.childImageSharp.gatsbyImageData
-                    )}
-                    alt={item.student_name}
-                    style={{
-                      height: "39px",
-                      minWidth: "39px",
-                      width: "39px",
-                      backgroundSize: "cover",
-                    }}
-                  />
+                  {item.student_thumb?.childImageSharp?.gatsbyImageData ? (
+                    <GatsbyImage
+                      // fluid={item.student_thumb.childImageSharp.fluid}
+                      image={getImage(
+                        item.student_thumb.childImageSharp.gatsbyImageData
+                      )}
+                      alt={item.student_name}
+                      style={{
+                        height: "39px",
+                        minWidth: "39px",
+                        width: "39px",
+                        backgroundSize: "cover",
+                      }}
+                    />
+                  ) : (
+                    <Div
+                      style={{
+                        height: "39px",
+                        minWidth: "39px",
+                        width: "39px",
+                        borderRadius: "50%",
+                        backgroundColor: "#E0E0E0",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontSize: "16px",
+                        color: "#757575",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      {item.student_name?.charAt(0)?.toUpperCase() || "?"}
+                    </Div>
+                  )}
                   <Div
                     display="flex"
                     flexDirection="column"

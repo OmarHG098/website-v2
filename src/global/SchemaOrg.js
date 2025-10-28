@@ -277,6 +277,7 @@ const SchemaOrg = ({
       jobGuarantee: "https://4geeksacademy.com/schema#jobGuarantee",
     },
     "@type": "EducationalOrganization",
+    "@id": "https://4geeksacademy.com/#organization",
     name: "4Geeks Academy",
     description:
       "4Geeks Academy is a coding bootcamp that offers comprehensive programming education with a focus on practical skills and job placement.",
@@ -285,7 +286,6 @@ const SchemaOrg = ({
     sameAs: [
       "https://twitter.com/4GeeksAcademy",
       "https://www.instagram.com/4geeksacademy/",
-      "https://www.facebook.com/4geeksacademy",
       "https://4geeksacademy.com/",
       "https://www.youtube.com/@4GeeksAcademy",
       "https://4geeksacademy.com/us/job-guarantee",
@@ -297,10 +297,11 @@ const SchemaOrg = ({
     }),
   };
 
-  const page = [...baseSchema];
-  const location = [...baseSchema];
+  const page = [...baseSchema, educationalOrganizationSchema];
+  const location = [...baseSchema, educationalOrganizationSchema];
   const blog = [
     ...baseSchema,
+    educationalOrganizationSchema,
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
