@@ -135,7 +135,12 @@ components:
           icon: "check"
           icon_color: '#F4F9FF'
 
- 
+  - name: testimonials
+    position: 8
+    layout: testimonials
+    categories: ["mentors-and-teachers", "rigobot", "online-platform"]
+    background: "white"
+
   - name: joao_testimonial
     position: 6
     layout: two_column_right

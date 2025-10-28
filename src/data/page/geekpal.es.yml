@@ -132,8 +132,12 @@ components:
           text: "Sigue avanzando tus habilidades con recursos de entrenamiento adicionales, eventos en vivo y proyectos colaborativos. Conecta con personas que han estado donde tú estás — y saben cómo ayudarte a llegar donde quieres ir."
           icon: "check"
           icon_color: '#F4F9FF'
-
-
+          
+  - name: testimonials
+    position: 8
+    layout: testimonials
+    categories: ["mentors-and-teachers", "rigobot", "online-platform"]
+    background: "white"
 
   - name: joao_testimonial
     position: 6

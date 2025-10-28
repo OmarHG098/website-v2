@@ -172,5 +172,8 @@ components:
         title: "Salary Increase"
         content: "55% higher at new job"
 
-
-
+  - name: testimonials
+    position: 15
+    layout: testimonials
+    categories: ["career-support", "outcomes", "job-guarantee"]
+    background: "white"

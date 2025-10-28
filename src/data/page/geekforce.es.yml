@@ -172,5 +172,10 @@ components:
         title: "Aumento Salarial"
         content: "55% más alto en el nuevo trabajo"
 
+  - name: testimonials
+    position: 15
+    layout: testimonials
+    categories: ["career-support", "outcomes", "job-guarantee"]
+    background: "white"
 
 
