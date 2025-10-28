@@ -400,7 +400,7 @@ const Badges = ({
       </CarouselV2>
 
       {short_link && (
-        <Div justifyContent="center" margin="20px 0 0 0">
+        <Div justifyContent="center" margin="60px 0 0 0" margin_tablet="20px 0 0 0">
           <Link to={content.link_to}>
             <Paragraph width="auto" color={Colors.blue}>
               {`${content.short_link_text} >`}
