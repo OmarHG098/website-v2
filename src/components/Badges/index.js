@@ -401,8 +401,8 @@ const Badges = ({
       {short_link && (
         <Div
           justifyContent="center"
-          margin="60px 0 0 0"
-          margin_tablet="20px 0 0 0"
+          margin="60px 0 20px 0"
+          margin_tablet="20px 0 20px 0"
         >
           <Link to={content.link_to}>
             <Paragraph width="auto" color={Colors.blue}>
