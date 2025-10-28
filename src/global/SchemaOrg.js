@@ -250,9 +250,7 @@ const SchemaOrg = ({
       url: `https://4geeksacademy.com/${context.lang}/coding-bootcamps/${node.meta_info.slug}`,
       timeRequired: node.meta_info.duration || "P16W",
       provider: {
-        "@type": "EducationalOrganization",
-        name: "4Geeks Academy",
-        sameAs: "https://4geeksacademy.com/",
+        "@id": "https://4geeksacademy.com/#organization",
       },
       "@context": {
         jobGuarantee: "https://4geeksacademy.com/schema#jobGuarantee",
@@ -368,6 +366,7 @@ const SchemaOrg = ({
     landing: page,
     course: [
       ...baseSchema,
+      educationalOrganizationSchema,
       {
         "@context": {
           "@vocab": "https://schema.org/",
@@ -377,9 +376,7 @@ const SchemaOrg = ({
         name: seoTitle,
         description,
         provider: {
-          "@type": "EducationalOrganization",
-          name: "4Geeks Academy",
-          sameAs: "https://4geeksacademy.com/",
+          "@id": "https://4geeksacademy.com/#organization",
         },
         offers: {
           "@type": "Offer",
@@ -414,10 +411,6 @@ const SchemaOrg = ({
       {filteredFaqs.length > 0 && (
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       )}
-      {/* EducationalOrganization with Reviews */}
-      <script type="application/ld+json">
-        {JSON.stringify(educationalOrganizationSchema)}
-      </script>
     </Helmet>
   );
 };
