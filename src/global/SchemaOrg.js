@@ -53,6 +53,24 @@ const SchemaOrg = ({
           }
         }
       }
+      allTestimonialsYaml {
+        edges {
+          node {
+            testimonials {
+              student_name
+              content
+              rating
+              testimonial_date
+              linkedin_url
+              hidden
+              related_features
+            }
+            fields {
+              lang
+            }
+          }
+        }
+      }
     }
   `);
 
@@ -164,6 +182,65 @@ const SchemaOrg = ({
 
   const filteredFaqs = getFilteredFaqs();
 
+  // Generate Review schema for testimonials
+  const getReviewsSchema = () => {
+    const testimonialsData =
+      dataQuery.allTestimonialsYaml.edges.find(
+        ({ node }) => node.fields.lang === context.lang
+      )?.node.testimonials || [];
+
+    // Filter testimonials with ratings and content
+    const validTestimonials = testimonialsData
+      .filter(
+        (t) => !t.hidden && t.rating && t.content && t.content.trim().length > 0
+      )
+      .slice(0, 10); // Limit to top 10
+
+    if (validTestimonials.length === 0) return null;
+
+    const reviews = validTestimonials.map((testimonial) => {
+      const review = {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: testimonial.student_name,
+        },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: testimonial.rating,
+          bestRating: 5,
+        },
+        reviewBody: testimonial.content,
+      };
+
+      // Add optional fields
+      if (testimonial.linkedin_url) {
+        review.author.sameAs = testimonial.linkedin_url;
+      }
+      if (
+        testimonial.testimonial_date &&
+        testimonial.testimonial_date.trim().length > 0
+      ) {
+        review.datePublished = testimonial.testimonial_date;
+      }
+
+      return review;
+    });
+
+    // Calculate aggregate rating
+    const ratingsArray = validTestimonials.map((t) => t.rating);
+    const aggregateRating = {
+      "@type": "AggregateRating",
+      ratingValue: (
+        ratingsArray.reduce((a, b) => a + b, 0) / ratingsArray.length
+      ).toFixed(1),
+      reviewCount: ratingsArray.length,
+      bestRating: 5,
+    };
+
+    return { reviews, aggregateRating };
+  };
+
   const courses = dataQuery.allCourseYaml.edges
     .filter(({ node }) => node.fields.lang === context.lang)
     .map(({ node }) => ({
@@ -192,6 +269,8 @@ const SchemaOrg = ({
     },
   ];
 
+  const reviewsData = getReviewsSchema();
+
   const educationalOrganizationSchema = {
     "@context": {
       "@vocab": "https://schema.org/",
@@ -212,6 +291,10 @@ const SchemaOrg = ({
       "https://4geeksacademy.com/us/job-guarantee",
     ],
     jobGuarantee: true,
+    ...(reviewsData && {
+      review: reviewsData.reviews,
+      aggregateRating: reviewsData.aggregateRating,
+    }),
   };
 
   const page = [...baseSchema];
@@ -330,6 +413,10 @@ const SchemaOrg = ({
       {filteredFaqs.length > 0 && (
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       )}
+      {/* EducationalOrganization with Reviews */}
+      <script type="application/ld+json">
+        {JSON.stringify(educationalOrganizationSchema)}
+      </script>
     </Helmet>
   );
 };
