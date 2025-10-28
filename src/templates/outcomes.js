@@ -15,6 +15,7 @@ import { outcomesReport } from "../actions";
 import { SessionContext } from "../session";
 import { isCustomBarActive } from "../actions";
 import ScrollSpy from "../components/ScrollSpy";
+import Testimonials from "../components/Testimonials";
 
 const SVGImage = () => (
   <svg
@@ -598,6 +599,12 @@ const Outcomes = ({ data, pageContext, yml }) => {
           </Div>
         </Grid>
       </Div>
+      <Testimonials
+        id="testimonials"
+        categories={["outcomes", "job-guarantee", "career-support"]}
+        lang={data.allTestimonialsYaml.edges}
+        background={Colors.white}
+      />
     </>
   );
 };
@@ -674,6 +681,47 @@ export const query = graphql`
           short_link_text
           fields {
             lang
+          }
+        }
+      }
+    }
+    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          heading
+          button_text
+          button_link
+          testimonials {
+            student_name
+            testimonial_date
+            include_in_marquee
+            hidden
+            related_features
+            linkedin_url
+            linkedin_text
+            linkedin_image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  height: 14
+                  placeholder: NONE
+                )
+              }
+            }
+            student_thumb {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  height: 200
+                  placeholder: NONE
+                )
+              }
+            }
+            short_content
+            content
+            rating
+            source_url
+            source_url_text
           }
         }
       }

@@ -28,6 +28,7 @@ import TwoColumn from "../components/TwoColumn/index.js";
 import WeTrust from "../components/WeTrust/index.js";
 import FaqCard from "../components/FaqCard";
 import ChooseYourProgram from "../components/ChooseYourProgram";
+import Testimonials from "../components/Testimonials";
 
 const JobGuarantee = ({ data, pageContext, yml }) => {
   const { session } = useContext(SessionContext);
@@ -757,6 +758,12 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           topicSlug="job_guarantee"
         />
       </Container>
+      <Testimonials
+        id="testimonials"
+        categories={["job-guarantee", "outcomes", "career-support"]}
+        lang={data.allTestimonialsYaml.edges}
+        background={Colors.white}
+      />
     </>
   );
 };
@@ -1031,53 +1038,6 @@ export const query = graphql`
         }
       }
     }
-    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          heading
-          button_text
-          button_link
-          testimonials {
-            student_name
-            slug
-            country {
-              iso
-              name
-            }
-            featured
-            highlighted
-            testimonial_date
-            rating
-            hidden
-            linkedin_url
-            linkedin_text
-            linkedin_image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  height: 14
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            student_thumb {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            student_video
-            short_content
-            content
-            source_url
-            source_url_text
-          }
-        }
-      }
-    }
     allFaqYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
@@ -1106,6 +1066,47 @@ export const query = graphql`
             link
             icon
             text_link
+          }
+        }
+      }
+    }
+    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          heading
+          button_text
+          button_link
+          testimonials {
+            student_name
+            testimonial_date
+            include_in_marquee
+            hidden
+            related_features
+            linkedin_url
+            linkedin_text
+            linkedin_image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  height: 14
+                  placeholder: NONE
+                )
+              }
+            }
+            student_thumb {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  height: 200
+                  placeholder: NONE
+                )
+              }
+            }
+            short_content
+            content
+            rating
+            source_url
+            source_url_text
           }
         }
       }

@@ -18,6 +18,7 @@ import Iconogram from "../components/Iconogram";
 import TwoColumn from "../components/TwoColumn";
 import DataTable from "../components/DataTable";
 import DoubleActionCTA from "../components/DoubleActionCTA";
+import Testimonials from "../components/Testimonials";
 
 const Financial = (props) => {
   const { session } = useContext(SessionContext);
@@ -178,6 +179,12 @@ const Financial = (props) => {
 
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+      />
+      <Testimonials
+        id="testimonials"
+        categories={["price", "scolarships", "job-guarantee"]}
+        lang={data.allTestimonialsYaml.edges}
+        background={Colors.white}
       />
       <DoubleActionCTA
         disableBullets
@@ -530,6 +537,47 @@ export const query = graphql`
             contributor
             description
             achievement
+          }
+        }
+      }
+    }
+    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          heading
+          button_text
+          button_link
+          testimonials {
+            student_name
+            testimonial_date
+            include_in_marquee
+            hidden
+            related_features
+            linkedin_url
+            linkedin_text
+            linkedin_image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  height: 14
+                  placeholder: NONE
+                )
+              }
+            }
+            student_thumb {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  height: 200
+                  placeholder: NONE
+                )
+              }
+            }
+            short_content
+            content
+            rating
+            source_url
+            source_url_text
           }
         }
       }

@@ -21,6 +21,7 @@ import Loc from "../components/Loc/index.js";
 import DoubleActionCTA from "../components/DoubleActionCTA";
 import ScholarshipProjects from "../components/ScholarshipProjects/index.js";
 import TwoColumn from "../components/TwoColumn/index.js";
+import Testimonials from "../components/Testimonials";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
 import Iconogram from "../components/Iconogram/index.js";
 
@@ -301,6 +302,12 @@ const Program = ({ data, pageContext, yml }) => {
         }
       />
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
+      <Testimonials
+        id="testimonials"
+        categories={["full-stack", "content-and-syllabus"]}
+        lang={data.allTestimonialsYaml.edges}
+        background={Colors.white}
+      />
       <DoubleActionCTA />
     </>
   );
@@ -728,45 +735,6 @@ export const query = graphql`
         }
       }
     }
-    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          heading
-          button_text
-          button_link
-          testimonials {
-            student_name
-            testimonial_date
-            include_in_marquee
-            hidden
-            linkedin_url
-            linkedin_text
-            linkedin_image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  height: 14
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            student_thumb {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 200
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            short_content
-            content
-            source_url
-            source_url_text
-          }
-        }
-      }
-    }
     allCredentialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
@@ -1002,6 +970,47 @@ export const query = graphql`
               status_correct_errors
               success_message
             }
+          }
+        }
+      }
+    }
+    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          heading
+          button_text
+          button_link
+          testimonials {
+            student_name
+            testimonial_date
+            include_in_marquee
+            hidden
+            related_features
+            linkedin_url
+            linkedin_text
+            linkedin_image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  height: 14
+                  placeholder: NONE
+                )
+              }
+            }
+            student_thumb {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  height: 200
+                  placeholder: NONE
+                )
+              }
+            }
+            short_content
+            content
+            rating
+            source_url
+            source_url_text
           }
         }
       }

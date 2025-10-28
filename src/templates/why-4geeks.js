@@ -17,6 +17,7 @@ import GeeksVsOthers from "../components/GeeksVsOthers";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session.js";
 import Staff from "../components/Staff";
+import Testimonials from "../components/Testimonials";
 const RedPin = ({ style }) => (
   <svg
     width="8"
@@ -251,6 +252,12 @@ const Why4Geeks = (props) => {
                 </Div> */}
       </GridContainerWithImage>
       <Staff lang={pageContext.lang} />
+      <Testimonials
+        id="testimonials"
+        categories={["mentors-and-teachers", "content-and-syllabus", "career-support"]}
+        lang={data.allTestimonialsYaml.edges}
+        background={Colors.white}
+      />
     </>
   );
 };
@@ -336,6 +343,47 @@ export const query = graphql`
             title
             icon
             value
+          }
+        }
+      }
+    }
+    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          heading
+          button_text
+          button_link
+          testimonials {
+            student_name
+            testimonial_date
+            include_in_marquee
+            hidden
+            related_features
+            linkedin_url
+            linkedin_text
+            linkedin_image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  height: 14
+                  placeholder: NONE
+                )
+              }
+            }
+            student_thumb {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  height: 200
+                  placeholder: NONE
+                )
+              }
+            }
+            short_content
+            content
+            rating
+            source_url
+            source_url_text
           }
         }
       }

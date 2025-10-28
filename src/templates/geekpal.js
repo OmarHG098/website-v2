@@ -322,23 +322,38 @@ export const query = graphql`
     allTestimonialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
+          heading
+          button_text
+          button_link
           testimonials {
             student_name
             testimonial_date
+            include_in_marquee
             hidden
+            related_features
             linkedin_url
             linkedin_text
-            student_thumb {
+            linkedin_image {
               childImageSharp {
                 gatsbyImageData(
-                  layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 200
-                  height: 200
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  layout: CONSTRAINED
+                  height: 14
+                  placeholder: NONE
                 )
               }
             }
+            student_thumb {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  height: 200
+                  placeholder: NONE
+                )
+              }
+            }
+            short_content
             content
+            rating
             source_url
             source_url_text
           }

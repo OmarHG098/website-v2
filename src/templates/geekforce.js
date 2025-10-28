@@ -9,7 +9,7 @@ import { landingSections } from "../components/Landing";
 import Icon from "../components/Icon";
 import { Colors, VerticalVideoHolder } from "../components/Styling";
 import ReactPlayer from "../components/ReactPlayer";
-import { Div, Grid, HR } from "../components/Sections";
+import { Div, Grid } from "../components/Sections";
 import { Paragraph } from "../components/Heading";
 import { Img } from "../components/Styling";
 import { StyledBackgroundSection } from "../components/Styling";
@@ -261,12 +261,6 @@ const GeekForce = (props) => {
           content={data.allScholarshipSuccessCasesYaml.edges[0].node}
         />
       )}
-      <HR
-        background={Colors.verylightGray}
-        width="70%"
-        height="1px"
-        margin="20px"
-      />
     </>
   );
 };
@@ -418,32 +412,6 @@ export const query = graphql`
         }
       }
     }
-    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          testimonials {
-            student_name
-            testimonial_date
-            hidden
-            linkedin_url
-            linkedin_text
-            student_thumb {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: FIXED
-                  width: 200
-                  height: 200
-                  placeholder: NONE
-                )
-              }
-            }
-            content
-            source_url
-            source_url_text
-          }
-        }
-      }
-    }
     allPartnerYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
@@ -467,6 +435,47 @@ export const query = graphql`
             sub_heading
             footer_button
             footer_link
+          }
+        }
+      }
+    }
+    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          heading
+          button_text
+          button_link
+          testimonials {
+            student_name
+            testimonial_date
+            include_in_marquee
+            hidden
+            related_features
+            linkedin_url
+            linkedin_text
+            linkedin_image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  height: 14
+                  placeholder: NONE
+                )
+              }
+            }
+            student_thumb {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  height: 200
+                  placeholder: NONE
+                )
+              }
+            }
+            short_content
+            content
+            rating
+            source_url
+            source_url_text
           }
         }
       }
