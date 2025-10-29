@@ -136,7 +136,8 @@ details:
         Crea modelos predictivos usando Python, Pandas, Numpy y otras bibliotecas poderosas. Explora algoritmos como Vecinos Cercanos, Árboles de Decisión y más. Trabaja con modelos de aprendizaje supervisado y no supervisado.
         Practica resolviendo casos de la vida real y aprende a abordar el tipo de desafíos que encontrarás en tu carrera. Domina el uso de herramientas estándar de la industria.
         Estrategiza y desarrolla tus propios proyectos de IA, siguiendo el ciclo completo de vida desde el desarrollo hasta el despliegue y mantenimiento, asegurando privacidad y seguridad.
-
+        <br>
+        <a href='/es/proceso-de-aplicacion' target='_blank' rel='noopener noreferrer'>Cómo aplicar.</a>
       list:
         - label: "Duración"
           content: "16 Semanas."
