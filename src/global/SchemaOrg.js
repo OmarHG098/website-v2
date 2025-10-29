@@ -190,11 +190,53 @@ const SchemaOrg = ({
       )?.node.testimonials || [];
 
     // Filter testimonials with ratings and content
-    const validTestimonials = testimonialsData
-      .filter(
-        (t) => !t.hidden && t.rating && t.content && t.content.trim().length > 0
-      )
-      .slice(0, 10); // Limit to top 10
+    let validTestimonials = testimonialsData.filter(
+      (t) => !t.hidden && t.rating && t.content && t.content.trim().length > 0
+    );
+
+    // Apply page-specific filtering if categories are provided
+    const categories = context.testimonial_categories;
+
+    if (categories && Array.isArray(categories) && categories.length > 0) {
+      // Filter testimonials that have at least one matching related_feature
+      const matchingTestimonials = validTestimonials.filter((item) => {
+        return (
+          Array.isArray(item.related_features) &&
+          item.related_features.some((feature) => categories.includes(feature))
+        );
+      });
+
+      // Prioritize matching testimonials (same logic as Testimonials component)
+      if (matchingTestimonials.length > 0) {
+        const testimonialsWithPriority = matchingTestimonials.map(
+          (testimonial) => {
+            let highestPriority = Infinity;
+
+            categories.forEach((category, categoryIndex) => {
+              const featureIndex =
+                testimonial.related_features?.indexOf(category);
+              if (featureIndex !== -1) {
+                // Priority score combines category priority and feature position
+                const priorityScore = categoryIndex * 1000 + featureIndex;
+                if (priorityScore < highestPriority) {
+                  highestPriority = priorityScore;
+                }
+              }
+            });
+
+            return { ...testimonial, priority: highestPriority };
+          }
+        );
+
+        // Sort by priority (lower = higher priority)
+        validTestimonials = testimonialsWithPriority
+          .sort((a, b) => a.priority - b.priority)
+          .map(({ priority, ...testimonial }) => testimonial);
+      }
+    }
+
+    // Limit to top 10 after filtering and prioritization
+    validTestimonials = validTestimonials.slice(0, 10);
 
     if (validTestimonials.length === 0) return null;
 
@@ -396,6 +438,18 @@ const SchemaOrg = ({
     ],
   };
 
+  // Debug: Check schema type matching
+  if (typeof window !== "undefined" && type === "course") {
+    console.log("🔍 SchemaOrg - Course schema check:", {
+      type,
+      typeInSchema: type in schemaType,
+      schemaTypes: Object.keys(schemaType),
+      willRenderCourseSchema: type in schemaType,
+      schemaArrayLength: schemaType[type]?.length,
+      schemaPreview: JSON.stringify(schemaType[type]).substring(0, 200) + "...",
+    });
+  }
+
   return (
     <Helmet>
       {/* Schema.org tags */}
@@ -408,11 +462,13 @@ const SchemaOrg = ({
         <script type="application/ld+json">{JSON.stringify(blog)}</script>
       )}
       {/* Fallback: inject organization schema for any unmatched page types */}
-      {!(type in schemaType) && type !== "post" && context.defaultTemplate !== "landing_post" && (
-        <script type="application/ld+json">
-          {JSON.stringify([...baseSchema, educationalOrganizationSchema])}
-        </script>
-      )}
+      {!(type in schemaType) &&
+        type !== "post" &&
+        context.defaultTemplate !== "landing_post" && (
+          <script type="application/ld+json">
+            {JSON.stringify([...baseSchema, educationalOrganizationSchema])}
+          </script>
+        )}
       {/* Always inject FAQPage JSON-LD when there are FAQs rendered on the page */}
       {filteredFaqs.length > 0 && (
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>

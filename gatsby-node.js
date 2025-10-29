@@ -444,6 +444,7 @@ const createEntityPagesfromYml = async (
         ...node.meta_info,
         ...node.fields,
         ..._extraContext,
+        testimonial_categories: node.testimonial_categories || null,
         translations: translations[node.fields.defaultTemplate],
       },
     });
@@ -549,6 +550,7 @@ const createPagesfromYml = async ({ graphql, actions }) => {
       context: {
         ...node.fields,
         ...node.meta_info,
+        testimonial_categories: node.testimonial_categories || null,
         translations: translations[node.fields.defaultTemplate],
         clusters: clusters[node.fields.lang],
       },
@@ -578,6 +580,7 @@ const createPagesfromYml = async ({ graphql, actions }) => {
           context: {
             ...node.fields,
             ...node.meta_info,
+            testimonial_categories: node.testimonial_categories || null,
             translations: translations[node.fields.defaultTemplate],
             clusters: clusters[node.fields.lang],
           },
