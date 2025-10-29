@@ -595,7 +595,6 @@ export const query = graphql`
             }
             content {
               text
-              path
             }
             button {
               text

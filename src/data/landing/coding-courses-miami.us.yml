@@ -277,7 +277,7 @@ components:
     icons:
       - icon: "mortar-board-icon"
         title: ""
-        content: "Get a job within 9 months after graduation or get your money back."
+        content: 'Get a job within 9 months after graduation or get your money back. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf" target="_blank" rel="noopener noreferrer">Conditions apply</a>.'
 
       - icon: "stage-dots-icon"
         title: ""
