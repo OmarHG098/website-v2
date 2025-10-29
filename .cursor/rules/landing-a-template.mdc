@@ -29,16 +29,16 @@ Description: Comprehensive guide for landing_a template pages with all available
 **CRITICAL: The order of components in the YAML file is NOT determined by position numbers. Follow this exact structure:**
 
 ```yaml
-# 1. Required Components (Always First)
+# 1. Required Components (Always First - Site Will Crash Without These)
 meta_info:
 navbar:
 form:
 header_data:
-
-# 2. Recommended Components (Second)
-short_badges:
 features:
 follow_bar:
+
+# 2. Recommended Components (Highly recommended but optional)
+short_badges:
 
 # 3. Optional Standalone Components (Third - ABOVE components section)
 rating_reviews:
@@ -71,7 +71,19 @@ components:
 - **YAML structure** controls the **file organization** and **parsing order**
 - You can have a `components` section item at position 1 and a standalone component at position 3, but the standalone component must still appear above the `components` section in the YAML file
 
-## 2. Required Components (Fixed Structure)
+## 2. Core Components
+
+### 2.1 Required Components (Site Will Crash Without These)
+
+These 6 components are **mandatory** - the site will crash if any are missing:
+- `meta_info` - Page metadata and SEO configuration
+- `navbar` - Navigation bar with CTA button
+- `form` - Lead capture form
+- `header_data` - Hero section/jumbotron
+- `features` - Value propositions displayed under header
+- `follow_bar` - Sticky CTA bar (top/bottom)
+
+**Critical:** All 6 of these components must be present in every landing_a page. Missing any of them will cause the site to crash.
 
 ### meta_info (Required - Fixed Keys, Modifiable Values)
 ```yaml
@@ -126,18 +138,14 @@ header_data:
   image_filter: brightness(0.9)   # MODIFIABLE: Optional image filter
 ```
 
-## 2. Recommended Components (Optional, Modifiable Content)
+### 2.2 Recommended Components (Optional But Common)
 
-### short_badges (Recommended)
-```yaml
-short_badges:
-  - name: "Award Name"            # MODIFIABLE: Badge description
-    url: ""                      # MODIFIABLE: Badge link
-    image: "../../../static/images/badges/badge.webp" # MODIFIABLE: Badge image
-    alt: "Badge description"      # MODIFIABLE: Alt text
-```
+This component is optional but highly recommended for credibility and trust:
+- `short_badges` - Credibility indicators (awards, certifications, recognitions)
 
-### features (Recommended)
+**Note:** While `short_badges` is optional and won't crash the site if missing, it's strongly recommended for production landing pages to establish trust and credibility.
+
+### features (Required)
 ```yaml
 features:
   marginTop: 0px                  # MODIFIABLE: Top margin
@@ -148,7 +156,7 @@ features:
   styles: '{ "fontSize": "20px" }' # MODIFIABLE: Custom styles
 ```
 
-### follow_bar (Recommended)
+### follow_bar (Required)
 ```yaml
 follow_bar:
   position: "top"                # MODIFIABLE: top, bottom, hidden
@@ -162,6 +170,15 @@ follow_bar:
   phone:
     text: "Call"               # MODIFIABLE: Phone label
     number: ""                 # MODIFIABLE: Phone number
+```
+
+### short_badges (Recommended)
+```yaml
+short_badges:
+  - name: "Award Name"            # MODIFIABLE: Badge description
+    url: ""                      # MODIFIABLE: Badge link
+    image: "../../../static/images/badges/badge.webp" # MODIFIABLE: Badge image
+    alt: "Badge description"      # MODIFIABLE: Alt text
 ```
 
 ## 3. Optional Standalone Components
@@ -532,8 +549,10 @@ geeks_vs_others:
 ---
 
 **Usage Notes:**
-- **Start Minimal**: Begin with required components only
-- **Add Incrementally**: Add optional components as needed
+- **Always Include 6 Required Components**: Every landing_a page MUST have meta_info, navbar, form, header_data, features, and follow_bar or the site will crash
+- **Add short_badges**: Highly recommended (but optional) for credibility
+- **Add Optional Components**: Add standalone and dynamic components as needed for your specific landing page
 - **Test Responsively**: Verify on all device sizes
-- **Validate Content**: Check YAML syntax and required fields
+- **Validate Content**: Check YAML syntax and required fields (watch for curly quotes!)
 - **Modifiable vs Fixed**: Respect the structure while customizing content
+- **See Also**: Refer to `landing-a-creation-workflow` rule for AI-assisted iterative creation process
