@@ -342,7 +342,7 @@ const Apply = (props) => {
         padding_tablet="64px 0 "
         seo_title={yml.seo_title}
         title={yml.header.title}
-        paragraph_html={yml.header.paragraph}
+        paragraph={yml.header.paragraph}
         fontSize_paragraph="20px"
         margin="90px 0 0 0"
         position="relative"
