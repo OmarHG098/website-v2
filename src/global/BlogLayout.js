@@ -71,6 +71,10 @@ const BlogLayout = ({ children, seo, context, wordCount }) => {
               paragraph
               button_text
               thankyou
+              privacy_checkbox_prefix
+              privacy_checkbox_link
+              privacy_required
+              form_errors
             }
             footer {
               heading
@@ -96,12 +100,17 @@ const BlogLayout = ({ children, seo, context, wordCount }) => {
           node {
             navbar {
               name
+              id
               link
               sub_menu {
                 icon
                 title
                 paragraph
                 width
+                program_comparison_cta {
+                  text
+                  link
+                }
                 links {
                   title
                   level

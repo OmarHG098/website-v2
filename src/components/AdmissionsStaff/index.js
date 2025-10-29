@@ -24,6 +24,7 @@ const AdmissionsStaff = (props) => {
               phone
               email
               calendly_link
+              locations
               image {
                 childImageSharp {
                   gatsbyImageData(
@@ -41,24 +42,56 @@ const AdmissionsStaff = (props) => {
   `);
 
   const { session } = useContext(SessionContext);
-  const lang = props.lang || session?.language;
-  if (lang !== "us" && lang !== "en" && lang !== "es") return null;
 
-  // Check if current location is in the US
-  const isUSLocation =
-    session?.location?.country === "USA" ||
-    session?.location?.country === "US" ||
-    (session?.location?.slug &&
-      (session?.location?.slug.includes("-usa") ||
-        session?.location?.slug === "downtown-miami"));
+  const filterByLocation = (staffMember) => {
+    const locations = Array.isArray(staffMember.locations)
+      ? staffMember.locations
+          .filter((s) => typeof s === "string" && s.trim() !== "")
+          .map((s) => s.trim())
+      : [];
 
-  if (!isUSLocation) return null;
+    const candidates = [
+      session?.location?.breathecode_location_slug,
+      session?.location?.meta_info?.slug,
+      session?.location?.active_campaign_location_slug,
+    ].filter((s) => typeof s === "string" && s.length > 0);
 
+    // If the location is not resolved yet, render only if staff targets at least one location
+    if (candidates.length === 0) return locations.length > 0;
+
+    // Match any candidate or "all"
+    for (const id of candidates) {
+      if (locations.includes(id) || locations.includes("all")) return true;
+    }
+    return false;
+  };
+
+  // Prefer explicit prop.lang, then session.language; fallback to us for data selection only
+  const dataLang = (props.lang || session?.language || "us").replace(
+    "en",
+    "us"
+  );
   let admissionsStaff = data.allAdmissionsStaffYaml.edges.find(
-    ({ node }) => node.fields.lang === lang
+    ({ node }) => node.fields.lang === dataLang
   );
   if (admissionsStaff) admissionsStaff = admissionsStaff.node;
   else return null;
+
+  // Filter staff members based on current location
+  const filteredStaff = (
+    Array.isArray(admissionsStaff.staff) ? admissionsStaff.staff : []
+  ).filter(filterByLocation);
+  // Avoid flicker: if session exists but no candidates yet, do not render until location resolves
+  const candidates = [
+    session?.location?.breathecode_location_slug,
+    session?.location?.meta_info?.slug,
+    session?.location?.active_campaign_location_slug,
+  ].filter((s) => typeof s === "string" && s.length > 0);
+  if (session && candidates.length === 0) return null;
+  if (filteredStaff.length === 0) return null;
+
+  // Update the admissionsStaff object with filtered staff
+  admissionsStaff = { ...admissionsStaff, staff: filteredStaff };
 
   return (
     <Div
@@ -85,52 +118,59 @@ const AdmissionsStaff = (props) => {
           </Paragraph>
         )}
       </Div>
-      <Div>
+      <Div display="flex" flexDirection="column" alignItems="center">
         {admissionsStaff.staff.map((item, index) => (
           <Div
             key={index}
-            display="grid"
-            gridTemplateColumns="repeat(12,1fr)"
-            gridTemplateColumns_tablet="repeat(12,1fr)"
-            gap="16px"
-            margin="0 0 24px 0"
+            display="flex"
+            flexDirection="row"
             alignItems="center"
+            gap="12px"
+            margin="0 0 24px 0"
+            padding="16px"
+            border={`2px solid ${Colors.lightGray}`}
+            borderRadius="4px"
+            width="100%"
+            maxWidth="500px"
           >
-            <Div gridColumn="2 / span 4" gridColumn_tablet="2 / span 4">
+            <Div
+              width="160px"
+              width_tablet="200px"
+              width_sm="120px"
+              width_xs="80px"
+            >
               <Div
                 width="100%"
                 height_tablet="240px"
-                height_sm="280px"
-                height="180px"
+                height_sm="120px"
+                height="160px"
+                height_xs="90px"
                 alignItems="center"
-                alignItems_tablet="center"
                 justifyContent="center"
               >
                 {item.image && item.image.childImageSharp && (
                   <GatsbyImage
                     image={getImage(item.image.childImageSharp.gatsbyImageData)}
-                    style={{ height: "100%", width: "100%" }}
-                    imgStyle={{
-                      objectFit: "contain",
-                      objectPosition: "center",
+                    style={{
+                      height: "100%",
+                      width: "100%",
+                      borderRadius: "4px",
                     }}
+                    imgStyle={{ objectFit: "cover", objectPosition: "center" }}
                     alt={`${item.name} ${item.last_name}`}
                   />
                 )}
               </Div>
             </Div>
-            <Div
-              gridColumn="7 / span 5"
-              gridColumn_tablet="7 / span 5"
-              flexDirection="column"
-            >
+            <Div flex="1" flexDirection="column">
               <H3
-                fontSize="18px"
-                fontSize_tablet="22px"
-                lineHeight="22px"
+                fontSize="16px"
+                fontSize_tablet="20px"
+                lineHeight="20px"
                 lineHeight_tablet="26px"
                 margin="0 0 6px 0"
                 margin_tablet="0 0 8px 0"
+                textAlign="left"
               >
                 {item.name} {item.last_name}
               </H3>
@@ -141,6 +181,7 @@ const AdmissionsStaff = (props) => {
                 lineHeight_tablet="20px"
                 margin="0 0 8px 0"
                 margin_tablet="0 0 8px 0"
+                textAlign="left"
               >
                 {item.job_title}
               </H4>
@@ -150,6 +191,7 @@ const AdmissionsStaff = (props) => {
                 margin="0 0 4px 0"
                 margin_tablet="0 0 6px 0"
                 color="#444"
+                textAlign="left"
               >
                 <strong>Phone:</strong>{" "}
                 <Anchor to={`tel:${item.phone.replace(/[^ -9]/g, "")}`}>
@@ -162,11 +204,12 @@ const AdmissionsStaff = (props) => {
                 margin="0 0 12px 0"
                 margin_tablet="0 0 12px 0"
                 color="#444"
+                textAlign="left"
               >
                 <strong>Email:</strong>{" "}
                 <Anchor to={`mailto:${item.email}`}>{item.email}</Anchor>
               </Paragraph>
-              <Div display="flex" justifyContent="center" marginTop="auto">
+              <Div display="flex" justifyContent="flex-start" marginTop="auto">
                 <Link to={item.calendly_link}>
                   <Button
                     aria-label={`Book a call with ${item.name} ${item.last_name}`}

@@ -245,8 +245,11 @@ const Landing = (props) => {
               image={
                 applySchollarship
                   ? applySchollarship?.image.childImageSharp.gatsbyImageData
-                  : data.allPageYaml.edges[0].node.list[0].image.childImageSharp
-                      .gatsbyImageData
+                  : (
+                      data.allLandingYaml?.edges?.[0]?.node?.list?.[0]?.image ||
+                      data.allDownloadableYaml?.edges?.[0]?.node?.list?.[0]
+                        ?.image
+                    )?.childImageSharp?.gatsbyImageData
               }
               bgSize="contain"
               alt="geekforce image"
@@ -318,28 +321,6 @@ const Landing = (props) => {
 };
 export const query = graphql`
   query LandingAQuery($file_name: String!, $lang: String!) {
-    allPageYaml(
-      filter: {
-        fields: { file_name: { regex: "/geekpal/" }, lang: { eq: $lang } }
-      }
-    ) {
-      edges {
-        node {
-          list {
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED
-                  width: 800
-                  placeholder: NONE
-                  quality: 100
-                )
-              }
-            }
-          }
-        }
-      }
-    }
     allLandingYaml(
       filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang } } }
     ) {
@@ -487,6 +468,10 @@ export const query = graphql`
             position
             heading
             sub_heading
+            margin
+            padding
+            padding_tablet
+            background
             featured {
               name
               image {
@@ -500,6 +485,7 @@ export const query = graphql`
               }
             }
           }
+
           why_python {
             position
             heading
@@ -669,6 +655,23 @@ export const query = graphql`
 
             total_rows
           }
+          we_trust_section {
+            position
+            title
+            bg_full
+            text
+            boxes {
+              icon
+              title
+              label
+              text
+            }
+          }
+          choose_program {
+            title
+            paragraph
+            position
+          }
         }
       }
     }
@@ -813,7 +816,6 @@ export const query = graphql`
               }
             }
           }
-
           why_python {
             position
             heading
@@ -1006,6 +1008,7 @@ export const query = graphql`
             bc_slug
             visibility
             show_in_apply
+            job_guarantee
           }
           apply_form {
             label
@@ -1064,6 +1067,7 @@ export const query = graphql`
         node {
           testimonials {
             student_name
+            related_features
             slug
             testimonial_date
             hidden
@@ -1151,6 +1155,21 @@ export const query = graphql`
               }
               featured
             }
+          }
+        }
+      }
+    }
+    allChooseYourProgramYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          programs {
+            link
+            sub_title
+            title
+            description
+            description_mobile
+            icon
+            text_link
           }
         }
       }

@@ -4,7 +4,6 @@ import { Row, Column, Div, GridContainer } from "../Sections";
 import { H4, Paragraph } from "../Heading";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import ReCAPTCHA from "react-google-recaptcha";
 import { SessionContext } from "../../session";
 import { Button, Colors } from "../Styling";
 import { Break, Devices } from "../Responsive";
@@ -12,6 +11,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, navigate } from "gatsby";
 import { SelectRaw } from "../Select";
 import PhoneInput from "./PhoneInput";
+import SafeReCAPTCHA from "../SafeReCAPTCHA";
 
 const formIsValid = (formData = null) => {
   if (!formData) return null;
@@ -247,6 +247,21 @@ const LeadForm = ({
   let yml = { ...page.node, ...form.node };
 
   const captcha = useRef(null);
+
+  // Safe captcha execution with defensive checks
+  const executeRecaptcha = async () => {
+    if (captcha.current && typeof captcha.current.executeAsync === "function") {
+      try {
+        return await captcha.current.executeAsync();
+      } catch (error) {
+        console.warn("ReCAPTCHA execution failed:", error);
+        return null;
+      }
+    }
+    console.warn("ReCAPTCHA not available, proceeding without token");
+    return null;
+  };
+
   const [formStatus, setFormStatus] = useState({ status: "idle", msg: "" });
   const [formData, setVal] = useState(_fields);
   const [consentValue, setConsentValue] = useState([]);
@@ -349,9 +364,9 @@ const LeadForm = ({
           setFormStatus({ status: "error", msg: locationSelector.error });
         } else {
           setFormStatus({ status: "loading", msg: yml.messages.loading });
-          const token = await captcha.current.executeAsync();
+          const token = await executeRecaptcha();
           formHandler(
-            { ...cleanedData, token: { value: token, valid: true } },
+            { ...cleanedData, token: { value: token || "", valid: !!token } },
             session
           )
             .then((data) => {
@@ -678,9 +693,8 @@ const LeadForm = ({
               </Alert>
             )}
             <Div width="fit-content" margin="10px auto 0 auto">
-              <ReCAPTCHA
+              <SafeReCAPTCHA
                 ref={captcha}
-                sitekey={process.env.GATSBY_CAPTCHA_KEY}
                 // onChange={captchaChange}
                 size="invisible"
               />

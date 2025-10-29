@@ -17,7 +17,7 @@ button:
 seo_title: "Job Guarantee"
 header:
   title: "GET INTO TECH WITH OUR JOB GUARANTEE"
-  sub_title: "Your success is our mission — Get hired within 9 months of graduation, or we'll refund your tuition."
+  sub_title: 'Your success is our mission — Get hired within 9 months of graduation, or we will refund your tuition. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf" target="_blank" rel="noopener noreferrer">Conditions apply</a>.'
   paragraph: ""
     #<ul style="list-style-type: disc; padding-left: 20px;">
      # <li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
@@ -57,9 +57,9 @@ two_column_left:
       <br><br>
       <span style="color: #0097CD; ">✓</span> Follow our career team's guidance
       <br><br>
-      <span style="color: #0097CD; ">✓</span> Conditions apply depending on your U.S. state
+      <span style="color: #000000; ">*Conditions apply depending on your country or U.S. state</span>
     font_size: ["20px", "20px", "18px", "16px", "14px"]
-    style: '{ "text-align": "left", "color": "#444", "line-height": "1.1", "padding": "10px"}'
+    style: '{ "text-align": "left", "color": "#444", "line-height": "1.2", "padding": "10px"}'
   button:
     text: "Apply"
     color: "white"
@@ -69,8 +69,9 @@ two_column_left:
 
 we_trust_section:
   title: Does the Job Guarantee Deliver Results You Can Count On?
+  bg_full: true
   text: |
-    Yes — and we've got the numbers to back it up    
+    Yes — and we've got the numbers to back it up.
     <br><br>
     These stats reflect our full graduate community and demonstrate the proven impact of our programs across the board.
     <br><br>
@@ -80,8 +81,9 @@ we_trust_section:
       title: "84%"
       text: Job placement rate
     - icon: graduation-2
-      title: "3 - 6"
-      text: Months on avg. to get hired
+      title: "3-6"
+      label: "months"
+      text: Average time to get hired
     - icon: chart
       title: "55%"
       text: Salary increase after graduation
@@ -98,8 +100,8 @@ how_it_works:
     - icon: folder
       title: Receive the full refund within 30 days.
   link:
-    url: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Conditions%20Job%20Guaranteed%20Program.pdf
-    label: Conditions Apply.
+    url: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf
+    label: "Conditions Apply."
 
 two_column_right:
   proportions: [6, 6]

@@ -44,6 +44,15 @@ const Location = ({ data, pageContext, yml }) => {
   }, []);
   const chooseProgramRef = useRef(null);
 
+  const showJobGuarantee =
+    data.allJobGuaranteeSmallYaml.edges[0]?.node?.locations?.includes(
+      yml.breathecode_location_slug
+    );
+  const slugsWithStaffPlacement = ["orlando", "downtown-miami", "tampa-usa"];
+  const shouldPlaceUnderStaff = slugsWithStaffPlacement.includes(
+    yml.breathecode_location_slug
+  );
+
   const goToChooseProgram = (e) => {
     e.preventDefault();
     window.scrollTo({
@@ -111,7 +120,7 @@ const Location = ({ data, pageContext, yml }) => {
             openLabel={chooseButton[lang]}
             closeLabel={chooseButton[lang]}
           />
-          {yml.info_box.address && (
+          {yml.address && (
             <Div
               alignItems="flex-start"
               margin="15px 0 0 0"
@@ -128,12 +137,12 @@ const Location = ({ data, pageContext, yml }) => {
                 lineHeight="22px"
                 width="100%"
               >
-                {yml.info_box.address}
-                {!yml.info_box.address.includes("Only remotely") && (
+                {yml.address}
+                {!yml.address.includes("Only remotely") && (
                   <Link
                     target="_blank"
                     to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                      yml.info_box.address
+                      yml.address
                     )}`}
                     style={{ marginLeft: "5px", display: "inline" }}
                   >
@@ -263,9 +272,7 @@ const Location = ({ data, pageContext, yml }) => {
         </Div>
       )}
 
-      {data.allJobGuaranteeSmallYaml.edges[0].node.locations.includes(
-        yml.breathecode_location_slug
-      ) && (
+      {showJobGuarantee && !shouldPlaceUnderStaff && (
         <JobGuaranteeSmall
           content={data.allJobGuaranteeSmallYaml.edges[0].node}
         />
@@ -345,6 +352,12 @@ const Location = ({ data, pageContext, yml }) => {
 
       <Staff lang={pageContext.lang} heading={yml?.staff?.heading} />
 
+      {showJobGuarantee && shouldPlaceUnderStaff && (
+        <JobGuaranteeSmall
+          content={data.allJobGuaranteeSmallYaml.edges[0].node}
+        />
+      )}
+
       {/* IFRAME map
       <Div>
         {!ready ? (
@@ -406,6 +419,7 @@ export const query = graphql`
           latitude
           longitude
           phone
+          address
           header {
             tagline
             paragraph

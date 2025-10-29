@@ -15,7 +15,6 @@ header_data:
     - Experiencia de aprendizaje hiperpersonalizada
     - Soporte profesional ilimitado  impulsado por IA
     - Adquiere las habilidades y mentalidad que buscan los reclutadores
-    - '<strong style="text-decoration: none; color: #000000; font-weight: 700;">Garantía de Empleo</strong>: Consigue trabajo en 9 meses tras graduarte — o te devolvemos tu dinero (aplican condiciones)'
   join_button_text: ELIGE UN PROGRAMA
   join_button_path: "#choose-program"
   free_button_text: PRUÉBALO GRATIS
@@ -79,7 +78,7 @@ two_columns:
   section_heading:
     text: "Financia tu futuro"
   heading:
-    text: "Invierte en tu carrera con planes flexibles y Garantía de Empleo"
+    text: "Invierte en tu carrera con planes flexibles y Garantía de Empleo."
     style: '{ "fontWeight": 200, "marginBottom": "24px", "marginTop": "0px", "fontSize": "22px" }'
   content:
     text: |
@@ -90,12 +89,11 @@ two_columns:
       <ul>
         <li>✓ Una de las matrículas más accesibles entre los bootcamps top</li>
         <li>✓ Planes de pago desde menos de $299/mes</li>
-        <li>✓ Garantía de Empleo disponible (con requisitos)</li>
+        <li>✓ Garantía de Empleo disponible. *No aplica para todos los mercados, países o estados donde opera 4Geeks. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guaranteee-es.pdf" target="_blank" rel="noopener noreferrer">Condiciones aplican</a>.</li>
       </ul>
       <br/>
       <p>¿Necesitas otra razón? En 2024, <strong style="text-decoration: none; color: #000000; font-weight: 700;">Forbes</strong> nos nombró el <a href="https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition" style="text-decoration: none; color: #000000; font-weight: 700;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">mejor bootcamp para estudiantes con presupuesto limitado<span style="font-size: 0.8em;">↗</span></a>—reconociendo nuestro compromiso con la educación tech accesible.</p>
       <p><strong style="text-decoration: none; color: #000000; font-weight: 700;">¿Tienes dudas?</strong> Nuestro equipo de admisiones te ayuda a encontrar el plan ideal para ti.</p>
-    path: "/es/apply"
   button:
     text: "CONTÁCTANOS"
     color: "white"
@@ -209,3 +207,40 @@ testimonial_header:
   heading: "El 86% de nuestros graduados consigue trabajo tras completar el programa."
   button_text: "Ver todos los testimonios"
   button_link: ""
+
+## DOUBLE ACTION CTA SECTION
+double_action_cta:
+  title: "Da el siguiente paso en tu carrera tech"
+  description: "Únete a miles de estudiantes que han transformado sus carreras con 4Geeks Academy. Obtén orientación personalizada y mantente actualizado con lo último en tecnología."
+  locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
+  primary:
+    title: "Agenda una consulta gratuita de 15 minutos"
+    description: "Obtén orientación personalizada de nuestro equipo de admisiones. Descubre el programa tech que se ajusta a tus objetivos y explora opciones de financiamiento flexibles."
+    image: "../../../static/images/Group-6617.webp"
+    action_text: "¡Agenda ahora!"
+    action_url: "https://calendly.com/epilowsky-4geeksacademy/30min"
+    benefits:
+      - "Hoja de ruta personalizada"
+      - "Recomendaciones de programas"
+      - "Perspectivas de la industria y salarios"
+    footer_text: "✨ Sesión gratuita de 15 minutos • Sin compromiso"
+  secondary:
+    title: "Comienza tu viaje hoy"
+    description: "Da el siguiente paso hacia tu carrera tech. Completa el formulario para obtener detalles completos del programa y conectar con nuestro equipo de admisiones."
+    image: "../../../static/images/woman-glasses-laptop.png"
+    action_text: "Aplica ahora"
+    action_url: "/es/apply"
+    benefits:
+      - "Tendencias de la industria"
+      - "Historias de éxito de estudiantes"
+      - "Descuentos exclusivos y acceso anticipado"
+    footer_text: "📧 Actualizaciones semanales • Cancela cuando quieras • Sin spam"
+  newsletter_form:
+    placeholder_email: "Email *"
+    error_email: "Por favor ingresa un email válido"
+    button_submit: "Suscribirme"
+    button_loading: "Cargando..."
+    status_idle: "Solicitud"
+    status_error: "Hay errores en tu formulario"
+    status_correct_errors: "Corrige los errores"
+    success_message: "🎉 ¡Gracias! Te has suscrito exitosamente a nuestro boletín."

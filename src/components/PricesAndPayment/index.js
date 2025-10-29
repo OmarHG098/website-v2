@@ -1,4 +1,11 @@
-import React, { useState, useContext, useEffect, useRef, useMemo, useCallback } from "react";
+import React, {
+  useState,
+  useContext,
+  useEffect,
+  useRef,
+  useMemo,
+  useCallback,
+} from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Icon from "../Icon";
 import { Link } from "../Styling/index";
@@ -16,6 +23,135 @@ import {
 } from "../Styling";
 import { SessionContext } from "../../session";
 import { isWindow } from "../../utils/utils";
+
+// Constants for fallback values
+const FALLBACK_VALUES = {
+  bookCallText: "Book a call →",
+  applyLink: "/us/apply",
+  financialsLink: "/us/financials",
+};
+
+// Helper function to check if job guarantee should be shown for selected location and course
+const shouldShowJobGuarantee = (selectedLocation, currentCourse, info) => {
+  if (!selectedLocation || !info?.job_guarantee_locations) return false;
+
+  // Check if course is eligible for job guarantee
+  if (info?.job_guarantee_courses && currentCourse) {
+    // Convert underscore format to hyphen format for comparison
+    const courseSlug = currentCourse.replaceAll("_", "-");
+    if (!info.job_guarantee_courses.includes(courseSlug)) {
+      return false;
+    }
+  }
+
+  // Check if location is eligible
+  const candidates = [
+    selectedLocation?.breathecode_location_slug,
+    selectedLocation?.meta_info?.slug,
+    selectedLocation?.active_campaign_location_slug,
+  ].filter((s) => typeof s === "string" && s.length > 0);
+
+  for (const locationSlug of candidates) {
+    if (info.job_guarantee_locations.includes(locationSlug)) {
+      return true;
+    }
+  }
+  return false;
+};
+
+// Helper function to determine if location is in America region
+const isAmericaLocation = (session) => {
+  if (!session?.location) return false;
+
+  const locationSlug = session.location.active_campaign_location_slug;
+  if (!locationSlug) return false;
+
+  // US locations typically end with "-usa" or are special cases
+  return (
+    locationSlug.includes("-usa") ||
+    locationSlug === "downtown-miami" ||
+    locationSlug === "orlando"
+  );
+};
+
+// Helper function to get regional CTA configuration
+const getRegionalCTA = (session, info) => {
+  if (!info?.cta) return null;
+
+  const isAmerica = isAmericaLocation(session);
+  return isAmerica ? info.cta.america : info.cta.international;
+};
+
+// Helper function to check if "More details" button should be shown
+const shouldShowMoreDetails = (financial) => {
+  return !financial; // Hide if on financials page
+};
+
+// Helper function to get job guarantee configuration for selected location
+const getJobGuaranteeConfig = (selectedLocation, currentCourse, info) => {
+  if (!selectedLocation || !info?.job_guarantee) return null;
+
+  const candidates = [
+    selectedLocation?.breathecode_location_slug,
+    selectedLocation?.meta_info?.slug,
+    selectedLocation?.active_campaign_location_slug,
+  ].filter((s) => typeof s === "string" && s.length > 0);
+
+  // Normalize course slug
+  const courseSlug = currentCourse?.replaceAll("_", "-");
+
+  // Find matching job guarantee configuration
+  for (const locationSlug of candidates) {
+    const matchingConfig = info.job_guarantee.find((config) => {
+      const locationMatch =
+        config.academies &&
+        (config.academies.includes(locationSlug) ||
+          config.academies.includes("all"));
+      const courseMatch =
+        !config.courses ||
+        config.courses.length === 0 ||
+        (courseSlug && config.courses.includes(courseSlug));
+      return locationMatch && courseMatch;
+    });
+    if (matchingConfig) return matchingConfig;
+  }
+
+  // Return first config as fallback
+  return info.job_guarantee[0] || null;
+};
+
+// Helper function to get no job guarantee configuration for selected location
+const getNoJobGuaranteeConfig = (selectedLocation, currentCourse, info) => {
+  if (!selectedLocation || !info?.no_job_guarantee) return null;
+
+  const candidates = [
+    selectedLocation?.breathecode_location_slug,
+    selectedLocation?.meta_info?.slug,
+    selectedLocation?.active_campaign_location_slug,
+  ].filter((s) => typeof s === "string" && s.length > 0);
+
+  // Normalize course slug
+  const courseSlug = currentCourse?.replaceAll("_", "-");
+
+  // Find matching no job guarantee configuration
+  for (const locationSlug of candidates) {
+    const matchingConfig = info.no_job_guarantee.find((config) => {
+      const locationMatch =
+        config.academies &&
+        (config.academies.includes(locationSlug) ||
+          config.academies.includes("all"));
+      const courseMatch =
+        !config.courses ||
+        config.courses.length === 0 ||
+        (courseSlug && config.courses.includes(courseSlug));
+      return locationMatch && courseMatch;
+    });
+    if (matchingConfig) return matchingConfig;
+  }
+
+  // Return first config as fallback
+  return info.no_job_guarantee[0] || null;
+};
 
 // Shared styles to avoid recreating objects per render
 const selectStyles = {
@@ -71,6 +207,7 @@ const PaymentOptionCard = ({
   option,
   selectedPlan,
   setSelectedPlan,
+  jobGuarantee,
 }) => {
   return (
     <Div
@@ -86,7 +223,7 @@ const PaymentOptionCard = ({
         padding="16px 20px"
         cursor="pointer"
         onClick={() => {
-          setSelectedPlan(option.id);
+          setSelectedPlan(selectedPlan === option.id ? null : option.id);
         }}
         display="flex"
         justifyContent="space-between"
@@ -113,18 +250,10 @@ const PaymentOptionCard = ({
             fontSize="14px"
             fontWeight="600"
             color={Colors.black}
-            margin="0 0 4px 0"
-            textAlign="left"
-          >
-            {option.title}
-          </Paragraph>
-          <Paragraph
-            fontSize="12px"
-            color="#666666"
             margin="0"
             textAlign="left"
           >
-            {option.description}
+            {option.title}
           </Paragraph>
         </Div>
         <Div
@@ -152,19 +281,16 @@ const PaymentOptionCard = ({
           display_xs="block"
           display_xxs="block"
         >
-          {option.bullets && (
-            <Paragraph
-              fontSize="14px"
-              color={Colors.black}
-              margin="16px 0 0 0"
-              textAlign="left"
-              lineHeight="24px"
-              dangerouslySetInnerHTML={{
-                __html: option.bullets.join(". ") + " ",
-              }}
-            />
-          )}
-
+          <Paragraph
+            fontSize="12px"
+            color="#666666"
+            margin="0 0 16px 0"
+            textAlign="left"
+          >
+            {jobGuarantee && option.job_guarantee_description
+              ? option.job_guarantee_description
+              : option.description}
+          </Paragraph>
           {option.icons && option.icons.length > 0 && (
             <Div
               className="icons"
@@ -174,6 +300,7 @@ const PaymentOptionCard = ({
               width="fit-content"
               alignItems="center"
               margin="16px 0 0 0"
+              position="bottom"
             >
               {option.icons.map((icon) => (
                 <Img
@@ -207,6 +334,11 @@ const FinancialOptionsDesktop = ({
   availablePlans,
   isLocationDropdownOpen,
   isProgramDropdownOpen,
+  currentLocation,
+  financial,
+  schedule,
+  course,
+  defaultCourse,
 }) => {
   // Build options list from available plans (YAML-driven)
   const paymentOptions = useMemo(
@@ -214,14 +346,15 @@ const FinancialOptionsDesktop = ({
       (availablePlans || []).map((plan) => ({
         id: plan.slug,
         title: plan.scholarship,
-        description: plan.payment_time,
+        description: plan.description,
+        job_guarantee_description: plan.job_guarantee_description,
         details: plan.warning_message,
         price: plan.price,
-        originalPrice: plan.original_price,
+
         icons: plan.icons,
         recomended: plan.recomended,
         recommended_color: plan.recommended_color,
-        bullets: plan.bullets,
+
         offer: plan.offer,
       })),
     [availablePlans]
@@ -248,16 +381,12 @@ const FinancialOptionsDesktop = ({
         margin="24px 0"
         position="relative"
       >
-        {currentPlan?.offer && (
-          <OfferTag isHidden={isLocationDropdownOpen || isProgramDropdownOpen}>
-            {currentPlan.offer}
-          </OfferTag>
-        )}
+        {/* Offer tag removed on desktop per revamp */}
         {/* Left column */}
         <Div
-          display="block"
+          display="flex"
+          flexDirection="column"
           background={Colors.white}
-          borderRight={`1px solid ${Colors.lightGray}`}
           padding="24px"
           width_tablet="50%"
         >
@@ -267,10 +396,64 @@ const FinancialOptionsDesktop = ({
             margin="0 0 16px 0"
             textAlign="left"
           >
-            {"Invest in your future, stress-free"}
+            {info.plan_details}
           </H3>
-
           <Div display="block" margin="0 0 12px 0">
+            {jobGuarantee &&
+            getJobGuaranteeConfig(
+              currentLocation,
+              course?.value || defaultCourse,
+              info
+            )?.monthly_label ? (
+              <H2
+                fontSize="36px"
+                lineHeight="42px"
+                fontWeight="700"
+                color={Colors.black}
+                margin="0 0 6px 0"
+                textAlign="left"
+              >
+                {
+                  getJobGuaranteeConfig(
+                    currentLocation,
+                    course?.value || defaultCourse,
+                    info
+                  ).monthly_label
+                }
+              </H2>
+            ) : getNoJobGuaranteeConfig(
+                currentLocation,
+                course?.value || defaultCourse,
+                info
+              )?.monthly_label ? (
+              <H2
+                fontSize="36px"
+                lineHeight="42px"
+                fontWeight="700"
+                color={Colors.black}
+                margin="0 0 6px 0"
+                textAlign="left"
+              >
+                {
+                  getNoJobGuaranteeConfig(
+                    currentLocation,
+                    course?.value || defaultCourse,
+                    info
+                  ).monthly_label
+                }
+              </H2>
+            ) : monthlyPriceText ? (
+              <H2
+                fontSize="36px"
+                lineHeight="42px"
+                fontWeight="700"
+                color={Colors.black}
+                margin="0 0 6px 0"
+                textAlign="left"
+              >
+                {monthlyPriceText}
+              </H2>
+            ) : null}
             <H2
               fontSize="36px"
               lineHeight="42px"
@@ -279,20 +462,30 @@ const FinancialOptionsDesktop = ({
               margin="0 0 6px 0"
               textAlign="left"
             >
-              {currentPlan?.price || ""}
+              {jobGuarantee &&
+              getJobGuaranteeConfig(
+                currentLocation,
+                course?.value || defaultCourse,
+                info
+              )?.monthly_label
+                ? ""
+                : getNoJobGuaranteeConfig(
+                    currentLocation,
+                    course?.value || defaultCourse,
+                    info
+                  )?.monthly_label
+                ? ""
+                : monthlyPriceText
+                ? ""
+                : currentPlan?.price || ""}
             </H2>
-            {currentPlan?.original_price && (
-              <Paragraph color="#B4B4B4" margin="0 0 8px 0" textAlign="left">
-                <s>{currentPlan.original_price}</s>
-              </Paragraph>
-            )}
             <Paragraph
               color={Colors.black}
               fontSize="14px"
               margin="0 0 6px 0"
               textAlign="left"
             >
-              {currentPlan?.payment_time}
+              {info?.financing_message}
             </Paragraph>
             {currentPlan?.warning_message && (
               <Paragraph
@@ -305,70 +498,78 @@ const FinancialOptionsDesktop = ({
               </Paragraph>
             )}
           </Div>
-
-          {/* Job Guarantee toggle - Commented out for review
-        {availablePlans?.some((p) => p.price) && (
-          <Div margin="16px 0 0 0" display="block">
-            <Div alignItems="center">
+          {availablePlans?.some((p) => p.price) &&
+            shouldShowJobGuarantee(
+              currentLocation,
+              course?.value || defaultCourse,
+              info
+            ) &&
+            schedule !== "full_time" && (
               <Div
-                position="relative"
-                width="42px"
-                height="22px"
-                borderRadius="9999px"
-                background={jobGuarantee ? Colors.blue : Colors.lightGray}
-                onClick={() => setJobGuarantee && setJobGuarantee(!jobGuarantee)}
-                cursor="pointer"
+                margin="16px 0 0 0"
+                display="block"
+                background="#f8f9fa"
+                padding="16px"
+                borderRadius="8px"
+                border="1px solid #e9ecef"
               >
-                <Div
-                  position="absolute"
-                  top="2px"
-                  left={jobGuarantee ? "22px" : "2px"}
-                  width="18px"
-                  height="18px"
-                  borderRadius="9999px"
-                  background={Colors.white}
-                  transition="left 0.2s ease-in-out"
-                />
-              </Div>
-              <H4 fontSize_tablet="18px" fontSize_xs="16px" margin="0 0 0 10px">
-                {info.job_guarantee.title}
-              </H4>
-            </Div>
-            <Paragraph textAlign="left" color={Colors.black} margin="8px 0 0 0">
-              {info.job_guarantee.description}
-            </Paragraph>
-          </Div>
-        )} */}
-
-          {/* Bullets from selected plan */}
-          {currentPlan?.bullets && currentPlan.bullets.length > 0 && (
-            <Div display="block" margin="24px 0 0 0">
-              <Div
-                borderTop={`1px solid #ebebeb`}
-                width="60%"
-                margin="0 0 12px 0"
-              />
-              {currentPlan.bullets.map((bullet, index) => (
-                <Div key={index} alignItems="center" margin="12px 0 0 0">
-                  <Icon
-                    icon="check"
-                    width="17px"
-                    height="17px"
-                    style={{ marginRight: "10px" }}
-                    color={Colors.blue}
-                    fill={Colors.blue}
-                  />
-                  <Paragraph
-                    color={Colors.black}
-                    textAlign="left"
-                    dangerouslySetInnerHTML={{ __html: bullet }}
-                  />
+                <Div alignItems="left" display="flex">
+                  <Toggle
+                    width="42px"
+                    height="22px"
+                    margin="0 0 0 12px"
+                    b_radius="9999px"
+                    bg={jobGuarantee ? Colors.blue : Colors.lightGray}
+                    onClick={() =>
+                      setJobGuarantee && setJobGuarantee(!jobGuarantee)
+                    }
+                  >
+                    <Div position="relative" width="42px" height="22px">
+                      <Div
+                        position="absolute"
+                        top="2px"
+                        left={jobGuarantee ? "22px" : "2px"}
+                        width="18px"
+                        height="18px"
+                        borderRadius="9999px"
+                        background={Colors.white}
+                        transition="left 0.2s ease-in-out"
+                      />
+                    </Div>
+                  </Toggle>
+                  <H4
+                    fontSize_tablet="18px"
+                    fontSize_xs="16px"
+                    margin="0"
+                    padding="0"
+                  >
+                    {
+                      getJobGuaranteeConfig(
+                        currentLocation,
+                        course?.value || defaultCourse,
+                        info
+                      )?.title
+                    }
+                  </H4>
                 </Div>
-              ))}
-            </Div>
-          )}
-
+                <Paragraph
+                  textAlign="left"
+                  color={Colors.black}
+                  margin="8px 0 0 0"
+                >
+                  {
+                    getJobGuaranteeConfig(
+                      currentLocation,
+                      course?.value || defaultCourse,
+                      info
+                    )?.description
+                  }
+                </Paragraph>
+              </Div>
+            )}
+          {/* Bullets from selected plan removed on desktop per revamp */}
           {/* Partner logos from YAML icons */}
+          <Div flexGrow="1" /> {/* This pushes the icons to the bottom */}
           {currentPlan?.icons && currentPlan.icons.length > 0 && (
             <Div
               className="icons"
@@ -377,7 +578,7 @@ const FinancialOptionsDesktop = ({
               borderRadius="26px"
               width="fit-content"
               alignItems="center"
-              margin="16px 0 24px 0"
+              margin="0 0 24px 0"
             >
               {currentPlan.icons.map((icon) => (
                 <Img
@@ -408,26 +609,17 @@ const FinancialOptionsDesktop = ({
             margin="0 0 12px 0"
             textAlign="left"
           >
-            {"Other payment options"}
+            {info.other_payment_options}
           </H3>
           {(paymentOptions || []).map((option) => {
-            const isSelected = selectedPlan === option.id;
             return (
               <Div
                 key={option.id}
-                border={
-                  isSelected
-                    ? `2px solid ${Colors.blue}`
-                    : `1px solid ${Colors.lightGray}`
-                }
-                background={isSelected ? Colors.veryLightBlue3 : Colors.white}
-                padding="16px"
+                border="none"
+                background={Colors.verylightGray3}
+                padding="8px"
                 borderRadius="8px"
-                margin="0 0 12px 0"
-                cursor="pointer"
-                onClick={() => {
-                  setSelectedPlan && setSelectedPlan(option.id);
-                }}
+                cursor="default"
               >
                 <Div display="block" width="100%">
                   {option.recomended && (
@@ -459,7 +651,9 @@ const FinancialOptionsDesktop = ({
                     fontSize="14px"
                     textAlign="left"
                   >
-                    {option.description}
+                    {jobGuarantee && option.job_guarantee_description
+                      ? option.job_guarantee_description
+                      : option.description}
                   </Paragraph>
                 </Div>
               </Div>
@@ -486,9 +680,10 @@ const FinancialOptionsDesktop = ({
           gap="12px"
         >
           <Link
-            to={`${info?.cta?.apply_link || "/us/apply"}${
-              selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-            }`}
+            to={`${
+              getRegionalCTA(session, info)?.apply_link ||
+              FALLBACK_VALUES.applyLink
+            }${selectedPlan ? `?utm_plan=${selectedPlan}` : ""}`}
           >
             <Button
               variant="full"
@@ -507,22 +702,29 @@ const FinancialOptionsDesktop = ({
                 }
               }}
             >
-              {info.cta.book_call}
+              {getRegionalCTA(session, info)?.book_call ||
+                FALLBACK_VALUES.bookCallText}
             </Button>
           </Link>
 
-          <Link to={info?.cta?.more_details_link || "/us/financials"}>
-            <Button
-              background="transparent"
-              textColor={Colors.blue}
-              fontSize="14px"
-              padding="12px 24px"
-              borderRadius="6px"
-              fontWeight="600"
+          {shouldShowMoreDetails(financial) && (
+            <Link
+              to={
+                info?.cta?.more_details_link || FALLBACK_VALUES.financialsLink
+              }
             >
-              {info.cta.more_details}
-            </Button>
-          </Link>
+              <Button
+                background="transparent"
+                textColor={Colors.blue}
+                fontSize="14px"
+                padding="12px 24px"
+                borderRadius="6px"
+                fontWeight="600"
+              >
+                {info.cta.more_details}
+              </Button>
+            </Link>
+          )}
         </Div>
       </Div>
     </>
@@ -539,6 +741,13 @@ const FinancialOptionsCard = ({
   availablePlans,
   isLocationDropdownOpen,
   isProgramDropdownOpen,
+  jobGuarantee,
+  setJobGuarantee,
+  currentLocation,
+  financial,
+  schedule,
+  course,
+  defaultCourse,
 }) => {
   // Build options list from available plans (YAML-driven)
   const paymentOptions = useMemo(
@@ -546,14 +755,15 @@ const FinancialOptionsCard = ({
       (availablePlans || []).map((plan) => ({
         id: plan.slug,
         title: plan.scholarship,
-        description: plan.payment_time,
+        description: plan.description,
+        job_guarantee_description: plan.job_guarantee_description,
         details: plan.warning_message,
         price: plan.price,
-        originalPrice: plan.original_price,
+
         icons: plan.icons,
         recomended: plan.recomended,
         recommended_color: plan.recommended_color,
-        bullets: plan.bullets,
+
         offer: plan.offer,
       })),
     [availablePlans]
@@ -561,7 +771,9 @@ const FinancialOptionsCard = ({
 
   // Get currently selected option or default to first one
   const currentOption = useMemo(
-    () => paymentOptions.find((opt) => opt.id === selectedPlan) || paymentOptions[0],
+    () =>
+      paymentOptions.find((opt) => opt.id === selectedPlan) ||
+      paymentOptions[0],
     [paymentOptions, selectedPlan]
   );
 
@@ -578,11 +790,7 @@ const FinancialOptionsCard = ({
         boxShadow="0 8px 32px rgba(0,0,0,0.25)"
         position="relative"
       >
-        {currentOption?.offer && (
-          <OfferTag isHidden={isLocationDropdownOpen || isProgramDropdownOpen}>
-            {currentOption.offer}
-          </OfferTag>
-        )}
+        {/* Offer tag removed on mobile per revamp */}
         <Div display="block" margin="0 0 24px 0">
           <H3
             fontSize="18px"
@@ -594,25 +802,137 @@ const FinancialOptionsCard = ({
             {info.plan_details}
           </H3>
 
-          <Div alignItems="center" justifyContent="center" margin="0 0 16px 0">
-            <H2
-              fontSize="32px"
-              fontWeight="700"
+          <Div
+            alignItems="center"
+            justifyContent="center"
+            margin="0 0 16px 0"
+            display="block"
+          >
+            {jobGuarantee &&
+            getJobGuaranteeConfig(
+              currentLocation,
+              course?.value || defaultCourse,
+              info
+            )?.monthly_label ? (
+              <H2
+                fontSize="32px"
+                fontWeight="700"
+                color={Colors.black}
+                margin="0 8px 0 0"
+              >
+                {
+                  getJobGuaranteeConfig(
+                    currentLocation,
+                    course?.value || defaultCourse,
+                    info
+                  ).monthly_label
+                }
+              </H2>
+            ) : getNoJobGuaranteeConfig(
+                currentLocation,
+                course?.value || defaultCourse,
+                info
+              )?.monthly_label ? (
+              <H2
+                fontSize="32px"
+                fontWeight="700"
+                color={Colors.black}
+                margin="0 8px 0 0"
+              >
+                {
+                  getNoJobGuaranteeConfig(
+                    currentLocation,
+                    course?.value || defaultCourse,
+                    info
+                  ).monthly_label
+                }
+              </H2>
+            ) : (
+              <H2
+                fontSize="32px"
+                fontWeight="700"
+                color={Colors.black}
+                margin="0 8px 0 0"
+              >
+                {currentOption?.price || ""}
+              </H2>
+            )}
+            <Paragraph
+              fontSize="16px"
               color={Colors.black}
-              margin="0 8px 0 0"
+              margin="0"
+              textAlign="center"
             >
-              {currentOption?.price || ""}
-            </H2>
-            <Paragraph fontSize="16px" color={Colors.black} margin="0">
-              {currentOption?.description || ""}
+              {info?.financing_message}
             </Paragraph>
           </Div>
 
-          {currentOption?.originalPrice && (
-            <Paragraph color="#B4B4B4" margin="0 0 8px 0" textAlign="center">
-              <s>{currentOption.originalPrice}</s>
-            </Paragraph>
-          )}
+          {availablePlans?.some((p) => p.price) &&
+            shouldShowJobGuarantee(
+              currentLocation,
+              course?.value || defaultCourse,
+              info
+            ) &&
+            schedule !== "full_time" && (
+              <Div
+                margin="8px 0 0 0"
+                display="block"
+                alignItems="center"
+                justifyContent="center"
+              >
+                <Div alignItems="center" justifyContent="center">
+                  <Toggle
+                    width="42px"
+                    height="22px"
+                    b_radius="9999px"
+                    bg={jobGuarantee ? Colors.blue : Colors.lightGray}
+                    onClick={() =>
+                      setJobGuarantee && setJobGuarantee(!jobGuarantee)
+                    }
+                  >
+                    <Div position="relative" width="42px" height="22px">
+                      <Div
+                        position="absolute"
+                        top="2px"
+                        left={jobGuarantee ? "22px" : "2px"}
+                        width="18px"
+                        height="18px"
+                        borderRadius="9999px"
+                        background={Colors.white}
+                        transition="left 0.2s ease-in-out"
+                      />
+                    </Div>
+                  </Toggle>
+                  <H4
+                    fontSize_tablet="18px"
+                    fontSize_xs="16px"
+                    margin="0 0 0 10px"
+                  >
+                    {
+                      getJobGuaranteeConfig(
+                        currentLocation,
+                        course?.value || defaultCourse,
+                        info
+                      )?.title
+                    }
+                  </H4>
+                </Div>
+                <Paragraph
+                  textAlign="center"
+                  color={Colors.black}
+                  margin="8px 0 0 0"
+                >
+                  {
+                    getJobGuaranteeConfig(
+                      currentLocation,
+                      course?.value || defaultCourse,
+                      info
+                    )?.description
+                  }
+                </Paragraph>
+              </Div>
+            )}
+
           {currentOption?.warning_message && (
             <Paragraph
               color={Colors.darkGray}
@@ -642,6 +962,7 @@ const FinancialOptionsCard = ({
               option={option}
               selectedPlan={selectedPlan}
               setSelectedPlan={setSelectedPlan}
+              jobGuarantee={jobGuarantee}
             />
           ))}
         </Div>
@@ -667,9 +988,10 @@ const FinancialOptionsCard = ({
           margin="0 auto"
         >
           <Link
-            to={`${info?.cta?.apply_link || "/us/apply"}${
-              selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-            }`}
+            to={`${
+              getRegionalCTA(session, info)?.apply_link ||
+              FALLBACK_VALUES.applyLink
+            }${selectedPlan ? `?utm_plan=${selectedPlan}` : ""}`}
           >
             <Button
               variant="full"
@@ -688,22 +1010,29 @@ const FinancialOptionsCard = ({
                 }
               }}
             >
-              {info.cta.book_call}
+              {getRegionalCTA(session, info)?.book_call ||
+                FALLBACK_VALUES.bookCallText}
             </Button>
           </Link>
 
-          <Link to={info?.cta?.more_details_link || "/us/financials"}>
-            <Button
-              background="transparent"
-              textColor={Colors.blue}
-              fontSize="14px"
-              padding="12px 32px"
-              borderRadius="6px"
-              fontWeight="600"
+          {shouldShowMoreDetails(financial) && (
+            <Link
+              to={
+                info?.cta?.more_details_link || FALLBACK_VALUES.financialsLink
+              }
             >
-              {info.cta.more_details}
-            </Button>
-          </Link>
+              <Button
+                background="transparent"
+                textColor={Colors.blue}
+                fontSize="14px"
+                padding="12px 32px"
+                borderRadius="6px"
+                fontWeight="600"
+              >
+                {info.cta.more_details}
+              </Button>
+            </Link>
+          )}
         </Div>
       </Div>
     </>
@@ -722,28 +1051,47 @@ const PricesAndPayment = (props) => {
             fields {
               lang
             }
+            job_guarantee_locations
+            job_guarantee_courses
             get_notified
             contact_carrer_advisor
             contact_link
             we_accept
+            other_payment_options
             top_label
             top_label_2
             plans_title
             plan_details
+            financing_message
             select
             select_2
             job_guarantee {
+              slug
+              academies
+              courses
               title
               description
+              monthly_label
             }
-            recomended
+            no_job_guarantee {
+              slug
+              academies
+              courses
+              monthly_label
+            }
             not_available
             not_available_job_guarantee
             cta {
               advisor_text
-              book_call
+              america {
+                book_call
+                apply_link
+              }
+              international {
+                book_call
+                apply_link
+              }
               more_details
-              apply_link
               more_details_link
             }
           }
@@ -758,12 +1106,13 @@ const PricesAndPayment = (props) => {
               recomended
               recommended_color
               scholarship
-              payment_time
+              description
+              job_guarantee_description
               price
-              original_price
+
               warning_message
               offer
-              bullets
+
               icons
             }
             part_time {
@@ -772,12 +1121,13 @@ const PricesAndPayment = (props) => {
               recomended
               recommended_color
               scholarship
-              payment_time
+              description
+              job_guarantee_description
               price
-              original_price
+
               warning_message
               offer
-              bullets
+
               icons
             }
             fields {
@@ -829,9 +1179,19 @@ const PricesAndPayment = (props) => {
 
   const getCurrentPlans = () => {
     // If we're on a specific course page, use defaultCourse directly
-    const courseToUse = props.financial
+    const rawCourse = props.financial
       ? course?.value || props.defaultCourse
       : props.defaultCourse;
+
+    // Normalize course slug to match plan filenames
+    const courseToUse = (() => {
+      const lower = (rawCourse || "").toLowerCase();
+      const aliasMap = {
+        "full-stack-ft": "full-stack", // full-time uses same plans as part-time
+        "cyber-security": "cybersecurity",
+      };
+      return aliasMap[lower] || lower;
+    })();
 
     let _plans = data.allPlansYaml.edges
       .filter(({ node }) => node.fields.lang === props.lang)
@@ -863,8 +1223,11 @@ const PricesAndPayment = (props) => {
 
     if (currentPlans && currentLocation) {
       return currentPlans
-        .filter((plan) =>
-          plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
+        .filter(
+          (plan) =>
+            plan.academies.includes(
+              currentLocation.fields.file_name.slice(0, -3)
+            ) || plan.academies.includes("all")
         )
         .filter((plan) => {
           if (jobGuarantee) {
@@ -927,9 +1290,9 @@ const PricesAndPayment = (props) => {
     }
     const filteredPlans = getAvailablePlans();
     setAvailablePlans(filteredPlans);
-    setSelectedPlan(filteredPlans[0]?.slug);
+    setSelectedPlan(null);
     setIsLoading(false);
-  }, [jobGuarantee, currentLocation, course, props.financial]);
+  }, [currentLocation, course, props.financial]);
 
   const city = session && session.location ? session.location.city : [];
 
@@ -958,8 +1321,11 @@ const PricesAndPayment = (props) => {
 
         currentPlans = currentPlans?.node[schedule];
 
-        const availablePlans = currentPlans?.filter((plan) =>
-          plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
+        const availablePlans = currentPlans?.filter(
+          (plan) =>
+            plan.academies.includes(
+              currentLocation.fields.file_name.slice(0, -3)
+            ) || plan.academies.includes("all")
         );
 
         if (availablePlans && availablePlans.length > 0) {
@@ -1117,6 +1483,11 @@ const PricesAndPayment = (props) => {
             availablePlans={availablePlans}
             isLocationDropdownOpen={isLocationDropdownOpen}
             isProgramDropdownOpen={isProgramDropdownOpen}
+            currentLocation={currentLocation}
+            financial={props.financial}
+            schedule={schedule}
+            course={course}
+            defaultCourse={props.defaultCourse}
           />
           {/* Financial explainer card (mobile) */}
           <Div
@@ -1135,6 +1506,13 @@ const PricesAndPayment = (props) => {
               availablePlans={availablePlans}
               isLocationDropdownOpen={isLocationDropdownOpen}
               isProgramDropdownOpen={isProgramDropdownOpen}
+              jobGuarantee={jobGuarantee}
+              setJobGuarantee={setJobGuarantee}
+              currentLocation={currentLocation}
+              financial={props.financial}
+              schedule={schedule}
+              course={course}
+              defaultCourse={props.defaultCourse}
             />
           </Div>
         </>

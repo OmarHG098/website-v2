@@ -1,0 +1,163 @@
+---
+globs: src/data/components/prices_and_payment/*,src/data/plans/*,src/components/PricesAndPayment/index.js
+alwaysApply: false
+---
+I'll scan the `PricesAndPayment` component and its related YAML files to extract how it works, what data it consumes, and where that data lives. Then I'll draft a structured context rule with exact mappings and conditions.
+
+[3 tools called]
+
+I'll open a few plan YAML files to confirm structure and keys used by the component so I can map them precisely in the rule.
+
+[1 tool called]
+
+I reviewed `src/components/PricesAndPayment/index.js` and the related YAML files under `src/data/components/prices_and_payment` and `src/data/plans`. I’ll now provide the requested context rule with precise mappings and conditions.
+
+### Context Rule: pricesandpayment Component
+- Version: v1.4, 2025-08-26
+- Applies to: `src/components/PricesAndPayment/index.js`
+- Languages: English (US) and Spanish (ES)
+
+### 1) Component Functionality
+- Purpose: Render location- and program-specific pricing and payment options, sourced from YAML, with optional plan selection and CTAs.
+- Inputs (props):
+  - `lang`: `"us"` or `"es"`; used to filter content and plans by `fields.lang`.
+  - `locations`: GraphQL-provided list of locations; user selects one.
+  - `programs`: Program list to populate the Program dropdown (when `financial`).
+  - `defaultCourse`: Course slug (e.g., `full_stack`) used to locate the relevant plan file.
+  - `defaultSchedule`: `"part_time"` or `"full_time"`; selects the plan group inside the plan file.
+  - `financial` (boolean): Enables showing the Program dropdown and multi-select location behavior.
+  - `background`: Optional styling background.
+- Internal state/flow:
+  - Loads UI copy from `allPricesAndPaymentYaml` where `fields.lang === props.lang` into `info`.
+  - Loads plans from `allPlansYaml` and selects:
+    - File match by `fields.file_name.includes(courseToUse.replaceAll("_","-"))`, where `courseToUse` is `props.defaultCourse` (or selected program if `financial`).
+    - Plan group by schedule: `node[ schedule ]` where `schedule ∈ { full_time, part_time }`.
+    - Location filter: only plans where `plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))`. The `slice(0, -3)` removes the language suffix (e.g., `-us`/`-es`) from the academy file name.
+    - Optional job guarantee filter: if `jobGuarantee === true`, keep only plans with a truthy `plan.price`. Note: job guarantee toggle UI is commented out; state defaults to false and is reset on location change.
+  - Selection:
+    - `selectedPlan` defaults to the first available plan’s `slug`.
+    - Users can switch plan via desktop option cards or mobile accordion cards.
+  - Output/CTAs:
+    - Renders pricing (`price`, `original_price`, `payment_time`) and `icons`. Desktop must NOT render plan `bullets` and must NOT show offer tag. Mobile continues to render `bullets` in expanded option.
+    - On CTA click, stores `utm_plan = selectedPlan` into `session.utm` and navigates to `info.cta.apply_link` (with `?utm_plan=...`).
+    - Displays a “We Accept” row with crypto logos and the `info.we_accept` label.
+    - If no plans for selection: shows `info.not_available` or `info.not_available_job_guarantee` HTML.
+
+### 2) Source YML Files (complete list used by this component)
+- Component copy (localization/labels/CTA):
+  - `/workspaces/website-v2/src/data/components/prices_and_payment/prices_and_payment.us.yml`
+  - `/workspaces/website-v2/src/data/components/prices_and_payment/prices_and_payment.es.yml`
+- Plan data (per course and language) consumed by `allPlansYaml`:
+  - `/workspaces/website-v2/src/data/plans/full-stack.us.yml`
+  - `/workspaces/website-v2/src/data/plans/full-stack.es.yml`
+  - `/workspaces/website-v2/src/data/plans/machine-learning.us.yml`
+  - `/workspaces/website-v2/src/data/plans/machine-learning.es.yml`
+  - `/workspaces/website-v2/src/data/plans/software-engineering.us.yml`
+  - `/workspaces/website-v2/src/data/plans/software-engineering.es.yml`
+  - `/workspaces/website-v2/src/data/plans/datascience-ml.us.yml`
+  - `/workspaces/website-v2/src/data/plans/datascience-ml.es.yml`
+  - `/workspaces/website-v2/src/data/plans/cybersecurity.us.yml`
+  - `/workspaces/website-v2/src/data/plans/cybersecurity.es.yml`
+  - `/workspaces/website-v2/src/data/plans/applied-ai.us.yml`
+  - `/workspaces/website-v2/src/data/plans/applied-ai.es.yml`
+- Within plan files, per plan entry the component reads:
+  - `slug`, `academies[]`, `recomended`, `recommended_color`, `scholarship`, `payment_time`, `price`, `original_price`, `warning_message`, `offer`, `bullets[]`, `icons[]`.
+- Payment method configurations:
+  - Global “We Accept” label from content YAML: `we_accept`.
+  - Per-plan partner/payment logos via `icons[]` in the plan entries.
+  - The component also shows fixed images `/images/bitcoin.png` and `/images/ethereum.png` in the accepted methods row.
+
+### 3) Directory Structure and Paths
+- Component code:
+  - `/workspaces/website-v2/src/components/PricesAndPayment/index.js`
+- Component content YAML:
+  - `/workspaces/website-v2/src/data/components/prices_and_payment/prices_and_payment.us.yml`
+  - `/workspaces/website-v2/src/data/components/prices_and_payment/prices_and_payment.es.yml`
+- Plans (GraphQL `allPlansYaml`):
+  - `/workspaces/website-v2/src/data/plans/*.us.yml`
+  - `/workspaces/website-v2/src/data/plans/*.es.yml`
+- Related media referenced by YAML (icons/logos):
+  - Typically under `/workspaces/website-v2/src/assets` or `/workspaces/website-v2/src/images` (as referenced by `icons[]` paths like `/images/visa-mastercard.png`, `/images/ascent_logo.png`, etc.).
+
+### 4) Data Output (what the component produces/uses downstream)
+- On-screen data:
+  - Desktop: Non-clickable option boxes. No `offer` tag. No `bullets[]`. Show a derived monthly headline on the left column using a monthly price detected from YAML plan `price` fields (e.g., "$299/month or less"). If Job Guarantee toggle is ON, override the headline with `job_guarantee.monthly_label`. If toggle is OFF and `no_job_guarantee.monthly_label` exists, use it. Else fallback to derived monthly or current plan `price`.
+  - Mobile: same as desktop plus `bullets[]` shown in the expanded `PaymentOptionCard`.
+  - “We Accept” label and crypto logos row.
+  - Availability messages when no plans are found for the chosen combination.
+- Session/analytics:
+  - On CTA click, sets `session.utm.utm_plan = selectedPlan`.
+- Not computed by this component:
+  - No numeric price calculations, discounts math, or taxes; all figures are pre-formatted strings from YAML.
+  - No currency conversion; currency symbols and values come directly from YAML per region/plan.
+
+### 5) Location Conditions and Regional Constraints
+- Country-specific pricing rules:
+  - Enforced via `academies[]` in each plan entry. A plan is “available” if `academies` contains the current location’s academy code.
+  - Academy code is derived from `currentLocation.fields.file_name.slice(0, -3)` to remove the language suffix.
+- Regional tax requirements:
+  - None computed or displayed here. Any tax consideration must be pre-baked into displayed strings in YAML or handled elsewhere.
+- Currency conversion logic:
+  - None. Prices are strings (e.g., `$13,499`, `€4,750*`, `3.040.000 CLP`) and rendered as-is.
+- Local payment method availability:
+  - Reflected by plan-specific `icons[]` (e.g., Ascent, Climb, TFC, Zank, Sequra, Nemuru, etc.) and global accepted crypto.
+- Location selection:
+  - Location dropdown excludes entries whose slug contains `"online"`.
+  - If the user session has a location, it’s pre-selected.
+- Fallback when unavailable:
+  - Displays `info.not_available` or `info.not_available_job_guarantee` HTML depending on the `jobGuarantee` flag.
+
+### 6) Plan Variations and Terms
+- Schedules:
+  - Two groups per plan file: `full_time` and `part_time`. Selection controlled by `defaultSchedule` or user selection.
+- Plan tiers/features (per plan item):
+  - Title: `scholarship` (e.g., “Pay upfront”, “Financed”, “Job Guarantee”, “Scholarships Available”).
+  - Pricing structure: `price` (string), optional `original_price`, optional `offer`.
+  - Terms/description: `payment_time`, optional `warning_message`, and `bullets[]`.
+  - Visual tags: `recomended`, `recommended_color`, and `icons[]`.
+- Course variations:
+  - Plans are segmented by course via plan file names (e.g., `full-stack.{lang}.yml`, `machine-learning.{lang}.yml`, etc.). The component matches files by checking whether `fields.file_name` contains the hyphenated course slug (`defaultCourse.replaceAll("_","-")`).
+- Payment terms:
+  - Display-only; pulled from `payment_time` and `bullets[]`. No internal validation or enforcement.
+- Upgrade/downgrade rules:
+  - None in this component. Any such policy must be handled outside or documented in plan YAML `bullets` copy if needed.
+
+### Data Mappings (key references)
+- Content YAML (`prices_and_payment.{lang}.yml`) → `info`:
+  - `plans_title`, `plan_details`, `select`, `select_2`, `top_label`, `top_label_2`, `we_accept`, `get_notified`, `contact_carrer_advisor`, `contact_link`, `cta.{advisor_text,book_call,more_details,apply_link,more_details_link}`, `not_available`, `not_available_job_guarantee`, `job_guarantee.{title,description,monthly_label}`, `no_job_guarantee.{monthly_label}`
+- Plans YAML (`{course}.{lang}.yml`) → plan cards:
+  - `slug` → internal plan id/selection
+  - `scholarship` → plan title
+  - `payment_time` → short description
+  - `price`, `original_price`, `offer`, `warning_message`
+  - `bullets[]` → features list (HTML allowed)
+  - `icons[]` → partner/payment logos
+  - `recomended`, `recommended_color` → tag
+  - `academies[]` → location availability filter
+- Conditional logic:
+  - Language match: `fields.lang === props.lang`
+  - Course match: `fields.file_name.includes(courseToUse.replaceAll("_","-"))`
+  - Schedule select: `node[ schedule ]`
+  - Location filter: `plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))`
+  - Job guarantee filter: if enabled, `Boolean(plan.price)` (UI toggle currently hidden)
+
+### Exact File Paths (authoritative)
+- Component: `/workspaces/website-v2/src/components/PricesAndPayment/index.js`
+- Content YAML:
+  - `/workspaces/website-v2/src/data/components/prices_and_payment/prices_and_payment.us.yml`
+  - `/workspaces/website-v2/src/data/components/prices_and_payment/prices_and_payment.es.yml`
+- Plan YAMLs (current set):
+  - `/workspaces/website-v2/src/data/plans/full-stack.us.yml`
+  - `/workspaces/website-v2/src/data/plans/full-stack.es.yml`
+  - `/workspaces/website-v2/src/data/plans/machine-learning.us.yml`
+  - `/workspaces/website-v2/src/data/plans/machine-learning.es.yml`
+  - `/workspaces/website-v2/src/data/plans/software-engineering.us.yml`
+  - `/workspaces/website-v2/src/data/plans/software-engineering.es.yml`
+  - `/workspaces/website-v2/src/data/plans/datascience-ml.us.yml`
+  - `/workspaces/website-v2/src/data/plans/datascience-ml.es.yml`
+  - `/workspaces/website-v2/src/data/plans/cybersecurity.us.yml`
+  - `/workspaces/website-v2/src/data/plans/cybersecurity.es.yml`
+  - `/workspaces/website-v2/src/data/plans/applied-ai.us.yml`
+  - `/workspaces/website-v2/src/data/plans/applied-ai.es.yml`
+
+

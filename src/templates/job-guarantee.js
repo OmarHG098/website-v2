@@ -312,9 +312,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             lineHeight_tablet="28px"
             lineHeight_sm="26px"
             lineHeight_xs="24px"
-          >
-            {yml.header.sub_title}
-          </SubTitle>
+            dangerouslySetInnerHTML={{ __html: yml.header.sub_title }}
+          />
 
           <Paragraph
             color={Colors.black}
@@ -457,10 +456,13 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           width_tablet="100%"
           maxWidth="1280px"
           we_trust={yml.we_trust_section}
+          titleProps={{
+            textAlign: "center",
+          }}
         />
       </div>
       {/* Video: 2. See How one graduate turned our JG into a real career */}
-      <Container
+      {/* <Container
         id="two_column_right"
         flexDirection="column"
         margin="0"
@@ -486,7 +488,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           proportions={yml.two_columns_video?.proportions}
           session={session}
         />
-      </Container>
+      </Container> */}
+
       {/* Eligibility: 3. Who's Eligible? */}
       <TwoColumn
         padding="30px 20px"
@@ -628,7 +631,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           padding_tablet="42px 0"
         >
           <H2 margin="0 0 15px 0">{yml.how_it_works.title}</H2>
-          <SubTitle>{yml.how_it_works.text}</SubTitle>
+          <SubTitle
+            dangerouslySetInnerHTML={{ __html: yml.how_it_works.text }}
+          />
         </Div>
         <Div
           margin="auto"
@@ -712,7 +717,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                   fontSize={step.highlight ? "16px" : "14px"}
                   fontSize_tablet={step.highlight ? "22px" : "20px"}
                   fontSize_md={step.highlight ? "22px" : "20px"}
-                  color={step.highlight ? "#FFB718" : "#000"}
+                  color={step?.highlight ? "#FFB718" : "#000"}
                   opacity="1"
                   maxWidth="100px"
                   maxWidth_tablet="120px"
@@ -897,10 +902,12 @@ export const query = graphql`
 
           we_trust_section {
             title
+            bg_full
             text
             boxes {
               icon
               title
+              label
               text
             }
           }
@@ -910,7 +917,6 @@ export const query = graphql`
             steps {
               icon
               title
-              highlight
             }
             link {
               url

@@ -34,6 +34,7 @@ import TwoColumn from "../TwoColumn/index.js";
 import { SingleColumn } from "../TwoColumn/index.js";
 import Iconogram from "../Iconogram/index.js";
 import { background } from "@storybook/theming";
+import WeTrust from "../WeTrust";
 
 const Title = ({ id, title, paragraph }) => {
   return (
@@ -269,6 +270,54 @@ Columns.defaultProps = {
 };
 
 export const landingSections = {
+  we_trust_section: ({ data, yml }) => {
+    let dataYml =
+      data.allLandingYaml.edges[0] || data.allDownloadableYaml.edges[0];
+    let we_trust_data = dataYml.node.we_trust_section;
+
+    return (
+      <WeTrust
+        id="we-trust-section"
+        margin="0"
+        padding="0"
+        padding_md="0"
+        padding_lg="0"
+        padding_tablet="0 !important"
+        width="100%"
+        width_md="100%"
+        width_tablet="100%"
+        maxWidth="1280px"
+        we_trust={we_trust_data}
+      />
+    );
+  },
+  choose_program: ({ data, pageContext, yml, course, location, index }) => {
+    let dataYml =
+      data.allLandingYaml.edges[0] || data.allDownloadableYaml.edges[0];
+    let choose_program_data = dataYml.node.choose_program;
+
+    // Build list of course slugs that have job guarantee enabled
+    const jobGuaranteeSlugs = data.allCourseYaml.edges
+      .filter(({ node }) => node.meta_info?.job_guarantee)
+      .map(({ node }) => node.meta_info.slug);
+
+    const programs =
+      data.allChooseYourProgramYaml.edges[0].node.programs.filter((p) => {
+        const linkSlug = p.link?.split("/").filter(Boolean).pop();
+        return jobGuaranteeSlugs.includes(linkSlug);
+      });
+
+    return (
+      <ChooseYourProgram
+        lang={pageContext.lang}
+        title={choose_program_data.title}
+        paragraph={choose_program_data.paragraph}
+        background={Colors.veryLightBlue3}
+        programs={programs}
+        padding="0"
+      />
+    );
+  },
   in_the_news: ({ session, pageContext, yml, course, location, index }) => (
     <GridContainer
       id="in_the_news"
@@ -372,9 +421,11 @@ export const landingSections = {
           width="100%"
           maxWidth="1280px"
         >
-          <H2 type="h2" padding="10px 0 60px 0">
-            {ratingReviews.heading}
-          </H2>
+          {ratingReviews.heading && (
+            <H2 type="h2" padding="10px 0 60px 0">
+              {ratingReviews.heading}
+            </H2>
+          )}
           <Div
             display="flex"
             flexDirection="column"
@@ -686,7 +737,10 @@ export const landingSections = {
         m_sm="0"
         p_xs="0"
       >
-        <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
+        <TestimonialsCarrousel
+          lang={data.allTestimonialsYaml.edges}
+          categories={yml.categories}
+        />
       </Div>
     );
   },
@@ -749,7 +803,8 @@ export const landingSections = {
   job_guarantee_small: ({ data, yml, index }) => {
     const { heading } = yml;
 
-    const { icons, link, title } = data.allJobGuaranteeSmallYaml.edges[0].node;
+    const { icons, link, title, text } =
+      data.allJobGuaranteeSmallYaml.edges[0].node;
     const formatedIcons = icons.map(({ title, icon }) => ({
       icon,
       content: title,
@@ -759,7 +814,7 @@ export const landingSections = {
         key={`job-guarantee-small-${index}`}
         content={{
           title: heading?.text || title,
-          link,
+          text,
           icons: formatedIcons,
         }}
       />
@@ -831,12 +886,42 @@ export const landingSections = {
   ),
   who_is_hiring: ({ session, data, pageContext, yml, location, index }) => {
     let dataYml =
+      data.allLandingYaml &&
       data.allLandingYaml.edges.length !== 0 &&
       data.allLandingYaml.edges[0].node?.who_is_hiring !== null
         ? data.allLandingYaml.edges
+        : data.allPageYaml &&
+          data.allPageYaml.edges.length !== 0 &&
+          data.allPageYaml.edges[0].node?.who_is_hiring !== null
+        ? data.allPageYaml.edges
         : data.allDownloadableYaml.edges;
 
     const hiring = data.allPartnerYaml.edges[0].node;
+    let landingHiring = dataYml[0].node?.who_is_hiring;
+
+    // Obtener featured del YAML específico
+    const featuredLogos = landingHiring?.featured;
+
+    // Determinar qué imágenes mostrar
+    let imagesToShow;
+    let featuredImagesToShow;
+
+    if (featuredLogos?.length > 0) {
+      // Si hay featured en el YAML, mostrar primero los featured y luego el resto
+      const featuredNames = featuredLogos.map((logo) => logo.name);
+      const remainingLogos = hiring.partners.images.filter(
+        (img) => !featuredNames.includes(img.name)
+      );
+      imagesToShow = [...featuredLogos, ...remainingLogos];
+      featuredImagesToShow = featuredLogos;
+    } else {
+      // Si NO hay featured, usar comportamiento por defecto
+      imagesToShow = hiring.partners.images;
+      featuredImagesToShow = hiring.partners.images.filter(
+        (img) => img.featured === true
+      );
+    }
+
     let landingHiriging = dataYml[0].node?.who_is_hiring;
 
     return (
@@ -844,29 +929,32 @@ export const landingSections = {
         id="who_is_hiring"
         key={index}
         flexDirection="column"
-        //margin="40px auto"
-        margin_tablet="60px auto 60px auto"
+        padding={landingHiriging?.padding || "0"}
+        padding_tablet={landingHiriging?.padding_tablet || "0"}
+        margin_tablet={landingHiriging?.margin || "60px auto 60px auto"}
         m_sm="0"
         p_xs="0"
         margin_xs="60px 0 40px 0"
+        background={landingHiriging?.background || ""}
       >
         <OurPartners
           multiLine
           variant="carousel"
-          images={hiring.partners.images}
+          background={landingHiriging?.background || ""}
+          images={imagesToShow}
           margin="0"
-          padding="0 ​0 75px 0"
+          padding="0 0 75px 0"
           marquee
           paddingFeatured="0 0 70px 0"
-          featuredImages={landingHiriging?.featured}
-          showFeatured
+          featuredImages={featuredImagesToShow}
+          showFeatured={true}
           withoutLine
           title={
-            landingHiriging ? landingHiriging.heading : hiring.partners.tagline
+            landingHiring ? landingHiring.heading : hiring.partners.tagline
           }
           paragraph={
-            landingHiriging
-              ? landingHiriging.sub_heading
+            landingHiring
+              ? landingHiring.sub_heading
               : hiring.partners.sub_heading
           }
         />

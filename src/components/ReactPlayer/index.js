@@ -119,7 +119,7 @@ const Player = ({
   image_thumb,
   left_tablet,
   right_tablet,
-  With_Modal,
+  withModal,
   imageWidth,
   imageWidth_tablet,
   imageHeight,
@@ -182,8 +182,6 @@ const Player = ({
     ? { ...JSON.parse(image_thumb?.style) }
     : null;
 
-  // With_Modal
-
   useEffect(() => {
     if (vid.pauseVideo) {
       vid.pauseVideo();
@@ -200,9 +198,9 @@ const Player = ({
       padding_xxs={padding_xxs}
       padding_tablet={padding_tablet}
     >
-      {showVideo ? (
+      {showVideo && (
         <>
-          {With_Modal ? (
+          {withModal ? (
             <Modal
               boxPadding="80px 5%"
               open={showVideo}
@@ -280,7 +278,9 @@ const Player = ({
             </Div>
           )}
         </>
-      ) : (
+      )}
+
+      {(showVideo === false || withModal) && (
         <Image
           width={imageWidth}
           width_tablet={imageWidth_tablet || "100%"}

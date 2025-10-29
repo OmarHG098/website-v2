@@ -6,7 +6,7 @@ faq:
     questions:
       - question: "Why 4Geeks Academy?"
         templates: ["faq"] # To show this question inside the faqs page just write "template: ["faq"]"
-        related_features: [] # online-platform, mentors-and-teachers, price, carreer-support, content-and-syllabus, job-guarantee, full-stack, cibersecurity, data-science, applied-ai, outcomes, scolarships, rigobot, learnPack, certification
+        related_features: [] # online-platform, mentors-and-teachers, price, career-support, content-and-syllabus, job-guarantee, full-stack, cibersecurity, data-science, applied-ai, outcomes, scolarships, rigobot, learnPack, certification
         priority: 0
         answer: |-
           We offer several advantages that make us stand out from other coding bootcamps:<br>
@@ -18,7 +18,7 @@ faq:
 
       - question: "Is 4Geeks a certified institution?" #all locations
         locations: ["all"]
-        related_features: [] # online-platform, mentors-and-teachers, price, carreer-support, content-and-syllabus, job-guarantee, full-stack, cibersecurity, data-science, applied-ai, outcomes, scholarships, rigobot, learnPack, certification
+        related_features: [] # online-platform, mentors-and-teachers, price, career-support, content-and-syllabus, job-guarantee, full-stack, cibersecurity, data-science, applied-ai, outcomes, scholarships, rigobot, learnPack, certification
         templates: ["faq"]
         priority: 1
         answer: |-
@@ -1808,7 +1808,7 @@ faq:
     questions:
       - question: "How does the 4Geeks Academy Job Guarantee work?"
         answer: |-
-          Our Job Guarantee ensures that if you meet all program requirements and still don’t get a qualifying tech job within 9 months of graduation, you are eligible for a full refund of your tuition. It’s our way of backing the real-world outcomes our bootcamp delivers.
+          Our Job Guarantee ensures that if you meet all program requirements and still don’t get a qualifying tech job within 9 months of graduation, you are eligible for a full refund of your tuition. It’s our way of backing the real-world outcomes our bootcamp delivers. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf" target="_blank" rel="noopener noreferrer">Conditions apply</a>.
       - question: "Does the Job Guarantee refund the full tuition if I don’t get hired?"
         answer: |-
           Yes. If you qualify for the Job Guarantee and don’t receive a qualifying job offer within the job search window, you’ll receive a full tuition refund.

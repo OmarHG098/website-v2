@@ -3,7 +3,7 @@ full_time:
     academies: ['downtown-miami', 'orlando']
     recomended: "★ Best Deal!"
     scholarship: "Scholarship"
-    payment_time: "Pay today"
+    description: "Pay today"
     price: "$4999"
     bullets: 
       - "You're saving $4000 USD "
@@ -15,7 +15,7 @@ full_time:
     recomended: "Low monthly payments"
     recommended_color: "veryLightBlue"
     scholarship: "Financed"
-    payment_time: "24 months payment"
+    description: "24 months payment"
     price: "$310"
     bullets: 
       - "With $400 p/ week living stipends"
@@ -29,7 +29,7 @@ full_time:
     recomended: "Accessible payment plan"
     recommended_color: "yellow"
     scholarship: "Full Payment"
-    payment_time: "Pay today"
+    description: "Pay today"
     price: "$8099"
     bullets: 
       - "You're saving $1000 USD"
@@ -39,7 +39,7 @@ part_time:
     academies: ['downtown-miami', 'orlando']
     recomended: "★ Best Deal!"
     scholarship: "Scholarship"
-    payment_time: "Pay today"
+    description: "Pay today"
     price: "$4999"
     bullets: 
       - "You're saving $4000 USD "
@@ -51,7 +51,7 @@ part_time:
     recomended: "Low monthly payments"
     recommended_color: "veryLightBlue"
     scholarship: "Financed"
-    payment_time: "24 months payment"
+    description: "24 months payment"
     price: "$310"
     bullets: 
       - "With $400 p/ week living stipends"
@@ -66,7 +66,7 @@ part_time:
     recommended_color: "yellow"
     academies: ['downtown-miami', 'orlando']
     scholarship: "Full Payment"
-    payment_time: "Pay today"
+    description: "Pay today"
     price: "$8099"
     bullets: 
       - "You're saving $1000 USD"

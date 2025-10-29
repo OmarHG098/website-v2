@@ -11,28 +11,30 @@ banner:
   sub_heading: ""
 content:
   title: "🎉 Congratulations! You just took the first step toward your tech career!"
-  message: "A confirmation email should be arriving in your inbox shortly, and our Admissions Team is already reviewing your info. One of our Geeky Advisors will reach out very soon! In the meantime, here are a few ways to jump-start your journey right now:"
+  message: "A confirmation email should be arriving in your inbox shortly, and our Admissions Team is already reviewing your info. \nOne of our Geeky Advisors will reach out very soon! In the meantime, here are a few ways to jump-start your journey right now:"
 
     
   articles_title: " "
   button: "Read our blog"
-social: 
-  title: "Follow Us"
-  message: "Select where you like to follow us"
-  button_text: "Take me to"
-  
+
+
+title:
+  heading:
+    text: "Explore Free Resources"
+    
 components:
+
   - name: free_resources
     layout: two_column_left
-    position: 1
+    position: 2
     proportions: [6, 6]
     background: "#FFFFFF"
     image:
       style: '{ "backgroundSize": "contain", "background-position": "center" }'
-      src: "/images/landing/4geeksacademy.webp"
+      src: "/images/landing/4geekasacademy.webp"
       shadow: false
     heading:
-      text: "💻 Explore Free Resources"
+      text: "💻 Start Coding Today"
     content:
       text: "Start coding today! Check out exercises and tutorials on 4Geeks.com to practice your skills while you wait."
     button:
@@ -48,10 +50,10 @@ components:
     background: "#FFFFFF"
     image:
       style: '{ "backgroundSize": "contain", "background-position": "center" }'
-      src: "/images/landing/feliz-empresario.png"
+      src: "/images/landing/PeopleStudying.jpeg"
       shadow: false
     heading:
-      text: "📚 Download Free Career Guides"
+      text: "📚 Optimize your Networking Skills"
     content:
       text: "Get a taste of how we help students navigate networking, career growth, and real-world job strategies — even before day one."
     button:
@@ -89,9 +91,9 @@ components:
       src: "/images/programs-heading.webp"
       shadow: false
     heading:
-      text: "🚀 Discover Our Job Guarantee"
+      text: "🚀 Check Out Our Job Guarantee. *Does not apply to all locations"
     content:
-      text: "See how this optional add-on gives you extra confidence while building your tech career."
+      text: "See how this optional add-on gives you extra confidence while building your tech career. <a href='https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf' target='_blank' rel='noopener noreferrer'>Conditions apply</a>"
     button:
       text: "👉 Learn More"
       path: "https://4geeksacademy.com/us/job-guarantee"

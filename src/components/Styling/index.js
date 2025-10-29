@@ -37,10 +37,10 @@ const convertToBgImage = (imageData) => {
 
 export const Colors = {
   blue: "#0084FF",
+  blue2: "#00698F",
   lightBlue: "#BBEAFC",
   lightBlue2: "rgba(199, 243, 253, 0.5)",
   darkBlue: "#2E2E38",
-  blue2: "#0097CD",
   veryLightBlue: "#C7F3FD",
   veryLightBlue2: "#E3F9FE",
   veryLightBlue3: "#F4F9FF",
@@ -53,8 +53,10 @@ export const Colors = {
   verylightGray3: "#F9F9F9",
   lightGray: "#ebebeb",
   lightGray2: "#C4C4C4",
+  lightGray3: "oklch(.556 0 0)",
   lightGreen: "#c4f7b7",
   green: "#20630d",
+  green2: "#10b981",
   darkGray: "#3A3A3A",
   darkGray2: "#606060",
   darkGray3: "#4D4D5C",
@@ -167,7 +169,7 @@ export const Span = styled.div`
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-weight: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
   ${Tooltip}:hover {
@@ -504,6 +506,7 @@ export const Button = styled(SmartButton)`
   font-size: ${(props) => props.fontSize};
   font-family: "Lato", sans-serif;
   text-transform: ${(props) => props.textTransform};
+  gap: ${(props) => props.gap};
   text-decoration: ${(props) => props.textDecoration || "none"};
   text-decoration-line: ${(props) => props.textDecorationLine || "none"};
   font-weight: ${(props) => props.fontWeight || "700"};
@@ -539,7 +542,8 @@ export const Button = styled(SmartButton)`
   justify-self: ${(props) => props.justifySelf};
   justify-content: ${(props) => props.justifyContent};
   box-shadow: ${(props) => props.boxShadow};
-  transition: ${(props) => props.transition || "all 0.3s ease"};
+  transition: ${(props) =>
+    props.transition || "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"};
 
   /* Apply variant styles */
   ${(props) => {
@@ -552,6 +556,33 @@ export const Button = styled(SmartButton)`
   }}
 
   &:hover {
+    ${(props) => {
+      if (props.boxShadow) {
+        const transform = props.transform
+          ? `${props.transform} translateY(-2px)`
+          : "translateY(-2px)";
+        return `transform: ${transform};`;
+      }
+      return props.transform ? `transform: ${props.transform};` : "";
+    }}
+    ${(props) => {
+      if (props.boxShadow) {
+        const currentShadow = props.boxShadow;
+        // Detect if it's a solid shadow (format: Xpx Ypx 0px 0px color)
+        const solidShadowMatch = currentShadow.match(
+          /(\d+)px\s+(\d+)px\s+0px\s+0px\s+(.+)/
+        );
+        if (solidShadowMatch) {
+          const [, x, y, color] = solidShadowMatch;
+          const newX = Math.min(parseInt(x) + 2, parseInt(x) * 1.2);
+          const newY = Math.min(parseInt(y) + 2, parseInt(y) * 1.2);
+          return `box-shadow: ${newX}px ${newY}px 0px 0px ${color};`;
+        }
+        // For other shadows, add a soft additional shadow
+        return `box-shadow: ${currentShadow}, 0 4px 12px rgba(0, 0, 0, 0.15);`;
+      }
+      return "";
+    }}
     ${(props) =>
       props.variant === "outline"
         ? css`
@@ -562,6 +593,48 @@ export const Button = styled(SmartButton)`
             ${props.colorHover ? `background-color: ${props.colorHover};` : ""}
             ${props.colorHoverText ? `color: ${props.colorHoverText};` : ""}
           `}
+  }
+
+  &:active {
+    ${(props) => {
+      if (props.boxShadow) {
+        const transform = props.transform
+          ? `${props.transform} translateY(1px)`
+          : "translateY(1px)";
+        return `transform: ${transform};`;
+      }
+      return props.transform ? `transform: ${props.transform};` : "";
+    }}
+    ${(props) => {
+      if (props.boxShadow) {
+        const currentShadow = props.boxShadow;
+        // Detect if it's a solid shadow (format: Xpx Ypx 0px 0px color)
+        const solidShadowMatch = currentShadow.match(
+          /(\d+)px\s+(\d+)px\s+0px\s+0px\s+(.+)/
+        );
+        if (solidShadowMatch) {
+          const [, x, y, color] = solidShadowMatch;
+          const newX = Math.max(parseInt(x) - 2, parseInt(x) * 0.8);
+          const newY = Math.max(parseInt(y) - 2, parseInt(y) * 0.8);
+          return `box-shadow: ${newX}px ${newY}px 0px 0px ${color};`;
+        }
+        // For other shadows, reduce the intensity
+        return "box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);";
+      }
+      return "";
+    }}
+    transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: ${(props) => {
+      const focusShadow = "0 0 0 3px rgba(0, 132, 255, 0.3)";
+      if (props.boxShadow) {
+        return `${props.boxShadow}, ${focusShadow}`;
+      }
+      return focusShadow;
+    }};
   }
   @media ${Devices.xxs} {
     padding: ${(props) => props.padding_xxs};
@@ -719,23 +792,6 @@ export const Anchor = styled(StyledLink)`
   @media ${Devices.xxl} {
   }
 `;
-//   @media ${Break.lg}{
-//     text-align: ${props => props.align_lg};
-//     font-size: ${props => props.fs_lg};
-//   }
-//   @media ${Break.md}{
-//     text-align: ${props => props.align};
-//     font-size: ${props => props.fs_md};
-//   }
-//   @media ${Break.sm}{
-//     display: ${props => props.display_sm};
-//     font-size: ${props => props.fs_sm};
-//     text-align: ${props => props.align_sm || 'center'};
-//   }
-//   @media ${Break.xs}{
-//     font-size: ${props => props.fs_xs};
-//     text-align: ${props => props.align_xs};
-//   }
 
 export const Spinner = styled.div`
   border: ${(props) => `16px solid ${props.color || Colors.blue}`};
@@ -760,7 +816,7 @@ export const PhoneText = styled.p`
   text-align: center;
   margin-top: 6px;
   font-size: 15px;
-  
+
   @media ${Break.xs} {
     font-size: 12px;
   }
@@ -772,10 +828,22 @@ export const PhoneTextDesktop = styled.p`
   margin-top: 3px;
   margin-right: 10px;
   font-size: 15px;
-  
+
   @media ${Break.xs} {
     font-size: 12px;
-   }
+  }
+`;
+
+export const VerticalVideoHolder = styled.div`
+  border: 3px solid black;
+  box-shadow: 13px 13px 0px 1px rgba(0, 0, 0, 1);
+  z-index: 1;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+  background: white;
+  position: relative;
 `;
 
 export const OfferTag = styled.div`
@@ -799,10 +867,10 @@ export const OfferTag = styled.div`
   display: flex;
   align-items: center;
   gap: 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 2;
-  visibility: ${props => props.isHidden ? 'hidden' : 'visible'};
-  pointer-events: ${props => props.isHidden ? 'none' : 'auto'};
+  visibility: ${(props) => (props.isHidden ? "hidden" : "visible")};
+  pointer-events: ${(props) => (props.isHidden ? "none" : "auto")};
 
   &:before {
     content: "🔥";
@@ -814,5 +882,75 @@ export const OfferTag = styled.div`
     padding: 3px 10px;
     top: -10px;
     right: 45px;
+  }
+`;
+
+// Chart Components
+export const ChartWrapper = styled.div`
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+
+  @media ${Break.sm} {
+    padding: 0;
+  }
+`;
+
+export const ChartContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+`;
+
+export const FloatingLabels = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+`;
+
+export const FloatingLabel = styled.div`
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid ${Colors.lightGray};
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: ${Colors.grayBrown};
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+
+  /* Position based on angle calculation */
+  ${(props) => {
+    const x = 50 + 30 * Math.cos(props.angle);
+    const y = 50 + 30 * Math.sin(props.angle);
+    return css`
+      left: ${x}%;
+      top: ${y}%;
+    `;
+  }}
+
+  @media ${Break.sm} {
+    padding: 3px 6px;
+    font-size: 10px;
+
+    /* Adjust position for mobile */
+    ${(props) => {
+      const x = 50 + 35 * Math.cos(props.angle);
+      const y = 50 + 35 * Math.sin(props.angle);
+      return css`
+        left: ${x}%;
+        top: ${y}%;
+      `;
+    }}
   }
 `;

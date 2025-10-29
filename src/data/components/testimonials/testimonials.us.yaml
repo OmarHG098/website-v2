@@ -3,21 +3,35 @@ button_text: Discover what they have to say
 button_link: "/us/testimonials"
 source_url_text: "Open review"
 
+title: "Success Stories from our Grads"
+paragraph: "How 4Geeks Changed Their Careers"
+
 testimonials:
+  - student_name: "Mariana Chaiban"
+    slug: "mariana-chaiban"
+    short_content: "Full Stack Developer"
+    include_in_marquee: true
+    hidden: false
+    content: "I think this course is truly amazing: the structure, the instructors, the 4Geeks culture... It's an exceptionally comprehensive program, covering every aspect needed to launch a career in development, from front end to back end (my favorite). I can't believe it's almost over—it flew by so quickly, and I'm a bit sad it's ending, but this is just the beginning of my developer journey! Thanks to Ernesto and Slavina, especially Ernesto for being the ideal mentor to start this adventure. Thank you to all the mentors in my 1-on-1 sessions who kept me going, and to Laura, Daniel, and the admin team for their invaluable support throughout. It was daunting at first (and still is), but having such amazing people guide us made it so much smoother. Can't wait to see what's to come. Additionally, the daily live coding sessions, regular peer feedback, and hands-on projects reinforced each concept and created a collaborative, supportive atmosphere that boosted my confidence and practical skills."
+    linkedin_url: "https://www.linkedin.com/in/mariana-chaiban"
+    linkedin_image: "../../../../static/images/linkedin.png"
   - student_name: Peter Schwarck
     include_in_marquee: true
+    related_features: ['job-guarantee', 'outcomes', 'career-support']
     short_content: "Business Systems Analyst at eBay"
     linkedin_url: "https://www.linkedin.com/in/peter-schwarck/"
     student_thumb: "../../../../static/images/testimonials/peter-schwarck.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
   - student_name: Azam Abdul Malik
     include_in_marquee: true
+    related_features: ['job-guarantee', 'outcomes', 'career-support']
     short_content: "Lead Wireless Carrier Engineer at Facebook"
     linkedin_url: "https://www.linkedin.com/in/azamjiva"
     student_thumb: "../../../../static/images/testimonials/azam.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
   - student_name: Rebecca Willett
     include_in_marquee: true
+    related_features: ['job-guarantee', 'outcomes', 'full-stack']
     short_content: "Software Engineer at HashiCorp"
     linkedin_url: "https://www.linkedin.com/in/willettrebecca/"
     student_thumb: "../../../../static/images/testimonials/rebecca-willett.jpeg"
@@ -30,17 +44,40 @@ testimonials:
   #   linkedin_image: "../../../../static/images/linkedin.png"
   - student_name: João Henrique Xavier
     include_in_marquee: true
+    related_features: ['job-guarantee', 'outcomes', 'career-support']
     short_content: "Software Engineer @ Microsoft"
     linkedin_url: "https://www.linkedin.com/in/joao-henrique-xavier/"
     student_thumb: "../../../../static/images/testimonials/joao-xavier.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
   - student_name: Florencia Viera
     include_in_marquee: true
+    related_features: ['full-stack', 'job-guarantee', 'outcomes']
     short_content: "Web Developer at Lightning Fruit"
     linkedin_url: "https://www.linkedin.com/in/floviera"
     student_thumb: "../../../../static/images/testimonials/florencia-viera.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
 
+  - student_name: "James Dugard"
+    slug: "james-dugard"
+    country:
+      iso: us
+      name: United States of America
+    featured: false
+    highlighted: false
+    related_features: ['job-guarantee', 'price', 'scolarships'] # online-platform, mentors-and-teachers, price, career-support, content-and-syllabus, job-guarantee, full-stack, cibersecurity, data-science, applied-ai, outcomes, scolarships, rigobot, learnPack, certification
+    testimonial_date: ""
+    rating: 5
+    source_link: ""
+    student_thumb: "../../../../static/images/testimonials/james-testimonial.png"
+    student_video: "ImB1Xdv9XVs"
+    hidden: false
+    linkedin_url: ""
+    linkedin_text: ""
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    short_content: ""
+    content: "Thanks to 4Geeks Academy’s bootcamp and their job guarantee program, I was able to change careers and enter the tech industry without a college degree. The mentorship and ongoing support were key, and after graduating they helped me find my first job in tech."
+  
   - student_name: "Jonathan Ferragut"
     slug: "jona-ferra"
     country:
@@ -48,6 +85,7 @@ testimonials:
       name: United States of America
     featured: false
     highlighted: false
+    related_features: ['full-stack', 'content-and-syllabus', 'mentors-and-teachers']
     testimonial_date: ""
     rating: 5
     source_link: ""
@@ -70,6 +108,7 @@ testimonials:
       name: Spain
     featured: false
     highlighted: false
+    related_features: ['full-stack', 'mentors-and-teachers', 'content-and-syllabus']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/diego-gomez-testimonial.webp"
@@ -91,6 +130,7 @@ testimonials:
       name: Chile
     featured: false
     highlighted: false
+    related_features: ['data-science', 'applied-ai', 'content-and-syllabus']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/fidel-vera-testimonial.jpg"
@@ -112,6 +152,7 @@ testimonials:
       name: chile
     featured: false
     highlighted: false
+    related_features: ['job-guarantee', 'career-support', 'full-stack']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/joshua-bravo.jpg"
@@ -133,6 +174,7 @@ testimonials:
       name: LATAM
     featured: false
     highlighted: false
+    related_features: ['mentors-and-teachers', 'full-stack', 'content-and-syllabus']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/ana-romero.jpg"
@@ -154,6 +196,7 @@ testimonials:
       name: LATAM
     featured: false
     highlighted: false
+    related_features: ['full-stack', 'outcomes', 'content-and-syllabus']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/kevin-soria.jpg"
@@ -175,6 +218,7 @@ testimonials:
       name: España
     featured: false
     highlighted: false
+    related_features: ['career-support', 'full-stack', 'job-guarantee']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/virginia-martinez.jpg"
@@ -196,6 +240,7 @@ testimonials:
       name: España
     featured: false
     highlighted: false
+    related_features: ['content-and-syllabus', 'full-stack', 'outcomes']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/fernando-manrique-villanueva.jpg"
@@ -217,6 +262,7 @@ testimonials:
       name: LATAM
     featured: false
     highlighted: false
+    related_features: ['career-support', 'job-guarantee', 'mentors-and-teachers']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/carlos-avila.jpg"
@@ -238,6 +284,7 @@ testimonials:
       name: Spain
     featured: false
     highlighted: false
+    related_features: ['career-support', 'full-stack', 'online-platform']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/alan-gaston-sosa.webp"
@@ -259,6 +306,7 @@ testimonials:
       name: United States of America
     featured: false
     highlighted: false
+    related_features: ['job-guarantee', 'outcomes', 'mentors-and-teachers']
     testimonial_date: ""
     rating: 5
     source_link: ""
@@ -281,6 +329,7 @@ testimonials:
       name: España
     featured: false
     highlighted: false
+    related_features: ['career-support', 'outcomes', 'content-and-syllabus']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/ibai-fernandez.jpg"
@@ -302,6 +351,7 @@ testimonials:
       name: LATAM
     featured: false
     highlighted: false
+    related_features: ['outcomes', 'mentors-and-teachers', 'content-and-syllabus']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/veronica-larrondo.jpg"
@@ -323,6 +373,7 @@ testimonials:
       name: United States of America
     featured: false
     highlighted: false
+    related_features: ['mentors-and-teachers', 'online-platform', 'content-and-syllabus']
     testimonial_date: ""
     rating: 5
     source_link: ""
@@ -350,6 +401,7 @@ testimonials:
       name: United States of America
     featured: false
     highlighted: true
+    related_features: ['career-support', 'mentors-and-teachers', 'online-platform']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
@@ -383,17 +435,20 @@ testimonials:
   #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to
   #     the Income Sharing Agreement, I could enroll right away and pay once I found a job.
 
-  - student_name: Hernan García
+  - student_name: Hernán García
     slug: "her-gar"
     country:
       iso: us
       name: United States of America
     featured: true
     highlighted: true
+    featured_on_section: true
+    related_features: ['job-guarantee', 'outcomes', 'carreer-support']
     testimonial_date: ""
     rating: 5
-    student_thumb: "../../../../static/images/staff/hernan-new.webp"
+    student_thumb: "../../../../static/images/testimonials/hernan-garcia.jpeg"
     student_video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    thumbnail_video: "../../../../static/images/staff/hernan-new.webp"
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
     linkedin_url: "https://www.linkedin.com/in/hernan-garcia/"
@@ -403,7 +458,7 @@ testimonials:
     #source_url_text: ""
     short_content: "Software Engineer at Microsoft"
     content: |
-      Before I decided to become a developer, I had several works, I did not enjoy those works so I tried to put as much effort into earning a significant amount of money. Thanks to that vision, I became a full-stack developer, and 4Geeks was part of that process. I’ll recommend 4Geeks Academy.
+      Before I decided to become a developer I was doing odd jobs, anything I could get my hands on… Did I like what I was doing? Absolutely not. I mean I was just trying to get by and do anything that I could do...Right now I’ve got a good job with a good, well-known company and recently I also keep receiving offers through email. Of course I would recommend 4Geeks!
 
   - student_name: "Charles Fabricius"
     slug: "cha-fabr"
@@ -412,6 +467,7 @@ testimonials:
       name: United States of America
     featured: true
     highlighted: true
+    related_features: ['mentors-and-teachers', 'content-and-syllabus', 'career-support']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/charles-fabricius.jpg"
@@ -435,6 +491,7 @@ testimonials:
   - student_name: "Gabriela Rodriguez"
     featured: false
     highlighted: false
+    related_features: ['price', 'career-support', 'content-and-syllabus']
     rating: 5
     last_name: "Rodriguez"
     job_title: "Web Developer"
@@ -452,6 +509,7 @@ testimonials:
   - student_name: "Fernando Funez"
     featured: false
     highlighted: false
+    related_features: ['mentors-and-teachers', 'career-support', 'content-and-syllabus']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/fernando-funez.jpg"
@@ -473,6 +531,7 @@ testimonials:
   - student_name: "Salvador Desravines"
     featured: false
     highlighted: false
+    related_features: ['job-guarantee', 'outcomes', 'mentors-and-teachers']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/salvador-desravines.jpg"
@@ -497,6 +556,7 @@ testimonials:
       name: Chile
     featured: false
     highlighted: false
+    related_features: ['content-and-syllabus', 'mentors-and-teachers', 'career-support']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/francisco-correa-testimonial.webp"
@@ -514,6 +574,7 @@ testimonials:
   - student_name: "Jorge Montes"
     featured: false
     highlighted: false
+    related_features: ['mentors-and-teachers', 'content-and-syllabus', 'full-stack']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/jorge-montes.jpg"
@@ -535,6 +596,7 @@ testimonials:
     include_in_marquee: true
     featured: true
     highlighted: false
+    related_features: ['job-guarantee', 'career-support', 'outcomes']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/guensie-grecy.jpg"
@@ -558,6 +620,7 @@ testimonials:
       name: Spain
     featured: false
     highlighted: false
+    related_features: ['mentors-and-teachers', 'content-and-syllabus', 'career-support']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/diego-fernandez-testimonial.webp"
@@ -575,6 +638,7 @@ testimonials:
   - student_name: "Javier Murillo"  
     featured: false  
     highlighted: false  
+    related_features: ['content-and-syllabus', 'mentors-and-teachers', 'career-support']
     testimonial_date: "" 
     country:
       iso: es  
@@ -601,6 +665,7 @@ testimonials:
       name: United States of America
     featured: true
     highlighted: true
+    related_features: ['job-guarantee', 'career-support', 'outcomes']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/staff/joao.png"
@@ -626,6 +691,7 @@ testimonials:
       name: Spain
     featured: false
     highlighted: false
+    related_features: ['mentors-and-teachers', 'career-support', 'content-and-syllabus']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/Mattia-Tozzi-testimonial.jpg"
@@ -644,6 +710,7 @@ testimonials:
     featured: false
     include_in_marquee: true
     highlighted: false
+    related_features: ['mentors-and-teachers', 'outcomes', 'career-support']
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/fidel-rosell.jpg"
@@ -670,6 +737,7 @@ testimonials:
       name: United States of America
     featured: false
     highlighted: false
+    related_features: ['price', 'content-and-syllabus', 'career-support']
     testimonial_date: ""
     rating: 5
     source_link: ""
@@ -687,6 +755,7 @@ testimonials:
   - student_name: "Jordan"
     featured: false
     highlighted: false
+    related_features: ['full-stack', 'content-and-syllabus', 'outcomes']
     last_name: "Aguiriano"
     rating: 5
     student_thumb: ""

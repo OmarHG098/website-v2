@@ -29,7 +29,7 @@ form:
   fields: ["full_name", "phone", "email"]
   heading: "Solicita tu beca ya"
   button_label: Solicita tu beca ya
-  redirect: "/us/thank-you" #you can redirect to another url or entirely diffrent website
+  redirect: "/es/gracias" #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
 header_data:
@@ -46,16 +46,15 @@ features:
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
   text: Landing.Jobs y 4Geeks se unen para ofrecer más de 500.000 € en Becas para convertirte en Data Scientist, Data Analyst o Machine Learning Engineer. Todas las becas son del 50% y se otorgarán en función del resultado del proceso de selección. Si quieres impulsar tu carrera profesiona, ¡no dejes pasar esta oportunidad!
   bullets:
-    
-    - Durante Mayo 2023 becas del 50% en el programa Data Science & Machine Learning 
-    - Formato Part-Time, ¡no renuncies a tu vida!
-    - Opciones de financiación para complementar tu beca
+    - Durante Octubre 2025 becas del 50% en el programa Data Science & Machine Learning. 
+    - Formato Part-Time, ¡No renuncies a tu vida!
+    - Opciones de financiación para complementar tu beca.
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Solicita tu beca Landing.Jobs ya. \n Planes de pago de hasta 24 meses."
-    text_mobile: "Becas de Landing.Jobs . \n Plan de pago de 24 m."
+    text: "Solicita tu beca Landing.Jobs ya \n Planes de pago de hasta 24 meses."
+    text_mobile: "Becas de Landing.Jobs \n Plan de pago de 24 m."
     # devices:    XL      LG      MD      SM      XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
@@ -64,8 +63,8 @@ follow_bar:
     # ├──if path is empty("") it point to top per default ("#" -> points to top)
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
-    text: ""
-    number: ""
+    text: " "
+    number: " "
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
@@ -74,7 +73,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    image: "../../../static/images/badges/Course-Report-Badge-2025.png"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -82,7 +81,7 @@ short_badges:
     alt: "Best coding bootcamp Switchup 2023"   
   - name: "Florida Department of Education"
     url: ""
-    image: "../../../static/images/badges/licensed-inverted.png"
+    image: "../../../static/images/badges/licensed.png"
     alt: "Florida Department of Education"
 
 #
@@ -91,21 +90,6 @@ short_badges:
 badges:
   position: 5 # It's the position of the component that will be rendered first
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
-
-# about4Geeks:
-#   position: 2
-#   heading: Educación flexible e intensiva
-#   sub_heading: "Más de 320 horas de aprendizaje práctico (ejercicios, proyectos). Mejoraras tus habilidades para poder afrontar procesos de selección y encontrar un trabajo como Data Scientist, Data Analyst o Machine Learning Engineer."
-#   list:
-#     - title: "Apoyo Profesional de por vida"
-#     - title: "Opciones de financiación para complementar tu beca"
-#     - title: "Ratio 1:7 profesor alumno. Mentorías 1:1 ilimitadas "
-#     - title: "Preparación para entrevistas y procesos de selección"
-#   paragraph: ""
-#   button_text: "Solicita tu beca"
-#   button_link: "#leadform_header" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
-#   image: "../../../static/images/bg/community.png"
-#   image_mobile: "../../../static/images/bg/community.png"
 
 who_is_hiring:
   position: 10
@@ -148,7 +132,7 @@ components:
     heading: 
       text: "Educación flexible e intensiva"
     sub_heading:
-      text: "Más de 400 horas de aprendizaje práctico (ejercicios, proyectos). Mejoraras tus habilidades para poder afrontar procesos de selección y encontrar un trabajo como desarrollador junior o senior."
+      text: "Más de 400 horas de aprendizaje práctico (ejercicios, proyectos). Mejorarás tus habilidades para poder afrontar procesos de selección y encontrar un trabajo como desarrollador junior o senior."
     button: 
       text: "Solicita tu beca"
       color: white
@@ -159,13 +143,13 @@ components:
       text: ""
     bullets:
       items:
-      - text: "Apoyo Profesional de por vida"
+      - text: "Apoyo Profesional de por vida."
         icon: "check" #string with icon for example ['check', 'cicle', etc]
-      - text: "Opciones de financiación para complementar tu beca"
+      - text: "Opciones de financiación para complementar tu beca."
         icon: "check" #string with icon for example ['check', 'cicle', etc]
-      - text: "Ratio 1:7 profesor alumno. Mentorías 1:1 ilimitadas"
+      - text: "Ratio 1:7 profesor alumno. Mentorías 1:1 ilimitadas."
         icon: "check" #string with icon for example ['check', 'cicle', etc]
-      - text: "Preparación para entrevistas y procesos de selección"
+      - text: "Preparación para entrevistas y procesos de selección."
         icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: JobGuarantee
@@ -173,63 +157,6 @@ components:
     position: 3
     heading:
       text: Apoyo profesional para iniciar tu carrera
-
-  # - name: how-it-works
-  #   position: 3
-  #   background: "veryLightBlue2"
-  #   layout: iconogram
-  #   swipable: True
-  #   heading:
-  #     text: "Cómo funciona"
-  #     font_size: ["30px", "30px", "30px", "30px", "30px"]
-  #   sub_heading:
-  #     text: "Según el Instituto Nacional de Estadística de España, los desarrolladores de software en España tienen perspectivas laborales superiores al promedio y obtienen un salario medio de  <strong>45.000€ al año. ¡Mejora tus posibilidades de ser uno de ellos!"
-  #     font_size: ["16px", "16px", "16px", "16px", "16px"]
-  #     style: '{ "textAlign": "center", "width": "60%" }'
-  #   text_link: "#leadform_header"
-  #   icons:
-  #   - icon: "touch"
-  #     title: Solicita tu beca antes del 15 de Junio 2023
-  #   - icon: "receive_mail"
-  #     title: Recibirás un correo electrónico con toda la información
-  #   - icon: "talk"
-  #     title: Haz una entrevista online con nuestro equipo de admisiones
-  #   - icon: "terminal"
-  #     title: Recibe los resultados, reserva tu plaza y empieza a PROGRAMAR
-    
-
-  # - name: "whatever"
-  #   layout: choose_your_program
-  #   position: 5
-  #   heading:
-  #     text: Nuestros Programas
-  #   content:
-  #     text: Programas en formato full-time o part-time con clases en vivo dictadas por expertos
-  #     font_size: ["16px"]
-  #     path: ""
-  #   programs:
-  #   - title: "Full Stack Developer"
-  #     sub_title: "Nivel 1"
-  #     icon: "fullstack_2"
-  #     description: |
-  #       Desde 0 hasta convertirte en programador fullstack Jr. Trabajarás con HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. para diseñar y crear webs responsive. Obtendrás una sólida base de front, back, bbdd, procesos distribuidos y despliegue con instructores apasionados y un plan de estudios práctico y actualizado. 
-  #       Disponible en modalidad part time y full time.
-  #       Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20EU%20ES.pdf target=_blank>"programa de estudios"</a>.
-      
-  #     text_link: Solicita tu beca
-  #     link: "#" # moves to start position
-
-  #   - title: "AI & Machine Learning"
-  #     sub_title: "Developers y perfiles STEM"
-  #     icon: "machine_2"
-  #     description: |
-  #       Explora los fundamentos del machine learning y el deep learning con las tecnologías más poderosas que escalan la inteligencia para los negocios. 
-  #       Practica con escenarios comerciales de la vida real y maneja las herramientas más utilizadas en la industria. Elabora estrategias y desarrolla tu Inteligencia Artificial, siguiendo el desarrollo del ciclo de vida de principio a fin, incluida la implementación en producción y mantenimiento con Privacidad, Seguridad y Ética. 
-        
-  #       Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20EU%20ES.pdf target=_blank>"programa de estudios"</a>.
-
-  #     text_link: Solicita tu beca
-  #     link: "#"
 
 
   - name: Data_Science_y_Machine_Learning
@@ -242,9 +169,9 @@ components:
     # video: "B01-eTfgqqc"
     heading:
       text:
-        "Data Science"
+        "Data Science y Machine Learning con IA"
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestros programa está basado en el uso de Python, el lenguaje de programación más utilizado en el mundo, aprenderás a trabajar con las principales librerías enfocadas en la gestión, análisis y visualización de datos, te convertirás en un experto del Machine Learning y te introducirás en la Inteligencia Artificial, utilizando los modelos más demandados en el mundo como por ejemplo procesamiento de lenguaje natural (chatGPT)"
+      text: "Nuestros programa está basado en el uso de Python, el lenguaje de programación más utilizado en el mundo, aprenderás a trabajar con las principales librerías enfocadas en la gestión, análisis y visualización de datos, te convertirás en un experto del Machine Learning y te introducirás en la Inteligencia Artificial, utilizando los modelos más demandados en el mundo como por ejemplo procesamiento de lenguaje natural (chatGPT)."
       font_size: ["16px"]
