@@ -343,7 +343,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
       </Div>
 
       <Testimonials
-        categories={["scolarships", "price", "outcomes"]}
+        categories={yml.testimonial_categories}
         lang={data.allTestimonialsYaml.edges}
         margin_tablet="75px 0 0 0"
         margin="45px 0 0 0"
@@ -407,6 +407,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          testimonial_categories
           seo_title
           header {
             title

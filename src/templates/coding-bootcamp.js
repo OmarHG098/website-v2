@@ -591,7 +591,7 @@ const CodingBootcamp = ({ data, pageContext, yml }) => {
 
       <Testimonials
         id="testimonials"
-        categories={["full-stack", "content-and-syllabus", "job-guarantee"]}
+        categories={yml.testimonial_categories}
         lang={data.allTestimonialsYaml.edges}
         background={Colors.white}
       />
@@ -640,6 +640,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          testimonial_categories
           seo_title
           header {
             title

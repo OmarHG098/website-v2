@@ -760,7 +760,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       </Container>
       <Testimonials
         id="testimonials"
-        categories={["job-guarantee", "outcomes", "career-support"]}
+        categories={yml.testimonial_categories}
         lang={data.allTestimonialsYaml.edges}
         background={Colors.white}
       />
@@ -775,6 +775,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          testimonial_categories
           meta_info {
             utm_course
           }

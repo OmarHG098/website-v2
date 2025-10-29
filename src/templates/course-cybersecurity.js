@@ -289,7 +289,7 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
       <Testimonials
         id="testimonials"
-        categories={["cibersecurity", "full-stack", "content-and-syllabus"]}
+        categories={courseDetails.testimonial_categories}
         lang={data.allTestimonialsYaml.edges}
         background={Colors.white}
       />
@@ -374,6 +374,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          testimonial_categories
           seo_title
           course_instructors {
             header {

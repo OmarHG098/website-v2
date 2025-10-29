@@ -229,6 +229,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          testimonial_categories
           meta_info {
             title
             description

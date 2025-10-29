@@ -19,9 +19,17 @@ const BaseRender = (Page) => (props) => {
     );
   }
 
+  // Debug: Check if type is in pageContext
+  if (typeof window !== "undefined" && pageContext.type === "course") {
+    console.log("🔍 BaseRender - Course page detected:", {
+      type: pageContext.type,
+      slug: pageContext.slug,
+      hasType: "type" in pageContext,
+    });
+  }
+
   return (
     <Layout
-      type="page"
       seo={{ ...yml.meta_info, seo_title: yml.seo_title }}
       context={pageContext}
       metaInfo={yml?.meta_info}

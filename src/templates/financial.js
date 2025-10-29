@@ -182,7 +182,7 @@ const Financial = (props) => {
       />
       <Testimonials
         id="testimonials"
-        categories={["price", "scolarships", "job-guarantee"]}
+        categories={yml.testimonial_categories}
         lang={data.allTestimonialsYaml.edges}
         background={Colors.white}
       />
@@ -208,6 +208,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          testimonial_categories
           meta_info {
             title
             description

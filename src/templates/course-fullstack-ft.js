@@ -304,7 +304,7 @@ const Program = ({ data, pageContext, yml }) => {
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
       <Testimonials
         id="testimonials"
-        categories={["full-stack", "content-and-syllabus"]}
+        categories={courseDetails.testimonial_categories}
         lang={data.allTestimonialsYaml.edges}
         background={Colors.white}
       />
@@ -389,6 +389,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          testimonial_categories
           seo_title
           header {
             title
