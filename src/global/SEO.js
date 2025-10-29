@@ -71,6 +71,16 @@ const SEO = (props) => {
     seo_title,
   } = props;
   const { lang, type, pagePath, translations, locations } = context;
+
+  // Debug: Check what type we're getting
+  if (typeof window !== "undefined" && type === "course") {
+    console.log("🔍 SEO - Course type detected:", {
+      type,
+      pagePath,
+      contextKeys: Object.keys(context),
+    });
+  }
+
   const url = `${siteUrl}${pagePath || "/"}`;
   const previewImage = `${
     RegExp("http").test(image || defaultImage) ? "" : siteUrl
