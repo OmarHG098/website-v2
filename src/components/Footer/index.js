@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import ReCAPTCHA from "react-google-recaptcha";
+import SafeReCAPTCHA from "../SafeReCAPTCHA";
 import { Container, Div, GridContainer } from "../Sections";
 import { Colors, RoundImage, Anchor, Button } from "../Styling";
 import { H3, H4 } from "../Heading";
@@ -47,6 +47,20 @@ const Footer = ({ yml }) => {
   const captcha = useRef(null);
   const { session } = React.useContext(SessionContext);
   let socials = session && session.location ? session.location.socials : [];
+
+  // Safe captcha execution with defensive checks
+  const executeRecaptcha = async () => {
+    if (captcha.current && typeof captcha.current.executeAsync === "function") {
+      try {
+        return await captcha.current.executeAsync();
+      } catch (error) {
+        console.warn("ReCAPTCHA execution failed:", error);
+        return null;
+      }
+    }
+    console.warn("ReCAPTCHA not available, proceeding without token");
+    return null;
+  };
 
   const [formStatus, setFormStatus] = useState({
     status: "idle",
@@ -163,9 +177,12 @@ const Footer = ({ yml }) => {
                       });
                     } else {
                       setFormStatus({ status: "loading", msg: "Loading..." });
-                      const token = await captcha.current.executeAsync();
+                      const token = await executeRecaptcha();
                       newsletterSignup(
-                        { ...formData, token: { value: token, valid: true } },
+                        {
+                          ...formData,
+                          token: { value: token || "", valid: !!token },
+                        },
                         session
                       )
                         .then((data) => {
@@ -312,11 +329,7 @@ const Footer = ({ yml }) => {
                   )}
               </Div>
               <Div width="fit-content" margin="10px auto 0 auto">
-                <ReCAPTCHA
-                  ref={captcha}
-                  sitekey={process.env.GATSBY_CAPTCHA_KEY}
-                  size="invisible"
-                />
+                <SafeReCAPTCHA ref={captcha} size="invisible" />
               </Div>
             </>
           )}
