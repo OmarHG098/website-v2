@@ -16,6 +16,12 @@ apply_form:
   label: Inteligencia Artificial Aplicada (sin codificación)
 
 seo_title: "Curso de Inteligencia Artificial Aplicada"
+
+testimonial_categories:
+  - "applied-ai"
+  - "data-science"
+  - "content-and-syllabus"
+
 header:
   title: "Aprende I.A. y cómo utilizarla en tu trabajo"
   paragraph: "¡Automatiza y delega tus tareas a un AI, en diferentes roles y en tu empresa!"

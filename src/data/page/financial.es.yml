@@ -9,6 +9,12 @@ meta_info:
 
 ## BANNER - HEADER
 seo_title: "Financiación y formas de pago en 4Geeks Academy"
+
+testimonial_categories:
+  - "price"
+  - "scolarships"
+  - "job-guarantee"
+
 header:
   title: Financia Tu Futuro en Tech, A Tu Manera
   paragraph: |

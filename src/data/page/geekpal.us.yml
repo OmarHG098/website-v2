@@ -21,6 +21,11 @@ header:
 
 seo_title: "Geekpal Support"
 
+testimonial_categories:
+  - "mentors-and-teachers"
+  - "rigobot"
+  - "online-platform"
+
 # Introduction Video here
 geekPal:
   - videoId: "D5nUZNL52-Q"

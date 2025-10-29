@@ -15,6 +15,12 @@ button:
   syllabus_motivation: "Instant Download"
 
 seo_title: "Job Guarantee"
+
+testimonial_categories:
+  - "job-guarantee"
+  - "outcomes"
+  - "career-support"
+
 header:
   title: "GET INTO TECH WITH OUR JOB GUARANTEE"
   sub_title: 'Your success is our mission — Get hired within 9 months of graduation, or we will refund your tuition. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf" target="_blank" rel="noopener noreferrer">Conditions apply</a>.'

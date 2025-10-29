@@ -33,6 +33,12 @@ meta_info:
 
 apply_form:
   label: Desarrollador Full Stack - Part Time
+
+testimonial_categories:
+  - "full-stack"
+  - "content-and-syllabus"
+  - "mentors-and-teachers"
+
 seo_title: " Bootcamp de Desarrollador Full Stack con IA"
 header:
   title: "DESARROLLO \nFULL STACK \nCON IA"

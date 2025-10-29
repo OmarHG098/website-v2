@@ -27,6 +27,11 @@ apply_form:
   label: Full Stack Developer - Full Time
   
 seo_title: "Online and In-Person Full Stack Development with AI Bootcamp"
+
+testimonial_categories:
+  - "full-stack"
+  - "content-and-syllabus"
+
 header:
   title: "Full Stack Development \nwith AI"
   image: "../../../static/images/bg/program-bg.png"

@@ -11,6 +11,12 @@ meta_info:
   redirects: []
 
 seo_title: "Informe de Resultados"
+
+testimonial_categories:
+  - "outcomes"
+  - "job-guarantee"
+  - "career-support"
+
 header:
   title: "Resultados Comprobados que Impulsan Carreras Tech"
   paragraph: "En 4Geeks, el éxito no es una promesa — es un historial comprobado. Nuestros estudiantes lanzan carreras tech exitosas en programación impulsada por IA, ciencia de datos y ciberseguridad, y los números lo demuestran. Sigue leyendo para ver los detalles: Mantenemos nuestra información transparente, publicando regularmente datos verificados de colocación y salarios en EE. UU., América Latina y Europa."

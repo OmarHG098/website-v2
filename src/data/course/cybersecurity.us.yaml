@@ -18,6 +18,11 @@ apply_form:
 
 seo_title: "Cybersecurity Bootcamp"
 
+testimonial_categories:
+  - "cibersecurity"
+  - "full-stack"
+  - "content-and-syllabus"
+
 header:
   title: "Become a Cybersecurity Specialist"
   paragraph: "Launch a high-paying career in one of tech’s most in-demand fields. Learn to defend systems and respond to real-world cyber threats with a hands-on, AI-integrated curriculum—designed by leading cybersecurity experts and backed by a job guarantee option. <a href='https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf' target='_blank' rel='noopener noreferrer'>Conditions apply</a>."

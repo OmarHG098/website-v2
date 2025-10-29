@@ -18,6 +18,11 @@ button:
 
 seo_title: "4Geeks Academy - Miami Coding Bootcamp, Madrid España, Santiago de Chile and Caracas"
 
+testimonial_categories:
+  - "job-guarantee"
+  - "outcomes"
+  - "career-support"
+
 header:
   title: "Tu futuro en tecnología asegurado: Empleo o reembolso"
   sub_title: ""

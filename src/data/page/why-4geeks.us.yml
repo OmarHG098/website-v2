@@ -9,6 +9,11 @@ meta_info:
 
 seo_title: "Why Choose Us"
 
+testimonial_categories:
+  - "mentors-and-teachers"
+  - "content-and-syllabus"
+  - "career-support"
+
 header:
   title: "Empowering Talent with coding careers"
   paragraph: "We are specialists of code. 4Geeks is the place were developers grow and thrive."

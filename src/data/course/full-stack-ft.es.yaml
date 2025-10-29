@@ -27,6 +27,11 @@ apply_form:
   label: Full Stack Developer - Full Time
 
 seo_title: "Bootcamp Full Stack con IA"
+
+testimonial_categories:
+  - "full-stack"
+  - "content-and-syllabus"
+
 header:
   title: "Full Stack Development \ncon IA"
   image: "../../../static/images/bg/program-bg.png"

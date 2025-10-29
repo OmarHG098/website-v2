@@ -9,6 +9,12 @@ meta_info:
 
 ## BANNER - HEADER
 seo_title: "Bootcamp Financing"
+
+testimonial_categories:
+  - "price"
+  - "scolarships"
+  - "job-guarantee"
+
 header:
   title: Finance Your Future in Tech, Your Way
   paragraph: |

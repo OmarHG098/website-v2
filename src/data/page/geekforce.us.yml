@@ -20,6 +20,11 @@ header:
   image_logo: "/images/geekforce.png"
   bullets:
     - " "
+
+testimonial_categories:
+  - "career-support"
+  - "outcomes"
+  - "job-guarantee"
   
 # Introduction Video here
 geekForce:

@@ -8,6 +8,12 @@ meta_info:
   redirects: ["/20million", "/20-millions", "/20millions", "/scholarships"]
 
 seo_title: Coding Bootcamp Scholarships
+
+testimonial_categories:
+  - "scolarships"
+  - "price"
+  - "outcomes"
+
 header:
   title: $20+ Million in Scholarships
   paragraph: Fueling the Future of Tech Education, Making Coding Accessible to All.

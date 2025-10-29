@@ -9,6 +9,12 @@ meta_info:
   redirects: ["/programming-course-from-scratch", "/coding-bootcamps"]
 
 seo_title: "Join a Coding Bootcamp and Start a New Career"
+
+testimonial_categories:
+  - "full-stack"
+  - "content-and-syllabus"
+  - "job-guarantee"
+
 header:
   title: "Join a Coding Bootcamp. Start a New Career."
   image: "../../../static/images/bg/python-image.png"

@@ -32,6 +32,12 @@ meta_info:
     ]
 apply_form:
   label: Full Stack Developer - Part Time
+
+testimonial_categories:
+  - "full-stack"
+  - "content-and-syllabus"
+  - "mentors-and-teachers"
+
 seo_title: "Full Stack Developer with AI Bootcamp "
 header:
   title: "FULL STACK DEVELOPMENT\nWITH AI"

@@ -8,6 +8,12 @@ meta_info:
   redirects: []
 
 seo_title: "Bootcamps that launch careers"
+
+testimonial_categories:
+  - "mentors-and-teachers"
+  - "online-platform"
+  - "content-and-syllabus"
+
 header:
   title: "Empowering Talent for the AI Era"
   paragraph: "4Geeks Academy is a global tech academy with 8 campuses across the U.S., Latin America, and Europe, training the next generation of tech professionals in AI-powered Full-Stack Development, Data Science & ML, and Cybersecurity. We’ve helped 7,000+ students launch successful tech careers through hands-on programs, unlimited human mentorship and AI-driven tools like Rigobot."

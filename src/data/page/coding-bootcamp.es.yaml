@@ -9,6 +9,11 @@ meta_info:
 
 seo_title: "curso-de-programacion"
 
+testimonial_categories:
+  - "full-stack"
+  - "content-and-syllabus"
+  - "job-guarantee"
+
 header:
   title: "Curso de programación desde cero"
   image: "../../../static/images/bg/python-image.png"

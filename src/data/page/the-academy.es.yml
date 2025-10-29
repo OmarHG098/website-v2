@@ -8,6 +8,12 @@ meta_info:
   redirects: ["/la-academia", "/es/academia"]
 
 seo_title: "Sobre 4Geeks Academy"
+
+testimonial_categories:
+  - "mentors-and-teachers"
+  - "online-platform"
+  - "content-and-syllabus"
+
 header:
   title: "Impulsando el Talento para la Era de la IA"
   paragraph: "4Geeks Academy es una academia tecnológica global con 8 sedes en EE. UU., América Latina y Europa, formando a la próxima generación de profesionales en Desarrollo Full-Stack con IA, Ciencia de Datos y ML, y Ciberseguridad. Hemos ayudado a más de 7.000+ estudiantes a lanzar exitosas carreras tecnológicas a través de programas prácticos, mentoría humana ilimitada y herramientas impulsadas por IA como Rigobot."

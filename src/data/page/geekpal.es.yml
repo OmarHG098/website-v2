@@ -9,6 +9,11 @@ meta_info:
 
 seo_title: "Geekpal de 4Geeks Academy"
 
+testimonial_categories:
+  - "mentors-and-teachers"
+  - "rigobot"
+  - "online-platform"
+
 header:
   title: "Bienvenido a <strong style='color:black; font-family: Archivo-Black;'><br>Geek</strong>
     <strong style = 'color:#CD0000; font-family: Archivo-Black;'>PAL</strong>:<br>

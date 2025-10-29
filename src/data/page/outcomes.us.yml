@@ -11,6 +11,12 @@ meta_info:
   redirects: []
 
 seo_title: "4Geeks Academy Outcomes Report"
+
+testimonial_categories:
+  - "outcomes"
+  - "job-guarantee"
+  - "career-support"
+
 header:
   title: "Proven Outcomes That Launch Tech Careers"
   paragraph: "At 4Geeks, success isn’t a promise — it’s a track record. Our students launch successful tech careers across AI-powered coding, data science, and cybersecurity, and the numbers prove it. Read on to see the details: We keep our reporting transparent, regularly publishing verified placement and salary data across the U.S., Latin America, and Europe."
