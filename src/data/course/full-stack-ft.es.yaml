@@ -216,7 +216,7 @@ two_columns:
 details:
   about:
     title: "Sobre el programa"
-    sub_title: 'Domina las tecnologías más demandadas y aprende a crear apps modernas usando IA. Aprende algoritmos, crea apps increíbles con librerías front-end. Usa APIs para consumir datos y potenciar tus apps. Desarrolla y presenta tu propio proyecto, ganando experiencia real. Aprende a <strong style="text-decoration: none; color: #000000; font-weight: 600;">programar junto a la IA para desbloquear una forma más rápida y creativa de construir apps reales desde el día uno. Colabora con herramientas como Cursor para generar, depurar, iterar y lanzar con velocidad y precisión</strong>. Cambia tu mentalidad y abraza la lógica y habilidades de investigación para triunfar en tech.'
+    sub_title: "Domina las tecnologías más demandadas y aprende a crear apps modernas usando IA. Aprende algoritmos, crea apps increíbles con librerías front-end. Usa APIs para consumir datos y potenciar tus apps. Desarrolla y presenta tu propio proyecto, ganando experiencia real. Aprende a <strong style='text-decoration: none; color: #000000; font-weight: 600;'>programar junto a la IA para desbloquear una forma más rápida y creativa de construir apps reales desde el día uno. Colabora con herramientas como Cursor para generar, depurar, iterar y lanzar con velocidad y precisión</strong>. Cambia tu mentalidad y abraza la lógica y habilidades de investigación para triunfar en tech.<br><a href='/es/proceso-de-aplicacion' target='_blank' rel='noopener noreferrer'>Cómo aplicar.</a>"
     list:
       - label: "Duración"
         content: "12 semanas"

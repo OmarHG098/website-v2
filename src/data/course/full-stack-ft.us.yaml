@@ -224,7 +224,7 @@ two_columns:
 details:
   about:
       title: "About the program"
-      sub_title: 'Master the most in-demand technologies and learn to build modern applications using AI. Learn algorithm scripting and build awesome apps using front-end libraries. Utilize APIs to consume data and enhance your app’s functionality. Develop and present your own project, gaining game-changing hands-on experience. Learn to <strong style="text-decoration: none; color: #000000; font-weight: 600;">code alongside AI to unlock a faster, more creative way to build real apps from day one. Collaborate with powerful tools like Cursor to generate, debug,  iterate and ship with speed and precision</strong>. Reshape your mindset and embrace the programming, logic, and research skills to succeed in today’s tech industry.'
+      sub_title: "Master the most in-demand technologies and learn to build modern applications using AI. Learn algorithm scripting and build awesome apps using front-end libraries. Utilize APIs to consume data and enhance your app’s functionality. Develop and present your own project, gaining game-changing hands-on experience. Learn to <strong style='text-decoration: none; color: #000000; font-weight: 600;'>code alongside AI to unlock a faster, more creative way to build real apps from day one. Collaborate with powerful tools like Cursor to generate, debug,  iterate and ship with speed and precision</strong>. Reshape your mindset and embrace the programming, logic, and research skills to succeed in today’s tech industry.<br><a href='/us/application-process' target='_blank' rel='noopener noreferrer'>How to apply</a>"
       list:
         - label: "Duration"
           content: "12 Weeks"
