@@ -39,19 +39,8 @@ const View = (props) => {
         fontFamily={"Archivo-Black"}
         seo_title={yml.seo_title}
         title={yml.header.title}
-        paragraph={
-          <>
-            <span
-              style={{
-                fontFamily: "Roboto, sans-serif",
-                color: "#424242",
-                lineHeight: "1.5",
-                fontSize: "22px",
-              }}
-              dangerouslySetInnerHTML={{ __html: yml.header.paragraph }}
-            />
-          </>
-        }
+        paragraph={yml.header.paragraph}
+        fontSize_paragraph="22px"
       >
         {/* Decorative Circles */}
         <Circle

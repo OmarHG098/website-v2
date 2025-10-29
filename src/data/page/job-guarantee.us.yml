@@ -17,7 +17,7 @@ button:
 seo_title: "Job Guarantee"
 header:
   title: "GET INTO TECH WITH OUR JOB GUARANTEE"
-  sub_title: "Your success is our mission — Get hired within 9 months of graduation, or we'll refund your tuition."
+  sub_title: 'Your success is our mission — Get hired within 9 months of graduation, or we will refund your tuition. <a href="https://storage.googleapis.com/media-breathecode/0bf8e5c086144c894b750844d12a0bd327e823ba85f89a4def3c298d5cd6e4f0" target="_blank" rel="noopener noreferrer">Conditions apply</a>.'
   paragraph: ""
     #<ul style="list-style-type: disc; padding-left: 20px;">
      # <li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
@@ -57,9 +57,9 @@ two_column_left:
       <br><br>
       <span style="color: #0097CD; ">✓</span> Follow our career team's guidance
       <br><br>
-      <span style="color: #0097CD; ">✓</span> Conditions apply depending on your U.S. state
+      <span style="color: #000000; ">*Conditions apply depending on your country or U.S. state</span>
     font_size: ["20px", "20px", "18px", "16px", "14px"]
-    style: '{ "text-align": "left", "color": "#444", "line-height": "1.1", "padding": "10px"}'
+    style: '{ "text-align": "left", "color": "#444", "line-height": "1.2", "padding": "10px"}'
   button:
     text: "Apply"
     color: "white"

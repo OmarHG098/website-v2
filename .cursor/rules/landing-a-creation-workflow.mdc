@@ -1,0 +1,364 @@
+---
+globs: src/data/landing/*
+alwaysApply: false
+---
+# Rule: Landing A Creation Workflow
+Type: Workspace Rule
+Description: AI-assisted workflow for creating new landing_a template pages iteratively with component-by-component additions.
+
+## Introduction
+
+This workflow is designed for **creating new landing pages** with AI assistance in an iterative, controlled manner. It allows you to:
+- Start with a minimal functional foundation
+- Add components one at a time with custom content
+- Review and refine each addition before proceeding
+- Test the capability to quickly add/modify components
+
+**When to use this workflow:**
+- Creating new landing pages from scratch
+- Testing rapid component additions with text changes
+- Building landing pages with specific, customized content
+- Learning the landing_a template structure
+
+**Related rule:** See `landing-a-template` for complete component reference and property details.
+
+## Component Tiers
+
+Understanding the different levels of component sets helps you start with the right foundation:
+
+### Tier 1: Absolute Minimum (4 Components)
+**Purpose:** Structure testing and YAML parsing only
+**Components:**
+- `meta_info` - Page metadata and configuration
+- `navbar` - Navigation bar
+- `form` - Lead capture form
+- `header_data` - Hero section/jumbotron
+- `features` - Value propositions displayed under header
+- `follow_bar` - Sticky CTA bar (top/bottom)
+
+**Use when:** Testing YAML structure or building proof-of-concept only
+**Note:** ⚠️ NOT sufficient for a real landing page
+
+### Tier 2: Functional Minimum (6-7 Components)
+**Purpose:** Real landing pages with complete user experience
+**Components:**
+- All 6 from Tier 1, plus:
+- `short_badges` - Credibility indicators (awards, certifications)
+
+**Use when:** Creating production landing pages
+**Note:** ✅ This is the recommended starting point for real landing pages
+
+### Tier 3: Full Featured Landing
+**Purpose:** Complete landing page with all sections
+**Additional Components:** Any combination of:
+- Standalone: `program_details`, `rating_reviews`, `geeks_vs_others`, `why_4geeks`, `who_is_hiring`, etc.
+- Dynamic: Two-column layouts, iconograms, testimonials, job guarantee, financing options, etc.
+
+**Use when:** Building comprehensive marketing landing pages
+
+## Iterative Creation Workflow
+
+### Step 1: Initialize with Functional Minimum
+
+Start by creating a new `.us.yml` file with the 6-7 core components:
+
+```yaml
+meta_info:
+  slug: descriptive-landing-name
+  title: "SEO-optimized title (50-60 chars)"
+  description: "SEO meta description (150-160 chars)"
+  visibility: "hidden" # Start hidden, change to visible when ready
+  template: "landing_a"
+  utm_course: ["course-name"]
+  utm_location: ["location-slug"]
+  # ... other meta_info fields
+
+navbar:
+  buttonText: "CTA Text"
+  buttonUrl: "#leadform_header"
+
+form:
+  fields: ["full_name", "phone", "email"]
+  heading: "Form heading"
+  motivation: "Form subtitle/motivation"
+  button_label: "SUBMIT BUTTON"
+
+apply_schollarship:
+  imageSide: "left"
+  image: "../../../static/images/landing/image.webp"
+
+header_data:
+  background: "#ffffff"
+  tagline: "Main headline"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+
+features:
+  marginTop: 0px
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
+  bullets:
+    - "First value proposition"
+    - "Second value proposition"
+    - "Third value proposition"
+
+short_badges:
+  - name: "Badge Name"
+    url: ""
+    image: "../../../static/images/badges/badge.png"
+    alt: "Badge description"
+
+follow_bar:
+  position: "top"
+  content:
+    text: "Desktop message"
+    text_mobile: "Mobile message"
+    font_size: ["25px", "25px", "25px", "20px", "18px"]
+  button:
+    text: "CTA Button"
+    path: "#leadform_header"
+```
+
+### Step 2: Iterative Component Addition
+
+Once the base is ready, add components iteratively:
+
+**User provides instruction:**
+```
+"Add 'program_details' with this sub_heading: 'Custom text here'"
+```
+
+**AI adds component:**
+- Identifies if standalone or dynamic component
+- Places standalone components ABOVE `components` section
+- Places dynamic components INSIDE `components` section
+- Uses next available odd position number (1, 3, 5, 7, 9, etc.)
+- Applies custom text as specified
+
+**User reviews:**
+- Approves and moves to next component, OR
+- Requests refinements to the newly added component
+
+**Repeat** until landing page is complete
+
+### Step 3: Review and Finalize
+
+Before marking as complete:
+- [ ] Test all responsive breakpoints
+- [ ] Verify YAML syntax (no curly quotes!)
+- [ ] Confirm position numbers are odd with gaps
+- [ ] Check standalone components are above `components` section
+- [ ] Update visibility to "visible" when ready to publish
+
+## Component Addition Process
+
+### Adding Standalone Components
+
+Standalone components go ABOVE the `components` section:
+
+```yaml
+# ✅ CORRECT
+program_details:
+  position: 3
+  heading: "Section heading"
+  sub_heading: "Section subtitle"
+
+rating_reviews:
+  position: 7
+  heading: "Reviews heading"
+  
+components:
+  - name: first_component
+    position: 1
+```
+
+**Common standalone components:**
+- `program_details`
+- `rating_reviews`
+- `geeks_vs_others`
+- `why_4geeks`
+- `who_is_hiring`
+- `badges`
+- `alumni_projects`
+
+### Adding Dynamic Components
+
+Dynamic components go INSIDE the `components` section:
+
+```yaml
+components:
+  - name: why-choose-4geeks
+    position: 1
+    layout: two_column_right
+    proportions: [6, 6]
+    heading:
+      text: "Custom heading text"
+    # ... other properties
+    
+  - name: iconogram-section
+    position: 5
+    layout: iconogram
+    icons:
+      - icon: "graduation-2"
+        title: "Icon title"
+        content: "Icon description"
+```
+
+**Common dynamic layouts:**
+- `two_column_left` / `two_column_right`
+- `iconogram`
+- `job_guarantee_small`
+- `testimonials_new`
+- `faq`
+
+### Position Number Strategy
+
+Always use odd numbers with gaps:
+
+```yaml
+# ✅ GOOD: Easy to insert new components between existing ones
+position: 1   # First component
+position: 3   # Can add position 2 if needed later
+position: 5   # Can add position 4 if needed later
+position: 7   # Plenty of room for future additions
+
+# ❌ BAD: Hard to reorder without changing many numbers
+position: 1
+position: 2
+position: 3
+position: 4
+```
+
+## Best Practices
+
+### YAML Syntax Rules
+
+1. **Always use straight quotes** (`"` and `'`), never curly quotes (`"`, `"`, `'`, `'`)
+   ```yaml
+   ✅ text: "We've got the best bootcamp"
+   ❌ text: "We've got the best bootcamp"
+   ```
+
+2. **Style objects use single quotes** with JSON inside
+   ```yaml
+   ✅ style: '{ "fontSize": "20px", "color": "#000" }'
+   ❌ style: "{ fontSize: 20px, color: #000 }"
+   ```
+
+3. **Maintain YAML structure order:**
+   - Required components first
+   - Recommended components second
+   - Standalone components third
+   - `components` section last
+
+### Component Ordering
+
+```yaml
+# ✅ CORRECT ORDER
+meta_info:
+navbar:
+form:
+header_data:
+features:
+short_badges:
+follow_bar:
+
+# Standalone components
+program_details:
+rating_reviews:
+why_4geeks:
+
+# Components section (always last)
+components:
+  - name: component_one
+  - name: component_two
+```
+
+### Incremental Testing
+
+After adding each component:
+1. Verify YAML syntax is valid
+2. Check no curly quotes were introduced
+3. Confirm component is in correct section (standalone vs dynamic)
+4. Test position number is odd and doesn't conflict
+
+### Text Customization
+
+When adding components with custom text:
+- Replace only the text content, keep structure intact
+- Maintain responsive font size arrays: `["40px", "34px", "30px", "25px", "20px"]`
+- Preserve style objects and formatting
+- Keep icons, colors, and layout properties from template
+
+## Common Workflow Examples
+
+### Example 1: Basic Landing Page
+```
+User: Create data-science-beginners.us.yml with functional minimum
+AI: Creates file with 6 core components
+
+User: Add 'program_details' with heading "What You'll Learn"
+AI: Adds standalone component at position 3
+
+User: Add 'why-choose-4geeks' component with custom bullets
+AI: Adds dynamic component at position 1
+
+User: Add 'job_guarantee_small'
+AI: Adds dynamic component at position 5
+```
+
+### Example 2: Comprehensive Landing
+```
+User: Start with functional minimum
+AI: Creates base with 6-7 components
+
+User: Add iconogram, rating_reviews, geeks_vs_others
+AI: Adds all three at positions 3, 5, 7
+
+User: Add Rigobot section and financing options
+AI: Adds dynamic components at positions 9, 11
+
+User: Add who_is_hiring
+AI: Adds standalone component at position 13
+```
+
+## Reference
+
+For detailed component properties and options, see the `landing-a-template` rule which covers:
+- All available components and their properties
+- Layout options and configurations
+- Text formatting and styling rules
+- Color palette and design tokens
+- Responsive design patterns
+
+## Troubleshooting
+
+**Issue:** Component not appearing on page
+- Check position number doesn't conflict
+- Verify component is in correct section (standalone vs dynamic)
+- Confirm YAML syntax is valid
+
+**Issue:** YAML parsing error
+- Look for curly quotes and replace with straight quotes
+- Check all style objects use single quotes with JSON inside
+- Verify proper indentation (2 spaces)
+
+**Issue:** Layout broken on mobile
+- Check responsive font size arrays are complete
+- Verify image style objects have proper responsive values
+- Test on all breakpoints: xl, lg, md, sm, xs
+
+---
+
+**Quick Start Checklist:**
+- [ ] Create file with `.us.yml` extension (kebab-case naming)
+- [ ] Start with functional minimum (6-7 components)
+- [ ] Add components iteratively with custom text
+- [ ] Use odd position numbers (1, 3, 5, 7...)
+- [ ] Place standalone components above `components` section
+- [ ] Always use straight quotes, never curly quotes
+- [ ] Test YAML syntax after each addition
+- [ ] Set visibility to "hidden" until ready to publish
