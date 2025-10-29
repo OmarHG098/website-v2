@@ -262,6 +262,7 @@ const SchemaOrg = ({
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
+      "@id": "https://4geeksacademy.com/#website",
       url,
       name: title,
     },
@@ -284,6 +285,7 @@ const SchemaOrg = ({
     sameAs: [
       "https://twitter.com/4GeeksAcademy",
       "https://www.instagram.com/4geeksacademy/",
+      "https://www.facebook.com/4geeksacademy",
       "https://4geeksacademy.com/",
       "https://www.youtube.com/@4GeeksAcademy",
       "https://4geeksacademy.com/us/job-guarantee",
@@ -318,6 +320,7 @@ const SchemaOrg = ({
     {
       "@context": "https://schema.org",
       "@type": "Article",
+      "@id": url,
       url,
       name: title,
       headline: title,
@@ -331,14 +334,10 @@ const SchemaOrg = ({
         name: author,
       },
       publisher: {
-        "@type": "Organization",
-        url: organization.url,
-        logo: organization.logo,
-        name: organization.name,
+        "@id": "https://4geeksacademy.com/#organization",
       },
       mainEntityOfPage: {
-        "@type": "WebSite",
-        "@id": canonicalUrl,
+        "@id": "https://4geeksacademy.com/#website",
       },
       datePublished,
       wordCount,
@@ -373,6 +372,7 @@ const SchemaOrg = ({
           jobGuarantee: "https://4geeksacademy.com/schema#jobGuarantee",
         },
         "@type": "Course",
+        "@id": url,
         name: seoTitle,
         description,
         provider: {
@@ -406,6 +406,12 @@ const SchemaOrg = ({
       )}
       {(type === "post" || context.defaultTemplate === "landing_post") && (
         <script type="application/ld+json">{JSON.stringify(blog)}</script>
+      )}
+      {/* Fallback: inject organization schema for any unmatched page types */}
+      {!(type in schemaType) && type !== "post" && context.defaultTemplate !== "landing_post" && (
+        <script type="application/ld+json">
+          {JSON.stringify([...baseSchema, educationalOrganizationSchema])}
+        </script>
       )}
       {/* Always inject FAQPage JSON-LD when there are FAQs rendered on the page */}
       {filteredFaqs.length > 0 && (
