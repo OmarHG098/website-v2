@@ -25,7 +25,7 @@ header:
 what_you_will_learn:
   title: "🔍 Lo Que Aprenderás y Harás"
   paragraph: |
-    El Prework no se trata solo de contenido — se trata de aprender cómo aprender en un entorno de programación. Harás:
+    El Prework no se trata solo de contenido: se trata de aprender cómo aprender en un entorno de programación. Harás:
   bullets:
     - text: "Navegar plataformas como <a href='https://4geeks.com/?utm_source=chatgpt.com' target='_blank'>4Geeks.com</a> y Slack"
     - text: "Familiarizarte con GitHub y GitHub CodeSpaces"
@@ -38,7 +38,7 @@ what_you_will_learn:
 how_it_works:
   title: "Cómo Funciona"
   content: |
-    <li>El Prework usualmente toma alrededor de 2 semanas, pero tú marcas el ritmo — algunos terminan antes, otros pueden necesitar un poco más de tiempo. Necesitas completarlo antes de que comience el bootcamp.</li>
+    <li>El Prework usualmente toma alrededor de 2 semanas, pero tú marcas el ritmo, algunos terminan antes, otros pueden necesitar un poco más de tiempo. Necesitas completarlo antes de que comience el bootcamp.</li>
     <li>Una vez que te inscribes, tendrás acceso inmediato a los materiales del prework y canales de soporte en Slack para que puedas comenzar de inmediato.</li>
     <li>Asistir a las Clases de Prework en Vivo (salas de estudio) es obligatorio. Trabajarás en ejercicios, compartirás tu pantalla y obtendrás ayuda en tiempo real de un mentor.</li>
   image: "../../../static/images/Group-6617.webp"
@@ -81,7 +81,7 @@ why_prework_matters:
 ## CTA SECTION
 cta:
   title: "¿Listo para Comenzar tu Prework?"
-  subtitle: "Inscríbete hoy y obtén acceso instantáneo al Prework — tu primer paso hacia una nueva carrera en tecnología."
+  subtitle: "Inscríbete hoy y obtén acceso instantáneo al Prework: tu primer paso hacia una nueva carrera en tecnología."
   primary_button:
     text: "Inscríbete Ahora"
     link: "/es/aplica"

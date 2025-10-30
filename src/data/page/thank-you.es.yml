@@ -55,7 +55,7 @@ components:
     heading:
       text: "📚 Optimiza tus Habilidades de Networking"
     content:
-      text: "Prueba cómo ayudamos a los estudiantes a navegar el networking, el crecimiento profesional y las estrategias laborales del mundo real — incluso antes del primer día."
+      text: "Prueba cómo ayudamos a los estudiantes a navegar el networking, el crecimiento profesional y las estrategias laborales del mundo real, incluso antes del primer día."
     button:
       text: "👉 Obtén la Guía"
       path: "https://storage.googleapis.com/media-breathecode/f5db5a88c24d96a753a27d5fde198a3932717b2741cde56417db76b4842d6b98"

@@ -44,7 +44,7 @@ header_data:
   background: "#ffffff"
   tagline: GET INTO TECH WITH OUR JOB GUARANTEE
   tagline_color: "#1c1c1c"
-  sub_heading: "Your success is our mission — Get hired within 9 months of graduation, or we’ll refund your tuition."
+  sub_heading: "Your success is our mission. Get hired within 9 months of graduation, or we’ll refund your tuition."
   form_styles:
     background: "#FFB718"
     color: "black"
@@ -71,11 +71,11 @@ we_trust_section:
   title: Does the Job Guarantee Deliver Results You Can Count On?
   bg_full: true
   text: |
-    Yes — and we've got the numbers to back it up.
+    Yes. And we've got the numbers to back it up.
     <br><br>
     These stats reflect our full graduate community and demonstrate the proven impact of our programs across the board.
     <br><br>
-    We don't just teach you how to code — we help you build a career you're proud of.
+    We don't just teach you how to code: we help you build a career you're proud of.
   boxes:
     - icon: briefcase-2
       title: "84%"
@@ -197,7 +197,7 @@ who_is_hiring:
   background: '#FBFCFC'
   heading: "WHO’S HIRING OUR GRADUATES?"
   sub_heading: |
-    Top companies hire 4Geeks graduates, with 84% landing jobs within 6 months of graduation thanks to their skills and our personalized career support. Our grads don’t just get hired—they launch successful careers and consistently earn recognition for their technical expertise and professionalism:   
+    Top companies hire 4Geeks graduates, with 84% landing jobs within 6 months of graduation thanks to their skills and our personalized career support. Our grads don’t just get hired, they launch successful careers and consistently earn recognition for their technical expertise and professionalism:   
     <br/>
      "I’m continually impressed by the depth of knowledge possessed by 4Geeks students. One of my hires ended up becoming a team leader." - CodeNinjas.
 
@@ -214,7 +214,7 @@ components:
       font_size: ["42px", "34px", "34px", "34px", "34px"]
       style: '{ "font-weight": "600", "text-align": "center", "color": "#000", "padding": "10px" }'
     sub_heading:
-      text: "Our goal is more than teaching skills — we're here to launch successful tech careers. With an industry-aligned curriculum, hands-on teaching methodology  and personalized career support, we have a proven track record of preparing students for the tech job market."
+      text: "Our goal is more than teaching skills, we're here to launch successful tech careers. With an industry-aligned curriculum, hands-on teaching methodology  and personalized career support, we have a proven track record of preparing students for the tech job market."
       font_size: ["20px", "20px", "18px", "18px", "16px"]
       style: '{ "font-weight": "400", "text-align": "justify", "color": "#333", "padding": "10px"}'
     content:

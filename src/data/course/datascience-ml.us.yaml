@@ -19,7 +19,7 @@ apply_form:
 seo_title: "Data Science and Machine Learning Bootcamp"
 header:
   title: "DATA SCIENCE AND MACHINE LEARNING WITH AI"
-  paragraph: 'Break into one of tech’s fastest-growing, highest-paying fields. Learn to analyze data, build predictive models, and use AI tools to solve real-world problems—backed by expert mentorship, hands-on learning, and the option of a job guarantee. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf" target="_blank" rel="noopener noreferrer">Conditions apply</a>.'
+  paragraph: 'Break into one of tech’s fastest-growing, highest-paying fields. Learn to analyze data, build predictive models, and use AI tools to solve real-world problems, backed by expert mentorship, hands-on learning, and the option of a job guarantee. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf" target="_blank" rel="noopener noreferrer">Conditions apply</a>.'
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "circles"
 
@@ -117,7 +117,7 @@ two_columns_info:
     - heading: "MASTER NEXT-GEN DATA SCIENCE SKILLS."
       text: "Learn to analyze data and build predictive models using AI-powered tools and workflows used by modern data teams."  
     - heading: "GET UNLIMITED MENTORSHIP AND CAREER SUPPORT."
-      text: "Work 1:1 with expert mentors and career coaches—during your bootcamp and forever after."
+      text: "Work 1:1 with expert mentors and career coaches, during your bootcamp and forever after."
     - heading: "LEARN FASTER WITH HYPERPERSONALIZED SUPPORT."
       text: "Progress with instant AI feedback, personalized guidance, and small class sizes."
     - heading: "JOIN A GLOBAL TECH COMMUNITY."
@@ -134,7 +134,7 @@ details:
       sub_title: |
         Master the skills to turn data into powerful insights and AI-driven solutions. Build predictive models for real-world applications like fraud detection, natural language processing, and data-driven decision-making.
         Use industry-leading tools and libraries such as Python, TensorFlow, SQL, and Scikit-learn, and work with supervised and unsupervised learning models.  Explore key algorithms like K-Nearest Neighbors and Decision Trees.
-        By the end of the program, you’ll have designed and deployed your own AI projects—covering the full lifecycle from development to maintenance—while ensuring privacy, security, and real-world applicability.
+        By the end of the program, you’ll have designed and deployed your own AI projects, covering the full lifecycle from development to maintenance, while ensuring privacy, security, and real-world applicability.
       list:
         - label: "Duration"
           content:  "16 Weeks"

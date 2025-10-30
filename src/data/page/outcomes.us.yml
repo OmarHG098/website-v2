@@ -13,7 +13,7 @@ meta_info:
 seo_title: "4Geeks Academy Outcomes Report"
 header:
   title: "Proven Outcomes That Launch Tech Careers"
-  paragraph: "At 4Geeks, success isn’t a promise — it’s a track record. Our students launch successful tech careers across AI-powered coding, data science, and cybersecurity, and the numbers prove it. Read on to see the details: We keep our reporting transparent, regularly publishing verified placement and salary data across the U.S., Latin America, and Europe."
+  paragraph: "At 4Geeks, success isn’t a promise: it’s a track record. Our students launch successful tech careers across AI-powered coding, data science, and cybersecurity, and the numbers prove it. Read on to see the details: We keep our reporting transparent, regularly publishing verified placement and salary data across the U.S., Latin America, and Europe."
   image: " "
   image_alt: "4Geeks Academy Proven Outcomes Report"
 sections:
@@ -26,8 +26,8 @@ sections:
         content: |
           <ul class='ul-outcomes'>
             <li class='li-outcomes-link'>U.S. (2022 Benchmark): 84% hired | +55% salary increase</li>
-            <li class='li-outcomes-link'>(2024): A slower market year — average hire took 141 days.</li>
-            <li class='li-outcomes-link'>(2025 Mid-Year): Rebound in full swing — 86% hired | +71% salary increase | average hire in just 93 days.</li>
+            <li class='li-outcomes-link'>(2024): A slower market year, average hire took 141 days.</li>
+            <li class='li-outcomes-link'>(2025 Mid-Year): Rebound in full swing: 86% hired | +71% salary increase | average hire in just 93 days.</li>
           </ul>
       - title: "LATAM OUTCOMES"
         content: |
@@ -68,7 +68,7 @@ sections:
   - title: "🚀 Why Students Get Results with Us"
     ref: "why_results"
     paragraph: |
-      We don’t just teach skills — we make sure you can turn them into a career. <br>
+      We don’t just teach skills: we make sure you can turn them into a career. <br>
       Every 4Geeks student gets:
     sub_sections:
       - title: "GeekFORCE Career Support (for life):"

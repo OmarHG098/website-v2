@@ -62,7 +62,7 @@ features:
   bullets:
     - Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist!
     - Step into fast-growing, high-paying tech professions with strong job prospects and future demand.
-    - Learn anywhere, anytime—choose the format that suits you.
+    - Learn anywhere, anytime: choose the format that suits you.
     # - "Part-time: Immerse yourself in a flexible schedule, perfect for busy professionals and students."
 
 short_badges:
@@ -205,7 +205,7 @@ components:
     content:
       text: "Our programs are designed to accelerate your learning and ensure your success. Backed by years of research and experience, our teaching methods use a blend of personalized mentorship, hands-on practice, and continuous micro-feedback to keep you motivated and actively engaged in the learning process. \n
         At 4Geeks Academy, you’ll benefit from a comprehensive support system. Our mentorship and career services offer unlimited 1-on-1 sessions with our industry experts, providing personalized guidance whenever you need it. With instant feedback on your coding exercises from our proprietary AI and 24/7 support through our active community channels, you’re never left to figure things out on your own.\n
-        Many students face self-doubt about succeeding in tech, but we’re here to build your confidence and teach you that mistakes—lots of them—are a natural and essential part of learning. Our curriculum, tools, and exercises are grounded in real-world workplace demands, ensuring that you graduate career-ready and prepared to thrive in the tech industry."
+        Many students face self-doubt about succeeding in tech, but we’re here to build your confidence and teach you that mistakes, lots of them, are a natural and essential part of learning. Our curriculum, tools, and exercises are grounded in real-world workplace demands, ensuring that you graduate career-ready and prepared to thrive in the tech industry."
       font_size: ["16px"]
     button:
       text: "Get More Info"

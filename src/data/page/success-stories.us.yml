@@ -10,7 +10,7 @@ meta_info:
 seo_title: "Student Testimonials & Success Stories"
 header:
   title: "What Our Graduates Say: From Bootcamp to Career"
-  paragraph: "At 4Geeks Academy, students don’t just learn tech skills — they transform their lives. These success stories from our global community highlight how graduates went from bootcamp to career, proving that with the right support, tech is for everyone."
+  paragraph: "At 4Geeks Academy, students don’t just learn tech skills: they transform their lives. These success stories from our global community highlight how graduates went from bootcamp to career, proving that with the right support, tech is for everyone."
   image: "../../../static/images/locations/caracas-loc-2.jpeg"
   image_alt: "Meet The People That Changed Their Careers With Code"
 
@@ -58,7 +58,7 @@ partners:
 
 cta:
   title: "Ready to Write Your Own Story?"
-  paragraph: "The next testimonial could be yours. Join thousands of students who have transformed their lives with 4Geeks — you can too."
+  paragraph: "The next testimonial could be yours. Join thousands of students who have transformed their lives with 4Geeks, you can too."
   button:
     text: "Apply Now"
     path: "/us/apply"

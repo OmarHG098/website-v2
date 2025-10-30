@@ -53,7 +53,7 @@ badges:
 
 divider:
   heading:
-    text: "Miami is one of the fastest-growing tech hubs in the U.S.—and 4Geeks Academy is at the center of it. As a leading coding bootcamp in Miami, we’ve helped hundreds of students launch tech careers at startups, agencies, and global companies like Microsoft and Meta. With flexible schedules, expert instructors, and a strong local presence, we’re here to help you succeed in South Florida’s tech industry."
+    text: "Miami is one of the fastest-growing tech hubs in the U.S.. And 4Geeks Academy is at the center of it. As a leading coding bootcamp in Miami, we’ve helped hundreds of students launch tech careers at startups, agencies, and global companies like Microsoft and Meta. With flexible schedules, expert instructors, and a strong local presence, we’re here to help you succeed in South Florida’s tech industry."
     font_size: ["34px", "34px", "34px", "28px", "26px"] # [xl, lg, md, sm, xs]
     style: '{ "color": "#FFFFFF" }'
 

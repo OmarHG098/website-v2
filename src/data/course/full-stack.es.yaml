@@ -74,8 +74,8 @@ partners:
 
 overlaped:
   heading: "Por qué aprender Vibe Coding es esencial"
-  subtitle: "Adelántate con el desarrollo impulsado por IA que está transformando cómo se construye el software—y lo que esperan los equipos modernos."
-  paragraph: 'Vibe Coding—donde das prompts de alto nivel y dejas que la IA genere el código—es la vanguardia del desarrollo. Popularizado por Andrej Karpathy y ahora ganando tracción, te ayuda a construir apps hasta 4× más rápido usando herramientas como <strong style="text-decoration: none; color: #000000; font-weight: 700;">Cursor</strong> y <strong style="text-decoration: none; color: #000000; font-weight: 700;">Vercel v0</strong>. A medida que la IA transforma la tecnología, las empresas están contratando desarrolladores que saben cómo aprovecharla. Aprender Vibe Coding te da una ventaja clara—y mantiene tus habilidades preparadas para el futuro.'
+  subtitle: "Adelántate con el desarrollo impulsado por IA que está transformando cómo se construye el software, y lo que esperan los equipos modernos."
+  paragraph: 'Vibe Coding, donde das prompts de alto nivel y dejas que la IA genere el código: es la vanguardia del desarrollo. Popularizado por Andrej Karpathy y ahora ganando tracción, te ayuda a construir apps hasta 4× más rápido usando herramientas como <strong style="text-decoration: none; color: #000000; font-weight: 700;">Cursor</strong> y <strong style="text-decoration: none; color: #000000; font-weight: 700;">Vercel v0</strong>. A medida que la IA transforma la tecnología, las empresas están contratando desarrolladores que saben cómo aprovecharla. Aprender Vibe Coding te da una ventaja clara, y mantiene tus habilidades preparadas para el futuro.'
   button:
     text: "SABER MÁS"
     color: "blue"  
@@ -93,12 +93,12 @@ two_columns:
   heading:
     text_by_location:
       miami: "4Geeks, Miami y una misión de crear oportunidades"
-      default: "Tu Nueva Carrera Comienza Aquí — Solo Pregúntale a Nuestros Graduados"
+      default: "Tu Nueva Carrera Comienza Aquí: Solo Pregúntale a Nuestros Graduados"
     font_size: ["35px", "35px", "35px", "30px", "30px"]
   sub_heading:
     text_by_location:
       miami: "Con Miami como nuestra base, estamos dedicados a fomentar oportunidades en todo el sur de Florida."
-      default: "Convertirse en un desarrollador full stack impulsado por IA con 4Geeks no es solo aprender a programar — es cambiar tu vida."
+      default: "Convertirse en un desarrollador full stack impulsado por IA con 4Geeks no es solo aprender a programar: es cambiar tu vida."
     style: '{"font-weight": "400" }'
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   bullets:
@@ -123,7 +123,7 @@ two_columns_rigo:
     shadow: true
   video: "cOFm_deKj6Q"
   heading: 
-    text: "Aprende Desarrollo Full Stack Impulsado por IA Más Rápido — Con Apoyo Hiper-Personalizado Que Se Adapta a Ti"
+    text: "Aprende Desarrollo Full Stack Impulsado por IA Más Rápido: Con Apoyo Hiper-Personalizado Que Se Adapta a Ti"
     font_size: ["33px", "33px", "33px", "33px", "33px"]
     style: '{ "lineHeight": "30px" }'
     heading_image:
@@ -176,7 +176,7 @@ two_columns_info:
     - heading: "Domina las habilidades tecnológicas de próxima generación."
       text: "Aprende a construir con las herramientas de IA y flujos de trabajo utilizados por equipos de desarrollo modernos."
     - heading: "Obtén mentoría ilimitada y apoyo profesional."
-      text: "Trabaja 1:1 con mentores expertos y coaches de carrera—durante tu bootcamp y para siempre después."
+      text: "Trabaja 1:1 con mentores expertos y coaches de carrera, durante tu bootcamp y para siempre después."
     - heading: "Aprende más rápido con apoyo hiperpersonalizado."
       text: "Progresa con retroalimentación instantánea de IA, orientación personalizada y clases pequeñas."
     - heading: "Únete a una comunidad tecnológica global."

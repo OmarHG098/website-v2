@@ -13,7 +13,7 @@ header:
     Lifetime Mentorship & AI-Powered Coding Support"
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: "GeekPal - Have mentors for the rest of your life "
-  paragraph: "Get unlimited 1:1 coding mentorship and AI-powered guidance from Rigobot 24/7. Never code alone, get instant feedback, and join a global developer community — all designed to help you learn faster, stay motivated, and thrive in tech for life."
+  paragraph: "Get unlimited 1:1 coding mentorship and AI-powered guidance from Rigobot 24/7. Never code alone, get instant feedback, and join a global developer community, all designed to help you learn faster, stay motivated, and thrive in tech for life."
   bullets:
     - " "
     
@@ -33,7 +33,7 @@ components:
       font_size: ["30px", "30px", "30px", "30px", "30px"]
       style: '{ "color": "black" }'
     sub_heading:
-      text: 'The #1 reason people quit when learning to code? Getting stuck. At 4Geeks, we’ve built a personalized support system where you’ll always have someone to help you with your challenges— so you never lose momentum and keep advancing fast.'
+      text: 'The #1 reason people quit when learning to code? Getting stuck. At 4Geeks, we’ve built a personalized support system where you’ll always have someone to help you with your challenges, so you never lose momentum and keep advancing fast.'
       font_size: ["20px", "20px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "90%", "color": "black"}' 
     position: 1
@@ -47,7 +47,7 @@ components:
       - icon: "hands-w-purple"
         title: "Unlimited 1:1 Mentorship"
         color: "#FF0000"
-        content: "From day one — and for a lifetime."
+        content: "From day one, and for a lifetime."
       - icon: "rocket-2"
         title: "24/7 AI Coding Assistant (Rigobot)"
         color: "#FFC718"
@@ -120,18 +120,18 @@ components:
       font_size: ["33px", "33px", "33px", "33px", "33px"]
       style: '{ "lineHeight": "30px" }'
     sub_heading:
-      text: "4Geeks is more than a bootcamp — it’s a supportive network of tech pros, mentors, and fellow geeks to keep you moving forward in your career."
+      text: "4Geeks is more than a bootcamp: it's a supportive network of tech pros, mentors, and fellow geeks to keep you moving forward in your career."
       font_size: ["18px","18px","18px","18px","18px"]
       style: '{ "margin":"15px 0", "font-weight":"300" }'
     bullets:
       item_style: '{ "padding": "5px 0", "font-weight": "100", "margin":"0" }'
       items:
         - heading: "Slack Community (6,000+ members)"
-          text: "Get real-time help from mentors, alumni, and peers through our active, theme specific channels — from coding support, to job boards and career advice (and yes, there’s coding humor too!)."
+          text: "Get real-time help from mentors, alumni, and peers through our active, theme specific channels: from coding support, to job boards and career advice (and yes, there’s coding humor too!)."
           icon: "check"
           icon_color: '#F4F9FF'
         - heading: "4Geeks.com"
-          text: "Keep advancing your skills with further training resources, live events, and collaborative projects. Connect with people who’ve been where you are — and know how to help you get where you want to go."
+          text: "Keep advancing your skills with further training resources, live events, and collaborative projects. Connect with people who’ve been where you are, and know how to help you get where you want to go."
           icon: "check"
           icon_color: '#F4F9FF'
 

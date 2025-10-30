@@ -20,7 +20,7 @@ seo_title: "Cybersecurity Bootcamp"
 
 header:
   title: "Become a Cybersecurity Specialist"
-  paragraph: "Launch a high-paying career in one of tech’s most in-demand fields. Learn to defend systems and respond to real-world cyber threats with a hands-on, AI-integrated curriculum—designed by leading cybersecurity experts and backed by a job guarantee option. <a href='https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf' target='_blank' rel='noopener noreferrer'>Conditions apply</a>."
+  paragraph: "Launch a high-paying career in one of tech’s most in-demand fields. Learn to defend systems and respond to real-world cyber threats with a hands-on, AI-integrated curriculum, designed by leading cybersecurity experts and backed by a job guarantee option. <a href='https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf' target='_blank' rel='noopener noreferrer'>Conditions apply</a>."
   image: "../../../static/images/bg/apple-building.jpg"
   image_alt: "apple-building"
 
@@ -113,7 +113,7 @@ two_columns_info:
       icon: "check"
     - heading: "Get unlimited mentorship and career support."
       icon: "check" 
-      text: "Work 1:1 with expert mentors and career coaches—during your bootcamp and forever after."
+      text: "Work 1:1 with expert mentors and career coaches, during your bootcamp and forever after."
     - heading: "Learn faster with hyperpersonalized support."
       icon: "check"
       text: "Progress with instant AI feedback, personalized guidance, and small class sizes."
@@ -139,7 +139,7 @@ two_columns:
     font_size: ["30px", "30px", "30px", "26px", "24px"]
   sub_heading:
     text: |-
-      Our intensive cybersecurity bootcamp equips you with the skills to detect, analyze, and prevent attacks—using industry-standard tools like Nessus, Nmap, Wireshark, and Metasploit—and a cutting-edge curriculum built by top global experts:
+      Our intensive cybersecurity bootcamp equips you with the skills to detect, analyze, and prevent attacks, using industry-standard tools like Nessus, Nmap, Wireshark, and Metasploit, and a cutting-edge curriculum built by top global experts:
     font_size: ["16px", "16px", "16px", "14px", "14px"]
   button:
     text: "Apply now"
@@ -159,7 +159,7 @@ two_columns:
       <br>
       • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Penetration Testing</strong> to uncover vulnerabilities and simulate real attack scenarios.<br>
       <br>
-      • <strong style="text-decoration: none; color: #000000; font-weight: 700;">System Hardening</strong> for Windows, Linux, and more—develop skills to defend infrastructure against evolving threats.<br><br>
+      • <strong style="text-decoration: none; color: #000000; font-weight: 700;">System Hardening</strong> for Windows, Linux, and more: develop skills to defend infrastructure against evolving threats.<br><br>
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"
@@ -170,7 +170,7 @@ details:
   about:
     title: "About the Program"
     sub_title: |-
-      Our intensive Cybersecurity Bootcamp trains you to protect systems, detect threats, and respond to incidents—using industry-standard tools like Nessus, Nmap, Wireshark, and Metasploit.
+      Our intensive Cybersecurity Bootcamp trains you to protect systems, detect threats, and respond to incidents, using industry-standard tools like Nessus, Nmap, Wireshark, and Metasploit.
       Developed with top global experts,  the curriculum is built for real-world readiness. You’ll master skills like:
       <strong>Data Loss Prevention – keeping sensitive information secure.</strong>
       <strong>Penetration Testing – finding and fixing vulnerabilities.</strong>

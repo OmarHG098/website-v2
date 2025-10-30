@@ -36,7 +36,7 @@ badges:
 
 divider:
   heading:
-    text: "Ready to level up your career in Tampa’s growing tech scene? 4Geeks Academy offers flexible, project-based training designed to get you job-ready. With guidance from experienced mentors and personalized career support, our Tampa students have successfully transitioned into roles across Florida’s west coast tech industry—no matter their starting point."
+    text: "Ready to level up your career in Tampa’s growing tech scene? 4Geeks Academy offers flexible, project-based training designed to get you job-ready. With guidance from experienced mentors and personalized career support, our Tampa students have successfully transitioned into roles across Florida’s west coast tech industry, no matter their starting point."
     font_size: ["34px", "34px", "34px", "28px", "26px"] # [xl, lg, md, sm, xs]
     style: '{ "color": "#FFFFFF" }'
     
@@ -73,7 +73,7 @@ info_box:
 images_box:
   heading: "Why Tampa Is a Smart Place to Launch Your Tech Career"
   content: |-
-      Renowned for its beautiful waterfronts and dynamic cultural scene, Tampa is also becoming a hub for technology and innovation. Hosting offices of companies like Apple, Oracle, Tech Data, and the cybersecurity giant ReliaQuest, the city’s tech ecosystem is thriving. Its tech job market is set to grow by 27% by 2030—more than double the national average! With a vibrant community of coworking spaces, startup support, and networking events, Tampa is an ideal location for tech professionals looking to advance their careers. 
+      Renowned for its beautiful waterfronts and dynamic cultural scene, Tampa is also becoming a hub for technology and innovation. Hosting offices of companies like Apple, Oracle, Tech Data, and the cybersecurity giant ReliaQuest, the city’s tech ecosystem is thriving. Its tech job market is set to grow by 27% by 2030, more than double the national average! With a vibrant community of coworking spaces, startup support, and networking events, Tampa is an ideal location for tech professionals looking to advance their careers. 
       Join us at 4Geeks Academy to thrive in Tampa's booming tech scene!
 
   images:

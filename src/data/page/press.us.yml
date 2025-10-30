@@ -29,7 +29,7 @@ content:
       location: ["downtown-miami", "online", "madrid-spain"]
       image: "../../../static/images/partner/forbes-coder.jpg"
       title: "5 Best Online Full-Stack Bootcamps Of 2024"
-      text: "Full-stack developers create and troubleshoot both the back-end and front-end of websites and software—an indispensable skill set for companies across industries."
+      text: "Full-stack developers create and troubleshoot both the back-end and front-end of websites and software: an indispensable skill set for companies across industries."
       textUrl: "Read Article"
       url: "https://www.forbes.com/advisor/education/bootcamps/best-full-stack-developer-bootcamp/"
     - name: "Forbes"

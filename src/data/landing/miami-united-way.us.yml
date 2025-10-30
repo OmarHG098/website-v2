@@ -107,7 +107,7 @@ iconogram:
       content: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
     - icon: "laptop_new"
       title: ""
-      content: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services —like resume review and career coaching—to help participants find jobs after graduating."
+      content: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services, like resume review and career coaching, to help participants find jobs after graduating."
     - icon: "job"
       title: ""
       content: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
@@ -132,7 +132,7 @@ components:
         content: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
       - icon: "laptop_new"
         title: ""
-        content: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services —like resume review and career coaching—to help participants find jobs after graduating."
+        content: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services, like resume review and career coaching, to help participants find jobs after graduating."
       - icon: "circle"
         title: ""
         content: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
@@ -211,7 +211,7 @@ components:
       font_size: ["16px"]
       text: |
         <h4><strong style="font-weight: bold;"> > JOB OPPORTUNITIES </strong></h4>
-        <p>Computer programmers are in high demand—and the demand for programmers will keep increasing over the decade.</p>
+        <p>Computer programmers are in high demand, and the demand for programmers will keep increasing over the decade.</p>
         <br>
         <h4><strong style="font-weight: bold;"> > BETTER PAY </strong></h4>
         <p>Starting salary for a Jr. Software Developer in Miami is $48,000.</p>

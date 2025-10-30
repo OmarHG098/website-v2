@@ -55,7 +55,7 @@ components:
     heading:
       text: "📚 Optimize your Networking Skills"
     content:
-      text: "Get a taste of how we help students navigate networking, career growth, and real-world job strategies — even before day one."
+      text: "Get a taste of how we help students navigate networking, career growth, and real-world job strategies, even before day one."
     button:
       text: "👉 Get the Guide"
       path: "https://storage.googleapis.com/media-breathecode/f5db5a88c24d96a753a27d5fde198a3932717b2741cde56417db76b4842d6b98"

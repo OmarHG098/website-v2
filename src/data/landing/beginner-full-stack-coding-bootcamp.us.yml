@@ -40,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: "Full Stack Coding Bootcamp for Beginners"
-  sub_heading: "No coding background? No problem—launch your career here!"
+  sub_heading: "No coding background? No problem. Launch your career here!"
   background: "#ffffff"
   tagline_color: "#1c1c1c"
   form_styles:

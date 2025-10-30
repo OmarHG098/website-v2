@@ -16,7 +16,7 @@ header:
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: "GeekForce - Coding bootcamp with unlimited career support."
   paragraph: |
-    Get unlimited 1:1 career support designed for your unique profile and goals—for life. From resume and portfolio building to interviews and AI-driven hiring platforms, we’ll give you the personalized mentorship you need to land your first job and keep thriving in today’s tech.
+    Get unlimited 1:1 career support designed for your unique profile and goals, for life. From resume and portfolio building to interviews and AI-driven hiring platforms, we’ll give you the personalized mentorship you need to land your first job and keep thriving in today’s tech.
   image_logo: "/images/geekforce.png"
   bullets:
     - " "
@@ -30,7 +30,7 @@ who_is_hiring:
   position: 13
   heading: "WHO’S HIRING OUR GRADUATES?"
   sub_heading: |
-    Top companies hire 4Geeks graduates, with 84% landing jobs within 6 months of graduation thanks to their skills and our personalized career support. Our grads don’t just get hired—they launch successful careers and consistently earn recognition for their technical expertise and professionalism:
+    Top companies hire 4Geeks graduates, with 84% landing jobs within 6 months of graduation thanks to their skills and our personalized career support. Our grads don’t just get hired, they launch successful careers and consistently earn recognition for their technical expertise and professionalism:
     <br/>
     <br/>
     "I’m continually impressed by the depth of knowledge possessed by 4Geeks students. One of my hires ended up becoming a team leader." - CodeNinjas.
@@ -71,7 +71,7 @@ components:
           icon: "check"
           icon_color: '#25BF6C'
         - heading: " "
-          text: "Meet mentors online or in-person whenever you need support—unlimited, for life."
+          text: "Meet mentors online or in-person whenever you need support: unlimited, for life."
           icon: "check"
           icon_color: '#25BF6C'
         - heading: " "
@@ -88,7 +88,7 @@ components:
       font_size: ["33px", "33px", "33px", "33px", "33px"]
       style: '{ "lineHeight": "35px", "textAlign": "center", "width": "90%" }'
     sub_heading:
-      text: "Once you’ve mastered the technical skills, our structured process helps you build a lasting career in tech — taking you from learning to landing the job."
+      text: "Once you’ve mastered the technical skills, our structured process helps you build a lasting career in tech, taking you from learning to landing the job."
       font_size: ["20px", "20px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "90%"}'    
     icons:
@@ -155,7 +155,7 @@ components:
       font_size: ["30px", "30px", "30px", "30px", "30px"]
       style: '{ "color": "white" }'
     sub_heading:
-      text: 'Yes — and we’ve got the numbers to back it up.'
+      text: 'Yes. And we’ve got the numbers to back it up.'
       font_size: ["20px", "20px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%", "color": "white"}'      
     icons:

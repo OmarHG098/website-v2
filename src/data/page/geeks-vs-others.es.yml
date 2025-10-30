@@ -12,7 +12,7 @@ seo_title: "Por qué 4Geeks se Destaca"
 header:
   title: "4Geeks Academy vs Otros Bootcamps"
   sub_title: " "
-  paragraph: "Descubre por qué 4Geeks Academy es diferente. Nuestro plan de estudios integrado con IA, proyectos prácticos y mentoría personalizada ayudan a los estudiantes a lanzar carreras tecnológicas de alta demanda y preparadas para el futuro—sin experiencia previa necesaria. Con mentoría de por vida y apoyo profesional, nos aseguramos de que sigas prosperando mucho después de graduarte."
+  paragraph: "Descubre por qué 4Geeks Academy es diferente. Nuestro plan de estudios integrado con IA, proyectos prácticos y mentoría personalizada ayudan a los estudiantes a lanzar carreras tecnológicas de alta demanda y preparadas para el futuro, sin experiencia previa necesaria. Con mentoría de por vida y apoyo profesional, nos aseguramos de que sigas prosperando mucho después de graduarte."
 
 section_heading: 
   text: "Lanzando Carreras Tecnológicas Exitosas en la Era de la IA"
@@ -36,12 +36,12 @@ components:
       font_size: ["33px", "33px", "33px", "33px", "33px"]
       style: '{ "lineHeight": "30px" }'
     sub_heading:
-      text: "La mayoría de bootcamps te dan unas pocas horas de mentoría y recursos genéricos — y luego te dejan solo. En 4Geeks, construimos todo un sistema de apoyo alrededor de la personalización:"
+      text: "La mayoría de bootcamps te dan unas pocas horas de mentoría y recursos genéricos, y luego te dejan solo. En 4Geeks, construimos todo un sistema de apoyo alrededor de la personalización:"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600" }'
     content:
       style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
-      text: "👉 El resultado: una experiencia verdaderamente hiperpersonalizada que combina mentoría humana con inteligencia de IA — algo que ningún otro bootcamp ofrece."
+      text: "👉 El resultado: una experiencia verdaderamente hiperpersonalizada que combina mentoría humana con inteligencia de IA, algo que ningún otro bootcamp ofrece."
     bullets:
       item_style: '{ "padding": "10px 0", "font-weight": "100", "margin":"0" }'
       items:
@@ -78,7 +78,7 @@ components:
       font_size: ["33px", "33px", "33px", "33px", "33px"]
       style: '{ "lineHeight": "30px" }'
     sub_heading:
-      text: "No solo decimos que entregamos— el reconocimiento de fuentes confiables prueba nuestro valor:"
+      text: "No solo decimos que entregamos: el reconocimiento de fuentes confiables prueba nuestro valor:"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600" }'
     content:
@@ -163,7 +163,7 @@ components:
       style: '{ "margin": "15px 0", "font-weight": "600" }'
     content:
       style: '{ "font-size": "16px", "margin": "15px 0", "font-weight": "400"}'
-      text: "Sigue el programa, apóyate en tus mentores, y si aún no consigues trabajo, asumimos toda la responsabilidad— ese es el nivel de confianza que tenemos en la efectividad de nuestro bootcamp."
+      text: "Sigue el programa, apóyate en tus mentores, y si aún no consigues trabajo, asumimos toda la responsabilidad: ese es el nivel de confianza que tenemos en la efectividad de nuestro bootcamp."
     bullets:
       item_style: '{ "padding": "0", "font-weight": "100", "margin": "0" }'
       items:
@@ -192,7 +192,7 @@ components:
       font_size: ["30px", "30px", "30px", "30px", "30px"]
       style: '{ "color": "white" }'
     sub_heading:
-      text: 'Los números importan — y los nuestros hablan por sí solos.'
+      text: 'Los números importan, y los nuestros hablan por sí solos.'
       font_size: ["20px", "20px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%", "color": "white"}'      
     icons:

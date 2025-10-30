@@ -19,7 +19,7 @@ apply_form:
 seo_title: "Bootcamp de Data Science y Machine Learning"
 header:
   title: "DATA SCIENCE Y MACHINE LEARNING CON IA"
-  paragraph: 'Adéntrate en uno de los campos de tecnología de más rápido crecimiento y mejor pagados. Aprende a analizar datos, construir modelos predictivos y usar herramientas de IA para resolver problemas del mundo real—respaldado por mentoría experta, aprendizaje práctico y la opción de garantía de empleo. *No aplica para todos los mercados, países o estados donde opera 4Geeks. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guaranteee-es.pdf" target="_blank" rel="noopener noreferrer">Condiciones aplican</a>.'
+  paragraph: 'Adéntrate en uno de los campos de tecnología de más rápido crecimiento y mejor pagados. Aprende a analizar datos, construir modelos predictivos y usar herramientas de IA para resolver problemas del mundo real, respaldado por mentoría experta, aprendizaje práctico y la opción de garantía de empleo. *No aplica para todos los mercados, países o estados donde opera 4Geeks. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guaranteee-es.pdf" target="_blank" rel="noopener noreferrer">Condiciones aplican</a>.'
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "circles"
 
@@ -117,7 +117,7 @@ two_columns_info:
     - heading: "DOMINA HABILIDADES DE DATA SCIENCE DE NUEVA GENERACIÓN."
       text: "Aprende a analizar datos y construir modelos predictivos usando herramientas y flujos de trabajo impulsados por IA utilizados por equipos de datos modernos."  
     - heading: "OBTÉN MENTORÍA ILIMITADA Y APOYO PROFESIONAL."
-      text: "Trabaja 1:1 con mentores expertos y coaches de carrera—durante tu bootcamp y para siempre."
+      text: "Trabaja 1:1 con mentores expertos y coaches de carrera, durante tu bootcamp y para siempre."
     - heading: "APRENDE MÁS RÁPIDO CON APOYO HIPERPERSONALIZADO."
       text: "Progresa con retroalimentación instantánea de IA, orientación personalizada y clases pequeñas."
     - heading: "ÚNETE A UNA COMUNIDAD TECNOLÓGICA GLOBAL."

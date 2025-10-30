@@ -73,8 +73,8 @@ partners:
 
 overlaped:
   heading: "Why learning Vibe Coding is essential"
-  subtitle: "Get ahead with AI-powered development that’s reshaping how software is built—and what modern teams expect."
-  paragraph: 'Vibe Coding—where you give high-level prompts and let AI generate the code—is the cutting edge of development. Popularized by Andrej Karpathy and now gaining traction, it helps you build apps up to 4× faster using tools like  <strong style="text-decoration: none; color: #000000; font-weight: 700;">Cursor</strong> and <strong style="text-decoration: none; color: #000000; font-weight: 700;">Vercel v0</strong>. As AI transforms tech, companies are hiring developers who know how to leverage it. Learning Vibe Coding gives you a clear edge—and keeps your skills future-ready.'
+  subtitle: "Get ahead with AI-powered development that's reshaping how software is built, and what modern teams expect."
+  paragraph: 'Vibe Coding, where you give high-level prompts and let AI generate the code, is the cutting edge of development. Popularized by Andrej Karpathy and now gaining traction, it helps you build apps up to 4× faster using tools like  <strong style="text-decoration: none; color: #000000; font-weight: 700;">Cursor</strong> and <strong style="text-decoration: none; color: #000000; font-weight: 700;">Vercel v0</strong>. As AI transforms tech, companies are hiring developers who know how to leverage it. Learning Vibe Coding gives you a clear edge and keeps your skills future-ready.'
   button:
     text: "LEARN MORE"
     color: "blue"  
@@ -92,17 +92,17 @@ two_columns:
   heading:
     text_by_location:
       miami: "4Geeks, Miami and a mission of creating opportunities"
-      default: "Your New Career Starts Here — Just Ask Our Grads"
+      default: "Your New Career Starts Here: Just Ask Our Grads"
     font_size: ["35px", "35px", "35px", "30px", "30px"]
   sub_heading:
     text_by_location:
       miami: "With Miami as our home base, we're dedicated to fostering opportunities throughout South Florida."
-      default: "Becoming an AI-powered  full stack developer with 4Geeks isn’t just about learning to code — it’s about changing your life."
+      default: "Becoming an AI-powered  full stack developer with 4Geeks isn't just about learning to code: it's about changing your life."
     style: '{"font-weight": "400" }'
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   bullets:
     items: 
-    - text: "Hernán García shares how the bootcamp helped him go from just getting by to landing a tech job he never thought possible — thanks to the skills, support, and confidence he gained through our bootcamp."
+    - text: "Hernán García shares how the bootcamp helped him go from just getting by to landing a tech job he never thought possible, thanks to the skills, support, and confidence he gained through our bootcamp."
     - text: "Our students come from all walks of life and leave with real results:"
     - text: " ✅ 84% get hired within 6 months of graduation"
     - text: " ✅ Salaries increase by an average of 55%"
@@ -139,7 +139,7 @@ two_columns_info:
     - heading: "Master next-gen tech skills."
       text: "Learn to build with the AI tools and workflows used by modern development teams."
     - heading: "Get unlimited mentorship and career support."
-      text: "Work 1:1 with expert mentors and career coaches—during your bootcamp and forever after."
+      text: "Work 1:1 with expert mentors and career coaches, during your bootcamp and forever after."
     - heading: "Learn faster with hyperpersonalized support."
       text: "Progress with instant AI feedback, personalized guidance, and small class sizes."
     - heading: "Join a global tech community."
@@ -156,7 +156,7 @@ two_columns_rigo:
     shadow: true
   video: "6m1Jyya7eCc"
   heading: 
-    text: "Learn AI-powered Full Stack Development Faster — With Hyper-Personalized Support That Adapts to You"
+    text: "Learn AI-powered Full Stack Development Faster: With Hyper-Personalized Support That Adapts to You"
     font_size: ["33px", "33px", "33px", "33px", "33px"]
     style: '{ "lineHeight": "30px" }'
     heading_image:

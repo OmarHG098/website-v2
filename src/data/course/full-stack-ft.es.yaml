@@ -31,7 +31,7 @@ header:
   title: "Full Stack Development \ncon IA"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "FullStack"
-  paragraph: 'Conviértete en Desarrollador Full Stack con IA en solo 12 semanas—con entrenamiento full-time que acelera tu progreso. Vive la experiencia práctica, un currículo integrado con IA, mentoría personalizada ilimitada y una garantía de empleo que lo respalda. *No aplica para todos los mercados, países o estados donde opera 4Geeks. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guaranteee-es.pdf" target="_blank" rel="noopener noreferrer">Condiciones aplican</a>.'
+  paragraph: 'Conviértete en Desarrollador Full Stack con IA en solo 12 semanas, con entrenamiento full-time que acelera tu progreso. Vive la experiencia práctica, un currículo integrado con IA, mentoría personalizada ilimitada y una garantía de empleo que lo respalda. *No aplica para todos los mercados, países o estados donde opera 4Geeks. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guaranteee-es.pdf" target="_blank" rel="noopener noreferrer">Condiciones aplican</a>.'
 
 button:
   syllabus_heading: "Descarga el Syllabus"
@@ -66,7 +66,7 @@ two_columns_rigo:
     shadow: true
   video: "6m1Jyya7eCc"
   heading:
-    text: "Aprende Full Stack con IA más rápido — Con apoyo hiper-personalizado que se adapta a ti"
+    text: "Aprende Full Stack con IA más rápido: Con apoyo hiper-personalizado que se adapta a ti"
     font_size: ["33px", "33px", "33px", "33px", "33px"]
     style: '{ "lineHeight": "30px" }'
     heading_image:
@@ -91,8 +91,8 @@ two_columns_rigo:
 
 overlaped:
   heading: "Por qué aprender Vibe Coding es esencial"
-  subtitle: "Lánzate con desarrollo potenciado por IA que está cambiando cómo se crea software—y lo que esperan los equipos modernos."
-  paragraph: 'Vibe Coding—donde das instrucciones de alto nivel y la IA genera el código—es lo más top en desarrollo. Popularizado por Andrej Karpathy y cada vez más usado, te ayuda a crear apps hasta 4× más rápido usando herramientas como <strong style="text-decoration: none; color: #000000; font-weight: 700;">Cursor</strong> y <strong style="text-decoration: none; color: #000000; font-weight: 700;">Vercel v0</strong>. A medida que la IA transforma la tecnología, las empresas buscan devs que sepan aprovecharla. Aprender Vibe Coding te da ventaja—y mantiene tus habilidades siempre listas para el futuro.'
+  subtitle: "Lánzate con desarrollo potenciado por IA que está cambiando cómo se crea software, y lo que esperan los equipos modernos."
+  paragraph: 'Vibe Coding, donde das instrucciones de alto nivel y la IA genera el código: es lo más top en desarrollo. Popularizado por Andrej Karpathy y cada vez más usado, te ayuda a crear apps hasta 4× más rápido usando herramientas como <strong style="text-decoration: none; color: #000000; font-weight: 700;">Cursor</strong> y <strong style="text-decoration: none; color: #000000; font-weight: 700;">Vercel v0</strong>. A medida que la IA transforma la tecnología, las empresas buscan devs que sepan aprovecharla. Aprender Vibe Coding te da ventaja, y mantiene tus habilidades siempre listas para el futuro.'
   button:
     text: "SABER MÁS"
     color: "blue"
@@ -122,13 +122,13 @@ two_column_geek:
         text: "Domina herramientas con IA guiado por un currículo top."
         icon: "check"
       - heading: "Accede a mentoría y apoyo profesional ilimitados."
-        text: "No tienes que aprender solo — recibe ayuda 1:1 de mentores expertos cuando quieras, para toda la vida."
+        text: "No tienes que aprender solo: recibe ayuda 1:1 de mentores expertos cuando quieras, para toda la vida."
         icon: "check"
       - heading: "Disfruta de aprendizaje hiperpersonalizado, en cada etapa."
         text: "Avanza más rápido y mejor con feedback de IA hecho para ti, y un ratio alumno/profesor brutal."
         icon: "check"
       - heading: "Únete a una comunidad tech activa."
-        text: "Sigue conectado y apoyado en nuestros canales de Slack — con peers, mentores y alumni listos para ayudarte a crecer."
+        text: "Sigue conectado y apoyado en nuestros canales de Slack, con peers, mentores y alumni listos para ayudarte a crecer."
         icon: "check"
   button:
     text: "Saber más"
@@ -144,7 +144,7 @@ how_it_works:
     font_size: ["30px", "30px", "30px", "30px", "30px"]
     style: '{ "color": "white" }'
   sub_heading:
-    text: "Sí — y tenemos los números para probarlo."
+    text: "Sí. Y tenemos los números para probarlo."
     font_size: ["20px", "20px", "16px", "16px", "16px"]
     style: '{ "textAlign": "center", "width": "60%", "color": "white"}'
   icons:
@@ -173,7 +173,7 @@ why_4geeks_job_guarantee:
   sub_heading:
     font_size: ["16px", "16px", "16px", "14px", "14px"]
     style: '{ "font-weight": "100" }'
-    text: 'Nuestro objetivo es más que enseñarte habilidades — queremos lanzar carreras tech exitosas. Con un currículo cutting-edge alineado con lo último en IA, metodología práctica y apoyo profesional personalizado, nuestro programa tiene un historial probado de preparar estudiantes para el mercado tech. *No aplica para todos los mercados, países o estados donde opera 4Geeks. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guaranteee-es.pdf" target="_blank" rel="noopener noreferrer">Condiciones aplican</a>.'
+    text: 'Nuestro objetivo es más que enseñarte habilidades: queremos lanzar carreras tech exitosas. Con un currículo cutting-edge alineado con lo último en IA, metodología práctica y apoyo profesional personalizado, nuestro programa tiene un historial probado de preparar estudiantes para el mercado tech. *No aplica para todos los mercados, países o estados donde opera 4Geeks. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guaranteee-es.pdf" target="_blank" rel="noopener noreferrer">Condiciones aplican</a>.'
   content:
     text: "Súmate a un líder global en educación tech con IA. Con 7+ campus y 4,000+ alumni, te damos aprendizaje con IA y apoyo profesional de por vida."
   bullets:
@@ -279,7 +279,7 @@ details:
       step: 3
     - module_name: "SOPORTE DE POR VIDA"
       title: "Soporte de por vida"
-      description: "Sigue practicando con la ayuda de la academia—te coachamos de por vida. Construye tu CV, Github, LinkedIn. Te ayudamos a aplicar a trabajos y te apoyamos cuando consigas uno."
+      description: "Sigue practicando con la ayuda de la academia, te coachamos de por vida. Construye tu CV, Github, LinkedIn. Te ayudamos a aplicar a trabajos y te apoyamos cuando consigas uno."
       projects: "Te pagan por seguir aprendiendo. Sube tu sueldo mientras creces como Senior Dev. Disfruta y programa para siempre."
       slug: "lifelong-learning"
       duration: "para siempre"

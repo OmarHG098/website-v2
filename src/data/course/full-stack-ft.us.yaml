@@ -31,7 +31,7 @@ header:
   title: "Full Stack Development \nwith AI"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "FullStack"
-  paragraph: 'Become an AI-fluent Full Stack Developer in just 12 weeks—with full-time training that fast-tracks your progress. Get hands-on experience, a cutting-edge AI-integrated curriculum, unlimited personalized mentorship, and a job guarantee to back it all up. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf" target="_blank" rel="noopener noreferrer">Conditions apply</a>.'
+  paragraph: 'Become an AI-fluent Full Stack Developer in just 12 weeks, with full-time training that fast-tracks your progress. Get hands-on experience, a cutting-edge AI-integrated curriculum, unlimited personalized mentorship, and a job guarantee to back it all up. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf" target="_blank" rel="noopener noreferrer">Conditions apply</a>.'
 
 button:
   syllabus_heading: "Download Syllabus"
@@ -67,7 +67,7 @@ two_columns_rigo:
     shadow: true
   video: "6m1Jyya7eCc"
   heading: 
-    text: "Learn AI-powered Full Stack Development Faster — With Hyper-Personalized Support That Adapts to You"
+    text: "Learn AI-powered Full Stack Development Faster: With Hyper-Personalized Support That Adapts to You"
     font_size: ["33px", "33px", "33px", "33px", "33px"]
     style: '{ "lineHeight": "30px" }'
     heading_image:
@@ -92,8 +92,8 @@ two_columns_rigo:
 # OVERLAPED
 overlaped:
   heading: "Why learning Vibe Coding is essential"
-  subtitle: "Get ahead with AI-powered development that’s reshaping how software is built—and what modern teams expect."
-  paragraph: 'Vibe Coding—where you give high-level prompts and let AI generate the code—is the cutting edge of development. Popularized by Andrej Karpathy and now gaining traction, it helps you build apps up to 4× faster using tools like  <strong style="text-decoration: none; color: #000000; font-weight: 700;">Cursor</strong> and <strong style="text-decoration: none; color: #000000; font-weight: 700;">Vercel v0</strong>. As AI transforms tech, companies are hiring developers who know how to leverage it. Learning Vibe Coding gives you a clear edge—and keeps your skills future-ready.'
+  subtitle: "Get ahead with AI-powered development that’s reshaping how software is built, and what modern teams expect."
+  paragraph: 'Vibe Coding, where you give high-level prompts and let AI generate the code, is the cutting edge of development. Popularized by Andrej Karpathy and now gaining traction, it helps you build apps up to 4× faster using tools like  <strong style="text-decoration: none; color: #000000; font-weight: 700;">Cursor</strong> and <strong style="text-decoration: none; color: #000000; font-weight: 700;">Vercel v0</strong>. As AI transforms tech, companies are hiring developers who know how to leverage it. Learning Vibe Coding gives you a clear edge and keeps your skills future-ready.'
   button:
     text: "LEARN MORE"
     color: "blue"  
@@ -124,13 +124,13 @@ two_column_geek:
         text: "Master industry-relevant, AI-powered tools guided by a cutting-edge curriculum."
         icon: "check"
       - heading: "Access unlimited mentorship and career support."
-        text: "No need to learn alone — get 1:1 support from expert human mentors whenever you need it, for life."
+        text: "No need to learn alone: get 1:1 support from expert human mentors whenever you need it, for life."
         icon: "check"
       - heading: "Enjoy hyperpersonalized learning, at every level."
         text: "Move faster and smarter with AI-powered feedback tailored to your journey, plus an unmatched student-to-teacher ratio."
         icon: "check"
       - heading: "Join an active tech community."
-        text: "Stay connected and supported through our Slack channels — with peers, mentors, and alumni ready to help you grow."
+        text: "Stay connected and supported through our Slack channels, with peers, mentors, and alumni ready to help you grow."
         icon: "check"
   button:
     text: "Learn More"
@@ -147,7 +147,7 @@ how_it_works:
     font_size: ["30px", "30px", "30px", "30px", "30px"]
     style: '{ "color": "white" }'
   sub_heading:
-    text: "Yes — and we've got the numbers to back it up."
+    text: "Yes. And we've got the numbers to back it up."
     font_size: ["20px", "20px", "16px", "16px", "16px"]
     style: '{ "textAlign": "center", "width": "60%", "color": "white"}'      
   icons:
@@ -177,7 +177,7 @@ why_4geeks_job_guarantee:
   sub_heading:
     font_size: ["16px", "16px", "16px", "14px", "14px"]
     style: '{ "font-weight": "100" }'
-    text: "Our goal is more than teaching skills — we're here to launch successful tech careers. With a cutting edge curriculum that's aligned with the latest AI developments, hands-on teaching methodology and personalized career support, our program has a proven track record of preparing students for the tech job market"
+    text: "Our goal is more than teaching skills, we're here to launch successful tech careers. With a cutting edge curriculum that's aligned with the latest AI developments, hands-on teaching methodology and personalized career support, our program has a proven track record of preparing students for the tech job market"
   content:
     text: "Join a global leader in AI tech education. With 7+ campuses and 4,000+ alumni, we offer AI-powered learning and lifelong career support."
   bullets:

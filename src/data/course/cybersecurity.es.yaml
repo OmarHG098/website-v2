@@ -109,7 +109,7 @@ two_columns_info:
       icon: "check"
     - heading: "Obtén mentoría ilimitada y apoyo profesional."
       icon: "check" 
-      text: "Trabaja 1:1 con mentores expertos y coaches profesionales—durante tu bootcamp y para siempre."
+      text: "Trabaja 1:1 con mentores expertos y coaches profesionales, durante tu bootcamp y para siempre."
     - heading: "Aprende más rápido con apoyo hiperpersonalizado."
       icon: "check"
       text: "Progresa con retroalimentación instantánea de IA, orientación personalizada y clases pequeñas."
@@ -136,7 +136,7 @@ two_columns:
     font_size: ["30px", "30px", "30px", "26px", "24px"]
   sub_heading:
     text: |-
-      Nuestro bootcamp intensivo de ciberseguridad te equipa con las habilidades para detectar, analizar y prevenir ataques—usando herramientas estándar de la industria como Nessus, Nmap, Wireshark y Metasploit—y un plan de estudios de vanguardia construido por los mejores expertos globales:
+      Nuestro bootcamp intensivo de ciberseguridad te equipa con las habilidades para detectar, analizar y prevenir ataques, usando herramientas estándar de la industria como Nessus, Nmap, Wireshark y Metasploit, y un plan de estudios de vanguardia construido por los mejores expertos globales:
     font_size: ["16px", "16px", "16px", "14px", "14px"]
   button:
     text: "Aplica ahora"
@@ -156,7 +156,7 @@ two_columns:
       <br>
       • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Pruebas de Penetración</strong> para descubrir vulnerabilidades y simular escenarios de ataque reales.<br>
       <br>
-      • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Fortalecimiento de Sistemas</strong> para Windows, Linux y más—desarrolla habilidades para defender infraestructura contra amenazas en evolución.<br><br>  
+      • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Fortalecimiento de Sistemas</strong> para Windows, Linux y más: desarrolla habilidades para defender infraestructura contra amenazas en evolución.<br><br>  
 
 
 upcoming:
@@ -178,7 +178,7 @@ details:
   about:
     title: "Sobre el programa"
     sub_title: |-
-      Nuestro bootcamp intensivo de Ciberseguridad te entrena para proteger sistemas, detectar amenazas y responder a incidentes—usando herramientas estándar de la industria como Nessus, Nmap, Wireshark y Metasploit.
+      Nuestro bootcamp intensivo de Ciberseguridad te entrena para proteger sistemas, detectar amenazas y responder a incidentes, usando herramientas estándar de la industria como Nessus, Nmap, Wireshark y Metasploit.
       Desarrollado con los mejores expertos globales, el plan de estudios está construido para la preparación del mundo real. Dominarás habilidades como:
       <strong>Prevención de Pérdida de Datos – manteniendo la información sensible segura.</strong>
       <strong>Pruebas de Penetración – encontrando y corrigiendo vulnerabilidades.</strong>

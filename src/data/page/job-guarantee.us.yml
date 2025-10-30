@@ -17,7 +17,7 @@ button:
 seo_title: "Job Guarantee"
 header:
   title: "GET INTO TECH WITH OUR JOB GUARANTEE"
-  sub_title: 'Your success is our mission — Get hired within 9 months of graduation, or we will refund your tuition. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf" target="_blank" rel="noopener noreferrer">Conditions apply</a>.'
+  sub_title: 'Your success is our mission. Get hired within 9 months of graduation, or we will refund your tuition. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf" target="_blank" rel="noopener noreferrer">Conditions apply</a>.'
   paragraph: ""
     #<ul style="list-style-type: disc; padding-left: 20px;">
      # <li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
@@ -71,11 +71,11 @@ we_trust_section:
   title: Does the Job Guarantee Deliver Results You Can Count On?
   bg_full: true
   text: |
-    Yes — and we've got the numbers to back it up.
+    Yes. And we've got the numbers to back it up.
     <br><br>
     These stats reflect our full graduate community and demonstrate the proven impact of our programs across the board.
     <br><br>
-    We don't just teach you how to code — we help you build a career you're proud of.
+    We don't just teach you how to code: we help you build a career you're proud of.
   boxes:
     - icon: briefcase-2
       title: "84%"
@@ -113,7 +113,7 @@ two_column_right:
     font_size: ["42px", "34px", "34px", "34px", "34px"]
     style: '{ "font-weight": "600", "text-align": "center", "color": "#000", "padding": "10px" }'
   sub_heading:
-    text: "Our goal is more than teaching skills — we're here to launch successful tech careers. With an industry-aligned curriculum, hands-on teaching methodology  and personalized career support, we have a proven track record of preparing students for the tech job market."
+    text: "Our goal is more than teaching skills, we're here to launch successful tech careers. With an industry-aligned curriculum, hands-on teaching methodology  and personalized career support, we have a proven track record of preparing students for the tech job market."
     font_size: ["20px", "20px", "18px", "18px", "16px"]
     style: '{ "font-weight": "400", "text-align": "justify", "color": "#333", "padding": "10px"}'
   content:
@@ -156,7 +156,7 @@ two_columns_video:
   sub_heading:
     text: |
       Daniel Peña transitioned to a tech career through 4Geeks Academy's Full-Stack Developer program. With our industry-aligned curriculum that covers front-end and back-end development, he built real-world skills through hands-on projects and expert mentorship.
-      Most importantly, he followed all the steps in our Job Guarantee — and it paid off. Daniel landed a tech job he loves and launched a new career with confidence.
+      Most importantly, he followed all the steps in our Job Guarantee, and it paid off. Daniel landed a tech job he loves and launched a new career with confidence.
       Watch his story to see what's possible when commitment meets support.
 
     font_size: ["20px", "18px", "16px", "16px", "14px"]
@@ -194,13 +194,13 @@ two_column_geek:
         text: "Master industry-relevant, AI-powered tools guided by a cutting-edge curriculum."
         icon: "check"
       - heading: "Access unlimited mentorship and career support."
-        text: "No need to learn alone — get 1:1 support from expert human mentors whenever you need it, for life."
+        text: "No need to learn alone: get 1:1 support from expert human mentors whenever you need it, for life."
         icon: "check"
       - heading: "Enjoy hyperpersonalized learning, at every level."
         text: "Move faster and smarter with AI-powered feedback tailored to your journey, plus an unmatched student-to-teacher ratio."
         icon: "check"
       - heading: "Join an active tech community."
-        text: "Stay connected and supported through our Slack channels — with peers, mentors, and alumni ready to help you grow."
+        text: "Stay connected and supported through our Slack channels, with peers, mentors, and alumni ready to help you grow."
         icon: "check"
   button:
     text: "Learn More"

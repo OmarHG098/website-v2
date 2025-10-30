@@ -12,7 +12,7 @@ seo_title: "Compare our programs"
 header:
   title: Find Your Best Path Into Tech
   sub_title: ""
-  paragraph: "Choosing a bootcamp is a big decision — but we make it simple. At 4Geeks, every program is built to launch successful tech careers, whether you're switching paths or just starting out. The difference lies in where each path takes you and the skills you'll need. Keep reading to explore the key differences side by side."
+  paragraph: "Choosing a bootcamp is a big decision, but we make it simple. At 4Geeks, every program is built to launch successful tech careers, whether you're switching paths or just starting out. The difference lies in where each path takes you and the skills you'll need. Keep reading to explore the key differences side by side."
 
 choose_program:
   hide_empty_content: true
@@ -151,11 +151,11 @@ data_table:
 
     - cells:
         - content: "Best For You If…"
-        - content: "You love creating things from scratch — websites, apps, or tools. You enjoy problem-solving and AI-powered software engineering. Great for career-switchers, freelancers, or those aiming for startup/tech jobs."
+        - content: "You love creating things from scratch: websites, apps, or tools. You enjoy problem-solving and AI-powered software engineering. Great for career-switchers, freelancers, or those aiming for startup/tech jobs."
           html: false
         - content: "You enjoy working with data, spotting patterns, and solving real-world problems. Ideal if you want to break into AI or data-driven roles. A math/business background helps, but isn't required."
           html: false
-        - content: "You want a future-proof career protecting data and systems. Perfect if you enjoy strategy, puzzles, or compliance work — or dream of working in IT security, law enforcement, or defense."
+        - content: "You want a future-proof career protecting data and systems. Perfect if you enjoy strategy, puzzles, or compliance work, or dream of working in IT security, law enforcement, or defense."
           html: false
 
     - cells:

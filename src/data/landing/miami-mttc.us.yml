@@ -56,7 +56,7 @@ header_data:
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
-  text: "Apply now—don’t miss your chance!"
+  text: "Apply now. Don't miss your chance!"
   bullets:
     - 'Kickstart a career in Florida’s vibrant tech scene'
     - 'Become an AI-powered Full Stack Developer or Data Scientist'
@@ -251,7 +251,7 @@ components:
     sub_heading:
       font_size: ["18px", "18px", "18px", "18px", "18px"]
       style: '{ "font-weight": "100" }'
-      text: "4Geeks Academy is more than a coding school—we’re a community of innovators and code enthusiasts dedicated to helping you build a successful tech career. Based in Miami, with over 7 campuses worldwide and a vibrant network of 4,000+ students, teachers, partners, and alumni, you’ll be gaining a support network like no other, ready to assist you every step of the way—even after you graduate. Where there’s a geek, there’s a way!
+      text: "4Geeks Academy is more than a coding school: we're a community of innovators and code enthusiasts dedicated to helping you build a successful tech career. Based in Miami, with over 7 campuses worldwide and a vibrant network of 4,000+ students, teachers, partners, and alumni, you'll be gaining a support network like no other, ready to assist you every step of the way, even after you graduate. Where there's a geek, there's a way!
         What sets us apart:"
 
     content:

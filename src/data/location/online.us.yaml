@@ -26,7 +26,7 @@ header:
   tagline: "Learn To Code Online"
   sub_header: ""
   sub_header_highlighted: ""
-  paragraph: "Online learning can feel overwhelming—but not here. At 4Geeks Academy, you’ll get unlimited 1:1 support, cutting-edge AI-powered learning content, and lifetime career support. Yes—lifetime. Your success is backed for the rest of your career."
+  paragraph: "Online learning can feel overwhelming, but not here. At 4Geeks Academy, you’ll get unlimited 1:1 support, cutting-edge AI-powered learning content, and lifetime career support. Yes, lifetime. Your success is backed for the rest of your career."
   image: "../../../static/images/locations/online-home.png"
   alt: ""
 
@@ -58,7 +58,7 @@ badges:
     
 divider:
   heading:
-    text: "No matter where you live in the U.S., you can launch your tech career with 4Geeks Academy. Our remote coding bootcamp gives you access to expert instructors, real-world projects, and ongoing career support—all from the comfort of your home. Join thousands of graduates across the country who’ve built new futures in tech, and start learning today."
+    text: "No matter where you live in the U.S., you can launch your tech career with 4Geeks Academy. Our remote coding bootcamp gives you access to expert instructors, real-world projects, and ongoing career support, all from the comfort of your home. Join thousands of graduates across the country who’ve built new futures in tech, and start learning today."
     font_size: ["34px", "34px", "34px", "28px", "26px"] # [xl, lg, md, sm, xs]
     style: '{ "color": "#FFFFFF" }'
 
@@ -79,7 +79,7 @@ info_box:
 images_box:
   heading: "Unlimited Mentorship, Global Community, Real Results"
   content: >
-    "Learn online the real way—not by being told to ‘watch the video and figure it out.’ At 4Geeks Academy, you’ll get unlimited 1-on-1 mentoring, live chat support 12 hours a day, hundreds of interactive exercises and videos, real-time streaming classes, and access to our global graduate network. Thousands of alumni worldwide stay active, ready to support you every step of your career."
+    "Learn online the real way: not by being told to ‘watch the video and figure it out.’ At 4Geeks Academy, you’ll get unlimited 1-on-1 mentoring, live chat support 12 hours a day, hundreds of interactive exercises and videos, real-time streaming classes, and access to our global graduate network. Thousands of alumni worldwide stay active, ready to support you every step of your career."
   images:
     - path: "../../../static/images/locations/remote.jpeg"
       alt: "Remote Coding Bootcamp"
@@ -101,7 +101,7 @@ two_columns:
     shadow: true
   video: "EcqasocRKHo"
   heading:
-    text: "Your Tech Career Starts Here—Anywhere in America"
+    text: "Your Tech Career Starts Here: Anywhere in America"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "No matter where you are, 4Geeks Academy gives you access to live mentorship, real-world learning, and career coaching. Our flexible schedule and future-focused curriculum help you grow from anywhere."

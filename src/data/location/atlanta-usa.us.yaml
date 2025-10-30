@@ -19,7 +19,7 @@ meta_info:
 seo_title: "Coding Bootcamp in Atlanta with a Job Guarantee"
 header:
   tagline: "4Geeks Academy: Launch an AI-Ready Tech Career in Atlanta"
-  sub_header: "Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist—with skills built for the AI era "
+  sub_header: "Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist: with skills built for the AI era "
   sub_header_highlighted: " All programs are taught online"
   paragraph: ""
   image: "../../../static/images/locations/atlanta-home.png"
@@ -40,7 +40,7 @@ badges:
 # Optional divider section that can be added after badges
 divider:
   heading:
-    text: "Looking for a top-rated coding bootcamp in Atlanta? 4Geeks Academy offers a flexible, hands-on program designed to help you land a job in tech—right here in Georgia. With expert mentorship, small class sizes, and proven career support, our Atlanta students have launched successful careers at both startups and major companies across the Southeast."
+    text: "Looking for a top-rated coding bootcamp in Atlanta? 4Geeks Academy offers a flexible, hands-on program designed to help you land a job in tech, right here in Georgia. With expert mentorship, small class sizes, and proven career support, our Atlanta students have launched successful careers at both startups and major companies across the Southeast."
     font_size: ["34px", "34px", "34px", "28px", "26px"] # [xl, lg, md, sm, xs]
     style: '{ "color": "#FFFFFF" }'
 

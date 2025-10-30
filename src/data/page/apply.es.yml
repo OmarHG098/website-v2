@@ -13,7 +13,7 @@ header:
   title: "Tu Futuro en Tecnología Comienza Aquí"
   image:
   image_alt: "Aplica a 4Geeks Academy Bootcamp"
-  paragraph: "Estás un paso más cerca de tu nueva carrera en tecnología — ¡felicitaciones! Completa el formulario a continuación, y nuestro equipo de admisiones te guiará a través de los siguientes pasos.<br/><span style=\"color:#6E6B6B\"> (Y no te preocupes — no te estarás comprometiendo a nada aún, solo comenzando la conversación.)</span>"
+  paragraph: "Estás un paso más cerca de tu nueva carrera en tecnología. ¡Felicitaciones! Completa el formulario a continuación, y nuestro equipo de admisiones te guiará a través de los siguientes pasos.<br/><span style=\"color:#6E6B6B\"> (Y no te preocupes, no te estarás comprometiendo a nada aún, solo comenzando la conversación.)</span>"
   button:
 
 ## APPLY LEFT SECTION
@@ -58,7 +58,7 @@ right:
   content_section:
     - "<strong>• Confirmación instantánea:</strong> Te enviaremos el plan de estudios por email de inmediato."
     - "<strong>• Seguimiento personal:</strong> Nuestro equipo de admisiones se pondrá en contacto por mensaje de texto y teléfono para programar una llamada rápida."
-    - "<strong>• Pregúntanos lo que quieras:</strong> Programas, horarios, financiamiento, apoyo profesional — te explicaremos tus opciones y compartiremos todos los detalles."
+    - "<strong>• Pregúntanos lo que quieras:</strong> Programas, horarios, financiamiento, apoyo profesional, te explicaremos tus opciones y compartiremos todos los detalles."
     - "<strong>• Decide con confianza:</strong> Tendrás toda la información que necesitas para elegir el camino que es correcto para ti. Y estamos aquí para ayudar."
     - "<strong>¡Ahora estás listo para tomar la mejor decisión para tu carrera!</strong>"
 

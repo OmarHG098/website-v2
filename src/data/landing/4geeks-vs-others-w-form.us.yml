@@ -187,7 +187,7 @@ components:
             text: |
               Lifetime Career Support
               <br />
-              From optimizing your CV, LinkedIn, GitHub, and portfolio to tailored mock interviews, our career experts provide personalized guidance to help you launch your career—even after you’ve landed your first job.
+              From optimizing your CV, LinkedIn, GitHub, and portfolio to tailored mock interviews, our career experts provide personalized guidance to help you launch your career, even after you’ve landed your first job.
             icon: "check"
             icon_color: "#25BF6C"
           - heading: "Slack Channels"

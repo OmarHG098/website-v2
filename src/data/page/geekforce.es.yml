@@ -16,7 +16,7 @@ header:
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: "GeekForce - Bootcamp de programación con apoyo profesional ilimitado."
   paragraph: |
-    Obtén apoyo profesional ilimitado 1:1 diseñado para tu perfil único y objetivos—de por vida. Desde la construcción de tu CV y portafolio hasta entrevistas y plataformas de contratación impulsadas por IA, te daremos la mentoría personalizada que necesitas para conseguir tu primer trabajo y seguir prosperando en el tech de hoy.
+    Obtén apoyo profesional ilimitado 1:1 diseñado para tu perfil único y objetivos, de por vida. Desde la construcción de tu CV y portafolio hasta entrevistas y plataformas de contratación impulsadas por IA, te daremos la mentoría personalizada que necesitas para conseguir tu primer trabajo y seguir prosperando en el tech de hoy.
   image_logo: "/images/geekforce.png"
   bullets:
     - " "
@@ -30,7 +30,7 @@ who_is_hiring:
   position: 13
   heading: "¿QUIÉN CONTRATA A NUESTROS GRADUADOS?"
   sub_heading: |
-    Las mejores empresas contratan graduados de 4Geeks, con 84% consiguiendo trabajo en 6 meses después de graduarse gracias a sus habilidades y nuestro apoyo profesional personalizado. Nuestros graduados no solo consiguen trabajo—lanzan carreras exitosas y consistentemente ganan reconocimiento por su experiencia técnica y profesionalismo:
+    Las mejores empresas contratan graduados de 4Geeks, con 84% consiguiendo trabajo en 6 meses después de graduarse gracias a sus habilidades y nuestro apoyo profesional personalizado. Nuestros graduados no solo consiguen trabajo, lanzan carreras exitosas y consistentemente ganan reconocimiento por su experiencia técnica y profesionalismo:
     <br/>
     <br/>
     "Estoy continuamente impresionado por la profundidad del conocimiento que poseen los estudiantes de 4Geeks. Una de mis contrataciones terminó convirtiéndose en líder de equipo." - CodeNinjas.
@@ -71,7 +71,7 @@ components:
           icon: "check"
           icon_color: '#25BF6C'
         - heading: " "
-          text: "Reúnete con mentores en línea o en persona cuando necesites apoyo—ilimitado, de por vida."
+          text: "Reúnete con mentores en línea o en persona cuando necesites apoyo: ilimitado, de por vida."
           icon: "check"
           icon_color: '#25BF6C'
         - heading: " "
@@ -88,7 +88,7 @@ components:
       font_size: ["33px", "33px", "33px", "33px", "33px"]
       style: '{ "lineHeight": "35px", "textAlign": "center", "width": "90%" }'
     sub_heading:
-      text: "Una vez que hayas dominado las habilidades técnicas, nuestro proceso estructurado te ayuda a construir una carrera duradera en tech — llevándote del aprendizaje a conseguir el trabajo."
+      text: "Una vez que hayas dominado las habilidades técnicas, nuestro proceso estructurado te ayuda a construir una carrera duradera en tech, llevándote del aprendizaje a conseguir el trabajo."
       font_size: ["20px", "20px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "90%"}'
     icons:
@@ -155,7 +155,7 @@ components:
       font_size: ["30px", "30px", "30px", "30px", "30px"]
       style: '{ "color": "white" }'
     sub_heading:
-      text: 'Sí — y tenemos los números para respaldarlo.'
+      text: 'Sí. Y tenemos los números para respaldarlo.'
       font_size: ["20px", "20px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%", "color": "white"}'      
     icons:

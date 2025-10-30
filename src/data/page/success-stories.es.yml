@@ -10,7 +10,7 @@ meta_info:
 seo_title: "Testimonios de estudiantes y historias de éxito"
 header:
   title: "Lo que dicen nuestros graduados: del bootcamp a la carrera profesional"
-  paragraph: "En 4Geeks Academy, los estudiantes no solo adquieren habilidades tecnológicas — transforman sus vidas. Estas historias de éxito de nuestra comunidad global muestran cómo los graduados pasaron del bootcamp a una carrera profesional, demostrando que con el apoyo adecuado, la tecnología es para todos."
+  paragraph: "En 4Geeks Academy, los estudiantes no solo adquieren habilidades tecnológicas: transforman sus vidas. Estas historias de éxito de nuestra comunidad global muestran cómo los graduados pasaron del bootcamp a una carrera profesional, demostrando que con el apoyo adecuado, la tecnología es para todos."
   image: "../../../static/images/locations/caracas-loc-2.jpeg"
   image_alt: "Personas que cambiaron sus carreras al Aprender a Programar"
 
@@ -58,7 +58,7 @@ partners:
 
 cta:
   title: "¿Listo para Escribir tu Propia Historia?"
-  paragraph: "El próximo testimonio podría ser tuyo. Únete a miles de estudiantes que han transformado sus vidas con 4Geeks — tú también puedes."
+  paragraph: "El próximo testimonio podría ser tuyo. Únete a miles de estudiantes que han transformado sus vidas con 4Geeks, tú también puedes."
   button:
     text: "Aplicar Ahora"
     path: "/es/apply"

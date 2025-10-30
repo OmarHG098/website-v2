@@ -82,7 +82,7 @@ two_columns:
     style: '{ "fontWeight": 200, "marginBottom": "24px", "marginTop": "0px", "fontSize": "22px" }'
   content:
     text: |
-      <p>Queremos que te concentres en lo importante: aprender, crecer y lanzar tu carrera tech—no en cómo pagarla.</p>
+      <p>Queremos que te concentres en lo importante: aprender, crecer y lanzar tu carrera tech, no en cómo pagarla.</p>
       <br/>
       <p>Por eso facilitamos la financiación de tu educación:</p>
       <br/>
@@ -92,7 +92,7 @@ two_columns:
         <li>✓ Garantía de Empleo disponible. *No aplica para todos los mercados, países o estados donde opera 4Geeks. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guaranteee-es.pdf" target="_blank" rel="noopener noreferrer">Condiciones aplican</a>.</li>
       </ul>
       <br/>
-      <p>¿Necesitas otra razón? En 2024, <strong style="text-decoration: none; color: #000000; font-weight: 700;">Forbes</strong> nos nombró el <a href="https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition" style="text-decoration: none; color: #000000; font-weight: 700;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">mejor bootcamp para estudiantes con presupuesto limitado<span style="font-size: 0.8em;">↗</span></a>—reconociendo nuestro compromiso con la educación tech accesible.</p>
+      <p>¿Necesitas otra razón? En 2024, <strong style="text-decoration: none; color: #000000; font-weight: 700;">Forbes</strong> nos nombró el <a href="https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition" style="text-decoration: none; color: #000000; font-weight: 700;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">mejor bootcamp para estudiantes con presupuesto limitado<span style="font-size: 0.8em;">↗</span></a>, reconociendo nuestro compromiso con la educación tech accesible.</p>
       <p><strong style="text-decoration: none; color: #000000; font-weight: 700;">¿Tienes dudas?</strong> Nuestro equipo de admisiones te ayuda a encontrar el plan ideal para ti.</p>
   button:
     text: "CONTÁCTANOS"
@@ -121,12 +121,12 @@ two_columns_rigo:
   content:
     style: '{ "font-size":"16px", "margin":"15px 0" }'
     text: |
-      <p>Todos somos diferentes—pero la educación siempre fue igual para todos. En 4Geeks, creamos una mejor forma de aprender: <strong style="text-decoration: none; color: #000000; font-weight: 700;">una que se adapta a ti.</strong></p>
+      <p>Todos somos diferentes, pero la educación siempre fue igual para todos. En 4Geeks, creamos una mejor forma de aprender: <strong style="text-decoration: none; color: #000000; font-weight: 700;">una que se adapta a ti.</strong></p>
       <br />
       <ul>
-        <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Nuestra IA propia</strong>, Rigobot, sigue tu progreso y detecta tus fortalezas y áreas de mejora—dándote feedback en tiempo real para maximizar tu aprendizaje.</li>
+        <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Nuestra IA propia</strong>, Rigobot, sigue tu progreso y detecta tus fortalezas y áreas de mejora, dándote feedback en tiempo real para maximizar tu aprendizaje.</li>
         <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Sesiones ilimitadas 1:1 con mentores expertos</strong> para que nunca te estanques ni pierdas impulso.</li>
-        <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Coaches de carrera trabajan contigo</strong> para potenciar tu confianza y estrategia—ayudándote a destacar en CV, entrevistas y plataformas como LinkedIn.</li>
+        <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Coaches de carrera trabajan contigo</strong> para potenciar tu confianza y estrategia, ayudándote a destacar en CV, entrevistas y plataformas como LinkedIn.</li>
         <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Relación 1:7 en clases en vivo</strong> para que recibas atención real y tus dudas se resuelvan.</li>
       </ul>
       <br />

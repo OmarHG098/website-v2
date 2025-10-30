@@ -202,7 +202,7 @@ components:
     sub_heading:
       text: "4Geeks Academy is a leading name in tech education in the U.S. and globally. 🎓 85% of Our graduates are hired within 9 months of graduation, proving the value of our industry-relevant training."
     content:
-      text: "At 4Geeks, you won’t just learn how to code—you’ll become a tech professional ready to tackle any challenge and to thrive in today’s dynamic tech landscape."
+      text: "At 4Geeks, you won't just learn how to code: you'll become a tech professional ready to tackle any challenge and to thrive in today's dynamic tech landscape."
       font_size: ["16px"]
       path: ""
     bullets:

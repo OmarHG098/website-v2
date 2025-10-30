@@ -25,7 +25,7 @@ header:
 what_you_will_learn:
   title: "What You'll Learn & Do"
   paragraph: |
-    Prework isn't just about content — it's about learning how to learn in a coding environment. You'll:
+    Prework isn't just about content: it's about learning how to learn in a coding environment. You'll:
   bullets:
     - text: "Navigate platforms like <a class='link' href='https://4geeks.com/?utm_source=chatgpt.com' target='_blank'>4Geeks.com</a> and Slack"
     - text: "Get familiar with GitHub and GitHub CodeSpaces"
@@ -38,7 +38,7 @@ what_you_will_learn:
 how_it_works:
   title: "How It Works"
   content: |
-    <li>Prework usually takes about 2 weeks, but you set the pace — some finish earlier, others may need a little longer. You do need to complete it before the bootcamp begins.</li>
+    <li>Prework usually takes about 2 weeks, but you set the pace, some finish earlier, others may need a little longer. You do need to complete it before the bootcamp begins.</li>
     <li>Once you enroll, you'll have immediate access to prework materials and slack support channels so you can start right away.</li>
     <li>Attending Live Prework Classes (study halls) is mandatory. You'll work through exercises, share your screen, and get real-time help from a mentor.</li>
   image: "../../../static/images/Group-6617.webp"
@@ -81,7 +81,7 @@ why_prework_matters:
 ## CTA SECTION
 cta:
   title: "Ready to Start Your Prework?"
-  subtitle: "Enroll today and get instant access to Prework — your first step into a new tech career."
+  subtitle: "Enroll today and get instant access to Prework: your first step into a new tech career."
   primary_button:
     text: "Apply Now"
     link: "/us/apply"

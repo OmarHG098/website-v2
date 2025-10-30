@@ -13,7 +13,7 @@ meta_info:
 seo_title: "Informe de Resultados"
 header:
   title: "Resultados Comprobados que Impulsan Carreras Tech"
-  paragraph: "En 4Geeks, el éxito no es una promesa — es un historial comprobado. Nuestros estudiantes lanzan carreras tech exitosas en programación impulsada por IA, ciencia de datos y ciberseguridad, y los números lo demuestran. Sigue leyendo para ver los detalles: Mantenemos nuestra información transparente, publicando regularmente datos verificados de colocación y salarios en EE. UU., América Latina y Europa."
+  paragraph: "En 4Geeks, el éxito no es una promesa: es un historial comprobado. Nuestros estudiantes lanzan carreras tech exitosas en programación impulsada por IA, ciencia de datos y ciberseguridad, y los números lo demuestran. Sigue leyendo para ver los detalles: Mantenemos nuestra información transparente, publicando regularmente datos verificados de colocación y salarios en EE. UU., América Latina y Europa."
   image: " "
   image_alt: "Informe de Resultados de 4Geeks Academy"
 sections:
@@ -26,8 +26,8 @@ sections:
         content: |
           <ul class='ul-outcomes'>
             <li class='li-outcomes-link'>EE. UU. (Referencia 2022): 84% contratados | +55% aumento salarial</li>
-            <li class='li-outcomes-link'>(2024): Un año de mercado más lento — la contratación promedio tomó 141 días.</li>
-            <li class='li-outcomes-link'>(Mediados de 2025): Repunte en pleno apogeo — 86% contratados | +71% aumento salarial | contratación promedio en solo 93 días.</li>
+            <li class='li-outcomes-link'>(2024): Un año de mercado más lento, la contratación promedio tomó 141 días.</li>
+            <li class='li-outcomes-link'>(Mediados de 2025): Repunte en pleno apogeo: 86% contratados | +71% aumento salarial | contratación promedio en solo 93 días.</li>
           </ul>
       - title: "RESULTADOS EN LATAM"
         content: |
@@ -67,7 +67,7 @@ sections:
   - title: "🚀 Por Qué los Estudiantes Obtienen Resultados con Nosotros"
     ref: "why_results"
     paragraph: |
-      No sólo enseñamos habilidades — nos aseguramos de que puedas convertirlas en una carrera. <br>
+      No sólo enseñamos habilidades: nos aseguramos de que puedas convertirlas en una carrera. <br>
       Cada estudiante de 4Geeks recibe:
     sub_sections:
       - title: "Apoyo Profesional GeekFORCE (de por vida):"

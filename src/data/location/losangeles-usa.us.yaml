@@ -19,7 +19,7 @@ meta_info:
 seo_title: "Coding Bootcamp in Los Angeles with a Job Guarantee"
 header:
   tagline: "4Geeks Academy: Launch an AI-Ready Tech Career in Los Angeles"
-  sub_header: "Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist—with skills built for the AI era."
+  sub_header: "Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist: with skills built for the AI era."
   sub_header_highlighted: " All programs are taught online with live support."
   paragraph: ""
   image: "../../../static/images/locations/california-home.png"
@@ -35,7 +35,7 @@ badges:
     A community built for developers. 
 divider:
   heading:
-    text: "LA’s tech scene is booming—and 4Geeks Academy can help you become a part of it. Our Los Angeles coding bootcamp offers hands-on training, expert mentorship, and career support to help you get hired.Whether you’re in Hollywood or Huntington Beach, join a global network of professionals and begin your journey into tech."
+    text: "LA’s tech scene is booming, and 4Geeks Academy can help you become a part of it. Our Los Angeles coding bootcamp offers hands-on training, expert mentorship, and career support to help you get hired.Whether you’re in Hollywood or Huntington Beach, join a global network of professionals and begin your journey into tech."
     font_size: ["34px", "34px", "34px", "28px", "26px"] # [xl, lg, md, sm, xs]
     style: '{ "color": "#FFFFFF" }'
 news:

@@ -11,7 +11,7 @@ meta_info:
 seo_title: "Application Process - Join 4Geeks Academy"
 header:
   title: "Your Path to Joining 4Geeks and Kickstarting Your New Career"
-  paragraph: "Applying is simple — and we'll guide you every step of the way. Here's how you go from curious to officially part of the 4Geeks community:"
+  paragraph: "Applying is simple, and we'll guide you every step of the way. Here's how you go from curious to officially part of the 4Geeks community:"
   image: "../../../static/images/career_launch.png"
   alt: "Career Launch"
 
@@ -38,9 +38,9 @@ stepper:
       description: "Within 1 business day, an Admissions Rep will connect with you."
       sub_items:
     - title: "Chat About Your Goals"
-      description: "We'll talk about your background, start dates, tuition, and career outcomes — and answer all your questions so you know which program fits you best."
+      description: "We'll talk about your background, start dates, tuition, and career outcomes, and answer all your questions so you know which program fits you best."
     - title: "Choose Your Payment Plan"
-      description: "Explore financing, scholarships, income-based payments and the Job Guarantee with our team — and find the plan that works for you."
+      description: "Explore financing, scholarships, income-based payments and the Job Guarantee with our team, and find the plan that works for you."
     - title: "Secure Your Spot"
       description: "Once you feel confident about your choices, pick your start date, sign your Enrollment Agreement, and complete your enrollment with a deposit (if required)."
     - title: "Welcome to 4Geeks!"

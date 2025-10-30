@@ -15,7 +15,7 @@ header:
     Mentoría de Por Vida y Apoyo de Programación Impulsado por IA"
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: "GeekPal - Ten mentores por el resto de tu vida"
-  paragraph: "Obtén mentoría de programación 1:1 ilimitada y orientación impulsada por IA de Rigobot 24/7. Nunca programes solo, recibe retroalimentación instantánea y únete a una comunidad global de desarrolladores — todo diseñado para ayudarte a aprender más rápido, mantenerte motivado y prosperar en tecnología de por vida."
+  paragraph: "Obtén mentoría de programación 1:1 ilimitada y orientación impulsada por IA de Rigobot 24/7. Nunca programes solo, recibe retroalimentación instantánea y únete a una comunidad global de desarrolladores, todo diseñado para ayudarte a aprender más rápido, mantenerte motivado y prosperar en tecnología de por vida."
   bullets:
     - " "
   image_logo: "/images/geekpal.png"
@@ -33,7 +33,7 @@ components:
       font_size: ["30px", "30px", "30px", "30px", "30px"]
       style: '{ "color": "black" }'
     sub_heading:
-      text: 'La razón #1 por la que las personas abandonan al aprender a programar? Quedarse estancado. En 4Geeks, hemos construido un sistema de apoyo personalizado donde siempre tendrás a alguien que te ayude con tus desafíos— para que nunca pierdas el momentum y sigas avanzando rápido.'
+      text: 'La razón #1 por la que las personas abandonan al aprender a programar? Quedarse estancado. En 4Geeks, hemos construido un sistema de apoyo personalizado donde siempre tendrás a alguien que te ayude con tus desafíos, para que nunca pierdas el momentum y sigas avanzando rápido.'
       font_size: ["20px", "20px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "90%", "color": "black"}' 
     layout: iconogram
@@ -46,7 +46,7 @@ components:
       - icon: "hands-w-purple"
         title: "Mentoría 1:1 Ilimitada"
         color: "#FF0000"
-        content: "Desde el primer día — y de por vida."
+        content: "Desde el primer día, y de por vida."
       - icon: "rocket-2"
         title: "Asistente de IA 24/7 (Rigobot)"
         color: "#FFC718"
@@ -118,18 +118,18 @@ components:
       font_size: ["33px", "33px", "33px", "33px", "33px"]
       style: '{ "lineHeight": "30px" }'
     sub_heading:
-      text: "4Geeks es más que un bootcamp — es una red de apoyo de profesionales tech, mentores y compañeros geeks para mantenerte avanzando en tu carrera."
+      text: "4Geeks es más que un bootcamp: es una red de apoyo de profesionales tech, mentores y compañeros geeks para mantenerte avanzando en tu carrera."
       font_size: ["16px","16px","16px","16px","16px"]
       style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300" }'
     bullets:
       item_style: '{ "padding": "5px 0", "font-weight": "100", "margin":"0" }'
       items:
         - heading: "Comunidad Slack (6,000+ miembros)"
-          text: "Obtén ayuda en tiempo real de mentores, egresados y compañeros a través de nuestros canales activos y temáticos — desde soporte de programación, hasta tableros de trabajo y consejos de carrera (¡y sí, también hay humor de programación!)."
+          text: "Obtén ayuda en tiempo real de mentores, egresados y compañeros a través de nuestros canales activos y temáticos: desde soporte de programación, hasta tableros de trabajo y consejos de carrera (¡y sí, también hay humor de programación!)."
           icon: "check"
           icon_color: '#F4F9FF'
         - heading: "4Geeks.com"
-          text: "Sigue avanzando tus habilidades con recursos de entrenamiento adicionales, eventos en vivo y proyectos colaborativos. Conecta con personas que han estado donde tú estás — y saben cómo ayudarte a llegar donde quieres ir."
+          text: "Sigue avanzando tus habilidades con recursos de entrenamiento adicionales, eventos en vivo y proyectos colaborativos. Conecta con personas que han estado donde tú estás, y saben cómo ayudarte a llegar donde quieres ir."
           icon: "check"
           icon_color: '#F4F9FF'
 

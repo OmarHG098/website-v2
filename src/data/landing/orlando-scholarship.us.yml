@@ -32,12 +32,12 @@ header_data:
 
 features:
   marginTop: 0px
-  text: "Apply now—don't miss your chance!"
+  text: "Apply now. Don't miss your chance!"
   bullets:
     - 'For Greater Orlando residents only'
     - 'Award-winning tech education and career support'
     - "Get a high-paying job in Florida's thriving tech scene"
-    - 'Limited spots — act now!'
+    - 'Limited spots: act now!'
   styles: '{ "color": "black", "fontWeight":"500" }'
 
 short_badges:
@@ -153,7 +153,7 @@ components:
     sub_heading:
       font_size: ["16px", "16px", "16px", "14px", "14px"]
       style: '{ "font-weight": "100" }'
-      text: "Join Orlando's premier tech education hub. With 7+ global campuses and 4,000+ alumni, we offer more than just coding—we provide a lifelong support network for your tech career success. Where there's a geek, there's a way! \n What sets us apart:"
+      text: "Join Orlando's premier tech education hub. With 7+ global campuses and 4,000+ alumni, we offer more than just coding: we provide a lifelong support network for your tech career success. Where there's a geek, there's a way! \n What sets us apart:"
 
     content:
       font_size: ["16px"]

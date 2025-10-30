@@ -56,7 +56,7 @@ header_data:
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
-  text: "Apply now—don’t miss your chance!"
+  text: "Apply now. Don't miss your chance!"
   bullets:
     - "For residents of Texas ONLY."
     - "Get a high-paying, future-proof tech-job, right in your state."
@@ -303,7 +303,7 @@ components:
       font_size: ["30px", "30px", "30px", "30px", "30px"]
       style: '{ "color": "white" }'
     sub_heading:
-      text: 'Yes — and we’ve got the numbers to back it up.'
+      text: 'Yes. And we’ve got the numbers to back it up.'
       font_size: ["20px", "20px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%", "color": "white"}'      
     icons:
@@ -376,7 +376,7 @@ components:
       shadow: true
     video: "6m1Jyya7eCc"
     heading:
-      text: "Learn AI-powered Full Stack Development Faster — With Hyper-Personalized Support That Adapts to You"
+      text: "Learn AI-powered Full Stack Development Faster: With Hyper-Personalized Support That Adapts to You"
         #           xl      lg      md      sm      xs
       font_size: ["30px", "30px", "28px", "28px", "24px"]
     sub_heading:

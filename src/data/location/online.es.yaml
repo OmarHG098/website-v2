@@ -53,7 +53,7 @@ badges:
     
 divider:
   heading:
-    text: "No importa dónde vivas en Estados Unidos, puedes lanzar tu carrera tech con 4Geeks Academy. Nuestro bootcamp de programación remoto te da acceso a instructores expertos, proyectos del mundo real y apoyo profesional continuo—todo desde la comodidad de tu hogar. Únete a miles de graduados en todo el país que han construido nuevos futuros en tech, y comienza a aprender hoy."
+    text: "No importa dónde vivas en Estados Unidos, puedes lanzar tu carrera tech con 4Geeks Academy. Nuestro bootcamp de programación remoto te da acceso a instructores expertos, proyectos del mundo real y apoyo profesional continuo, todo desde la comodidad de tu hogar. Únete a miles de graduados en todo el país que han construido nuevos futuros en tech, y comienza a aprender hoy."
     font_size: ["34px", "34px", "34px", "28px", "26px"]
     style: '{ "color": "#FFFFFF" }'
 news:

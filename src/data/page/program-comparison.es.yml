@@ -141,11 +141,11 @@ data_table:
 
     - cells:
         - content: "Mejor Para Ti Si…"
-        - content: "Amas crear cosas desde cero — sitios web, aplicaciones o herramientas. Disfrutas resolver problemas e ingeniería de software potenciada por IA. Genial para cambios de carrera, freelancers o quienes apuntan a trabajos en startups/tech."
+        - content: "Amas crear cosas desde cero: sitios web, aplicaciones o herramientas. Disfrutas resolver problemas e ingeniería de software potenciada por IA. Genial para cambios de carrera, freelancers o quienes apuntan a trabajos en startups/tech."
           html: false
         - content: "Disfrutas trabajar con datos, detectar patrones y resolver problemas del mundo real. Ideal si quieres entrar en IA o roles basados en datos. Experiencia en matemáticas/negocios ayuda, pero no es requerida."
           html: false
-        - content: "Quieres una carrera a prueba del futuro protegiendo datos y sistemas. Perfecto si disfrutas estrategia, puzzles o trabajo de cumplimiento — o sueñas con trabajar en seguridad IT, aplicación de la ley o defensa."
+        - content: "Quieres una carrera a prueba del futuro protegiendo datos y sistemas. Perfecto si disfrutas estrategia, puzzles o trabajo de cumplimiento, o sueñas con trabajar en seguridad IT, aplicación de la ley o defensa."
           html: false
 
     - cells:
