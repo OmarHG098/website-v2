@@ -47,6 +47,8 @@ footer:
         link: "/es/coding-bootcamps/curso-datascience-machine-learning/"
       - name: "Ciberseguridad"
         link: "/es/coding-bootcamps/curso-ciberseguridad"
+      - name: "Inteligencia Artificial Aplicada"
+        link: "/es/coding-bootcamps/curso-inteligencia-artificial"
   - column_four:
     heading: "SEDES"
     width: 3
