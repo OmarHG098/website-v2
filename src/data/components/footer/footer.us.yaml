@@ -45,6 +45,8 @@ footer:
         link: "/us/coding-bootcamps/datascience-machine-learning"
       - name: "Cybersecurity"
         link: "/us/coding-bootcamps/cybersecurity"
+      - name: "Applied AI"
+        link: "/us/coding-bootcamps/applied-ai-course"
   - column_four:
     width: 2
     heading: "LOCATIONS"
