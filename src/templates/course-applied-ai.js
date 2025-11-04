@@ -16,7 +16,6 @@ import OurPartners from "../components/OurPartners";
 import Icon from "../components/Icon";
 import Overlaped from "../components/Overlaped";
 import Loc from "../components/Loc";
-import ScholarshipProjects from "../components/ScholarshipProjects";
 import TwoColumn from "../components/TwoColumn/index.js";
 import DoubleActionCTA from "../components/DoubleActionCTA";
 
@@ -203,6 +202,7 @@ const ApliedAi = ({ data, pageContext, yml }) => {
       {/* OVERLAPED CREAR EN EL YML*/}
       <Overlaped
         heading={yml.overlaped?.heading}
+        subtitle={yml.overlaped?.subtitle}
         headingStyle={{ fontSize: "26px" }}
         content={yml.overlaped?.paragraph}
         button={yml.overlaped?.button}
@@ -236,7 +236,7 @@ const ApliedAi = ({ data, pageContext, yml }) => {
       />
 
       {/* TWO COLUMN video CREAR EN EL YML*/}
-      <TwoColumn
+      {/*<TwoColumn
         left={{
           image: yml.two_columns_video?.image,
           video: yml.two_columns_video?.video,
@@ -250,7 +250,7 @@ const ApliedAi = ({ data, pageContext, yml }) => {
         }}
         proportions={yml.two_columns_video?.proportions}
         session={session}
-      />
+      />*/}
 
       <PricesAndPayment
         background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
@@ -261,11 +261,6 @@ const ApliedAi = ({ data, pageContext, yml }) => {
         defaultSchedule={program_schedule}
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
-      />
-
-      <ScholarshipProjects
-        content={data.allScholarshipProjectsYaml.edges[0].node}
-        lang={pageContext.lang}
       />
 
       {/*<OurPartners images={hiring.partners.images} marquee/>*/}
@@ -456,6 +451,7 @@ export const query = graphql`
           }
           overlaped {
             heading
+            subtitle
             paragraph
             button {
               text
@@ -514,11 +510,6 @@ export const query = graphql`
               color
               background
               path
-            }
-            bullets {
-              items {
-                text
-              }
             }
           }
           two_columns_second {
@@ -582,65 +573,6 @@ export const query = graphql`
             geeks_vs_other
             pricing
             alumni
-          }
-        }
-      }
-    }
-    allScholarshipProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          title
-          description
-          project_name
-          project_details
-          total_cost
-          geeks_benefited
-          institutions
-          press
-          see_project
-          projects {
-            name
-            image {
-              alt
-              src {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 700
-                    quality: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    breakpoints: [200, 340, 520, 890]
-                  )
-                }
-              }
-            }
-            description
-            details {
-              cost
-              geeks_benefited
-            }
-            institutions {
-              name
-              logo {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 700
-                    quality: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    breakpoints: [200, 340, 520, 890]
-                  )
-                }
-              }
-            }
-            press {
-              name
-              link
-            }
-            pdf
-          }
-          fields {
-            lang
           }
         }
       }
