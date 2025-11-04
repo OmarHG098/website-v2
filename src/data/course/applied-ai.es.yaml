@@ -240,7 +240,7 @@ two_columns:
     shadow: false
   heading:
     text: "Lo que aprenderás"
-    font_size: ["30px", "30px", "30px", "26px", "24px"]
+    font_size: ["40px", "38px", "38px", "36px", "34px"]
   sub_heading:
     text: "Domina herramientas como ChatGPT (GPT-4o), Claude 4 y Midjourney para mejorar \ntu productividad, creatividad y resolución de problemas. Aprende cómo hacer de la IA\n una parte activa de tu conjunto de herramientas profesional."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
@@ -266,7 +266,7 @@ two_columns_second:
     shadow: false
   heading:
     text: "Todo lo que necesitas para aprovechar la IA"
-    font_size: ["30px", "30px", "30px", "26px", "24px"]
+    font_size: ["40px", "38px", "38px", "36px", "34px"]
   sub_heading:
     text: ""
     font_size: ["16px", "16px", "16px", "16px", "16px"]
@@ -295,8 +295,8 @@ two_columns_video:
   video: "E9RpwJhJi-k"
   heading:
     text: "Impulsa tu carrera con IA Aplicada"
-    font_size: ["42px", "34px", "34px", "34px", "34px"]
-    style: '{"font-weight": "bold", "color": "#333", "text-align": "center"}'
+    font_size: ["40px", "38px", "38px", "36px", "34px"]
+    style: '{"font-weight": "bold"}'
   sub_heading:
     text: "Escucha a nuestro CEO sobre cómo la IA Aplicada transformó su productividad y resultados. Tú también puedes dar el salto y dominar las habilidades de IA de vanguardia que protegerán tu carrera:"
     font_size: ["20px", "18px", "16px", "16px", "14px"]

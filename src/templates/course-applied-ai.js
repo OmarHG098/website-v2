@@ -174,19 +174,48 @@ const ApliedAi = ({ data, pageContext, yml }) => {
           paragraph={yml.badges.paragraph}
         />
       </Header>
-      {/* TWO COLUMN CREAR EN EL YML*/}
-      <TwoColumn
-        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
-        right={{
-          heading: yml.two_columns?.heading,
-          sub_heading: yml.two_columns?.sub_heading,
-          bullets: yml.two_columns?.bullets,
-          content: yml.two_columns?.content,
-          button: yml.two_columns?.button,
+      <Badges
+        lang={pageContext.lang}
+        padding_tablet="0px 64px"
+        padding="0px"
+        short_link={true}
+        short_text="12px"
+        paragraphStyles={{
+          fontSize: "16px",
+          fontSize_tablet: "16px",
+          padding_tablet: "0px 64px 40px 64px",
+          padding: "0px 47px 0 47px",
         }}
-        proportions={yml.two_columns?.proportions}
+        paragraph={yml.badges.paragraph}
+      />
+      {/* OVERLAPED CREAR EN EL YML*/}
+      <Overlaped
+        heading={yml.overlaped?.heading}
+        subtitle={yml.overlaped?.subtitle}
+        headingStyle={{ fontSize: "26px" }}
+        content={yml.overlaped?.paragraph}
+        button={yml.overlaped?.button}
+        image={yml.overlaped?.image}
+      />
+
+      {/* TWO COLUMN video CREAR EN EL YML*/}
+      <TwoColumn
+        right={{
+          image: yml.two_columns_video?.image,
+          video: yml.two_columns_video?.video,
+        }}
+        left={{
+          heading: yml.two_columns_video?.heading,
+          sub_heading: yml.two_columns_video?.sub_heading,
+          bullets: yml.two_columns_video?.bullets,
+          content: yml.two_columns_video?.content,
+          button: yml.two_columns_video?.button,
+        }}
+        proportions={yml.two_columns_video?.proportions}
         session={session}
       />
+
+      {/* TWO COLUMN CREAR EN EL YML*/}
 
       <ProgramDetails
         details={courseDetails.details}
@@ -199,16 +228,18 @@ const ApliedAi = ({ data, pageContext, yml }) => {
         course={program_schedule}
       />
 
-      {/* OVERLAPED CREAR EN EL YML*/}
-      <Overlaped
-        heading={yml.overlaped?.heading}
-        subtitle={yml.overlaped?.subtitle}
-        headingStyle={{ fontSize: "26px" }}
-        content={yml.overlaped?.paragraph}
-        button={yml.overlaped?.button}
-        image={yml.overlaped?.image}
+      <TwoColumn
+        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
+        right={{
+          heading: yml.two_columns?.heading,
+          sub_heading: yml.two_columns?.sub_heading,
+          bullets: yml.two_columns?.bullets,
+          content: yml.two_columns?.content,
+          button: yml.two_columns?.button,
+        }}
+        proportions={yml.two_columns?.proportions}
+        session={session}
       />
-
       {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE 
       <GeeksInfo lang={pageContext.lang} /> */}
 
@@ -234,23 +265,6 @@ const ApliedAi = ({ data, pageContext, yml }) => {
         locations={data.allLocationYaml.edges}
         showMoreRedirect
       />
-
-      {/* TWO COLUMN video CREAR EN EL YML*/}
-      {/*<TwoColumn
-        left={{
-          image: yml.two_columns_video?.image,
-          video: yml.two_columns_video?.video,
-        }}
-        right={{
-          heading: yml.two_columns_video?.heading,
-          sub_heading: yml.two_columns_video?.sub_heading,
-          bullets: yml.two_columns_video?.bullets,
-          content: yml.two_columns_video?.content,
-          button: yml.two_columns_video?.button,
-        }}
-        proportions={yml.two_columns_video?.proportions}
-        session={session}
-      />*/}
 
       <PricesAndPayment
         background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
@@ -500,16 +514,22 @@ export const query = graphql`
             heading {
               text
               font_size
+              style
             }
             sub_heading {
               text
               font_size
+              style
+            }
+            content {
+              text
             }
             button {
               text
               color
               background
               path
+              style
             }
           }
           two_columns_second {

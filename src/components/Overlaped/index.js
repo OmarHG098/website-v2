@@ -171,8 +171,7 @@ const Overlaped = ({
         position="relative"
         flexDirection="column"
         width="100%"
-        margin="45px 20px 400px 20px"
-        margin_xxs="45px 20px 450px 20px"
+        margin="45px 20px 0 20px"
       >
         {image?.src ? (
           <Img
@@ -217,16 +216,13 @@ const Overlaped = ({
         <Div
           border="3px solid black"
           flexWrap="wrap"
-          position="absolute"
-          top="50%"
+          position="relative"
           zIndex="1"
           width_xxs="90%"
           width_xs="88%"
           width_sm="89%"
           padding="20px"
-          margin="0 auto"
-          left="0"
-          right="0"
+          margin="-200px auto 0 auto"
           background={Colors.white}
           boxShadow="20px 10px 0px 0px rgba(0,0,0,1)"
         >
