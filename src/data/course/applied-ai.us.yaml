@@ -217,18 +217,24 @@ faq:
 
 ## TWO COLUMNS
 two_columns:
-  proportions: [4, 8]
+  proportions: [6, 6]
   image:
     style: '{"backgroundSize": "contain", "background-position": "center"}'
     src: "../../images/landing/applied-ai-icons.webp"
     shadow: false
   heading:
-    text: "Expand your capabilities and boost your efficiency!"
+    text: "What You’ll Learn"
     font_size: ["30px", "30px", "30px", "26px", "24px"]
   sub_heading:
-    text: "Learn to leverage text-based generative models like
-      ChatGPT, Claude, and Llama3, along with image generation tools such as Stable Diffusion, DALL-E, and Midjourney."
+    text: "Master tools like ChatGPT (GPT-4o), Claude 4, and Midjourney to enhance \nyour productivity, creativity, and problem-solving. Learn how to make AI\n an active part of your professional toolkit."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
+  bullets:
+    items:
+    - text: "• Understand key AI concepts and generative tools"
+    - text: "• Learn effective prompting for text and image generation"
+    - text: "• Automate everyday workflows using no-code tools"
+    - text: "• Create professional content and websites with AI"
+    - text: "• Build and deploy simple chatbots and AI assistants"
   button:
     text: "Apply now"
     color: "white"
@@ -267,25 +273,29 @@ two_columns_video:
   proportions: [6, 6]
   image:
     style: '{"border": "3px solid #2b2b2b", "border-radius": "3px", "backgroundSize": "contain", "background-position": "center"}'
-    src: "../../images/testimonials/daniel-pena-testimonial.jpg"
+    src: "../../images/applied-ai-cover.webp"
     link: ""
     shadow: false
-  video: "z8L4yGdP5xM"
+  video: "E9RpwJhJi-k"
   heading:
-    text: "See How One Graduate Turned Our Job Guarantee Into a Real Career"
+    text: "Boost Your Career with Applied AI"
     font_size: ["42px", "34px", "34px", "34px", "34px"]
     style: '{"font-weight": "bold", "color": "#333", "text-align": "center"}'
   sub_heading:
-    text: |
-      Daniel Peña transitioned to a tech career through 4Geeks Academy's Full-Stack Developer program. With our industry-aligned curriculum that covers front-end and back-end development, he built real-world skills through hands-on projects and expert mentorship.
-      Most importantly, he followed all the steps in our Job Guarantee — and it paid off. Daniel landed a tech job he loves and launched a new career with confidence.
-      Watch his story to see what's possible when commitment meets support.
-
+    text: "Hear from our CEO on how Applied AI transformed his productivity and results. Take the leap too and master the cutting-edge AI skills that will future-proof your career:"
     font_size: ["20px", "18px", "16px", "16px", "14px"]
-    style: '{"color": "#2a2a2a", "text-align": "justify", "line-height": "1.6", "max-width": "800px", "margin": "0 auto", "font-weight":"200" }'
+    style: '{"font-weight":"200" }'
   button:
     text: "APPLY NOW"
     color: "white"
     background: "black"
     path: "/us/apply"
     style: '{"padding": "20px 48px", "border-radius": "5px"}'
+  content:
+    text: |
+      • Use AI to streamline your workflow and deliver high-quality results from day one.
+      <br>
+      • Expand your capabilities across any field — from marketing to real estate or creative work.
+      <br>
+      • Create reports, analyses, and in depth strategies faster and smarter with AI.
+      <br>

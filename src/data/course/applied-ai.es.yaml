@@ -17,10 +17,10 @@ apply_form:
 
 seo_title: "Curso de Inteligencia Artificial Aplicada"
 header:
-  title: "Aprende I.A. y cómo utilizarla en tu trabajo"
-  paragraph: "¡Automatiza y delega tus tareas a un AI, en diferentes roles y en tu empresa!"
+  title: "Mantente relevante en tu carrera. Lidera con IA."
+  paragraph: "Construye habilidades prácticas de IA que todo profesional necesita—aprende a aplicar IA en el trabajo en solo 6 semanas."
   image: "../../../static/images/bg/circles.jpg"
-  image_alt: "círculos"
+  image_alt: "IA Aplicada"
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"
@@ -233,17 +233,24 @@ faq:
 
 ## TWO COLUMNS
 two_columns:
-  proportions: [4, 8]
+  proportions: [6, 6]
   image:
     style: '{"backgroundSize": "contain", "background-position": "center"}'
     src: "../../images/landing/applied-ai-icons.webp"
     shadow: false
   heading:
-    text: "¡Expande tus capacidades y aumenta tu eficiencia!"
+    text: "Lo que aprenderás"
     font_size: ["30px", "30px", "30px", "26px", "24px"]
   sub_heading:
-    text: "Aprende a aprovechar modelos generativos basados en texto como ChatGPT, Claude y Llama3, junto con herramientas de generación de imágenes como Stable Diffusion, DALL-E y Midjourney."
+    text: "Domina herramientas como ChatGPT (GPT-4o), Claude 4 y Midjourney para mejorar \ntu productividad, creatividad y resolución de problemas. Aprende cómo hacer de la IA\n una parte activa de tu conjunto de herramientas profesional."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
+  bullets:
+    items:
+    - text: "• Comprende conceptos clave de IA y herramientas generativas"
+    - text: "• Aprende a hacer prompts efectivos para generación de texto e imágenes"
+    - text: "• Automatiza flujos de trabajo cotidianos usando herramientas sin código"
+    - text: "• Crea contenido y sitios web profesionales con IA"
+    - text: "• Construye y despliega chatbots simples y asistentes de IA"
   button:
     text: "Aplicar ahora"
     color: "white"
@@ -282,26 +289,29 @@ two_columns_video:
   proportions: [6, 6]
   image:
     style: '{"border": "3px solid #2b2b2b", "border-radius": "3px", "backgroundSize": "contain", "background-position": "center"}'
-    src: "../../images/testimonials/daniel-pena-testimonial.jpg"
+    src: "../../images/applied-ai-cover.webp"
     link: ""
     shadow: false
-  video: "z8L4yGdP5xM"
+  video: "E9RpwJhJi-k"
   heading:
-    text: "Ve cómo un graduado convirtió nuestra Garantía de Trabajo en una carrera real"
+    text: "Impulsa tu carrera con IA Aplicada"
     font_size: ["42px", "34px", "34px", "34px", "34px"]
     style: '{"font-weight": "bold", "color": "#333", "text-align": "center"}'
   sub_heading:
-    text: |
-      Daniel Peña hizo la transición a una carrera tecnológica a través del programa de Desarrollador Full-Stack de 4Geeks Academy. Con nuestro plan de estudios alineado con la industria que cubre desarrollo front-end y back-end, construyó habilidades del mundo real a través de proyectos prácticos y mentoría experta.
-      Lo más importante, siguió todos los pasos de nuestra Garantía de Trabajo — y dio resultado. Daniel consiguió un trabajo tecnológico que ama y lanzó una nueva carrera con confianza.
-      Mira su historia para ver lo que es posible cuando el compromiso se encuentra con el apoyo.
-
+    text: "Escucha a nuestro CEO sobre cómo la IA Aplicada transformó su productividad y resultados. Tú también puedes dar el salto y dominar las habilidades de IA de vanguardia que protegerán tu carrera:"
     font_size: ["20px", "18px", "16px", "16px", "14px"]
-    style: '{"color": "#2a2a2a", "text-align": "justify", "line-height": "1.6", "max-width": "800px", "margin": "0 auto", "font-weight":"200" }'
-
+    style: '{"font-weight":"200" }'
   button:
     text: "APLICAR AHORA"
     color: "white"
     background: "black"
     path: "/es/aplica"
     style: '{"padding": "20px 48px", "border-radius": "5px"}'
+  content:
+    text: |
+      • Usa IA para optimizar tu flujo de trabajo y entregar resultados de alta calidad desde el primer día.
+      <br>
+      • Expande tus capacidades en cualquier campo — desde marketing hasta bienes raíces o trabajo creativo.
+      <br>
+      • Crea informes, análisis y estrategias en profundidad más rápido e inteligentemente con IA.
+      <br>
