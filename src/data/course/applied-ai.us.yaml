@@ -224,7 +224,7 @@ two_columns:
     shadow: false
   heading:
     text: "What You’ll Learn"
-    font_size: ["30px", "30px", "30px", "26px", "24px"]
+    font_size: ["40px", "38px", "38px", "36px", "34px"]
   sub_heading:
     text: "Master tools like ChatGPT (GPT-4o), Claude 4, and Midjourney to enhance \nyour productivity, creativity, and problem-solving. Learn how to make AI\n an active part of your professional toolkit."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
@@ -250,7 +250,7 @@ two_columns_second:
     shadow: false
   heading:
     text: "Everything You Need to Leverage AI"
-    font_size: ["30px", "30px", "30px", "26px", "24px"]
+    font_size: ["40px", "38px", "38px", "36px", "34px"]
   sub_heading:
     text: ""
     font_size: ["16px", "16px", "16px", "16px", "16px"]
@@ -280,7 +280,7 @@ two_columns_video:
   heading:
     text: "Boost Your Career with Applied AI"
     font_size: ["42px", "34px", "34px", "34px", "34px"]
-    style: '{"font-weight": "bold", "color": "#333", "text-align": "center"}'
+    style: '{"font-weight": "bold"}'
   sub_heading:
     text: "Hear from our CEO on how Applied AI transformed his productivity and results. Take the leap too and master the cutting-edge AI skills that will future-proof your career:"
     font_size: ["20px", "18px", "16px", "16px", "14px"]
