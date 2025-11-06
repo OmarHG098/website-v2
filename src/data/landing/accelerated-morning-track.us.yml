@@ -1,14 +1,14 @@
 meta_info:
   slug: accelerated-morning-track
-  title: "AI-Powered Full Stack Bootcamp | 4Geeks Academy"
-  description: "Start your mornings coding with our accelerated AI-powered full stack bootcamp. Master AI-integrated skills in 12 weeks with morning-focused training"
+  title: "Accelerated Morning Track: AI-Powered Full Stack Bootcamp | 4Geeks Academy"
+  description: "Launch your tech career with our accelerated morning track. Master AI-integrated Full-Stack skills in 12 weeks with morning classes and flexible afternoons."
   visibility: "visible"
   image: "/images/bg/remote.jpeg"
   keywords: 
   template: "landing_a"
   redirects: []
   utm_course: ["full-stack"]
-  utm_location: ["downtown-miami"]
+  utm_location: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "tampa-usa", "dallas-usa", "online"]
   automation: strong
   tag: website-lead
 
@@ -32,11 +32,11 @@ header_data:
 
 features:
   marginTop: 0px
-  text: "Apply now — secure your spot in our new Accelerated Morning Track!"
+  text: "Apply now—secure your spot!"
   bullets:
-    - "Master future-proof, AI-integrated skills in 12 intensive weeks."
+    - "Master future-proof, AI-integrated skills in just 20 weeks."
     - "Unlimited mentorship and a community that's with you for life."
-    - "Job Guarantee included: Get hired within 9 months of graduating — or we'll return the full tuition (conditions apply)."
+    - "Enroll with a Job Guarantee: get hired within 9 months of graduation or your money back! (conditions apply)."
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"
@@ -67,8 +67,8 @@ short_badges:
 form:
   fields: ["full_name", "phone", "email"]
   heading: "Get Full Course Details"
-  motivation: "Apply below to receive the course overview by e-mail and choose how you'd like our admissions team to contact you."
-  button_label: "Apply for more info"
+  motivation: "Fill in your contact info below to receive the course overview by e-mail and choose how you'd like our admissions team to contact you."
+  button_label: "Get more info"
   redirect: "/us/thank-you/"
 
 follow_bar:
@@ -83,14 +83,39 @@ follow_bar:
   phone:
     text: ""
 
-
+program_details:
+  position: 5
+  heading: "Full-Stack Bootcamp"
+  sub_heading: " "
 
 components:
+  - name: why-accelerated-morning-track
+    position: 1
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "cover", "width": "auto", "backgroundPosition": "center center", "border": "3px solid black"}'
+      src: "/images/landing/affrican_person_small.jpeg"
+    heading:
+      text: "Why Choose The Accelerated Morning Track"
+      font_size: ["34px", "34px", "34px", "25px", "25px"]
+    content:
+      text: |
+       <ul style="line-height: 1.2;">
+          <li>✓ <strong style="text-decoration: none; color: #000000; font-weight: 700;">Maximize your focus.</strong> Start your day coding when your mind is sharpest — and see faster progress.</li>
+          <br/>
+          <li>✓ <strong style="text-decoration: none; color: #000000; font-weight: 700;">Afternoons are yours.</strong> Whether you want to work, rest, or enjoy your time — you'll have your days free.</li>
+          <br/>
+          <li>✓ <strong style="text-decoration: none; color: #000000; font-weight: 700;">Graduate in record time.</strong> Complete the Full-Stack + AI program in 12 weeks instead of 20 — same quality, faster results.</li>
+       </ul>
+      font_size: ["16px"]
+
   - name: leadform_header
+    position: 3
     layout: two_column_left
     proportions: [5, 7]
     image:
-      style: '{ "backgroundSize": "contain", "width": "auto"}'
+      style: '{ "backgroundSize": "contain", "width": "auto", "backgroundPosition": "center center"}'
       src: "/images/landing/hombre-con-laptop.png"
     heading:
       text: "What Sets 4Geeks Apart: AI-integrated Skills, Unlimited Mentorship and Career Support"
@@ -107,84 +132,37 @@ components:
         - text: "Experience hyperpersonalized learning, at every level. Move faster and smarter with AI-powered feedback tailored to your journey, plus an unmatched student-to-teacher ratio."
         - text: "Join an active tech community. Stay connected and supported through our Slack channels — with peers, mentors, and alumni ready to help you grow."
 
-  - name: program-details
-    position: 3
-    layout: two_column_right
-    proportions: [6, 6]
-    image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/grupo-ventanas.png"
-    heading:
-      style: '{ "margin-top": "0px" }'
-      text: "Launch your AI-Powered Tech Career"
-      font_size: ["40px", "34px", "34px", "25px", "25px"]
-    sub_heading:
-      font_size: ["16px", "16px", "16px", "14px", "14px"]
-      style: '{ "font-weight": "100" }'
-      text: "FULL-TIME, IN-PERSON 12-WEEK INTENSIVE"
-    content:
-      text: "Ready to future-proof your career? Enroll now and master AI-powered software engineering!"
-    bullets:
-      items:
-        - text: "Comprehensive training: Our Software Engineering with AI bootcamp equips you with the skills and tools needed to thrive in today's and tomorrow's tech job market."
-        - text: "Career-ready focus: This course prepares you for a successful tech career with in-depth training in programming fundamentals, frontend and backend development enhanced by AI."
-        - text: "Cutting-edge advantage: Master vibe coding—AI-driven software engineering for fast-track product launches—giving you a competitive edge."
-    button:
-      style: '{ "padding": "10px", "border-radius": "3px" }'
-      text: "Apply Now"
-      color: "white"
-      hover_color: "white"
-      background: "black"
-      path: "#leadform_bottom"
-
-  - name: ai-powered
-    position: 5
+  - name: two-column-rigobot
+    position: 7
+    proportions: [5, 7]
+    background: "#FFFFFF"
     layout: two_column_left
-    proportions: [6, 6]
-    background: "#ffffff"
     image:
-      style: '{ "backgroundSize": "contain", "width": "auto"}'
-      src: "/images/landing/two-womans-and-laptop.webp"
-      shadow: false
+      style: '{"backgroundSize": "cover"}'
+      src: "../../../../static/images/landing/ai-mentor.jpg"
+      shadow: true
+    video: "6m1Jyya7eCc"
     heading:
-      text: "About the program"
-      font_size: ["40px", "34px", "34px", "25px", "25px"]
+      text: "Learn AI-powered Full Stack Development Faster — With Hyper-Personalized Support That Adapts to You"
+      font_size: ["30px", "30px", "28px", "28px", "24px"]
     sub_heading:
-      text: "Master the most in-demand technologies and learn to build modern applications using AI. Learn algorithm scripting and build awesome apps using front-end libraries. Utilize APIs to consume data and enhance your app's functionality. Develop and present your own project, gaining game-changing hands-on experience. Learn to code alongside AI to unlock a faster, more creative way to build real apps from day one. Collaborate with powerful tools like Cursor to generate, debug,  iterate and ship with speed and precision. Reshape your mindset and embrace the programming, logic, and research skills to succeed in today's tech industry."
-      font_size: ["16px", "16px", "16px", "14px", "14px"]
-      style: '{ "font-weight": "100" }'
+      text: |-
+        Live instruction, unlimited mentorship, and AI tools built for smarter, faster progress.
+    content:
+      text: ""
+      font_size: ["16px"]
+   
     bullets:
-      item_style: '{ "padding": 0, "font-weight": "100" }'
       items:
-        - heading: "Duration: 12 Weeks"
-          text: ""
-          icon: "circle"
-        - heading: "Location: 4Geeks Academy Headquarters, Miami"
-          text: ""
-          icon: "circle"
-        - heading: "Start Date: July 28"
-          text: ""
-          icon: "circle"
-        - heading: "Schedule: Monday-Friday 9am-5:30pm"
-          text: ""
-          icon: "circle"
-        - heading: "Certificate: Recognized by the FL Department of Education"
-          text: ""
-          icon: "circle"
-        - heading: "Prerequisites: No previous experience is needed"
-          text: ""
-          icon: "circle"
-        - heading: "Language: English"
-          text: ""
-          icon: "circle"
-    button:
-      text: "Learn More"
-      color: "white"
-      background: "black"
-      path: "#leadform_header"
+      - text: "Rigobot, our custom-built AI coding assistant, follows your progress and gives tailored feedback exactly when you need it."
+        icon: "check" 
+      - text: "Get unmatched personal attention with our 7:1 student teacher ratio, plus unlimited access to 1:1 sessions with our expert mentors and career coaches."
+        icon: "check" 
+      - text: "With the combined support of our human mentors and AI tools, you'll master AI-integrated full stack development faster, smarter, and with more confidence than ever."
+        icon: "check"
 
   - name: how-it-works
-    position: 7
+    position: 9
     background: "#0084FF"
     layout: iconogram
     swipable: true
@@ -209,69 +187,9 @@ components:
         color: "#BE8BFF"
         title: "Salary Increase"
         content: "55% higher at new job"
-  
-  - name: why-4geeks
-    position: 9
-    layout: two_column_right
-    proportions: [6, 6]
-    image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/blonde-girl-laptop.png"
-    heading:
-      style: '{ "margin-top": "0px" }'
-      text: "Why we offer the added security of a Job Guarantee"
-      font_size: ["40px", "34px", "34px", "25px", "25px"]
-    sub_heading:
-      font_size: ["16px", "16px", "16px", "14px", "14px"]
-      style: '{ "font-weight": "100" }'
-      text: "Our goal is more than teaching skills — we're here to launch successful tech careers. With a cutting edge curriculum that's aligned with the latest AI developments, hands-on teaching methodology  and personalized career support, our program has a proven track record of preparing students for the tech job market"
-    content:
-      text: "Join a global leader in AI tech education. With 7+ campuses and 4,000+ alumni, we offer AI-powered learning and lifelong career support."
-    bullets:
-      items:
-        - text: "Our program's effectiveness is backed by strong hiring and retention rates"
-        - text: "We know how tech is evolving and prepare you to thrive in the new job market"
-        - text: "We believe in our teaching approach and your commitment to succeed "
-    button:
-      style: '{ "padding": "10px", "border-radius": "3px" }'
-      text: "Apply Now"
-      color: "white"
-      hover_color: "white"
-      background: "black"
-      path: "#leadform_bottom"
-
-  - name: some_id
-    position: 11
-    proportions: [5, 7]
-    background: "#FFFFFF" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9 .
-    layout: two_column_left
-    image:
-      style: '{"backgroundSize": "cover"}'
-      src: "../../../../static/images/landing/ai-mentor.jpg"
-      shadow: true
-    video: "6m1Jyya7eCc"
-    heading:
-      text: "Learn AI-powered Full Stack Development Faster — With Hyper-Personalized Support That Adapts to You"
-        #           xl      lg      md      sm      xs
-      font_size: ["30px", "30px", "28px", "28px", "24px"]
-    sub_heading:
-      text: |-
-        In-person instruction, unlimited mentorship, and AI tools built for smarter, faster progress.
-    content:
-      text: ""
-      font_size: ["16px"]
-   
-    bullets:
-      items:
-      - text: "Rigobot, our custom-built AI coding assistant, follows your progress and gives tailored feedback exactly when you need it."
-        icon: "check" 
-      - text: "Get unmatched personal attention with our 7:1 student teacher ratio, plus unlimited access to 1:1 sessions with our expert mentors and career coaches."
-        icon: "check" 
-      - text: "With the combined support of our human mentors and AI tools, you'll master AI-integrated full stack development faster, smarter, and with more confidence than ever."
-        icon: "check"
 
   - name: testimonials
-    position: 13
+    position: 11
     layout: testimonials_new
     heading:
       style: '{ "font-weight": "400", "color": "#3A3A3A" }'
@@ -283,7 +201,7 @@ components:
     filter_indexes: ["nai-kali", "jona-ferra", "kev-so"]
 
   - name: no-worries
-    position: 15
+    position: 13
     layout: two_column_left
     proportions: [6, 6]
     background: "#F4F9FF"
@@ -292,31 +210,38 @@ components:
       shadow: false
       src: "/images/landing/latin-woman-laptop-coffee.png"
     heading:
-      text: "Tuition, Job Guarantee, and Flexible Payment Options"
+      text: "Finance your future"
       font_size: ["40px", "34px", "34px", "25px", "25px"]
     sub_heading:
-      text: "Our full-time Software Engineering with AI bootcamp costs $14,999 and includes a job guarantee to back your investment. We also offer a variety of financing plans and loan options to make this opportunity as accessible as possible."
+      text: "Invest in your  Career with Flexible Payment Plans and a Job Guarantee."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
-    bullets:
-      items:
-        - text: "Includes Job Guarantee: If you're not hired within 9 months of graduation, you'll get a 100% refund of your tuition. (Conditions apply.)"
-        - text: "Financing Plans Available: Choose from multiple monthly payment options starting at $394/month."
-        - text: "We're Here to Help: Get in touch and we'll help you find the plan that works best for you."        
+    content:
+      text: |
+       <p>We want you to focus on what matters: learning, growing, and launching your tech career—not stressing about how to pay for it.</p>
+        <br/>
+        <p> That's why we make financing your education as simple and flexible as possible:</p>
+       <br/>
+       <ul>
+          <li>✓ Among the most affordable tuitions for a top bootcamp</li>
+          <li>✓ Payment plans starting under $299/month</li>
+         <li>✓ Job Guarantee available (with qualifying terms)</li>
+       </ul>
+       <br/>
+       <p>And if you need one more reason to feel confident: In 2024, <strong style="text-decoration: none; color: #000000; font-weight: 700;">Forbes</strong> named us the <a href="https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition" style="text-decoration: none; color: #000000; font-weight: 700;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">best bootcamp for students on a budget<span style="font-size: 0.8em;">↗</span></a>—recognizing our commitment to keeping tech education accessible.</p>
+       <p><strong style="text-decoration: none; color: #000000; font-weight: 700;">Have questions?</strong> Our admissions team will help you find your best-fit financing plan.</p>
+      path: "/us/apply"
     button:
-      style: '{ "padding-top": "10px", "border-radius": "3px" }'
-      text: "Get in touch"
+      text: "GET IN TOUCH"
       color: "white"
-      hover_color: "white"
-      background: "black"
-      path: "#leadform_bottom"
-
+      background: "blue"
+      path: "/us/apply"
 
 apply_schollarship:
   imageSide: "right"
   image: "../../../static/images/landing/apply.png"
 
 who_is_hiring:
-  position: 17
+  position: 15
   limit: 4
   heading: "Who is hiring our students?"
   sub_heading: "Top companies around the world trust 4Geeks graduates — and they're hiring. With 84% of grads landing jobs within 6 months and 100,000+ open positions in software development today, your next opportunity is closer than you think. Join a network of 550+ hiring partners and launch a career built to last."

@@ -250,25 +250,6 @@ const data = useStaticQuery(graphql`
 `);
 ```
 
-### 4.5 YAML Syntax Rules
-**CRITICAL:** Proper quote usage prevents YAML parsing errors
-
-**RULE:** When text contains apostrophes (contractions like "we've", "don't", "it's"), always use double quotes instead of single quotes.
-
-```yaml
-# ❌ INCORRECT: Single quotes with apostrophes cause parsing errors
-text: 'Yes — and we've got the numbers to back it up.'
-# Error: "Unexpected scalar at node end" - apostrophe interferes with YAML parsing
-
-# ✅ CORRECT: Use double quotes for text containing apostrophes
-text: "Yes — and we've got the numbers to back it up."
-```
-
-**BEST PRACTICES:**
-- Use double quotes (`"`) for any text containing apostrophes or contractions
-- Use single quotes (`'`) only for simple text without apostrophes
-- Always validate YAML syntax after adding text with special characters
-
 ---
 
 ## 🎓 5. 4GEEKSACADEMY CONTEXT
@@ -567,7 +548,6 @@ components:
 10. **ALWAYS** test responsive behavior on all breakpoints
 11. **MAINTAIN** separation between YAML configuration and component implementation
 12. **FOLLOW** the configuration-first principle for all dynamic components
-13. **USE DOUBLE QUOTES** for YAML text fields containing apostrophes (we've, don't, it's) to prevent parsing errors
 
 ---
 
