@@ -7,7 +7,7 @@ meta_info:
   keywords: 
   template: "landing_a"
   redirects: []
-  utm_course: ["full-stack"]
+  utm_course: ["full-stack-ft"]
   utm_location: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "tampa-usa", "dallas-usa", "online"]
   automation: strong
   tag: website-lead
@@ -19,7 +19,7 @@ navbar:
 
 header_data:
   tagline: "Become an AI-Powered Full Stack Developer in Just 12 Weeks"
-  sub_heading: "Start your mornings coding, graduate faster, and get the skills to succeed in a tech world transformed by AI — with hyper-personalized learning and unlimited support."
+  sub_heading: "Start your mornings coding, graduate faster, and get the skills to succeed in a tech world transformed by AI, with hyper-personalized learning and unlimited support."
   background: "#ffffff"
   tagline_color: "#1c1c1c"
   form_styles:
@@ -34,7 +34,7 @@ features:
   marginTop: 0px
   text: "Apply now—secure your spot!"
   bullets:
-    - "Master future-proof, AI-integrated skills in just 20 weeks."
+    - "Master future-proof, AI-integrated skills in just 12 weeks."
     - "Unlimited mentorship and a community that's with you for life."
     - "Enroll with a Job Guarantee: get hired within 9 months of graduation or your money back! (conditions apply)."
 
@@ -102,11 +102,15 @@ components:
     content:
       text: |
        <ul style="line-height: 1.2;">
-          <li>✓ <strong style="text-decoration: none; color: #000000; font-weight: 700;">Maximize your focus.</strong> Start your day coding when your mind is sharpest — and see faster progress.</li>
-          <br/>
-          <li>✓ <strong style="text-decoration: none; color: #000000; font-weight: 700;">Afternoons are yours.</strong> Whether you want to work, rest, or enjoy your time — you'll have your days free.</li>
-          <br/>
-          <li>✓ <strong style="text-decoration: none; color: #000000; font-weight: 700;">Graduate in record time.</strong> Complete the Full-Stack + AI program in 12 weeks instead of 20 — same quality, faster results.</li>
+         <li>✓ <strong style="text-decoration: none; color: #000000; font-weight: 700;">Get job-ready in record time.</strong> Complete the Full-Stack + AI program in 12 weeks instead of 20, with the same award-winning training and faster results.</li>
+         <br/>
+         <li>✓ <strong style="text-decoration: none; color: #000000; font-weight: 700;">More intensity, same support.</strong> Get the full 4Geeks experience: live classes, unlimited 1:1 mentorship, and career coaching in a condensed 5-day-a-week format.</li>
+         <br/>
+         <li>✓ <strong style="text-decoration: none; color: #000000; font-weight: 700;">Maximize your focus.</strong> Start your day coding when your mind is sharpest and make faster progress through daily learning.</li>
+         <br/>
+         <li>✓ <strong style="text-decoration: none; color: #000000; font-weight: 700;">Afternoons are yours.</strong> Keep your flexibility to work, rest, or enjoy your free time while staying on track toward your goals.</li>
+         <br/>
+         <li>✓ <strong style="text-decoration: none; color: #000000; font-weight: 700;">No extra cost.</strong> The accelerated track comes at the same price as the regular program, you just reach your goals sooner.</li>
        </ul>
       font_size: ["16px"]
 
