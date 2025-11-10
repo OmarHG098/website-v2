@@ -229,6 +229,7 @@ export const NavbarMobile = ({
               discount {
                 message
                 ends_in
+                deadline
                 button {
                   label
                   path
@@ -273,7 +274,7 @@ export const NavbarMobile = ({
         display="flex"
         position="static"
         top="0"
-        height="60px"
+        height="0px"
         margin="1px 0"
       >
         <Div alignItems="center">

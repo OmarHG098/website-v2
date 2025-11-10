@@ -1,11 +1,12 @@
 bar_content:
-  heading: "Conviértete en desarrollador en 16 semanas"
-  sub_heading: ""
-  button_text: "Lee más"
-  link_to: "/es/part-time"
+  heading: "Black Friday: 30% OFF en bootcamps tech"
+  sub_heading: "Asegura tu cupo antes de que termine la promo."
+  button_text: "Ver la oferta"
+  link_to: "#leadform_header"
   discount:
-    message: "¡Precios hasta a 40% de descuento!"
+    message: "Black Friday 30% OFF en bootcamps. La oferta termina el 2 de diciembre."
     ends_in: "Termina en"
+    deadline: "2025-12-02T00:00:00-05:00"
     button:
-      label: "Ver precios →"
-      path: /es/financiacion#prices_and_payment
+      label: "Asegurar mi descuento"
+      path: "#leadform_header"

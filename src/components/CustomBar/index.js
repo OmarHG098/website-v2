@@ -13,6 +13,8 @@ const CustomBar = ({
   display_md,
   display_xxs,
   position,
+  deadline,
+  zIndex,
 }) => {
   const [timer, setTimer] = useState({});
 
@@ -37,8 +39,20 @@ const CustomBar = ({
   };
 
   const calculateTimer = () => {
-    const initialReferenceDate = new Date("2024-04-01");
     const now = new Date();
+    if (deadline) {
+      const targetDate = new Date(deadline);
+      if (Number.isNaN(targetDate.getTime()) || targetDate <= now) {
+        return {
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0,
+        };
+      }
+      return dateDifference(targetDate, now);
+    }
+    const initialReferenceDate = new Date("2025-12-02");
     const referenceDate = addWeeks(
       initialReferenceDate,
       Math.ceil(differenceInWeeks(initialReferenceDate, now) / 2) * 2
@@ -64,7 +78,7 @@ const CustomBar = ({
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [deadline]);
 
   return (
     <Div
@@ -81,6 +95,7 @@ const CustomBar = ({
       justifyContent={showDiscount && "center"}
       gap={showDiscount && "10px"}
       position={position}
+      zIndex={zIndex}
     >
       {showDiscount ? (
         <>

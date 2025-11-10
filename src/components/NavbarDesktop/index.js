@@ -205,6 +205,7 @@ export const Navbar = ({
               discount {
                 message
                 ends_in
+                deadline
                 button {
                   label
                   path

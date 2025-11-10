@@ -14,7 +14,7 @@ const Nav = styled.nav`
   width: 100%;
   background: white;
   z-index: 100;
-  top: 0;
+  top: ${(props) => props.topOffset || "0"};
   align-items: center;
   justify-content: space-between;
   padding: 15px;
@@ -38,7 +38,14 @@ const Nav = styled.nav`
   }
 `;
 
-const LandingNavbar = ({ lang, onToggle, buttonUrl, logoUrl, buttonText }) => {
+const LandingNavbar = ({
+  lang,
+  onToggle,
+  buttonUrl,
+  logoUrl,
+  buttonText,
+  topOffset,
+}) => {
   /* In case of want change the Button text "Aplica" search the key 
        "apply_button_text" in /src/data/location/locationfile.yaml
     */
@@ -58,7 +65,7 @@ const LandingNavbar = ({ lang, onToggle, buttonUrl, logoUrl, buttonText }) => {
   `);
   return (
     <>
-      <Nav display="flex">
+      <Nav display="flex" topOffset={topOffset}>
         <Link to={logoUrl || "#top"} style={{ width: "130px" }}>
           <GatsbyImage
             loading="eager"
@@ -81,6 +88,10 @@ const LandingNavbar = ({ lang, onToggle, buttonUrl, logoUrl, buttonText }) => {
       </Nav>
     </>
   );
+};
+
+LandingNavbar.defaultProps = {
+  topOffset: "60px",
 };
 
 export default LandingNavbar;

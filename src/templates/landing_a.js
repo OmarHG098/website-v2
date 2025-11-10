@@ -11,11 +11,13 @@ import { processFormEntry } from "../actions";
 import { SessionContext } from "../session.js";
 import LandingNavbar from "../components/NavbarDesktop/landing";
 import LandingHeader from "../components/LandingHeader";
+import CustomBar from "../components/CustomBar";
 
 const Landing = (props) => {
   const { session } = React.useContext(SessionContext);
   const { data, pageContext, yml, filteredPrograms } = props;
   const [components, setComponents] = React.useState({});
+  const customBarContent = data.allCustomBarYaml?.edges?.[0]?.node;
 
   const applySchollarship =
     data.allLandingYaml.edges.length !== 0
@@ -102,9 +104,33 @@ const Landing = (props) => {
             Array.isArray(yml.meta_info.utm_location) &&
             l.breathecode_location_slug === yml.meta_info.utm_location[0]
         ));
+  const landingSlug = pageContext?.slug || yml.meta_info?.slug;
+  const isBlackFridayLanding = [
+    "black-friday-4geeks",
+    "black-friday-latam",
+  ].includes(landingSlug);
+  const showCustomBar =
+    isBlackFridayLanding && customBarContent?.bar_content?.discount;
+  const customBarHeight = "60px";
 
   return (
     <>
+      {showCustomBar && (
+        <>
+          <CustomBar
+            isContentBarActive
+            contentBar={{}}
+            discountContent={customBarContent}
+            showDiscount
+            display_md="flex"
+            display_xxs="flex"
+            position="fixed"
+            zIndex="150"
+            deadline={customBarContent.bar_content.discount.deadline}
+          />
+          <Div height={customBarHeight} />
+        </>
+      )}
       <LandingNavbar
         buttonText={
           yml.navbar
@@ -116,6 +142,7 @@ const Landing = (props) => {
         buttonUrl={yml.navbar?.buttonUrl}
         logoUrl={yml.navbar?.logoUrl}
         lang={pageContext.lang}
+        topOffset={showCustomBar ? customBarHeight : "0px"}
       />
       <FollowBar
         position={yml.follow_bar.position}
@@ -321,6 +348,23 @@ const Landing = (props) => {
 };
 export const query = graphql`
   query LandingAQuery($file_name: String!, $lang: String!) {
+    allCustomBarYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          bar_content {
+            discount {
+              message
+              ends_in
+              deadline
+              button {
+                label
+                path
+              }
+            }
+          }
+        }
+      }
+    }
     allLandingYaml(
       filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang } } }
     ) {
