@@ -1,7 +1,7 @@
 meta_info:
   slug: curso-inteligencia-artificial   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/curso-inteligencia-artificial
   title: "Curso de Inteligencia Artificial Aplicada"
-  description: "Explora a detalle la inteligencia artificial y cómo aplicarla en diferentes industrias, roles y en tu trabajo. Sin conocimientos previos requeridos."
+  description: "4Geeks Academy ofrece un curso de formación en IA con garantía de empleo. Sumérgete en la inteligencia artificial y abre puertas a las carreras tech del futuro."
   bc_slug: "applied-ai"
   template: "course-applied-ai"
   image: "/images/og-preview/applied-ai-bg-es.jpg"
@@ -25,7 +25,7 @@ header:
 button:
   syllabus_heading: "Descargar Detalles del Curso"
   syllabus_btn_label: "Descarga Instantánea"
-  syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, becas, financiación e información del curso."
+  syllabus_motivation: "En 2 minutos recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, becas, financiación e información del curso."
   apply_button_link: "/es/aplica"
 
 course_instructors:
@@ -38,26 +38,18 @@ course_instructors:
       sub_title: "AI builder"
       degree: "Prompt Engineer"
       image: "../../../static/images/instructors/charly.jpeg"
-      bio: | 
-        Contacto de 2º grado2º
-        📓#Tana creator 🧠Prompt Engineer 🐍⚛️ Fullstack project leader Django and Next 📽️ Code Speller on YouTube 
-        Desarrollo de aplicaciones en la nube, Desarrollo web, Diseño web y Diseño de experiencia de usuario (UX)"
+      bio: |
+        Contacto de 2º grado
+        📓 Creador de #Tana 🧠 Prompt Engineer 🐍⚛️ Líder de proyectos Fullstack en Django y Next 📽️ Code Speller en YouTube
+        Desarrollo de aplicaciones en la nube, desarrollo web, diseño web y diseño de experiencia de usuario (UX).
       linkedin: "https://www.linkedin.com/in/charlytoc/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
 
-    # - name: "Sayyed Nezhadi"
-    #   sub_title: "Doctorado en Inteligencia Artificial de la Universidad de Toronto"
-    #   degree: "Doctorado en Inteligencia Artificial"
-    #   image: "../../../static/images/instructors/sayyed.jpeg"
-    #   bio: "Más de 25 años de experiencia en la entrega de soluciones complejas habilitadas para IA y arquitecturas digitales para grandes empresas. PhD en Inteligencia Artificial de la Universidad de Toronto, y certificados en Big Data Analytics y Big Data de Hardvard y MIT respectivamente."
-    #   github: "https://github.com/snezhadi"
-    #   linkedin: "https://www.linkedin.com/in/sayyednezhadi"
-
 badges:
-  paragraph: "Prepárate para prosperar en la industria tecnológica actual impulsada por IA con aprendizaje hiperpersonalizado, mentoría ilimitada 1:1 y apoyo profesional de por vida. Reconocido por Course Report como uno de los mejores bootcamps de programación del mundo, elegido por Forbes como mejor bootcamp para estudiantes con presupuesto limitado (2024), y calificado con 4.9/5 en Switchup. Licenciado por el Departamento de Educación de Florida."
+  paragraph: "Prepárate para prosperar en la industria tecnológica actual impulsada por IA con aprendizaje hiperpersonalizado, mentoría ilimitada 1:1 y apoyo profesional de por vida. Reconocido por Course Report como uno de los mejores <a href='/es/coding-bootcamp'>bootcamps de programación</a> del mundo, elegido por Forbes como mejor bootcamp para estudiantes con presupuesto limitado (2024), y calificado con 4.9/5 en Switchup. Licenciado por el Departamento de Educación de Florida."
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"
-  actionMessage: "Avisadme de fechas disponibles"
+  actionMessage: "Avísame cuando haya fechas disponibles"
 
 # description:
 #   heading: "Sobre este curso"
@@ -120,7 +112,7 @@ details:
       value: "Hasta 14 personas"
     - label: "Horas totales"
       value: "24"
-  sub_heading: "Curso de 6 semanas diseñado para ayudarte a aprovechar el poder de la IA en el lugar de trabajo."
+  sub_heading: "En solo 6 semanas, aprende a aprovechar las principales herramientas de IA de hoy para optimizar tu flujo de trabajo, mejorar la calidad de tus resultados y mantener tu carrera un paso adelante."
   left_labels:
     description: "DESCRIPCIÓN:"
     projects: "PROYECTOS:"
@@ -227,7 +219,7 @@ alumni:
 
 faq:
   title: "Preguntas Frecuentes"
-  read_more: "Ver más preguntas"
+  read_more: "Contáctanos para más preguntas"
   link: "/faq"
 
 
@@ -295,10 +287,10 @@ two_columns_video:
   video: "E9RpwJhJi-k"
   heading:
     text: "Impulsa tu carrera con IA Aplicada"
-    font_size: ["40px", "38px", "38px", "36px", "34px"]
+    font_size: ["42px", "34px", "34px", "34px", "34px"]
     style: '{"font-weight": "bold"}'
   sub_heading:
-    text: "Escucha a nuestro CEO sobre cómo la IA Aplicada transformó su productividad y resultados. Tú también puedes dar el salto y dominar las habilidades de IA de vanguardia que protegerán tu carrera:"
+    text: "Escucha a nuestro CEO sobre cómo la IA aplicada transformó su productividad y resultados. Tú también puedes dar el salto y dominar las habilidades de IA de vanguardia que protegerán tu carrera:"
     font_size: ["20px", "18px", "16px", "16px", "14px"]
     style: '{"font-weight":"200" }'
   button:
