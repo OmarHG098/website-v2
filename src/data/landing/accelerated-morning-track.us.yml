@@ -32,7 +32,7 @@ header_data:
 
 features:
   marginTop: 0px
-  text: "Apply now—secure your spot!"
+  text: "Apply now — secure your spot in our new Accelerated Morning Track!"
   bullets:
     - "Master future-proof, AI-integrated skills in just 12 weeks."
     - "Unlimited mentorship and a community that's with you for life."
@@ -85,7 +85,7 @@ follow_bar:
 
 program_details:
   position: 5
-  heading: "Full-Stack Bootcamp"
+  heading: "Full-Stack with AI Bootcamp"
   sub_heading: " "
 
 components:
