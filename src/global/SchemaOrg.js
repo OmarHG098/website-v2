@@ -240,10 +240,13 @@ const SchemaOrg = ({
     // Fallback to global top-rated reviews if no page-specific matches
     if (validTestimonials.length === 0) {
       const globalTestimonials = testimonialsData
-        .filter((t) => !t.hidden && t.rating && t.content && t.content.trim().length > 0)
+        .filter(
+          (t) =>
+            !t.hidden && t.rating && t.content && t.content.trim().length > 0
+        )
         .sort((a, b) => (b.rating || 0) - (a.rating || 0))
         .slice(0, 10);
-      
+
       validTestimonials = globalTestimonials;
     }
 
@@ -342,10 +345,12 @@ const SchemaOrg = ({
       "https://4geeksacademy.com/us/job-guarantee",
     ],
     jobGuarantee: true,
-    ...(reviewsData ? {
-      review: reviewsData.reviews,
-      aggregateRating: reviewsData.aggregateRating,
-    } : {}),
+    ...(reviewsData
+      ? {
+          review: reviewsData.reviews,
+          aggregateRating: reviewsData.aggregateRating,
+        }
+      : {}),
   };
 
   const page = [...baseSchema, educationalOrganizationSchema];

@@ -154,7 +154,10 @@ exports.createPages = async (params) =>
   (await createBlog(params)) &&
   (await createPagesfromYml(params)) &&
   //also for the custom post types
-  (await createEntityPagesfromYml("Course", params, ["related_clusters", "testimonial_categories"])) &&
+  (await createEntityPagesfromYml("Course", params, [
+    "related_clusters",
+    "testimonial_categories",
+  ])) &&
   (await createEntityPagesfromYml("Location", params, ["related_clusters"])) &&
   (await createEntityPagesfromYml("Job", params)) &&
   (await createEntityPagesfromYml(
@@ -430,7 +433,8 @@ const createEntityPagesfromYml = async (
       });
     } else if (entity === "Course") {
       _extraContext.related_clusters = node.meta_info.related_clusters;
-      _extraContext.testimonial_categories = node.meta_info.testimonial_categories || [];
+      _extraContext.testimonial_categories =
+        node.meta_info.testimonial_categories || [];
       if (node.meta_info.visibility === "hidden") return;
     }
 
