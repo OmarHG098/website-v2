@@ -7,6 +7,7 @@ meta_info:
   visibility: "visible"
   keywords: "Full Sack Developer Full-Time"
   show_in_apply: true
+  testimonial_categories: ['full-stack', 'mentors-and-teachers', 'career-support']
   redirects:
     [
       "/course/full-time",

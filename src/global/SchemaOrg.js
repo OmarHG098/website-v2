@@ -164,17 +164,16 @@ const SchemaOrg = ({
       );
     }
 
-    // Apply question-level filters to each topic
-    filteredTopics.forEach((topic) => {
-      if (Array.isArray(topic.questions)) {
-        topic.questions = topic.questions
-          .filter((question) => filterByLocation(question, locationSlug))
-          .filter((question) => filterByTemplate(question, template))
-          .filter((question) => filterByPriority(question, minPriority));
-      } else {
-        topic.questions = [];
-      }
-    });
+    // Apply question-level filters to each topic (with defensive cloning to avoid mutation)
+    filteredTopics = filteredTopics.map((topic) => ({
+      ...topic,
+      questions: Array.isArray(topic.questions)
+        ? topic.questions
+            .filter((question) => filterByLocation(question, locationSlug))
+            .filter((question) => filterByTemplate(question, template))
+            .filter((question) => filterByPriority(question, minPriority))
+        : [],
+    }));
 
     // Flatten the filtered questions for Schema.org FAQPage structure
     return filteredTopics.flatMap((topic) => topic.questions || []);
@@ -237,6 +236,16 @@ const SchemaOrg = ({
 
     // Limit to top 10 after filtering and prioritization
     validTestimonials = validTestimonials.slice(0, 10);
+
+    // Fallback to global top-rated reviews if no page-specific matches
+    if (validTestimonials.length === 0) {
+      const globalTestimonials = testimonialsData
+        .filter((t) => !t.hidden && t.rating && t.content && t.content.trim().length > 0)
+        .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+        .slice(0, 10);
+      
+      validTestimonials = globalTestimonials;
+    }
 
     if (validTestimonials.length === 0) return null;
 
@@ -333,10 +342,10 @@ const SchemaOrg = ({
       "https://4geeksacademy.com/us/job-guarantee",
     ],
     jobGuarantee: true,
-    ...(reviewsData && {
+    ...(reviewsData ? {
       review: reviewsData.reviews,
       aggregateRating: reviewsData.aggregateRating,
-    }),
+    } : {}),
   };
 
   const page = [...baseSchema, educationalOrganizationSchema];

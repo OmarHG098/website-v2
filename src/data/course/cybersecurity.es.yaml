@@ -12,6 +12,7 @@ meta_info:
   related_clusters: ["trends-and-tech"]
   duration: "P16W"  # 16 weeks duration in ISO 8601 format
   job_guarantee: true
+  testimonial_categories: ['cybersecurity', 'mentors-and-teachers', 'content-and-syllabus']
 
 apply_form:
   label: Profesional junior en Ciberseguridad

@@ -8,6 +8,7 @@ meta_info:
   visibility: "visible"
   keywords: ""
   show_in_apply: false
+  testimonial_categories: ['full-stack', 'mentors-and-teachers', 'career-support']
   related_clusters: ["software-engineering"]
   duration: "P18W"  # 18 weeks duration in ISO 8601 format
   redirects: [
