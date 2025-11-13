@@ -18,7 +18,7 @@ apply_form:
 seo_title: "Curso de Inteligencia Artificial Aplicada"
 header:
   title: "Mantente relevante en tu carrera. Lidera con IA."
-  paragraph: "Construye habilidades prácticas de IA que todo profesional necesita—aprende a aplicar IA en el trabajo en solo 6 semanas."
+  paragraph: "Adquiere las habilidades de IA para mantenerte competitivo y avanzar en tu carrera en solo 6 semanas. Aprende a aplicar IA en el trabajo para mayor eficiencia, creatividad e impacto."
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "IA Aplicada"
 
@@ -271,10 +271,12 @@ two_columns_second:
     items:
     - heading: "Guía de Expertos:"
       text: "Aprende de instructores con experiencia real en IA."
-    - heading: "Mentoría 1:1 Ilimitada:"
-      text: "Obtén apoyo en cualquier momento mientras construyes y aprendes a aplicar tus habilidades."
-    - heading: "Consejos de Carrera Personalizados:"
-      text: "Recibe ayuda enfocada en aplicar IA en tu rol y potenciar el impacto de tu carrera."
+    - heading: "Ratio 7:1 Estudiante-Profesor:"
+      text: "Progresa más rápido con atención personalizada y retroalimentación."
+    - heading: "Mentoría 1:1:"
+      text: "Recibe apoyo personalizado para construir y aplicar tus habilidades de manera efectiva."
+    - heading: "Coaching de Carrera:"
+      text: "Explora nuestros recursos de carrera o reserva sesiones opcionales 1:1 para fortalecer tu crecimiento profesional."
 
 ## TWO COLUMNS VIDEO
 two_columns_video:
