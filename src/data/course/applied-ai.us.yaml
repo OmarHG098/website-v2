@@ -18,7 +18,7 @@ apply_form:
 seo_title: "Course in Applied Artificial Intelligence (AI)"
 header:
   title: "Stay relevant in your career. Lead with AI."
-  paragraph: "Build practical AI skills every professional needs. Learn how to apply AI at work in just 6 weeks."
+  paragraph: "Gain the AI skills to stay competitive and advance your career in just 6 weeks. Learn to apply AI at work for greater efficiency, creativity, and impact."
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "Applied AI"
 
@@ -57,7 +57,7 @@ overlaped:
   paragraph: |
     •Workers with AI skills earn an average 56% wage premium globally.
     <br>•AI use at work has nearly doubled in two years, rising from 21% to 40% of U.S. employees.
-    <br>•Join the professionals who aren't just keeping up, but taking the lead with AI.
+    <br>•Join the professionals who aren’t just keeping up, but taking the lead with AI.
   image:
     src: "/images/landing/tres-personas-reloaded.webp"
 
@@ -66,11 +66,9 @@ details:
   about:
     title: "About this program"
     sub_title: |-
-      This 6-week Applied AI course is designed for professionals who want to leverage AI in their roles—not just explore it. 
-      You’ll work hands-on with generative models such as GPT-4o (ChatGPT), Gemini 2.5 (Google), Claude 4 (Anthropic), and modern image and video tools, applying them directly to real workflows. 
-      By the end of the course, you’ll have amplified your capabilities with AI and be ready to confidently apply AI tools across your work.
-
-
+      Our AI for Professionals program is designed for anyone who wants to harness the full power of AI in their work, not just explore it. 
+      You’ll get hands-on experience with generative models like GPT-4o (ChatGPT), Gemini 2.5 (Google), and Claude 4 (Anthropic), as well as modern image and video tools—applying them directly to real workflows.
+      By the end of the course, you’ll have expanded your capabilities with AI and be ready to confidently integrate it across your daily work.
     list:
       - label: "Duration"
         content: "6 Weeks"
@@ -264,10 +262,12 @@ two_columns_second:
     items:
     - heading: "Expert Guidance:"
       text: "Learn from instructors with real-world AI experience."
-    - heading: "Unlimited 1:1 Mentoring:"
-      text: "Get support anytime while you build and learn to apply your skills."
-    - heading: "Tailored Career Advice:"
-      text: "Receive help focused on applying AI in your role and boosting your career impact."
+    - heading: "7:1 Student-Teacher Ratio:"
+      text: "Progress faster with personalized attention and feedback."
+    - heading: "1:1 mentorship:"
+      text: "Receive tailored support to build and apply your skills effectively."
+    - heading: "Career coaching:"
+      text: "Explore our career resources or book optional 1:1 sessions to strengthen your professional growth."
 
 ## TWO COLUMNS VIDEO
 two_columns_video:
