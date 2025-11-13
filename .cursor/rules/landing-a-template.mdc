@@ -103,6 +103,13 @@ meta_info:
 
 ```
 
+#### utm_location Reference (Required Slug List)
+Use the slugs below when populating `utm_location`. Maintain consistency with the files in `src/data/location/` and update this list whenever a new location is added.
+
+- **USA & Canada:** `atlanta-usa`, `austin-usa`, `chicago-usa`, `dallas-usa`, `downtown-miami`, `houston-usa`, `losangeles-usa`, `newyork-usa`, `online`, `online-spanish-usa`, `orlando`, `tampa-usa`, `toronto-canada`
+- **LATAM:** `bogota-colombia`, `buenosaires-argentina`, `caracas-venezuela`, `costa-rica`, `lapaz-bolivia`, `lima-peru`, `mexicocity-mexico`, `montevideo-uruguay`, `panamacity-panama`, `quito-ecuador`, `santiago-chile`
+- **Europe:** `barcelona-spain`, `berlin-germany`, `dublin-ireland`, `europe`, `hamburg-germany`, `lisbon-portugal`, `madrid-spain`, `malaga-spain`, `milan-italy`, `munich-germany`, `rome-italy`, `valencia-spain`
+
 ### navbar (Required - Fixed Keys, Modifiable Values)
 ```yaml
 navbar:

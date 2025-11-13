@@ -1,0 +1,291 @@
+meta_info:
+  slug: black-friday-latam
+
+  # Esto se mostrará en redes sociales cuando se comparta
+  title: "Black Friday: 30% OFF Bootcamps Tech | 4Geeks Academy"
+  description: "Aprovecha 30% OFF este Black Friday. Aprende Full-Stack, Data Science, ML o Ciberseguridad. Termina el 2 de dic. Lanza tu carrera tech con mentoría ilimitada."
+  visibility: "hidden"
+  image: "/images/bg/the-academy-bg.jpg"
+  keywords: ""
+
+  template: "landing_a"
+  redirects:
+    []
+
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
+  utm_location: ["bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador", "santiago-chile"]
+  automation: soft
+  tag: request_more_info
+
+navbar:
+  logoUrl: "#"
+  buttonText: "Asegurar mi descuento"
+  buttonUrl: "#leadform_bottom"
+
+form:
+  fields: ["full_name", "phone", "email"]
+  heading: "Recibe más información"
+  motivation: "Completa el formulario para recibir en tu correo todos los detalles de 4Geeks Academy y de cada uno de nuestros cursos."
+  button_label: "Quiero más info"
+  redirect: null
+
+apply_schollarship:
+  imageSide: "left"
+  image: "../../../static/images/landing/hombre-joven-con-laptop-senalando.webp"
+
+header_data:
+  background: "#ffffff"
+  tagline: 30% OFF este<br> Black Friday.<br> Aprende hoy. Gana de por vida.
+  sub_heading: " "
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  badge: "../../../static/images/badges/Course-Report-Badge-2025.png"
+  image_filter: brightness(0.9)
+
+features:
+  marginTop: 0px
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
+  bullets:
+    - Pasa de cero a profesional tech en Full-Stack, Data Science, Machine Learning o Ciberseguridad.
+    - Obtén mentoría ilimitada y apoyo profesional de por vida.
+    - Programas 100% prácticos y flexibles para adaptarse a tu agenda.
+    - La oferta termina el 2 de diciembre. ¡No la dejes pasar!
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps de 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "Elegidos por Forbes como uno de los mejores bootcamps online."
+  - name: "Mejor para hispanohablantes 2024 según Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Reconocidos por Fortune como uno de los mejores bootcamps."
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Newsweek nos incluye en su listado de top bootcamps."
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Course Report nos destaca como uno de los mejores bootcamps de 2024."
+  - name: "Licencia del Departamento de Educación de Florida"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licenciados por el Departamento de Educación de Florida."
+  - name: "Certificación ARP"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "Contamos con certificación ARP."
+
+follow_bar:
+  position: "top"
+  content:
+    text: "30% OFF Black Friday: ¡La oferta termina el 2 de dic! Asegura tu descuento"
+    text_mobile: "30% OFF Black Friday: ¡Hasta el 2 de dic!"
+    font_size: ["25px", "25px", "20px", "20px", "18px"]
+  button:
+    text: "Asegurar mi descuento"
+    path: "#leadform_header"
+  phone:
+    text: "Llámanos "
+
+rating_reviews:
+  background: "#FBFBFB"
+  position: 4
+  heading: "Constantemente reconocidos por SwitchUp, Forbes y más"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
+
+geeks_vs_others:
+  position: 4
+  heading: "Compara nuestro bootcamp con la competencia"
+  total_rows: 5
+
+badges:
+  position: 5
+  heading: "Múltiples premios y reconocimientos respaldan nuestra excelencia"
+
+who_is_hiring:
+  position: 9
+  limit: 4
+  heading: "¿Quién contrata a nuestros graduados?"
+  sub_heading: "Más de 84% de nuestros egresados consigue trabajo en menos de 6 meses. Únete a una red de 550+ empresas aliadas y construye una carrera tech que perdura."
+
+why_4geeks:
+  position: 6
+  heading: "Historias reales: cómo 4Geeks impulsó carreras en tecnología"
+  sub_heading: ""
+
+components:
+  - name: how-it-works-programs
+    position: 1
+    background: "#fbfcfc"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "Encuentra el camino ideal para ti"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    icons:
+      - icon: "fullstack"
+        title: "Full Stack Development con IA"
+        content: "Vuélvete un desarrollador Full Stack fluido en IA usando herramientas como Cursor, Vercel v0 y más. Domina las habilidades más buscadas y consigue trabajo como developer."
+      - icon: "machine"
+        title: "Data Science y Machine Learning"
+        content: "Aprende a analizar datos complejos y usa machine learning para automatizar decisiones y encontrar insights accionables."
+      - icon: "cibersecurity"
+        title: "Ciberseguridad"
+        content: "Especialízate en ciberseguridad para identificar, gestionar y mitigar vulnerabilidades de sistemas cumpliendo con normas como ISO."
+    button:
+      text: "Quiero más información"
+      color: "white"
+      background: "black"
+      hover_color: "white"
+      path: "#leadform_header"
+
+  - name: why-choose-4geeks
+    position: 2
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "#FFFFFF"
+    justify: "center"
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center", "margin": "10px" }'
+      src: "/images/landing/blonde-girl-laptop.png"
+    heading:
+      text: |-
+        ¿Qué hace diferente a 4Geeks?
+        Habilidades enfocadas en IA, mentoría ilimitada y carrera de por vida
+      font_size: ["38px", "34px", "34px", "34px", "34px"]
+      style: '{ "font-weight": "600", "text-align": "center", "color": "#000", "padding": "10px" }'
+    sub_heading:
+      text: "Todo lo que necesitas para lanzar y hacer crecer tu carrera en tecnología"
+      font_size: ["26px", "26px", "24px", "24px", "22px"]
+      style: '{ "font-weight": "600", "text-align": "justify", "color": "#000", "padding": "10px"}'
+    bullets:
+      item_style: '{ "padding": "0 0 0 10px", "font-weight": "100" }'
+      items:
+        - heading: "Anticípate con habilidades tech de nueva generación."
+          text: "Domina herramientas relevantes impulsadas por IA con el apoyo de un currículo vanguardista."
+          icon: "check"
+        - heading: "Accede a mentoría y acompañamiento profesional ilimitados."
+          text: "No aprendes solo. Tienes sesiones 1:1 con mentores expertos siempre que lo necesites, para toda la vida."
+          icon: "check"
+        - heading: "Disfruta de un aprendizaje hiperpersonalizado en cada etapa."
+          text: "Avanza más rápido con feedback impulsado por IA y una relación estudiante-profesor sin igual."
+          icon: "check"
+        - heading: "Únete a una comunidad tech activa."
+          text: "Sigue conectado con nuestra comunidad en Slack: estudiantes, mentores y alumni listos para ayudarte a crecer."
+          icon: "check"
+    button:
+      text: "Quiero saber más"
+      color: "white"
+      background: "black"
+      hover_color: "white"
+      path: "#leadform_header"
+
+  - name: two_columns_rigo
+    position: 4
+    layout: two_column_right
+    proportions: [7, 5]
+    justify: "center"
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center", "border" : "10px solid black", "border-radius": "4px"}'
+      src: "/images/landing/ai-mentor.jpg"
+      shadow: true
+    video: "6m1Jyya7eCc"
+    heading:
+      text: "Bienvenido al aprendizaje hiperpersonalizado"
+      font_size: ["33px", "33px", "33px", "33px", "33px"]
+      style: '{ "lineHeight": "30px" }'
+      heading_image:
+        src: "/images/rigobot-logo.png"
+    sub_heading:
+      text: "Progresa como nunca antes"
+      font_size: ["16px","16px","16px","16px","16px"]
+    content:
+      style: '{ "font-size":"16px", "margin":"15px 0" }'
+      text: |
+        <p>Somos diferentes, y la educación siempre ha sido igual para todos. En 4Geeks diseñamos una forma mejor de aprender: <strong style="text-decoration: none; color: #000000; font-weight: 700;">una que se adapta a ti.</strong></p>
+        <br />
+        <ul>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Nuestra IA propia</strong>, Rigobot, sigue tu actividad, detecta fortalezas y retos, y entrega feedback en tiempo real para acelerar tu aprendizaje.</li>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Sesiones ilimitadas 1:1 con mentores expertos</strong> te brindan apoyo humano cuando lo necesites, para que nunca te quedes bloqueado ni pierdas ritmo.</li>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Coaches de carrera trabajan contigo</strong> para darte confianza y estrategias, ayudándote a destacar en tu CV, entrevistas y plataformas con filtros IA como los ATS y LinkedIn.</li>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Relación 1:7 entre profesores y estudiantes en clases en vivo</strong> garantiza atención real: tus preguntas reciben respuesta y mantienes el ritmo.</li>
+        </ul>
+        <br />
+        <p>Esa es la fuerza del aprendizaje hiperpersonalizado: avanzas más rápido, aprendes con inteligencia y construyes una confianza real que dura más allá de la graduación.</p>
+      bullets:
+      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+      items:
+        - heading: "Conoce a Rigobot, nuestro asistente de código con IA:"
+          text: |
+            ✓ Tutoría instantánea mientras programas.
+            <br />
+            ✓ Evaluaciones de habilidades para seguir tu progreso.
+            <br />
+            ✓ Ayuda experta para corregir bugs.
+            <br /><br />
+             ¡Se complementa perfecto con nuestra mentoría humana!
+          icon: "check"
+          icon_color: '#25BF6C'
+        - heading: "Learnpack, nuestro software interactivo de aprendizaje, te ofrece:"
+          text: |
+             ✓ Cientos de ejercicios interactivos para dominar y retener habilidades.
+             <br />
+             ✓ Tests automatizados para medir tus avances.
+             <br />
+             ✓ Práctica estructurada.
+             <br />
+
+  - name: how-it-works
+    position: 6
+    background: "#0084FF"
+    layout: iconogram
+    swipable: true
+    heading:
+      text: "¿Nuestros bootcamps logran resultados reales?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "color": "white" }'
+    sub_heading:
+      text: "Sí, y tenemos los números para demostrarlo."
+      font_size: ["20px", "20px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%", "color": "white"}'
+    icons:
+      - icon: "graduation-2"
+        color: "#0084FF"
+        title: "Tasa de empleabilidad"
+        content: "84% de nuestros graduados es contratado"
+      - icon: "briefcase-2"
+        color: "#FF0000"
+        title: "Tiempo promedio para conseguir empleo"
+        content: "3-6 meses después de graduarte"
+      - icon: "stairswflag"
+        color: "#BE8BFF"
+        title: "Incremento salarial"
+        content: "55% de aumento tras graduarte"
+
+
