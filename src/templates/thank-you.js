@@ -170,9 +170,9 @@ const ThankYou = (props) => {
       <Div
         flexDirection="column"
         background={Colors.lightYellow}
-        padding="68px 0"
+        padding="40px 0"
+        padding_tablet="80px 0 40px 0"
         height="auto"
-        margin={isCustomBarActive(session) ? "140px 0 0 0" : "80px 0 0 0"}
       >
         <H1
           type="h1"
@@ -180,6 +180,7 @@ const ThankYou = (props) => {
           fontSize="13px"
           lineHeight="16px"
           fontWeight="700"
+          padding="20px 0"
           letterSpacing="0.05em"
           color={Colors.darkGray2}
         >
