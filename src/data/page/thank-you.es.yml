@@ -1,17 +1,17 @@
 meta_info:
   slug: gracias
   title: "Muchas Gracias - 4Geeks Academy"
-  description: "Gracias, hemos recibido su solicitud. Nuestro Geeky Advisor se pondrá en contacto contigo en breve. ¡Espera Atento!"
+  description: "Gracias, hemos recibido tu solicitud. Nuestro Geeky Advisor se pondrá en contacto contigo en breve. ¡Espera atento!"
   image: ""
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: "thank you page, coding bootcamp"
-  redirects: ["/gracias", "/gracias/apply"]
+  redirects: ["/gracias", "/gracias/apply", "/gracias/more-info"]
 banner:
   tagline: "Gracias!"
   sub_heading: ""
 content:
   title: "🎉 ¡Felicidades! Acabas de dar el primer paso hacia tu carrera tech!"
-  message: "Un email de confirmación debería llegar a tu bandeja de entrada pronto, y nuestro Equipo de Admisiones ya está revisando tu información. \n¡Uno de nuestros Geeky Advisors se pondrá en contacto contigo muy pronto! Mientras tanto, aquí tienes algunas formas de comenzar tu viaje ahora mismo:"
+  message: "Un email de confirmación está en camino, y nuestro Equipo de Admisiones ya está revisando tu solicitud. \nPara mantener tu impulso, el mejor siguiente paso es agendar una llamada con un Asesor de Admisiones. \nEstarán encantados de responder tus preguntas, ofrecerte orientación personalizada y ayudarte a elegir el camino que mejor se adapte a tus objetivos."
 
     
   articles_title: " "
@@ -91,9 +91,9 @@ components:
       src: "/images/programs-heading.webp"
       shadow: false
     heading:
-      text: "🚀 Conoce Nuestra Garantía de Empleo"
+      text: "🚀 Conoce Nuestra Garantía de Empleo. *No aplica para todas las ubicaciones"
     content:
-      text: 'Ve cómo esta opción adicional te da confianza extra mientras construyes tu carrera tech. *No aplica para todos los mercados, países o estados donde opera 4Geeks. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guaranteee-es.pdf" target="_blank" rel="noopener noreferrer">Condiciones aplican</a>.'
+      text: "Ve cómo esta opción adicional te da confianza extra mientras construyes tu carrera tech. <a href='https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guaranteee-es.pdf' target='_blank' rel='noopener noreferrer'>Condiciones aplican</a>"
     button:
       text: "👉 Aprende Más"
       path: "https://4geeksacademy.com/es/job-guarantee"
