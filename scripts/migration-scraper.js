@@ -2,35 +2,35 @@
 
 /**
  * Migration URL Scraper
- * 
+ *
  * Extracts all pages from 4geeksacademy.com site including:
  * - YAML-based pages (pages, courses, locations, landings, jobs, downloadables, clusters)
  * - Blog posts from Breathecode API
  * - Google indexed pages from sitemap.xml
- * 
+ *
  * Generates:
  * - migration-tracker.md (human-readable checklist)
  * - migration-data.json (machine-readable data)
  */
 
-require('dotenv').config();
-const fs = require('fs').promises;
-const path = require('path');
-const yaml = require('js-yaml');
-const axios = require('axios');
-const glob = require('glob');
+require("dotenv").config();
+const fs = require("fs").promises;
+const path = require("path");
+const yaml = require("js-yaml");
+const axios = require("axios");
+const glob = require("glob");
 
 // Import Breathecode API utilities
-const { getAllAssets } = require('../src/utils/api.js');
+const { getAllAssets } = require("../src/utils/api.js");
 
 // ==============================================
 // CONFIGURATION
 // ==============================================
 const CONFIG = {
-  oldDomain: 'https://4geeksacademy.com',
+  oldDomain: "https://4geeksacademy.com",
   outputDir: process.cwd(),
-  markdownFile: 'migration-tracker.md',
-  jsonFile: 'migration-data.json',
+  markdownFile: "migration-tracker.md",
+  jsonFile: "migration-data.json",
 };
 
 // ==============================================
@@ -40,9 +40,16 @@ const CONFIG = {
 /**
  * Log with timestamp
  */
-function log(message, type = 'info') {
-  const timestamp = new Date().toISOString().split('T')[1].split('.')[0];
-  const prefix = type === 'error' ? '❌' : type === 'warn' ? '⚠️' : type === 'success' ? '✅' : 'ℹ️';
+function log(message, type = "info") {
+  const timestamp = new Date().toISOString().split("T")[1].split(".")[0];
+  const prefix =
+    type === "error"
+      ? "❌"
+      : type === "warn"
+      ? "⚠️"
+      : type === "success"
+      ? "✅"
+      : "ℹ️";
   console.log(`[${timestamp}] ${prefix} ${message}`);
 }
 
@@ -52,9 +59,9 @@ function log(message, type = 'info') {
 function normalizeUrl(url) {
   try {
     const urlObj = new URL(url);
-    return urlObj.origin + urlObj.pathname.replace(/\/$/, '');
+    return urlObj.origin + urlObj.pathname.replace(/\/$/, "");
   } catch (e) {
-    return url.replace(/\/$/, '');
+    return url.replace(/\/$/, "");
   }
 }
 
@@ -63,10 +70,10 @@ function normalizeUrl(url) {
  */
 async function parseYamlFile(filePath) {
   try {
-    const content = await fs.readFile(filePath, 'utf8');
+    const content = await fs.readFile(filePath, "utf8");
     return yaml.load(content);
   } catch (error) {
-    log(`Error parsing ${filePath}: ${error.message}`, 'warn');
+    log(`Error parsing ${filePath}: ${error.message}`, "warn");
     return null;
   }
 }
@@ -75,9 +82,11 @@ async function parseYamlFile(filePath) {
  * Get language from filename
  */
 function getLangFromFile(filename) {
-  if (filename.endsWith('.us.yml') || filename.endsWith('.us.yaml')) return 'us';
-  if (filename.endsWith('.es.yml') || filename.endsWith('.es.yaml')) return 'es';
-  return 'unknown';
+  if (filename.endsWith(".us.yml") || filename.endsWith(".us.yaml"))
+    return "us";
+  if (filename.endsWith(".es.yml") || filename.endsWith(".es.yaml"))
+    return "es";
+  return "unknown";
 }
 
 /**
@@ -85,31 +94,31 @@ function getLangFromFile(filename) {
  */
 function getSlugFromFile(filename) {
   const base = path.basename(filename);
-  return base.replace(/\.(us|es)\.(yml|yaml)$/, '');
+  return base.replace(/\.(us|es)\.(yml|yaml)$/, "");
 }
 
 /**
  * Construct URL based on type
  */
 function constructUrl(type, lang, slug) {
-  const langPrefix = lang === 'us' ? 'us' : 'es';
-  
+  const langPrefix = lang === "us" ? "us" : "es";
+
   switch (type) {
-    case 'page':
+    case "page":
       return `${CONFIG.oldDomain}/${langPrefix}/${slug}`;
-    case 'course':
+    case "course":
       return `${CONFIG.oldDomain}/${langPrefix}/coding-bootcamps/${slug}`;
-    case 'location':
+    case "location":
       return `${CONFIG.oldDomain}/${langPrefix}/coding-campus/${slug}`;
-    case 'landing':
+    case "landing":
       return `${CONFIG.oldDomain}/${langPrefix}/landing/${slug}`;
-    case 'job':
+    case "job":
       return `${CONFIG.oldDomain}/${langPrefix}/job/${slug}`;
-    case 'downloadable':
+    case "downloadable":
       return `${CONFIG.oldDomain}/${langPrefix}/downloadable/${slug}`;
-    case 'cluster':
+    case "cluster":
       return `${CONFIG.oldDomain}/${langPrefix}/blog/${slug}`;
-    case 'blog':
+    case "blog":
       return `${CONFIG.oldDomain}/${langPrefix}/blog/${slug}`;
     default:
       return `${CONFIG.oldDomain}/${langPrefix}/${slug}`;
@@ -127,49 +136,50 @@ async function scanYamlType(pattern, type) {
   log(`Scanning ${type}...`);
   const items = [];
   const files = glob.sync(pattern, { cwd: process.cwd() });
-  
+
   log(`Found ${files.length} ${type} files`);
-  
+
   for (const file of files) {
     const data = await parseYamlFile(file);
     if (!data) continue;
-    
+
     const lang = getLangFromFile(file);
     const slug = data.meta_info?.slug || getSlugFromFile(file);
     const currentUrl = constructUrl(type, lang, slug);
-    
+
     items.push({
       type,
-      file: file.replace(process.cwd() + '/', ''),
+      file: file.replace(process.cwd() + "/", ""),
       slug,
       lang,
       currentUrl,
-      newUrl: '', // To be filled manually
-      visibility: data.meta_info?.visibility || 'visible',
+      newUrl: "", // To be filled manually
+      visibility: data.meta_info?.visibility || "visible",
       redirects: data.meta_info?.redirects || [],
       seo: {
-        title: data.meta_info?.title || data.seo_title || '',
-        description: data.meta_info?.description || '',
-        keywords: data.meta_info?.keywords || '',
-        image: data.meta_info?.image || ''
+        title: data.meta_info?.title || data.seo_title || "",
+        description: data.meta_info?.description || "",
+        keywords: data.meta_info?.keywords || "",
+        image: data.meta_info?.image || "",
       },
       metadata: {
-        template: data.meta_info?.template || data.fields?.defaultTemplate || '',
-        duration: data.meta_info?.duration || '',
+        template:
+          data.meta_info?.template || data.fields?.defaultTemplate || "",
+        duration: data.meta_info?.duration || "",
         job_guarantee: data.meta_info?.job_guarantee || false,
       },
       status: {
-        copy: 'not_started',
-        implementation: 'not_started',
-        schema: 'not_started',
-        pagespeed: 'not_started'
+        copy: "not_started",
+        implementation: "not_started",
+        schema: "not_started",
+        pagespeed: "not_started",
       },
       inSitemap: false, // Will be updated later
-      priority: data.meta_info?.visibility === 'visible' ? 'high' : 'medium',
-      notes: []
+      priority: data.meta_info?.visibility === "visible" ? "high" : "medium",
+      notes: [],
     });
   }
-  
+
   return items;
 }
 
@@ -177,16 +187,31 @@ async function scanYamlType(pattern, type) {
  * Scan all YAML-based content
  */
 async function scanAllYamlContent() {
-  log('Starting YAML content scan...', 'info');
-  
-  const pages = await scanYamlType('src/data/page/**/*.{yml,yaml}', 'page');
-  const courses = await scanYamlType('src/data/course/**/*.{yml,yaml}', 'course');
-  const locations = await scanYamlType('src/data/location/**/*.{yml,yaml}', 'location');
-  const landings = await scanYamlType('src/data/landing/**/*.{yml,yaml}', 'landing');
-  const jobs = await scanYamlType('src/data/job/**/*.{yml,yaml}', 'job');
-  const downloadables = await scanYamlType('src/data/downloadable/**/*.{yml,yaml}', 'downloadable');
-  const clusters = await scanYamlType('src/data/cluster/**/*.{yml,yaml}', 'cluster');
-  
+  log("Starting YAML content scan...", "info");
+
+  const pages = await scanYamlType("src/data/page/**/*.{yml,yaml}", "page");
+  const courses = await scanYamlType(
+    "src/data/course/**/*.{yml,yaml}",
+    "course"
+  );
+  const locations = await scanYamlType(
+    "src/data/location/**/*.{yml,yaml}",
+    "location"
+  );
+  const landings = await scanYamlType(
+    "src/data/landing/**/*.{yml,yaml}",
+    "landing"
+  );
+  const jobs = await scanYamlType("src/data/job/**/*.{yml,yaml}", "job");
+  const downloadables = await scanYamlType(
+    "src/data/downloadable/**/*.{yml,yaml}",
+    "downloadable"
+  );
+  const clusters = await scanYamlType(
+    "src/data/cluster/**/*.{yml,yaml}",
+    "cluster"
+  );
+
   const allItems = [
     ...pages,
     ...courses,
@@ -194,28 +219,28 @@ async function scanAllYamlContent() {
     ...landings,
     ...jobs,
     ...downloadables,
-    ...clusters
+    ...clusters,
   ];
-  
+
   // Set priority for courses with job guarantee
-  allItems.forEach(item => {
-    if (item.type === 'course' && item.metadata.job_guarantee) {
-      item.priority = 'critical';
-      item.notes.push('Has job guarantee');
+  allItems.forEach((item) => {
+    if (item.type === "course" && item.metadata.job_guarantee) {
+      item.priority = "critical";
+      item.notes.push("Has job guarantee");
     }
-    if (item.visibility === 'hidden') {
-      item.notes.push('Hidden from sitemap');
+    if (item.visibility === "hidden") {
+      item.notes.push("Hidden from sitemap");
     }
-    if (item.visibility === 'unlisted') {
-      item.notes.push('Unlisted');
+    if (item.visibility === "unlisted") {
+      item.notes.push("Unlisted");
     }
     if (item.redirects.length > 0) {
       item.notes.push(`${item.redirects.length} redirects`);
     }
   });
-  
-  log(`Total YAML pages scanned: ${allItems.length}`, 'success');
-  
+
+  log(`Total YAML pages scanned: ${allItems.length}`, "success");
+
   return allItems;
 }
 
@@ -227,56 +252,62 @@ async function scanAllYamlContent() {
  * Fetch blog posts from Breathecode API
  */
 async function fetchBlogPosts() {
-  log('Fetching blog posts from Breathecode API...');
-  
+  log("Fetching blog posts from Breathecode API...");
+
   try {
     const posts = await getAllAssets();
-    
+
     if (!posts || posts.length === 0) {
-      log('No blog posts returned from API', 'warn');
+      log("No blog posts returned from API", "warn");
       return [];
     }
-    
+
     log(`Found ${posts.length} blog posts from API`);
-    
-    const blogItems = posts.map(post => ({
-      type: 'blog',
-      file: 'External API (Breathecode)',
+
+    const blogItems = posts.map((post) => ({
+      type: "blog",
+      file: "External API (Breathecode)",
       slug: post.slug,
-      lang: post.lang === 'en' ? 'us' : post.lang,
-      currentUrl: constructUrl('blog', post.lang === 'en' ? 'us' : post.lang, post.slug),
-      newUrl: '',
-      visibility: post.visibility || 'visible',
+      lang: post.lang === "en" ? "us" : post.lang,
+      currentUrl: constructUrl(
+        "blog",
+        post.lang === "en" ? "us" : post.lang,
+        post.slug
+      ),
+      newUrl: "",
+      visibility: post.visibility || "visible",
       redirects: [],
       seo: {
-        title: post.title || '',
-        description: post.description || '',
-        keywords: '',
-        image: post.preview || ''
+        title: post.title || "",
+        description: post.description || "",
+        keywords: "",
+        image: post.preview || "",
       },
       metadata: {
-        author: post.authors_username || '',
-        cluster: Array.isArray(post.clusters) && post.clusters.length > 0 ? post.clusters[0] : '',
-        updated_at: post.updated_at || '',
-        status: post.status || ''
+        author: post.authors_username || "",
+        cluster:
+          Array.isArray(post.clusters) && post.clusters.length > 0
+            ? post.clusters[0]
+            : "",
+        updated_at: post.updated_at || "",
+        status: post.status || "",
       },
       status: {
-        copy: 'not_started',
-        implementation: 'not_started',
-        schema: 'not_started',
-        pagespeed: 'not_started'
+        copy: "not_started",
+        implementation: "not_started",
+        schema: "not_started",
+        pagespeed: "not_started",
       },
       inSitemap: false,
-      priority: 'high',
-      notes: ['From Breathecode API']
+      priority: "high",
+      notes: ["From Breathecode API"],
     }));
-    
-    log(`Processed ${blogItems.length} blog posts`, 'success');
+
+    log(`Processed ${blogItems.length} blog posts`, "success");
     return blogItems;
-    
   } catch (error) {
-    log(`Error fetching blog posts: ${error.message}`, 'error');
-    log('Continuing without blog posts...', 'warn');
+    log(`Error fetching blog posts: ${error.message}`, "error");
+    log("Continuing without blog posts...", "warn");
     return [];
   }
 }
@@ -293,11 +324,11 @@ function parseSitemapXml(xmlString) {
   // Simple regex-based XML parsing for <loc> tags
   const locRegex = /<loc>(.*?)<\/loc>/g;
   let match;
-  
+
   while ((match = locRegex.exec(xmlString)) !== null) {
     urls.push(match[1]);
   }
-  
+
   return urls;
 }
 
@@ -305,40 +336,39 @@ function parseSitemapXml(xmlString) {
  * Fetch sitemap URLs from sitemap.xml
  */
 async function fetchSitemapUrls() {
-  log('Fetching sitemap URLs...');
-  
+  log("Fetching sitemap URLs...");
+
   try {
     // Fetch main sitemap index
     const mainSitemapUrl = `${CONFIG.oldDomain}/sitemap.xml`;
     log(`Fetching ${mainSitemapUrl}`);
-    
+
     const mainResponse = await axios.get(mainSitemapUrl, { timeout: 10000 });
     const sitemapUrls = parseSitemapXml(mainResponse.data);
-    
+
     log(`Found ${sitemapUrls.length} sub-sitemaps`);
-    
+
     // Fetch all sub-sitemaps
     const allUrls = new Set();
-    
+
     for (const sitemapUrl of sitemapUrls) {
       try {
         log(`Fetching ${sitemapUrl}`);
         const response = await axios.get(sitemapUrl, { timeout: 10000 });
         const urls = parseSitemapXml(response.data);
-        
-        urls.forEach(url => allUrls.add(normalizeUrl(url)));
+
+        urls.forEach((url) => allUrls.add(normalizeUrl(url)));
         log(`  Added ${urls.length} URLs`);
       } catch (error) {
-        log(`  Error fetching ${sitemapUrl}: ${error.message}`, 'warn');
+        log(`  Error fetching ${sitemapUrl}: ${error.message}`, "warn");
       }
     }
-    
-    log(`Total URLs in sitemap: ${allUrls.size}`, 'success');
+
+    log(`Total URLs in sitemap: ${allUrls.size}`, "success");
     return Array.from(allUrls);
-    
   } catch (error) {
-    log(`Error fetching sitemap: ${error.message}`, 'error');
-    log('Continuing without sitemap data...', 'warn');
+    log(`Error fetching sitemap: ${error.message}`, "error");
+    log("Continuing without sitemap data...", "warn");
     return [];
   }
 }
@@ -351,34 +381,37 @@ async function fetchSitemapUrls() {
  * Compare internal pages with sitemap
  */
 function compareWithSitemap(allPages, sitemapUrls) {
-  log('Comparing pages with sitemap...');
-  
-  const sitemapSet = new Set(sitemapUrls.map(url => normalizeUrl(url)));
+  log("Comparing pages with sitemap...");
+
+  const sitemapSet = new Set(sitemapUrls.map((url) => normalizeUrl(url)));
   const internalUrlSet = new Set();
-  
+
   // Mark which pages are in sitemap
-  allPages.forEach(page => {
+  allPages.forEach((page) => {
     const normalizedUrl = normalizeUrl(page.currentUrl);
     internalUrlSet.add(normalizedUrl);
-    
+
     if (sitemapSet.has(normalizedUrl)) {
       page.inSitemap = true;
     }
   });
-  
+
   // Find orphaned URLs (in sitemap but not in our YAML files)
   const orphanedUrls = [];
-  sitemapUrls.forEach(url => {
+  sitemapUrls.forEach((url) => {
     const normalizedUrl = normalizeUrl(url);
     if (!internalUrlSet.has(normalizedUrl)) {
       orphanedUrls.push(url);
     }
   });
-  
-  const inSitemapCount = allPages.filter(p => p.inSitemap).length;
-  log(`Pages in sitemap: ${inSitemapCount} / ${allPages.length}`, 'success');
-  log(`Orphaned URLs (in sitemap, not in YAML): ${orphanedUrls.length}`, orphanedUrls.length > 0 ? 'warn' : 'success');
-  
+
+  const inSitemapCount = allPages.filter((p) => p.inSitemap).length;
+  log(`Pages in sitemap: ${inSitemapCount} / ${allPages.length}`, "success");
+  log(
+    `Orphaned URLs (in sitemap, not in YAML): ${orphanedUrls.length}`,
+    orphanedUrls.length > 0 ? "warn" : "success"
+  );
+
   return { allPages, orphanedUrls };
 }
 
@@ -390,16 +423,16 @@ function compareWithSitemap(allPages, sitemapUrls) {
  * Generate markdown tracker
  */
 function generateMarkdown(allPages, orphanedUrls, summary) {
-  log('Generating markdown tracker...');
-  
+  log("Generating markdown tracker...");
+
   const groupedByType = {};
-  allPages.forEach(page => {
+  allPages.forEach((page) => {
     if (!groupedByType[page.type]) groupedByType[page.type] = [];
     groupedByType[page.type].push(page);
   });
-  
+
   // Sort pages within each type
-  Object.keys(groupedByType).forEach(type => {
+  Object.keys(groupedByType).forEach((type) => {
     groupedByType[type].sort((a, b) => {
       // Sort by priority first
       const priorityOrder = { critical: 0, high: 1, medium: 2, low: 3 };
@@ -410,10 +443,12 @@ function generateMarkdown(allPages, orphanedUrls, summary) {
       return a.currentUrl.localeCompare(b.currentUrl);
     });
   });
-  
+
   let md = `# 🚀 4Geeks Academy → 4Geeks.com Migration Tracker
 
-**Generated:** ${new Date().toISOString().split('T')[0]} at ${new Date().toLocaleTimeString()}  
+**Generated:** ${
+    new Date().toISOString().split("T")[0]
+  } at ${new Date().toLocaleTimeString()}  
 **Total Pages:** ${summary.total}  
 **Visible Pages:** ${summary.visible}  
 **Hidden/Unlisted Pages:** ${summary.hidden}  
@@ -447,69 +482,87 @@ Symbols: ⬜ (not started) | 🔄 (in progress) | ✅ (complete) | ❌ (failed/b
 
   // Type labels
   const typeLabels = {
-    page: '📄 Static Pages',
-    course: '🎓 Course Pages',
-    location: '📍 Location Pages',
-    landing: '🎯 Landing Pages',
-    blog: '📝 Blog Posts',
-    cluster: '🗂️ Blog Category Pages',
-    job: '💼 Job Listings',
-    downloadable: '📥 Downloadable Resources'
+    page: "📄 Static Pages",
+    course: "🎓 Course Pages",
+    location: "📍 Location Pages",
+    landing: "🎯 Landing Pages",
+    blog: "📝 Blog Posts",
+    cluster: "🗂️ Blog Category Pages",
+    job: "💼 Job Listings",
+    downloadable: "📥 Downloadable Resources",
   };
-  
-  const typeOrder = ['page', 'course', 'location', 'landing', 'blog', 'cluster', 'job', 'downloadable'];
-  
+
+  const typeOrder = [
+    "page",
+    "course",
+    "location",
+    "landing",
+    "blog",
+    "cluster",
+    "job",
+    "downloadable",
+  ];
+
   // Generate sections for each type
-  typeOrder.forEach(type => {
+  typeOrder.forEach((type) => {
     if (!groupedByType[type] || groupedByType[type].length === 0) return;
-    
+
     const pages = groupedByType[type];
-    const visibleCount = pages.filter(p => p.visibility === 'visible').length;
-    const inSitemapCount = pages.filter(p => p.inSitemap).length;
-    
+    const visibleCount = pages.filter((p) => p.visibility === "visible").length;
+    const inSitemapCount = pages.filter((p) => p.inSitemap).length;
+
     md += `\n## ${typeLabels[type]} (${pages.length} total, ${visibleCount} visible, ${inSitemapCount} in sitemap)\n\n`;
     md += `| Priority | Current URL | Lang | Visibility | In Sitemap | SEO Title | Description | Copy | Impl | Schema | Speed | Notes |\n`;
     md += `|----------|-------------|------|------------|------------|-----------|-------------|------|------|--------|-------|-------|\n`;
-    
-    pages.forEach(page => {
-      const priority = page.priority === 'critical' ? '🔥' : 
-                      page.priority === 'high' ? '⭐' : 
-                      page.priority === 'medium' ? '📌' : '📎';
-      const urlShort = page.currentUrl.replace(CONFIG.oldDomain, '');
-      const inSitemap = page.inSitemap ? '✅' : '❌';
-      const title = (page.seo.title || '').substring(0, 50);
-      const desc = (page.seo.description || '').substring(0, 50);
-      const notes = page.notes.join(', ');
-      
+
+    pages.forEach((page) => {
+      const priority =
+        page.priority === "critical"
+          ? "🔥"
+          : page.priority === "high"
+          ? "⭐"
+          : page.priority === "medium"
+          ? "📌"
+          : "📎";
+      const urlShort = page.currentUrl.replace(CONFIG.oldDomain, "");
+      const inSitemap = page.inSitemap ? "✅" : "❌";
+      const title = (page.seo.title || "").substring(0, 50);
+      const desc = (page.seo.description || "").substring(0, 50);
+      const notes = page.notes.join(", ");
+
       md += `| ${priority} | ${urlShort} | ${page.lang} | ${page.visibility} | ${inSitemap} | ${title} | ${desc} | ⬜ | ⬜ | ⬜ | ⬜ | ${notes} |\n`;
     });
-    
+
     // Add redirects section if any pages have redirects
-    const pagesWithRedirects = pages.filter(p => p.redirects.length > 0);
+    const pagesWithRedirects = pages.filter((p) => p.redirects.length > 0);
     if (pagesWithRedirects.length > 0) {
       md += `\n### 🔀 Redirects for ${typeLabels[type]}\n\n`;
-      pagesWithRedirects.forEach(page => {
+      pagesWithRedirects.forEach((page) => {
         md += `**${page.currentUrl}** needs redirects from:\n`;
-        page.redirects.forEach(redirect => {
+        page.redirects.forEach((redirect) => {
           md += `- \`${redirect}\` → \`${page.currentUrl}\`\n`;
         });
         md += `\n`;
       });
     }
   });
-  
+
   // Hidden pages section
-  const hiddenPages = allPages.filter(p => p.visibility === 'hidden' || p.visibility === 'unlisted');
+  const hiddenPages = allPages.filter(
+    (p) => p.visibility === "hidden" || p.visibility === "unlisted"
+  );
   if (hiddenPages.length > 0) {
     md += `\n---\n\n## ⚠️ Hidden/Unlisted Pages to Review (${hiddenPages.length})\n\n`;
     md += `These pages are not in the sitemap but exist in the codebase. Review if they should be migrated:\n\n`;
     md += `| Type | URL | Visibility | In Sitemap | Notes |\n`;
     md += `|------|-----|------------|------------|-------|\n`;
-    hiddenPages.forEach(page => {
-      md += `| ${page.type} | ${page.currentUrl} | ${page.visibility} | ${page.inSitemap ? '✅' : '❌'} | ${page.notes.join(', ')} |\n`;
+    hiddenPages.forEach((page) => {
+      md += `| ${page.type} | ${page.currentUrl} | ${page.visibility} | ${
+        page.inSitemap ? "✅" : "❌"
+      } | ${page.notes.join(", ")} |\n`;
     });
   }
-  
+
   // Orphaned URLs section
   if (orphanedUrls.length > 0) {
     md += `\n---\n\n## 🔍 Orphaned URLs (${orphanedUrls.length})\n\n`;
@@ -517,28 +570,30 @@ Symbols: ⬜ (not started) | 🔄 (in progress) | ✅ (complete) | ❌ (failed/b
     md += `- Old pages that need redirects\n`;
     md += `- Dynamically generated pages\n`;
     md += `- Pages from other sources\n\n`;
-    
+
     // Group orphaned URLs by pattern
     const orphanedByPattern = {};
-    orphanedUrls.forEach(url => {
+    orphanedUrls.forEach((url) => {
       const match = url.match(/4geeksacademy\.com\/(us|es)\/([^\/]+)/);
-      const pattern = match ? match[2] : 'other';
+      const pattern = match ? match[2] : "other";
       if (!orphanedByPattern[pattern]) orphanedByPattern[pattern] = [];
       orphanedByPattern[pattern].push(url);
     });
-    
-    Object.keys(orphanedByPattern).sort().forEach(pattern => {
-      md += `### ${pattern} (${orphanedByPattern[pattern].length})\n\n`;
-      orphanedByPattern[pattern].slice(0, 20).forEach(url => {
-        md += `- ${url}\n`;
+
+    Object.keys(orphanedByPattern)
+      .sort()
+      .forEach((pattern) => {
+        md += `### ${pattern} (${orphanedByPattern[pattern].length})\n\n`;
+        orphanedByPattern[pattern].slice(0, 20).forEach((url) => {
+          md += `- ${url}\n`;
+        });
+        if (orphanedByPattern[pattern].length > 20) {
+          md += `- ... and ${orphanedByPattern[pattern].length - 20} more\n`;
+        }
+        md += `\n`;
       });
-      if (orphanedByPattern[pattern].length > 20) {
-        md += `- ... and ${orphanedByPattern[pattern].length - 20} more\n`;
-      }
-      md += `\n`;
-    });
   }
-  
+
   // Notes section
   md += `\n---\n\n## 📝 Migration Notes\n\n`;
   md += `### URL Structure Recommendations\n\n`;
@@ -548,14 +603,14 @@ Symbols: ⬜ (not started) | 🔄 (in progress) | ✅ (complete) | ❌ (failed/b
   md += `- Courses: \`/us/course/{slug}\` → \`/bootcamp/{slug}\`\n`;
   md += `- Locations: \`/us/location/{slug}\` → \`/campus/{slug}\`\n`;
   md += `- Blog: Keep same structure or modernize\n\n`;
-  
+
   md += `### Schema.org Requirements\n\n`;
   md += `- **Courses:** CourseInstance or EducationalOccupationalProgram\n`;
   md += `- **Locations:** LocalBusiness + EducationalOrganization\n`;
   md += `- **Blog Posts:** BlogPosting or Article\n`;
   md += `- **Jobs:** JobPosting\n`;
   md += `- **Homepage:** Organization + WebSite\n\n`;
-  
+
   md += `### Next Steps\n\n`;
   md += `1. Review hidden pages - decide which to migrate\n`;
   md += `2. Review orphaned URLs - create redirect strategy\n`;
@@ -563,7 +618,7 @@ Symbols: ⬜ (not started) | 🔄 (in progress) | ✅ (complete) | ❌ (failed/b
   md += `4. Prioritize by traffic/importance (use Google Analytics)\n`;
   md += `5. Start migration with critical priority pages\n`;
   md += `6. Update status as you progress\n`;
-  
+
   return md;
 }
 
@@ -575,8 +630,8 @@ Symbols: ⬜ (not started) | 🔄 (in progress) | ✅ (complete) | ❌ (failed/b
  * Generate JSON data file
  */
 function generateJson(allPages, orphanedUrls, summary) {
-  log('Generating JSON data file...');
-  
+  log("Generating JSON data file...");
+
   return {
     generated: new Date().toISOString(),
     summary,
@@ -584,19 +639,19 @@ function generateJson(allPages, orphanedUrls, summary) {
     orphanedUrls,
     metadata: {
       oldDomain: CONFIG.oldDomain,
-      newDomain: 'https://4geeks.com', // To be confirmed
+      newDomain: "https://4geeks.com", // To be confirmed
       totalRedirects: summary.redirects,
       pageTypes: {
-        page: allPages.filter(p => p.type === 'page').length,
-        course: allPages.filter(p => p.type === 'course').length,
-        location: allPages.filter(p => p.type === 'location').length,
-        landing: allPages.filter(p => p.type === 'landing').length,
-        blog: allPages.filter(p => p.type === 'blog').length,
-        cluster: allPages.filter(p => p.type === 'cluster').length,
-        job: allPages.filter(p => p.type === 'job').length,
-        downloadable: allPages.filter(p => p.type === 'downloadable').length,
-      }
-    }
+        page: allPages.filter((p) => p.type === "page").length,
+        course: allPages.filter((p) => p.type === "course").length,
+        location: allPages.filter((p) => p.type === "location").length,
+        landing: allPages.filter((p) => p.type === "landing").length,
+        blog: allPages.filter((p) => p.type === "blog").length,
+        cluster: allPages.filter((p) => p.type === "cluster").length,
+        job: allPages.filter((p) => p.type === "job").length,
+        downloadable: allPages.filter((p) => p.type === "downloadable").length,
+      },
+    },
   };
 }
 
@@ -605,53 +660,58 @@ function generateJson(allPages, orphanedUrls, summary) {
 // ==============================================
 
 async function main() {
-  console.log('\n' + '='.repeat(60));
-  console.log('🚀 4GEEKS ACADEMY MIGRATION URL SCRAPER');
-  console.log('='.repeat(60) + '\n');
-  
+  console.log("\n" + "=".repeat(60));
+  console.log("🚀 4GEEKS ACADEMY MIGRATION URL SCRAPER");
+  console.log("=".repeat(60) + "\n");
+
   try {
     // Step 1: Scan YAML content
     const yamlPages = await scanAllYamlContent();
-    
+
     // Step 2: Fetch blog posts
     const blogPosts = await fetchBlogPosts();
-    
+
     // Step 3: Combine all pages
     const allPages = [...yamlPages, ...blogPosts];
-    log(`Total pages collected: ${allPages.length}`, 'success');
-    
+    log(`Total pages collected: ${allPages.length}`, "success");
+
     // Step 4: Fetch sitemap
     const sitemapUrls = await fetchSitemapUrls();
-    
+
     // Step 5: Compare and merge
-    const { allPages: updatedPages, orphanedUrls } = compareWithSitemap(allPages, sitemapUrls);
-    
+    const { allPages: updatedPages, orphanedUrls } = compareWithSitemap(
+      allPages,
+      sitemapUrls
+    );
+
     // Step 6: Calculate summary
     const summary = {
       total: updatedPages.length,
-      visible: updatedPages.filter(p => p.visibility === 'visible').length,
-      hidden: updatedPages.filter(p => p.visibility === 'hidden' || p.visibility === 'unlisted').length,
-      inSitemap: updatedPages.filter(p => p.inSitemap).length,
+      visible: updatedPages.filter((p) => p.visibility === "visible").length,
+      hidden: updatedPages.filter(
+        (p) => p.visibility === "hidden" || p.visibility === "unlisted"
+      ).length,
+      inSitemap: updatedPages.filter((p) => p.inSitemap).length,
       redirects: updatedPages.reduce((sum, p) => sum + p.redirects.length, 0),
-      orphaned: orphanedUrls.length
+      orphaned: orphanedUrls.length,
     };
-    
+
     // Step 7: Generate markdown
     const markdown = generateMarkdown(updatedPages, orphanedUrls, summary);
     const markdownPath = path.join(CONFIG.outputDir, CONFIG.markdownFile);
     await fs.writeFile(markdownPath, markdown);
-    log(`Saved: ${markdownPath}`, 'success');
-    
+    log(`Saved: ${markdownPath}`, "success");
+
     // Step 8: Generate JSON
     const jsonData = generateJson(updatedPages, orphanedUrls, summary);
     const jsonPath = path.join(CONFIG.outputDir, CONFIG.jsonFile);
     await fs.writeFile(jsonPath, JSON.stringify(jsonData, null, 2));
-    log(`Saved: ${jsonPath}`, 'success');
-    
+    log(`Saved: ${jsonPath}`, "success");
+
     // Final summary
-    console.log('\n' + '='.repeat(60));
-    console.log('✅ MIGRATION TRACKER GENERATED SUCCESSFULLY');
-    console.log('='.repeat(60));
+    console.log("\n" + "=".repeat(60));
+    console.log("✅ MIGRATION TRACKER GENERATED SUCCESSFULLY");
+    console.log("=".repeat(60));
     console.log(`\n📊 Summary:`);
     console.log(`   Total pages: ${summary.total}`);
     console.log(`   - Visible: ${summary.visible}`);
@@ -662,10 +722,9 @@ async function main() {
     console.log(`\n📄 Output files:`);
     console.log(`   - ${CONFIG.markdownFile}`);
     console.log(`   - ${CONFIG.jsonFile}`);
-    console.log('\n');
-    
+    console.log("\n");
   } catch (error) {
-    log(`Fatal error: ${error.message}`, 'error');
+    log(`Fatal error: ${error.message}`, "error");
     console.error(error);
     process.exit(1);
   }
@@ -677,4 +736,3 @@ if (require.main === module) {
 }
 
 module.exports = { main };
-
