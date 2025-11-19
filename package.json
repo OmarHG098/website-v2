@@ -42,7 +42,8 @@
     "open:e2e": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test start http://localhost:8000 cy:open",
     "run:e2e": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test start http://localhost:8000 cy:run",
     "cy:clean": "cypress cache clear",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "migration:scrape": "node scripts/migration-scraper.js"
   },
   "dependencies": {
     "@fontsource/archivo": "^5.0.14",
