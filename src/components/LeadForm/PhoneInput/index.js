@@ -3,6 +3,8 @@ import countriesList from "./countriesList";
 import InputMask from "react-input-mask";
 import styled from "styled-components";
 import { Colors } from "../../Styling";
+import "../../../assets/css/PhoneInput/index.css";
+import "../../../assets/css/PhoneInput/flags.css";
 
 const Msg = styled.span`
   position: absolute;
