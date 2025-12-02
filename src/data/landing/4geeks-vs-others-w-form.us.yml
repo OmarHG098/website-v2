@@ -51,9 +51,9 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: WHY 4GEEKS IS YOUR SUREST PATH INTO TECH
+  tagline: The Surest Path Into an AI-Powered Tech Career
   tagline_color: "#1c1c1c"
-  sub_heading: "The fastest, most supported path to a career in tech. Even if you’re starting from zero."
+  sub_heading: " "
   form_styles:
     background: "#FFB718"
     color: "black"
@@ -70,7 +70,7 @@ features:
   styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
   bullets:
   - Learn to code with AI and build real, job-ready projects.
-  - "Tech education built for results:  practical, proven, and affordable."
+  - "Tech education built for results: hands-on, proven, and affordable."
   - Lifetime career support + unlimited 1:1 mentorship.
 
   # - "Part-time: Immerse yourself in a flexible schedule, perfect for busy professionals and students."
@@ -124,14 +124,16 @@ why_4geeks:
 
 geeks_vs_others:
   position: 9
-  heading: "Compare Our Coding Courses vs. the Competition"
+  heading: "Compare Our Coding Programs to the Competition"
   total_rows: 5
 
+badges:
+  position: 4
+  heading: |-
+    Ranked Among the World's Top Coding Bootcamps. 
+    Trusted by Thousands.
+  sub_heading: "Licensed by the Florida Department of Education, recognized by Forbes as a top 5 Coding School, and consistently ranked among the world's best coding bootcamps by major independent listings."
 
-
-# badges:
-#   position: 5
-#   heading: "4Geeks Academy has awards and recognitions that validate its excellence"
 
 who_is_hiring:
   position: 13
@@ -182,59 +184,53 @@ components:
             icon: "check"
             icon_color: '#F4F9FF'
 
-    - name: second
-      position: 3
-      proportions: [6, 6]
-      layout: two_column_right
-      background: "#F4F9FF"
-      justify: "center"
-      image:
-        style: '{"backgroundSize": "contain", "background-position": "center"}'
-        src: "/images/landing/community-support-2.webp"
-        shadow: false
-      section_heading:
-        text: " "
+    - name: how-it-works-programs
+      position: 5
+      background: "#fbfcfc"
+      layout: iconogram
+      swipable: True
       heading:
-        text: "Recognized by Experts, Trusted by Students"
-        font_size: ["33px", "33px", "33px", "33px", "33px"]
-        style: '{ "lineHeight": "30px" }'
-      content:
-        style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
-        text: "When you choose 4Geeks, you're joining one of the most respected coding schools worldwide."
-      bullets:
-        item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
-        items:
-          - heading: " "
-            text: |
-              Rated among the <strong style="font-weight: 800;">Top 5 Coding Bootcamps worldwide</strong> (Forbes, SwitchUp, Course Report, Career Karma)
-            icon: "check"
-            icon_color: '#25BF6C'
-          - heading: " "
-            text: |
-              Consistently recognized for <strong style="font-weight: 800;">Best Student Support and Best Value for Money</strong>
-            icon: "check"
-            icon_color: '#25BF6C'
-          - heading: " "
-            text: |
-              Trusted by 20,000+ students across the globe
-            icon: "check"
-            icon_color: '#25BF6C'
+        text: "Find the path that’s right for you"
+        font_size: ["30px", "30px", "30px", "30px", "30px"]
+      sub_heading:
+        text: ""
+        font_size: ["16px", "16px", "16px", "16px", "16px"]
+        style: '{ "textAlign": "center", "width": "60%" }'
+      icons:
+        - icon: "fullstack"
+          title: "Full Stack Development with AI"
+          content: "Become an AI-fluent Full Stack Developer using tools like Cursor, Vercel v0, and more. Master the most sought-after skills and land a job as a developer."
+        - icon: "machine"
+          title: "Data Science and Machine Learning"
+          content: "Acquire the skills to analyze complex data and leverage machine learning techniques to automate decision-making and uncover actionable insights."
+        - icon: "cibersecurity"
+          title: "Cybersecurity"
+          content: "Become a cybersecurity specialist, equipped to identify, manage, and mitigate system vulnerabilities in compliance with ISO and other standards."
+        - icon: "applied-ai"
+          title: "AI for Professionals"
+          content: "Master practical AI skills to enhance your productivity, Creativity, and decision-making at work. In just 6 weeks, learn to apply AI tools across any field and stay ahead in your career."
+      button:
+        text: "Get More Information"
+        color: "white"
+        background: "black"
+        hover_color: "white"
+        path: "#leadform_header"
 
     - name: third
-      position: 5
+      position: 12
       proportions: [6, 6]
-      layout: two_column_left
+      layout: two_column_right
       background: "#F4F9FF"
       image:
         style: '{"backgroundSize": "contain", "background-position": "center"}'
         src: "/images/landing/reservation-es.webp"
         shadow: false
       heading:
-        text: "Making Tech Careers Accessible"
+        text: "The Most Affordable Tuition Among  Top Ranked Bootcamps "
         font_size: ["33px", "33px", "33px", "33px", "33px"]
         style: '{ "lineHeight": "30px" }'
       sub_heading:
-        text: "Tech careers change lives, and we believe finances should never hold anyone back. That's why we've built some of the most flexible, student-friendly options in the industry:"
+        text: "Named Best Bootcamp for Students on a Budget by Forbes in 2024"
         font_size: ["16px", "16px", "16px", "16px", "16px"]
         style: '{ "margin": "15px 0", "font-weight": "600" }'
       content:
@@ -243,9 +239,6 @@ components:
       bullets:
         item_style: '{ "padding": "0", "font-weight": "100", "margin": "0" }'
         items:
-          - heading: " "
-            text: 'Among the <strong style="font-weight: 800;"> most affordable tuition</strong> of any top-ranked bootcamp (recognized by Forbes).'
-            icon: "check"
           - heading: " "
             text: '<strong style="font-weight: 800;">Financing options start below $299/month</strong>, so you can learn without financial stress.'
             icon: "check"
@@ -256,22 +249,22 @@ components:
             text: "Scholarships available for eligible students."
             icon: "check"
       button:
-        text: "Get More Info"
+        text: "Get More Information"
         color: "white"
         background: "black"
         path: "#leadform_bottom"
 
     - name: how-it-works
-      position: 10
+      position: 6
       background: "#0084FF"
       layout: iconogram
       swipable: true
       heading:
-        text: "Do our Bootcamps Deliver Results You Can Count On?"
+        text: "Results You Can Count On"
         font_size: ["30px", "30px", "30px", "30px", "30px"]
         style: '{ "color": "white" }'
       sub_heading:
-        text: 'Numbers matter, and ours speak for themselves.'
+        text: 'Numbers matter — and ours speak for themselves.'
         font_size: ["20px", "20px", "16px", "16px", "16px"]
         style: '{ "textAlign": "center", "width": "60%", "color": "white"}'      
       icons:
@@ -282,7 +275,7 @@ components:
         - icon: "briefcase-2"
           color: "#FF0000"
           title: "Avergage time to get hired"
-          content: "3-6 months after graduation"
+          content: "6 months after graduation"
         - icon: "stairswflag"
           color: "#BE8BFF"
           title: "Salary Increase"
