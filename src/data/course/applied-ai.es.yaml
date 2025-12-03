@@ -13,9 +13,9 @@ meta_info:
   duration: "P6W"  # 6 weeks duration in ISO 8601 format
 
 apply_form:
-  label: Inteligencia Artificial Aplicada (sin codificación)
+  label: IA para Profesionales (sin codificación)
 
-seo_title: "Curso de Inteligencia Artificial Aplicada"
+seo_title: "Inteligencia Artificial (IA) para Profesionales"
 header:
   title: "Mantente relevante en tu carrera. Lidera con IA."
   paragraph: "Adquiere las habilidades de IA para mantenerte competitivo y avanzar en tu carrera en solo 6 semanas. Aprende a aplicar IA en el trabajo para mayor eficiencia, creatividad e impacto."
@@ -51,15 +51,9 @@ upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"
   actionMessage: "Avísame cuando haya fechas disponibles"
 
-# description:
-#   heading: "Sobre este curso"
-#   sub_heading: "Prepárate para la era de la Ciencia de Datos."
-#   content: >
-#     Entrénate con expertos en Data Science, Machine Learning e Inteligencia Artificial. Aprende Data Science desde las bases, recolecta, manipula y modela datos. Crea modelos de Machine Learning e iníciate en el Deep Learning.\n
-#     Practica con escenarios típicos de empresas de la vida real y conoce algunas de las herramientas más utilizadas en la industria. \n
 overlaped:
-  heading: "Por qué esto importa ahora"
-  subtitle: "La IA ya no es opcional — es una habilidad fundamental en el lugar de trabajo."
+  heading: "Por qué cada trabajo necesita habilidades de IA ahora"
+  subtitle: "La IA ya no es opcional: ya es una habilidad fundamental en el lugar de trabajo."
   paragraph: |
     •Los trabajadores con habilidades de IA ganan un promedio de 56% más de salario a nivel global.
     <br>•El uso de IA en el trabajo casi se ha duplicado en dos años, aumentando del 21% al 40% de los empleados estadounidenses.
@@ -72,9 +66,9 @@ details:
   about:
     title: "Sobre este programa"
     sub_title: |-
-      Este curso de IA Aplicada de 6 semanas está diseñado para profesionales que quieren aprovechar la IA en sus roles, no solo explorarla.
-      Trabajarás de forma práctica con modelos generativos como GPT-4o, Gemini 2.5 (Google), Claude 4 (Anthropic), y herramientas modernas de imagen/video, aplicándolas a flujos de trabajo reales.
-      Al final del curso, habrás ampliado tus capacidades con IA y estarás listo para aplicar con confianza herramientas de IA en tu flujo de trabajo.
+      Nuestro programa de IA para Profesionales está diseñado para cualquier persona que quiera aprovechar todo el poder de la IA en su trabajo, no solo explorarla.
+      Obtendrás experiencia práctica con modelos generativos como GPT-4o (ChatGPT), Gemini 2.5 (Google) y Claude 4 (Anthropic), así como herramientas modernas de imagen y video, aplicándolas directamente a flujos de trabajo reales.
+      Al final del curso, habrás ampliado tus capacidades con IA y estarás listo para integrarla con confianza en tu trabajo diario.
         
     list:
       - label: "Duración"
@@ -288,11 +282,11 @@ two_columns_video:
     shadow: false
   video: "E9RpwJhJi-k"
   heading:
-    text: "Impulsa tu carrera con IA Aplicada"
+    text: "Impulsa tu carrera con IA para Profesionales"
     font_size: ["42px", "34px", "34px", "34px", "34px"]
     style: '{"font-weight": "bold"}'
   sub_heading:
-    text: "Escucha a nuestro CEO sobre cómo la IA aplicada transformó su productividad y resultados. Tú también puedes dar el salto y dominar las habilidades de IA de vanguardia que protegerán tu carrera:"
+    text: "Escucha a nuestro CEO sobre cómo dominar la IA transformó su productividad y resultados. Da el salto y aprende las habilidades prácticas de IA que protegerán tu carrera:"
     font_size: ["20px", "18px", "16px", "16px", "14px"]
     style: '{"font-weight":"200" }'
   button:
@@ -303,9 +297,9 @@ two_columns_video:
     style: '{"padding": "20px 48px", "border-radius": "5px"}'
   content:
     text: |
-      • Usa IA para optimizar tu flujo de trabajo y entregar resultados de alta calidad desde el primer día.
+      • Expande tus capacidades en cualquier campo: desde marketing hasta bienes raíces o trabajo creativo.
       <br>
-      • Expande tus capacidades en cualquier campo — desde marketing hasta bienes raíces o trabajo creativo.
+      • Usa IA para optimizar flujos de trabajo y entregar resultados de mayor calidad desde el primer día.
       <br>
       • Crea informes, análisis y estrategias en profundidad más rápido e inteligentemente con IA.
       <br>

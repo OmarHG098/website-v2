@@ -15,7 +15,7 @@ meta_info:
 apply_form:
   label: Applied AI for Professionals (no-code)
 
-seo_title: "Course in Applied Artificial Intelligence (AI)"
+seo_title: "Artificial Intelligence (AI) for Professionals"
 header:
   title: "Stay relevant in your career. Lead with AI."
   paragraph: "Gain the AI skills to stay competitive and advance your career in just 6 weeks. Learn to apply AI at work for greater efficiency, creativity, and impact."
@@ -53,7 +53,7 @@ upcoming:
 
 overlaped:
   heading: "Why Every Job Needs AI Skills Now"
-  subtitle: "AI isn't optional anymore — it's already a core workplace skill."
+  subtitle: "AI isn't optional anymore: it's already a core workplace skill."
   paragraph: |
     •Workers with AI skills earn an average 56% wage premium globally.
     <br>•AI use at work has nearly doubled in two years, rising from 21% to 40% of U.S. employees.
@@ -279,11 +279,11 @@ two_columns_video:
     shadow: false
   video: "E9RpwJhJi-k"
   heading:
-    text: "Boost Your Career with Applied AI"
+    text: "Boost Your Career with AI for Professionals"
     font_size: ["42px", "34px", "34px", "34px", "34px"]
     style: '{"font-weight": "bold"}'
   sub_heading:
-    text: "Hear from our CEO on how Applied AI transformed his productivity and results. Take the leap too and master the cutting-edge AI skills that will future-proof your career:"
+    text: "Hear from our CEO on how mastering AI transformed his productivity and results.Take the leap and learn the practical AI skills that will future-proof your career:"
     font_size: ["20px", "18px", "16px", "16px", "14px"]
     style: '{"font-weight":"200" }'
   button:
@@ -294,9 +294,9 @@ two_columns_video:
     style: '{"padding": "20px 48px", "border-radius": "5px"}'
   content:
     text: |
-      • Use AI to streamline your workflow and deliver high-quality results from day one.
+      • Expand your capabilities across any field: from marketing to real estate to creative work.
       <br>
-      • Expand your capabilities across any field — from marketing to real estate or creative work.
+      • Use AI to streamline workflows and deliver higher-quality results from day one.
       <br>
       • Create reports, analyses, and in depth strategies faster and smarter with AI.
       <br>
