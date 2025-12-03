@@ -505,6 +505,24 @@ const LeadForm = ({
                 );
               })}
 
+            {selectLocation?.length > 1 && (
+              <Div data-cy="dropdown_location_selector" margin_tablet="0">
+                <SelectRaw
+                  //Not apply styles
+                  options={selectLocation}
+                  placeholder={locationSelector.place_holder}
+                  valid={true}
+                  controlStyles={{ opacity: 1 }}
+                  onChange={(selected, valid) => {
+                    setVal({
+                      ...formData,
+                      utm_location: { value: selected.value, valid },
+                    });
+                    setLocation(selected.value);
+                  }}
+                />
+              </Div>
+            )}
             {fields
               .filter((l) => formData[l].name === "phone")
               .map((f, i) => {
@@ -539,24 +557,6 @@ const LeadForm = ({
                       course: { value: selected.value, valid },
                     })
                   }
-                />
-              </Div>
-            )}
-            {selectLocation?.length > 1 && (
-              <Div data-cy="dropdown_location_selector" margin_tablet="0">
-                <SelectRaw
-                  //Not apply styles
-                  options={selectLocation}
-                  placeholder={locationSelector.place_holder}
-                  valid={true}
-                  controlStyles={{ opacity: 1 }}
-                  onChange={(selected, valid) => {
-                    setVal({
-                      ...formData,
-                      utm_location: { value: selected.value, valid },
-                    });
-                    setLocation(selected.value);
-                  }}
                 />
               </Div>
             )}
