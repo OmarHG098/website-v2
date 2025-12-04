@@ -67,7 +67,7 @@ details:
     title: "Sobre este programa"
     sub_title: |-
       Nuestro programa de IA para Profesionales está diseñado para cualquier persona que quiera aprovechar todo el poder de la IA en su trabajo, no solo explorarla.
-      Obtendrás experiencia práctica con modelos generativos como GPT-4o (ChatGPT), Gemini 2.5 (Google) y Claude 4 (Anthropic), así como herramientas modernas de imagen y video, aplicándolas directamente a flujos de trabajo reales.
+      Obtendrás experiencia práctica con modelos generativos como ChatGPT, Gemini, y Claude, así como herramientas modernas de imagen y video, aplicándolas directamente a flujos de trabajo reales.
       Al final del curso, habrás ampliado tus capacidades con IA y estarás listo para integrarla con confianza en tu trabajo diario.
         
     list:
@@ -129,7 +129,7 @@ details:
       step: 2
     - module_name: "Text Generation"
       title: "Generación de Texto"
-      description: "Explora las capacidades de modelos populares como ChatGPT, Claude y Llama-2. Aprende a dominar estrategias de prompts, flujos de trabajo de IA y herramientas para automatizar prompts."
+      description: "Explora las capacidades de modelos populares como ChatGPT, Claude y Llama. Aprende a dominar estrategias de prompts, flujos de trabajo de IA y herramientas para automatizar prompts."
       projects: "Revisa y depura prompts, aprende a evaluar la calidad de las respuestas y cómo instruir a un modelo de manera efectiva."
       slug: "text-generation"
       duration: "semana 3"
@@ -228,7 +228,7 @@ two_columns:
     text: "Lo que aprenderás"
     font_size: ["40px", "38px", "38px", "36px", "34px"]
   sub_heading:
-    text: "Domina herramientas como ChatGPT (GPT-4o), Claude 4 y Midjourney para mejorar \ntu productividad, creatividad y resolución de problemas. Aprende cómo hacer de la IA\n una parte activa de tu conjunto de herramientas profesional."
+    text: "Domina herramientas como ChatGPT, Claude y Midjourney para mejorar \ntu productividad, creatividad y resolución de problemas. Aprende cómo hacer de la IA\n una parte activa de tu conjunto de herramientas profesional."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   bullets:
     items:

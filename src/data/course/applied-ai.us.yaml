@@ -67,7 +67,7 @@ details:
     title: "About this program"
     sub_title: |-
       Our AI for Professionals program is designed for anyone who wants to harness the full power of AI in their work, not just explore it. 
-      You’ll get hands-on experience with generative models like GPT-4o (ChatGPT), Gemini 2.5 (Google), and Claude 4 (Anthropic), as well as modern image and video tools—applying them directly to real workflows.
+      You’ll get hands-on experience with generative models like ChatGPT, Gemini, and Claude, as well as modern image and video tools—applying them directly to real workflows.
       By the end of the course, you’ll have expanded your capabilities with AI and be ready to confidently integrate it across your daily work.
     list:
       - label: "Duration"
@@ -225,7 +225,7 @@ two_columns:
     text: "What You’ll Learn"
     font_size: ["40px", "38px", "38px", "36px", "34px"]
   sub_heading:
-    text: "Master tools like ChatGPT (GPT-4o), Claude 4, and Midjourney to enhance \nyour productivity, creativity, and problem-solving. Learn how to make AI\n an active part of your professional toolkit."
+    text: "Master tools like ChatGPT, Claude, and Midjourney to enhance \nyour productivity, creativity, and problem-solving. Learn how to make AI\n an active part of your professional toolkit."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   bullets:
     items:
