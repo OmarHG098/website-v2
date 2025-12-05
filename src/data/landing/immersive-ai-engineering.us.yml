@@ -1,0 +1,380 @@
+meta_info:
+  slug: immersive-ai-engineering
+  title: "Immersive AI Engineering Program | 4Geeks Academy"
+  description: "Master AI engineering in 20 weeks with hands-on training. Build complete AI-powered systems with 1:1 mentorship. 84% hired within 6 months."
+  visibility: "hidden"
+  image: "/images/bg/remote.jpeg"
+  keywords: ""
+  template: "landing_a"
+  redirects: []
+  utm_course: ["applied-ai"]
+  utm_location: ["atlanta-usa", "austin-usa", "chicago-usa", "dallas-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "online", "online-spanish-usa", "orlando", "tampa-usa", "toronto-canada"]
+  automation: strong
+  tag: website-lead
+
+navbar:
+  buttonText: "Apply Now"
+  buttonUrl: "#leadform_header"
+  logoUrl: "#"
+
+header_data:
+  tagline: "Become the AI Engineer Companies Are Racing to Hire"
+  sub_heading: "A 20-week immersive program where you'll build complete AI-powered systems. Master the AI-native skills defining the next generation of software engineering—accelerated by 1:1 mentorship and personalized career guidance."
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px
+  text: "Apply now—secure your spot in the next cohort!"
+  bullets:
+    - "84% hired within 6 months"
+    - "20-week structured immersive program"
+    - "$95K–$135K average starting salary"
+    - "1:7 teacher-student ratio"
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+form:
+  fields: ["full_name", "phone", "email"]
+  heading: "Get Full Program Details"
+  motivation: "Apply below to receive the program overview by e-mail and choose how you'd like our admissions team to contact you."
+  button_label: "Apply for more info"
+  redirect: "/us/thank-you/"
+
+follow_bar:
+  position: "top"
+  content:
+    text: "Master AI engineering skills that companies need now."
+    text_mobile: "Master AI engineering skills."
+    font_size: ["22px", "22px", "22px", "16px", "16px"]
+  button:
+    text: "Apply Now"
+    path: "#leadform_header"
+  phone:
+    text: ""
+
+program_details:
+  position: 3
+  heading: "What You'll Learn in 20 Weeks"
+  sub_heading: "Build production-ready AI systems from the ground up"
+  background: "#FFFFFF"
+
+rating_reviews:
+  background: "#FBFBFB"
+  position: 7
+  heading: "Trusted by thousands of students worldwide"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
+
+geeks_vs_others:
+  position: 9
+  heading: "Compare 4Geeks Academy"
+  paragraph: "See how we stack up against other bootcamps and traditional education"
+  sub_heading: "Discover what makes our AI engineering program different"
+  total_rows: 5
+
+why_4geeks:
+  position: 11
+  heading: "Why Choose 4Geeks Academy for AI Engineering"
+  sub_heading: "Industry-leading program with proven results"
+
+who_is_hiring:
+  position: 13
+  limit: 4
+  heading: "Who is hiring our students?"
+  sub_heading: "550+ hiring partners, and 50+ job openings right now for AI engineers"
+
+apply_schollarship:
+  imageSide: "right"
+  image: "../../../static/images/landing/apply.png"
+
+components:
+  - name: leadform_header
+    position: 1
+    layout: two_column_left
+    proportions: [5, 7]
+    image:
+      style: '{ "backgroundSize": "contain", "width": "auto"}'
+      src: "/images/landing/hombre-con-laptop.png"
+    heading:
+      text: "Why This Program Now"
+      font_size: ["34px", "34px", "34px", "25px", "25px"]
+    sub_heading:
+      text: "Companies urgently need engineers who can orchestrate AI systems, automate workflows, and transform operations with AI tools. Most programs teach isolated skills through disconnected projects. We train you to turn one complete business into an AI-native operation—across frontend, backend, data, automation, and agents."
+      font_size: ["16px", "16px", "16px", "14px", "14px"]
+      style: '{ "font-weight": "100" }'
+    button:
+      text: "Apply Now"
+      color: "white"
+      background: "black"
+      path: "#leadform_header"
+    bullets:
+      items:
+        - text: "• 3.5M AI engineering jobs projected by 2026"
+        - text: "• 47% YoY growth in AI job postings"
+        - text: "• 30–50% salary premium vs traditional developers"
+
+  - name: about-program
+    position: 4
+    layout: two_column_left
+    proportions: [6, 6]
+    background: "#ffffff"
+    image:
+      style: '{ "backgroundSize": "contain", "width": "auto"}'
+      src: "/images/landing/two-womans-and-laptop.webp"
+      shadow: false
+    heading:
+      text: "This Is Not Exploration — It's Career Transformation"
+      font_size: ["40px", "34px", "34px", "25px", "25px"]
+    sub_heading:
+      text: "This AI Engineering program is designed for professionals ready to commit 20–24 hours per week for 20 weeks (evening classes + dedicated homework) and who want to make a real career shift. <b>Is The Program Right for You? You're a strong fit if you are:</b>"
+      font_size: ["16px", "16px", "16px", "14px", "14px"]
+      style: '{ "font-weight": "100" }'
+    content:
+      text: "By graduation, you'll have built an end-to-end AI-powered company and be ready to launch the next stage of your career."
+      font_size: ["16px", "16px", "16px", "14px", "14px"]
+    bullets:
+      items:
+        - text: "• Ready for intensive learning: Evening classes + 10–15 hours of homework per week"
+        - text: "• Focused on career impact: Want AI-native skills that open high-demand, high-paying roles"
+        - text: "• Motivated by structure: Prefer clear milestones, expert guidance, and a cohort that keeps you accountable"
+        - text: "• Prepared to invest in yourself: Financing options and limited scholarships available"
+    button:
+      text: "Learn More"
+      color: "white"
+      background: "black"
+      path: "#leadform_header"
+
+  - name: outcomes-stats
+    position: 8
+    background: "#0084FF"
+    layout: iconogram
+    swipable: true
+    heading:
+      text: "Career Outcomes"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "color": "white" }'
+    sub_heading:
+      text: "84% of our Graduates Secure a Job within 6 months of graduation. High-paying roles available to AI Engineering graduates:"
+      font_size: ["20px", "20px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "70%", "color": "white"}'      
+    icons:
+      - icon: "laptop-icon-new"
+        color: "#0084FF"
+        title: "AI Software Engineer"
+        content: "$95K–$135K"
+      - icon: "rocket-2"
+        color: "#25BF6C"
+        title: "Full-Stack Engineer (AI-Fluent)"
+        content: "$100K–$145K"
+      - icon: "network"
+        color: "#BE8BFF"
+        title: "Agent Engineer / Workflow Automation"
+        content: "$105K–$155K"
+      - icon: "chart"
+        color: "#FF0000"
+        title: "Workflow Automation Engineer"
+        content: "$85K–$120K"
+
+  - name: ai-engineering-skills
+    position: 6
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/grupo-ventanas.png"
+    heading:
+      style: '{ "margin-top": "0px" }'
+      text: "What You'll Build in 20 Weeks"
+      font_size: ["40px", "34px", "34px", "25px", "25px"]
+    sub_heading:
+      font_size: ["16px", "16px", "16px", "14px", "14px"]
+      style: '{ "font-weight": "100" }'
+      text: "Master what it takes to build and scale an entire AI-native business, not just individual features. Every milestone builds on the last, giving you real end-to-end engineering experience:"
+    bullets:
+      items:
+        - text: "<b>AI-Assisted Frontend:</b> Modern React application with AI-powered components"
+        - text: "<b>Production Backend:</b> REST APIs, authentication, serverless functions"
+        - text: "<b>Data Systems:</b> Telemetry, pipelines, automated reporting"
+        - text: "<b>RAG Knowledge Layer:</b> Vector search, embeddings, contextual document retrieval"
+        - text: "<b>Multi-Agent Systems:</b> Intelligent agents with memory, task routing, and tool calling"
+        - text: "<b>Workflow Automation:</b> AI-generated processes deployed via n8n, queues, and scheduled tasks"
+        - text: "<b>Real-Time Systems:</b> WebSockets, streaming AI responses, event-driven architecture"
+    content:
+      text: "<b>The Impact of One Continuous Project</b><br><br>You'll graduate ready to orchestrate complete AI systems and leverage AI tools for maximum impact, the skills that define the next decade of software engineering."
+      font_size: ["16px", "16px", "16px", "14px", "14px"]
+    button:
+      style: '{ "padding": "10px", "border-radius": "3px" }'
+      text: "Apply Now"
+      color: "white"
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+
+  - name: what_sets_4geeks_apart
+    position: 7
+    layout: two_column_left
+    proportions: [5, 7]
+    image:
+      style: '{ "backgroundSize": "contain", "width": "auto"}'
+      src: "/images/landing/hombre-con-laptop.png"
+    heading:
+      text: "What Sets 4Geeks Apart"
+      font_size: ["34px", "34px", "34px", "25px", "25px"]
+    button:
+      text: "Apply Now"
+      color: "white"
+      background: "black"
+      path: "#leadform_header"
+    bullets:
+      items:
+        - text: "Unlimited Lifetime Mentorship: 1:1 expert guidance whenever you need it—during the program and throughout your career."
+        - text: "1:7 Teacher-Student Ratio: Small cohorts ensure deep, personalized instruction."
+        - text: "Rigobot AI Tutor: AI-powered progress tracking and feedback tailored to your learning path."
+        - text: "Hyperpersonalized Learning: Human + AI guidance optimize how you learn, helping you move faster and with more confidence."
+        - text: "AI-Fluent From Day 1: Learn to work with coding agents, workflow automation, and multi-agent systems from the start."
+
+  - name: job-guarantee
+    position: 14
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/blonde-girl-laptop.png"
+    heading:
+      style: '{ "margin-top": "0px" }'
+      text: "Add confidence with our Job Guarantee "
+      font_size: ["40px", "34px", "34px", "25px", "25px"]
+    sub_heading:
+      font_size: ["16px", "16px", "16px", "14px", "14px"]
+      style: '{ "font-weight": "100" }'
+      text: "We're so confident in our program that we back it with a job guarantee. If you don't land an AI engineering role within 9 months of graduation, we'll refund 100% of your tuition."
+    content:
+      text: "Join thousands of successful graduates who've launched their AI careers with 4Geeks Academy."
+    bullets:
+      items:
+        - text: "Proven track record: 84% of our graduates are hired within 6 months of completing the program."
+        - text: "Industry connections: Access to 550+ hiring partners actively seeking AI engineering talent."
+        - text: "Career support for life: Unlimited access to career coaching, resume reviews, and interview preparation."
+    button:
+      style: '{ "padding": "10px", "border-radius": "3px" }'
+      text: "Apply Now"
+      color: "white"
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+
+  - name: mentorship-support
+    position: 10
+    proportions: [5, 7]
+    background: "#FFFFFF"
+    layout: two_column_left
+    image:
+      style: '{"backgroundSize": "cover"}'
+      src: "../../../../static/images/landing/ai-mentor.jpg"
+      shadow: true
+    video: "6m1Jyya7eCc"
+    heading:
+      text: "Learn AI Engineering Faster — With Expert Mentorship and Personalized Support"
+      font_size: ["30px", "30px", "28px", "28px", "24px"]
+    sub_heading:
+      text: "Live instruction, unlimited mentorship, and industry-standard tools for accelerated learning."
+    content:
+      text: ""
+      font_size: ["16px"]
+    bullets:
+      items:
+      - text: "Work directly with experienced AI engineers who've built production systems at scale."
+        icon: "check" 
+      - text: "Benefit from our industry-leading 1:7 teacher-student ratio for maximum individual attention."
+        icon: "check" 
+      - text: "Get unlimited access to 1:1 mentorship sessions throughout the program and after graduation."
+        icon: "check"
+
+  - name: financing-options
+    position: 12
+    layout: two_column_left
+    proportions: [6, 6]
+    background: "#F4F9FF"
+    image:
+      style: '{ "backgroundSize": "contain", "backgroundPosition": "center" }'
+      shadow: false
+      src: "/images/landing/latin-woman-laptop-coffee.png"
+    heading:
+      text: "Tuition, Job Guarantee, and Flexible Payment Options"
+      font_size: ["40px", "34px", "34px", "25px", "25px"]
+    sub_heading:
+      text: "Our immersive AI engineering program costs $16,999 and includes a job guarantee to protect your investment. We also offer various financing plans and loan options to make this career-changing opportunity accessible."
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    bullets:
+      items:
+        - text: "Includes Job Guarantee: If you're not hired within 9 months of graduation, receive a 100% tuition refund. (Conditions apply.)"
+        - text: "Flexible Financing: Choose from multiple monthly payment plans starting at $425/month."
+        - text: "We're Here to Help: Contact us and we'll help you find the financing option that works best for your situation."        
+    button:
+      style: '{ "padding-top": "10px", "border-radius": "3px" }'
+      text: "Get in touch"
+      color: "white"
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+
+  - name: testimonials
+    position: 14
+    layout: testimonials_new
+    variant: small
+    heading:
+      style: '{ "font-weight": "400", "color": "#3A3A3A" }'
+      text: "Real Stories from AI Engineering Graduates"
+      font_size: ["35px", "35px", "30px", "30px", "26px"]
+    sub_heading:
+      text: "Hear from graduates who've successfully transitioned into AI engineering roles. From career changers to salary increases, see how our program has transformed their professional lives."
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    filter_indexes: ["nai-kali", "jona-ferra", "kev-so"]
+

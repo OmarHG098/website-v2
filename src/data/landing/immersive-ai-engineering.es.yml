@@ -1,0 +1,113 @@
+meta_info:
+  slug: ingenieria-ia-inmersiva
+  title: "Programa Inmersivo de Ingeniería en IA | 4Geeks Academy"
+  description: "Domina la ingeniería en IA en 20 semanas con entrenamiento práctico. Construye sistemas completos con mentoría 1:1. 84% contratados en 6 meses."
+  visibility: "hidden"
+  image: "/images/bg/remote.jpeg"
+  keywords: ""
+  template: "landing_a"
+  redirects: []
+  utm_course: ["applied-ai"]
+  utm_location: ["buenosaires-argentina", "bogota-colombia", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador", "santiago-chile"]
+  automation: strong
+  tag: website-lead
+
+navbar:
+  buttonText: "Aplicar Ahora"
+  buttonUrl: "#leadform_header"
+  logoUrl: "#"
+
+header_data:
+  tagline: "Conviértete en el Ingeniero en IA que las Empresas Buscan Contratar"
+  sub_heading: "Un programa inmersivo de 20 semanas donde construirás sistemas completos potenciados por IA. Domina las habilidades nativas de IA que definen la próxima generación de ingeniería de software—acelerado por mentoría 1:1 y orientación profesional personalizada."
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px
+  text: "¡Aplica ahora—asegura tu lugar en el próximo grupo!"
+  bullets:
+    - "84% contratados en 6 meses"
+    - "Programa inmersivo estructurado de 20 semanas"
+    - "$95K–$135K salario inicial promedio"
+    - "Ratio 1:7 profesor-estudiante"
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "Hemos sido seleccionados como uno de los mejores Bootcamps de Programación Online por Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Reconocidos por Fortune como uno de los mejores Bootcamps de Programación"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Mejor Bootcamp de Programación Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licenciado por el Departamento de Educación de Florida"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "Certificado ARP"
+
+form:
+  fields: ["full_name", "phone", "email"]
+  heading: "Obtén los Detalles Completos del Programa"
+  motivation: "Aplica a continuación para recibir la descripción general del programa por correo electrónico y elige cómo te gustaría que nuestro equipo de admisiones se comunique contigo."
+  button_label: "Aplicar para más información"
+  redirect: "/us/thank-you/"
+
+follow_bar:
+  position: "top"
+  content:
+    text: "Domina las habilidades de ingeniería en IA que las empresas necesitan ahora."
+    text_mobile: "Domina ingeniería en IA."
+    font_size: ["22px", "22px", "22px", "16px", "16px"]
+  button:
+    text: "Aplicar Ahora"
+    path: "#leadform_header"
+  phone:
+    text: ""
+
+apply_schollarship:
+  imageSide: "right"
+  image: "../../../static/images/landing/apply.png"
+
+components:
+  - name: leadform_header
+    position: 1
+    layout: two_column_left
+    proportions: [5, 7]
+    image:
+      style: '{ "backgroundSize": "contain", "width": "auto"}'
+      src: "/images/landing/hombre-con-laptop.png"
+    heading:
+      text: "Lo que Distingue a Este Programa: Ingeniería Nativa en IA, Proyectos Reales y Resultados Profesionales"
+      font_size: ["34px", "34px", "34px", "25px", "25px"]
+    button:
+      text: "Aplicar Ahora"
+      color: "white"
+      background: "black"
+      path: "#leadform_header"
+    bullets:
+      items:
+        - text: "Domina la ingeniería en IA de vanguardia: Construye sistemas de IA listos para producción usando LLMs, bases de datos vectoriales y frameworks modernos de IA."
+        - text: "Mentoría ilimitada de expertos en IA: Obtén soporte 1:1 de ingenieros en IA experimentados cuando lo necesites, durante el programa y después."
+        - text: "Portafolio de proyectos reales: Gradúate con un portafolio de aplicaciones de IA que demuestran tu capacidad para construir sistemas completos."
+        - text: "Habilidades que los empleadores necesitan: Aprende las herramientas y técnicas exactas que las empresas están contratando ahora en el espacio de IA."
+
