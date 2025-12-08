@@ -19,7 +19,7 @@ navbar:
 
 header_data:
   tagline: "Become the AI Engineer Companies Are Racing to Hire"
-  sub_heading: "A 20-week immersive program where you'll build complete AI-powered systems. Master the AI-native skills defining the next generation of software engineering—accelerated by 1:1 mentorship and personalized career guidance."
+  sub_heading: "Master the AI-native skills defining the next generation of software engineering – powered by 1:1 mentorship and personalized career guidance."
   background: "#ffffff"
   tagline_color: "#1c1c1c"
   form_styles:
@@ -34,10 +34,11 @@ features:
   marginTop: 0px
   text: "Apply now—secure your spot in the next cohort!"
   bullets:
-    - "84% hired within 6 months"
-    - "20-week structured immersive program"
-    - "$95K–$135K average starting salary"
+    - "20-week immersive program"    
     - "1:7 teacher-student ratio"
+    - "84% hired within 6 months"
+    - "$95K–$135K average starting salary"
+
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"
@@ -84,11 +85,6 @@ follow_bar:
   phone:
     text: ""
 
-program_details:
-  position: 3
-  heading: "What You'll Learn in 20 Weeks"
-  sub_heading: "Build production-ready AI systems from the ground up"
-  background: "#FFFFFF"
 
 rating_reviews:
   background: "#FBFBFB"
@@ -112,20 +108,16 @@ rating_reviews:
       rating: 4.9
       url: ""
 
-geeks_vs_others:
-  position: 9
-  heading: "Compare 4Geeks Academy"
-  paragraph: "See how we stack up against other bootcamps and traditional education"
-  sub_heading: "Discover what makes our AI engineering program different"
-  total_rows: 5
+#geeks_vs_others:
+ # position: 15
+  #heading: "Compare 4Geeks Academy"
+  #paragraph: "See how we stack up against other bootcamps and traditional education"
+  #sub_heading: "Discover what makes our AI engineering program different"
+  #total_rows: 5
 
-why_4geeks:
-  position: 11
-  heading: "Why Choose 4Geeks Academy for AI Engineering"
-  sub_heading: "Industry-leading program with proven results"
 
 who_is_hiring:
-  position: 13
+  position: 21
   limit: 4
   heading: "Who is hiring our students?"
   sub_heading: "550+ hiring partners, and 50+ job openings right now for AI engineers"
@@ -137,16 +129,16 @@ apply_schollarship:
 components:
   - name: leadform_header
     position: 1
-    layout: two_column_left
+    layout: two_column_right
     proportions: [5, 7]
     image:
       style: '{ "backgroundSize": "contain", "width": "auto"}'
-      src: "/images/landing/hombre-con-laptop.png"
+      src: "/images/landing/reservation-es.webp"
     heading:
-      text: "Why This Program Now"
+      text: "Why Learn AI Engineering Now"
       font_size: ["34px", "34px", "34px", "25px", "25px"]
     sub_heading:
-      text: "Companies urgently need engineers who can orchestrate AI systems, automate workflows, and transform operations with AI tools. Most programs teach isolated skills through disconnected projects. We train you to turn one complete business into an AI-native operation—across frontend, backend, data, automation, and agents."
+      text: "Companies are actively searching for engineers who can orchestrate AI systems, automate workflows, and transform operations with AI tools."
       font_size: ["16px", "16px", "16px", "14px", "14px"]
       style: '{ "font-weight": "100" }'
     button:
@@ -161,7 +153,7 @@ components:
         - text: "• 30–50% salary premium vs traditional developers"
 
   - name: about-program
-    position: 4
+    position: 3
     layout: two_column_left
     proportions: [6, 6]
     background: "#ffffff"
@@ -170,21 +162,18 @@ components:
       src: "/images/landing/two-womans-and-laptop.webp"
       shadow: false
     heading:
-      text: "This Is Not Exploration — It's Career Transformation"
+      text: "Is This Program Right for You?"
       font_size: ["40px", "34px", "34px", "25px", "25px"]
     sub_heading:
-      text: "This AI Engineering program is designed for professionals ready to commit 20–24 hours per week for 20 weeks (evening classes + dedicated homework) and who want to make a real career shift. <b>Is The Program Right for You? You're a strong fit if you are:</b>"
+      text: " You're a strong fit if you are:"
       font_size: ["16px", "16px", "16px", "14px", "14px"]
       style: '{ "font-weight": "100" }'
-    content:
-      text: "By graduation, you'll have built an end-to-end AI-powered company and be ready to launch the next stage of your career."
-      font_size: ["16px", "16px", "16px", "14px", "14px"]
     bullets:
       items:
-        - text: "• Ready for intensive learning: Evening classes + 10–15 hours of homework per week"
-        - text: "• Focused on career impact: Want AI-native skills that open high-demand, high-paying roles"
-        - text: "• Motivated by structure: Prefer clear milestones, expert guidance, and a cohort that keeps you accountable"
-        - text: "• Prepared to invest in yourself: Financing options and limited scholarships available"
+        - text: '<strong style="font-weight: 800;">• Ready for intensive learning:</strong> 20–24 hours/week for 20 weeks (evening classes + 10–15 hrs of homework)'
+        - text: '<strong style="font-weight: 800;">• Focused on career impact:</strong> Want AI-native skills that unlock high-demand, high-paying roles'
+        - text: '<strong style="font-weight: 800;">• Motivated by structure:</strong> Prefer clear milestones, expert instructors, and a supportive cohort'
+        - text: '<strong style="font-weight: 800;">• Prepared to invest in yourself:</strong> Financing options + limited scholarships available'
     button:
       text: "Learn More"
       color: "white"
@@ -192,7 +181,7 @@ components:
       path: "#leadform_header"
 
   - name: outcomes-stats
-    position: 8
+    position: 11
     background: "#0084FF"
     layout: iconogram
     swipable: true
@@ -223,7 +212,7 @@ components:
         content: "$85K–$120K"
 
   - name: ai-engineering-skills
-    position: 6
+    position: 5
     layout: two_column_right
     proportions: [6, 6]
     image:
@@ -236,18 +225,18 @@ components:
     sub_heading:
       font_size: ["16px", "16px", "16px", "14px", "14px"]
       style: '{ "font-weight": "100" }'
-      text: "Master what it takes to build and scale an entire AI-native business, not just individual features. Every milestone builds on the last, giving you real end-to-end engineering experience:"
+      text: "Learn to build and scale an <strong style='font-weight: 800;'>entire AI-native business</strong>, not just individual features. Every milestone builds on the last, giving you real end-to-end engineering experience:"
     bullets:
       items:
-        - text: "<b>AI-Assisted Frontend:</b> Modern React application with AI-powered components"
-        - text: "<b>Production Backend:</b> REST APIs, authentication, serverless functions"
-        - text: "<b>Data Systems:</b> Telemetry, pipelines, automated reporting"
-        - text: "<b>RAG Knowledge Layer:</b> Vector search, embeddings, contextual document retrieval"
-        - text: "<b>Multi-Agent Systems:</b> Intelligent agents with memory, task routing, and tool calling"
-        - text: "<b>Workflow Automation:</b> AI-generated processes deployed via n8n, queues, and scheduled tasks"
-        - text: "<b>Real-Time Systems:</b> WebSockets, streaming AI responses, event-driven architecture"
+        - text: "<strong style='font-weight: 800;'>AI-Assisted Frontend:</strong> Modern React application with AI-powered components"
+        - text: "<strong style='font-weight: 800;'>Production Backend:</strong> REST APIs, authentication, serverless functions"
+        - text: "<strong style='font-weight: 800;'>Data Systems:</strong> Telemetry, pipelines, automated reporting"
+        - text: "<strong style='font-weight: 800;'>RAG Knowledge Layer:</strong> Vector search, embeddings, contextual document retrieval"
+        - text: "<strong style='font-weight: 800;'>Multi-Agent Systems:</strong> Intelligent agents with memory, task routing, and tool calling"
+        - text: "<strong style='font-weight: 800;'>Workflow Automation:</strong> AI-generated processes deployed via n8n, queues, and scheduled tasks"
+        - text: "<strong style='font-weight: 800;'>Real-Time Systems:</strong> WebSockets, streaming AI responses, event-driven architecture"
     content:
-      text: "<b>The Impact of One Continuous Project</b><br><br>You'll graduate ready to orchestrate complete AI systems and leverage AI tools for maximum impact, the skills that define the next decade of software engineering."
+      text: "<strong style='font-weight: 800;'>The Impact of One Continuous Project</strong><br><br>By graduation, you won't have 'projects.' <strong style='font-weight: 800;'>You'll have built a complete AI-native company end-to-end</strong>. Exactly what real life businesses are hiring for right now."
       font_size: ["16px", "16px", "16px", "14px", "14px"]
     button:
       style: '{ "padding": "10px", "border-radius": "3px" }'
@@ -258,14 +247,14 @@ components:
       path: "#leadform_bottom"
 
   - name: what_sets_4geeks_apart
-    position: 7
+    position: 9
     layout: two_column_left
     proportions: [5, 7]
     image:
       style: '{ "backgroundSize": "contain", "width": "auto"}'
       src: "/images/landing/hombre-con-laptop.png"
     heading:
-      text: "What Sets 4Geeks Apart"
+      text: "Why 4Geeks stands out"
       font_size: ["34px", "34px", "34px", "25px", "25px"]
     button:
       text: "Apply Now"
@@ -274,14 +263,14 @@ components:
       path: "#leadform_header"
     bullets:
       items:
-        - text: "Unlimited Lifetime Mentorship: 1:1 expert guidance whenever you need it—during the program and throughout your career."
-        - text: "1:7 Teacher-Student Ratio: Small cohorts ensure deep, personalized instruction."
-        - text: "Rigobot AI Tutor: AI-powered progress tracking and feedback tailored to your learning path."
-        - text: "Hyperpersonalized Learning: Human + AI guidance optimize how you learn, helping you move faster and with more confidence."
-        - text: "AI-Fluent From Day 1: Learn to work with coding agents, workflow automation, and multi-agent systems from the start."
+        - text: "<strong style='font-weight: 800;'>Unlimited Lifetime Mentorship:</strong> 1:1 guidance whenever you need it—during the program and for your entire career."
+        - text: "<strong style='font-weight: 800;'>1:7 Teacher-Student Ratio:</strong> Small cohorts ensure deep, personalized instruction."
+        - text: "<strong style='font-weight: 800;'>Rigobot AI Tutor:</strong> AI-powered progress tracking and feedback tailored to your learning path."
+        - text: "<strong style='font-weight: 800;'>Hyperpersonalized Learning:</strong> Human + AI guidance optimize how you learn, helping you move faster and with more confidence."
+        - text: "<strong style='font-weight: 800;'>AI-Fluent From Day 1:</strong> Learn to work with coding agents, workflow automation, and multi-agent systems from the start."
 
   - name: job-guarantee
-    position: 14
+    position: 19
     layout: two_column_right
     proportions: [6, 6]
     image:
@@ -294,14 +283,14 @@ components:
     sub_heading:
       font_size: ["16px", "16px", "16px", "14px", "14px"]
       style: '{ "font-weight": "100" }'
-      text: "We're so confident in our program that we back it with a job guarantee. If you don't land an AI engineering role within 9 months of graduation, we'll refund 100% of your tuition."
+      text: "We offer multiple ways to fund your enrollment. Choose the option that works best for you."
     content:
-      text: "Join thousands of successful graduates who've launched their AI careers with 4Geeks Academy."
+      text: "Join thousands of successful graduates who've launched their tech careers with 4Geeks Academy."
     bullets:
       items:
-        - text: "Proven track record: 84% of our graduates are hired within 6 months of completing the program."
-        - text: "Industry connections: Access to 550+ hiring partners actively seeking AI engineering talent."
-        - text: "Career support for life: Unlimited access to career coaching, resume reviews, and interview preparation."
+        - text: "<strong style='font-weight: 800;'>Proven track record:</strong> 84% of our graduates are hired within 6 months of completing the program."
+        - text: "<strong style='font-weight: 800;'>Industry connections:</strong> Access to 550+ hiring partners actively seeking AI engineering talent."
+        - text: "<strong style='font-weight: 800;'>Career support for life:</strong> Unlimited access to career coaching, resume reviews, and interview preparation."
     button:
       style: '{ "padding": "10px", "border-radius": "3px" }'
       text: "Apply Now"
@@ -310,35 +299,10 @@ components:
       background: "black"
       path: "#leadform_bottom"
 
-  - name: mentorship-support
-    position: 10
-    proportions: [5, 7]
-    background: "#FFFFFF"
-    layout: two_column_left
-    image:
-      style: '{"backgroundSize": "cover"}'
-      src: "../../../../static/images/landing/ai-mentor.jpg"
-      shadow: true
-    video: "6m1Jyya7eCc"
-    heading:
-      text: "Learn AI Engineering Faster — With Expert Mentorship and Personalized Support"
-      font_size: ["30px", "30px", "28px", "28px", "24px"]
-    sub_heading:
-      text: "Live instruction, unlimited mentorship, and industry-standard tools for accelerated learning."
-    content:
-      text: ""
-      font_size: ["16px"]
-    bullets:
-      items:
-      - text: "Work directly with experienced AI engineers who've built production systems at scale."
-        icon: "check" 
-      - text: "Benefit from our industry-leading 1:7 teacher-student ratio for maximum individual attention."
-        icon: "check" 
-      - text: "Get unlimited access to 1:1 mentorship sessions throughout the program and after graduation."
-        icon: "check"
+ 
 
   - name: financing-options
-    position: 12
+    position: 17
     layout: two_column_left
     proportions: [6, 6]
     background: "#F4F9FF"
@@ -347,16 +311,16 @@ components:
       shadow: false
       src: "/images/landing/latin-woman-laptop-coffee.png"
     heading:
-      text: "Tuition, Job Guarantee, and Flexible Payment Options"
+      text: "Finance Your Investment"
       font_size: ["40px", "34px", "34px", "25px", "25px"]
     sub_heading:
-      text: "Our immersive AI engineering program costs $16,999 and includes a job guarantee to protect your investment. We also offer various financing plans and loan options to make this career-changing opportunity accessible."
+      text: "We offer multiple ways to fund your enrollment. Choose the option that works best for you."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     bullets:
       items:
-        - text: "Includes Job Guarantee: If you're not hired within 9 months of graduation, receive a 100% tuition refund. (Conditions apply.)"
-        - text: "Flexible Financing: Choose from multiple monthly payment plans starting at $425/month."
-        - text: "We're Here to Help: Contact us and we'll help you find the financing option that works best for your situation."        
+        - text: "<strong style='font-weight: 800;'>Full Payment Discount:</strong> Save [X]% with one-time payment, immediate enrollment."
+        - text: "<strong style='font-weight: 800;'>Credit-Based Financing:</strong> ~$XXX/month through Climb or Ascent (credit check required)."
+        - text: "<strong style='font-weight: 800;'>Limited Scholarships:</strong> 2–3 spots per cohort for highly qualified applicants."        
     button:
       style: '{ "padding-top": "10px", "border-radius": "3px" }'
       text: "Get in touch"
@@ -366,15 +330,43 @@ components:
       path: "#leadform_bottom"
 
   - name: testimonials
-    position: 14
+    position: 13
     layout: testimonials_new
-    variant: small
     heading:
       style: '{ "font-weight": "400", "color": "#3A3A3A" }'
-      text: "Real Stories from AI Engineering Graduates"
+      text: "What Our Students Have to Say"
       font_size: ["35px", "35px", "30px", "30px", "26px"]
     sub_heading:
       text: "Hear from graduates who've successfully transitioned into AI engineering roles. From career changers to salary increases, see how our program has transformed their professional lives."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     filter_indexes: ["nai-kali", "jona-ferra", "kev-so"]
+
+  - name: admissions-process
+    position: 15
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/hombre-joven-con-laptop-senalando.webp"
+    heading:
+      text: "How the Admissions Process Works"
+      font_size: ["40px", "34px", "34px", "25px", "25px"]
+    sub_heading:
+      text: "We want to make sure this program is the right fit for you — and that you're fully prepared to succeed."
+      font_size: ["16px", "16px", "16px", "14px", "14px"]
+    content:
+      text: |
+        <p><strong style="font-weight: 800;">1. Pre-Application Survey</strong><br>Share your schedule, goals, and financing needs.</p>
+        <br>
+        <p><strong style="font-weight: 800;">2. Call With Admissions</strong><br>Confirm cohort availability, program expectations and clear any doubts.</p>
+        <br>
+        <p><strong style="font-weight: 800;">3. Technical Assessment</strong><br>A short problem-solving exercise (no advanced coding required).</p>
+        <br>
+        <p><strong style="font-weight: 800;">4. Enroll & Complete Prework</strong><br>Deposit secures your spot; prework prepares you for week 1.</p>
+      font_size: ["16px", "16px", "16px", "14px", "14px"]
+    button:
+      text: "Apply Now"
+      color: "white"
+      background: "black"
+      path: "#leadform_header"
 

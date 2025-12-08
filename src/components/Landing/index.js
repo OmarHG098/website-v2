@@ -760,9 +760,6 @@ export const landingSections = {
   ),
 
   testimonials_new: ({ session, data, pageContext, yml, index }) => {
-    const [h_xl, h_lg, h_md, h_sm, h_xs] =
-      yml.heading && yml.heading.font_size ? yml.heading.font_size : [];
-
     return (
       <Div
         id="testimonials_new"
@@ -774,27 +771,12 @@ export const landingSections = {
         width_tablet="100%"
         maxWidth_tablet="1280px"
       >
-        {yml.heading && yml.heading.text !== "" && (
-          <H2
-            type="h2"
-            textAlign_tablet="center"
-            lineHeight="38px"
-            lineHeight_tablet="38px"
-            fontSize={h_xs || "30px"}
-            fs_xl={h_xl}
-            fontSize_lg={h_lg || "30px"}
-            fontSize_md={h_md || "30px"}
-            fontSize_sm={h_sm}
-            margin="30px 0 0px 0"
-            style={yml.heading.style ? JSON.parse(yml.heading.style) : null}
-          >
-            {yml.heading.text}
-          </H2>
-        )}
         <SuccessStories
           lang={pageContext.lang}
           filterIndexes={yml.filter_indexes}
           variant={yml.variant}
+          heading={yml.heading}
+          sub_heading={yml.sub_heading}
         />
       </Div>
     );
