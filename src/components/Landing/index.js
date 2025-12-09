@@ -946,9 +946,7 @@ export const landingSections = {
 
   divider: ({ session, data, pageContext, yml, index }) => {
     const [h_xl, h_lg, h_md, h_sm, h_xs] =
-      yml.heading && yml.heading.font_size
-        ? yml.heading.font_size
-        : [];
+      yml.heading && yml.heading.font_size ? yml.heading.font_size : [];
     const [sh_xl, sh_lg, sh_md, sh_sm, sh_xs] =
       yml.sub_heading && Array.isArray(yml.sub_heading.font_size)
         ? yml.sub_heading.font_size
@@ -981,8 +979,9 @@ export const landingSections = {
             {yml.heading.text}
           </H2>
         )}
-        {yml.sub_heading && yml.sub_heading.text && (
-          /<\/?[a-z0-9]+>/g.test(yml.sub_heading.text) ? (
+        {yml.sub_heading &&
+          yml.sub_heading.text &&
+          (/<\/?[a-z0-9]+>/g.test(yml.sub_heading.text) ? (
             <Paragraph
               margin="15px 0"
               fontSize={sh_xs || sh_xl || "16px"}
@@ -990,7 +989,9 @@ export const landingSections = {
               fontSize_sm={sh_sm}
               fontSize_tablet={sh_md}
               fontSize_lg={sh_lg}
-              style={yml.sub_heading.style ? JSON.parse(yml.sub_heading.style) : null}
+              style={
+                yml.sub_heading.style ? JSON.parse(yml.sub_heading.style) : null
+              }
               dangerouslySetInnerHTML={{ __html: yml.sub_heading.text }}
             />
           ) : (
@@ -1001,12 +1002,13 @@ export const landingSections = {
               fontSize_sm={sh_sm}
               fontSize_tablet={sh_md}
               fontSize_lg={sh_lg}
-              style={yml.sub_heading.style ? JSON.parse(yml.sub_heading.style) : null}
+              style={
+                yml.sub_heading.style ? JSON.parse(yml.sub_heading.style) : null
+              }
             >
               {yml.sub_heading.text}
             </Paragraph>
-          )
-        )}
+          ))}
       </Div>
     );
   },
