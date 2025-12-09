@@ -76,7 +76,7 @@ form:
 follow_bar:
   position: "top"
   content:
-    text: "Master AI engineering skills that companies need now."
+    text: "Master the AI Engineering skills companies want."
     text_mobile: "Master AI engineering skills."
     font_size: ["22px", "22px", "22px", "16px", "16px"]
   button:
@@ -130,7 +130,7 @@ components:
   - name: leadform_header
     position: 1
     layout: two_column_right
-    proportions: [5, 7]
+    proportions: [6, 6]
     image:
       style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
       src: "/images/landing/reservation-es.webp"
@@ -158,19 +158,22 @@ components:
       shadow: false
     heading:
       text: "Is This Program Right for You?"
-      font_size: ["40px", "34px", "34px", "25px", "25px"]
+      font_size: ["40px", "34px", "34px", "34px", "32px"]
     sub_heading:
       text: " You're a strong fit if you are:"
-      font_size: ["20px", "20px", "16px", "16px", "14px"]
+      font_size: ["20px", "20px", "16px", "16px", "16px"]
       style: '{ "font-weight": "100" }'
     bullets:
-      style: '{ "margin-top": "5px" }'
       items:
         - text: '<strong style="font-weight: 800;">• Ready for intensive learning:</strong> 20–24 hours/week for 20 weeks (evening classes + 10–15 hrs of homework)'
         - text: '<strong style="font-weight: 800;">• Focused on career impact:</strong> Want AI-native skills that unlock high-demand, high-paying roles'
         - text: '<strong style="font-weight: 800;">• Motivated by structure:</strong> Prefer clear milestones, expert instructors, and a supportive cohort'
         - text: '<strong style="font-weight: 800;">• Prepared to invest in yourself:</strong> Financing options + limited scholarships available'
-
+    button:
+      text: "Learn More"
+      color: "white"
+      background: "black"
+      path: "#leadform_header"
 
   - name: outcomes-stats
     position: 11
@@ -206,6 +209,7 @@ components:
   - name: ai-engineering-skills
     position: 5
     layout: two_column_right
+    background: "#fbfbfb"
     proportions: [7, 5]
     image:
       style: '{ "backgroundSize": "contain", "background-position": "center" }'
@@ -213,25 +217,22 @@ components:
     heading:
       style: '{ "margin-top": "0px" }'
       text: "What You'll Build in 20 Weeks"
-      font_size: ["40px", "34px", "34px", "25px", "25px"]
+      font_size: ["40px", "38px", "38px", "34px", "34px"]
     sub_heading:
-      font_size: ["16px", "16px", "16px", "14px", "14px"]
+      font_size: ["18px", "18px", "18px", "18px", "16px"]
       style: '{ "font-weight": "100" }'
       text: "Learn to build and scale an <strong style='font-weight: 800;'>entire AI-native business</strong>, not just individual features. Every milestone builds on the last, giving you real end-to-end engineering experience:"
     bullets:
+      item_style: '{ "padding": "12px 16px", "background-color": "#FFF1D1", "border-radius": "8px", "border": "1px solid #000000"}'
       items:
-        - text: "<strong style='font-weight: 800;'>AI-Assisted Frontend:</strong> Modern React application with AI-powered components"
-        - text: "<strong style='font-weight: 800;'>Production Backend:</strong> REST APIs, authentication, serverless functions"
-        - text: "<strong style='font-weight: 800;'>Data Systems:</strong> Telemetry, pipelines, automated reporting"
-        - text: "<strong style='font-weight: 800;'>RAG Knowledge Layer:</strong> Vector search, embeddings, contextual document retrieval"
-        - text: "<strong style='font-weight: 800;'>Multi-Agent Systems:</strong> Intelligent agents with memory, task routing, and tool calling"
-        - text: "<strong style='font-weight: 800;'>Workflow Automation:</strong> AI-generated processes deployed via n8n, queues, and scheduled tasks"
-        - text: "<strong style='font-weight: 800;'>Real-Time Systems:</strong> WebSockets, streaming AI responses, event-driven architecture"
-    button:
-      text: "Learn More"
-      color: "white"
-      background: "black"
-      path: "#leadform_header"
+        - text: "<p style='color: #000000;'><strong style='font-weight: 800;'>•AI-Assisted Frontend:</strong> Modern React application with AI-powered components</p>"
+        - text: "<p style='color: #000000;'><strong style='font-weight: 800;'>•Production Backend:</strong> REST APIs, authentication, serverless functions</p>"
+        - text: "<p style='color: #000000;'><strong style='font-weight: 800;'>•Data Systems:</strong> Telemetry, pipelines, automated reporting</p>"
+        - text: "<p style='color: #000000;'><strong style='font-weight: 800;'>•RAG Knowledge Layer:</strong> Vector search, embeddings, contextual document retrieval</p>"
+        - text: "<p style='color: #000000;'><strong style='font-weight: 800;'>•Multi-Agent Systems:</strong> Intelligent agents with memory, task routing, and tool calling</p>"
+        - text: "<p style='color: #000000;'><strong style='font-weight: 800;'>•Workflow Automation:</strong> AI-generated processes deployed via n8n, queues, and scheduled tasks</p>"
+        - text: "<p style='color: #000000;'><strong style='font-weight: 800;'>•Real-Time Systems:</strong> WebSockets, streaming AI responses, event-driven architecture</p>"
+
 
   - name: what_sets_4geeks_apart
     position: 9
@@ -289,8 +290,8 @@ components:
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     bullets:
       items:
-        - text: "<strong style='font-weight: 800;'>Full Payment Discount:</strong> Save [X]% with one-time payment, immediate enrollment."
-        - text: "<strong style='font-weight: 800;'>Credit-Based Financing:</strong> ~$XXX/month through Climb or Ascent (credit check required)."
+        - text: "<strong style='font-weight: 800;'>Full Payment Discount:</strong> Save 10% with one-time payment, immediate enrollment."
+        - text: "<strong style='font-weight: 800;'>Credit-Based Financing:</strong> Starting below $299 a month through through financing partners (credit check required)."
         - text: "<strong style='font-weight: 800;'>Limited Scholarships:</strong> 2–3 spots per cohort for highly qualified applicants."        
     button:
       style: '{ "padding-top": "10px", "border-radius": "3px" }'
@@ -316,6 +317,7 @@ components:
     position: 15
     layout: two_column_left
     proportions: [6, 6]
+    background: "#F4F9FF"
     image:
       style: '{ "backgroundSize": "contain", "background-position": "center" }'
       src: "/images/landing/hombre-joven-con-laptop-senalando.webp"
