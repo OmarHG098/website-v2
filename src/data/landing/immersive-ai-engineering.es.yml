@@ -1,0 +1,338 @@
+meta_info:
+  slug: programa-inmersivo-ingenieria-ia
+  title: "Programa Inmersivo de Ingeniería en IA | 4Geeks Academy"
+  description: "Domina la ingeniería en IA en 20 semanas con entrenamiento práctico. Crea sistemas completos con IA con mentoría 1:1. 84% contratados en 6 meses."
+  visibility: "hidden"
+  image: "/images/bg/remote.jpeg"
+  keywords: ""
+  template: "landing_a"
+  redirects: []
+  utm_course: ["applied-ai"]
+  utm_location: ["bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador", "santiago-chile", "online", "online-spanish-usa"]
+  automation: strong
+  tag: website-lead
+
+navbar:
+  buttonText: "Aplica Ahora"
+  buttonUrl: "#leadform_header"
+  logoUrl: "#"
+
+header_data:
+  tagline: "Conviértete en el Ingeniero de IA que las Empresas Buscan Contratar"
+  sub_heading: "Domina las habilidades nativas de IA que definen la próxima generación de ingeniería de software – impulsado por mentoría 1:1 y orientación profesional personalizada."
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 15px
+  text: "¡Aplica ahora y asegura tu lugar en el próximo grupo!"
+  bullets:
+    - "Programa inmersivo de 20 semanas"    
+    - "Ratio profesor-estudiante de 1:7"
+    - "84% contratados en 6 meses"
+    - "$95K–$135K USD salario inicial promedio"
+
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "Hemos sido seleccionados como uno de los mejores Bootcamps de Programación Online por Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Reconocidos por Fortune como uno de los mejores Bootcamps de Programación"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Mejor Bootcamp de Programación Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licenciados por el Departamento de Educación de Florida"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "Certificado ARP"
+
+form:
+  fields: ["full_name", "phone", "email"]
+  heading: "Obtén los Detalles Completos del Programa"
+  motivation: "Aplica abajo para recibir la descripción general del programa por correo electrónico y elige cómo te gustaría que nuestro equipo de admisiones se comunique contigo."
+  button_label: "Más Información"
+  redirect: "/es/gracias/"
+
+follow_bar:
+  position: "top"
+  content:
+    text: "Domina las habilidades de Ingeniería en IA que buscan las empresas."
+    text_mobile: "Domina habilidades de Ingeniería en IA."
+    font_size: ["22px", "22px", "22px", "16px", "16px"]
+  button:
+    text: "Aplica Ahora"
+    path: "#leadform_header"
+  phone:
+    text: ""
+
+
+rating_reviews:
+  background: "#FBFBFB"
+  position: 7
+  heading: "Reconocidos Globalmente y Mejor Calificados"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
+
+#geeks_vs_others:
+ # position: 15
+  #heading: "Compara 4Geeks Academy"
+  #paragraph: "Mira cómo nos comparamos con otros bootcamps y la educación tradicional"
+  #sub_heading: "Descubre qué hace diferente a nuestro programa de ingeniería en IA"
+  #total_rows: 5
+
+
+who_is_hiring:
+  position: 21
+  limit: 4
+  heading: "¿Quién está contratando a nuestros estudiantes?"
+  sub_heading: "Algunas de las empresas donde nuestros graduados están prosperando"
+
+apply_schollarship:
+  imageSide: "right"
+  image: "../../../static/images/landing/apply.png"
+
+components:
+  - name: leadform_header
+    position: 1
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
+      src: "/images/landing/reservation-es.webp"
+    heading:
+      text: "Por Qué Aprender Ingeniería en IA Ahora"
+      font_size: ["34px", "34px", "34px", "25px", "25px"]
+    sub_heading:
+      text: "Las empresas están buscando activamente ingenieros que puedan orquestar sistemas de IA, automatizar flujos de trabajo y transformar operaciones con herramientas de IA."
+      font_size: ["16px", "16px", "16px", "14px", "14px"]
+      style: '{ "font-weight": "100" }'
+    bullets:
+      items:
+        - text: "• 3.5M empleos de ingeniería en IA proyectados para 2026"
+        - text: "• 47% de crecimiento interanual en publicaciones de empleos de IA"
+        - text: "• 30–50% de prima salarial vs desarrolladores tradicionales"
+
+  - name: about-program
+    position: 3
+    layout: two_column_left
+    proportions: [6, 6]
+    background: "#ffffff"
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
+      src: "/images/landing/two-womans-and-laptop.webp"
+      shadow: false
+    heading:
+      text: "¿Es Este Programa Adecuado para Ti?"
+      font_size: ["40px", "34px", "34px", "34px", "32px"]
+    sub_heading:
+      text: " Eres un buen candidato si:"
+      font_size: ["20px", "20px", "16px", "16px", "16px"]
+      style: '{ "font-weight": "100" }'
+    bullets:
+      items:
+        - text: '<strong style="font-weight: 800;">• Estás listo para un aprendizaje intensivo:</strong> 20–24 horas/semana durante 20 semanas (clases nocturnas + 10–15 hrs de tareas)'
+        - text: '<strong style="font-weight: 800;">• Te enfocas en el impacto profesional:</strong> Quieres habilidades nativas de IA que desbloqueen roles de alta demanda y bien pagados'
+        - text: '<strong style="font-weight: 800;">• Te motiva la estructura:</strong> Prefieres objetivos claros, instructores expertos y un grupo de apoyo'
+        - text: '<strong style="font-weight: 800;">• Preparado para invertir en ti mismo:</strong> Opciones de financiamiento + becas limitadas disponibles'
+    button:
+      text: "Saber Más"
+      color: "white"
+      background: "black"
+      path: "#leadform_header"
+
+  - name: outcomes-stats
+    position: 11
+    background: "#0084FF"
+    layout: iconogram
+    swipable: true
+    heading:
+      text: "Resultados Profesionales"
+      font_size: ["34px", "34px", "30px", "30px", "30px"]
+      style: '{ "color": "white" }'
+    sub_heading:
+      text: "84% de nuestros Graduados Consiguen un Empleo dentro de los 6 meses de graduación."
+      font_size: ["20px", "20px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "70%", "color": "white"}'      
+    icons:
+      - icon: "laptop-icon-new"
+        color: "#0084FF"
+        title: "Ingeniero de Software de IA"
+        content: "$95K–$135K USD"
+      - icon: "rocket-2"
+        color: "#25BF6C"
+        title: "Ingeniero Full-Stack (Fluido en IA)"
+        content: "$100K–$145K USD"
+      - icon: "network"
+        color: "#BE8BFF"
+        title: "Ingeniero de Agentes / Automatización de Flujos"
+        content: "$105K–$155K USD"
+      - icon: "chart"
+        color: "#FF0000"
+        title: "Ingeniero de Automatización de Flujos de Trabajo"
+        content: "$85K–$120K USD"
+
+  - name: ai-engineering-skills
+    position: 5
+    layout: two_column_right
+    background: "#fbfbfb"
+    proportions: [7, 5]
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center" }'
+      src: "../../images/landing/applied-ai-icons.webp"
+    heading:
+      style: '{ "margin-top": "0px" }'
+      text: "Lo Que Construirás en 20 Semanas"
+      font_size: ["40px", "38px", "38px", "34px", "34px"]
+    sub_heading:
+      font_size: ["18px", "18px", "18px", "18px", "16px"]
+      style: '{ "font-weight": "100" }'
+      text: "Aprende a construir y escalar un <strong style='font-weight: 800;'>negocio completo nativo de IA</strong>, no solo funcionalidades individuales. Cada hito se construye sobre el anterior, dándote experiencia real de ingeniería de principio a fin:"
+    bullets:
+      item_style: '{ "padding": "12px 16px", "background-color": "#FFF1D1", "border-radius": "8px", "border": "1px solid #000000"}'
+      items:
+        - text: "<p style='color: #000000;'><strong style='font-weight: 800;'>•Frontend Asistido por IA:</strong> Aplicación React moderna con componentes potenciados por IA</p>"
+        - text: "<p style='color: #000000;'><strong style='font-weight: 800;'>•Backend de Producción:</strong> REST APIs, autenticación, funciones serverless</p>"
+        - text: "<p style='color: #000000;'><strong style='font-weight: 800;'>•Sistemas de Datos:</strong> Telemetría, pipelines, reportes automatizados</p>"
+        - text: "<p style='color: #000000;'><strong style='font-weight: 800;'>•Capa de Conocimiento RAG:</strong> Búsqueda vectorial, embeddings, recuperación contextual de documentos</p>"
+        - text: "<p style='color: #000000;'><strong style='font-weight: 800;'>•Sistemas Multi-Agente:</strong> Agentes inteligentes con memoria, enrutamiento de tareas y llamadas a herramientas</p>"
+        - text: "<p style='color: #000000;'><strong style='font-weight: 800;'>•Automatización de Flujos de Trabajo:</strong> Procesos generados por IA desplegados vía n8n, colas y tareas programadas</p>"
+        - text: "<p style='color: #000000;'><strong style='font-weight: 800;'>•Sistemas en Tiempo Real:</strong> WebSockets, respuestas de IA en streaming, arquitectura dirigida por eventos</p>"
+
+
+  - name: what_sets_4geeks_apart
+    position: 9
+    layout: two_column_left
+    proportions: [5, 7]
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
+      src: "/images/landing/hombre-con-laptop.png"
+    heading:
+      text: "Por Qué 4Geeks se Destaca"
+      font_size: ["34px", "34px", "34px", "25px", "25px"]
+    button:
+      text: "Aplica Ahora"
+      color: "white"
+      background: "black"
+      path: "#leadform_header"
+    bullets:
+      items:
+        - text: "<strong style='font-weight: 800;'>Mentoría Ilimitada de por Vida:</strong> Orientación 1:1 cuando la necesites—durante el programa y para toda tu carrera."
+        - text: "<strong style='font-weight: 800;'>Ratio Profesor-Estudiante de 1:7:</strong> Grupos pequeños aseguran instrucción profunda y personalizada."
+        - text: "<strong style='font-weight: 800;'>Tutor de IA Rigobot:</strong> Seguimiento de progreso impulsado por IA y retroalimentación adaptada a tu camino de aprendizaje."
+        - text: "<strong style='font-weight: 800;'>Aprendizaje Hiperpersonalizado:</strong> La orientación humana + IA optimizan cómo aprendes, ayudándote a avanzar más rápido y con más confianza."
+        - text: "<strong style='font-weight: 800;'>Fluido en IA Desde el Día 1:</strong> Aprende a trabajar con agentes de código, automatización de flujos de trabajo y sistemas multi-agente desde el principio."
+
+  - name: job-guarantee
+    position: 19
+    layout: divider
+    background: "#0084FF"
+    heading:
+      text: "Añade confianza con nuestra Garantía de Empleo "
+      font_size: ["40px", "34px", "34px", "20px", "20px"]
+      style: '{ "color": "white" }'
+    sub_heading:
+      text: "Consigue empleo dentro de los 9 meses de graduación, o recibe un reembolso completo de matrícula. Se aplican términos y condiciones."
+      font_size: ["20px", "20px", "18px", "14px", "14px"]
+      style: '{ "color": "white" }'
+    height: ["150px", "150px", "200px", "350px", "350px"]
+
+
+
+  - name: financing-options
+    position: 17
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "#F4F9FF"
+    image:
+      style: '{ "backgroundSize": "contain", "backgroundPosition": "center" }'
+      shadow: false
+      src: "/images/landing/latin-woman-laptop-coffee.png"
+    heading:
+      text: "Financia Tu Inversión"
+      font_size: ["40px", "34px", "34px", "25px", "25px"]
+    sub_heading:
+      text: "Ofrecemos múltiples formas de financiar tu inscripción. Elige la opción que mejor funcione para ti."
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    bullets:
+      items:
+        - text: "<strong style='font-weight: 800;'>Descuento por Pago Completo:</strong> Ahorra 10% con pago único, inscripción inmediata."
+        - text: "<strong style='font-weight: 800;'>Financiamiento Basado en Crédito:</strong> Empezando desde menos de $299 USD al mes a través de socios financieros (se requiere verificación de crédito)."
+        - text: "<strong style='font-weight: 800;'>Becas Limitadas:</strong> 2–3 lugares por grupo para solicitantes altamente calificados."        
+    button:
+      style: '{ "padding-top": "10px", "border-radius": "3px" }'
+      text: "Contáctanos"
+      color: "white"
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+
+  - name: testimonials
+    position: 13
+    layout: testimonials_new
+    heading:
+      style: '{ "font-weight": "400", "color": "#3A3A3A" }'
+      text: "Lo Que Nuestros Estudiantes Tienen Que Decir"
+      font_size: ["35px", "35px", "30px", "30px", "26px"]
+    sub_heading:
+      text: "Escucha a graduados que han hecho una transición exitosa a roles de ingeniería en IA. Desde cambios de carrera hasta aumentos salariales, mira cómo nuestro programa ha transformado sus vidas profesionales."
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    filter_indexes: ["nai-kali", "jona-ferra", "kev-so"]
+
+  - name: admissions-process
+    position: 15
+    layout: two_column_left
+    proportions: [6, 6]
+    background: "#F4F9FF"
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center" }'
+      src: "/images/landing/hombre-joven-con-laptop-senalando.webp"
+    heading:
+      text: "Cómo Funciona el Proceso de Admisiones"
+      font_size: ["40px", "34px", "34px", "25px", "25px"]
+    sub_heading:
+      text: "Queremos asegurarnos de que este programa sea la opción correcta para ti — y que estés completamente preparado para tener éxito."
+      font_size: ["16px", "16px", "16px", "14px", "14px"]
+    content:
+      text: |
+        <p><strong style="font-weight: 800;">1. Encuesta de Pre-Aplicación</strong><br>Comparte tu horario, objetivos y necesidades de financiamiento.</p>
+        <p><strong style="font-weight: 800;">2. Llamada con Admisiones</strong><br>Confirma disponibilidad del grupo, expectativas del programa y aclara cualquier duda.</p>
+        <p><strong style="font-weight: 800;">3. Evaluación Técnica</strong><br>Un ejercicio corto de resolución de problemas (no se requiere programación avanzada).</p>
+        <p><strong style="font-weight: 800;">4. Inscríbete y Completa el Trabajo Previo</strong><br>El depósito asegura tu lugar; el trabajo previo te prepara para la semana 1.</p>
+        <br>
+      font_size: ["16px", "16px", "16px", "14px", "14px"]
+

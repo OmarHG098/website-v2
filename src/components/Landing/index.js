@@ -760,9 +760,6 @@ export const landingSections = {
   ),
 
   testimonials_new: ({ session, data, pageContext, yml, index }) => {
-    const [h_xl, h_lg, h_md, h_sm, h_xs] =
-      yml.heading && yml.heading.font_size ? yml.heading.font_size : [];
-
     return (
       <Div
         id="testimonials_new"
@@ -774,27 +771,12 @@ export const landingSections = {
         width_tablet="100%"
         maxWidth_tablet="1280px"
       >
-        {yml.heading && yml.heading.text !== "" && (
-          <H2
-            type="h2"
-            textAlign_tablet="center"
-            lineHeight="38px"
-            lineHeight_tablet="38px"
-            fontSize={h_xs || "30px"}
-            fs_xl={h_xl}
-            fontSize_lg={h_lg || "30px"}
-            fontSize_md={h_md || "30px"}
-            fontSize_sm={h_sm}
-            margin="30px 0 0px 0"
-            style={yml.heading.style ? JSON.parse(yml.heading.style) : null}
-          >
-            {yml.heading.text}
-          </H2>
-        )}
         <SuccessStories
           lang={pageContext.lang}
           filterIndexes={yml.filter_indexes}
           variant={yml.variant}
+          heading={yml.heading}
+          sub_heading={yml.sub_heading}
         />
       </Div>
     );
@@ -964,14 +946,17 @@ export const landingSections = {
 
   divider: ({ session, data, pageContext, yml, index }) => {
     const [h_xl, h_lg, h_md, h_sm, h_xs] =
-      yml.section_heading && yml.section_heading.font_size
-        ? yml.section_heading.font_size
+      yml.heading && yml.heading.font_size ? yml.heading.font_size : [];
+    const [sh_xl, sh_lg, sh_md, sh_sm, sh_xs] =
+      yml.sub_heading && Array.isArray(yml.sub_heading.font_size)
+        ? yml.sub_heading.font_size
         : [];
     return (
       <Div
         id="divider"
         flexDirection="column"
         key={index}
+        background={Colors[yml.background] || yml.background}
         height={yml.height[0]}
         lg={yml.height[1]}
         md={yml.height[2]}
@@ -989,11 +974,41 @@ export const landingSections = {
             fontSize_md={h_md || "30px"}
             fontSize_sm={h_sm}
             margin="30px 0 0px 0"
-            style={yml.heading.style ? JSON.parse(heading.heading.style) : null}
+            style={yml.heading.style ? JSON.parse(yml.heading.style) : null}
           >
             {yml.heading.text}
           </H2>
         )}
+        {yml.sub_heading &&
+          yml.sub_heading.text &&
+          (/<\/?[a-z0-9]+>/g.test(yml.sub_heading.text) ? (
+            <Paragraph
+              margin="15px 0"
+              fontSize={sh_xs || sh_xl || "16px"}
+              fontSize_xs={sh_xs}
+              fontSize_sm={sh_sm}
+              fontSize_tablet={sh_md}
+              fontSize_lg={sh_lg}
+              style={
+                yml.sub_heading.style ? JSON.parse(yml.sub_heading.style) : null
+              }
+              dangerouslySetInnerHTML={{ __html: yml.sub_heading.text }}
+            />
+          ) : (
+            <Paragraph
+              margin="15px 0"
+              fontSize={sh_xs || sh_xl || "16px"}
+              fontSize_xs={sh_xs}
+              fontSize_sm={sh_sm}
+              fontSize_tablet={sh_md}
+              fontSize_lg={sh_lg}
+              style={
+                yml.sub_heading.style ? JSON.parse(yml.sub_heading.style) : null
+              }
+            >
+              {yml.sub_heading.text}
+            </Paragraph>
+          ))}
       </Div>
     );
   },

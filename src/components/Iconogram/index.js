@@ -7,6 +7,11 @@ import IconsBanner from "../IconsBanner";
 const Iconogram = ({ yml, index }) => {
   const { heading, sub_heading, icons, button, swipable, background } = yml;
 
+  const [sh_xl, sh_lg, sh_md, sh_sm, sh_xs] =
+    sub_heading && Array.isArray(sub_heading.font_size)
+      ? sub_heading.font_size
+      : [];
+
   return (
     <Div
       key={index}
@@ -41,6 +46,11 @@ const Iconogram = ({ yml, index }) => {
           padding_md={heading?.text ? "0 10%" : "20px 10%"}
           margin="15px auto"
           maxWidth="1280px"
+          fontSize={sh_xs || sh_xl || "16px"}
+          fontSize_xs={sh_xs}
+          fontSize_sm={sh_sm}
+          fontSize_tablet={sh_md}
+          fontSize_lg={sh_lg}
           dangerouslySetInnerHTML={{ __html: sub_heading.text }}
           style={sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}}
         />
