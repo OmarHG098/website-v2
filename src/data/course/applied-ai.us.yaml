@@ -5,7 +5,7 @@ meta_info:
   bc_slug: "applied-ai"
   template: "course-applied-ai"
   image: "/images/og-preview/applied-ai-bg.jpg"
-  visibility: "visibility"
+  visibility: "visible"
   keywords: ""
   show_in_apply: false
   redirects: ["/us/applied-ai"]
@@ -15,10 +15,10 @@ meta_info:
 apply_form:
   label: Applied AI for Professionals (no-code)
 
-seo_title: "Course in Applied Artificial Intelligence (AI)"
+seo_title: "Artificial Intelligence (AI) for Professionals"
 header:
-  title: "Excel at your job through Applied AI"
-  paragraph: "Get ready to maximize your productivity in just 6 weeks!"
+  title: "Stay relevant in your career. Lead with AI."
+  paragraph: "Gain the AI skills to stay competitive and advance your career in just 6 weeks. Learn to apply AI at work for greater efficiency, creativity, and impact."
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "Applied AI"
 
@@ -44,36 +44,20 @@ course_instructors:
         Cloud application development, Web development, Web design, and User Experience (UX) Design."
       linkedin: "https://www.linkedin.com/in/charlytoc/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
 
-    # - name: "Sayyed Nezhadi"
-    #   sub_title: "Doctorado en Inteligencia Artificial de la Universidad de Toronto"
-    #   degree: "Doctorado en Inteligencia Artificial"
-    #   image: "../../../static/images/instructors/sayyed.jpeg"
-    #   bio: "Más de 25 años de experiencia en la entrega de soluciones complejas habilitadas para IA y arquitecturas digitales para grandes empresas. PhD en Inteligencia Artificial de la Universidad de Toronto, y certificados en Big Data Analytics y Big Data de Hardvard y MIT respectivamente."
-    #   github: "https://github.com/snezhadi"
-    #   linkedin: "https://www.linkedin.com/in/sayyednezhadi"
-
 badges:
-  paragraph: "Boost your career at 4Geeks Academy, where developers grow and thrive.  Listed among the world's best coding bootcamps of 2024 by Course Report, the 5 best <a href='/us/coding-bootcamp'>coding bootcamp</a> in 2024 by Forbes, named best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, rated 4.92/5 on Switchup and more. Licensed by the Florida Department of Education, USA"
+  paragraph: "Prepare to thrive in today's AI-powered tech industry with hyperpersonalized learning, unlimited 1:1 mentorship, and career support for life. Recognized by Course Report as one of the world's top <a href='/us/coding-bootcamp'>coding bootcamps</a>, chosen by Forbes as best bootcamp for students on a budget (2024), and rated 4.9/5 on Switchup. Licensed by the Florida Department of Education."
 
 upcoming:
   no_dates_message: "Currently, there are no upcoming dates for this program"
   actionMessage: "Notify me of available dates"
 
-# description:
-#   heading: "Sobre este curso"
-#   sub_heading: "Prepárate para la era de la Ciencia de Datos."
-#   content: >
-#     Entrénate con expertos en Data Science, Machine Learning e Inteligencia Artificial. Aprende Data Science desde las bases, recolecta, manipula y modela datos. Crea modelos de Machine Learning e iníciate en el Deep Learning.\n
-#     Practica con escenarios típicos de empresas de la vida real y conoce algunas de las herramientas más utilizadas en la industria. \n
-
 overlaped:
-  heading: |-
-    "A.I. won't take your job, it's somebody USING A.I. that'll take your job." <br> <span style="font-size:13px; line-height: 10px;">Economist James Baldwin at the World Economic Forum.</span>
-  paragraph: "AI can boost human productivity to the point that only AI-proficient professionals will be hired in the future. Do more with less. Don't get left behind."
-  # button:
-  #   text: "LEARN MORE"
-  #   color: "blue"
-  #   link: "/"
+  heading: "Why Every Job Needs AI Skills Now"
+  subtitle: "AI isn't optional anymore: it's already a core workplace skill."
+  paragraph: |
+    •Workers with AI skills earn an average 56% wage premium globally.
+    <br>•AI use at work has nearly doubled in two years, rising from 21% to 40% of U.S. employees.
+    <br>•Join the professionals who aren’t just keeping up, but taking the lead with AI.
   image:
     src: "/images/landing/tres-personas-reloaded.webp"
 
@@ -82,9 +66,9 @@ details:
   about:
     title: "About this program"
     sub_title: |-
-      Our comprehensive Applied AI course is tailored for professionals eager to leverage the power of AI within their current roles. Over six dynamic weeks, you'll gain a deep understanding of AI and its real-world applications. From understanding the various types of generative AI to mastering key elements like context, prompts, and models, this course will equip you with essential tools and best practices to optimize AI integration. <br>
-      You'll be ready to strategically implement AI and significantly  enhance your workplace capabilities by course completion. Don't just adapt to the future – lead the way by leveraging AI to your advantage!
-
+      Our AI for Professionals program is designed for anyone who wants to harness the full power of AI in their work, not just explore it. 
+      You’ll get hands-on experience with generative models like ChatGPT, Gemini, and Claude, as well as modern image and video tools—applying them directly to real workflows.
+      By the end of the course, you’ll have expanded your capabilities with AI and be ready to confidently integrate it across your daily work.
     list:
       - label: "Duration"
         content: "6 Weeks"
@@ -121,7 +105,7 @@ details:
       value: "Up to 14 people"
     - label: "Total Hours"
       value: "24"
-  sub_heading: "6-week course designed to help you leverage the power of AI in the workplace."
+  sub_heading: "In just 6 weeks, learn how to leverage today’s leading AI tools to optimize your workflow, improve output quality, and stay ahead in your career."
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
@@ -202,6 +186,7 @@ geeks_vs_others:
   heading: "WHAT MAKES US SO SUCCESSFULL?"
   sub_heading: "Compare 4Geeks with other coding schools"
   sub_heading_link: ""
+
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
   heading: And Fortune 500 companies will hire you!
@@ -231,25 +216,31 @@ faq:
 
 ## TWO COLUMNS
 two_columns:
-  proportions: [4, 8]
+  proportions: [6, 6]
   image:
     style: '{"backgroundSize": "contain", "background-position": "center"}'
     src: "../../images/landing/applied-ai-icons.webp"
     shadow: false
   heading:
-    text: "Expand your capabilities and boost your efficiency!"
-    font_size: ["30px", "30px", "30px", "26px", "24px"]
+    text: "What You’ll Learn"
+    font_size: ["40px", "38px", "38px", "36px", "34px"]
   sub_heading:
-    text: "Learn to leverage text-based generative models like
-      ChatGPT, Claude, and Llama3, along with image generation tools such as Stable Diffusion, DALL-E, and Midjourney."
+    text: "Master tools like ChatGPT, Claude, and Midjourney to enhance \nyour productivity, creativity, and problem-solving. Learn how to make AI\n an active part of your professional toolkit."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
+  bullets:
+    items:
+    - text: "• Understand key AI concepts and generative tools"
+    - text: "• Learn effective prompting for text and image generation"
+    - text: "• Automate everyday workflows using no-code tools"
+    - text: "• Create professional content and websites with AI"
+    - text: "• Build and deploy simple chatbots and AI assistants"
   button:
     text: "Apply now"
     color: "white"
     background: "black"
     path: "#prices_and_payment"
 
-## two_columns_second
+## TWO COLUMNS SECOND
 two_columns_second:
   proportions: [6, 6]
   image:
@@ -257,8 +248,8 @@ two_columns_second:
     src: "../../images/landing/grupo-ventanas.webp"
     shadow: false
   heading:
-    text: "Get everything you need to succeed"
-    font_size: ["30px", "30px", "30px", "26px", "24px"]
+    text: "Everything You Need to Leverage AI"
+    font_size: ["40px", "38px", "38px", "36px", "34px"]
   sub_heading:
     text: ""
     font_size: ["16px", "16px", "16px", "16px", "16px"]
@@ -269,139 +260,43 @@ two_columns_second:
     path: "#prices_and_payment"
   bullets: 
     items:
-    - heading: "LEARN FROM THE EXPERTS:"
-      text: "Access cutting-edge insights on how to best leverage AI, gained from hands-on experience training our own internal custom AI."
-    - heading: "1:1 MENTORING ON DEMAND:"
-      text: "Our mentors will be available to assist you online or in-person throughout the duration of the course. Ask away, there's no limit to the number of sessions!"
-    - heading: "TAILORED CAREER SUPPORT:"
-      text: "Receive customized advice and guidance, tailored to your unique professional profile."
+    - heading: "Expert Guidance:"
+      text: "Learn from instructors with real-world AI experience."
+    - heading: "7:1 Student-Teacher Ratio:"
+      text: "Progress faster with personalized attention and feedback."
+    - heading: "1:1 mentorship:"
+      text: "Receive tailored support to build and apply your skills effectively."
+    - heading: "Career coaching:"
+      text: "Explore our career resources or book optional 1:1 sessions to strengthen your professional growth."
 
-# button:
-#   syllabus_heading: "Descargar Syllabus"
-#   syllabus_btn_label: "Descarga Instantánea"
-#   syllabus_motivation: "Obténlo en solo unos segundos"
-#   apply_button_link: "/us/apply"
-
-# course_instructors:
-#   header:
-#     title: "Conoce a nuestros instructores"
-#     paragraph: ""
-
-#   instructors:
-#     - name: "Sayyed Nezhadi"
-#       sub_title: "Doctorado en Inteligencia Artificial de la Universidad de Toronto"
-#       degree: "PhD en Inteligencia Artificial"
-#       image: "../../../static/images/instructors/sayyed.jpeg"
-#       bio: "Con más de 25 años de experiencia entregando soluciones complejas habilitadas por IA y arquitecturas digitales para grandes empresas. Doctorado en Inteligencia Artificial de la Universidad de Toronto, y certificados en Analítica de Big Data y Big Data de Harvard y MIT respectivamente."
-#       github: "https://github.com/snezhadi"
-#       linkedin: "https://www.linkedin.com/in/sayyednezhadi"
-
-#     - name: "Francesco Pugliese"
-#       sub_title: "Científico de datos y Doctor en Robótica e Inteligencia Artificial"
-#       job: "Científico de Machine Learning y Deep Learning en ISTAT (Instituto Nacional de Estadística de Italia)."
-#       degree: "Doctorado en Robótica e Inteligencia Artificial"
-#       image: "../../../static/images/instructors/fpugliese.jpeg"
-#       bio: "Especializado en Deep Learning, Redes Neuronales y Robótica Evolutiva; Francesco tiene más de 20 años de experiencia en temas de investigación en Robótica con diversas publicaciones. Actualmente trabaja como Científico de Machine Learning y Deep Learning en ISTAT (Instituto Nacional de Estadística de Italia)."
-#       github: "https://github.com/neural1977"
-#       linkedin: "https://www.linkedin.com/in/francescopugliese77"
-
-#     - name: "Manuel Mena"
-#       sub_title: "Científico de datos sénior | IA y Machine Learning"
-#       job: "Científico de Datos en el Instituto de Tecnología de Georgia"
-#       image: "../../../static/images/instructors/manu-mena.jpeg"
-#       bio: "Ingeniero en Ciencias de la Computación del Instituto de Tecnología de Georgia con más de 5 años de experiencia en Machine Learning y Business Intelligence aplicados a estrategias comerciales. Experiencia en liderar equipos en industrias financieras, de investigación de mercado y automotriz. Experto en R, Python, AWS y PostgreSQL."
-#       github: "https://github.com/alexismenanieves"
-#       linkedin: "https://www.linkedin.com/in/alexismena/"
-
-# badges:
-#   paragraph: "Impulsa tu carrera en 4Geeks Academy, donde los desarrolladores crecen y prosperan. Nombrado el mejor <a href='/us/coding-bootcamp'>bootcamp de codificación</a> 2023 por Course Report, mejor centro para bootcamps de codificación 2023 por Premios de Excelencia Educativa en España, listado entre los 10 mejores en EE. UU. por Newsweek y calificado con 4.92/5 en Switchup. Licenciado por el Departamento de Educación de Florida, EE. UU."
-
-# upcoming:
-#   no_dates_message: "Actualmente no hay fechas próximas para este programa"
-#   actionMessage: "Déjame saber cuando haya fechas disponibles"
-
-# details:
-#   about:
-#       title: "Sobre nuestro Curso de Data Science & Machine Learning"
-#       sub_title: |
-#         Aprende Python, SQL, Looker (Google Data Studio), Streamlit y Estadísticas para convertirte en un Analista de Datos profesional, listo para contribuir en cualquier equipo orientado a los datos en cualquier empresa.
-#         Crea modelos predictivos usando Python, Pandas, Numpy y otras bibliotecas poderosas. Explora algoritmos como Vecinos Cercanos, Árboles de Decisión y más. Trabaja con modelos de aprendizaje supervisado y no supervisado.
-#         Practica resolviendo casos de la vida real y aprende a abordar los desafíos que encontrarás en tu carrera. Domina el uso de herramientas estándar de la industria.
-#         Estrategiza y desarrolla tus propios proyectos de IA, siguiendo el ciclo completo desde el desarrollo hasta la implementación y el mantenimiento, garantizando la privacidad y la seguridad.
-
-#   heading: "Syllabus de Data Science y Machine Learning"
-#   weeks: 16
-#   weeks_label: "semanas"
-#   facts:
-#     - label: "Duración"
-#       value: "16 semanas"
-#     - label: "Compromiso"
-#       value: "20 hrs (Lun - Mié - Vie)"
-#     - label: "Certificado"
-#       content: "Nuestros certificados son reconocidos por múltiples organizaciones."
-#       link_text: "Ver ejemplo"
-#       link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
-#       icon: "certificate"
-#     - label: "Entrega"
-#       value: "Online / Remoto"
-#     - label: "Tamaño de la clase"
-#       value: "Máx. 12 personas"
-#     - label: "Horas totales"
-#       value: "320"
-#   sub_heading: "Comienza con Python, Data Science, Machine Learning, Deep Learning y el mantenimiento de un entorno de producción en IA."
-#   left_labels:
-#     description: "DESCRIPCIÓN:"
-#     projects: "PROYECTOS:"
-#     duration: "DURACIÓN:"
-#     skills: "Habilidades / Semanas:"
-#   details_modules:
-#     - module_name: "Python"
-#       title: "Introducción a Python"
-#       description: >
-#         Partiendo de un Prework (2 semanas antes), introdúcete en el mundo de la codificación y aprende los conceptos básicos de Python y Algoritmos; este módulo te ayudará a prepararte para codificar y desarrollar los diferentes modelos de A.I. y Machine Learning para el siguiente paso.
-#       projects: "Recolección, almacenamiento y medición con Numpy, Pandas, Matplotlib, etc."
-#       slug: "python-intro"
-#       duration: "2 semanas"
-#       step: 2
-#     # (Otros módulos omitidos por brevedad)
-
-# syllabus:
-#   heading: Obtén toda la información sobre el plan de estudios
-#   button_label: Descargar
-
-# potential_companies:
-#   tagline: "Prepárate para triunfar en grandes empresas"
-#   sub_heading: "Prepárate para aplicar a las mejores empresas del mundo: Desarrolla las herramientas para actualizarte para el futuro del trabajo en IA."
-#   companies:
-#     - name: "Facebook"
-#       image: "../../../static/images/partner/meta-logo.png"
-#       alt: ""
-#     # (Otras empresas omitidas por brevedad)
-
-# geeks_vs_others:
-#   heading: "¿QUÉ NOS HACE TAN EXITOSOS?"
-#   sub_heading: "Compara 4Geeks con otras escuelas de programación"
-#   sub_heading_link: ""
-
-# geek_data:
-#   heading: "¡Y las empresas Fortune 500 te contratarán!"
-#   geek_pal:
-#     - Mentoría Senior ilimitada.
-#     - Acceso de por vida a la comunidad de software.
-#     - Acceso y soporte a nivel mundial.
-#   geek_force:
-#     - Ayudándote a conseguir un empleo en una empresa Fortune 500.
-#     - Perfil, portafolio, entrevistas, talleres, charlas, comunidad de software, red, colaboración activa en proyectos.
-
-# prices:
-#   heading: "PRECIOS Y PAGOS"
-#   sub_heading: ""
-
-# alumni:
-#   heading: "CONOCE A LOS ALUMNOS Y PROYECTOS"
-#   sub_heading: "Conoce a nuestros graduados y algunos de los proyectos que desarrollarás durante el programa"
-
-# faq:
-#   title: "Preguntas Frecuentes"
-#   read_more: "Contáctanos para más preguntas"
-#   link: "/faq"
+## TWO COLUMNS VIDEO
+two_columns_video:
+  proportions: [6, 6]
+  image:
+    style: '{"border": "3px solid #2b2b2b", "border-radius": "3px", "backgroundSize": "contain", "background-position": "center"}'
+    src: "../../images/applied-ai-cover.webp"
+    link: ""
+    shadow: false
+  video: "E9RpwJhJi-k"
+  heading:
+    text: "Boost Your Career with AI for Professionals"
+    font_size: ["42px", "34px", "34px", "34px", "34px"]
+    style: '{"font-weight": "bold"}'
+  sub_heading:
+    text: "Hear from our CEO on how mastering AI transformed his productivity and results.Take the leap and learn the practical AI skills that will future-proof your career:"
+    font_size: ["20px", "18px", "16px", "16px", "14px"]
+    style: '{"font-weight":"200" }'
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+    style: '{"padding": "20px 48px", "border-radius": "5px"}'
+  content:
+    text: |
+      • Expand your capabilities across any field: from marketing to real estate to creative work.
+      <br>
+      • Use AI to streamline workflows and deliver higher-quality results from day one.
+      <br>
+      • Create reports, analyses, and in depth strategies faster and smarter with AI.
+      <br>

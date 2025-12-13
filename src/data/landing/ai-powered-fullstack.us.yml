@@ -173,7 +173,7 @@ components:
         content: "84% of graduates were hired"
       - icon: "briefcase-2"
         color: "#FF0000"
-        title: "Avergage time to get hired"
+        title: "Average time to get hired"
         content: "3-6 months after graduation"
       - icon: "stairswflag"
         color: "#BE8BFF"

@@ -37,6 +37,14 @@ navbar:
             - text: "Part-time"
               link: "/us/coding-bootcamps/cybersecurity"
 
+        - title: "Applied AI"
+          level: " "
+          icon: "applied-ai"
+          paragraph: "Explore in detail artificial intelligence and how to apply it in different industries, roles, and your work. Maximize your productivity in just 6 weeks!"
+          buttons:
+            - text: "Part-time"
+              link: "/us/coding-bootcamps/applied-ai-course"
+
 
   - name: "Why 4Geeks"
     link: "/why-4geeks"

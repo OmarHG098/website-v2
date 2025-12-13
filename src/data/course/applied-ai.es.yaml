@@ -1,7 +1,7 @@
 meta_info:
   slug: curso-inteligencia-artificial   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/curso-inteligencia-artificial
   title: "Curso de Inteligencia Artificial Aplicada"
-  description: "Explora a detalle la inteligencia artificial y cómo aplicarla en diferentes industrias, roles y en tu trabajo. Sin conocimientos previos requeridos."
+  description: "4Geeks Academy ofrece un curso de formación en IA con garantía de empleo. Sumérgete en la inteligencia artificial y abre puertas a las carreras tech del futuro."
   bc_slug: "applied-ai"
   template: "course-applied-ai"
   image: "/images/og-preview/applied-ai-bg-es.jpg"
@@ -13,19 +13,19 @@ meta_info:
   duration: "P6W"  # 6 weeks duration in ISO 8601 format
 
 apply_form:
-  label: Inteligencia Artificial Aplicada (sin codificación)
+  label: IA para Profesionales (sin codificación)
 
-seo_title: "Curso de Inteligencia Artificial Aplicada"
+seo_title: "Inteligencia Artificial (IA) para Profesionales"
 header:
-  title: "Aprende I.A. y cómo utilizarla en tu trabajo"
-  paragraph: "¡Automatiza y delega tus tareas a un AI, en diferentes roles y en tu empresa!"
+  title: "Mantente relevante en tu carrera. Lidera con IA."
+  paragraph: "Adquiere las habilidades de IA para mantenerte competitivo y avanzar en tu carrera en solo 6 semanas. Aprende a aplicar IA en el trabajo para mayor eficiencia, creatividad e impacto."
   image: "../../../static/images/bg/circles.jpg"
-  image_alt: "círculos"
+  image_alt: "IA Aplicada"
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"
   syllabus_btn_label: "Descarga Instantánea"
-  syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, becas, financiación e información del curso."
+  syllabus_motivation: "En 2 minutos recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, becas, financiación e información del curso."
   apply_button_link: "/es/aplica"
 
 course_instructors:
@@ -38,40 +38,26 @@ course_instructors:
       sub_title: "AI builder"
       degree: "Prompt Engineer"
       image: "../../../static/images/instructors/charly.jpeg"
-      bio: | 
-        Contacto de 2º grado2º
-        📓#Tana creator 🧠Prompt Engineer 🐍⚛️ Fullstack project leader Django and Next 📽️ Code Speller on YouTube 
-        Desarrollo de aplicaciones en la nube, Desarrollo web, Diseño web y Diseño de experiencia de usuario (UX)"
+      bio: |
+        Contacto de 2º grado
+        📓 Creador de #Tana 🧠 Prompt Engineer 🐍⚛️ Líder de proyectos Fullstack en Django y Next 📽️ Code Speller en YouTube
+        Desarrollo de aplicaciones en la nube, desarrollo web, diseño web y diseño de experiencia de usuario (UX).
       linkedin: "https://www.linkedin.com/in/charlytoc/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
 
-    # - name: "Sayyed Nezhadi"
-    #   sub_title: "Doctorado en Inteligencia Artificial de la Universidad de Toronto"
-    #   degree: "Doctorado en Inteligencia Artificial"
-    #   image: "../../../static/images/instructors/sayyed.jpeg"
-    #   bio: "Más de 25 años de experiencia en la entrega de soluciones complejas habilitadas para IA y arquitecturas digitales para grandes empresas. PhD en Inteligencia Artificial de la Universidad de Toronto, y certificados en Big Data Analytics y Big Data de Hardvard y MIT respectivamente."
-    #   github: "https://github.com/snezhadi"
-    #   linkedin: "https://www.linkedin.com/in/sayyednezhadi"
-
 badges:
-  paragraph: "Gracias a un enfoque hacia la programación, nuestros programas han sido galardonados como TOP en <a href='/es/premios'>España, USA y otros países</a>. Nuestros certificados están avalados por el Departamento de Educación de Estado Unidos en Florida."
+  paragraph: "Prepárate para prosperar en la industria tecnológica actual impulsada por IA con aprendizaje hiperpersonalizado, mentoría ilimitada 1:1 y apoyo profesional de por vida. Reconocido por Course Report como uno de los mejores <a href='/es/coding-bootcamp'>bootcamps de programación</a> del mundo, elegido por Forbes como mejor bootcamp para estudiantes con presupuesto limitado (2024), y calificado con 4.9/5 en Switchup. Licenciado por el Departamento de Educación de Florida."
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"
-  actionMessage: "Avisadme de fechas disponibles"
+  actionMessage: "Avísame cuando haya fechas disponibles"
 
-# description:
-#   heading: "Sobre este curso"
-#   sub_heading: "Prepárate para la era de la Ciencia de Datos."
-#   content: >
-#     Entrénate con expertos en Data Science, Machine Learning e Inteligencia Artificial. Aprende Data Science desde las bases, recolecta, manipula y modela datos. Crea modelos de Machine Learning e iníciate en el Deep Learning.\n
-#     Practica con escenarios típicos de empresas de la vida real y conoce algunas de las herramientas más utilizadas en la industria. \n
 overlaped:
-  heading: "El futuro del trabajo es la IA. ¿Estás listo para tomarlo?"
-  paragraph: "La inteligencia artificial (IA) está transformando el panorama laboral a un ritmo acelerado. No temas a este cambio, adóptalo. La IA no te reemplazará, sino que potenciará tus habilidades y te convertirá en un profesional altamente valioso."
-  button:
-    text: "MÁS INFORMACIÓN"
-    color: "blue"  
-    link: "/"
+  heading: "Por qué cada trabajo necesita habilidades de IA ahora"
+  subtitle: "La IA ya no es opcional: ya es una habilidad fundamental en el lugar de trabajo."
+  paragraph: |
+    •Los trabajadores con habilidades de IA ganan un promedio de 56% más de salario a nivel global.
+    <br>•El uso de IA en el trabajo casi se ha duplicado en dos años, aumentando del 21% al 40% de los empleados estadounidenses.
+    <br>•Únete a los profesionales que no solo se mantienen al día, sino que lideran con IA.
   image:
     src: "/images/landing/tres-personas-reloaded.webp"  
 
@@ -79,22 +65,23 @@ overlaped:
 details:
   about:
     title: "Sobre este programa"
-    sub_title: |
-      Este curso de inteligencia artificial está diseñado para quienes buscan integrar la inteligencia artificial (IA) en sus trabajos y roles actuales. A lo largo de seis semanas, los participantes obtendrán una comprensión integral de la IA y sus aplicaciones prácticas en diversas industrias.
-      El curso abarca conceptos esenciales como definiciones de IA, beneficios en el entorno laboral y elementos clave como Contexto, Prompts y Modelos. Los participantes aprenderán a identificar oportunidades para implementar IA, superar desafíos, desarrollar estrategias efectivas de IA y crear comandos prácticos.
+    sub_title: |-
+      Nuestro programa de IA para Profesionales está diseñado para cualquier persona que quiera aprovechar todo el poder de la IA en su trabajo, no solo explorarla.
+      Obtendrás experiencia práctica con modelos generativos como ChatGPT, Gemini, y Claude, así como herramientas modernas de imagen y video, aplicándolas directamente a flujos de trabajo reales.
+      Al final del curso, habrás ampliado tus capacidades con IA y estarás listo para integrarla con confianza en tu trabajo diario.
         
     list:
       - label: "Duración"
         content: "6 semanas"
         icon: "duration-icon"
       - label: "Clases"
-        content: "2 clases semanales"
+        content: "2 clases en vivo y en línea por semana"
         icon: "book-2"
       - label: "Tamaño de la clase"
         content: "12 personas máx"
         icon: "people"
       - label: "Certificado"
-        content: "Nuestros certificados están reconocidos por múltiples instituciones."
+        content: "Certificado de Finalización Oficial de 4Geeks, reconocido por múltiples instituciones."
         icon: "certification"
       - label: "Requisitos"
         content: "No se necesita experiencia previa"
@@ -119,47 +106,47 @@ details:
       value: "Hasta 14 personas"
     - label: "Horas totales"
       value: "24"
-  sub_heading: "Curso de 6 semanas para profesionales que desean incorporar la IA en sus roles laborales."
+  sub_heading: "En solo 6 semanas, aprende a aprovechar las principales herramientas de IA de hoy para optimizar tu flujo de trabajo, mejorar la calidad de tus resultados y mantener tu carrera un paso adelante."
   left_labels:
     description: "DESCRIPCIÓN:"
     projects: "PROYECTOS:"
     duration: "DURACIÓN:"
     skills: "Habilidades / Semanas:"
   details_modules:
-    - module_name: "Intro. al AI"
-      title: "Intro. al AI"
-      description: "Definiciones de IA, beneficios en el entorno laboral, tipos de Inteligencia Artificial con ejemplos prácticos, y conceptos clave como Contexto, Prompts y Modelos."
-      projects: "Identificación de oportunidades para implementar IA, comprensión de desafíos y riesgos, desarrollo de estrategias de IA y creación de comandos útiles."
+    - module_name: "Intro to AI"
+      title: "Introducción a la IA"
+      description: "Comprende las definiciones de IA, tipos de Inteligencia Artificial y cómo puede beneficiar tu carrera. Cubre ejemplos prácticos y conceptos clave como contexto, prompts y modelos."
+      projects: "Aprende a identificar oportunidades para implementar IA, comprende desafíos y riesgos, desarrolla estrategias de IA y crea comandos útiles."
       slug: "intro-ai-workplace"
-      duration: "1 semana"
+      duration: "semana 1"
       step: 1
-    - module_name: "Sé más productivo"
+    - module_name: "Be More Productive"
       title: "Estrategias para Mejorar el Rendimiento Laboral"
-      description: "Comparación entre la IA y los humanos en diversas tareas, cuándo utilizar la Inteligencia Artificial, ejemplos de prompts relacionados con los campos de los estudiantes, y consejos de Ingeniería de Prompts."
-      projects: "Creación de flujos de trabajo para profesiones como profesores, lingüistas y desarrolladores."
-      slug: "generation-estrategies"
-      duration: "1 semana"
+      description: "Compara las capacidades de IA y humanas en diversas tareas, identifica cuándo aprovechar la IA, explora prompts relevantes, optimiza la ingeniería de prompts."
+      projects: "Diseña un flujo de trabajo relevante para tu trabajo integrando IA."
+      slug: "generation-strategies"
+      duration: "semana 2"
       step: 2
-    - module_name: "Generación de Texto"
+    - module_name: "Text Generation"
       title: "Generación de Texto"
-      description: "Capacidades de modelos populares como ChatGPT, Claude y Llama-2. Explicación detallada de estrategias de prompts, flujos de trabajo de IA y herramientas para automatizar prompts."
-      projects: "Revisión y depuración de prompts, cómo evaluar si una respuesta de modelo es buena y cómo instruir correctamente a un modelo de enfoques."
+      description: "Explora las capacidades de modelos populares como ChatGPT, Claude y Llama. Aprende a dominar estrategias de prompts, flujos de trabajo de IA y herramientas para automatizar prompts."
+      projects: "Revisa y depura prompts, aprende a evaluar la calidad de las respuestas y cómo instruir a un modelo de manera efectiva."
       slug: "text-generation"
-      duration: "2 semanas"
+      duration: "semana 3"
       step: 3
-    - module_name: "Generación de Imágenes"
+    - module_name: "Image Generation"
       title: "Generación de Imágenes e Implementación de IA"
-      description: "Revisión de capacidades de modelos populares para generación de imágenes como Stable Diffusion, Dall-E, Entre otras, A demás de cómo redactar buenos prompts para modelos de generación de imágenes."
-      projects: "Desarrollo de una estrategia de Inteligencia Artificial y creación de prompts útiles para generar imágenes en casos de uso específicos."
+      description: "Revisa las capacidades de modelos populares para generación de imágenes como Stable Diffusion, Dall-E, Midjourney. Optimiza la ingeniería de prompts para generación de imágenes."
+      projects: "Desarrolla una estrategia de IA y crea prompts útiles para generación de imágenes para casos de uso específicos."
       slug: "img-generation"
-      duration: "1 semana"
+      duration: "semana 4"
       step: 4
-    - module_name: "IA: Herramientas y Futuro"
-      title: "Herramientas y el Futuro de las IAs"
-      description: "Evaluación de herramientas de Inteligencia Artificial, proyectos prácticos utilizando herramientas populares."
-      projects: "Graduación del curso, preguntas finales, tareas y próximos pasos..."
+    - module_name: "Tools and Future of AIs"
+      title: "Herramientas y el Futuro de la IA"
+      description: "Evalúa herramientas de Inteligencia Artificial, trabaja en proyectos prácticos utilizando modelos y herramientas de IA populares."
+      projects: "Proyecto final, tareas y próximos pasos..."
       slug: "final-project"
-      duration: "1 semana"
+      duration: "semanas 5 y 6"
       step: 5
 
 
@@ -199,43 +186,34 @@ potential_companies:
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
-  heading: "¿Qué nos hace tan exitosos?"
-  sub_heading: ""
+  heading: "¿QUÉ NOS HACE TAN EXITOSOS?"
+  sub_heading: "Compara 4Geeks con otras escuelas de programación"
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
-  heading: ¡Para que te contraten empresas de Fortune 500!
+  heading: ¡Y las empresas Fortune 500 te contratarán!
   geek_pal:
-    - Un profesor cada siete estudiantes (1:7).
-    - Sesiones ilimitadas de tutoría 1-1 por demanda, en persona o en línea.
-    - Miles de ejercicios interactivos y autoevaluados.
-    - Soluciones en video para una retroalimentación instantánea.
-    - Chat de apoyo en línea 12 horas al día.
-    - Transmisión en línea de las clases.
-    - Grabación de las clases para su posterior revisión.
+    - Mentoría Senior ilimitada.
+    - Acceso de por vida a la comunidad de software.
+    - Acceso y soporte a nivel mundial.
   geek_force:
-    - Construcción de CV y LinkedIn.
-    - Construcción del perfil de Github y portafolio desde el dia 1.
-    - Career Week para dedicación exclusiva a tu perfil profesional.
-    - Preparación de simulación de entrevistas.
-    - Sesión de preparación de entrevistas personalizadas para trabajos específicos.
-    - Entrenamiento en marca personal.
-    - Prácticas y ejercicios de programación posteriores a la graduación.
-    - Coaching SEMANAL hasta que consigas trabajo.
+    - Ayudándote a conseguir un trabajo en una empresa Fortune 500.
+    - Perfil, portafolio, entrevistas, talleres, charlas, comunidad de software, red, colaboración activa en proyectos.
+    - Se trata de llevar tu carrera al siguiente nivel.
 
 ## PRICES AND PAYMENTS SECTION
 prices:
-  heading: "PRECIOS Y PAGOS"
+  heading: "Precios y planes de pago"
   sub_heading: ""
 
 ## ALUMNI SECTION
 alumni:
-  heading: "Conoce a ex-estudiantes y sus proyectos"
-  sub_heading: "Conoce a personas que ya se han graduado y algunos de los proyectos que estarás construyendo durante el programa"
+  heading: "CONOCE A LOS GRADUADOS Y PROYECTOS"
+  sub_heading: "Conoce a nuestros graduados y algunos de los proyectos que estarás construyendo durante el programa"
 
 faq:
   title: "Preguntas Frecuentes"
-  read_more: "Ver más preguntas"
+  read_more: "Contáctanos para más preguntas"
   link: "/faq"
 
 
@@ -247,176 +225,81 @@ two_columns:
     src: "../../images/landing/applied-ai-icons.webp"
     shadow: false
   heading:
-    text: "¡Expande tus capacidades y aumenta tu eficiencia!"
-    font_size: ["30px", "30px", "30px", "26px", "24px"]
+    text: "Lo que aprenderás"
+    font_size: ["40px", "38px", "38px", "36px", "34px"]
   sub_heading:
-    text: |-
-      En el curso, aprenderás a sacar el máximo provecho de los modelos generativos basados en texto, como ChatGPT, Gemini, Perplexity y Claude.
-
-      Además, explorarás herramientas de generación de imágenes como Midjourney, Stable Diffusion y Open source colabs. 
-      También, te sumergirás en el mundo de la inteligencia artificial aplicada a video con Stable Video, y en el ámbito del audio con Whisper y ElevenLabs. 
-      ¡Prepárate para dominar estas potentes herramientas AI y llevar tus habilidades al siguiente nivel!
+    text: "Domina herramientas como ChatGPT, Claude y Midjourney para mejorar \ntu productividad, creatividad y resolución de problemas. Aprende cómo hacer de la IA\n una parte activa de tu conjunto de herramientas profesional."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
+  bullets:
+    items:
+    - text: "• Comprende conceptos clave de IA y herramientas generativas"
+    - text: "• Aprende a hacer prompts efectivos para generación de texto e imágenes"
+    - text: "• Automatiza flujos de trabajo cotidianos usando herramientas sin código"
+    - text: "• Crea contenido y sitios web profesionales con IA"
+    - text: "• Construye y despliega chatbots simples y asistentes de IA"
   button:
-    text: "Aplicar al programa"
+    text: "Aplicar ahora"
     color: "white"
     background: "black"
     path: "#prices_and_payment"
 
+## TWO COLUMNS SECOND
+two_columns_second:
+  proportions: [6, 6]
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}'
+    src: "../../images/landing/grupo-ventanas.webp"
+    shadow: false
+  heading:
+    text: "Todo lo que necesitas para aprovechar la IA"
+    font_size: ["40px", "38px", "38px", "36px", "34px"]
+  sub_heading:
+    text: ""
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Aplicar ahora"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+  bullets: 
+    items:
+    - heading: "Guía de Expertos:"
+      text: "Aprende de instructores con experiencia real en IA."
+    - heading: "Ratio 7:1 Estudiante-Profesor:"
+      text: "Progresa más rápido con atención personalizada y retroalimentación."
+    - heading: "Mentoría 1:1:"
+      text: "Recibe apoyo personalizado para construir y aplicar tus habilidades de manera efectiva."
+    - heading: "Coaching de Carrera:"
+      text: "Explora nuestros recursos de carrera o reserva sesiones opcionales 1:1 para fortalecer tu crecimiento profesional."
 
+## TWO COLUMNS VIDEO
 two_columns_video:
   proportions: [6, 6]
   image:
-    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/landing/inteligencia-artificial-para-profesionales.jpg"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=N_oJOAfge80"
+    style: '{"border": "3px solid #2b2b2b", "border-radius": "3px", "backgroundSize": "contain", "background-position": "center"}'
+    src: "../../images/applied-ai-cover.webp"
+    link: ""
+    shadow: false
+  video: "E9RpwJhJi-k"
   heading:
-    text: "Programa de Inteligencia Artificial Aplicada para Profesionales"
-      #xl      lg     md     sm    xs
-    font_size: ["40px", "34px", "34px", "25px", "20px"]
+    text: "Impulsa tu carrera con IA para Profesionales"
+    font_size: ["42px", "34px", "34px", "34px", "34px"]
+    style: '{"font-weight": "bold"}'
   sub_heading:
-    style: '{}'
-    text: |- 
-      El programa de Applied AI para Profesionales en 4Geeks Academy te ofrece la oportunidad única de desarrollar habilidades especializadas en Inteligencia Artificial aplicada a contextos profesionales.
-    font_size: ["16px"]
+    text: "Escucha a nuestro CEO sobre cómo dominar la IA transformó su productividad y resultados. Da el salto y aprende las habilidades prácticas de IA que protegerán tu carrera:"
+    font_size: ["20px", "18px", "16px", "16px", "14px"]
+    style: '{"font-weight":"200" }'
   button:
-    text: "Aplicar al programa"
+    text: "APLICAR AHORA"
     color: "white"
     background: "black"
-    path: "#prices_and_payment"
-  bullets:
-    items: 
-    - text: "Domina técnicas avanzadas de IA para resolver problemas complejos en entornos empresariales."
-    - text: "Aprende a implementar soluciones de IA que mejoren la eficiencia operativa y la toma de decisiones."
-    - text: "Explora casos de estudio reales y ejemplos prácticos de éxito en la implementación de IA en diversas industrias."
-
-# button:
-#   syllabus_heading: "Descargar Syllabus"
-#   syllabus_btn_label: "Descarga Instantánea"
-#   syllabus_motivation: "Obténlo en solo unos segundos"
-#   apply_button_link: "/us/apply"
-
-# course_instructors: 
-#   header:
-#     title: "Conoce a nuestros instructores"
-#     paragraph: ""
-
-#   instructors:
-#     - name: "Sayyed Nezhadi"
-#       sub_title: "Doctorado en Inteligencia Artificial de la Universidad de Toronto"
-#       degree: "PhD en Inteligencia Artificial"
-#       image: "../../../static/images/instructors/sayyed.jpeg"
-#       bio: "Con más de 25 años de experiencia entregando soluciones complejas habilitadas por IA y arquitecturas digitales para grandes empresas. Doctorado en Inteligencia Artificial de la Universidad de Toronto, y certificados en Analítica de Big Data y Big Data de Harvard y MIT respectivamente."
-#       github: "https://github.com/snezhadi"
-#       linkedin: "https://www.linkedin.com/in/sayyednezhadi"
-
-#     - name: "Francesco Pugliese"
-#       sub_title: "Científico de datos y Doctor en Robótica e Inteligencia Artificial"
-#       job: "Científico de Machine Learning y Deep Learning en ISTAT (Instituto Nacional de Estadística de Italia)."
-#       degree: "Doctorado en Robótica e Inteligencia Artificial"
-#       image: "../../../static/images/instructors/fpugliese.jpeg"
-#       bio: "Especializado en Deep Learning, Redes Neuronales y Robótica Evolutiva; Francesco tiene más de 20 años de experiencia en temas de investigación en Robótica con diversas publicaciones. Actualmente trabaja como Científico de Machine Learning y Deep Learning en ISTAT (Instituto Nacional de Estadística de Italia)."
-#       github: "https://github.com/neural1977"
-#       linkedin: "https://www.linkedin.com/in/francescopugliese77"
-
-#     - name: "Manuel Mena"
-#       sub_title: "Científico de datos sénior | IA y Machine Learning"
-#       job: "Científico de Datos en el Instituto de Tecnología de Georgia"
-#       image: "../../../static/images/instructors/manu-mena.jpeg"
-#       bio: "Ingeniero en Ciencias de la Computación del Instituto de Tecnología de Georgia con más de 5 años de experiencia en Machine Learning y Business Intelligence aplicados a estrategias comerciales. Experiencia en liderar equipos en industrias financieras, de investigación de mercado y automotriz. Experto en R, Python, AWS y PostgreSQL."
-#       github: "https://github.com/alexismenanieves"
-#       linkedin: "https://www.linkedin.com/in/alexismena/"
-
-# badges:
-#   paragraph: "Impulsa tu carrera en 4Geeks Academy, donde los desarrolladores crecen y prosperan. Nombrado el mejor <a href='/us/coding-bootcamp'>bootcamp de codificación</a> 2023 por Course Report, mejor centro para bootcamps de codificación 2023 por Premios de Excelencia Educativa en España, listado entre los 10 mejores en EE. UU. por Newsweek y calificado con 4.92/5 en Switchup. Licenciado por el Departamento de Educación de Florida, EE. UU."
-
-# upcoming:
-#   no_dates_message: "Actualmente no hay fechas próximas para este programa"
-#   actionMessage: "Déjame saber cuando haya fechas disponibles"
-
-# details:
-#   about:
-#       title: "Sobre nuestro Curso de Data Science & Machine Learning"
-#       sub_title: |
-#         Aprende Python, SQL, Looker (Google Data Studio), Streamlit y Estadísticas para convertirte en un Analista de Datos profesional, listo para contribuir en cualquier equipo orientado a los datos en cualquier empresa.
-#         Crea modelos predictivos usando Python, Pandas, Numpy y otras bibliotecas poderosas. Explora algoritmos como Vecinos Cercanos, Árboles de Decisión y más. Trabaja con modelos de aprendizaje supervisado y no supervisado.
-#         Practica resolviendo casos de la vida real y aprende a abordar los desafíos que encontrarás en tu carrera. Domina el uso de herramientas estándar de la industria.
-#         Estrategiza y desarrolla tus propios proyectos de IA, siguiendo el ciclo completo desde el desarrollo hasta la implementación y el mantenimiento, garantizando la privacidad y la seguridad.
-
-#   heading: "Syllabus de Data Science y Machine Learning"
-#   weeks: 16
-#   weeks_label: "semanas"
-#   facts:
-#     - label: "Duración"
-#       value: "16 semanas"
-#     - label: "Compromiso"
-#       value: "20 hrs (Lun - Mié - Vie)"
-#     - label: "Certificado"
-#       content: "Nuestros certificados son reconocidos por múltiples organizaciones."
-#       link_text: "Ver ejemplo"
-#       link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
-#       icon: "certificate"
-#     - label: "Entrega"
-#       value: "Online / Remoto"
-#     - label: "Tamaño de la clase"
-#       value: "Máx. 12 personas"
-#     - label: "Horas totales"
-#       value: "320"
-#   sub_heading: "Comienza con Python, Data Science, Machine Learning, Deep Learning y el mantenimiento de un entorno de producción en IA."
-#   left_labels:
-#     description: "DESCRIPCIÓN:"
-#     projects: "PROYECTOS:"
-#     duration: "DURACIÓN:"
-#     skills: "Habilidades / Semanas:"
-#   details_modules:
-#     - module_name: "Python"
-#       title: "Introducción a Python"
-#       description: >
-#         Partiendo de un Prework (2 semanas antes), introdúcete en el mundo de la codificación y aprende los conceptos básicos de Python y Algoritmos; este módulo te ayudará a prepararte para codificar y desarrollar los diferentes modelos de A.I. y Machine Learning para el siguiente paso.
-#       projects: "Recolección, almacenamiento y medición con Numpy, Pandas, Matplotlib, etc."
-#       slug: "python-intro"
-#       duration: "2 semanas"
-#       step: 2
-#     # (Otros módulos omitidos por brevedad)
-
-# syllabus:
-#   heading: Obtén toda la información sobre el plan de estudios
-#   button_label: Descargar
-
-# potential_companies:
-#   tagline: "Prepárate para triunfar en grandes empresas"
-#   sub_heading: "Prepárate para aplicar a las mejores empresas del mundo: Desarrolla las herramientas para actualizarte para el futuro del trabajo en IA."
-#   companies:
-#     - name: "Facebook"
-#       image: "../../../static/images/partner/meta-logo.png"
-#       alt: ""
-#     # (Otras empresas omitidas por brevedad)
-
-# geeks_vs_others:
-#   heading: "¿QUÉ NOS HACE TAN EXITOSOS?"
-#   sub_heading: "Compara 4Geeks con otras escuelas de programación"
-#   sub_heading_link: ""
-
-# geek_data:
-#   heading: "¡Y las empresas Fortune 500 te contratarán!"
-#   geek_pal:
-#     - Mentoría Senior ilimitada.
-#     - Acceso de por vida a la comunidad de software.
-#     - Acceso y soporte a nivel mundial.
-#   geek_force:
-#     - Ayudándote a conseguir un empleo en una empresa Fortune 500.
-#     - Perfil, portafolio, entrevistas, talleres, charlas, comunidad de software, red, colaboración activa en proyectos.
-
-# prices:
-#   heading: "PRECIOS Y PAGOS"
-#   sub_heading: ""
-
-# alumni:
-#   heading: "CONOCE A LOS ALUMNOS Y PROYECTOS"
-#   sub_heading: "Conoce a nuestros graduados y algunos de los proyectos que desarrollarás durante el programa"
-
-# faq:
-#   title: "Preguntas Frecuentes"
-#   read_more: "Contáctanos para más preguntas"
-#   link: "/faq"
+    path: "/es/aplica"
+    style: '{"padding": "20px 48px", "border-radius": "5px"}'
+  content:
+    text: |
+      • Expande tus capacidades en cualquier campo: desde marketing hasta bienes raíces o trabajo creativo.
+      <br>
+      • Usa IA para optimizar flujos de trabajo y entregar resultados de mayor calidad desde el primer día.
+      <br>
+      • Crea informes, análisis y estrategias en profundidad más rápido e inteligentemente con IA.
+      <br>
