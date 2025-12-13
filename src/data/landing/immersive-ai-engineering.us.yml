@@ -85,6 +85,29 @@ follow_bar:
   phone:
     text: ""
 
+
+rating_reviews:
+  background: "#FBFBFB"
+  position: 7
+  heading: "Globally Recognized and Top Rated"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
+
 #geeks_vs_others:
  # position: 15
   #heading: "Compare 4Geeks Academy"
@@ -106,7 +129,7 @@ apply_schollarship:
 components:
   - name: leadform_header
     position: 1
-    layout: two_column_left
+    layout: two_column_right
     proportions: [6, 6]
     image:
       style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
@@ -125,8 +148,8 @@ components:
         - text: "• 30–50% salary premium vs traditional developers"
 
   - name: about-program
-    position: 11
-    layout: two_column_right
+    position: 3
+    layout: two_column_left
     proportions: [6, 6]
     background: "#ffffff"
     image:
@@ -153,7 +176,7 @@ components:
       path: "#leadform_header"
 
   - name: outcomes-stats
-    position: 5
+    position: 11
     background: "#0084FF"
     layout: iconogram
     swipable: true
@@ -184,7 +207,7 @@ components:
         content: "$85K–$120K"
 
   - name: ai-engineering-skills
-    position: 3
+    position: 5
     layout: two_column_right
     background: "#fbfbfb"
     proportions: [7, 5]
