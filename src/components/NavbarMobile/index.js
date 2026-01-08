@@ -420,6 +420,48 @@ export const MegaMenu = ({
   lang,
 }) => {
   const { setSession } = useContext(SessionContext);
+
+  // Helper function to get regional full-stack course URL
+  const getRegionalFullStackUrl = (targetLang, currentPath) => {
+    // Only handle full-stack course pages
+    if (!currentPath || !currentPath.includes('full-stack')) {
+      return null;
+    }
+
+    const region = session?.location?.meta_info?.region;
+    
+    if (targetLang === 'es') {
+      // Switching to Spanish - check region
+      if (region === 'europe') {
+        return '/es/coding-bootcamps/programador-full-stack';
+      } else {
+        return '/es/coding-bootcamps/desarrollador-full-stack';
+      }
+    } else if (targetLang === 'us' && lang === 'es') {
+      // Switching from Spanish to English
+      return '/us/coding-bootcamps/part-time-full-stack-developer';
+    }
+    
+    return null;
+  };
+
+  // Get the language switch URL with regional routing support
+  const getLanguageSwitchUrl = () => {
+    if (!session || !session.pathsDictionary || !currentURL) {
+      return '/?lang=en#home';
+    }
+
+    const targetLang = langDictionary[lang];
+    const regionalUrl = getRegionalFullStackUrl(targetLang, currentURL);
+    
+    if (regionalUrl) {
+      return `${regionalUrl}${languageButton.link}`;
+    }
+
+    // Use default dictionary lookup
+    return `${session.pathsDictionary[currentURL] || ""}${languageButton.link}`;
+  };
+
   return (
     <>
       {status.toggle && (
@@ -510,13 +552,7 @@ export const MegaMenu = ({
                     locations,
                   })
                 }
-                to={
-                  session && session.pathsDictionary && currentURL
-                    ? `${session.pathsDictionary[currentURL] || ""}${
-                        languageButton.link
-                      }`
-                    : "/?lang=en#home"
-                }
+                to={getLanguageSwitchUrl()}
               >
                 <Paragraph
                   dangerouslySetInnerHTML={{ __html: languageButton.text }}

@@ -1,0 +1,31 @@
+meta_info:
+  slug: full-stack-spain-us   #<----URL: https://4geeksacademy.com/us/coding-bootcamps/full-stack-spain-us (hidden page)
+  title: "Full Stack Developer Bootcamp | 4Geeks Academy"
+  bc_slug: "full-stack-spain"
+  job_guarantee: true
+  description: "Full Stack Developer Bootcamp - Spain variant (hidden page for testing purposes)"
+  image: "/images/og-preview/full-stack.us.png"
+  visibility: "hidden"
+  keywords: ""
+  show_in_apply: true
+  related_clusters: ["full-stack-developer"]
+  template: "course-fullstack"
+  duration: "P20W"  # 20 weeks duration in ISO 8601 format
+  redirects: []
+
+apply_form:
+  label: Full Stack Developer - Part Time
+seo_title: "Full Stack Developer with AI Bootcamp "
+header:
+  title: "FULL STACK DEVELOPMENT\nWITH AI"
+  image: "../../../static/images/bg/program-bg.png"
+  image_alt: "how-to-become-a-full-stack-developer-"
+  paragraph: "Start a future-proof career with average starting salaries of $65K+."
+
+button:
+  syllabus_heading: "Download Syllabus"
+  syllabus_btn_label: "Instant Download"
+  syllabus_motivation: "Get it in just a few seconds"
+  apply_button_text: "Apply now"
+  apply_button_link: "/us/apply"
+

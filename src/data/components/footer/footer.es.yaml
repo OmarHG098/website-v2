@@ -43,6 +43,8 @@ footer:
     items:
       - name: "Desarrollador Full Stack con IA"
         link: "/es/coding-bootcamps/desarrollador-full-stack"
+      - name: "Programador Full Stack con IA"
+        link: "/es/coding-bootcamps/programador-full-stack"
       - name: "Data Science y Machine Learning con IA"
         link: "/es/coding-bootcamps/curso-datascience-machine-learning/"
       - name: "Ciberseguridad"
