@@ -266,7 +266,10 @@ export const Navbar = ({
     if (link.includes("desarrollador-full-stack")) {
       // If location is Spain, use programador version
       if (isSpainLocation()) {
-        return link.replace("desarrollador-full-stack", "programador-full-stack");
+        return link.replace(
+          "desarrollador-full-stack",
+          "programador-full-stack"
+        );
       }
     }
     return link;
@@ -376,7 +379,9 @@ export const Navbar = ({
                     fontWeight="400"
                   >
                     {index === menu.length - 1 ? (
-                      <Link to={getRegionalFullStackLink(item.link)}>{item.name}</Link>
+                      <Link to={getRegionalFullStackLink(item.link)}>
+                        {item.name}
+                      </Link>
                     ) : (
                       item.name
                     )}
@@ -392,6 +397,7 @@ export const Navbar = ({
                       }}
                       setStatus={setStatus}
                       menu={menu}
+                      getRegionalFullStackLink={getRegionalFullStackLink}
                     />
                   )}
                 </MenuItem>
@@ -512,7 +518,7 @@ const CampusMenu = ({ status, setStatus, menu }) => {
   );
 };
 
-export const MegaMenu = ({ status, setStatus, menu }) => {
+export const MegaMenu = ({ status, setStatus, menu, getRegionalFullStackLink }) => {
   return (
     <>
       {status.itemIndex !== null && status.itemIndex !== menu.length - 1 && (
@@ -631,7 +637,10 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
                             {Array.isArray(m.buttons) &&
                               m.buttons.map((m, i) => {
                                 return (
-                                  <Link to={getRegionalFullStackLink(m.link)} key={i}>
+                                  <Link
+                                    to={getRegionalFullStackLink(m.link)}
+                                    key={i}
+                                  >
                                     <Button
                                       variant="outline"
                                       color="black"

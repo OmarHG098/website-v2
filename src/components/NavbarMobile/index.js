@@ -454,7 +454,10 @@ export const MegaMenu = ({
     if (link.includes("desarrollador-full-stack")) {
       // If location is Spain, use programador version
       if (isSpainLocation()) {
-        return link.replace("desarrollador-full-stack", "programador-full-stack");
+        return link.replace(
+          "desarrollador-full-stack",
+          "programador-full-stack"
+        );
       }
     }
     return link;
@@ -708,7 +711,10 @@ export const MegaMenu = ({
                               {Array.isArray(m.buttons) &&
                                 m.buttons.map((m, i) => {
                                   return (
-                                    <Link to={getRegionalFullStackLink(m.link)} key={i}>
+                                    <Link
+                                      to={getRegionalFullStackLink(m.link)}
+                                      key={i}
+                                    >
                                       <Div alignItems="baseline">
                                         <ButtonText
                                           textAlign="left"
