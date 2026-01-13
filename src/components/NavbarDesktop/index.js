@@ -518,7 +518,12 @@ const CampusMenu = ({ status, setStatus, menu }) => {
   );
 };
 
-export const MegaMenu = ({ status, setStatus, menu, getRegionalFullStackLink }) => {
+export const MegaMenu = ({
+  status,
+  setStatus,
+  menu,
+  getRegionalFullStackLink,
+}) => {
   return (
     <>
       {status.itemIndex !== null && status.itemIndex !== menu.length - 1 && (

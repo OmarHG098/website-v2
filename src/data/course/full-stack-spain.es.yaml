@@ -38,7 +38,7 @@ header:
   title: "PROGRAMACIÓN \nFULL STACK \nCON IA"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "como-convertirse-en-programador-full-stack"
-  paragraph: "Inicia una carrera a prueba de futuro con salarios iniciales promedio de $65K+. Entrena con un currículo full stack impulsado por IA, respaldado por mentoría ilimitada, una tasa de contratación del 84% en 6 meses y nuestra garantía de trabajo."
+  paragraph: "Inicia una carrera a prueba de futuro con salarios iniciales promedio de €25,000. Entrena con un currículo full stack impulsado por IA, respaldado por mentoría ilimitada, una tasa de contratación del 84% en 6 meses y nuestra garantía de trabajo."
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"
@@ -75,7 +75,7 @@ partners:
 overlaped:
   heading: "Por qué aprender Vibe Coding es esencial"
   subtitle: "Adelántate con la programación impulsada por IA que está transformando cómo se construye el software—y lo que esperan los equipos modernos."
-  paragraph: 'Vibe Coding—donde das prompts de alto nivel y dejas que la IA genere el código—es la vanguardia de la programación. Popularizado por Andrej Karpathy y ahora ganando tracción, te ayuda a construir apps hasta 4× más rápido usando herramientas como <strong style="text-decoration: none; color: #000000; font-weight: 700;">Cursor</strong> y <strong style="text-decoration: none; color: #000000; font-weight: 700;">Vercel v0</strong>. A medida que la IA transforma la tecnología, las empresas están contratando programadores que saben cómo aprovecharla. Aprender Vibe Coding te da una ventaja clara—y mantiene tus habilidades preparadas para el futuro.'
+  paragraph: 'Vibe Coding—donde das prompts de alto nivel y dejas que la IA genere el código—es la vanguardia de la programación. Popularizado por Andrej Karpathy y ahora ganando tracción, te ayuda a construir apps hasta 4× más rápido usando herramientas como <strong style="text-decoration: none; color: #000000; font-weight: 700;">Github Copilot</strong> y <strong style="text-decoration: none; color: #000000; font-weight: 700;">Vercel v0</strong>. A medida que la IA transforma la tecnología, las empresas están contratando programadores que saben cómo aprovecharla. Aprender Vibe Coding te da una ventaja clara—y mantiene tus habilidades preparadas para el futuro.'
   button:
     text: "SABER MÁS"
     color: "blue"  
@@ -197,7 +197,7 @@ credentials:
 details:
   about:
       title: "Acerca del programa"
-      sub_title: "Domina las tecnologías más demandadas y aprende a crear aplicaciones modernas usando IA. Aprende algoritmos de programación y crea apps increíbles usando librerías front-end. Utiliza APIs para consumir datos y potenciar la funcionalidad de tu app. Programa y presenta tu propio proyecto, ganando experiencia práctica que cambia el juego. Aprende a programar junto a la IA para desbloquear una forma más rápida y creativa de construir apps reales desde el día uno. Colabora con herramientas como <strong style=\"text-decoration: none; color: #000000; font-weight: 600;\">Cursor, Copilot y Windsurf</strong>, y aprovecha el poder de <strong style=\"text-decoration: none; color: #000000; font-weight: 600;\">LLMs como GPT-4, Claude 3 y Gemini</strong> para generar, depurar, iterar y lanzar con velocidad y precisión. Cambia tu mentalidad y abraza las habilidades de programación, lógica e investigación para triunfar en la industria tecnológica de hoy. <br><a href='/es/proceso-de-aplicacion' target='_blank' rel='noopener noreferrer'>Cómo aplicar.</a>"
+      sub_title: "Domina las tecnologías más demandadas y aprende a crear aplicaciones modernas usando IA. Aprende algoritmos de programación y crea apps increíbles usando librerías front-end. Utiliza APIs para consumir datos y potenciar la funcionalidad de tu app. Programa y presenta tu propio proyecto, ganando experiencia práctica que cambia el juego. Aprende a programar junto a la IA para desbloquear una forma más rápida y creativa de construir apps reales desde el día uno. Colabora con herramientas como <strong style=\"text-decoration: none; color: #000000; font-weight: 600;\">Github Copilot, y Windsurf</strong>, y aprovecha el poder de <strong style=\"text-decoration: none; color: #000000; font-weight: 600;\">LLMs como GPT, Claude y Gemini</strong> para generar, depurar, iterar y lanzar con velocidad y precisión. Cambia tu mentalidad y abraza las habilidades de programación, lógica e investigación para triunfar en la industria tecnológica de hoy. <br><a href='/es/proceso-de-aplicacion' target='_blank' rel='noopener noreferrer'>Cómo aplicar.</a>"
       list:
         - label: "Duración"
           content: "20 Semanas de clases en vivo + 2-4 semanas de pre-work a tu propio ritmo"
@@ -224,7 +224,7 @@ details:
   weeks: 20
   week_unit: "sem"
   weeks_label: "semanas"
-  sub_heading: "Aprendizaje práctico a través de proyectos de la vida real. Domina los lenguajes de programación más demandados y herramientas impulsadas por IA: Python, React, Cursor, Copilot, Vercel y más."
+  sub_heading: "Aprendizaje práctico a través de proyectos de la vida real. Domina los lenguajes de programación más demandados y herramientas impulsadas por IA: Python, React, Github Copilot, Vercel y más."
   left_labels:
     description: "DESCRIPCIÓN:"
     projects: "PROYECTOS:"
