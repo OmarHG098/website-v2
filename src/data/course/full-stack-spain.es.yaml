@@ -1,0 +1,336 @@
+meta_info:
+  slug: programador-full-stack   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/programador-full-stack
+  title: "Bootcamp de Programador Full Stack | 4Geeks Academy"
+  bc_slug: "full-stack-spain"
+  job_guarantee: true
+  description: "Domina la programación full stack con el bootcamp de 4Geeks Academy y garantía de trabajo. Asegura tu futuro en tecnología."
+  image: "/images/og-preview/full-stack.es.png"
+  visibility: "visible"
+  keywords: ""
+  show_in_apply: true
+  related_clusters: ["desarrollador-full-stack"]
+  template: "course-fullstack"
+  duration: "P20W"  # 20 weeks duration in ISO 8601 format
+  redirects:
+    [
+      "/part-time",
+      "/programa",
+      "/es/part-time",
+      "/es/course/part-time",
+      "/es/full-stack",
+      "/es/coding-bootcamps/programacion-web-full-stack-bootcamp-part-time",
+      "/es/coding-bootcamps/programacion-web-full-stack-bootcamp-full-time",
+      "/es/coding-bootcamps/programacion-web-full-stack",
+      "/es/coding-bootcamps/full-stack-part-time",
+      "/es/course/programacion-web-full-stack",
+      "/es/course/bootcamp-de-programacion-web-full-stack-part-time/madrid-espana",
+      "/es/course/bootcamp-de-programacion-web-full-stack-part-time",
+      "/es/course/bootcamp-programacion-web-full-stack-part-time",
+      "/es/course/introduccion-programacion",
+      "/es/course/programacion-web-full-stack-bootcamp-full-time",
+      "/introduccion-programacion-codigo",
+    ]
+
+apply_form:
+  label: Programador Full Stack - Part Time
+seo_title: " Bootcamp de Programador Full Stack con IA"
+header:
+  title: "PROGRAMACIÓN \nFULL STACK \nCON IA"
+  image: "../../../static/images/bg/program-bg.png"
+  image_alt: "como-convertirse-en-programador-full-stack"
+  paragraph: "Inicia una carrera a prueba de futuro con salarios iniciales promedio de 22.000 € anuales. Entrena con un currículo full stack impulsado por IA, respaldado por mentoría ilimitada, una tasa de contratación del 84% en 6 meses y nuestra garantía de trabajo."
+
+button:
+  syllabus_heading: "Descargar Detalles del Curso"
+  syllabus_btn_label: "Descarga Instantánea"
+  syllabus_motivation: "Recíbelo en solo unos segundos"
+  apply_button_text: "Aplica ahora"
+  apply_button_link: "/es/aplica"
+
+course_instructors:
+  header:
+    title: "Conoce a nuestros instructores"
+    paragraph: ""
+
+  instructors:
+    - name: "Roldolfo Campos"
+      sub_title: "Co fundador de 4geeks y director de educación"
+      image: "../../../static/images/instructors/example.png"
+      bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
+      github: ""
+      linkedin: "https://www.linkedin.com/"
+
+    - name: "Gabriel Salinas"
+      sub_title: "Sophisticated Software Systems Engineer"
+      image: "../../../static/images/instructors/example.png"
+      bio: "Currently working as a Senior Solutions Architect at VMware"
+      github: ""
+      linkedin: "https://www.linkedin.com/"
+
+partners:
+  limit: 4
+  heading: "¿Quién está contratando a nuestros estudiantes?"
+  sub_heading: "550+ socios contratantes, y 50+ ofertas de trabajo disponibles ahora mismo para programación de software"
+
+overlaped:
+  heading: "Por qué aprender Vibe Coding es esencial"
+  subtitle: "Adelántate con la programación impulsada por IA que está transformando cómo se construye el software—y lo que esperan los equipos modernos."
+  paragraph: 'Vibe Coding—donde das prompts de alto nivel y dejas que la IA genere el código—es la vanguardia de la programación. Popularizado por Andrej Karpathy y ahora ganando tracción, te ayuda a construir apps hasta 4× más rápido usando herramientas como <strong style="text-decoration: none; color: #000000; font-weight: 700;">Github Copilot</strong> y <strong style="text-decoration: none; color: #000000; font-weight: 700;">Vercel v0</strong>. A medida que la IA transforma la tecnología, las empresas están contratando programadores que saben cómo aprovecharla. Aprender Vibe Coding te da una ventaja clara—y mantiene tus habilidades preparadas para el futuro.'
+  button:
+    text: "SABER MÁS"
+    color: "blue"  
+    link: "/"
+  image:
+    src: "/images/landing/vibe-coder.webp"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/diego-gomez-testimonial.webp"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=9Vm_xD49MaU&list=PLmBUv425PabWp2htZTrCU2AKkmCzjrFn3"
+  heading:
+    text_by_location:
+      miami: "4Geeks, Miami y una misión de crear oportunidades"
+      default: "Tu Nueva Carrera Comienza Aquí — Solo Pregúntale a Nuestros Graduados"
+    font_size: ["35px", "35px", "35px", "30px", "30px"]
+  sub_heading:
+    text_by_location:
+      miami: "Con Miami como nuestra base, estamos dedicados a fomentar oportunidades en todo el sur de Florida."
+      default: "Convertirse en un programador full stack impulsado por IA con 4Geeks no es solo aprender a programar — es cambiar tu vida."
+    style: '{"font-weight": "400" }'
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  bullets:
+    items: 
+    - text: "Diego comparte cómo nuestro bootcamp le proporcionó todo lo que necesitaba para dar el salto al mundo laboral. Independientemente de si tienes conocimientos previos o comienzas desde cero, en 4Geeks Academy recibirás la formación y el apoyo que necesitas para destacar en la industria."
+    - text: "Nuestros estudiantes vienen de todos los ámbitos de la vida y se van con resultados reales:"
+    - text: " ✅ 84% consigue trabajo en 6 meses después de graduarse"
+    - text: " ✅ Los salarios aumentan en promedio un 55%"
+  content:
+    text: "Mira su historia. Imagina la tuya."
+    style: '{"font-weight": "700", "margin":"0", "font-size":"16px" }' 
+
+
+# Two Columns - Rigo
+two_columns_rigo:
+  proportions: [7, 5]
+  background: "#FFFFFF"
+  justify: "center" #start,end,center
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    src: "/images/landing/ai-mentor-esp.jpg"
+    shadow: true
+  video: "cOFm_deKj6Q"
+  heading: 
+    text: "Aprende Programación Full Stack Impulsada por IA Más Rápido — Con Apoyo Hiper-Personalizado Que Se Adapta a Ti"
+    font_size: ["33px", "33px", "33px", "33px", "33px"]
+    style: '{ "lineHeight": "30px" }'
+    heading_image:
+      src: "/images/rigobot-logo.png"
+  sub_heading:
+    text: "Instrucción presencial, mentoría ilimitada y herramientas de IA construidas para progreso más inteligente y rápido."
+    font_size: ["24px","24px","22px","22px","20px"]
+    style: '{"margin":"0", "font-weight":"300", "text-align": "justify" }'
+  content:
+    style: '{ "font-size":"18px", "margin":"0"}'
+    text: "Con el apoyo combinado de nuestros mentores humanos y herramientas de IA, dominarás la programación full stack integrada con IA más rápido, más inteligente y con más confianza que nunca."
+  bullets:
+    item_style: '{"font-weight": "100", "margin":"0", "font-size":"18px" }'
+    items:
+      - heading: ""
+        text: |
+          • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Rigobot</strong>, nuestro <strong style="text-decoration: none; color: #000000; font-weight: 700;">asistente de programación con IA</strong> personalizado, sigue tu progreso y da retroalimentación personalizada exactamente cuando y cómo la necesitas.
+          <br />
+          • Obtén atención personal inigualable con nuestro <strong style="text-decoration: none; color: #000000; font-weight: 700;">ratio de 8:1 estudiante-profesor</strong>, más <strong style="text-decoration: none; color: #000000; font-weight: 700;">acceso ilimitado a sesiones 1:1</strong> con nuestros mentores expertos y coaches de carrera.
+          <br />
+        icon: ""
+        icon_color: ""
+
+two_columns_info:
+  proportions: [6, 6]
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}' 
+    shadow: false 
+    src: "/images/landing/grupo-ventanas.webp"
+  section_heading: 
+    text: "Todo lo que necesitas para lanzar y hacer crecer una carrera en tecnología"
+  heading:
+    text: ""
+          #xl      lg     md     sm    xs
+    font_size: ["40px", "34px", "34px", "30px", "30px"]
+  sub_heading:
+    style: '{ "font-weight": "400"}'
+    text: "Habilidades Integradas con IA, Mentoría Ilimitada y Apoyo Profesional de por Vida"
+    font_size: ["22px"]
+  content:
+    text: ""
+  button:
+    text: "Compara 4Geeks con otros bootcamps"
+    path: "/es/geeks-vs-otros"
+    color: "white"
+    background: "black"
+    hover: "lightBlue"
+  bullets:
+    items: 
+    - heading: "Domina las habilidades tecnológicas de próxima generación."
+      text: "Aprende a construir con las herramientas de IA y flujos de trabajo utilizados por equipos de programación modernos."
+    - heading: "Obtén mentoría ilimitada y apoyo profesional."
+      text: "Trabaja 1:1 con mentores expertos y coaches de carrera—durante tu bootcamp y para siempre después."
+    - heading: "Aprende más rápido con apoyo hiperpersonalizado."
+      text: "Progresa con retroalimentación instantánea de IA, orientación personalizada y clases pequeñas."
+    - heading: "Únete a una comunidad tecnológica global."
+      text: "Conecta con compañeros, mentores y graduados y mantente apoyado mientras creces."
+
+badges:
+  paragraph: "Prepárate para destacar en la industria tecnológica con IA de hoy con aprendizaje hiperpersonalizado, mentoría 1:1 ilimitada y apoyo profesional de por vida. Reconocido por Course Report como uno de los mejores bootcamps de programación del mundo, elegido por Forbes como el mejor bootcamp para estudiantes con presupuesto (2024) y calificado 4.9/5 en SwitchUp. Autorizado por el Departamento de Educación de Florida."
+
+upcoming:
+  no_dates_message: "Actualmente no hay próximas fechas para este programa"
+  actionMessage: "Avísame cuando haya fechas disponibles"
+
+credentials:
+  heading: "Este Programa en Números"
+  paragraph: "Nuestros resultados hablan por sí solos"
+
+## PROGRAM DETAILS
+details:
+  about:
+      title: "Acerca del programa"
+      sub_title: "Domina las tecnologías más demandadas y aprende a crear aplicaciones modernas usando IA. Aprende algoritmos de programación y crea apps increíbles usando librerías front-end. Utiliza APIs para consumir datos y potenciar la funcionalidad de tu app. Programa y presenta tu propio proyecto, ganando experiencia práctica que cambia el juego. Aprende a programar junto a la IA para desbloquear una forma más rápida y creativa de construir apps reales desde el día uno. Colabora con herramientas como <strong style=\"text-decoration: none; color: #000000; font-weight: 600;\">Github Copilot, y Windsurf</strong>, y aprovecha el poder de <strong style=\"text-decoration: none; color: #000000; font-weight: 600;\">LLMs como GPT, Claude y Gemini</strong> para generar, depurar, iterar y lanzar con velocidad y precisión. Cambia tu mentalidad y abraza las habilidades de programación, lógica e investigación para triunfar en la industria tecnológica de hoy. <br><a href='/es/proceso-de-aplicacion' target='_blank' rel='noopener noreferrer'>Cómo aplicar.</a>"
+      list:
+        - label: "Duración"
+          content: "20 Semanas de clases en vivo + 2-4 semanas de pre-work a tu propio ritmo"
+          icon: "duration-icon"
+        - label: "Clases"
+          content: "3 clases semanales"
+          icon: "book-2"
+        - label: "Tamaño de la clase"
+          content: "Ratio de 1 profesor por cada 7 estudiantes"
+          icon: "people"
+        - label: "Certificado"
+          content: "Programador Full Stack"
+          link_text: "Ver ejemplo"
+          link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
+          icon: "certification"
+        - label: "Prerequisitos"
+          content: "No se requieren habilidades de programación previas o matemáticas avanzadas."
+          icon: "contract-checked"
+        - label: "Idioma"
+          content: "Puedes elegir entre inglés y español para el plan de estudios y el contenido. Las clases en vivo se imparten en el idioma de tu campus."
+          icon: "language"
+
+  heading: "BOOTCAMP DE PROGRAMACIÓN FULL-STACK PART-TIME CON IA"
+  weeks: 20
+  week_unit: "sem"
+  weeks_label: "semanas"
+  sub_heading: "Aprendizaje práctico a través de proyectos de la vida real. Domina los lenguajes de programación más demandados y herramientas impulsadas por IA: Python, React, Github Copilot, Vercel y más."
+  left_labels:
+    description: "DESCRIPCIÓN:"
+    projects: "PROYECTOS:"
+    duration: "DURACIÓN:"
+    skills: "Tópico / Semana:"
+  details_modules:
+    - module_name: "PREWORK"
+      title: "Prepárate para el Prework"
+      description: "Empezamos con lo básico: HTML5, CSS3 y JavaScript. Revisamos los fundamentos de la programación para asegurar que todos estemos en la misma página.Durante el prework, aprenderás cómo crear un sitio web usando HTML y CSS. Luego, programarás varios proyectos y finalmente te sumergirás en el mundo de JavaScript, aprendiendo sobre variables, loops, condicionales y funciones."
+      projects: "Postal CSS, Versión Mínima de Instagram, etc."
+      slug: "prework"
+      duration: "~ 60 horas"
+      step: 0
+    - module_name: "FUNDAMENTOS"
+      title: "Aprende a Programar"
+      description: "Piensa como una computadora: Controla el flujo de tu código, codifica algoritmos, haz loops, usa condicionales, webpack, la línea de comandos, GIT, etc."
+      projects: "Construye tu clon de Instagram, un formulario con HTML5, un currículum en línea, etc.."
+      slug: "fundamentos"
+      duration: "3 sem"
+      step: 2
+    - module_name: "LA WEB"
+      title: "Programación Web"
+      description: "Crearás tu primera aplicación con React.js, patrón MVC, módulos JS, bundling, Babel JS, el DOM y eventos."
+      projects: "Clon de Instagram Feed, generador de cartas aleatorias, pruebas unitarias con Jest, landing page con React, semáforo, lista de tareas con React, entre otros..."
+      slug: "programacion-web"
+      duration: "7 sem"
+      step: 6
+    - module_name: "API'S"
+      title: "Programación de APIs"
+      description: "Enfocado principalmente en Python. Prepárate para construir tu propia API e interactuar con aplicaciones de terceros como Twillio, Stripe y muchas más."
+      projects: "Página de blog de Star Wars, autenticación JWT, Jackson Families, CRUD (crear, leer, actualizar, eliminar), construye tus propias APIs e interactúa con otras."
+      slug: "web-development"
+      duration: "3 sem"
+      step: 2
+    - module_name: "APPS AVANZADAS"
+      title: "Aplicación Avanzada"
+      description: "Python, Flask, REST APIs, bases de datos, SQL, patrón MVC, publica tu sitio web, etc."
+      projects: "Durante esta fase, necesitarás diseñar, programar, probar y publicar tu propia aplicación web."
+      slug: "aplicacion-avanzada"
+      duration: "7 sem"
+      step: 8
+    - module_name: "APOYO DE POR VIDA"
+      title: "Apoyo de por Vida"
+      description: "Sigue evolucionando en tu carrera con la ayuda de la academia - somos tus socios de aprendizaje de por vida. Tendrás acceso a mentorías 1:1 para todas tus necesidades de programación durante el bootcamp y más allá. Nuestros coaches de carrera expertos te ayudarán a prepararte para una búsqueda de trabajo exitosa y continuarán estando ahí para ti a lo largo de tu carrera."
+      projects: "Recibe pago por seguir aprendiendo y aumenta tu ingreso gradualmente mientras te conviertes en un Programador Senior. Disfruta y construye software de por vida."
+      slug: "lifelong-learning"
+      duration: "Para siempre"
+      step: 0.1
+
+syllabus:
+  heading: Descarga toda la información sobre este programa
+  button_label: Descargar
+
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "¿QUÉ HACE QUE ESTE PROGRAMA DESTAQUE?"
+  sub_heading: "Compara con otras escuelas"
+  sub_heading_link: ""
+
+why_4geeks:
+  heading: Por qué 4Geeks Academy
+  sub_heading: ""
+
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  heading: "¡Y disfruta del Apoyo Profesional... de por Vida!"
+  geek_pal:
+    - Un profesor cada siete estudiantes (1:7).
+    - Sesiones ilimitadas de mentoría presencial u online bajo demanda.
+    - Miles de ejercicios autoevaluados.
+    - Tutoriales interactivos y autoevaluados.
+    - Soluciones en video para retroalimentación instantánea.
+    - Chat de apoyo online 12 horas al día.
+    - Transmisión online de las clases.
+    - Grabación de las clases para revisión posterior.
+  geek_force:
+    - Construcción de currículum
+    - Construcción de perfil de Github
+    - Preparación de entrevistas simuladas
+    - Sesión de preparación de entrevistas personalizada para trabajos específicos
+    - Coaching de Marca Personal
+    - Prácticas y ejercicios de programación post-graduación
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "Precios y Pagos"
+  sub_heading: "Selecciona la ubicación del bootcamp para ver los precios y planes de pago"
+  selector:
+    top_label: Ubicación
+    placeholder: Selecciona una ubicación
+  button:
+    text: Ver Precios y Planes
+    link: ""
+## ALUMNI SECTION
+alumni:
+  heading: "Conoce a Nuestros Graduados y Sus Proyectos"
+  sub_heading:
+    "La última fase del curso debes construir un proyecto final que tú mismo escogerás,
+    puede ser un emprendimiento o trabajarás directamente en un proyecto de la vida real en
+    colaboración con nuestros socios contratantes."
+
+## SIDEBAR
+sidebar:
+  membership: "MEMBRESÍA"
+  program: "PROGRAMA"
+  geeks_vs_other: "4GEEKS vs OTROS"
+  pricing: "PRECIO"
+  alumni: "GRADUADOS"
+

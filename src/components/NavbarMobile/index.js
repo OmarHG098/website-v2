@@ -420,6 +420,88 @@ export const MegaMenu = ({
   lang,
 }) => {
   const { setSession } = useContext(SessionContext);
+
+  // Helper function to check if location is a Spain academy (project-standard pattern)
+  const isSpainLocation = () => {
+    const spainAcademies = [
+      "madrid-spain",
+      "barcelona-spain",
+      "valencia-spain",
+      "malaga-spain",
+      "europe", // Europe online option
+    ];
+
+    const candidates = [
+      session?.location?.breathecode_location_slug,
+      session?.location?.meta_info?.slug,
+      session?.location?.active_campaign_location_slug,
+    ].filter((s) => typeof s === "string" && s.length > 0);
+
+    // Check if any candidate matches Spain academy slugs
+    for (const candidate of candidates) {
+      if (spainAcademies.includes(candidate)) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  // Helper function to get regional full-stack link (for navbar menu items)
+  const getRegionalFullStackLink = (link) => {
+    if (!link || typeof link !== "string") return link;
+
+    // Check if this is a full-stack course link
+    if (link.includes("desarrollador-full-stack")) {
+      // If location is Spain, use programador version
+      if (isSpainLocation()) {
+        return link.replace(
+          "desarrollador-full-stack",
+          "programador-full-stack"
+        );
+      }
+    }
+    return link;
+  };
+
+  // Helper function to get regional full-stack course URL
+  const getRegionalFullStackUrl = (targetLang, currentPath) => {
+    // Only handle full-stack course pages
+    if (!currentPath || !currentPath.includes("full-stack")) {
+      return null;
+    }
+
+    if (targetLang === "es") {
+      // Switching to Spanish - check if location is Spain academy
+      if (isSpainLocation()) {
+        return "/es/coding-bootcamps/programador-full-stack";
+      } else {
+        return "/es/coding-bootcamps/desarrollador-full-stack";
+      }
+    } else if (targetLang === "us" && lang === "es") {
+      // Switching from Spanish to English
+      return "/us/coding-bootcamps/part-time-full-stack-developer";
+    }
+
+    return null;
+  };
+
+  // Get the language switch URL with regional routing support
+  const getLanguageSwitchUrl = () => {
+    if (!session || !session.pathsDictionary || !currentURL) {
+      return "/?lang=en#home";
+    }
+
+    const targetLang = langDictionary[lang];
+    const regionalUrl = getRegionalFullStackUrl(targetLang, currentURL);
+
+    if (regionalUrl) {
+      return `${regionalUrl}${languageButton.link}`;
+    }
+
+    // Use default dictionary lookup
+    return `${session.pathsDictionary[currentURL] || ""}${languageButton.link}`;
+  };
+
   return (
     <>
       {status.toggle && (
@@ -455,10 +537,10 @@ export const MegaMenu = ({
               <>
                 {status.itemIndex != null && (
                   <Link
-                    to={
+                    to={getRegionalFullStackLink(
                       menu[status.itemIndex].sub_menu.link &&
-                      menu[status.itemIndex].sub_menu.link
-                    }
+                        menu[status.itemIndex].sub_menu.link
+                    )}
                     style={{ display: "contents" }}
                   >
                     <Icon
@@ -510,13 +592,7 @@ export const MegaMenu = ({
                     locations,
                   })
                 }
-                to={
-                  session && session.pathsDictionary && currentURL
-                    ? `${session.pathsDictionary[currentURL] || ""}${
-                        languageButton.link
-                      }`
-                    : "/?lang=en#home"
-                }
+                to={getLanguageSwitchUrl()}
               >
                 <Paragraph
                   dangerouslySetInnerHTML={{ __html: languageButton.text }}
@@ -562,7 +638,7 @@ export const MegaMenu = ({
                           />
                         </>
                       ) : (
-                        <Link to={item.link}>
+                        <Link to={getRegionalFullStackLink(item.link)}>
                           <H3
                             textAlign="left"
                             width="fit-content"
@@ -635,7 +711,10 @@ export const MegaMenu = ({
                               {Array.isArray(m.buttons) &&
                                 m.buttons.map((m, i) => {
                                   return (
-                                    <Link to={m.link} key={i}>
+                                    <Link
+                                      to={getRegionalFullStackLink(m.link)}
+                                      key={i}
+                                    >
                                       <Div alignItems="baseline">
                                         <ButtonText
                                           textAlign="left"
