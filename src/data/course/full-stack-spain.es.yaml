@@ -1,13 +1,13 @@
 meta_info:
   slug: programador-full-stack   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/programador-full-stack
-  title: "Bootcamp de Programador Full Stack | 4Geeks Academy"
+  title: "Curso de Programador Full Stack | 4Geeks Academy"
   bc_slug: "full-stack-spain"
   job_guarantee: true
   description: "Domina la programación full stack con el bootcamp de 4Geeks Academy y garantía de trabajo. Asegura tu futuro en tecnología."
   image: "/images/og-preview/full-stack.es.png"
   visibility: "visible"
   keywords: ""
-  show_in_apply: true
+  show_in_apply: false
   related_clusters: ["desarrollador-full-stack"]
   template: "course-fullstack"
   duration: "P20W"  # 20 weeks duration in ISO 8601 format
@@ -33,12 +33,12 @@ meta_info:
 
 apply_form:
   label: Programador Full Stack - Part Time
-seo_title: " Bootcamp de Programador Full Stack con IA"
+seo_title: "Curso de Programador Full Stack con IA"
 header:
   title: "PROGRAMACIÓN \nFULL STACK \nCON IA"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "como-convertirse-en-programador-full-stack"
-  paragraph: "Inicia una carrera a prueba de futuro con salarios iniciales promedio de 22.000 € anuales. Entrena con un currículo full stack impulsado por IA, respaldado por mentoría ilimitada, una tasa de contratación del 84% en 6 meses y nuestra garantía de trabajo."
+  paragraph: 'Inicia una carrera a prueba de futuro con salarios iniciales promedio de 22.000 € anuales. Entrena con un currículo full stack impulsado por IA, respaldado por mentoría ilimitada, una tasa de contratación del 84% en 6 meses y nuestra garantía de trabajo.  <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guaranteee-es.pdf" target="_blank" rel="noopener noreferrer">Condiciones aplican</a>.'
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"
