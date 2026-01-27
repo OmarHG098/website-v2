@@ -11,7 +11,7 @@ navbar:
         text: "Unsure which program fits you best? See our program comparison <a class='link' href='/us/program-comparison'>here.</a>"
         link: "/us/program-comparison"
       links:
-        - title: "Full Stack with AI"
+        - title: "AI Engineering"
           level: " "
           icon: "fullstack_2"
           paragraph: "Become a Full Stack developer using AI tools like Cursor and Vercel v0. Master in-demand AI skills and land a job as a developer."
