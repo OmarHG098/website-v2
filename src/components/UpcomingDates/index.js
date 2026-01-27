@@ -341,6 +341,11 @@ const UpcomingDates = ({
       });
 
       courseFilteredCohorts.forEach((cohort) => {
+        // Skip enrichment if syllabus_version is null
+        if (!cohort.syllabus_version) {
+          return;
+        }
+
         const syllabus =
           syllabusAlias.find((syll) => syll.default_course === defaultCourse) ||
           syllabusAlias.find((syll) =>
@@ -665,17 +670,19 @@ const UpcomingDates = ({
                             flexShrink="0"
                             alignItems_tablet="flex-start"
                           >
-                            <Link
-                              to={
-                                cohort.syllabus_version.courseSlug
-                                  ? `/${lang}/coding-bootcamps/${cohort.syllabus_version.courseSlug}`
-                                  : ""
-                              }
-                            >
+                            {cohort.syllabus_version?.courseSlug ? (
+                              <Link
+                                to={`/${lang}/coding-bootcamps/${cohort.syllabus_version.courseSlug}`}
+                              >
+                                <Paragraph textAlign="left" color={Colors.blue}>
+                                  {cohort.syllabus_version?.name || "Program"}
+                                </Paragraph>
+                              </Link>
+                            ) : (
                               <Paragraph textAlign="left" color={Colors.blue}>
-                                {cohort.syllabus_version.name}
+                                {cohort.syllabus_version?.name || "Program"}
                               </Paragraph>
-                            </Link>
+                            )}
                           </Div>
                           <Div
                             flexDirection="column"
