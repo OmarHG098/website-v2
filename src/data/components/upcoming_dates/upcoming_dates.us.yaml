@@ -29,6 +29,11 @@ syllabus_alias:
     name: Full-Stack Developer - Full Time
     duration_weeks: 12 weeks
 
+  - default_course: ai-engineering
+    course_slug: ai-engineering-course
+    name: AI Engineering
+    duration_weeks: 20 weeks
+
 email_form_content:
   heading: Send your email to notify you when there is a date available for this campus
   button_text: Let me know when there is a date

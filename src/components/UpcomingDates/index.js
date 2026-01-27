@@ -317,6 +317,7 @@ const UpcomingDates = ({
           cybersecurity: () =>
             syllabusSlug?.includes("cybersecurity") ||
             syllabusSlug?.includes("cyber-security"),
+          "ai-engineering": () => syllabusSlug?.includes("ai-engineering"),
         };
 
         const matcherResult = courseMatchers[normalizedDefaultCourse]?.();
