@@ -19,6 +19,8 @@ import TwoColumn from "../components/TwoColumn/index.js";
 import Iconogram from "../components/Iconogram/index.js";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases/index.js";
 import Milestones from "../components/Milestones/index.js";
+import StarRating from "../components/StarRating/index.js";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const Program = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -184,12 +186,6 @@ const Program = ({ data, pageContext, yml }) => {
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
       />
 
-      {/* 4. Milestones Component */}
-      <Milestones
-        milestones={courseDetails.milestones}
-        lang={pageContext.lang}
-      />
-
       {/* 5. Two Column Left */}
       <TwoColumn
         left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
@@ -220,7 +216,120 @@ const Program = ({ data, pageContext, yml }) => {
         session={session}
       />
 
-      {/* 6. How It Works - Iconogram */}
+      {/* 5. Milestones Component */}
+      <Milestones
+        milestones={courseDetails.milestones}
+        lang={pageContext.lang}
+      />
+
+      {/* 6. Rating Reviews Component */}
+      {yml.rating_reviews && (
+        <Div
+          background={
+            Colors[yml.rating_reviews.background] ||
+            yml.rating_reviews.background
+          }
+          padding="0 20px"
+          padding_tablet="0 40px"
+        >
+          <Div
+            padding="60px 0 60px 0"
+            display="flex"
+            flexDirection="column"
+            margin="auto"
+            width="100%"
+            maxWidth="1280px"
+          >
+            {yml.rating_reviews.heading && (
+              <H2 type="h2" padding="10px 0 60px 0">
+                {yml.rating_reviews.heading}
+              </H2>
+            )}
+            <Div
+              display="flex"
+              flexDirection="column"
+              flexDirection_tablet="row "
+              justifyContent="center"
+              gap="45px"
+              gap_tablet="24px"
+            >
+              {yml.rating_reviews.rating_list?.map((item, index) => {
+                const imageData =
+                  courseDetails.rating_reviews?.rating_list?.[index]?.image;
+                return (
+                  <Div
+                    key={`rating-component-${item.alt || index}`}
+                    display="flex"
+                    alignItems="center"
+                    flexDirection="column"
+                    borderRadius="4px"
+                    background="white"
+                    width="100%"
+                    padding="10px"
+                  >
+                    {imageData?.childImageSharp?.gatsbyImageData ? (
+                      <GatsbyImage
+                        style={{
+                          height: "50px",
+                          minWidth: "135px",
+                          width: "135px",
+                        }}
+                        imgStyle={{ objectFit: "contain" }}
+                        loading="eager"
+                        alt={item.alt}
+                        image={getImage(
+                          imageData.childImageSharp.gatsbyImageData
+                        )}
+                      />
+                    ) : (
+                      <Img
+                        src={item.image}
+                        alt={item.alt}
+                        style={{
+                          height: "50px",
+                          minWidth: "135px",
+                          width: "135px",
+                          objectFit: "contain",
+                        }}
+                      />
+                    )}
+                    <StarRating rating={item.rating} />
+                    <Paragraph
+                      padding="6px 0"
+                      fontSize="9px"
+                      color={Colors.darkGray3}
+                      fontWeight="bold"
+                      textTransform="lowercase"
+                    >
+                      {`${item.rating} ${
+                        pageContext.lang === "us" ? "On Reviews" : "En reseñas"
+                      }`}
+                    </Paragraph>
+                  </Div>
+                );
+              })}
+            </Div>
+          </Div>
+        </Div>
+      )}
+
+      {/* 7. What Sets 4Geeks Apart Component */}
+      {yml.what_sets_4geeks_apart && (
+        <TwoColumn
+          left={{
+            image: yml.what_sets_4geeks_apart?.image,
+          }}
+          right={{
+            heading: yml.what_sets_4geeks_apart?.heading,
+            bullets: yml.what_sets_4geeks_apart?.bullets,
+            button: yml.what_sets_4geeks_apart?.button,
+          }}
+          proportions={yml.what_sets_4geeks_apart?.proportions}
+          session={session}
+        />
+      )}
+
+      {/* 8. How It Works - Iconogram */}
       {courseDetails.how_it_works && (
         <Iconogram
           yml={{
@@ -231,12 +340,12 @@ const Program = ({ data, pageContext, yml }) => {
         />
       )}
 
-      {/* 7. Scholarship Success Cases */}
+      {/* 9. Scholarship Success Cases */}
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
 
-      {/* 8. Payment Component */}
+      {/* 10. Payment Component */}
       <PricesAndPayment
         background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
         type={pageContext.slug}
@@ -248,24 +357,24 @@ const Program = ({ data, pageContext, yml }) => {
         paragraph={yml.prices.sub_heading}
       />
 
-      {/* 9. Two Column Right */}
+      {/* 11. Two Column Right */}
       <TwoColumn
         right={{
-          image: yml.two_columns_rigo?.image,
-          video: yml.two_columns_rigo?.video,
+          image: yml.two_column_program?.image,
+          video: yml.two_column_program?.video,
         }}
         left={{
-          heading: yml.two_columns_rigo?.heading,
-          sub_heading: yml.two_columns_rigo?.sub_heading,
-          bullets: yml.two_columns_rigo?.bullets,
-          content: yml.two_columns_rigo?.content,
-          button: yml.two_columns_rigo?.button,
+          heading: yml.two_column_program?.heading,
+          sub_heading: yml.two_column_program?.sub_heading,
+          bullets: yml.two_column_program?.bullets,
+          content: yml.two_column_program?.content,
+          button: yml.two_column_program?.button,
         }}
-        proportions={yml.two_columns_rigo?.proportions}
+        proportions={yml.two_column_program?.proportions}
         session={session}
       />
 
-      {/* 10. Who's Hiring - OurPartners */}
+      {/* 12. Who's Hiring - OurPartners */}
       <OurPartners
         images={hiring.partners.images}
         margin="0"
@@ -286,7 +395,7 @@ const Program = ({ data, pageContext, yml }) => {
       {/* 11. Loc Component */}
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
 
-      {/* 12. Footer - handled by Layout wrapper */}
+      {/* 14. Footer - handled by Layout wrapper */}
       <DoubleActionCTA />
     </>
   );
@@ -381,12 +490,8 @@ export const query = graphql`
             }
           }
           how_it_works {
+            background
             heading {
-              text
-              font_size
-              style
-            }
-            sub_heading {
               text
               font_size
               style
@@ -397,7 +502,6 @@ export const query = graphql`
               content
               color
             }
-            background
           }
           two_columns {
             proportions
@@ -431,6 +535,7 @@ export const query = graphql`
             }
             bullets {
               items {
+                heading
                 text
               }
             }
@@ -439,36 +544,73 @@ export const query = graphql`
               style
             }
           }
-          two_columns_rigo {
+          two_column_program {
             proportions
             image {
               style
               src
               shadow
             }
-            video
             heading {
               text
               font_size
-              style
-              heading_image {
-                src
-              }
             }
             sub_heading {
               text
               font_size
               style
             }
-            content {
+            bullets {
+              items {
+                text
+              }
+            }
+            button {
               text
+              color
+              background
+              path
+            }
+          }
+          rating_reviews {
+            position
+            heading
+            background
+            rating_list {
+              alt
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 1200
+                    placeholder: NONE
+                  )
+                }
+              }
+              rating
+              url
+            }
+          }
+          what_sets_4geeks_apart {
+            proportions
+            image {
               style
+              src
+            }
+            heading {
+              text
+              font_size
             }
             bullets {
               items {
-                heading
                 text
               }
+            }
+            button {
+              text
+              color
+              background
+              path
             }
           }
           prices {

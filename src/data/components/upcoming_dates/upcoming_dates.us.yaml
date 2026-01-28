@@ -32,7 +32,7 @@ syllabus_alias:
   - default_course: ai-engineering
     course_slug: ai-engineering-course
     name: AI Engineering
-    duration_weeks: 20 weeks
+    duration_weeks: 24 weeks
 
 email_form_content:
   heading: Send your email to notify you when there is a date available for this campus

@@ -1,5 +1,5 @@
 meta_info:
-  slug: ai-engineering-course
+  slug: ai-engineering
   title: "AI Engineering Bootcamp | 4Geeks Academy"
   bc_slug: "ai-engineering"
   job_guarantee: true
@@ -18,10 +18,10 @@ apply_form:
 
 seo_title: "AI Engineering Bootcamp with Job Guarantee"
 header:
-  title: "BECOME THE AI ENGINEER\nCOMPANIES ARE RACING TO HIRE"
+  title: "AI Engineering"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "ai-engineering-bootcamp"
-  paragraph: 'Master the AI-native skills defining the next generation of software engineering – powered by 1:1 mentorship and personalized career guidance. Average starting salaries of $95K–$135K. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf" target="_blank" rel="noopener noreferrer">Conditions apply</a>.'
+  paragraph: 'Launch your AI-driven career in 24 weeks with personalized 1:1 mentorship and expert guidance. Become the professional companies can’t wait to hire.'
 
 button:
   syllabus_heading: "Download Syllabus"
@@ -137,8 +137,8 @@ syllabus:
 
 ## MILESTONES SECTION
 milestones:
-  title: "What You'll Build in 20 Weeks"
-  sub_title: "Learn to build and scale an entire AI-native business, not just individual features. Every milestone builds on the last, giving you real end-to-end engineering experience."
+  title: "AI ENGINEERING PROGRAM OVERVIEW"
+  sub_title: "Learn by building and scaling a single AI-native business across 10 milestones. Graduate in 24 weeks with a fully operational, AI-powered company that reflects the skills and workflows used by modern engineering teams."
   items:
     - id: "milestone-1"
       title: "AI-Assisted Frontend"
@@ -197,31 +197,49 @@ milestones:
           - text: "Build streaming AI response systems"
           - text: "Design event-driven architectures"
 
+## RATING REVIEWS SECTION
+rating_reviews:
+  background: "#FBFBFB"
+  position: 7
+  heading: "Globally Recognized and Top Rated"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
+
 ## HOW IT WORKS SECTION
 how_it_works:
+  background: "#0084FF"
   heading:
-    text: "How It Works"
-    font_size: ["34px", "34px", "30px", "30px", "30px"]
-  sub_heading:
-    text: "Our proven process helps you master AI engineering through structured learning and hands-on practice."
-    font_size: ["20px", "20px", "16px", "16px", "16px"]
+    text: "Career Outcomes"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+    style: '{ "color": "white" }'
   icons:
-    - icon: "laptop-icon-new"
+    - icon: "graduation-2"
       color: "#0084FF"
-      title: "Learn AI Engineering"
-      content: "Master AI-native development skills through hands-on projects"
-    - icon: "rocket-2"
-      color: "#25BF6C"
-      title: "Build Real Projects"
-      content: "Create complete AI-powered applications from start to finish"
-    - icon: "network"
-      color: "#BE8BFF"
-      title: "Get Mentorship"
-      content: "1:1 guidance from expert instructors and career coaches"
-    - icon: "chart"
+      title: "Job Placement Rate"
+      content: "84% of graduates were hired"
+    - icon: "briefcase-2"
       color: "#FF0000"
-      title: "Launch Your Career"
-      content: "84% hired within 6 months with average salaries of $95K–$135K"
+      title: "Average time to get hired"
+      content: "6 months after graduation"
+    - icon: "stairswflag"
+      color: "#BE8BFF"
+      title: "Salary Increase"
+      content: "55% higher at new job"
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
@@ -264,57 +282,52 @@ prices:
 two_columns:
   proportions: [6, 6]
   image:
-    style: '{"backgroundSize": "contain"}'
-    src: "/static/images/staff/hernan-new.webp"
-    shadow: true
+    style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
+    src: "/images/landing/reservation-es.webp"
   video: ""
   heading:
-    text: "Your New Career Starts Here — Just Ask Our Grads"
+    text: "Why AI Engineering Now"
     font_size: ["35px", "35px", "35px", "30px", "30px"]
   sub_heading:
-    text: "Becoming an AI engineer with 4Geeks isn't just about learning to code — it's about changing your life."
+    text: "According to LinkedIn’s Jobs on the Rise 2026, AI Engineers are among the fastest-growing roles in the U.S. Demand is accelerating, and companies are actively hiring for these skills now."
     style: '{"font-weight": "400"}'
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   bullets:
     items:
-      - text: "Our students come from all walks of life and leave with real results:"
-      - text: "✅ 84% get hired within 6 months of graduation"
-      - text: "✅ Salaries increase by an average of 55%"
-      - text: "✅ Average starting salary: $95K–$135K"
+      - heading: "800,000 roles"
+        text: "related to AI by 2026"
+      - heading: "20-40% growth"
+        text: "year-over-year in AI jobs"
+      - heading: "20–40% premiums"
+        text: "for AI Engineering skills"
   content:
     text: ""
     style: ""
 
-two_columns_rigo:
-  proportions: [7, 5]
-  background: "#FFFFFF"
-  justify: "center"
+two_column_program:
+  proportions: [6, 6]
+  background: "#ffffff"
   image:
-    style: '{"backgroundSize": "contain", "background-position": "center", "border": "2px solid black", "border-radius": "4px"}'
-    src: "/images/landing/ai-mentor.jpg"
-    shadow: true
-  video: ""
+    style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
+    src: "/images/landing/two-womans-and-laptop.webp"
+    shadow: false
   heading:
-    text: "Learn AI Engineering Faster — With Hyper-Personalized Support That Adapts to You"
-    font_size: ["33px", "33px", "33px", "33px", "33px"]
-    style: '{"lineHeight": "30px"}'
-    heading_image:
-      src: "/images/rigobot-logo.png"
+    text: "Who Should Apply?"
+    font_size: ["40px", "34px", "34px", "34px", "32px"]
   sub_heading:
-    text: "In-person instruction, unlimited mentorship, and AI tools built for smarter, faster progress."
-    font_size: ["24px", "24px", "22px", "22px", "20px"]
-    style: '{"margin": "0", "font-weight": "300", "text-align": "justify"}'
-  content:
-    style: '{"font-size": "18px", "margin": "0"}'
-    text: "With the combined support of our human mentors and AI tools, you'll master AI engineering faster, smarter, and with more confidence than ever."
+    text: " "
+    font_size: ["20px", "20px", "16px", "16px", "16px"]
+    style: '{ "font-weight": "100" }'
   bullets:
-    item_style: '{"font-weight": "100", "margin": "0", "font-size": "18px"}'
     items:
-      - heading: ""
-        text: |
-          • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Rigobot</strong>, our custom-built <strong style="text-decoration: none; color: #000000; font-weight: 700;">AI coding assistant</strong>, follows your progress and gives tailored feedback exactly when and how you need it.
-          <br />
-          • Get unmatched personal attention with our <strong style="text-decoration: none; color: #000000; font-weight: 700;">7:1 student teacher ratio</strong>, plus <strong style="text-decoration: none; color: #000000; font-weight: 700;">unlimited access to 1:1 sessions</strong> with our expert mentors and career coaches.
+      - text: "<strong style='font-weight: 800;'>• Ready for an intensive commitment:</strong> 20-24 hours/week for 24 weeks. (Live classes + ~12 hours of homework)"
+      - text: "<strong style='font-weight: 800;'>• Focused on career outcomes:</strong> Want AI-native skills that unlock in-demand, high-paying roles."
+      - text: "<strong style='font-weight: 800;'>• Motivated by structure:</strong> Prefer clear milestones, expert instructors, and a supportive cohort."
+  button:
+    text: "Learn More"
+    color: "white"
+    background: "black"
+    path: "#leadform_header"
 
 two_columns_info:
   proportions: [6, 6]
@@ -349,6 +362,28 @@ two_columns_info:
         text: "Progress with instant AI feedback, personalized guidance, and small class sizes."
       - heading: "Join a global tech community."
         text: "Connect with peers, mentors, and alumni and stay supported as you grow."
+
+## WHAT SETS 4GEEKS APART SECTION
+what_sets_4geeks_apart:
+  proportions: [5, 7]
+  image:
+    style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
+    src: "/images/landing/hombre-con-laptop.png"
+  heading:
+    text: "Why 4Geeks stands out"
+    font_size: ["34px", "34px", "34px", "25px", "25px"]
+  button:
+    text: "Apply Now"
+    color: "white"
+    background: "black"
+    path: "#leadform_header"
+  bullets:
+    items:
+      - text: "<strong style='font-weight: 800;'>Unlimited Lifetime Mentorship:</strong> 1:1 guidance whenever you need it—during the program and for your entire career."
+      - text: "<strong style='font-weight: 800;'>1:7 Teacher-Student Ratio:</strong> Small cohorts ensure deep, personalized instruction."
+      - text: "<strong style='font-weight: 800;'>Rigobot AI Tutor:</strong> AI-powered progress tracking and feedback tailored to your learning path."
+      - text: "<strong style='font-weight: 800;'>Hyperpersonalized Learning:</strong> Human + AI guidance optimize how you learn, helping you move faster and with more confidence."
+      - text: "<strong style='font-weight: 800;'>AI-Fluent From Day 1:</strong> Learn to work with coding agents, workflow automation, and multi-agent systems from the start."
 
 ## ALUMNI SECTION
 alumni:

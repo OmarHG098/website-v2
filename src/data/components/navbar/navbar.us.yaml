@@ -17,7 +17,7 @@ navbar:
           paragraph: "Become a Full Stack developer using AI tools like Cursor and Vercel v0. Master in-demand AI skills and land a job as a developer."
           buttons:
             - text: "View program"
-              link: "/us/coding-bootcamps/part-time-full-stack-developer"
+              link: "/us/coding-bootcamps/ai-engineering"
 
         - title: "Data Science and Machine Learning with AI"
           level: " "
