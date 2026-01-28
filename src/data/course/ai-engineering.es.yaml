@@ -140,62 +140,54 @@ milestones:
   title: "RESUMEN DEL PROGRAMA DE INGENIERÍA EN IA"
   sub_title: "Aprende construyendo y escalando un único negocio nativo de IA a través de 10 hitos. Gradua en 24 semanas con una empresa completamente operativa e impulsada por IA que refleja las habilidades y flujos de trabajo utilizados por equipos de ingeniería modernos."
   items:
+    - id: "milestone-0"
+      title: "🧭 Hito 0"
+      description: "Fundamentos de Prework con IA Primero"
+      content: "Fundamentos de Internet, conceptos básicos de JavaScript, Git, cómo funciona la IA y cómo comunicarse con ella (Markdown/YAML/JSON), agentes de código."
     - id: "milestone-1"
-      title: "Frontend Asistido por IA"
-      description: "Aplicación moderna de React con componentes impulsados por IA que mejoran la experiencia del usuario y la velocidad de desarrollo."
-      bullets:
-        items:
-          - text: "Construye aplicaciones React con componentes integrados de IA"
-          - text: "Implementa características e interacciones de UI impulsadas por IA"
-          - text: "Usa herramientas de IA como Cursor y Vercel v0 para un desarrollo más rápido"
+      title: "🌐 Hito 1"
+      description: "Fundamentos Web"
+      content: "HTML, CSS, Tailwind, accesibilidad, diseños, SEO/GEO. Construye la primera página web de la empresa."
     - id: "milestone-2"
-      title: "Backend de Producción"
-      description: "APIs REST, autenticación y funciones serverless que impulsan tus aplicaciones de IA."
-      bullets:
-        items:
-          - text: "Desarrolla APIs REST seguras con autenticación"
-          - text: "Construye funciones serverless para arquitectura escalable"
-          - text: "Integra servicios y APIs de terceros"
+      title: "🧠 Hito 2"
+      description: "Fundamentos de Programación"
+      content: "Algoritmos, estado vs flujo de control, dominio de TypeScript (JavaScript Tipado). Implementa pequeñas características para la empresa."
     - id: "milestone-3"
-      title: "Sistemas de Datos"
-      description: "Telemetría, pipelines y sistemas de reportes automatizados que recopilan y procesan datos de manera eficiente."
-      bullets:
-        items:
-          - text: "Implementa sistemas de recopilación de datos y telemetría"
-          - text: "Construye pipelines de datos para procesamiento y transformación"
-          - text: "Crea dashboards de reportes y análisis automatizados"
+      title: "🎨 Hito 3"
+      description: "Ingeniería de UI Impulsada por IA"
+      content: "Prompting de Visión a Especificación y generación de componentes. Reconstruye la UI de la empresa usando IA."
     - id: "milestone-4"
-      title: "Capa de Conocimiento RAG"
-      description: "Búsqueda vectorial, embeddings y sistemas de recuperación de documentos contextuales para acceso inteligente a la información."
-      bullets:
-        items:
-          - text: "Implementa búsqueda vectorial y coincidencia de similitud"
-          - text: "Crea embeddings para búsqueda semántica"
-          - text: "Construye sistemas de recuperación de documentos contextuales"
+      title: "⚛️ Hito 4"
+      description: "Fundamentos de Next.js (React)"
+      content: "SPA (Aplicaciones de Página Única) y arquitectura multi-página, props/estado/efectos, depuración. Construye el frontend interactivo de la empresa."
     - id: "milestone-5"
-      title: "Sistemas Multi-Agente"
-      description: "Agentes inteligentes con memoria, enrutamiento de tareas y capacidades de llamada a herramientas."
-      bullets:
-        items:
-          - text: "Diseña e implementa arquitecturas de agentes inteligentes"
-          - text: "Añade memoria y gestión de contexto a los agentes"
-          - text: "Habilita enrutamiento de tareas y llamadas a herramientas entre agentes"
+      title: "🗄️ Hito 5"
+      description: "Backend para Frontends de IA"
+      content: "APIs, conceptos básicos de BD, serialización, autenticación, funciones serverless. Crea el backend de la empresa."
     - id: "milestone-6"
-      title: "Automatización de Flujos de Trabajo"
-      description: "Procesos generados por IA desplegados vía n8n, colas y tareas programadas."
-      bullets:
-        items:
-          - text: "Diseña flujos de trabajo automatizados usando IA"
-          - text: "Despliega procesos con n8n y sistemas de colas"
-          - text: "Implementa tareas programadas y trabajos en segundo plano"
+      title: "📊 Hito 6"
+      description: "Telemetría y Pipelines de Datos"
+      content: "Recopilar → transformar → agregar → reportar. Construye la telemetría para la empresa."
     - id: "milestone-7"
-      title: "Sistemas en Tiempo Real"
-      description: "WebSockets, respuestas de IA en streaming y arquitectura dirigida por eventos para aplicaciones responsivas."
-      bullets:
-        items:
-          - text: "Implementa conexiones WebSocket para comunicación en tiempo real"
-          - text: "Construye sistemas de respuestas de IA en streaming"
-          - text: "Diseña arquitecturas dirigidas por eventos"
+      title: "🧩 Hito 7"
+      description: "RAG y Memoria"
+      content: "Fragmentación de datos, embeddings, búsqueda vectorial. Añade la capa de conocimiento de la empresa."
+    - id: "milestone-8"
+      title: "🤖 Hito 8"
+      description: "Ingeniería de Agentes"
+      content: "Reglas, bancos de memoria, llamadas a herramientas, planificación multi-agente. Construye los agentes de la empresa."
+    - id: "milestone-9"
+      title: "🔁 Hito 9"
+      description: "Generación de Flujos de Trabajo Agénticos"
+      content: "Usa LLMs para analizar el caso de la empresa, generar flujos de trabajo internos, validarlos e implementarlos como pipelines de automatización (serverless, colas, cronjobs o n8n)."
+    - id: "milestone-10"
+      title: "⚡ Hito 10"
+      description: "Sistemas en Tiempo Real"
+      content: "Streaming, sockets, pub/sub. Habilita interacciones en tiempo real para datos, clientes, IA o empleados."
+    - id: "capstone"
+      title: "🚀 Proyecto Final"
+      description: "Empresa Completamente Transformada por IA"
+      content: "Los estudiantes entregan la transformación completa de su empresa:"
 
 ## RATING REVIEWS SECTION
 rating_reviews:
@@ -290,13 +282,14 @@ two_columns:
     font_size: ["35px", "35px", "35px", "30px", "30px"]
   sub_heading:
     text: "Según LinkedIn's Jobs on the Rise 2026, los Ingenieros en IA están entre los roles de más rápido crecimiento en los EE.UU. La demanda se está acelerando y las empresas están contratando activamente estas habilidades ahora."
-    style: '{"font-weight": "400"}'
+    style: '{"font-weight": "200"}'
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   bullets:
+    item_style: '{ "padding": "16px 20px", "background-color": "#F4F9FF", "border-radius": "8px", "border": "2px solid #0084FF", "margin": "12px 0", "text-align": "center" }'
     items:
       - heading: "800,000 roles"
         text: "relacionados con IA para 2026"
-      - heading: "20-40% de crecimiento"
+      - heading: "30% de crecimiento"
         text: "anual en trabajos de IA"
       - heading: "20–40% de primas"
         text: "para habilidades de Ingeniería en IA"

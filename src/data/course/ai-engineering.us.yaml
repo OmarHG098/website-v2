@@ -140,62 +140,54 @@ milestones:
   title: "AI ENGINEERING PROGRAM OVERVIEW"
   sub_title: "Learn by building and scaling a single AI-native business across 10 milestones. Graduate in 24 weeks with a fully operational, AI-powered company that reflects the skills and workflows used by modern engineering teams."
   items:
+    - id: "milestone-0"
+      title: "🧭 Milestone 0"
+      description: "AI‑First Prework Foundations"
+      content: "Internet fundamentals, JavaScript basics, Git, how AI works and how to communicate with it (Markdown/YAML/JSON), coding agents."
     - id: "milestone-1"
-      title: "AI-Assisted Frontend"
-      description: "Modern React application with AI-powered components that enhance user experience and development speed."
-      bullets:
-        items:
-          - text: "Build React applications with AI-integrated components"
-          - text: "Implement AI-powered UI features and interactions"
-          - text: "Use AI tools like Cursor and Vercel v0 for faster development"
+      title: "🌐 Milestone 1"
+      description: "Web Foundations"
+      content: "HTML, CSS, Tailwind, accessibility, layouts, SEO/GEO. Build the company's first webpage."
     - id: "milestone-2"
-      title: "Production Backend"
-      description: "REST APIs, authentication, and serverless functions that power your AI applications."
-      bullets:
-        items:
-          - text: "Develop secure REST APIs with authentication"
-          - text: "Build serverless functions for scalable architecture"
-          - text: "Integrate third-party services and APIs"
+      title: "🧠 Milestone 2"
+      description: "Programming Foundations"
+      content: "Algorithms, state vs control flow, TypeScript mastery (Typed JavaScript). Implement small features for the company."
     - id: "milestone-3"
-      title: "Data Systems"
-      description: "Telemetry, pipelines, and automated reporting systems that collect and process data efficiently."
-      bullets:
-        items:
-          - text: "Implement data collection and telemetry systems"
-          - text: "Build data pipelines for processing and transformation"
-          - text: "Create automated reporting and analytics dashboards"
+      title: "🎨 Milestone 3"
+      description: "AI‑Driven UI Engineering"
+      content: "Vision‑to‑Spec prompting and component generation. Rebuild the company's UI using AI."
     - id: "milestone-4"
-      title: "RAG Knowledge Layer"
-      description: "Vector search, embeddings, and contextual document retrieval systems for intelligent information access."
-      bullets:
-        items:
-          - text: "Implement vector search and similarity matching"
-          - text: "Create embeddings for semantic search"
-          - text: "Build contextual document retrieval systems"
+      title: "⚛️ Milestone 4"
+      description: "Next.js Fundamentals (React)"
+      content: "SPA (Single Page Applications) and multi-page architecture, props/state/effects, debugging. Build the company's interactive frontend."
     - id: "milestone-5"
-      title: "Multi-Agent Systems"
-      description: "Intelligent agents with memory, task routing, and tool calling capabilities."
-      bullets:
-        items:
-          - text: "Design and implement intelligent agent architectures"
-          - text: "Add memory and context management to agents"
-          - text: "Enable task routing and tool calling between agents"
+      title: "🗄️ Milestone 5"
+      description: "Backend for AI Frontends"
+      content: "APIs, DB basics, serialization, auth, serverless functions. Create the company's backend."
     - id: "milestone-6"
-      title: "Workflow Automation"
-      description: "AI-generated processes deployed via n8n, queues, and scheduled tasks."
-      bullets:
-        items:
-          - text: "Design automated workflows using AI"
-          - text: "Deploy processes with n8n and queue systems"
-          - text: "Implement scheduled tasks and background jobs"
+      title: "📊 Milestone 6"
+      description: "Telemetry & Data Pipelines"
+      content: "Collect → transform → aggregate → report. Build telemetry for the company."
     - id: "milestone-7"
-      title: "Real-Time Systems"
-      description: "WebSockets, streaming AI responses, and event-driven architecture for responsive applications."
-      bullets:
-        items:
-          - text: "Implement WebSocket connections for real-time communication"
-          - text: "Build streaming AI response systems"
-          - text: "Design event-driven architectures"
+      title: "🧩 Milestone 7"
+      description: "RAG & Memory"
+      content: "Data chunking, embeddings, vector search. Add the company's knowledge layer."
+    - id: "milestone-8"
+      title: "🤖 Milestone 8"
+      description: "Agent Engineering"
+      content: "Rules, memory banks, tool calling, multi-agent planning. Build the company's agents."
+    - id: "milestone-9"
+      title: "🔁 Milestone 9"
+      description: "Agentic Workflow Generation"
+      content: "Use LLMs to analyze the company case, generate internal workflows, validate them, and implement them as automation pipelines (serverless, queues, cronjobs, or n8n)."
+    - id: "milestone-10"
+      title: "⚡ Milestone 10"
+      description: "Real-Time Systems"
+      content: "Streaming, sockets, pub/sub. Enable real-time interactions for data, customers, AI, or employees."
+    - id: "capstone"
+      title: "🚀 Capstone"
+      description: "Full AI‑Transformed Company"
+      content: "Students deliver the complete transformation of their company:"
 
 ## RATING REVIEWS SECTION
 rating_reviews:
@@ -280,7 +272,7 @@ prices:
 
 ## TWO COLUMNS SECTIONS
 two_columns:
-  proportions: [6, 6]
+  proportions: [5, 7]
   image:
     style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
     src: "/images/landing/reservation-es.webp"
@@ -290,13 +282,14 @@ two_columns:
     font_size: ["35px", "35px", "35px", "30px", "30px"]
   sub_heading:
     text: "According to LinkedIn’s Jobs on the Rise 2026, AI Engineers are among the fastest-growing roles in the U.S. Demand is accelerating, and companies are actively hiring for these skills now."
-    style: '{"font-weight": "400"}'
+    style: '{"font-weight": "200", "width": "60%"}'
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   bullets:
+    item_style: '{ "padding": "16px 20px", "background-color": "#F4F9FF", "border-radius": "8px", "border": "2px solid #0084FF", "margin": "12px 0", "text-align": "center" }'
     items:
       - heading: "800,000 roles"
         text: "related to AI by 2026"
-      - heading: "20-40% growth"
+      - heading: "30% growth"
         text: "year-over-year in AI jobs"
       - heading: "20–40% premiums"
         text: "for AI Engineering skills"
