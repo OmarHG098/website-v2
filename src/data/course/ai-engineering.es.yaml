@@ -1,5 +1,5 @@
 meta_info:
-  slug: bootcamp-ingenieria-ia
+  slug: ingenieria-ia
   title: "Bootcamp de Ingeniería en IA | 4Geeks Academy"
   bc_slug: "ai-engineering"
   job_guarantee: true
@@ -18,10 +18,10 @@ apply_form:
 
 seo_title: "Bootcamp de Ingeniería en IA con Garantía de Trabajo"
 header:
-  title: "CONVIÉRTETE EN EL INGENIERO EN IA\nQUE LAS EMPRESAS ESTÁN BUSCANDO"
+  title: "Ingeniería en IA"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "bootcamp-ingenieria-ia"
-  paragraph: 'Domina las habilidades nativas de IA que definen la próxima generación de ingeniería de software – impulsado por mentoría 1:1 y orientación profesional personalizada. Salarios iniciales promedio de $95K–$135K. <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/job-guarantee-en.pdf" target="_blank" rel="noopener noreferrer">Condiciones aplican</a>.'
+  paragraph: 'Lanza tu carrera impulsada por IA en 24 semanas con mentoría personalizada 1:1 y orientación experta. Conviértete en el profesional que las empresas están buscando.'
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"
@@ -137,8 +137,8 @@ syllabus:
 
 ## MILESTONES SECTION
 milestones:
-  title: "Lo Que Construirás en 20 Semanas"
-  sub_title: "Aprende a construir y escalar un negocio completo nativo de IA, no solo características individuales. Cada hito se construye sobre el anterior, dándote experiencia real de ingeniería de extremo a extremo."
+  title: "RESUMEN DEL PROGRAMA DE INGENIERÍA EN IA"
+  sub_title: "Aprende construyendo y escalando un único negocio nativo de IA a través de 10 hitos. Gradua en 24 semanas con una empresa completamente operativa e impulsada por IA que refleja las habilidades y flujos de trabajo utilizados por equipos de ingeniería modernos."
   items:
     - id: "milestone-1"
       title: "Frontend Asistido por IA"
@@ -197,31 +197,49 @@ milestones:
           - text: "Construye sistemas de respuestas de IA en streaming"
           - text: "Diseña arquitecturas dirigidas por eventos"
 
+## RATING REVIEWS SECTION
+rating_reviews:
+  background: "#FBFBFB"
+  position: 7
+  heading: "Reconocidos Globalmente y Mejor Calificados"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
+
 ## HOW IT WORKS SECTION
 how_it_works:
+  background: "#0084FF"
   heading:
-    text: "Cómo Funciona"
-    font_size: ["34px", "34px", "30px", "30px", "30px"]
-  sub_heading:
-    text: "Nuestro proceso probado te ayuda a dominar la ingeniería en IA a través de aprendizaje estructurado y práctica práctica."
-    font_size: ["20px", "20px", "16px", "16px", "16px"]
+    text: "Resultados Profesionales"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+    style: '{ "color": "white" }'
   icons:
-    - icon: "laptop-icon-new"
+    - icon: "graduation-2"
       color: "#0084FF"
-      title: "Aprende Ingeniería en IA"
-      content: "Domina habilidades de desarrollo nativo de IA a través de proyectos prácticos"
-    - icon: "rocket-2"
-      color: "#25BF6C"
-      title: "Construye Proyectos Reales"
-      content: "Crea aplicaciones completas impulsadas por IA de principio a fin"
-    - icon: "network"
-      color: "#BE8BFF"
-      title: "Obtén Mentoría"
-      content: "Orientación 1:1 de instructores expertos y coaches profesionales"
-    - icon: "chart"
+      title: "Tasa de colocación laboral"
+      content: "84% de los graduados fueron contratados"
+    - icon: "briefcase-2"
       color: "#FF0000"
-      title: "Lanza Tu Carrera"
-      content: "84% contratados en 6 meses con salarios promedio de $95K–$135K"
+      title: "Tiempo promedio para conseguir trabajo"
+      content: "6 meses después de la graduación"
+    - icon: "stairswflag"
+      color: "#BE8BFF"
+      title: "Incremento salarial"
+      content: "55% más alto en el nuevo trabajo"
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
@@ -264,57 +282,52 @@ prices:
 two_columns:
   proportions: [6, 6]
   image:
-    style: '{"backgroundSize": "contain"}'
-    src: "/static/images/staff/hernan-new.webp"
-    shadow: true
+    style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
+    src: "/images/landing/reservation-es.webp"
   video: ""
   heading:
-    text: "Tu Nueva Carrera Comienza Aquí — Solo Pregúntale a Nuestros Graduados"
+    text: "Por Qué Ingeniería en IA Ahora"
     font_size: ["35px", "35px", "35px", "30px", "30px"]
   sub_heading:
-    text: "Convertirse en un ingeniero en IA con 4Geeks no se trata solo de aprender a programar — se trata de cambiar tu vida."
+    text: "Según LinkedIn's Jobs on the Rise 2026, los Ingenieros en IA están entre los roles de más rápido crecimiento en los EE.UU. La demanda se está acelerando y las empresas están contratando activamente estas habilidades ahora."
     style: '{"font-weight": "400"}'
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   bullets:
     items:
-      - text: "Nuestros estudiantes provienen de todos los ámbitos de la vida y se van con resultados reales:"
-      - text: "✅ 84% son contratados en 6 meses después de la graduación"
-      - text: "✅ Los salarios aumentan en un promedio del 55%"
-      - text: "✅ Salario inicial promedio: $95K–$135K"
+      - heading: "800,000 roles"
+        text: "relacionados con IA para 2026"
+      - heading: "20-40% de crecimiento"
+        text: "anual en trabajos de IA"
+      - heading: "20–40% de primas"
+        text: "para habilidades de Ingeniería en IA"
   content:
     text: ""
     style: ""
 
-two_columns_rigo:
-  proportions: [7, 5]
-  background: "#FFFFFF"
-  justify: "center"
+two_column_program:
+  proportions: [6, 6]
+  background: "#ffffff"
   image:
-    style: '{"backgroundSize": "contain", "background-position": "center", "border": "2px solid black", "border-radius": "4px"}'
-    src: "/images/landing/ai-mentor.jpg"
-    shadow: true
-  video: ""
+    style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
+    src: "/images/landing/two-womans-and-laptop.webp"
+    shadow: false
   heading:
-    text: "Aprende Ingeniería en IA Más Rápido — Con Apoyo Hiper-Personalizado Que Se Adapta a Ti"
-    font_size: ["33px", "33px", "33px", "33px", "33px"]
-    style: '{"lineHeight": "30px"}'
-    heading_image:
-      src: "/images/rigobot-logo.png"
+    text: "¿Quién Debería Aplicar?"
+    font_size: ["40px", "34px", "34px", "34px", "32px"]
   sub_heading:
-    text: "Instrucción en persona, mentoría ilimitada y herramientas de IA construidas para un progreso más inteligente y rápido."
-    font_size: ["24px", "24px", "22px", "22px", "20px"]
-    style: '{"margin": "0", "font-weight": "300", "text-align": "justify"}'
-  content:
-    style: '{"font-size": "18px", "margin": "0"}'
-    text: "Con el apoyo combinado de nuestros mentores humanos y herramientas de IA, dominarás la ingeniería en IA más rápido, más inteligente y con más confianza que nunca."
+    text: " "
+    font_size: ["20px", "20px", "16px", "16px", "16px"]
+    style: '{ "font-weight": "100" }'
   bullets:
-    item_style: '{"font-weight": "100", "margin": "0", "font-size": "18px"}'
     items:
-      - heading: ""
-        text: |
-          • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Rigobot</strong>, nuestro <strong style="text-decoration: none; color: #000000; font-weight: 700;">asistente de programación con IA</strong> construido a medida, sigue tu progreso y da retroalimentación personalizada exactamente cuando y cómo la necesitas.
-          <br />
-          • Obtén atención personal inigualable con nuestro <strong style="text-decoration: none; color: #000000; font-weight: 700;">ratio de 7:1 estudiante-profesor</strong>, más <strong style="text-decoration: none; color: #000000; font-weight: 700;">acceso ilimitado a sesiones 1:1</strong> con nuestros mentores expertos y coaches profesionales.
+      - text: "<strong style='font-weight: 800;'>• Listo para un compromiso intensivo:</strong> 20-24 horas/semana durante 24 semanas. (Clases en vivo + ~12 horas de tarea)"
+      - text: "<strong style='font-weight: 800;'>• Enfocado en resultados profesionales:</strong> Quieres habilidades nativas de IA que desbloqueen roles de alta demanda y bien pagados."
+      - text: "<strong style='font-weight: 800;'>• Motivado por la estructura:</strong> Prefieres hitos claros, instructores expertos y un grupo de apoyo."
+  button:
+    text: "Saber Más"
+    color: "white"
+    background: "black"
+    path: "#leadform_header"
 
 two_columns_info:
   proportions: [6, 6]
@@ -349,6 +362,28 @@ two_columns_info:
         text: "Progresa con retroalimentación instantánea de IA, orientación personalizada y clases pequeñas."
       - heading: "Únete a una comunidad tecnológica global."
         text: "Conéctate con compañeros, mentores y exalumnos y mantente apoyado mientras creces."
+
+## WHAT SETS 4GEEKS APART SECTION
+what_sets_4geeks_apart:
+  proportions: [5, 7]
+  image:
+    style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
+    src: "/images/landing/hombre-con-laptop.png"
+  heading:
+    text: "Por Qué 4Geeks se Destaca"
+    font_size: ["34px", "34px", "34px", "25px", "25px"]
+  button:
+    text: "Aplica Ahora"
+    color: "white"
+    background: "black"
+    path: "#leadform_header"
+  bullets:
+    items:
+      - text: "<strong style='font-weight: 800;'>Mentoría Ilimitada de por Vida:</strong> Orientación 1:1 cuando la necesites—durante el programa y para toda tu carrera."
+      - text: "<strong style='font-weight: 800;'>Ratio Profesor-Estudiante de 1:7:</strong> Grupos pequeños aseguran instrucción profunda y personalizada."
+      - text: "<strong style='font-weight: 800;'>Tutor de IA Rigobot:</strong> Seguimiento de progreso impulsado por IA y retroalimentación adaptada a tu camino de aprendizaje."
+      - text: "<strong style='font-weight: 800;'>Aprendizaje Hiperpersonalizado:</strong> La orientación humana + IA optimizan cómo aprendes, ayudándote a avanzar más rápido y con más confianza."
+      - text: "<strong style='font-weight: 800;'>Fluido en IA Desde el Día 1:</strong> Aprende a trabajar con agentes de código, automatización de flujos de trabajo y sistemas multi-agente desde el principio."
 
 ## ALUMNI SECTION
 alumni:
