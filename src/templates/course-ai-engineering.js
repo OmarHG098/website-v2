@@ -186,10 +186,10 @@ const Program = ({ data, pageContext, yml }) => {
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
       />
 
-      {/* 5. Two Column Left */}
+      {/* 5. Two Column Right */}
       <TwoColumn
-        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
-        right={{
+        right={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
+        left={{
           heading: {
             ...yml.two_columns?.heading,
             text:
@@ -482,11 +482,7 @@ export const query = graphql`
               id
               title
               description
-              bullets {
-                items {
-                  text
-                }
-              }
+              content
             }
           }
           how_it_works {

@@ -57,7 +57,9 @@ const Milestones = (props) => {
                   flexDirection="column"
                   alignItems="flex-start"
                 >
-                  <H3 textAlign="left">{item.title}</H3>
+                  <H3 textAlign="left" fontSize="24px">
+                    {item.title}
+                  </H3>
                 </Div>
                 <Div
                   style={{ position: "absolute", right: "13px", top: "15px" }}
@@ -68,7 +70,22 @@ const Milestones = (props) => {
                 {isOpen && (
                   <Div flexDirection="column" margin="10px 0 0 0" gap="10px">
                     {item.description && (
-                      <Paragraph textAlign="left">{item.description}</Paragraph>
+                      <Paragraph
+                        textAlign="left"
+                        fontWeight="bold"
+                        fontSize="18px"
+                      >
+                        {item.description}
+                      </Paragraph>
+                    )}
+                    {item.content && (
+                      <Paragraph
+                        textAlign="left"
+                        margin="0"
+                        dangerouslySetInnerHTML={{
+                          __html: item.content,
+                        }}
+                      />
                     )}
                     {item.bullets?.items && item.bullets.items.length > 0 && (
                       <Div flexDirection="column" gap="8px">

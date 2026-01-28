@@ -4,8 +4,8 @@ full_time:
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Pago completo"
-    description: "La matrícula regular es de $10,999. O divídela sin intereses hasta en 6 meses."
-    job_guarantee_description: "La matrícula regular es de $12,999. O divídela sin intereses hasta en 6 meses."
+    description: "La matrícula regular es de $14,999. O divídela sin intereses hasta en 6 meses."
+    job_guarantee_description: "La matrícula regular es de $14,999. O divídela sin intereses hasta en 6 meses."
     price: "$13,499"
     original_price: "$14,999"
     offer: "10% DE DESCUENTO"
@@ -132,10 +132,10 @@ part_time:
     recommended_color: "lightGreen"
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
     scholarship: "Pago completo"
-    description: "La matrícula regular es de $10,999. O divídela sin intereses hasta en 6 meses."
-    job_guarantee_description: "La matrícula regular es de $12,999. O divídela sin intereses hasta en 6 meses."
-    price: "$10,999"
-    original_price: "$10,999"
+    description: "La matrícula regular es de $14,999. Obtén un 10% de descuento cuando pagas por adelantado."
+    job_guarantee_description: "La matrícula regular es de $14,999. O divídela sin intereses hasta en 6 meses."
+    price: "$14,999"
+    original_price: "$14,999"
     offer: "10% DE DESCUENTO"
     bullets:
       - Paga por adelantado y ahorra 10%
@@ -183,7 +183,7 @@ part_time:
     recommended_color: "pink"
     scholarship: "Becas"
     description: "Becas parciales y completas disponibles a través de socios en todo Estados Unidos. La elegibilidad y el monto varían según la ubicación. Contáctanos para explorar tus opciones."
-    price: "$12,999"
+    price: "$14,999"
     original_price: ""
     bullets: 
       - "Inscríbete, aceptando los términos y condiciones."

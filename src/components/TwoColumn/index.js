@@ -231,7 +231,8 @@ const Side = ({
         >
           {bullets.items?.map((bullet, index) => {
             const itemStyle = getStyleContent(bullets?.item_style);
-            const textAlign = itemStyle?.["text-align"] || itemStyle?.textAlign || "left";
+            const textAlign =
+              itemStyle?.["text-align"] || itemStyle?.textAlign || "left";
             return (
               <Div
                 key={index}
