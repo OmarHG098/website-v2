@@ -1,0 +1,404 @@
+full_time:
+## USA Full-time
+  - slug: 'usa-upfront-ai-ft'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
+    recomended: "★ ¡Mejor precio!"
+    scholarship: "Pago completo"
+    description: "La matrícula regular es de $14,999. O divídela sin intereses hasta en 6 meses."
+    job_guarantee_description: "La matrícula regular es de $14,999. O divídela sin intereses hasta en 6 meses."
+    price: "$13,499"
+    original_price: "$14,999"
+    offer: "10% DE DESCUENTO"
+    bullets:
+      - "Obtén un 10% de descuento cuando pagas por adelantado" 
+      - "Matrícula regular: $14,999 (antes del descuento), con financiamiento sin intereses disponible hasta por 6 meses."
+    icons:
+      - "/images/ethereum.png"
+      - "/images/bitcoin.png"
+
+  - slug: 'edly-payment-ai-ft'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
+    scholarship: "Préstamo de Pago Basado en Ingresos (IBR)"
+    description: "Comienza a pagar una vez contratado"
+    price: "IBR"
+    bullets:
+      - "Préstamos asequibles con pagos basados en ingresos (IBR) ofrecidos a través de EDLY"
+      - "Solo comienzas a pagar una vez que estés ganando al menos $35,000/año"
+      - "Los pagos mensuales se ajustan según tu salario"
+      - "Amigable con codeudor: aplica con alguien que pueda ayudarte a calificar o asegurar mejores términos"
+    icons:
+      - "/images/edly.png"
+      
+  - slug: 'usa-financed-ai-ft'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
+    recomended: "Pagos mensuales bajos"
+    recommended_color: "blue"
+    scholarship: "Financiado"
+    description: "Pago en 3, 4 o 5 años"
+    price: "Desde $349/mes"
+    bullets: 
+      - "Préstamos asequibles disponibles a través de Climb y Ascent, basados en tu puntaje de crédito"
+      - "Opción de diferir pagos hasta después de la graduación"
+      - "Financiamiento con requisitos de entrada más bajos ofrecido por TFC Tuition"
+      - "Términos flexibles — paga en 3, 4, 5 años, o más"
+      - "Para ejemplos completos de reembolso, visita nuestra <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">página 4Geeks + Ascent</a> (Términos vigentes al 03/11/2025)."
+    icons: 
+      - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
+      - "/images/climb-logo.png"
+
+  - slug: 'usa-scholarships-ai-ft'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
+    recomended: "Financiamiento completo y parcial"
+    recommended_color: "pink"
+    scholarship: "Beca"
+    description: "Becas parciales y completas disponibles a través de socios en todo Estados Unidos. La elegibilidad y el monto varían según la ubicación. Contáctanos para explorar tus opciones."
+    price: ""
+    original_price: ""
+    warning_message: "¡Disponibilidad limitada!"
+    bullets: 
+      - "¡Pregunta por tu región! Somos parte de varios incentivos especiales de desarrollo de fuerza laboral."
+      - "¡Si estás ganando menos de tu potencial o estás desempleado, hay opciones para ti!"
+      - "Cualquier saldo restante puede ser financiado."
+      - "¡Ponte en contacto y te ayudaremos con el proceso de solicitud!"
+    icons: 
+
+## España & Europe
+  - slug: 'spain-upfront-ai-ft'
+    academies: []
+    recomended: "★ ¡Mejor precio!"
+    scholarship: "Paga de contado"
+    description: "Y obtén un descuento"
+    price: "4.750 €*"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta 2.050 €. Desde 4.750 € en vez de 6.800 €. ¡Descuento sujeto a disponibilidad!"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"   
+
+  - slug: 'spain-scholarships-ai-ft'
+    academies: []
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
+    scholarship: "Becas Disponibles"
+    description: ""
+    price: "Desde €150 /mes."
+    bullets:
+      - "Financiamiento personalizado sin intereses. De 4 a 30 meses."
+      - "Becas disponibles de hasta €1,850. Paga €4,950 en lugar de €6,800. ¡Becas sujetas a disponibilidad!"
+      - "También ofrecemos varias opciones de becas completas o parciales para las que puedas ser elegible. Contáctanos para más detalles."
+    icons: 
+      - "/images/zank.png"
+      - "/images/sequra.png"
+      - "/images/nemuru.png" 
+
+## Chile
+
+  - slug: 'chile-contado-ai-ft'
+    academies: []
+    recomended: "★ ¡Mejor precio!"
+    scholarship: "Pago completo"
+    description: "¡Paga por adelantado y obtén 20% DE DESCUENTO!"
+    price: "3.040.000 CLP"
+    original_price: "3.800.000 CLP"
+    offer: "20% DE DESCUENTO"
+    bullets:
+      - "Precio sin descuento aplicado. Precio original: 3.800.000 CLP."
+      - "El precio varía según la modalidad elegida y las membresías incluidas."
+    icons:
+      - "/images/visa-mastercard.png"
+
+  - slug: 'chile-ai-ft'
+    academies: []
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
+    scholarship: "Planes de Pago y Préstamos"
+    description: "Pago en 18 meses"
+    price: "~184.000 CLP"
+    bullets:
+      - "Financiamiento a medida de 6 a 18 meses"
+      - "Se requiere un pago inicial del 20%. El saldo restante puede ser financiado durante 18 meses."
+    icons:
+      - "/images/flevo-new.png"
+
+part_time:
+#USA Part-time
+  - slug: 'usa-upfront-ai-pt'
+    recomended: "★ ¡Mejor precio!"
+    recommended_color: "lightGreen"
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
+    scholarship: "Pago completo"
+    description: "La matrícula regular es de $14,999. Obtén un 10% de descuento cuando pagas por adelantado."
+    job_guarantee_description: "La matrícula regular es de $14,999. O divídela sin intereses hasta en 6 meses."
+    price: "$14,999"
+    original_price: "$14,999"
+    offer: "10% DE DESCUENTO"
+    bullets:
+      - Paga por adelantado y ahorra 10%
+      - La matrícula regular es de $ 10,999 y puede ser financiada sin intereses hasta 6 meses.
+    icons:
+      - "/images/edly.png"
+      - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
+      - "/images/climb-logo.png"
+
+  - slug: 'edly-payment-ai-pt'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
+    recomended: "Aprende ahora, paga después"
+    recommended_color: "#FF9800"
+    scholarship: "Préstamo de Pago Basado en Ingresos (IBR)"
+    description: "Comienza a pagar una vez contratado"
+    price: "IBR"
+    bullets:
+      - "Edly se enorgullece de ayudar a 4Geeks Academy a proporcionar préstamos asequibles con pagos basados en ingresos (IBR) a sus estudiantes"
+      - "Solo realiza pagos una vez que consigas un trabajo y ganes el ingreso mínimo."
+      - "Los pagos flexibles se ajustan según tus ingresos"
+      - "La matrícula se paga directamente a tu escuela"
+    icons:
+      - "/images/edly.png"
+
+  - slug: 'usa-financed-ai-pt'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'toronto-canada', 'dallas-usa']
+    recomended: "Pagos mensuales bajos"
+    recommended_color: "blue"
+    scholarship: "Planes de Pago y Préstamos"
+    description: "Financia tu matrícula a través de Climb o Ascent (basado en crédito), o TFC Tuition (entrada flexible). Los términos de reembolso van de 3 a 5+ años, con algunos planes que ofrecen la opción de diferir pagos hasta después de la graduación."
+    price: "$200 - $299/mes"
+    bullets: 
+      - "Elige entre planes de financiamiento a corto o largo plazo."
+      - "Préstamos a largo plazo asequibles basados en puntaje de crédito."
+      - "Los términos de préstamo mostrados son efectivos al 3/11/2025. Para ver ejemplos completos de reembolso, visita <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">nuestra página 4Geeks y Ascent</a>."
+    icons: 
+      - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
+      - "/images/climb-logo.png"
+      
+  - slug: 'usa-scholarships-ai-pt'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
+    recomended: "Financiamiento completo y parcial"
+    recommended_color: "pink"
+    scholarship: "Becas"
+    description: "Becas parciales y completas disponibles a través de socios en todo Estados Unidos. La elegibilidad y el monto varían según la ubicación. Contáctanos para explorar tus opciones."
+    price: "$14,999"
+    original_price: ""
+    bullets: 
+      - "Inscríbete, aceptando los términos y condiciones."
+      - "Cumple con la carga académica y asistencia requeridas."
+      - "Consigue trabajo en 9 meses después de la graduación o te reembolsaremos el 100% de tu matrícula."
+    icons: 
+
+##  EUROPE Part-time
+
+  - slug: 'north-europe-upfront-ai-pt'
+    academies: []
+    recomended: "★ ¡Mejor precio!"
+    scholarship: "Pago por adelantado"
+    description: "Y obtén un descuento"
+    price: "€4,750*"
+    original_price: "€ 6,800"
+    offer: "~30% DE DESCUENTO"
+    bullets:
+      - "Paga por transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta €2,050. Paga €4,750 en lugar de €6,800. ¡Descuento sujeto a disponibilidad!"    
+    icons:  
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+
+  - slug: 'north-europe-scholarships-ai-pt'
+    academies: []
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
+    scholarship: "Planes de Pago y Préstamos. Desde €150* por mes"
+    description: "Solicita una beca (lugares de beca limitados disponibles)."
+    price: "€4,900*"
+    original_price: "€ 6,800"
+    bullets:
+      - "Paga en cuotas mensuales. Comenzando en €150"
+      - "Financiamiento personalizado, con o sin intereses, de 4 a 48 meses (se aplican condiciones)"
+      - "Becas disponibles de hasta €1,900. Paga desde €4,900* en lugar de €6,800. ¡BECAS SUJETAS A DISPONIBILIDAD!"         
+    icons: 
+      - "/images/bcas.png"
+                      
+  - slug: 'south-europe-upfront-ai-pt'
+    academies: []
+    recomended: "★ ¡Mejor precio!"
+    scholarship: "Pago por adelantado"
+    description: "Y obtén un descuento"
+    price: "€4,750*"
+    original_price: "€ 6,800"
+    offer: "~30% DE DESCUENTO"
+    bullets:
+      - "Paga por transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta €2,050. Paga €4,750 en lugar de €6,800. ¡Descuento sujeto a disponibilidad!" 
+    icons:   
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"
+
+  - slug: 'south-europe-scholarships-ai-pt'
+    academies: []
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
+    scholarship: "Planes de Pago y Préstamos. Desde €150* por mes"
+    description: "Solicita una beca (lugares de beca limitados disponibles)."
+    price: "€4,900*"
+    original_price: "€ 6,800"
+    bullets:
+      - "Paga en cuotas mensuales. Comenzando en €150"
+      - "Financiamiento personalizado, con o sin intereses, de 4 a 48 meses (se aplican condiciones)"
+      - "Becas disponibles de hasta €1,900. Paga desde €4,900* en lugar de €6,800. ¡BECAS SUJETAS A DISPONIBILIDAD!"
+    icons: 
+      - "/images/bcas.png"
+
+## Spain 
+
+  - slug: 'spain-upfront-ai-pt'
+    academies: []
+    recomended: "★ ¡Mejor precio!"
+    scholarship: "Pago por adelantado"
+    description: "Y obtén un descuento"
+    price: "€4,750*"
+    original_price: "€ 6,800"
+    offer: "~30% DE DESCUENTO"
+    bullets:
+      - "Paga por transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta €2,050. Paga €4,750 en lugar de €6,800. ¡Descuento sujeto a disponibilidad!"      
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"
+
+  - slug: 'spain-scholarships-ai-pt'
+    academies: []
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
+    scholarship: "Planes de Pago y Préstamos. Desde €150* por mes"
+    description: "Solicita una beca (lugares de beca limitados disponibles)."
+    price: "€4,900*"
+    original_price: "€ 6,800"
+    bullets:
+      - "Paga en cuotas mensuales. Comenzando en €150"
+      - "Financiamiento personalizado, con o sin intereses, de 4 a 48 meses (se aplican condiciones)"
+      - "Becas disponibles de hasta €1,900. Paga desde €4,900* en lugar de €6,800. ¡BECAS SUJETAS A DISPONIBILIDAD!"        
+    icons:  
+      - "/images/zank.png"
+      - "/images/sequra.png"
+      - "/images/nemuru.png"
+      - "/images/bcas.png"
+
+## Chile part-time
+
+  - slug: 'chile-geekforce-ai-pt'
+    academies: []
+    recomended: "★ ¡Mejor precio!"
+    scholarship: "Ingeniería en IA + Apoyo Profesional"
+    description: "Paga por adelantado y obtén un descuento"
+    price: "2.760.000 CLP*"
+    original_price: "3.450.000 CLP*"
+    offer: "20% DE DESCUENTO"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
+      - "Tendrás acceso a todo el programa y a todo el Sistema de Apoyo Profesional de 4Geeks"
+    icons: 
+      - "/images/visa-mastercard.png"
+      - "/images/flevo-new.png"
+
+  - slug: 'chile-solo-ai-pt'
+    academies: []
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
+    scholarship: "Ingeniería en IA"
+    description: "Solo Programa"
+    price: "2.700.000 CLP"
+    bullets:
+      - "Tendrás acceso completo y permanente al programa de Ingeniería en IA" 
+      - "No incluye acceso a todo el Sistema de Apoyo Profesional de 4Geeks"   
+    icons:
+      - "/images/visa-mastercard.png"
+      - "/images/flevo-new.png"
+
+  - slug: 'chile-ai-pt'
+    academies: []
+    recomended: "Paga en 6 a 18 meses"
+    recommended_color: "blue"
+    scholarship: "Planes de Pago y Préstamos"
+    description: "Pago en 18 meses"
+    price: "~168.000 CLP"
+    warning_message: "¡Disponibilidad limitada!"
+    bullets:
+      - "Financiamiento a medida de 6 a 18 meses"  
+      - "Se debe pagar un pago anticipado correspondiente al 20% del valor del programa."
+    icons:
+      - "/images/flevo-new.png"
+
+## LATAM  
+
+  - slug: 'latam-trabajo-garantizado-ai-pt'
+    academies: []
+    recomended: "★ ¡Mejor precio!"
+    scholarship: "Garantía de Trabajo"
+    description: "Consigue trabajo en 9 meses después de la graduación o te devolvemos tu dinero"
+    price: "USD $4,000"
+    original_price: "USD $5,000"
+    offer: "20% DE DESCUENTO"
+    bullets:
+      - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible ofreciendo múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
+      - "Puedes adaptar tu camino de aprendizaje a tus consideraciones financieras. Elige entre inscribirte solo en el programa de ingeniería en IA, agregar nuestros servicios de apoyo profesional, o inscribirte con una Garantía de Trabajo."     
+      - "Ofrecemos varias opciones de becas completas o parciales para las que podrías ser elegible."  
+      - "¡No dudes en contactarnos para explorar las posibilidades disponibles para ti! Estamos aquí para encontrar una solución adaptada a tus necesidades."   
+    icons: 
+      - "/images/visa-mastercard.png"
+
+  - slug: 'latam-apoyo-profesional-ai-pt'
+    academies: []
+    recomended: "Obtén apoyo profesional"
+    recommended_color: "blue"
+    scholarship: "Solo Apoyo Profesional"
+    description: "Obtén apoyo profesional experto."
+    price: " USD $3,000"
+    bullets:
+      - "Recibe apoyo profesional personalizado de nuestro equipo experto para ayudarte a lanzar tu carrera tecnológica."
+      - "Accede a recursos exclusivos, talleres y mentoría para aumentar tu empleabilidad."
+      - "Aprovecha las oportunidades de networking y estrategias de búsqueda de trabajo adaptadas al mercado LATAM."
+      - "Nota: Este plan no incluye una garantía de trabajo, pero maximiza tus posibilidades de éxito con orientación profesional."
+    icons:
+      - "/images/visa-mastercard.png"
+
+  - slug: 'latam-program-only-ai-pt'
+    academies: []
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
+    scholarship: "Solo Programa de Ingeniería en IA"
+    description: "Enfócate en aprender ingeniería en IA. Paga por adelantado."
+    price: "USD $2,000"
+    bullets: 
+      - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
+      - "Puedes adaptar tu camino de aprendizaje a tus consideraciones financieras. Elige entre inscribirte solo en el programa de ingeniería en IA, agregar nuestros servicios de apoyo profesional, o inscribirte con una Garantía de Trabajo."     
+      - "Ofrecemos varias opciones de becas completas o parciales para las que podrías ser elegible." 
+      - "Paga solo por el programa de Ingeniería en IA si aún no estás interesado en nuestro programa de apoyo profesional y nuestra garantía de trabajo"   
+    icons: 
+      - "/images/visa-mastercard.png"
+
+## Venezuela
+
+  - slug: 'venezuela-scholarship-ai-pt'
+    academies: []
+    recomended: "★ ¡Mejor precio!"
+    scholarship: "Pago completo"
+    description: "Paga temprano y obtén $250 de descuento"
+    price: "$1750*"
+    original_price: "$4000"
+    offer: "40% DE DESCUENTO"
+    bullets: 
+      - "Paga con débito, crédito o transferencia bancaria."
+      - "Debes pagar al menos 20 días antes del inicio del programa."
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
+      - "Si no encuentras aquí lo que esperas, contáctanos y trataremos de encontrar nuevas formas de ayudar"     
+    icons: 
+      - "/images/visa-mastercard.png"
+      - "/images/flevo-new.png"

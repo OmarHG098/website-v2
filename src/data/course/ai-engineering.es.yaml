@@ -1,0 +1,388 @@
+meta_info:
+  slug: ingenieria-ia
+  title: "Bootcamp de Ingeniería en IA | 4Geeks Academy"
+  bc_slug: "ai-engineering"
+  job_guarantee: true
+  description: "Bootcamp de Ingeniería en IA: Domina el desarrollo nativo de IA en 20 semanas. Construye sistemas completos impulsados por IA con mentoría 1:1. 84% contratados."
+  image: "/images/og-preview/ai-engineering.es.png"
+  visibility: "visible"
+  keywords: ""
+  show_in_apply: true
+  related_clusters: ["ingenieria-ia", "inteligencia-artificial"]
+  template: "course-ai-engineering"
+  duration: "P20W"
+  redirects: []
+
+apply_form:
+  label: Ingeniería en IA - Part Time
+
+seo_title: "Bootcamp de Ingeniería en IA con Garantía de Trabajo"
+header:
+  title: "Ingeniería en IA"
+  image: "../../../static/images/bg/program-bg.png"
+  image_alt: "bootcamp-ingenieria-ia"
+  paragraph: 'Lanza tu carrera impulsada por IA en 24 semanas con mentoría personalizada 1:1 y orientación experta. Conviértete en el profesional que las empresas están buscando.'
+
+button:
+  syllabus_heading: "Descargar Detalles del Curso"
+  syllabus_btn_label: "Descarga Instantánea"
+  syllabus_motivation: "Recíbelo en solo unos segundos"
+  apply_button_text: "Aplica ahora"
+  apply_button_link: "/es/aplica"
+
+course_instructors:
+  header:
+    title: "Conoce a nuestros instructores"
+    paragraph: ""
+
+  instructors: []
+
+partners:
+  limit: 4
+  heading: "¿Quién está contratando a nuestros estudiantes?"
+  sub_heading: "Algunas de las empresas donde nuestros graduados están prosperando"
+
+badges:
+  paragraph: "Prepárate para prosperar en la industria tecnológica actual impulsada por IA con aprendizaje hiperpersonalizado, mentoría 1:1 ilimitada y apoyo profesional de por vida. Reconocido por Course Report como uno de los mejores bootcamps de programación del mundo, elegido por Forbes como mejor bootcamp para estudiantes con presupuesto limitado (2024), y calificado 4.9/5 en SwitchUp. Licenciado por el Departamento de Educación de Florida."
+
+upcoming:
+  no_dates_message: "Actualmente no hay fechas próximas para este programa"
+  actionMessage: "Avísame cuando haya fechas disponibles"
+
+credentials:
+  heading: "Este Programa en Números"
+  paragraph: "Nuestros resultados hablan por sí mismos"
+
+## PROGRAM DETAILS
+details:
+  about:
+    title: "Acerca del programa"
+    sub_title: "Domina las habilidades de ingeniería en IA que las empresas están buscando activamente. Aprende a orquestar sistemas de IA, automatizar flujos de trabajo y transformar operaciones con herramientas de IA. Construye aplicaciones completas nativas de IA desde frontend hasta backend, incluyendo sistemas RAG, arquitecturas multi-agente y automatización de flujos de trabajo."
+    list:
+      - label: "Track de 20 Semanas: "
+        content: "3 clases en vivo por semana (noches) + 10–15 horas de tarea por semana"
+        icon: "duration-icon"
+      - label: "Tamaño de Clase"
+        content: "Ratio de 1 profesor por 7 estudiantes"
+        icon: "people"
+      - label: "Certificado"
+        content: "Certificado de Ingeniería en IA"
+        link_text: "Ver ejemplo"
+        link: ""
+        icon: "certification"
+      - label: "Prerrequisitos"
+        content: "No se requieren habilidades previas de programación o matemáticas avanzadas."
+        icon: "contract-checked"
+      - label: "Idioma"
+        content: "Puedes elegir entre inglés y español para el plan de estudios y el contenido. Las clases en vivo se imparten en el idioma de tu campus."
+        icon: "language"
+
+  heading: "BOOTCAMP DE INGENIERÍA EN IA"
+  weeks: 20
+  week_unit: "sem"
+  weeks_label: "semanas"
+  sub_heading: "Aprendizaje práctico a través de proyectos de la vida real. Domina el desarrollo nativo de IA: React con componentes de IA, APIs REST, sistemas RAG, arquitecturas multi-agente y automatización de flujos de trabajo."
+  left_labels:
+    description: "DESCRIPCIÓN:"
+    projects: "PROYECTOS:"
+    duration: "DURACIÓN:"
+    skills: "Habilidades / Semanas:"
+  details_modules:
+    - module_name: "PREWORK"
+      title: "Prepárate para el Prework"
+      description: "Empezamos con lo básico: HTML5, CSS3 y JavaScript. Revisamos los fundamentos de la programación para asegurar que todos estemos en la misma página. Durante el prework, aprenderás cómo crear un sitio web usando HTML y CSS, luego desarrollarás varios proyectos y finalmente te sumergirás en el mundo de JavaScript."
+      projects: "Postal CSS, Versión Mínima de Instagram, etc."
+      slug: "prework"
+      duration: "~ 60 horas"
+      step: 0
+    - module_name: "FUNDAMENTOS"
+      title: "Aprende a Programar"
+      description: "Piensa como una computadora: Controla el flujo de tu código, codifica algoritmos, haz loops, usa condicionales, webpack, la línea de comandos, GIT, etc."
+      projects: "Construye tu clon de Instagram, un formulario con HTML5, un currículum en línea, etc."
+      slug: "fundamentos"
+      duration: "3 sem"
+      step: 2
+    - module_name: "LA WEB"
+      title: "Desarrollo Web"
+      description: "Crearás tu primera aplicación con React.js, patrón MVC, módulos JS, bundling, Babel JS, el DOM y eventos."
+      projects: "Clon de Instagram Feed, generador de cartas aleatorias, pruebas unitarias con Jest, landing page con React, semáforo, lista de tareas con React, entre otros..."
+      slug: "desarrollo-web"
+      duration: "7 sem"
+      step: 5.9
+    - module_name: "API'S"
+      title: "Desarrollo de APIs"
+      description: "Enfocado principalmente en Python. Prepárate para construir tu propia API e interactuar con aplicaciones de terceros como Twillio, Stripe y muchas más."
+      projects: "Página de blog de Star Wars, autenticación JWT, Jackson Families, CRUD (crear, leer, actualizar, eliminar), construye tus propias APIs e interactúa con otras."
+      slug: "web-development"
+      duration: "3 sem"
+      step: 2
+    - module_name: "SISTEMAS IA"
+      title: "Ingeniería en IA"
+      description: "Construye sistemas de IA de producción incluyendo capas de conocimiento RAG, sistemas multi-agente, automatización de flujos de trabajo y aplicaciones de IA en tiempo real."
+      projects: "Sistemas de búsqueda vectorial, agentes inteligentes con memoria, flujos de trabajo generados por IA, aplicaciones de transmisión WebSocket."
+      slug: "sistemas-ia"
+      duration: "7 sem"
+      step: 8
+    - module_name: "SOPORTE DE POR VIDA"
+      title: "Soporte de por Vida"
+      description: "Sigue evolucionando en tu carrera con la ayuda de la academia - somos tus socios de aprendizaje de por vida. Tendrás acceso a mentorías 1:1 para todas tus necesidades de programación durante el bootcamp y más allá. Nuestros coaches profesionales expertos te ayudarán a prepararte para una búsqueda de trabajo exitosa y continuarán estando ahí para ti durante toda tu carrera."
+      projects: "Te pagan por seguir aprendiendo. Aumenta tus ingresos gradualmente mientras te conviertes en un Desarrollador Senior. Disfruta y programa para siempre."
+      slug: "lifelong-learning"
+      duration: "para siempre"
+      step: 0.1
+
+syllabus:
+  heading: Consigue toda la info del programa
+  button_label: Descargar
+
+## MILESTONES SECTION
+milestones:
+  title: "RESUMEN DEL PROGRAMA DE INGENIERÍA EN IA"
+  sub_title: "Aprende construyendo y escalando un único negocio nativo de IA a través de 10 hitos. Gradua en 24 semanas con una empresa completamente operativa e impulsada por IA que refleja las habilidades y flujos de trabajo utilizados por equipos de ingeniería modernos."
+  items:
+    - id: "milestone-0"
+      title: "Fundamentos de Prework con IA Primero"
+      content: "Fundamentos de Internet, conceptos básicos de JavaScript, Git, cómo funciona la IA y cómo comunicarse con ella (Markdown/YAML/JSON), agentes de código."
+    - id: "milestone-1"
+      title: "Fundamentos Web"
+      content: "HTML, CSS, Tailwind, accesibilidad, diseños, SEO/GEO. Construye la primera página web de la empresa."
+    - id: "milestone-2"
+      title: "Fundamentos de Programación"
+      content: "Algoritmos, estado vs flujo de control, dominio de TypeScript (JavaScript Tipado). Implementa pequeñas características para la empresa."
+    - id: "milestone-3"
+      title: "Ingeniería de UI Impulsada por IA"
+      content: "Prompting de Visión a Especificación y generación de componentes. Reconstruye la UI de la empresa usando IA."
+    - id: "milestone-4"
+      title: "Fundamentos de Next.js (React)"
+      content: "SPA (Aplicaciones de Página Única) y arquitectura multi-página, props/estado/efectos, depuración. Construye el frontend interactivo de la empresa."
+    - id: "milestone-5"
+      title: "Backend para Frontends de IA"
+      content: "APIs, conceptos básicos de BD, serialización, autenticación, funciones serverless. Crea el backend de la empresa."
+    - id: "milestone-6"
+      title: "Telemetría y Pipelines de Datos"
+      content: "Recopilar → transformar → agregar → reportar. Construye la telemetría para la empresa."
+    - id: "milestone-7"
+      title: "RAG y Memoria"
+      content: "Fragmentación de datos, embeddings, búsqueda vectorial. Añade la capa de conocimiento de la empresa."
+    - id: "milestone-8"
+      title: "Ingeniería de Agentes"
+      content: "Reglas, bancos de memoria, llamadas a herramientas, planificación multi-agente. Construye los agentes de la empresa."
+    - id: "milestone-9"
+      title: "Generación de Flujos de Trabajo Agénticos"
+      content: "Usa LLMs para analizar el caso de la empresa, generar flujos de trabajo internos, validarlos e implementarlos como pipelines de automatización (serverless, colas, cronjobs o n8n)."
+    - id: "milestone-10"
+      title: "Sistemas en Tiempo Real"
+      content: "Streaming, sockets, pub/sub. Habilita interacciones en tiempo real para datos, clientes, IA o empleados."
+    - id: "capstone"
+      title: "Capstone: Empresa Completamente Transformada por IA"
+      content: "Los estudiantes entregan la transformación completa de su empresa:"
+      bullets:
+        items:
+          - text: "Frontend generado por IA"
+          - text: "API + autenticación"
+          - text: "Pipeline de telemetría e informes"
+          - text: "Automatización de flujos (generada por agentes)"
+          - text: "Capa de conocimiento RAG"
+          - text: "Agentes con llamadas a herramientas"
+          - text: "Capa de comunicación en tiempo real"
+
+## RATING REVIEWS SECTION
+rating_reviews:
+  background: "#FBFBFB"
+  position: 7
+  heading: "Reconocidos Globalmente y Mejor Calificados"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
+
+## HOW IT WORKS SECTION
+how_it_works:
+  background: "#0084FF"
+  heading:
+    text: "Resultados Profesionales"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+    style: '{ "color": "white" }'
+  icons:
+    - icon: "graduation-2"
+      color: "#0084FF"
+      title: "Tasa de colocación laboral"
+      content: "84% de los graduados fueron contratados"
+    - icon: "briefcase-2"
+      color: "#FF0000"
+      title: "Tiempo promedio para conseguir trabajo"
+      content: "6 meses después de la graduación"
+    - icon: "stairswflag"
+      color: "#BE8BFF"
+      title: "Incremento salarial"
+      content: "55% más alto en el nuevo trabajo"
+
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "¿QUÉ HACE ÚNICO ESTE PROGRAMA?"
+  sub_heading: "Compara con otras escuelas"
+  sub_heading_link: ""
+
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  heading: "¡Y disfruta del Apoyo Profesional... de por Vida!"
+  geek_pal:
+    - Un profesor cada siete estudiantes (1:7).
+    - Sesiones de mentoría ilimitadas bajo demanda en persona o en línea.
+    - Miles de ejercicios auto-calificados.
+    - Tutoriales interactivos y auto-calificados.
+    - Soluciones en video para retroalimentación instantánea.
+    - Chat de soporte en línea 12 horas al día.
+    - Transmisión en línea de clases.
+    - Grabación de clases para revisión posterior.
+  geek_force:
+    - Construcción de currículum
+    - Construcción de perfil de Github
+    - Preparación para entrevistas simuladas
+    - Sesión de preparación para entrevistas personalizada para trabajos específicos
+    - Coaching de Marca Personal
+    - Prácticas de programación y ejercicios post-graduación
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "Precios y Pagos"
+  sub_heading: "Selecciona la ubicación del bootcamp para ver los precios y planes de pago"
+  selector:
+    top_label: Ubicación
+    placeholder: Selecciona una ubicación
+  button:
+    text: Ver Precios y Planes
+    link: ""
+
+## TWO COLUMNS SECTIONS
+why_ai_engineering_now:
+  background: "#FFFFFF"
+  swipable: true
+  heading:
+    text: "Por Qué Ingeniería en IA Ahora"
+    font_size: ["35px", "35px", "35px", "30px", "30px"]
+    style: '{ "textAlign": "center", "width": "90%" }'
+  sub_heading:
+    text: "Según LinkedIn's Jobs on the Rise 2026, los Ingenieros en IA están entre los roles de más rápido crecimiento en los EE.UU. La demanda se está acelerando y las empresas están contratando activamente estas habilidades ahora."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    style: '{"font-weight": "200", "textAlign": "center", "width": "90%"}'
+  icons:
+    - icon: "briefcase-2"
+      title: "800,000 roles"
+      content: "relacionados con IA para 2026"
+      color: "#0084FF"
+    - icon: "chart"
+      title: "30% de crecimiento"
+      content: "anual en trabajos de IA"
+      color: "#0084FF"
+    - icon: "money"
+      title: "20–40% de primas"
+      content: "para habilidades de Ingeniería en IA"
+      color: "#0084FF"
+
+two_column_program:
+  proportions: [6, 6]
+  background: "#ffffff"
+  image:
+    style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
+    src: "/images/landing/two-womans-and-laptop.webp"
+    shadow: false
+  heading:
+    text: "¿Quién Debería Aplicar?"
+    font_size: ["40px", "34px", "34px", "34px", "32px"]
+  sub_heading:
+    text: " "
+    font_size: ["20px", "20px", "16px", "16px", "16px"]
+    style: '{ "font-weight": "100" }'
+  bullets:
+    items:
+      - text: "<strong style='font-weight: 800;'>• Listo para un compromiso intensivo:</strong> 20-24 horas/semana durante 24 semanas. (Clases en vivo + ~12 horas de tarea)"
+      - text: "<strong style='font-weight: 800;'>• Enfocado en resultados profesionales:</strong> Quieres habilidades nativas de IA que desbloqueen roles de alta demanda y bien pagados."
+      - text: "<strong style='font-weight: 800;'>• Motivado por la estructura:</strong> Prefieres hitos claros, instructores expertos y un grupo de apoyo."
+  button:
+    text: "Saber Más"
+    color: "white"
+    background: "black"
+    path: "#leadform_header"
+
+two_columns_info:
+  proportions: [6, 6]
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}'
+    shadow: false
+    src: "/images/landing/grupo-ventanas.webp"
+  section_heading:
+    text: "Todo lo que necesitas para lanzar y hacer crecer una carrera en ingeniería en IA"
+  heading:
+    text: ""
+    font_size: ["40px", "34px", "34px", "30px", "30px"]
+  sub_heading:
+    style: '{"font-weight": "400"}'
+    text: "Habilidades Integradas con IA, Mentoría Ilimitada y Apoyo Profesional de por Vida"
+    font_size: ["22px"]
+  content:
+    text: ""
+  button:
+    text: "Compara 4Geeks con otros bootcamps"
+    path: "/es/geeks-vs-others"
+    color: "white"
+    background: "black"
+    hover: "lightBlue"
+  bullets:
+    items:
+      - heading: "Domina habilidades de IA de próxima generación."
+        text: "Aprende a construir con las herramientas y flujos de trabajo de IA utilizados por equipos de desarrollo modernos."
+      - heading: "Obtén mentoría ilimitada y apoyo profesional."
+        text: "Trabaja 1:1 con mentores expertos y coaches profesionales—durante tu bootcamp y para siempre después."
+      - heading: "Aprende más rápido con apoyo hiperpersonalizado."
+        text: "Progresa con retroalimentación instantánea de IA, orientación personalizada y clases pequeñas."
+      - heading: "Únete a una comunidad tecnológica global."
+        text: "Conéctate con compañeros, mentores y exalumnos y mantente apoyado mientras creces."
+
+## WHAT SETS 4GEEKS APART SECTION
+what_sets_4geeks_apart:
+  proportions: [5, 7]
+  image:
+    style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
+    src: "/images/landing/hombre-con-laptop.png"
+  heading:
+    text: "Por Qué 4Geeks se Destaca"
+    font_size: ["34px", "34px", "34px", "25px", "25px"]
+  button:
+    text: "Aplica Ahora"
+    color: "white"
+    background: "black"
+    path: "#leadform_header"
+  bullets:
+    items:
+      - text: "<strong style='font-weight: 800;'>Mentoría Ilimitada de por Vida:</strong> Orientación 1:1 cuando la necesites—durante el programa y para toda tu carrera."
+      - text: "<strong style='font-weight: 800;'>Ratio Profesor-Estudiante de 1:7:</strong> Grupos pequeños aseguran instrucción profunda y personalizada."
+      - text: "<strong style='font-weight: 800;'>Tutor de IA Rigobot:</strong> Seguimiento de progreso impulsado por IA y retroalimentación adaptada a tu camino de aprendizaje."
+      - text: "<strong style='font-weight: 800;'>Aprendizaje Hiperpersonalizado:</strong> La orientación humana + IA optimizan cómo aprendes, ayudándote a avanzar más rápido y con más confianza."
+      - text: "<strong style='font-weight: 800;'>Fluido en IA Desde el Día 1:</strong> Aprende a trabajar con agentes de código, automatización de flujos de trabajo y sistemas multi-agente desde el principio."
+
+## ALUMNI SECTION
+alumni:
+  heading: "Conoce a Nuestros Exalumnos y Sus Proyectos"
+  sub_heading: "En la última fase del curso debes construir un proyecto final que elegirás tú mismo, puede ser un emprendimiento o trabajarás directamente en un proyecto de la vida real en colaboración con nuestros socios contratantes"
+
+## SIDEBAR
+sidebar:
+  membership: "MEMBRESÍAS"
+  program: "PROGRAMA"
+  geeks_vs_other: "4GEEKS vs OTROS"
+  pricing: "PRECIOS"
+  alumni: "LOS EXALUMNOS"

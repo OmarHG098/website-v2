@@ -1,0 +1,388 @@
+meta_info:
+  slug: ai-engineering
+  title: "AI Engineering Bootcamp | 4Geeks Academy"
+  bc_slug: "ai-engineering"
+  job_guarantee: true
+  description: "AI Engineering Bootcamp: Master AI-native development in 20 weeks. Build complete AI-powered systems with 1:1 mentorship. 84% hired within 6 months."
+  image: "/images/og-preview/ai-engineering.us.png"
+  visibility: "visible"
+  keywords: ""
+  show_in_apply: true
+  related_clusters: ["ai-engineering", "artificial-intelligence"]
+  template: "course-ai-engineering"
+  duration: "P20W"
+  redirects: []
+
+apply_form:
+  label: AI Engineering - Part Time
+
+seo_title: "AI Engineering Bootcamp with Job Guarantee"
+header:
+  title: "AI Engineering"
+  image: "../../../static/images/bg/program-bg.png"
+  image_alt: "ai-engineering-bootcamp"
+  paragraph: 'Become the software engineer companies are actively hiring for. Learn to design, build, and deploy complete AI systems used in real-world production.'
+
+button:
+  syllabus_heading: "Download Syllabus"
+  syllabus_btn_label: "Instant Download"
+  syllabus_motivation: "Get it in just a few seconds"
+  apply_button_text: "Apply now"
+  apply_button_link: "/us/apply"
+
+course_instructors:
+  header:
+    title: "Meet our instructors"
+    paragraph: ""
+
+  instructors: []
+
+partners:
+  limit: 4
+  heading: "Who is hiring our students?"
+  sub_heading: "Some of the companies where our graduates are thriving"
+
+badges:
+  paragraph: "Prepare to thrive in today's AI-fluent tech industry with hyperpersonalized, AI-powered learning, 1:1 mentorship, and career support for life. Recognized by Course Report as one of the world's top coding bootcamps, chosen by Forbes as best bootcamp for students on a budget (2024), and rated 4.9/5 on SwitchUp. Licensed by the Florida Department of Education."
+
+upcoming:
+  no_dates_message: "There are currently no upcoming dates for this program"
+  actionMessage: "Let me know when dates are available"
+
+credentials:
+  heading: "This Program By The Numbers"
+  paragraph: "Our results speak for themselves"
+
+## PROGRAM DETAILS
+details:
+  about:
+    title: "About the program"
+    sub_title: "Master AI engineering skills that companies are actively searching for. Learn to orchestrate AI systems, automate workflows, and transform operations with AI tools. Build complete AI-native applications from frontend to backend, including RAG systems, multi-agent architectures, and workflow automation."
+    list:
+      - label: "20-Week Track: "
+        content: "3 live classes per week (evenings) + 10–15 hours of homework per week"
+        icon: "duration-icon"
+      - label: "Class Size"
+        content: "Ratio of 1 teacher per 7 students"
+        icon: "people"
+      - label: "Certificate"
+        content: "AI Engineering Certificate"
+        link_text: "See example"
+        link: ""
+        icon: "certification"
+      - label: "Prerequisites"
+        content: "No previous coding skills or advanced math required."
+        icon: "contract-checked"
+      - label: "Language"
+        content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
+        icon: "language"
+
+  heading: "AI ENGINEERING BOOTCAMP"
+  weeks: 20
+  week_unit: "wks"
+  weeks_label: "weeks"
+  sub_heading: "Hands-on learning through real-life projects. Master AI-native development: React with AI components, REST APIs, RAG systems, multi-agent architectures, and workflow automation."
+  left_labels:
+    description: "DESCRIPTION:"
+    projects: "PROJECTS:"
+    duration: "DURATION:"
+    skills: "Skills / Weeks:"
+  details_modules:
+    - module_name: "PREWORK"
+      title: "Get Ready for the Prework"
+      description: "We start with the basics: HTML5, CSS3, and JavaScript. We review the fundamentals of programming to ensure everyone is on the same page. During the prework, you will learn how to create a website using HTML and CSS, then develop several projects and finally dive into the world of JavaScript."
+      projects: "CSS Postcard, Minimal Instagram Version, etc."
+      slug: "prework"
+      duration: "~ 60 hours"
+      step: 0
+    - module_name: "FOUNDATIONS"
+      title: "Learn To Code"
+      description: "Think like a computer: Control the flow of your code, code algorithms, loop, use conditionals, webpack, the command line, GIT, etc."
+      projects: "Build your Instagram clone, a form with HTML5, an online resume, etc."
+      slug: "foundations"
+      duration: "3 wks"
+      step: 2
+    - module_name: "THE WEB"
+      title: "Web Development"
+      description: "You will create your first application with React.js, MVC pattern, JS modules, bundling, Babel JS, the DOM, and events."
+      projects: "Instagram Feed clone, random card generator, unit testing with Jest, landing page with React, traffic light, to-do list with React, among others..."
+      slug: "web-development"
+      duration: "7 wks"
+      step: 5.9
+    - module_name: "API'S"
+      title: "API Development"
+      description: "Mainly focused on Python. Get ready to build your own API and interact with 3rd party applications like Twillio, Stripe and many more."
+      projects: "Star Wars Blog page, JWT authentication, Jackson Families, CRUD (create, read, update, delete), build your own APIs and interact with others."
+      slug: "web-development"
+      duration: "3 wks"
+      step: 2
+    - module_name: "AI SYSTEMS"
+      title: "AI Engineering"
+      description: "Build production AI systems including RAG knowledge layers, multi-agent systems, workflow automation, and real-time AI applications."
+      projects: "Vector search systems, intelligent agents with memory, AI-generated workflows, WebSocket streaming applications."
+      slug: "ai-systems"
+      duration: "7 weeks"
+      step: 8
+    - module_name: "LIFELONG SUPPORT"
+      title: "Lifelong Support"
+      description: "Keep evolving in your career with the academy's help - we're your learning partners for life. You'll have access to 1:1 mentorships for all your coding needs throughout the bootcamp and beyond. Our expert career coaches will help you prepare for a successful job search and will continue to be there for you throughout your career."
+      projects: "Get paid to keep learning and raise your income gradually as you become a Senior Developer. Enjoy and build software for life."
+      slug: "lifelong-learning"
+      duration: "forever"
+      step: 0.1
+
+syllabus:
+  heading: Get all the information about the syllabus
+  button_label: Download
+
+## MILESTONES SECTION
+milestones:
+  title: "AI ENGINEERING PROGRAM OVERVIEW"
+  sub_title: "Learn by building and scaling a single AI-native business across 10 milestones. Graduate in 24 weeks with a fully operational, AI-powered company that reflects the skills and workflows used by modern engineering teams."
+  items:
+    - id: "milestone-0"
+      title: "AI‑First Prework Foundations"
+      content: "Internet fundamentals, JavaScript basics, Git, how AI works and how to communicate with it (Markdown/YAML/JSON), coding agents."
+    - id: "milestone-1"
+      title: "Web Foundations"
+      content: "HTML, CSS, Tailwind, accessibility, layouts, SEO/GEO. Build the company's first webpage."
+    - id: "milestone-2"
+      title: "Programming Foundations"
+      content: "Algorithms, state vs control flow, TypeScript mastery (Typed JavaScript). Implement small features for the company."
+    - id: "milestone-3"
+      title: "AI‑Driven UI Engineering"
+      content: "Vision‑to‑Spec prompting and component generation. Rebuild the company's UI using AI."
+    - id: "milestone-4"
+      title: "Next.js Fundamentals (React)"
+      content: "SPA (Single Page Applications) and multi-page architecture, props/state/effects, debugging. Build the company's interactive frontend."
+    - id: "milestone-5"
+      title: "Backend for AI Frontends"
+      content: "APIs, DB basics, serialization, auth, serverless functions. Create the company's backend."
+    - id: "milestone-6"
+      title: "Telemetry & Data Pipelines"
+      content: "Collect → transform → aggregate → report. Build telemetry for the company."
+    - id: "milestone-7"
+      title: "RAG & Memory"
+      content: "Data chunking, embeddings, vector search. Add the company's knowledge layer."
+    - id: "milestone-8"
+      title: "Agent Engineering"
+      content: "Rules, memory banks, tool calling, multi-agent planning. Build the company's agents."
+    - id: "milestone-9"
+      title: "Agentic Workflow Generation"
+      content: "Use LLMs to analyze the company case, generate internal workflows, validate them, and implement them as automation pipelines (serverless, queues, cronjobs, or n8n)."
+    - id: "milestone-10"
+      title: "Real-Time Systems"
+      content: "Streaming, sockets, pub/sub. Enable real-time interactions for data, customers, AI, or employees."
+    - id: "capstone"
+      title: "Capstone: Full AI‑Transformed Company"
+      content: "Students deliver the complete transformation of their company:"
+      bullets:
+        items:
+          - text: "AI-generated frontend"
+          - text: "API + authentication"
+          - text: "Telemetry + reporting pipeline"
+          - text: "Workflow automation (agent-generated)"
+          - text: "RAG knowledge layer"
+          - text: "Agents with tool calling"
+          - text: "Real-time communication layer"
+
+## RATING REVIEWS SECTION
+rating_reviews:
+  background: "#FBFBFB"
+  position: 7
+  heading: "Globally Recognized and Top Rated"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
+
+## HOW IT WORKS SECTION
+how_it_works:
+  background: "#0084FF"
+  heading:
+    text: "Career Outcomes"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+    style: '{ "color": "white" }'
+  icons:
+    - icon: "graduation-2"
+      color: "#0084FF"
+      title: "Job Placement Rate"
+      content: "84% of graduates were hired"
+    - icon: "briefcase-2"
+      color: "#FF0000"
+      title: "Average time to get hired"
+      content: "6 months after graduation"
+    - icon: "stairswflag"
+      color: "#BE8BFF"
+      title: "Salary Increase"
+      content: "55% higher at new job"
+
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "WHAT MAKES THIS PROGRAM STAND OUT?"
+  sub_heading: "Compare with other schools"
+  sub_heading_link: ""
+
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  heading: "And enjoy Career Support... for Life!"
+  geek_pal:
+    - One teacher every seven students (1:7).
+    - Unlimited on-demand in-person or online mentoring sessions.
+    - Thousands of auto-graded exercises.
+    - Interactive and auto-graded tutorials.
+    - Video solutions for instant feedback.
+    - Online support chat 12 hours a day.
+    - Online streaming of classes.
+    - Recording of classes for later review.
+  geek_force:
+    - Resume building
+    - Github profile building
+    - Mock interview preparation
+    - Customized interview preparation session for targeted jobs
+    - Personal Branding coaching
+    - Post-graduation coding practices and exercises
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "Prices and Payments"
+  sub_heading: "Select the bootcamp location to see the prices and payment plans"
+  selector:
+    top_label: Location
+    placeholder: Select a location
+  button:
+    text: Check Prices and Plans
+    link: ""
+
+## TWO COLUMNS SECTIONS
+why_ai_engineering_now:
+  background: "#FFFFFF"
+  swipable: true
+  heading:
+    text: "Why AI Engineering Now"
+    font_size: ["35px", "35px", "35px", "30px", "30px"]
+    style: '{ "textAlign": "center", "width": "90%" }'
+  sub_heading:
+    text: "According to LinkedIn’s Jobs on the Rise 2026, AI Engineers are among the fastest-growing roles in the U.S. Demand is accelerating, and companies are actively hiring for these skills now."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    style: '{"font-weight": "200", "textAlign": "center", "width": "90%"}'
+  icons:
+    - icon: "briefcase-2"
+      title: "800,000 roles"
+      content: "related to AI by 2026"
+      color: "#0084FF"
+    - icon: "chart"
+      title: "30% growth"
+      content: "year-over-year in AI jobs"
+      color: "#0084FF"
+    - icon: "money"
+      title: "20–40% premiums"
+      content: "for AI Engineering skills"
+      color: "#0084FF"
+
+two_column_program:
+  proportions: [6, 6]
+  background: "#ffffff"
+  image:
+    style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
+    src: "/images/landing/two-womans-and-laptop.webp"
+    shadow: false
+  heading:
+    text: "Who Should Apply?"
+    font_size: ["40px", "34px", "34px", "34px", "32px"]
+  sub_heading:
+    text: " "
+    font_size: ["20px", "20px", "16px", "16px", "16px"]
+    style: '{ "font-weight": "100" }'
+  bullets:
+    items:
+      - text: "<strong style='font-weight: 800;'>• Ready for an intensive commitment:</strong> 20-24 hours/week for 24 weeks. (Live classes + ~12 hours of homework)"
+      - text: "<strong style='font-weight: 800;'>• Focused on career outcomes:</strong> Want AI-native skills that unlock in-demand, high-paying roles."
+      - text: "<strong style='font-weight: 800;'>• Motivated by structure:</strong> Prefer clear milestones, expert instructors, and a supportive cohort."
+  button:
+    text: "Learn More"
+    color: "white"
+    background: "black"
+    path: "#leadform_header"
+
+two_columns_info:
+  proportions: [6, 6]
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}'
+    shadow: false
+    src: "/images/landing/grupo-ventanas.webp"
+  section_heading:
+    text: "Everything you need to launch and grow a career in AI engineering"
+  heading:
+    text: ""
+    font_size: ["40px", "34px", "34px", "30px", "30px"]
+  sub_heading:
+    style: '{"font-weight": "400"}'
+    text: "AI-Integrated Skills, Unlimited Mentorship, and Career Support for Life"
+    font_size: ["22px"]
+  content:
+    text: ""
+  button:
+    text: "Compare 4Geeks with other bootcamps"
+    path: "/us/geeks-vs-others"
+    color: "white"
+    background: "black"
+    hover: "lightBlue"
+  bullets:
+    items:
+      - heading: "Master next-gen AI skills."
+        text: "Learn to build with the AI tools and workflows used by modern development teams."
+      - heading: "Get unlimited mentorship and career support."
+        text: "Work 1:1 with expert mentors and career coaches—during your bootcamp and forever after."
+      - heading: "Learn faster with hyperpersonalized support."
+        text: "Progress with instant AI feedback, personalized guidance, and small class sizes."
+      - heading: "Join a global tech community."
+        text: "Connect with peers, mentors, and alumni and stay supported as you grow."
+
+## WHAT SETS 4GEEKS APART SECTION
+what_sets_4geeks_apart:
+  proportions: [5, 7]
+  image:
+    style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
+    src: "/images/landing/hombre-con-laptop.png"
+  heading:
+    text: "Why 4Geeks Stands Out"
+    font_size: ["34px", "34px", "34px", "25px", "25px"]
+  button:
+    text: "Apply Now"
+    color: "white"
+    background: "black"
+    path: "#leadform_header"
+  bullets:
+    items:
+      - text: "<strong style='font-weight: 800;'>Unlimited Lifetime Mentorship:</strong> 1:1 guidance whenever you need it—during the program and for your entire career."
+      - text: "<strong style='font-weight: 800;'>1:7 Teacher-Student Ratio:</strong> Small cohorts ensure deep, personalized instruction."
+      - text: "<strong style='font-weight: 800;'>Rigobot AI Tutor:</strong> AI-powered progress tracking and feedback tailored to your learning path."
+      - text: "<strong style='font-weight: 800;'>Hyperpersonalized Learning:</strong> Human + AI guidance optimize how you learn, helping you move faster and with more confidence."
+      - text: "<strong style='font-weight: 800;'>AI-Fluent From Day 1:</strong> Learn to work with coding agents, workflow automation, and multi-agent systems from the start."
+
+## ALUMNI SECTION
+alumni:
+  heading: "Meet Our Alumni and Their Projects"
+  sub_heading: "The last phase of the course you must build a final project that you will choose yourself, it can be an undertaking or you will work directly on a real life project in collaboration with our hiring partners"
+
+## SIDEBAR
+sidebar:
+  membership: "MEMBERSHIPS"
+  program: "PROGRAM"
+  geeks_vs_other: "4GEEKS vs OTHERS"
+  pricing: "PRICING"
+  alumni: "THE ALUMNI"

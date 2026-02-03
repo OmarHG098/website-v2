@@ -230,6 +230,9 @@ const Side = ({
           gap="5px"
         >
           {bullets.items?.map((bullet, index) => {
+            const itemStyle = getStyleContent(bullets?.item_style);
+            const textAlign =
+              itemStyle?.["text-align"] || itemStyle?.textAlign || "left";
             return (
               <Div
                 key={index}
@@ -239,7 +242,7 @@ const Side = ({
                 display="flex"
                 flexDirection="row"
                 gap="8px"
-                style={getStyleContent(bullets?.item_style)}
+                style={itemStyle}
               >
                 {/* Icon always on the left */}
                 {bullet.icon && (
@@ -257,7 +260,7 @@ const Side = ({
                   {bullet.heading && (
                     <H3
                       as="h3"
-                      textAlign="left"
+                      textAlign={textAlign}
                       fontSize="16px"
                       fontWeight="900"
                       lineHeight="16px"
@@ -270,7 +273,7 @@ const Side = ({
                   {/* Text if present */}
                   {bullet.text && (
                     <Paragraph
-                      textAlign="left"
+                      textAlign={textAlign}
                       margin="0"
                       dangerouslySetInnerHTML={{ __html: bullet.text }}
                     />

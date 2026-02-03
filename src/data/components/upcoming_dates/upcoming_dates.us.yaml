@@ -18,16 +18,29 @@ syllabus_alias:
     course_slug: datascience-machine-learning
     name: Data Science
     duration_weeks: 16 weeks
+    slug_variants:
+      - ds
+      - datascience
+      - ml
 
   - default_course: cybersecurity
     course_slug: cybersecurity
     name: Cybersecurity
     duration_weeks: 16 weeks
+    slug_variants:
+      - cyber-security
+      - ciberseguridad
+      - curso-ciberseguridad
 
   - default_course: full-stack-ft
     course_slug: full-stack-ft
     name: Full-Stack Developer - Full Time
     duration_weeks: 12 weeks
+
+  - default_course: ai-engineering
+    course_slug: ai-engineering-course
+    name: AI Engineering
+    duration_weeks: 24 weeks
 
 email_form_content:
   heading: Send your email to notify you when there is a date available for this campus
