@@ -77,7 +77,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As an Atlanta student, you'll enjoy unlimited lifetime mentorship, including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/rigobot"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Atlanta’s tech community through local tech meetups and events.
+          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As an Atlanta student, you'll enjoy unlimited lifetime mentorship, including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/ai-powered-learning/rigobot-ai-coding-mentor"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Atlanta’s tech community through local tech meetups and events.
 
       - question: "Do students in Atlanta need prior experience to join 4Geeks Academy?"
         locations: ["atlanta-usa"]
@@ -114,14 +114,14 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As an Austin student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/rigobot"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Austin’s tech community through local tech meetups and events.
+          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As an Austin student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/ai-powered-learning/rigobot-ai-coding-mentor"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Austin’s tech community through local tech meetups and events.
 
       - question: "Do students in Austin need prior experience to join 4Geeks Academy?"
         locations: ["austin-usa"]
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Austin students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Chicago-USA Questions
       - question: "How do I apply to 4Geeks Academy in Chicago?"
@@ -151,14 +151,14 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As a Chicago student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/rigobot"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Chicago’s tech community through local tech meetups and events.
+          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As a Chicago student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/ai-powered-learning/rigobot-ai-coding-mentor"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Chicago’s tech community through local tech meetups and events.
 
       - question: "Do students in Chicago need prior experience to join 4Geeks Academy?"
         locations: ["chicago-usa"]
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Chicago students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Downtown-Miami Questions
       - question: "How do I apply to 4Geeks Academy in Miami?"
@@ -202,14 +202,14 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As a Miami student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/rigobot"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Miami’s tech community through events like <strong>eMerge Americas</strong> and <strong>Refresh Miami</strong>.
+          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As a Miami student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/ai-powered-learning/rigobot-ai-coding-mentor"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Miami’s tech community through events like <strong>eMerge Americas</strong> and <strong>Refresh Miami</strong>.
 
       - question: "Do students in Miami need prior experience to join 4Geeks Academy?"
         locations: ["downtown-miami"]
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Miami students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Dallas-USA
       - question: "How do I apply to 4Geeks Academy in Dallas?"
@@ -253,14 +253,14 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As a Dallas student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/rigobot"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Dallas’s tech community through events.
+          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As a Dallas student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/ai-powered-learning/rigobot-ai-coding-mentor"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Dallas’s tech community through events.
 
       - question: "Do students in Dallas need prior experience to join 4Geeks Academy?"
         locations: ["dallas-usa"]
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Dallas students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Houston-USA Questions
       - question: "How do I apply to 4Geeks Academy in Houston?"
@@ -290,14 +290,14 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As a Houston student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/rigobot"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Houston’s tech community through local tech meetups and events.
+          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As a Houston student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/ai-powered-learning/rigobot-ai-coding-mentor"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Houston’s tech community through local tech meetups and events.
 
       - question: "Do students in Houston need prior experience to join 4Geeks Academy?"
         locations: ["houston-usa"]
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Houston students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Los Angeles-USA Questions
       - question: "How do I apply to 4Geeks Academy in Los Angeles?"
@@ -327,14 +327,14 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As a Los Angeles student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/rigobot"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Los Angeles’s tech community through local tech meetups and events.
+          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As a Los Angeles student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/ai-powered-learning/rigobot-ai-coding-mentor"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Los Angeles’s tech community through local tech meetups and events.
 
       - question: "Do students in Los Angeles need prior experience to join 4Geeks Academy?"
         locations: ["losangeles-usa"]
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Los Angeles students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # New York-USA Questions
       - question: "How do I apply to 4Geeks Academy in New York?"
@@ -364,14 +364,14 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As a New York student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/rigobot"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to New York’s tech community through local tech meetups and events.
+          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As a New York student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/ai-powered-learning/rigobot-ai-coding-mentor"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to New York’s tech community through local tech meetups and events.
 
       - question: "Do students in New York need prior experience to join 4Geeks Academy?"
         locations: ["newyork-usa"]
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many New York students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Orlando Questions
       - question: "How do I apply to 4Geeks Academy in Orlando?"
@@ -401,14 +401,14 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As an Orlando student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/rigobot"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Orlando’s tech community through local tech meetups and events.
+          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As an Orlando student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/ai-powered-learning/rigobot-ai-coding-mentor"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Orlando’s tech community through local tech meetups and events.
 
       - question: "Do students in Orlando need prior experience to join 4Geeks Academy?"
         locations: ["orlando"]
         templates: ["faq"]
         priority: 1
         answer: |-
-         Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+         Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Orlando students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Online Questions
       - question: "How do I apply to 4Geeks Academy online?"
@@ -445,14 +445,14 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As an online student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/rigobot"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to virtual tech communities through online meetups and events.
+          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As an online student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/ai-powered-learning/rigobot-ai-coding-mentor"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to virtual tech communities through online meetups and events.
 
       - question: "Do students in the online program need prior experience to join 4Geeks Academy?"
         locations: ["online"]
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many online students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Tampa-USA Questions
       - question: "How do I apply to 4Geeks Academy in Tampa?"
@@ -482,14 +482,14 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As a Tampa student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/rigobot"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Tampa’s tech community through local tech meetups and events.
+          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As a Tampa student, you'll enjoy unlimited lifetime mentorship — including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/ai-powered-learning/rigobot-ai-coding-mentor"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Tampa’s tech community through local tech meetups and events.
 
       - question: "Do students in Tampa need prior experience to join 4Geeks Academy?"
         locations: ["tampa-usa"]
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Tampa students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
    
     #Toronto-Canada Questions
       - question: "How do I apply to 4Geeks Academy in Toronto?"
@@ -519,7 +519,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As an Toronto student, you'll enjoy unlimited lifetime mentorship, including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/rigobot"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Toronto’s tech community through local tech meetups and events.
+          Yes, absolutely! <strong>Mentorship is at the core of what we do</strong>. As an Toronto student, you'll enjoy unlimited lifetime mentorship, including 1-on-1 sessions, group sessions, access to a Slack community with <strong>5,000+ developers worldwide</strong>, and participation in technical and behavioral workshops. You’ll also have access to <a class="faq-link" href="https://4geeksacademy.com/us/ai-powered-learning/rigobot-ai-coding-mentor"><strong>Rigobot</strong></a>, our 24/7 AI-powered coding mentor, guiding you through exercises line-by-line. Plus, we’ll connect you to Toronto’s tech community through local tech meetups and events.
 
       - question: "Do students in Toronto need prior experience to join 4Geeks Academy?"
         locations: ["toronto-canada"]
@@ -565,7 +565,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Madrid students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Barcelona, Spain Questions
       - question: "How do I apply to 4Geeks Academy in Barcelona?"
@@ -602,7 +602,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Barcelona students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Malaga, Spain Questions
       - question: "How do I apply to 4Geeks Academy in Malaga?"
@@ -639,7 +639,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-         Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+         Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Malaga students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Valencia, Spain Questions
       - question: "How do I apply to 4Geeks Academy in Valencia?"
@@ -676,7 +676,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Valencia students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Lisbon, Portugal Questions
       - question: "How do I apply to 4Geeks Academy in Lisbon?"
@@ -713,7 +713,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Lisbon students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Berlin, Germany Questions
       - question: "How do I apply to 4Geeks Academy in Berlin?"
@@ -750,7 +750,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Berlin students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Hamburg, Germany Questions
       - question: "How do I apply to 4Geeks Academy in Hamburg?"
@@ -787,7 +787,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Hamburg students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Munich, Germany Questions
       - question: "How do I apply to 4Geeks Academy in Munich?"
@@ -824,7 +824,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Munich students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Dublin, Ireland Questions
       - question: "How do I apply to 4Geeks Academy in Dublin?"
@@ -861,7 +861,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-         Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+         Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Dublin students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Milan, Italy Questions
       - question: "How do I apply to 4Geeks Academy in Milan?"
@@ -898,7 +898,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Milan students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Rome, Italy Questions
       - question: "How do I apply to 4Geeks Academy in Rome?"
@@ -935,7 +935,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Rome students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Rest of Europe Questions
       - question: "How do I apply to 4Geeks Academy in the Rest of Europe?"
@@ -972,7 +972,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many European students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
     # LATAM
     
@@ -1011,7 +1011,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Bogotá students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Buenos Aires, Argentina Questions
       - question: "How do I apply to 4Geeks Academy in Buenos Aires?"
@@ -1048,7 +1048,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Buenos Aires students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Caracas, Venezuela Questions
       - question: "How do I apply to 4Geeks Academy in Caracas?"
@@ -1085,7 +1085,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Caracas students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Costa Rica Questions
       - question: "How do I apply to 4Geeks Academy in Costa Rica?"
@@ -1122,7 +1122,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Costa Rica students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # La Paz, Bolivia Questions
       - question: "How do I apply to 4Geeks Academy in La Paz?"
@@ -1159,7 +1159,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many La Paz students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Lima, Peru Questions
       - question: "How do I apply to 4Geeks Academy in Lima?"
@@ -1196,7 +1196,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Lima students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Mexico City, Mexico Questions
       - question: "How do I apply to 4Geeks Academy in Mexico City?"
@@ -1233,7 +1233,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Mexico City students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Montevideo, Uruguay Questions
       - question: "How do I apply to 4Geeks Academy in Montevideo?"
@@ -1270,7 +1270,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Montevideo students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Panama City, Panama Questions
       - question: "How do I apply to 4Geeks Academy in Panama City?"
@@ -1307,7 +1307,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Panama City students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Quito, Ecuador Questions
       - question: "How do I apply to 4Geeks Academy in Quito?"
@@ -1344,7 +1344,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+          Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Quito students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
 
       # Santiago, Chile Questions
       - question: "How do I apply to 4Geeks Academy in Santiago?"
@@ -1381,7 +1381,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-         Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Atlanta students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
+         Not at all! Our curriculum is designed to take you from <strong>0 to specialist</strong>. We start with the basics, so having no prior tech experience is completely fine. Many Santiago students begin without any previous knowledge. To prepare, you can explore our <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> and beginner-friendly guides like <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a>. For those interested in other areas, check out our <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning">Data Science and Machine Learning Bootcamp</a> and <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">Cybersecurity Bootcamp</a>.
          
       - question: "Can I pay after I get a job?" #LATAM
         locations:
