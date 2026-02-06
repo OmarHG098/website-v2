@@ -59,11 +59,14 @@ details:
     title: "Acerca del programa"
     sub_title: "Desarrolla un negocio totalmente impulsado por IA mientras dominas las habilidades que las empresas realmente necesitan. Dirige a los agentes de programación, diseña flujos de trabajo basados ​​en IA y crea frontends, API y sistemas de automatización listos para producción, todo aplicado a un caso práctico de empresa. Aprende a aprovechar programas LLM como GPT-4, Claude 3 y Gemini para generar, refinar e implementar sistemas inteligentes. Adquiere experiencia práctica con telemetría, capas RAG, orquestación multiagente e interfaces en tiempo real. Gradúate con una empresa completamente transformada por IA en tu portafolio y las habilidades para asumir directamente los roles emergentes de la era de la IA."
     list:
-      - label: "Track de 20 Semanas: "
-        content: "3 clases en vivo por semana (noches) + 10–15 horas de tarea por semana"
+      - label: "Duración"
+        content: "24 semanas"
         icon: "duration-icon"
-      - label: "Tamaño de Clase"
-        content: "Ratio de 1 profesor por 7 estudiantes"
+      - label: "Clases"
+        content: "3 clases en vivo por semana (noches)"
+        icon: "book-2"
+      - label: "Tamaño de la clase"
+        content: "Máx. 15 estudiantes. Ratio 1:7 profesor-estudiante"
         icon: "people"
       - label: "Certificado"
         content: "Certificado de Ingeniería en IA"
@@ -78,7 +81,7 @@ details:
         icon: "language"
 
   heading: " "
-  weeks: 20
+  weeks: 24
   week_unit: "sem"
   weeks_label: "semanas"
   sub_heading: " "

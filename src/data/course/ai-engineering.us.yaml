@@ -59,11 +59,14 @@ details:
     title: "About the program"
     sub_title: "Build a fully AI-powered business while mastering the skills companies actually need. Direct coding agents, design AI-driven workflows, and create production-ready frontends, APIs, and automation systems—all applied to a single real-world company case. Learn to leverage LLMs like GPT-4, Claude 3, and Gemini to generate, refine, and deploy intelligent systems. Gain hands-on experience with telemetry, RAG layers, multi-agent orchestration, and real-time interfaces. Graduate with a complete AI-transformed company in your portfolio and the skills to step directly into the emerging roles of the AI era."
     list:
-      - label: "24-Week Track: "
-        content: "3 live classes per week (evenings) + 10–15 hours of homework per week"
+      - label: "Duration"
+        content: "24 weeks"
         icon: "duration-icon"
+      - label: "Classes"
+        content: "3 live classes per week (evenings)"
+        icon: "book-2"
       - label: "Class Size"
-        content: "Ratio of 1 teacher per 7 students"
+        content: "Max 15 students. 1:7 teacher student ratio"
         icon: "people"
       - label: "Certificate"
         content: "AI Engineering Certificate"
@@ -78,7 +81,7 @@ details:
         icon: "language"
 
   heading: " "
-  weeks: 20
+  weeks: 24
   week_unit: "wks"
   weeks_label: "weeks"
   sub_heading: " "

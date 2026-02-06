@@ -212,13 +212,7 @@ const Program = ({ data, pageContext, yml }) => {
         />
       )}
 
-      {/* 5. Milestones Component */}
-      <Milestones
-        milestones={courseDetails.milestones}
-        lang={pageContext.lang}
-      />
-
-      {/* 6. Program Details Component */}
+      {/* 5. Program Details Component */}
       <ProgramDetails
         details={courseDetails.details}
         lang={pageContext.lang}
@@ -226,6 +220,12 @@ const Program = ({ data, pageContext, yml }) => {
       />
       <ProgramDetailsMobile
         details={courseDetails.details}
+        lang={pageContext.lang}
+      />
+
+      {/* 6. Milestones Component */}
+      <Milestones
+        milestones={courseDetails.milestones}
         lang={pageContext.lang}
       />
 
