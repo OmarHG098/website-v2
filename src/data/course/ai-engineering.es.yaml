@@ -3,14 +3,14 @@ meta_info:
   title: "Bootcamp de Ingeniería en IA | 4Geeks Academy"
   bc_slug: "ai-engineering"
   job_guarantee: true
-  description: "Bootcamp de Ingeniería en IA: Domina el desarrollo nativo de IA en 20 semanas. Construye sistemas completos impulsados por IA con mentoría 1:1. 84% contratados."
+  description: "Bootcamp de Ingeniería en IA: Domina el desarrollo nativo de IA en 24 semanas. Construye sistemas completos impulsados por IA con mentoría 1:1. 84% contratados."
   image: "/images/og-preview/ai-engineering.es.png"
   visibility: "visible"
   keywords: ""
   show_in_apply: true
   related_clusters: ["ingenieria-ia", "inteligencia-artificial"]
   template: "course-ai-engineering"
-  duration: "P20W"
+  duration: "P24W"
   redirects: []
 
 apply_form:
@@ -57,17 +57,20 @@ credentials:
 details:
   about:
     title: "Acerca del programa"
-    sub_title: "Domina las habilidades de ingeniería en IA que las empresas están buscando activamente. Aprende a orquestar sistemas de IA, automatizar flujos de trabajo y transformar operaciones con herramientas de IA. Construye aplicaciones completas nativas de IA desde frontend hasta backend, incluyendo sistemas RAG, arquitecturas multi-agente y automatización de flujos de trabajo."
+    sub_title: "Desarrolla un negocio totalmente impulsado por IA mientras dominas las habilidades que las empresas realmente necesitan. Dirige a los agentes de programación, diseña flujos de trabajo basados ​​en IA y crea frontends, API y sistemas de automatización listos para producción, todo aplicado a un caso práctico de empresa. Aprende a aprovechar programas LLM como GPT-4, Claude 3 y Gemini para generar, refinar e implementar sistemas inteligentes. Adquiere experiencia práctica con telemetría, capas RAG, orquestación multiagente e interfaces en tiempo real. Gradúate con una empresa completamente transformada por IA en tu portafolio y las habilidades para asumir directamente los roles emergentes de la era de la IA."
     list:
-      - label: "Track de 20 Semanas: "
-        content: "3 clases en vivo por semana (noches) + 10–15 horas de tarea por semana"
+      - label: "Duración"
+        content: "24 semanas"
         icon: "duration-icon"
-      - label: "Tamaño de Clase"
-        content: "Ratio de 1 profesor por 7 estudiantes"
+      - label: "Clases"
+        content: "3 clases en vivo por semana (noches)"
+        icon: "book-2"
+      - label: "Tamaño de la clase"
+        content: "Máx. 15 estudiantes. Ratio 1:7 profesor-estudiante"
         icon: "people"
       - label: "Certificado"
         content: "Certificado de Ingeniería en IA"
-        link_text: "Ver ejemplo"
+        link_text: ""
         link: ""
         icon: "certification"
       - label: "Prerrequisitos"
@@ -77,11 +80,11 @@ details:
         content: "Puedes elegir entre inglés y español para el plan de estudios y el contenido. Las clases en vivo se imparten en el idioma de tu campus."
         icon: "language"
 
-  heading: "BOOTCAMP DE INGENIERÍA EN IA"
-  weeks: 20
+  heading: " "
+  weeks: 24
   week_unit: "sem"
   weeks_label: "semanas"
-  sub_heading: "Aprendizaje práctico a través de proyectos de la vida real. Domina el desarrollo nativo de IA: React con componentes de IA, APIs REST, sistemas RAG, arquitecturas multi-agente y automatización de flujos de trabajo."
+  sub_heading: " "
   left_labels:
     description: "DESCRIPCIÓN:"
     projects: "PROYECTOS:"
@@ -265,7 +268,7 @@ prices:
     placeholder: Selecciona una ubicación
   button:
     text: Ver Precios y Planes
-    link: ""
+    link: "/es/aplica"
 
 ## TWO COLUMNS SECTIONS
 why_ai_engineering_now:
@@ -316,7 +319,7 @@ two_column_program:
     text: "Saber Más"
     color: "white"
     background: "black"
-    path: "#leadform_header"
+    path: "/es/aplica"
 
 two_columns_info:
   proportions: [6, 6]
@@ -365,7 +368,7 @@ what_sets_4geeks_apart:
     text: "Aplica Ahora"
     color: "white"
     background: "black"
-    path: "#leadform_header"
+    path: "/es/aplica"
   bullets:
     items:
       - text: "<strong style='font-weight: 800;'>Mentoría Ilimitada de por Vida:</strong> Orientación 1:1 cuando la necesites—durante el programa y para toda tu carrera."

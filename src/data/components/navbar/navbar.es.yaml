@@ -11,6 +11,13 @@ navbar:
         text: "¿No estás seguro qué programa se adapta mejor a ti? Mira nuestra comparación de programas <a class='link' href='/es/comparar-programas'>aquí.</a>"
         link: "/es/comparar-programas"
       links:
+        - title: "Ingeniería en IA"
+          level: " "
+          icon: "fullstack_2"
+          paragraph: "Conviértete en ingeniero en IA. Domina el desarrollo nativo de IA y construye sistemas completos impulsados por IA."
+          buttons:
+            - text: "Ver programa"
+              link: "/es/coding-bootcamps/ingenieria-ia"
 
         - title: "Desarrollador Full Stack con IA"
           level: " "

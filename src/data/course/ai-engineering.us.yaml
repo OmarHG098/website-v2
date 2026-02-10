@@ -3,14 +3,14 @@ meta_info:
   title: "AI Engineering Bootcamp | 4Geeks Academy"
   bc_slug: "ai-engineering"
   job_guarantee: true
-  description: "AI Engineering Bootcamp: Master AI-native development in 20 weeks. Build complete AI-powered systems with 1:1 mentorship. 84% hired within 6 months."
+  description: "AI Engineering Bootcamp: Master AI-native development in 24 weeks. Build complete AI-powered systems with 1:1 mentorship. 84% hired within 6 months."
   image: "/images/og-preview/ai-engineering.us.png"
   visibility: "visible"
   keywords: ""
   show_in_apply: true
   related_clusters: ["ai-engineering", "artificial-intelligence"]
   template: "course-ai-engineering"
-  duration: "P20W"
+  duration: "P24W"
   redirects: []
 
 apply_form:
@@ -57,18 +57,21 @@ credentials:
 details:
   about:
     title: "About the program"
-    sub_title: "Master AI engineering skills that companies are actively searching for. Learn to orchestrate AI systems, automate workflows, and transform operations with AI tools. Build complete AI-native applications from frontend to backend, including RAG systems, multi-agent architectures, and workflow automation."
+    sub_title: "Build a fully AI-powered business while mastering the skills companies actually need. Direct coding agents, design AI-driven workflows, and create production-ready frontends, APIs, and automation systems—all applied to a single real-world company case. Learn to leverage LLMs like GPT-4, Claude 3, and Gemini to generate, refine, and deploy intelligent systems. Gain hands-on experience with telemetry, RAG layers, multi-agent orchestration, and real-time interfaces. Graduate with a complete AI-transformed company in your portfolio and the skills to step directly into the emerging roles of the AI era."
     list:
-      - label: "20-Week Track: "
-        content: "3 live classes per week (evenings) + 10–15 hours of homework per week"
+      - label: "Duration"
+        content: "24 weeks"
         icon: "duration-icon"
+      - label: "Classes"
+        content: "3 live classes per week (evenings)"
+        icon: "book-2"
       - label: "Class Size"
-        content: "Ratio of 1 teacher per 7 students"
+        content: "Max 15 students. 1:7 teacher student ratio"
         icon: "people"
       - label: "Certificate"
         content: "AI Engineering Certificate"
-        link_text: "See example"
-        link: ""
+        link_text: ""
+        link: " "
         icon: "certification"
       - label: "Prerequisites"
         content: "No previous coding skills or advanced math required."
@@ -77,11 +80,11 @@ details:
         content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
         icon: "language"
 
-  heading: "AI ENGINEERING BOOTCAMP"
-  weeks: 20
+  heading: " "
+  weeks: 24
   week_unit: "wks"
   weeks_label: "weeks"
-  sub_heading: "Hands-on learning through real-life projects. Master AI-native development: React with AI components, REST APIs, RAG systems, multi-agent architectures, and workflow automation."
+  sub_heading: " "
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
@@ -265,7 +268,7 @@ prices:
     placeholder: Select a location
   button:
     text: Check Prices and Plans
-    link: ""
+    link: "/us/apply"
 
 ## TWO COLUMNS SECTIONS
 why_ai_engineering_now:
@@ -316,7 +319,7 @@ two_column_program:
     text: "Learn More"
     color: "white"
     background: "black"
-    path: "#leadform_header"
+    path: "/us/apply"
 
 two_columns_info:
   proportions: [6, 6]
@@ -365,7 +368,7 @@ what_sets_4geeks_apart:
     text: "Apply Now"
     color: "white"
     background: "black"
-    path: "#leadform_header"
+    path: "/us/apply"
   bullets:
     items:
       - text: "<strong style='font-weight: 800;'>Unlimited Lifetime Mentorship:</strong> 1:1 guidance whenever you need it—during the program and for your entire career."

@@ -21,6 +21,7 @@ import Iconogram from "../components/Iconogram/index.js";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases/index.js";
 import Milestones from "../components/Milestones/index.js";
 import StarRating from "../components/StarRating/index.js";
+import ProgramDetails from "../components/ProgramDetails/index.js";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const Program = ({ data, pageContext, yml }) => {
@@ -210,13 +211,20 @@ const Program = ({ data, pageContext, yml }) => {
         />
       )}
 
-      {/* 5. Milestones Component */}
+      {/* 5. Program Details Component */}
+      <ProgramDetails
+        details={courseDetails.details}
+        lang={pageContext.lang}
+        withoutAnimation={true}
+      />
+
+      {/* 6. Milestones Component */}
       <Milestones
         milestones={courseDetails.milestones}
         lang={pageContext.lang}
       />
 
-      {/* 6. Rating Reviews Component */}
+      {/* 7. Rating Reviews Component */}
       {yml.rating_reviews && (
         <Div
           background={
@@ -466,6 +474,38 @@ export const query = graphql`
           }
           badges {
             paragraph
+          }
+          details {
+            about {
+              title
+              sub_title
+              list {
+                label
+                content
+                link
+                link_text
+                icon
+              }
+            }
+            heading
+            weeks
+            week_unit
+            sub_heading
+            left_labels {
+              description
+              projects
+              duration
+              skills
+            }
+            details_modules {
+              title
+              projects
+              slug
+              module_name
+              duration
+              description
+              step
+            }
           }
           milestones {
             title
