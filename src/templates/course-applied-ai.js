@@ -45,6 +45,12 @@ const ApliedAi = ({ data, pageContext, yml }) => {
     (loc) => loc.node?.city === city
   );
 
+  const locations =
+    data.allLocationYaml?.edges?.map(({ node }) => ({
+      label: node.name,
+      value: node.breathecode_location_slug,
+    })) || [];
+
   const syllabus_button_text = yml.button.syllabus_heading;
   const apply_button_text = yml.button.apply_button_text;
 
@@ -157,12 +163,20 @@ const ApliedAi = ({ data, pageContext, yml }) => {
             redirect={
               pageContext.lang === "us" ? "/us/thank-you" : "/es/gracias"
             }
+            selectLocation={locations}
             data={{
               course: {
                 type: "hidden",
                 value: yml.meta_info.bc_slug,
                 valid: true,
               },
+              ...(locations?.length === 1 && {
+                utm_location: {
+                  type: "hidden",
+                  value: locations[0].value,
+                  valid: true,
+                },
+              }),
             }}
           />
         </Modal>

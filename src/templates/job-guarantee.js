@@ -47,6 +47,12 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
     (loc) => loc.node?.city === city
   );
 
+  const locations =
+    data.allLocationYaml?.edges?.map(({ node }) => ({
+      label: node.name,
+      value: node.breathecode_location_slug,
+    })) || [];
+
   useEffect(() => {
     if (currentLocation !== undefined) {
       setApplyButtonText(currentLocation.node.button.apply_button_text);
@@ -430,12 +436,20 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                 pageContext.lang === "us" ? "/us/thank-you" : "/es/gracias"
               }
               selectProgram={programs}
+              selectLocation={locations}
               data={{
                 course: {
                   type: "hidden",
                   value: yml.meta_info?.utm_course,
                   valid: true,
                 },
+                ...(locations?.length === 1 && {
+                  utm_location: {
+                    type: "hidden",
+                    value: locations[0].value,
+                    valid: true,
+                  },
+                }),
               }}
             />
           </Modal>
