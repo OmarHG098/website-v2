@@ -211,7 +211,7 @@ const ThankYou = (props) => {
         ))}
       </Div>
 
-      <AdmissionsStaff />
+      <AdmissionsStaff lang={pageContext.lang} />
 
       {/* Dynamic Components (YAML-driven) */}
       {components?.title?.heading?.text && (
