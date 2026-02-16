@@ -66,11 +66,18 @@ const AdmissionsStaff = (props) => {
     return false;
   };
 
-  // Prefer explicit prop.lang, then session.language; fallback to us for data selection only
-  const dataLang = (props.lang || session?.language || "us").replace(
-    "en",
+  // Prefer explicit prop.lang, then path-derived lang, then session.language; fallback to us
+  let pathLang = null;
+  if (typeof window !== "undefined") {
+    const segment = window.location.pathname.split("/").filter(Boolean)[0];
+    if (segment === "es" || segment === "us") pathLang = segment;
+  }
+  const dataLang = (
+    props.lang ||
+    pathLang ||
+    session?.language ||
     "us"
-  );
+  ).replace("en", "us");
   let admissionsStaff = data.allAdmissionsStaffYaml.edges.find(
     ({ node }) => node.fields.lang === dataLang
   );
