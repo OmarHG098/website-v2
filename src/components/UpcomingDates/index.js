@@ -385,13 +385,44 @@ const UpcomingDates = ({
           return;
         }
 
-        const syllabus =
-          syllabusAlias.find((syll) => syll.default_course === defaultCourse) ||
-          syllabusAlias.find((syll) =>
-            cohort.syllabus_version?.slug
-              ?.toLowerCase()
-              ?.includes(syll.default_course)
+        const syllabusSlug =
+          cohort.syllabus_version?.slug?.toLowerCase();
+
+        const syllabus = (() => {
+          if (!syllabusSlug) {
+            return syllabusAlias.find(
+              (syll) => syll.default_course === defaultCourse
+            );
+          }
+          const sorted = [...syllabusAlias].sort((a, b) => {
+            const aMax = Math.max(
+              0,
+              ...(a.slug_variants || [a.default_course || ""]).map(
+                (v) => (v || "").length
+              )
+            );
+            const bMax = Math.max(
+              0,
+              ...(b.slug_variants || [b.default_course || ""]).map(
+                (v) => (v || "").length
+              )
+            );
+            return bMax - aMax;
+          });
+          const match = sorted.find((syll) => {
+            const variants = syll.slug_variants || [syll.default_course];
+            return variants.some(
+              (v) =>
+                v && syllabusSlug.includes(String(v).toLowerCase())
+            );
+          });
+          return (
+            match ||
+            syllabusAlias.find(
+              (syll) => syll.default_course === defaultCourse
+            )
           );
+        })();
 
         if (syllabus) {
           cohort.syllabus_version.name = syllabus.name;

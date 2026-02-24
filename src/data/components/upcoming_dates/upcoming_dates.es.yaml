@@ -45,6 +45,14 @@ syllabus_alias:
     slug_variants:
       - ai-engineer
 
+  - default_course: ai-engineering-ft
+    course_slug: ai-engineering-ft
+    name: Ingeniería en IA FT
+    duration_weeks: 15 semanas
+    slug_variants:
+      - ai-engineer-ft-15w
+      - ft-ai-engineer
+
 email_form_content:
   heading: Indicanos tu mail para avisarte cuando haya una fecha disponible para este campus
   button_text: Avisenme cuando haya una fecha
